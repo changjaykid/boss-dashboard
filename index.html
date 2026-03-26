@@ -341,13 +341,13 @@
                                 <p class="text-xs text-gray-400">均衡型 · 1024k context · text+image</p>
                                 <p class="text-xs text-gray-500 mt-1">別名：gemini · 用途：中等複雜度任務</p>
                             </div>
-                            <div class="p-4 bg-gray-800 rounded-lg border border-yellow-700/30 trade-card">
+                            <div id="gpt54-card" class="p-4 bg-gray-800 rounded-lg border border-yellow-700/30 trade-card">
                                 <div class="flex items-center justify-between mb-2">
                                     <span class="text-sm font-bold text-white">openai-codex/gpt-5.4</span>
-                                    <span class="px-2 py-0.5 text-xs rounded-full bg-yellow-900/50 text-yellow-300 border border-yellow-700/50">⚠️ Rate Limited</span>
+                                    <span id="gpt54-badge" class="px-2 py-0.5 text-xs rounded-full bg-yellow-900/50 text-yellow-300 border border-yellow-700/50">⚠️ Rate Limited</span>
                                 </div>
                                 <p class="text-xs text-gray-400">OpenAI 頂級模型 · 266k context · text+image</p>
-                                <p class="text-xs text-gray-500 mt-1">目前有速率限制，暫不使用</p>
+                                <p id="gpt54-status" class="text-xs text-gray-500 mt-1">目前有速率限制，暫不使用</p>
                             </div>
                         </div>
                     </section>
@@ -389,32 +389,48 @@
                             </div>
                             <span class="px-3 py-1 bg-gray-700/50 border border-gray-600 text-gray-400 text-xs rounded-full">需要安裝依賴</span>
                         </div>
-                        <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">🔐 1password</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">📝 apple-notes</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">⏰ apple-reminders</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">🐻 bear-notes</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">📰 blogwatcher</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">📸 camsnap</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">📦 clawhub</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">🧩 coding-agent</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">🎮 discord</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">✨ gemini</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">📧 himalaya</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">📨 imsg</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">🧩 mcporter</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">📊 model-usage</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">📄 nano-pdf</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">📝 notion</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">💎 obsidian</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">🎤 openai-whisper</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">💡 openhue</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">💬 slack</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">🎵 spotify-player</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">📋 trello</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">🐦 xurl (Twitter/X)</div>
-                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">🔍 tavily-search</div>
-                            <div class="p-2 text-xs text-gray-400 bg-gray-800/50 rounded border border-gray-700/30">...等共 41 個</div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🔐</span><span class="text-sm text-gray-300">1password</span></div><p class="text-xs text-gray-500 mt-1">密碼管理器 CLI，安全存取與注入密鑰</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📝</span><span class="text-sm text-gray-300">apple-notes</span></div><p class="text-xs text-gray-500 mt-1">管理 macOS 備忘錄（建立、搜尋、編輯、刪除）</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>⏰</span><span class="text-sm text-gray-300">apple-reminders</span></div><p class="text-xs text-gray-500 mt-1">管理 macOS 提醒事項（新增、完成、刪除）</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🐻</span><span class="text-sm text-gray-300">bear-notes</span></div><p class="text-xs text-gray-500 mt-1">管理 Bear 筆記 App（建立、搜尋）</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📰</span><span class="text-sm text-gray-300">blogwatcher</span></div><p class="text-xs text-gray-500 mt-1">監控部落格與 RSS 訂閱更新</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📸</span><span class="text-sm text-gray-300">camsnap</span></div><p class="text-xs text-gray-500 mt-1">從 RTSP/ONVIF 攝影機擷取畫面或片段</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📦</span><span class="text-sm text-gray-300">clawhub</span></div><p class="text-xs text-gray-500 mt-1">搜尋、安裝、更新、發布 AI 技能</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🧩</span><span class="text-sm text-gray-300">coding-agent</span></div><p class="text-xs text-gray-500 mt-1">派遣 Codex/Claude Code 執行程式開發任務</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🎮</span><span class="text-sm text-gray-300">discord</span></div><p class="text-xs text-gray-500 mt-1">Discord 訊息操作與管理</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🛌</span><span class="text-sm text-gray-300">eightctl</span></div><p class="text-xs text-gray-500 mt-1">控制 Eight Sleep 智慧床墊溫度與鬧鐘</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>✨</span><span class="text-sm text-gray-300">gemini</span></div><p class="text-xs text-gray-500 mt-1">Gemini CLI 快速問答與生成</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🧲</span><span class="text-sm text-gray-300">gifgrep</span></div><p class="text-xs text-gray-500 mt-1">搜尋 GIF 動圖並下載</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📧</span><span class="text-sm text-gray-300">himalaya</span></div><p class="text-xs text-gray-500 mt-1">IMAP/SMTP 信箱管理（讀取、回覆、搜尋）</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📨</span><span class="text-sm text-gray-300">imsg</span></div><p class="text-xs text-gray-500 mt-1">iMessage/SMS 訊息發送與歷史查詢</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🧩</span><span class="text-sm text-gray-300">mcporter</span></div><p class="text-xs text-gray-500 mt-1">MCP 伺服器工具呼叫與設定</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📊</span><span class="text-sm text-gray-300">model-usage</span></div><p class="text-xs text-gray-500 mt-1">查看各模型使用量與成本統計</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📄</span><span class="text-sm text-gray-300">nano-pdf</span></div><p class="text-xs text-gray-500 mt-1">用自然語言指令編輯 PDF</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📝</span><span class="text-sm text-gray-300">notion</span></div><p class="text-xs text-gray-500 mt-1">Notion 頁面、資料庫、區塊管理</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>💎</span><span class="text-sm text-gray-300">obsidian</span></div><p class="text-xs text-gray-500 mt-1">Obsidian 筆記庫管理與自動化</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🎤</span><span class="text-sm text-gray-300">openai-whisper</span></div><p class="text-xs text-gray-500 mt-1">本機語音轉文字（離線，無需 API Key）</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>💡</span><span class="text-sm text-gray-300">openhue</span></div><p class="text-xs text-gray-500 mt-1">控制 Philips Hue 智慧燈光與場景</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🧿</span><span class="text-sm text-gray-300">oracle</span></div><p class="text-xs text-gray-500 mt-1">Oracle CLI 提示詞與檔案打包引擎</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🛵</span><span class="text-sm text-gray-300">ordercli</span></div><p class="text-xs text-gray-500 mt-1">Foodora 外送訂單查詢</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>👀</span><span class="text-sm text-gray-300">peekaboo</span></div><p class="text-xs text-gray-500 mt-1">macOS UI 擷取與自動化操作</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📜</span><span class="text-sm text-gray-300">session-logs</span></div><p class="text-xs text-gray-500 mt-1">搜尋與分析對話紀錄</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🔉</span><span class="text-sm text-gray-300">sherpa-onnx-tts</span></div><p class="text-xs text-gray-500 mt-1">本機離線文字轉語音</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>💬</span><span class="text-sm text-gray-300">slack</span></div><p class="text-xs text-gray-500 mt-1">Slack 訊息、反應、釘選管理</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🌊</span><span class="text-sm text-gray-300">songsee</span></div><p class="text-xs text-gray-500 mt-1">音頻頻譜圖視覺化生成</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🔊</span><span class="text-sm text-gray-300">sonoscli</span></div><p class="text-xs text-gray-500 mt-1">控制 Sonos 音響（播放、音量、群組）</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🎵</span><span class="text-sm text-gray-300">spotify-player</span></div><p class="text-xs text-gray-500 mt-1">Spotify 音樂播放與搜尋</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>✅</span><span class="text-sm text-gray-300">things-mac</span></div><p class="text-xs text-gray-500 mt-1">Things 3 待辦事項管理</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🧵</span><span class="text-sm text-gray-300">tmux</span></div><p class="text-xs text-gray-500 mt-1">遠端控制 tmux 終端機 session</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📋</span><span class="text-sm text-gray-300">trello</span></div><p class="text-xs text-gray-500 mt-1">Trello 看板、列表、卡片管理</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🔍</span><span class="text-sm text-gray-300">tavily-search</span></div><p class="text-xs text-gray-500 mt-1">LLM 最佳化網頁搜尋 API</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🎬</span><span class="text-sm text-gray-300">video-frames</span></div><p class="text-xs text-gray-500 mt-1">從影片擷取畫面或短片段</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📞</span><span class="text-sm text-gray-300">voice-call</span></div><p class="text-xs text-gray-500 mt-1">語音通話功能</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📱</span><span class="text-sm text-gray-300">wacli</span></div><p class="text-xs text-gray-500 mt-1">WhatsApp 訊息發送與歷史搜尋</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🐦</span><span class="text-sm text-gray-300">xurl</span></div><p class="text-xs text-gray-500 mt-1">X (Twitter) 發文、回覆、搜尋、DM</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🫐</span><span class="text-sm text-gray-300">blucli</span></div><p class="text-xs text-gray-500 mt-1">BluOS 音響控制</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🫧</span><span class="text-sm text-gray-300">bluebubbles</span></div><p class="text-xs text-gray-500 mt-1">透過 BlueBubbles 發送 iMessage</p></div>
+                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📍</span><span class="text-sm text-gray-300">goplaces</span></div><p class="text-xs text-gray-500 mt-1">Google Places API 地點搜尋與評論</p></div>
                         </div>
                     </section>
                 </div>
