@@ -1,11 +1,11 @@
 {
-  "lastUpdate": "2026-03-27 02:11:32",
+  "lastUpdate": "2026-03-27 02:12:21",
   "currentPrice": {},
   "indicators": {},
   "account": {
-    "balance": 31000.15,
+    "balance": 31000.18,
     "realizedPnl": 0.16,
-    "unrealizedPnl": 10.71,
+    "unrealizedPnl": 9.77,
     "totalTrades": 7,
     "closedTrades": 4,
     "wins": 2,
@@ -20,9 +20,9 @@
       "entryPrice": 4384.04,
       "stopLevel": 4344.74,
       "profitLevel": 4541.14,
-      "currentBid": 4383.19,
-      "currentAsk": 4383.69,
-      "pnl": -0.85,
+      "currentBid": 4382.25,
+      "currentAsk": 4382.75,
+      "pnl": -1.79,
       "instrument": "Gold",
       "epic": "GOLD"
     },
@@ -33,9 +33,9 @@
       "entryPrice": 4383.12,
       "stopLevel": 4344.32,
       "profitLevel": 4538.32,
-      "currentBid": 4383.19,
-      "currentAsk": 4383.69,
-      "pnl": 0.07,
+      "currentBid": 4382.25,
+      "currentAsk": 4382.75,
+      "pnl": -0.87,
       "instrument": "Gold",
       "epic": "GOLD"
     },
@@ -44,11 +44,11 @@
       "direction": "SELL",
       "size": 0.01,
       "entryPrice": 4395.18,
-      "stopLevel": 4411.18,
-      "profitLevel": 4331.28,
-      "currentBid": 4383.19,
-      "currentAsk": 4383.69,
-      "pnl": 11.49,
+      "stopLevel": 4394.18,
+      "profitLevel": null,
+      "currentBid": 4382.25,
+      "currentAsk": 4382.75,
+      "pnl": 12.43,
       "instrument": "Gold",
       "epic": "GOLD"
     }
@@ -179,7 +179,6 @@
     "OIL_CRUDE"
   ],
   "actions": [
-    "TRAIL_BE: Gold SELL",
     "NO_SIGNAL"
   ]
 }
