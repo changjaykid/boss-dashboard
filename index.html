@@ -179,15 +179,24 @@
                 <!-- ========== 外匯自動交易 View ========== -->
                 <div id="view-forex-auto" class="section-view space-y-8">
                     
+                    <!-- 上次更新時間 -->
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-2 text-sm">
+                            <span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span></span>
+                            <span class="text-gray-400">最後更新：<span id="fx-last-update" class="text-gray-200">載入中...</span></span>
+                        </div>
+                        <button onclick="loadTradingData()" class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs rounded-lg transition-colors">🔄 重新整理</button>
+                    </div>
+
                     <!-- 帳戶總覽 -->
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                         <div class="stat-card border border-gray-700/50 p-5 rounded-xl">
                             <p class="text-xs text-gray-500 uppercase tracking-wider">假設本金</p>
-                            <p class="text-2xl font-bold text-white mt-1" id="fx-capital">$1,000</p>
+                            <p class="text-2xl font-bold text-white mt-1">$1,000</p>
                         </div>
                         <div class="stat-card border border-gray-700/50 p-5 rounded-xl">
                             <p class="text-xs text-gray-500 uppercase tracking-wider">已實現盈虧</p>
-                            <p class="text-2xl font-bold text-gray-300 mt-1" id="fx-pnl">$0.00</p>
+                            <p class="text-2xl font-bold mt-1" id="fx-pnl">$0.00</p>
                         </div>
                         <div class="stat-card border border-gray-700/50 p-5 rounded-xl">
                             <p class="text-xs text-gray-500 uppercase tracking-wider">勝率</p>
@@ -209,101 +218,92 @@
                             <p class="text-2xl font-bold text-gray-300 mt-1" id="fx-streak">-- / --</p>
                         </div>
                         <div class="stat-card border border-gray-700/50 p-5 rounded-xl">
-                            <p class="text-xs text-gray-500 uppercase tracking-wider">風報比 (平均)</p>
-                            <p class="text-2xl font-bold text-gray-300 mt-1" id="fx-rr">--</p>
+                            <p class="text-xs text-gray-500 uppercase tracking-wider">1H 趨勢</p>
+                            <p class="text-2xl font-bold mt-1" id="fx-trend">--</p>
                         </div>
                         <div class="stat-card border border-gray-700/50 p-5 rounded-xl">
-                            <p class="text-xs text-gray-500 uppercase tracking-wider">交易商品</p>
-                            <p class="text-2xl font-bold text-yellow-400 mt-1">XAUUSD</p>
+                            <p class="text-xs text-gray-500 uppercase tracking-wider">XAUUSD 報價</p>
+                            <p class="text-2xl font-bold text-yellow-400 mt-1" id="fx-price">--</p>
                         </div>
                     </div>
+
+                    <!-- 技術指標 -->
+                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <span class="text-xl">📉</span><h3 class="text-lg font-medium text-indigo-300">即時技術指標</h3>
+                        </div>
+                        <div class="grid grid-cols-3 md:grid-cols-6 gap-3" id="fx-indicators">
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 text-center">
+                                <p class="text-xs text-gray-500">EMA9 (1H)</p>
+                                <p class="text-sm font-bold text-white" id="ind-ema9">--</p>
+                            </div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 text-center">
+                                <p class="text-xs text-gray-500">EMA21 (1H)</p>
+                                <p class="text-sm font-bold text-white" id="ind-ema21">--</p>
+                            </div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 text-center">
+                                <p class="text-xs text-gray-500">RSI (15M)</p>
+                                <p class="text-sm font-bold text-white" id="ind-rsi15">--</p>
+                            </div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 text-center">
+                                <p class="text-xs text-gray-500">RSI (5M)</p>
+                                <p class="text-sm font-bold text-white" id="ind-rsi5">--</p>
+                            </div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 text-center">
+                                <p class="text-xs text-gray-500">ATR (15M)</p>
+                                <p class="text-sm font-bold text-white" id="ind-atr15">--</p>
+                            </div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 text-center">
+                                <p class="text-xs text-gray-500">ATR (1H)</p>
+                                <p class="text-sm font-bold text-white" id="ind-atr1h">--</p>
+                            </div>
+                        </div>
+                    </section>
 
                     <!-- 當前持倉 -->
                     <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
                         <div class="flex items-center space-x-3 mb-6">
                             <span class="text-xl">📍</span><h3 class="text-xl font-medium text-blue-300">當前持倉 (Open Positions)</h3>
                         </div>
-                        <div id="fx-open-positions" class="space-y-3">
-                            <div class="flex items-center justify-center py-8 border-2 border-dashed border-gray-700 rounded-lg bg-gray-800/30">
-                                <div class="text-center">
-                                    <span class="text-3xl block mb-2">🔍</span>
-                                    <p class="text-gray-400 text-sm">目前無持倉。管家正在監控盤面，等待高勝率進場信號...</p>
-                                </div>
-                            </div>
-                        </div>
+                        <div id="fx-open-positions" class="space-y-3"></div>
                     </section>
 
-                    <!-- 已結束的單 -->
+                    <!-- 最近交易 -->
                     <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
                         <div class="flex items-center space-x-3 mb-6">
-                            <span class="text-xl">📋</span><h3 class="text-xl font-medium text-gray-300">已完成交易 (Closed Trades)</h3>
+                            <span class="text-xl">📋</span><h3 class="text-xl font-medium text-gray-300">最近交易紀錄 (Recent Trades)</h3>
                         </div>
-                        <div id="fx-closed-trades" class="space-y-3">
-                            <div class="flex items-center justify-center py-8 border-2 border-dashed border-gray-700 rounded-lg bg-gray-800/30">
-                                <div class="text-center">
-                                    <span class="text-3xl block mb-2">📭</span>
-                                    <p class="text-gray-400 text-sm">尚無已完成的交易紀錄。</p>
-                                </div>
-                            </div>
-                        </div>
+                        <div id="fx-recent-trades" class="space-y-3"></div>
                     </section>
 
-                    <!-- 復盤與優化 -->
+                    <!-- 策略績效 -->
                     <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
                         <div class="flex items-center space-x-3 mb-6">
-                            <span class="text-xl">🧠</span><h3 class="text-xl font-medium text-purple-300">復盤與策略優化 (Review & Optimization)</h3>
+                            <span class="text-xl">🧠</span><h3 class="text-xl font-medium text-purple-300">策略績效分析 (Strategy Performance)</h3>
                         </div>
-                        <div id="fx-review" class="space-y-4">
-                            <div class="p-4 bg-gray-800 rounded-lg border border-gray-700">
-                                <h4 class="text-sm font-semibold text-indigo-300 mb-2">📐 當前策略</h4>
-                                <ul class="text-xs text-gray-400 space-y-1 list-disc list-inside">
-                                    <li>多時間框架保守型：1H 確認趨勢方向，15M 尋找進場點</li>
-                                    <li>進場信號：EMA9/EMA21 交叉 + RSI 確認 + 關鍵支撐壓力位</li>
-                                    <li>固定 0.01 手，止損 $5-15，風報比最低 1:2</li>
-                                    <li>連續 2 次虧損後暫停 1 小時</li>
-                                </ul>
-                            </div>
-                            <div class="p-4 bg-gray-800 rounded-lg border border-gray-700">
-                                <h4 class="text-sm font-semibold text-yellow-300 mb-2">📊 復盤紀錄</h4>
-                                <p class="text-xs text-gray-500">交易系統剛啟動，尚無復盤資料。每完成 5 筆交易後，管家會自動產生復盤報告。</p>
-                            </div>
-                            <div class="p-4 bg-gray-800 rounded-lg border border-gray-700">
-                                <h4 class="text-sm font-semibold text-green-300 mb-2">🔧 優化建議</h4>
-                                <p class="text-xs text-gray-500">累積足夠交易數據後，管家會分析勝率、風報比、最大回撤等指標，提出具體優化方案。</p>
-                            </div>
-                        </div>
+                        <div id="fx-strategy-stats" class="space-y-3"></div>
                     </section>
 
-                    <!-- 交易策略設定 -->
+                    <!-- 最近動作 -->
+                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center space-x-3 mb-6">
+                            <span class="text-xl">⚡</span><h3 class="text-xl font-medium text-yellow-300">最近系統動作 (Actions Log)</h3>
+                        </div>
+                        <div id="fx-actions" class="space-y-2"></div>
+                    </section>
+
+                    <!-- 風控參數 -->
                     <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
                         <div class="flex items-center space-x-3 mb-6">
                             <span class="text-xl">⚙️</span><h3 class="text-xl font-medium text-gray-300">風控參數 (Risk Management)</h3>
                         </div>
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
-                                <p class="text-xs text-gray-500">每筆最大風險</p>
-                                <p class="text-sm font-bold text-white">$10 (1%)</p>
-                            </div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
-                                <p class="text-xs text-gray-500">固定手數</p>
-                                <p class="text-sm font-bold text-white">0.01 手</p>
-                            </div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
-                                <p class="text-xs text-gray-500">最大同時持倉</p>
-                                <p class="text-sm font-bold text-white">2 筆</p>
-                            </div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
-                                <p class="text-xs text-gray-500">最低風報比</p>
-                                <p class="text-sm font-bold text-white">1:2</p>
-                            </div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
-                                <p class="text-xs text-gray-500">止損範圍</p>
-                                <p class="text-sm font-bold text-white">$5 - $15</p>
-                            </div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
-                                <p class="text-xs text-gray-500">監控時間框架</p>
-                                <p class="text-sm font-bold text-white">15M + 1H</p>
-                            </div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">每筆最大風險</p><p class="text-sm font-bold text-white">$10 (1%)</p></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">固定手數</p><p class="text-sm font-bold text-white">0.01 手</p></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">最大同時持倉</p><p class="text-sm font-bold text-white">3 筆 (測試期)</p></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">最低風報比</p><p class="text-sm font-bold text-white">1:1.5 ~ 1:2.5</p></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">止損範圍</p><p class="text-sm font-bold text-white">ATR-based (動態)</p></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">監控策略</p><p class="text-sm font-bold text-white">10 種 (15M×5 + 1H×5)</p></div>
                         </div>
                     </section>
                 </div>
@@ -476,6 +476,158 @@
             'skills': { title: '技能專案 (Skills)', sub: '4 個 AI 模型 · 17 個已啟用技能 · 41 個可安裝' }
         };
 
+        // ========== TRADING DATA LOADER ==========
+        async function loadTradingData() {
+            try {
+                const resp = await fetch('trading-data.json?t=' + Date.now());
+                if (!resp.ok) return;
+                const d = await resp.json();
+                
+                // Update header
+                document.getElementById('fx-last-update').textContent = d.lastUpdate || '--';
+                
+                // Account stats
+                const acct = d.account || {};
+                const pnlEl = document.getElementById('fx-pnl');
+                const pnl = acct.realizedPnl || 0;
+                pnlEl.textContent = `$${pnl.toFixed(2)}`;
+                pnlEl.className = `text-2xl font-bold mt-1 ${pnl >= 0 ? 'text-green-400' : 'text-red-400'}`;
+                document.getElementById('fx-winrate').textContent = acct.winRate || '--';
+                document.getElementById('fx-total-trades').textContent = acct.totalTrades || 0;
+                document.getElementById('fx-open-count').textContent = (d.openPositions || []).length;
+                document.getElementById('fx-streak').textContent = `${acct.consecutiveWins || 0} / ${acct.consecutiveLosses || 0}`;
+                
+                // Trend
+                const trendEl = document.getElementById('fx-trend');
+                const trend = d.indicators?.trend_1h || '--';
+                trendEl.textContent = trend;
+                if (trend.includes('BULL')) { trendEl.className = 'text-2xl font-bold mt-1 text-green-400'; }
+                else if (trend.includes('BEAR')) { trendEl.className = 'text-2xl font-bold mt-1 text-red-400'; }
+                else { trendEl.className = 'text-2xl font-bold mt-1 text-gray-300'; }
+                
+                // Price
+                const price = d.currentPrice || {};
+                document.getElementById('fx-price').textContent = price.bid ? `$${price.bid.toFixed(2)}` : '--';
+                
+                // Indicators
+                const ind = d.indicators || {};
+                document.getElementById('ind-ema9').textContent = ind.ema9_1h || '--';
+                document.getElementById('ind-ema21').textContent = ind.ema21_1h || '--';
+                const rsi15El = document.getElementById('ind-rsi15');
+                rsi15El.textContent = ind.rsi_15m || '--';
+                if (ind.rsi_15m > 70) rsi15El.className = 'text-sm font-bold text-red-400';
+                else if (ind.rsi_15m < 30) rsi15El.className = 'text-sm font-bold text-green-400';
+                else rsi15El.className = 'text-sm font-bold text-white';
+                const rsi5El = document.getElementById('ind-rsi5');
+                rsi5El.textContent = ind.rsi_5m || '--';
+                document.getElementById('ind-atr15').textContent = ind.atr_15m || '--';
+                document.getElementById('ind-atr1h').textContent = ind.atr_1h || '--';
+                
+                // Open Positions
+                const posBox = document.getElementById('fx-open-positions');
+                const positions = d.openPositions || [];
+                if (positions.length === 0) {
+                    posBox.innerHTML = '<div class="flex items-center justify-center py-8 border-2 border-dashed border-gray-700 rounded-lg bg-gray-800/30"><div class="text-center"><span class="text-3xl block mb-2">🔍</span><p class="text-gray-400 text-sm">目前無持倉，管家正在監控盤面...</p></div></div>';
+                } else {
+                    posBox.innerHTML = positions.map(p => {
+                        const pnlColor = p.pnl >= 0 ? 'text-green-400' : 'text-red-400';
+                        const dirBadge = p.direction === 'BUY' ? 'badge-buy' : 'badge-sell';
+                        return `<div class="trade-card p-4 bg-gray-800 rounded-lg border border-gray-700">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center space-x-3">
+                                    <span class="px-2 py-0.5 text-xs rounded-full ${dirBadge}">${p.direction}</span>
+                                    <span class="text-sm font-bold text-white">XAUUSD @ ${p.entryPrice}</span>
+                                </div>
+                                <span class="text-lg font-bold ${pnlColor}">${p.pnl >= 0 ? '+' : ''}$${p.pnl.toFixed(2)}</span>
+                            </div>
+                            <div class="flex space-x-6 text-xs text-gray-400">
+                                <span>手數: ${p.size}</span>
+                                <span>止損: ${p.stopLevel || '--'}</span>
+                                <span>止盈: ${p.profitLevel || '--'}</span>
+                                <span>現價: ${p.currentBid}/${p.currentAsk}</span>
+                            </div>
+                        </div>`;
+                    }).join('');
+                }
+                
+                // Recent Trades
+                const tradesBox = document.getElementById('fx-recent-trades');
+                const trades = (d.recentTrades || []).slice().reverse();
+                if (trades.length === 0) {
+                    tradesBox.innerHTML = '<div class="flex items-center justify-center py-8 border-2 border-dashed border-gray-700 rounded-lg bg-gray-800/30"><div class="text-center"><span class="text-3xl block mb-2">📭</span><p class="text-gray-400 text-sm">尚無交易紀錄</p></div></div>';
+                } else {
+                    tradesBox.innerHTML = trades.map(t => {
+                        const dirBadge = t.direction === 'BUY' ? 'badge-buy' : 'badge-sell';
+                        let outBadge = 'badge-open';
+                        if (t.outcome === 'WIN') outBadge = 'badge-win';
+                        else if (t.outcome === 'LOSS') outBadge = 'badge-loss';
+                        const time = t.time ? new Date(t.time).toLocaleString('zh-TW', {timeZone:'Asia/Taipei', hour:'2-digit', minute:'2-digit', month:'2-digit', day:'2-digit'}) : '--';
+                        const pnlStr = t.pnl != null ? `$${t.pnl.toFixed(2)}` : '進行中';
+                        return `<div class="trade-card p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <span class="px-2 py-0.5 text-xs rounded-full ${dirBadge}">${t.direction}</span>
+                                <span class="px-2 py-0.5 text-xs rounded-full ${outBadge}">${t.outcome}</span>
+                                <span class="text-xs text-gray-300">${t.strategy}</span>
+                            </div>
+                            <div class="flex items-center space-x-4 text-xs">
+                                <span class="text-gray-400">conf: ${(t.confidence*100).toFixed(0)}%</span>
+                                <span class="text-gray-400">SL:${t.stop_distance} TP:${t.tp_distance}</span>
+                                <span class="text-gray-400">${time}</span>
+                                <span class="font-bold ${t.pnl != null && t.pnl >= 0 ? 'text-green-400' : t.pnl != null ? 'text-red-400' : 'text-blue-400'}">${pnlStr}</span>
+                            </div>
+                        </div>`;
+                    }).join('');
+                }
+                
+                // Strategy Stats
+                const statsBox = document.getElementById('fx-strategy-stats');
+                const stats = d.strategyStats || {};
+                const statKeys = Object.keys(stats);
+                if (statKeys.length === 0) {
+                    statsBox.innerHTML = '<div class="p-4 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">累積交易數據後將自動產生各策略績效比較。目前運行中的策略：</p><ul class="text-xs text-gray-400 mt-2 space-y-1 list-disc list-inside"><li>15M: 趨勢跟隨、RSI反轉、布林回彈、動量突破、EMA交叉</li><li>1H: 趨勢延續、RSI極端、布林突破、EMA回彈、MACD交叉</li></ul></div>';
+                } else {
+                    statsBox.innerHTML = '<div class="grid grid-cols-1 md:grid-cols-2 gap-3">' + statKeys.map(k => {
+                        const s = stats[k];
+                        const total = s.wins + s.losses;
+                        const wr = total > 0 ? ((s.wins/total)*100).toFixed(1) : 0;
+                        const pnlColor = s.pnl >= 0 ? 'text-green-400' : 'text-red-400';
+                        return `<div class="p-4 bg-gray-800 rounded-lg border border-gray-700">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-bold text-white">${k}</span>
+                                <span class="text-xs ${pnlColor}">$${s.pnl.toFixed(2)}</span>
+                            </div>
+                            <div class="flex space-x-4 text-xs text-gray-400">
+                                <span>勝: ${s.wins}</span><span>敗: ${s.losses}</span><span>勝率: ${wr}%</span>
+                            </div>
+                        </div>`;
+                    }).join('') + '</div>';
+                }
+                
+                // Actions Log
+                const actBox = document.getElementById('fx-actions');
+                const actions = d.actions || [];
+                if (actions.length === 0) {
+                    actBox.innerHTML = '<p class="text-xs text-gray-500">無最近動作</p>';
+                } else {
+                    actBox.innerHTML = actions.map(a => {
+                        let icon = '📝';
+                        if (a.includes('OPENED')) icon = '🟢';
+                        else if (a.includes('TRAIL')) icon = '🔄';
+                        else if (a.includes('MON')) icon = '👁️';
+                        else if (a.includes('COOLDOWN')) icon = '❄️';
+                        else if (a.includes('NO_SIGNAL')) icon = '⏸️';
+                        return `<div class="flex items-center space-x-2 text-xs"><span>${icon}</span><span class="text-gray-300">${a}</span></div>`;
+                    }).join('');
+                }
+                
+            } catch(e) {
+                console.log('Trading data not available:', e);
+            }
+        }
+        
+        // Auto-refresh trading data every 60s when on forex-auto tab
+        let tradingRefreshInterval = null;
+        
         function switchTab(viewId, element) {
             document.querySelectorAll('.nav-item').forEach(el => {
                 el.classList.remove('active', 'bg-indigo-600/20', 'text-indigo-300', 'border-indigo-500/30');
@@ -487,6 +639,13 @@
             const targetView = document.getElementById('view-' + viewId);
             if(targetView) { targetView.classList.add('active'); }
             else { document.getElementById('view-placeholder').classList.add('active'); }
+            
+            // Auto-refresh trading data when on forex-auto tab
+            if (tradingRefreshInterval) { clearInterval(tradingRefreshInterval); tradingRefreshInterval = null; }
+            if (viewId === 'forex-auto') {
+                loadTradingData();
+                tradingRefreshInterval = setInterval(loadTradingData, 60000);
+            }
         }
     </script>
 </body>
