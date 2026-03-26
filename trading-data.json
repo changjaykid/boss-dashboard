@@ -1,25 +1,25 @@
 {
-  "lastUpdate": "2026-03-27 06:15:16",
+  "lastUpdate": "2026-03-27 06:30:17",
   "currentPrice": {
     "GOLD": {
-      "bid": 4402.94,
-      "ask": 4403.44
+      "bid": 4398.59,
+      "ask": 4399.09
     },
     "EURUSDM2026": {
-      "bid": 1.15765,
-      "ask": 1.15776
+      "bid": 1.15761,
+      "ask": 1.15774
     },
     "BTCUSD": {
-      "bid": 68895.55,
-      "ask": 68945.55
+      "bid": 68645.65,
+      "ask": 68695.65
     },
     "US500": {
-      "bid": 6501.2,
-      "ask": 6501.8
+      "bid": 6496.7,
+      "ask": 6497.3
     },
     "OIL_CRUDE": {
-      "bid": 92.511,
-      "ask": 92.591
+      "bid": 92.821,
+      "ask": 92.853
     }
   },
   "indicators": {
@@ -28,71 +28,71 @@
       "type": "\u9ec3\u91d1",
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BEAR",
-      "rsi_1h": 40.6,
-      "rsi_15m": 58.6,
-      "atr_15m": 23.48,
-      "atr_1h": 40.23,
-      "bid": 4402.94,
-      "ask": 4403.44
+      "rsi_1h": 40.5,
+      "rsi_15m": 55.1,
+      "atr_15m": 24.04,
+      "atr_1h": 40.51,
+      "bid": 4398.59,
+      "ask": 4399.09
     },
     "EURUSDM2026": {
       "name": "EUR/USD",
       "type": "\u5916\u532f",
       "trend_1h": "STRONG_BEAR",
-      "trend_15m": "BEAR",
-      "rsi_1h": 39.3,
-      "rsi_15m": 52.3,
+      "trend_15m": "STRONG_BULL",
+      "rsi_1h": 38.8,
+      "rsi_15m": 51.5,
       "atr_15m": 0.0,
       "atr_1h": 0.0,
-      "bid": 1.15765,
-      "ask": 1.15776
+      "bid": 1.15761,
+      "ask": 1.15774
     },
     "BTCUSD": {
       "name": "BTC/USD",
       "type": "\u52a0\u5bc6\u8ca8\u5e63",
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BULL",
-      "rsi_1h": 31.6,
-      "rsi_15m": 67.0,
-      "atr_15m": 263.55,
-      "atr_1h": 496.78,
-      "bid": 68895.55,
-      "ask": 68945.55
+      "rsi_1h": 29.1,
+      "rsi_15m": 57.0,
+      "atr_15m": 275.95,
+      "atr_1h": 514.34,
+      "bid": 68645.65,
+      "ask": 68695.65
     },
     "US500": {
       "name": "S&P 500",
       "type": "\u6307\u6578",
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BEAR",
-      "rsi_1h": 37.3,
-      "rsi_15m": 52.2,
-      "atr_15m": 15.0,
-      "atr_1h": 27.04,
-      "bid": 6501.2,
-      "ask": 6501.8
+      "rsi_1h": 37.0,
+      "rsi_15m": 49.5,
+      "atr_15m": 15.66,
+      "atr_1h": 27.16,
+      "bid": 6496.7,
+      "ask": 6497.3
     },
     "OIL_CRUDE": {
       "name": "\u539f\u6cb9",
       "type": "\u5546\u54c1",
       "trend_1h": "STRONG_BULL",
       "trend_15m": "STRONG_BEAR",
-      "rsi_1h": 50.2,
-      "rsi_15m": 32.9,
-      "atr_15m": 0.87,
+      "rsi_1h": 51.9,
+      "rsi_15m": 39.6,
+      "atr_15m": 0.85,
       "atr_1h": 1.4,
-      "bid": 92.511,
-      "ask": 92.591
+      "bid": 92.821,
+      "ask": 92.853
     }
   },
   "account": {
-    "balance": 30977.08,
-    "realizedPnl": -9.87,
-    "unrealizedPnl": 382.3,
-    "totalTrades": 20,
-    "closedTrades": 17,
+    "balance": 30982.78,
+    "realizedPnl": -10.03,
+    "unrealizedPnl": 902.35,
+    "totalTrades": 21,
+    "closedTrades": 18,
     "wins": 5,
-    "losses": 12,
-    "winRate": "29.4%"
+    "losses": 13,
+    "winRate": "27.8%"
   },
   "openPositions": [
     {
@@ -102,9 +102,9 @@
       "entryPrice": 6492.9,
       "stopLevel": 6506.4,
       "profitLevel": 6438.8,
-      "currentBid": 6500.7,
-      "currentAsk": 6501.3,
-      "pnl": -411.6,
+      "currentBid": 6497.5,
+      "currentAsk": 6498.1,
+      "pnl": -254.8,
       "instrument": "US 500",
       "epic": "US500"
     },
@@ -115,9 +115,9 @@
       "entryPrice": 68897.9,
       "stopLevel": 68402.5,
       "profitLevel": 69897.9,
-      "currentBid": 68892.95,
-      "currentAsk": 68942.95,
-      "pnl": -19.8,
+      "currentBid": 68654.8,
+      "currentAsk": 68704.8,
+      "pnl": -972.4,
       "instrument": "Bitcoin/USD",
       "epic": "BTCUSD"
     },
@@ -128,9 +128,9 @@
       "entryPrice": 69123.85,
       "stopLevel": 69357.55,
       "profitLevel": 68189.15,
-      "currentBid": 68892.95,
-      "currentAsk": 68942.95,
-      "pnl": 904.5,
+      "currentBid": 68654.8,
+      "currentAsk": 68704.8,
+      "pnl": 2095.25,
       "instrument": "Bitcoin/USD",
       "epic": "BTCUSD"
     },
@@ -141,24 +141,11 @@
       "entryPrice": 6498.8,
       "stopLevel": 6512.0,
       "profitLevel": 6445.8,
-      "currentBid": 6500.7,
-      "currentAsk": 6501.3,
-      "pnl": -122.5,
+      "currentBid": 6497.5,
+      "currentAsk": 6498.1,
+      "pnl": 34.3,
       "instrument": "US 500",
       "epic": "US500"
-    },
-    {
-      "dealId": "00000000-4bd9-2735-0460-7d740055311e",
-      "direction": "SELL",
-      "size": 0.05,
-      "entryPrice": 4408.77,
-      "stopLevel": 4407.77,
-      "profitLevel": null,
-      "currentBid": 4401.93,
-      "currentAsk": 4402.43,
-      "pnl": 31.7,
-      "instrument": "Gold",
-      "epic": "GOLD"
     }
   ],
   "closedTrades": [
@@ -516,6 +503,30 @@
       "close_reason": "AUTO_DETECTED"
     },
     {
+      "time": "2026-03-26T20:45:17.489273+00:00",
+      "instrument": "GOLD",
+      "instrumentName": "XAUUSD",
+      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
+      "direction": "SELL",
+      "confidence": 0.6,
+      "size": 0.05,
+      "entry_bid": 4407.11,
+      "entry_ask": 4407.61,
+      "stop_distance": 15.7,
+      "tp_distance": 62.9,
+      "trend_1h": "STRONG_BEAR",
+      "trend_15m": "STRONG_BEAR",
+      "rsi_15m": 59.6,
+      "rsi_1h": 43.9,
+      "result": {
+        "dealReference": "o_39074c25-e508-4867-8c4f-7b715206995a"
+      },
+      "outcome": "LOSS",
+      "pnl": -0.16,
+      "close_time": "2026-03-26T22:30:16.941481+00:00",
+      "close_reason": "AUTO_DETECTED"
+    },
+    {
       "time": "2026-03-26T21:15:21.456604+00:00",
       "instrument": "BTCUSD",
       "instrumentName": "BTC/USD",
@@ -568,8 +579,8 @@
     },
     "15M_\u8da8\u52e2\u8ddf\u96a8": {
       "wins": 2,
-      "losses": 7,
-      "pnl": -4.49
+      "losses": 8,
+      "pnl": -4.65
     },
     "1H_RSI\u6975\u7aef": {
       "wins": 0,
@@ -578,13 +589,13 @@
     }
   },
   "review": {
-    "summary": "\u5df2\u5b8c\u6210 17 \u7b46\u4ea4\u6613\uff0c\u52dd\u7387 29.4%\uff0c\u7d2f\u8a08\u76c8\u8667 $-9.87",
+    "summary": "\u5df2\u5b8c\u6210 18 \u7b46\u4ea4\u6613\uff0c\u52dd\u7387 27.8%\uff0c\u7d2f\u8a08\u76c8\u8667 $-10.03",
     "lessons": [
       "\u7b56\u7565\u300c1H_RSI_EXTREME\u300d\u52dd\u7387\u504f\u4f4e (0%)\uff0c\u8003\u616e\u63d0\u9ad8\u9580\u6abb\u6216\u505c\u7528",
-      "\u7b56\u7565\u300c15M_\u8da8\u52e2\u8ddf\u96a8\u300d\u52dd\u7387\u504f\u4f4e (22%)\uff0c\u8003\u616e\u63d0\u9ad8\u9580\u6abb\u6216\u505c\u7528",
+      "\u7b56\u7565\u300c15M_\u8da8\u52e2\u8ddf\u96a8\u300d\u52dd\u7387\u504f\u4f4e (20%)\uff0c\u8003\u616e\u63d0\u9ad8\u9580\u6abb\u6216\u505c\u7528",
       "\u6574\u9ad4\u52dd\u7387\u504f\u4f4e\uff0c\u5efa\u8b70\u63d0\u9ad8\u4fe1\u5fc3\u5ea6\u9580\u6abb",
-      "\u5e73\u5747\u7372\u5229/\u8667\u640d\u6bd4 = 0.62\uff08\u9700\u6539\u5584\uff09",
-      "XAUUSD \u52dd\u7387 42%\uff0c\u76c8\u8667 $1.86",
+      "\u5e73\u5747\u7372\u5229/\u8667\u640d\u6bd4 = 0.67\uff08\u9700\u6539\u5584\uff09",
+      "XAUUSD \u52dd\u7387 38%\uff0c\u76c8\u8667 $1.70",
       "BTC/USD \u52dd\u7387 0%\uff0c\u76c8\u8667 $-11.60"
     ],
     "optimization": [
@@ -614,6 +625,7 @@
     "OIL_CRUDE"
   ],
   "actions": [
-    "MAX_POS: 5/5"
+    "PROFIT_CLOSE: SELL Bitcoin/USD +419.1pts",
+    "OPENED: SELL XAUUSD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05"
   ]
 }
