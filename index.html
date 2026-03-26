@@ -185,7 +185,7 @@
                             <span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span></span>
                             <span class="text-gray-400">最後更新：<span id="fx-last-update" class="text-gray-200">載入中...</span></span>
                         </div>
-                        <button onclick="loadTradingData()" class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs rounded-lg transition-colors">🔄 重新整理</button>
+                        <button id="btn-refresh" onclick="refreshBtn()" class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs rounded-lg transition-colors">🔄 重新整理</button>
                     </div>
 
                     <!-- 帳戶總覽 -->
@@ -453,6 +453,16 @@
             if (t.includes('BULL')) return 'text-green-400';
             if (t.includes('BEAR')) return 'text-red-400';
             return 'text-gray-300';
+        }
+        
+        async function refreshBtn() {
+            const btn = document.getElementById('btn-refresh');
+            btn.textContent = '⏳ 載入中...';
+            btn.disabled = true;
+            await loadTradingData();
+            btn.textContent = '✅ 已更新';
+            btn.disabled = false;
+            setTimeout(() => { btn.textContent = '🔄 重新整理'; }, 2000);
         }
         
         async function loadTradingData() {
