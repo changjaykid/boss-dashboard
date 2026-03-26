@@ -1,26 +1,26 @@
 {
-  "lastUpdate": "2026-03-27 01:00:06",
-  "lastUpdateUTC": "2026-03-26T17:00:06.148186+00:00",
+  "lastUpdate": "2026-03-27 01:15:07",
+  "lastUpdateUTC": "2026-03-26T17:15:07.045351+00:00",
   "marketStatus": "STRONG_BEAR",
   "currentPrice": {
-    "bid": 4387.56,
-    "ask": 4388.06
+    "bid": 4395.29,
+    "ask": 4395.79
   },
   "indicators": {
     "trend_1h": "STRONG_BEAR",
     "trend_15m": "STRONG_BEAR",
-    "ema9_1h": 4437.77,
-    "ema21_1h": 4471.26,
-    "rsi_15m": 19.1,
-    "rsi_5m": 15.8,
-    "atr_15m": 21.24,
-    "atr_1h": 38.81
+    "ema9_1h": 4429.35,
+    "ema21_1h": 4465.47,
+    "rsi_15m": 27.2,
+    "rsi_5m": 25.7,
+    "atr_15m": 19.97,
+    "atr_1h": 38.72
   },
   "account": {
     "assumedCapital": 1000,
-    "balance": 31000.23,
+    "balance": 31000.17,
     "realizedPnl": -0.15,
-    "totalTrades": 5,
+    "totalTrades": 6,
     "closedTrades": 1,
     "wins": 0,
     "losses": 1,
@@ -36,22 +36,10 @@
       "entryPrice": 4383.12,
       "stopLevel": 4344.32,
       "profitLevel": 4538.32,
-      "currentBid": 4388.04,
-      "currentAsk": 4388.54,
-      "pnl": 4.92,
+      "currentBid": 4395.65,
+      "currentAsk": 4396.15,
+      "pnl": 12.53,
       "openTime": "2026-03-26T16:45:07.073"
-    },
-    {
-      "dealId": "00000000-4bd8-67a7-0460-7d740055311e",
-      "direction": "SELL",
-      "size": 0.01,
-      "entryPrice": 4459.14,
-      "stopLevel": 4402.02,
-      "profitLevel": null,
-      "currentBid": 4388.04,
-      "currentAsk": 4388.54,
-      "pnl": 70.6,
-      "openTime": "2026-03-26T14:45:05.681"
     }
   ],
   "recentTrades": [
@@ -145,6 +133,24 @@
       },
       "outcome": "OPEN",
       "pnl": null
+    },
+    {
+      "time": "2026-03-26T17:15:07.044157+00:00",
+      "strategy": "15M_TREND_FOLLOW",
+      "direction": "SELL",
+      "confidence": 0.6,
+      "entry_bid": 4395.29,
+      "entry_ask": 4395.79,
+      "stop_distance": 16.0,
+      "tp_distance": 63.9,
+      "trend_1h": "STRONG_BEAR",
+      "rsi_15m": 27.2,
+      "rsi_1h": 29.7,
+      "result": {
+        "dealReference": "o_c34af4b7-9de5-4ef3-8638-c350aa30ae90"
+      },
+      "outcome": "OPEN",
+      "pnl": null
     }
   ],
   "strategyStats": {
@@ -155,11 +161,8 @@
     }
   },
   "actions": [
-    "MON: BUY @4383.12 P/L=4.92pts",
-    "MON: SELL @4459.14 P/L=70.6pts",
-    "SKIP: already have SELL",
-    "SKIP: already have BUY",
-    "SKIP: already have BUY",
-    "NO_TRADE: signals too weak or slots full"
+    "MON: BUY @4383.12 P/L=12.53pts",
+    "OPENED: SELL via 15M_TREND_FOLLOW conf=60% SL=16.0 TP=63.9",
+    "SKIP: already have BUY"
   ]
 }
