@@ -1,0 +1,15 @@
+ INFO  Accepting connections at http://localhost:8080
+ HTTP  3/26/2026 4:49:13 AM ::1 GET /
+ HTTP  3/26/2026 4:49:13 AM ::1 Returned 200 in 20 ms
+ HTTP  3/26/2026 4:49:14 AM ::1 GET /favicon.ico
+ HTTP  3/26/2026 4:49:14 AM ::1 Returned 404 in 2 ms
+ HTTP  3/26/2026 4:49:43 AM ::1 POST /line/webhook
+ HTTP  3/26/2026 4:49:43 AM ::1 Returned 404 in 2 ms
+ HTTP  3/26/2026 4:50:03 AM ::1 POST /line/webhook
+ HTTP  3/26/2026 4:50:03 AM ::1 Returned 404 in 1 ms
+ HTTP  3/26/2026 4:50:13 AM ::1 GET /
+ HTTP  3/26/2026 4:50:13 AM ::1 Returned 304 in 1 ms
+ HTTP  3/26/2026 4:50:40 AM ::1 POST /line/webhook
+ HTTP  3/26/2026 4:50:40 AM ::1 Returned 404 in 1 ms
+
+ INFO  Gracefully shutting down. Please wait...
