@@ -1,26 +1,26 @@
 {
-  "lastUpdate": "2026-03-27 00:30:07",
-  "lastUpdateUTC": "2026-03-26T16:30:07.647199+00:00",
+  "lastUpdate": "2026-03-27 00:45:04",
+  "lastUpdateUTC": "2026-03-26T16:45:04.990171+00:00",
   "marketStatus": "STRONG_BEAR",
   "currentPrice": {
-    "bid": 4391.7,
-    "ask": 4392.2
+    "bid": 4381.31,
+    "ask": 4381.81
   },
   "indicators": {
     "trend_1h": "STRONG_BEAR",
     "trend_15m": "STRONG_BEAR",
-    "ema9_1h": 4439.34,
-    "ema21_1h": 4471.98,
-    "rsi_15m": 36.7,
-    "rsi_5m": 12.0,
-    "atr_15m": 22.2,
-    "atr_1h": 37.39
+    "ema9_1h": 4435.05,
+    "ema21_1h": 4470.03,
+    "rsi_15m": 27.6,
+    "rsi_5m": 15.4,
+    "atr_15m": 22.51,
+    "atr_1h": 38.81
   },
   "account": {
     "assumedCapital": 1000,
-    "balance": 31000.14,
+    "balance": 31000.26,
     "realizedPnl": -0.15,
-    "totalTrades": 4,
+    "totalTrades": 5,
     "closedTrades": 1,
     "wins": 0,
     "losses": 1,
@@ -34,11 +34,11 @@
       "direction": "SELL",
       "size": 0.01,
       "entryPrice": 4459.14,
-      "stopLevel": 4458.14,
+      "stopLevel": 4414.88,
       "profitLevel": null,
-      "currentBid": 4392.18,
-      "currentAsk": 4392.68,
-      "pnl": 66.46,
+      "currentBid": 4379.01,
+      "currentAsk": 4379.51,
+      "pnl": 79.63,
       "openTime": "2026-03-26T14:45:05.681"
     }
   ],
@@ -115,6 +115,24 @@
       },
       "outcome": "OPEN",
       "pnl": null
+    },
+    {
+      "time": "2026-03-26T16:45:04.989047+00:00",
+      "strategy": "1H_RSI_EXTREME",
+      "direction": "BUY",
+      "confidence": 0.55,
+      "entry_bid": 4381.31,
+      "entry_ask": 4381.81,
+      "stop_distance": 38.8,
+      "tp_distance": 155.2,
+      "trend_1h": "STRONG_BEAR",
+      "rsi_15m": 27.6,
+      "rsi_1h": 28.8,
+      "result": {
+        "dealReference": "o_382f772e-2d14-457b-bcf8-b3deaafdd111"
+      },
+      "outcome": "OPEN",
+      "pnl": null
     }
   ],
   "strategyStats": {
@@ -125,10 +143,11 @@
     }
   },
   "actions": [
-    "TRAIL_TIGHT: 00000000 stop\u21924414.88",
-    "MON: SELL @4459.14 P/L=66.46pts",
+    "TRAIL_TIGHT: 00000000 stop\u21924402.02",
+    "MON: SELL @4459.14 P/L=79.63pts",
     "SKIP: already have SELL",
     "SKIP: already have SELL",
-    "NO_TRADE: signals too weak or slots full"
+    "OPENED: BUY via 1H_RSI_EXTREME conf=55% SL=38.8 TP=155.2",
+    "SKIP: already have BUY"
   ]
 }
