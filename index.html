@@ -308,6 +308,117 @@
                     </section>
                 </div>
 
+                <!-- ========== 技能專案 View ========== -->
+                <div id="view-skills" class="section-view space-y-8">
+
+                    <!-- 可用模型 -->
+                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center space-x-3 mb-6">
+                            <span class="text-xl">🧠</span><h3 class="text-xl font-medium text-indigo-300">可用 AI 模型 (Models)</h3>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="p-4 bg-gray-800 rounded-lg border border-indigo-700/50 trade-card">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-sm font-bold text-white">anthropic/claude-opus-4-6</span>
+                                    <span class="px-2 py-0.5 text-xs rounded-full bg-green-900/50 text-green-300 border border-green-700/50">預設</span>
+                                </div>
+                                <p class="text-xs text-gray-400">最強推理模型 · 977k context · text+image</p>
+                                <p class="text-xs text-gray-500 mt-1">別名：opus · 用途：複雜分析、深度推理</p>
+                            </div>
+                            <div class="p-4 bg-gray-800 rounded-lg border border-gray-700/50 trade-card">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-sm font-bold text-white">google/gemini-3-flash-preview</span>
+                                    <span class="px-2 py-0.5 text-xs rounded-full bg-blue-900/50 text-blue-300 border border-blue-700/50">LINE 預設</span>
+                                </div>
+                                <p class="text-xs text-gray-400">最快速省錢 · 1024k context · text+image</p>
+                                <p class="text-xs text-gray-500 mt-1">別名：gemini-flash · 用途：日常對話、快速回應</p>
+                            </div>
+                            <div class="p-4 bg-gray-800 rounded-lg border border-gray-700/50 trade-card">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-sm font-bold text-white">google/gemini-3.1-pro-preview</span>
+                                    <span class="px-2 py-0.5 text-xs rounded-full bg-gray-700 text-gray-300">備用</span>
+                                </div>
+                                <p class="text-xs text-gray-400">均衡型 · 1024k context · text+image</p>
+                                <p class="text-xs text-gray-500 mt-1">別名：gemini · 用途：中等複雜度任務</p>
+                            </div>
+                            <div class="p-4 bg-gray-800 rounded-lg border border-yellow-700/30 trade-card">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-sm font-bold text-white">openai-codex/gpt-5.4</span>
+                                    <span class="px-2 py-0.5 text-xs rounded-full bg-yellow-900/50 text-yellow-300 border border-yellow-700/50">⚠️ Rate Limited</span>
+                                </div>
+                                <p class="text-xs text-gray-400">OpenAI 頂級模型 · 266k context · text+image</p>
+                                <p class="text-xs text-gray-500 mt-1">目前有速率限制，暫不使用</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 已啟用技能 -->
+                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xl">✅</span><h3 class="text-xl font-medium text-green-300">已啟用技能 (17 Ready)</h3>
+                            </div>
+                            <span class="px-3 py-1 bg-green-900/30 border border-green-700/50 text-green-300 text-xs rounded-full">17 / 58</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>🐙</span><div><p class="text-sm text-white">github</p><p class="text-xs text-gray-500">GitHub PR、Issue、CI 管理</p></div></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>📦</span><div><p class="text-sm text-white">gh-issues</p><p class="text-xs text-gray-500">GitHub Issues 自動修復與 PR</p></div></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>📦</span><div><p class="text-sm text-white">gog</p><p class="text-xs text-gray-500">Google Workspace (Gmail, Calendar, Drive)</p></div></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>🔒</span><div><p class="text-sm text-white">healthcheck</p><p class="text-xs text-gray-500">主機安全審計與強化</p></div></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>📱</span><div><p class="text-sm text-white">node-connect</p><p class="text-xs text-gray-500">App 連線診斷</p></div></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>🎤</span><div><p class="text-sm text-white">openai-whisper-api</p><p class="text-xs text-gray-500">語音轉文字 (Whisper)</p></div></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>🗣️</span><div><p class="text-sm text-white">sag</p><p class="text-xs text-gray-500">ElevenLabs 文字轉語音</p></div></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>📝</span><div><p class="text-sm text-white">summarize</p><p class="text-xs text-gray-500">網頁/PDF/影片摘要</p></div></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>☔</span><div><p class="text-sm text-white">weather</p><p class="text-xs text-gray-500">天氣查詢與預報</p></div></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>🌐</span><div><p class="text-sm text-white">Agent Browser</p><p class="text-xs text-gray-500">無頭瀏覽器自動化</p></div></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>⚡</span><div><p class="text-sm text-white">auto-workflow</p><p class="text-xs text-gray-500">自動化工作流建構</p></div></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>🔄</span><div><p class="text-sm text-white">automation-workflows</p><p class="text-xs text-gray-500">跨工具自動化設計 (Zapier/Make/n8n)</p></div></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>🧬</span><div><p class="text-sm text-white">Self-Evolving Skill</p><p class="text-xs text-gray-500">自我進化學習系統</p></div></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>📈</span><div><p class="text-sm text-white">self-improvement</p><p class="text-xs text-gray-500">錯誤學習與持續改進</p></div></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>🛠️</span><div><p class="text-sm text-white">skill-creator</p><p class="text-xs text-gray-500">技能建立與審計</p></div></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>🏗️</span><div><p class="text-sm text-white">Skill Builder</p><p class="text-xs text-gray-500">高品質技能模組化建構</p></div></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>🛡️</span><div><p class="text-sm text-white">skill-vetter</p><p class="text-xs text-gray-500">技能安全審查</p></div></div>
+                        </div>
+                    </section>
+
+                    <!-- 未安裝技能 -->
+                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xl">📦</span><h3 class="text-xl font-medium text-gray-400">未安裝技能 (41 Missing)</h3>
+                            </div>
+                            <span class="px-3 py-1 bg-gray-700/50 border border-gray-600 text-gray-400 text-xs rounded-full">需要安裝依賴</span>
+                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">🔐 1password</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">📝 apple-notes</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">⏰ apple-reminders</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">🐻 bear-notes</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">📰 blogwatcher</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">📸 camsnap</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">📦 clawhub</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">🧩 coding-agent</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">🎮 discord</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">✨ gemini</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">📧 himalaya</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">📨 imsg</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">🧩 mcporter</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">📊 model-usage</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">📄 nano-pdf</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">📝 notion</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">💎 obsidian</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">🎤 openai-whisper</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">💡 openhue</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">💬 slack</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">🎵 spotify-player</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">📋 trello</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">🐦 xurl (Twitter/X)</div>
+                            <div class="p-2 text-xs text-gray-500 bg-gray-800/50 rounded border border-gray-700/30">🔍 tavily-search</div>
+                            <div class="p-2 text-xs text-gray-400 bg-gray-800/50 rounded border border-gray-700/30">...等共 41 個</div>
+                        </div>
+                    </section>
+                </div>
+
                 <!-- 其他專案 View -->
                 <div id="view-placeholder" class="section-view space-y-8">
                     <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
@@ -346,7 +457,7 @@
             'forex-auto': { title: '🤖 外匯自動交易 (Auto Trading)', sub: 'XAUUSD · Capital.com API · 即時監控中' },
             'crypto': { title: '虛擬貨幣專案 (Crypto)', sub: '加密貨幣熱點與技術面追蹤' },
             'community': { title: '社群專案 (Community)', sub: '粉絲團與互動指標管理' },
-            'skills': { title: '技能專案 (Skills)', sub: 'AI 技能訓練與功能開發' }
+            'skills': { title: '技能專案 (Skills)', sub: '4 個 AI 模型 · 17 個已啟用技能 · 41 個可安裝' }
         };
 
         function switchTab(viewId, element) {
