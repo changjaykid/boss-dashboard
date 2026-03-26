@@ -70,7 +70,7 @@
                 <a href="#" onclick="switchTab('forex', this)" class="nav-item flex items-center space-x-3 px-4 py-2 hover:bg-gray-800 text-gray-300 rounded-lg transition-colors">
                     <span>💱</span><span>外匯保證金專案</span>
                 </a>
-                <a href="#" onclick="switchTab('forex-auto', this)" class="nav-item flex items-center space-x-3 px-4 py-2 hover:bg-gray-800 text-yellow-300 rounded-lg transition-colors">
+                <a href="#" onclick="switchTab('forex-auto', this)" class="nav-item flex items-center space-x-3 px-4 py-2 hover:bg-gray-800 text-gray-300 rounded-lg transition-colors">
                     <span>🤖</span><span>外匯自動交易</span>
                 </a>
                 <a href="#" onclick="switchTab('crypto', this)" class="nav-item flex items-center space-x-3 px-4 py-2 hover:bg-gray-800 text-gray-300 rounded-lg transition-colors">
@@ -208,7 +208,7 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
                         <div class="stat-card border border-gray-700/50 p-5 rounded-xl">
                             <p class="text-xs text-gray-500 uppercase tracking-wider">目前持倉</p>
                             <p class="text-2xl font-bold text-blue-400 mt-1" id="fx-open-count">0</p>
@@ -222,43 +222,14 @@
                             <p class="text-2xl font-bold mt-1" id="fx-trend">--</p>
                         </div>
                         <div class="stat-card border border-gray-700/50 p-5 rounded-xl">
+                            <p class="text-xs text-gray-500 uppercase tracking-wider">15M 趨勢</p>
+                            <p class="text-2xl font-bold mt-1" id="fx-trend-15m">--</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-5 rounded-xl">
                             <p class="text-xs text-gray-500 uppercase tracking-wider">XAUUSD 報價</p>
                             <p class="text-2xl font-bold text-yellow-400 mt-1" id="fx-price">--</p>
                         </div>
                     </div>
-
-                    <!-- 技術指標 -->
-                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <span class="text-xl">📉</span><h3 class="text-lg font-medium text-indigo-300">即時技術指標</h3>
-                        </div>
-                        <div class="grid grid-cols-3 md:grid-cols-6 gap-3" id="fx-indicators">
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 text-center">
-                                <p class="text-xs text-gray-500">EMA9 (1H)</p>
-                                <p class="text-sm font-bold text-white" id="ind-ema9">--</p>
-                            </div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 text-center">
-                                <p class="text-xs text-gray-500">EMA21 (1H)</p>
-                                <p class="text-sm font-bold text-white" id="ind-ema21">--</p>
-                            </div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 text-center">
-                                <p class="text-xs text-gray-500">RSI (15M)</p>
-                                <p class="text-sm font-bold text-white" id="ind-rsi15">--</p>
-                            </div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 text-center">
-                                <p class="text-xs text-gray-500">RSI (5M)</p>
-                                <p class="text-sm font-bold text-white" id="ind-rsi5">--</p>
-                            </div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 text-center">
-                                <p class="text-xs text-gray-500">ATR (15M)</p>
-                                <p class="text-sm font-bold text-white" id="ind-atr15">--</p>
-                            </div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 text-center">
-                                <p class="text-xs text-gray-500">ATR (1H)</p>
-                                <p class="text-sm font-bold text-white" id="ind-atr1h">--</p>
-                            </div>
-                        </div>
-                    </section>
 
                     <!-- 當前持倉 -->
                     <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
@@ -284,24 +255,16 @@
                         <div id="fx-strategy-stats" class="space-y-3"></div>
                     </section>
 
-                    <!-- 最近動作 -->
-                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
-                        <div class="flex items-center space-x-3 mb-6">
-                            <span class="text-xl">⚡</span><h3 class="text-xl font-medium text-yellow-300">最近系統動作 (Actions Log)</h3>
-                        </div>
-                        <div id="fx-actions" class="space-y-2"></div>
-                    </section>
-
                     <!-- 風控參數 -->
                     <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
                         <div class="flex items-center space-x-3 mb-6">
                             <span class="text-xl">⚙️</span><h3 class="text-xl font-medium text-gray-300">風控參數 (Risk Management)</h3>
                         </div>
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">每筆最大風險</p><p class="text-sm font-bold text-white">$10 (1%)</p></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">每筆最大風險</p><p class="text-sm font-bold text-white">$200 (20%)</p></div>
                             <div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">固定手數</p><p class="text-sm font-bold text-white">0.01 手</p></div>
                             <div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">最大同時持倉</p><p class="text-sm font-bold text-white">3 筆 (測試期)</p></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">最低風報比</p><p class="text-sm font-bold text-white">1:1.5 ~ 1:2.5</p></div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">風報比區間</p><p class="text-sm font-bold text-white">1:1.5 ~ 1:4</p></div>
                             <div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">止損範圍</p><p class="text-sm font-bold text-white">ATR-based (動態)</p></div>
                             <div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">監控策略</p><p class="text-sm font-bold text-white">10 種 (15M×5 + 1H×5)</p></div>
                         </div>
@@ -477,6 +440,21 @@
         };
 
         // ========== TRADING DATA LOADER ==========
+        const trendMap = {
+            'STRONG_BULL': '強勢看多 🟢',
+            'BULL': '看多 🟢',
+            'STRONG_BEAR': '強勢看空 🔴',
+            'BEAR': '看空 🔴',
+            'NEUTRAL': '盤整 ⚪'
+        };
+        function trendCN(t) { return trendMap[t] || t || '--'; }
+        function trendColor(t) {
+            if (!t) return 'text-gray-300';
+            if (t.includes('BULL')) return 'text-green-400';
+            if (t.includes('BEAR')) return 'text-red-400';
+            return 'text-gray-300';
+        }
+        
         async function loadTradingData() {
             try {
                 const resp = await fetch('trading-data.json?t=' + Date.now());
@@ -497,31 +475,21 @@
                 document.getElementById('fx-open-count').textContent = (d.openPositions || []).length;
                 document.getElementById('fx-streak').textContent = `${acct.consecutiveWins || 0} / ${acct.consecutiveLosses || 0}`;
                 
-                // Trend
+                // 1H Trend (Chinese)
+                const trend1h = d.indicators?.trend_1h || '';
                 const trendEl = document.getElementById('fx-trend');
-                const trend = d.indicators?.trend_1h || '--';
-                trendEl.textContent = trend;
-                if (trend.includes('BULL')) { trendEl.className = 'text-2xl font-bold mt-1 text-green-400'; }
-                else if (trend.includes('BEAR')) { trendEl.className = 'text-2xl font-bold mt-1 text-red-400'; }
-                else { trendEl.className = 'text-2xl font-bold mt-1 text-gray-300'; }
+                trendEl.textContent = trendCN(trend1h);
+                trendEl.className = `text-2xl font-bold mt-1 ${trendColor(trend1h)}`;
+                
+                // 15M Trend (Chinese)
+                const trend15m = d.indicators?.trend_15m || '';
+                const trend15El = document.getElementById('fx-trend-15m');
+                trend15El.textContent = trendCN(trend15m);
+                trend15El.className = `text-2xl font-bold mt-1 ${trendColor(trend15m)}`;
                 
                 // Price
                 const price = d.currentPrice || {};
                 document.getElementById('fx-price').textContent = price.bid ? `$${price.bid.toFixed(2)}` : '--';
-                
-                // Indicators
-                const ind = d.indicators || {};
-                document.getElementById('ind-ema9').textContent = ind.ema9_1h || '--';
-                document.getElementById('ind-ema21').textContent = ind.ema21_1h || '--';
-                const rsi15El = document.getElementById('ind-rsi15');
-                rsi15El.textContent = ind.rsi_15m || '--';
-                if (ind.rsi_15m > 70) rsi15El.className = 'text-sm font-bold text-red-400';
-                else if (ind.rsi_15m < 30) rsi15El.className = 'text-sm font-bold text-green-400';
-                else rsi15El.className = 'text-sm font-bold text-white';
-                const rsi5El = document.getElementById('ind-rsi5');
-                rsi5El.textContent = ind.rsi_5m || '--';
-                document.getElementById('ind-atr15').textContent = ind.atr_15m || '--';
-                document.getElementById('ind-atr1h').textContent = ind.atr_1h || '--';
                 
                 // Open Positions
                 const posBox = document.getElementById('fx-open-positions');
@@ -601,23 +569,6 @@
                             </div>
                         </div>`;
                     }).join('') + '</div>';
-                }
-                
-                // Actions Log
-                const actBox = document.getElementById('fx-actions');
-                const actions = d.actions || [];
-                if (actions.length === 0) {
-                    actBox.innerHTML = '<p class="text-xs text-gray-500">無最近動作</p>';
-                } else {
-                    actBox.innerHTML = actions.map(a => {
-                        let icon = '📝';
-                        if (a.includes('OPENED')) icon = '🟢';
-                        else if (a.includes('TRAIL')) icon = '🔄';
-                        else if (a.includes('MON')) icon = '👁️';
-                        else if (a.includes('COOLDOWN')) icon = '❄️';
-                        else if (a.includes('NO_SIGNAL')) icon = '⏸️';
-                        return `<div class="flex items-center space-x-2 text-xs"><span>${icon}</span><span class="text-gray-300">${a}</span></div>`;
-                    }).join('');
                 }
                 
             } catch(e) {
