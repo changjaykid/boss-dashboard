@@ -1,21 +1,21 @@
 {
-  "lastUpdate": "2026-03-27 05:30:18",
+  "lastUpdate": "2026-03-27 05:45:16",
   "currentPrice": {
     "GOLD": {
       "bid": 4378.39,
       "ask": 4378.89
     },
     "EURUSDM2026": {
-      "bid": 1.15686,
-      "ask": 1.15746
+      "bid": 1.15723,
+      "ask": 1.15783
     },
     "BTCUSD": {
-      "bid": 69012.35,
-      "ask": 69062.35
+      "bid": 68950.3,
+      "ask": 69000.3
     },
     "US500": {
-      "bid": 6490.3,
-      "ask": 6491.8
+      "bid": 6489.0,
+      "ask": 6491.5
     },
     "OIL_CRUDE": {
       "bid": 93.04,
@@ -40,36 +40,36 @@
       "type": "\u5916\u532f",
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BEAR",
-      "rsi_1h": 39.7,
-      "rsi_15m": 53.3,
+      "rsi_1h": 41.5,
+      "rsi_15m": 52.5,
       "atr_15m": 0.0,
       "atr_1h": 0.0,
-      "bid": 1.15686,
-      "ask": 1.15746
+      "bid": 1.15723,
+      "ask": 1.15783
     },
     "BTCUSD": {
       "name": "BTC/USD",
       "type": "\u52a0\u5bc6\u8ca8\u5e63",
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BULL",
-      "rsi_1h": 33.6,
-      "rsi_15m": 65.6,
-      "atr_15m": 264.24,
+      "rsi_1h": 30.9,
+      "rsi_15m": 63.6,
+      "atr_15m": 275.93,
       "atr_1h": 508.08,
-      "bid": 69012.35,
-      "ask": 69062.35
+      "bid": 68950.3,
+      "ask": 69000.3
     },
     "US500": {
       "name": "S&P 500",
       "type": "\u6307\u6578",
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BEAR",
-      "rsi_1h": 32.3,
-      "rsi_15m": 47.7,
-      "atr_15m": 15.49,
+      "rsi_1h": 32.6,
+      "rsi_15m": 49.5,
+      "atr_15m": 15.08,
       "atr_1h": 28.31,
-      "bid": 6490.3,
-      "ask": 6491.8
+      "bid": 6489.0,
+      "ask": 6491.5
     },
     "OIL_CRUDE": {
       "name": "\u539f\u6cb9",
@@ -85,9 +85,9 @@
     }
   },
   "account": {
-    "balance": 30987.62,
+    "balance": 30987.65,
     "realizedPnl": -9.87,
-    "unrealizedPnl": 1399.95,
+    "unrealizedPnl": 1403.2,
     "totalTrades": 20,
     "closedTrades": 17,
     "wins": 5,
@@ -102,9 +102,9 @@
       "entryPrice": 6492.9,
       "stopLevel": 6506.4,
       "profitLevel": 6438.8,
-      "currentBid": 6489.4,
-      "currentAsk": 6490.9,
-      "pnl": 98.0,
+      "currentBid": 6489.0,
+      "currentAsk": 6491.5,
+      "pnl": 68.6,
       "instrument": "US 500",
       "epic": "US500"
     },
@@ -115,9 +115,9 @@
       "entryPrice": 68897.9,
       "stopLevel": 68402.5,
       "profitLevel": 69897.9,
-      "currentBid": 69012.2,
-      "currentAsk": 69062.2,
-      "pnl": 457.2,
+      "currentBid": 68950.15,
+      "currentAsk": 69000.15,
+      "pnl": 209.0,
       "instrument": "Bitcoin/USD",
       "epic": "BTCUSD"
     },
@@ -128,9 +128,9 @@
       "entryPrice": 69123.85,
       "stopLevel": 69357.55,
       "profitLevel": 68189.15,
-      "currentBid": 69012.2,
-      "currentAsk": 69062.2,
-      "pnl": 308.25,
+      "currentBid": 68950.15,
+      "currentAsk": 69000.15,
+      "pnl": 618.5,
       "instrument": "Bitcoin/USD",
       "epic": "BTCUSD"
     },
@@ -141,9 +141,9 @@
       "entryPrice": 6498.8,
       "stopLevel": 6512.0,
       "profitLevel": 6445.8,
-      "currentBid": 6489.4,
-      "currentAsk": 6490.9,
-      "pnl": 387.1,
+      "currentBid": 6489.0,
+      "currentAsk": 6491.5,
+      "pnl": 357.7,
       "instrument": "US 500",
       "epic": "US500"
     },
