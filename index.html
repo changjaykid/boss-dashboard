@@ -163,8 +163,8 @@
                 <!-- 帳戶卡片 Row 1 -->
                 <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
                     <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">假設本金</p>
-                        <p class="text-lg md:text-2xl font-bold text-white mt-0.5">$1,000</p>
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">帳戶餘額</p>
+                        <p class="text-lg md:text-2xl font-bold text-white mt-0.5" id="fx-balance">--</p>
                     </div>
                     <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
                         <p class="text-[10px] md:text-xs text-gray-500 uppercase">已實現盈虧</p>
@@ -210,16 +210,22 @@
                     <div id="fx-open-positions" class="space-y-2"></div>
                 </section>
 
-                <!-- 最近交易 -->
+                <!-- 已完成交易 -->
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
-                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">📋 最近交易</h3>
-                    <div id="fx-recent-trades" class="space-y-2"></div>
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">📋 已完成交易</h3>
+                    <div id="fx-closed-trades" class="space-y-2"></div>
                 </section>
 
                 <!-- 策略績效 -->
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
                     <h3 class="text-sm md:text-xl font-medium text-purple-300 mb-3">🧠 策略績效</h3>
                     <div id="fx-strategy-stats" class="space-y-2"></div>
+                </section>
+
+                <!-- 復盤與優化 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">📊 復盤與自我優化</h3>
+                    <div id="fx-review" class="space-y-3"></div>
                 </section>
 
                 <!-- 風控 -->
@@ -315,6 +321,7 @@ document.getElementById('fx-last-update').textContent=d.lastUpdate||'--';
 const a=d.account||{};
 const pe=document.getElementById('fx-pnl');const pn=a.realizedPnl||0;
 pe.textContent='$'+pn.toFixed(2);pe.className='text-lg md:text-2xl font-bold mt-0.5 '+(pn>=0?'text-green-400':'text-red-400');
+document.getElementById('fx-balance').textContent='$'+((a.balance||0).toLocaleString());
 document.getElementById('fx-winrate').textContent=a.winRate||'--';
 document.getElementById('fx-total-trades').textContent=a.totalTrades||0;
 document.getElementById('fx-open-count').textContent=(d.openPositions||[]).length;
@@ -333,8 +340,8 @@ if(!ps.length){pb.innerHTML='<div class="py-6 text-center border border-dashed b
 else{pb.innerHTML=ps.map(p=>{const pc=p.pnl>=0?'text-green-400':'text-red-400';const db=p.direction==='BUY'?'badge-buy':'badge-sell';
 return`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1.5"><div class="flex items-center space-x-2"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${db}">${p.direction}</span><span class="text-xs font-bold text-white">@ ${p.entryPrice}</span></div><span class="text-sm font-bold ${pc}">${p.pnl>=0?'+':''}$${p.pnl.toFixed(2)}</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>SL:${p.stopLevel||'--'}</span><span>TP:${p.profitLevel||'--'}</span><span>現價:${p.currentBid}</span></div></div>`}).join('')}
 
-// Trades
-const tb=document.getElementById('fx-recent-trades');const ts=(d.recentTrades||[]).slice().reverse();
+// Closed Trades (only completed ones)
+const tb=document.getElementById('fx-closed-trades');const ts=(d.closedTrades||[]).slice().reverse();
 if(!ts.length){tb.innerHTML='<div class="py-6 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">📭 無紀錄</p></div>'}
 else{tb.innerHTML=ts.map(t=>{const db=t.direction==='BUY'?'badge-buy':'badge-sell';let ob='badge-open';if(t.outcome==='WIN')ob='badge-win';if(t.outcome==='LOSS')ob='badge-loss';
 const tm=t.time?new Date(t.time).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',hour:'2-digit',minute:'2-digit',month:'2-digit',day:'2-digit'}):'--';
@@ -346,6 +353,17 @@ const sb=document.getElementById('fx-strategy-stats');const ss=d.strategyStats||
 if(!sk.length){sb.innerHTML='<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">累積數據後自動產生策略比較</p><ul class="text-[10px] text-gray-400 mt-1.5 space-y-0.5 list-disc list-inside"><li>15M: 趨勢跟隨、RSI、布林、動量、EMA</li><li>1H: 趨勢延續、RSI、布林突破、EMA、MACD</li></ul></div>'}
 else{sb.innerHTML='<div class="grid grid-cols-1 xs:grid-cols-2 gap-2">'+sk.map(k=>{const s=ss[k];const tt=s.wins+s.losses;const wr=tt>0?((s.wins/tt)*100).toFixed(1):0;const pc=s.pnl>=0?'text-green-400':'text-red-400';
 return`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><span class="text-xs font-bold text-white">${k}</span><span class="text-[10px] ${pc}">$${s.pnl.toFixed(2)}</span></div><div class="flex gap-3 text-[10px] text-gray-400"><span>勝:${s.wins}</span><span>敗:${s.losses}</span><span>${wr}%</span></div></div>`}).join('')+'</div>'}
+
+// Review & Insights
+const rb=document.getElementById('fx-review');const rv=d.review||{};
+let rhtml='';
+if(rv.summary){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500 mb-1">📝 總結</p><p class="text-xs text-gray-200">${rv.summary}</p></div>`}
+if(rv.bestStrategy){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-green-700/30"><p class="text-[10px] text-gray-500 mb-1">🏆 最佳策略</p><p class="text-xs text-green-400">${rv.bestStrategy.name} — 盈虧 $${rv.bestStrategy.pnl.toFixed(2)}（勝${rv.bestStrategy.wins} 敗${rv.bestStrategy.losses}）</p></div>`}
+if(rv.worstStrategy&&rv.worstStrategy.name!==rv.bestStrategy?.name){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-red-700/30"><p class="text-[10px] text-gray-500 mb-1">⚠️ 最差策略</p><p class="text-xs text-red-400">${rv.worstStrategy.name} — 盈虧 $${rv.worstStrategy.pnl.toFixed(2)}（勝${rv.worstStrategy.wins} 敗${rv.worstStrategy.losses}）</p></div>`}
+if(rv.lessons&&rv.lessons.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30"><p class="text-[10px] text-gray-500 mb-1">🎓 系統學到了什麼</p><ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">${rv.lessons.map(l=>'<li>'+l+'</li>').join('')}</ul></div>`}
+if(rv.optimization&&rv.optimization.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30"><p class="text-[10px] text-gray-500 mb-1">🔧 優化方向</p><ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">${rv.optimization.map(o=>'<li>'+o+'</li>').join('')}</ul></div>`}
+if(!rhtml)rhtml='<p class="text-xs text-gray-500">需要更多交易數據才能產生復盤</p>';
+rb.innerHTML=rhtml;
 
 }catch(e){console.log('err',e)}
 }
