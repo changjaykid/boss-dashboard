@@ -291,6 +291,64 @@
                 </section>
             </div>
 
+            <!-- 社群專案 -->
+            <div id="view-community" class="section-view space-y-4 md:space-y-6">
+
+                <!-- Threads -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-sm md:text-xl font-medium text-indigo-300">🧵 Threads · @freeeadman</h3>
+                        <button id="btn-social-refresh" onclick="refreshSocial()" class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs rounded-lg">🔄</button>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-4">
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500 uppercase">已發佈</p>
+                            <p class="text-lg font-bold text-white" id="social-published">0</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500 uppercase">待審核</p>
+                            <p class="text-lg font-bold text-yellow-400" id="social-pending">0</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500 uppercase">API 狀態</p>
+                            <p class="text-lg font-bold" id="social-api-status">未設定</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500 uppercase">更新時間</p>
+                            <p class="text-xs font-bold text-gray-300 mt-1" id="social-update">--</p>
+                        </div>
+                    </div>
+
+                    <!-- Pending Drafts -->
+                    <div class="mb-4">
+                        <h4 class="text-xs md:text-sm font-medium text-yellow-300 mb-3">📝 待審核草稿</h4>
+                        <div id="social-drafts" class="space-y-3"></div>
+                    </div>
+
+                    <!-- Recently Published -->
+                    <div>
+                        <h4 class="text-xs md:text-sm font-medium text-green-300 mb-3">✅ 最近已發佈</h4>
+                        <div id="social-recent" class="space-y-2"></div>
+                    </div>
+                </section>
+
+                <!-- Instagram -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-pink-300 mb-3">📸 Instagram · @freeeadman</h3>
+                    <div class="py-6 text-center border border-dashed border-gray-700 rounded-lg">
+                        <p class="text-xs text-gray-400">🚧 準備中 — 需要做圖能力，之後再調整</p>
+                    </div>
+                </section>
+
+                <!-- Content Pillars -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-xs md:text-sm font-medium text-gray-300 mb-3">📐 內容主軸</h3>
+                    <div id="social-pillars" class="grid grid-cols-2 md:grid-cols-3 gap-2"></div>
+                </section>
+            </div>
+
             <!-- Placeholder -->
             <div id="view-placeholder" class="section-view">
                 <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
@@ -369,6 +427,60 @@ rb.innerHTML=rhtml;
 }catch(e){console.log('err',e)}
 }
 
+// ========== SOCIAL DATA ==========
+async function refreshSocial(){
+const b=document.getElementById('btn-social-refresh');b.textContent='⏳';b.disabled=true;
+await loadSocialData();b.textContent='✅';b.disabled=false;setTimeout(()=>{b.textContent='🔄'},1500)}
+
+async function loadSocialData(){
+try{
+const r=await fetch('social-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
+const th=d.threads||{};
+document.getElementById('social-published').textContent=th.totalPublished||0;
+document.getElementById('social-pending').textContent=th.pendingDrafts||0;
+document.getElementById('social-api-status').textContent=th.apiConfigured?'✅ 已連接':'⚠️ 未設定';
+document.getElementById('social-api-status').className='text-lg font-bold '+(th.apiConfigured?'text-green-400':'text-yellow-400');
+document.getElementById('social-update').textContent=d.lastUpdate||'--';
+
+// Drafts
+const db=document.getElementById('social-drafts');const drafts=d.drafts||[];
+if(!drafts.length){db.innerHTML='<div class="py-4 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">目前沒有待審核的草稿</p></div>'}
+else{db.innerHTML=drafts.map(dr=>{
+const pill=dr.pillar_name||dr.pillar||'';
+return`<div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2"><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-indigo-900/50 text-indigo-300 border border-indigo-700/50">${pill}</span><span class="text-[10px] text-gray-400">${dr.created||''}</span></div>
+<div class="flex gap-2">
+<button onclick="approveDraft('${dr.id||''}')" class="px-2.5 py-1 bg-green-600 hover:bg-green-700 text-white text-[10px] rounded-lg">✅ 發佈</button>
+<button onclick="rejectDraft('${dr.id||''}')" class="px-2.5 py-1 bg-red-600/50 hover:bg-red-700 text-white text-[10px] rounded-lg">❌ 不用</button>
+</div>
+</div>
+<p class="text-xs text-gray-200 whitespace-pre-wrap leading-relaxed">${dr.content||''}</p>
+${dr.hashtags?'<p class="text-[10px] text-indigo-400 mt-2">'+dr.hashtags+'</p>':''}
+</div>`}).join('')}
+
+// Published
+const rb=document.getElementById('social-recent');const pub=d.recentPublished||[];
+if(!pub.length){rb.innerHTML='<div class="py-4 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">尚無已發佈文章</p></div>'}
+else{rb.innerHTML=pub.map(p=>`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-green-900/50 text-green-300">${p.pillar_name||''}</span><span class="text-[10px] text-gray-400">${p.published_at||''}</span></div><p class="text-[10px] text-gray-300 line-clamp-2">${(p.content||'').substring(0,100)}...</p></div>`).join('')}
+
+// Pillars
+const pb=document.getElementById('social-pillars');const pls=d.pillars||[];
+pb.innerHTML=pls.map(p=>`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs font-bold text-white">${p.name}</p><p class="text-[10px] text-gray-400 mt-0.5">${p.description}</p></div>`).join('');
+
+}catch(e){console.log('social err',e)}
+}
+
+function approveDraft(id){
+alert('Threads API 尚未設定。\\n\\n請將草稿內容複製貼到 Threads 手動發佈。\\n\\n設定 API 後可自動發佈。');
+}
+function rejectDraft(id){
+if(confirm('確定不要這篇？')){
+// TODO: call API to delete draft
+alert('已移除（需要管家同步刪除檔案）');
+}
+}
+
 let tri=null;
 function switchTab(v,el){
 document.getElementById('sidebar').classList.remove('open');document.getElementById('sidebar-overlay').classList.remove('open');
@@ -378,6 +490,7 @@ document.querySelectorAll('.section-view').forEach(e=>e.classList.remove('active
 const tv=document.getElementById('view-'+v);if(tv)tv.classList.add('active');else document.getElementById('view-placeholder').classList.add('active');
 if(tri){clearInterval(tri);tri=null}
 if(v==='forex-auto'){loadTradingData();tri=setInterval(loadTradingData,60000)}
+if(v==='community'){loadSocialData()}
 }
 </script>
 </body>

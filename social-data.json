@@ -1,0 +1,60 @@
+{
+  "lastUpdate": "2026-03-27 02:51:50",
+  "threads": {
+    "username": "freeeadman",
+    "url": "https://www.threads.com/@freeeadman",
+    "apiConfigured": false,
+    "totalPublished": 0,
+    "pendingDrafts": 1,
+    "pillarDistribution": {}
+  },
+  "instagram": {
+    "status": "準備中",
+    "note": "需要做圖能力，之後再調整"
+  },
+  "drafts": [
+    {
+      "id": "2026-03-27-001",
+      "platform": "threads",
+      "pillar": "opinion",
+      "pillar_name": "觀點輸出",
+      "created": "2026-03-27 03:00",
+      "content": "很多人問我：「社群要每天發文嗎？」\n\n我的答案是：不用。\n\n但你要每天思考。\n\n每天發文但沒有觀點，只是在製造噪音。\n三天發一篇但篇篇有洞見，別人會等你更新。\n\n品牌經營不是比誰更勤勞，\n是比誰更能在對的時機，說對的話。\n\n頻率不是重點，密度才是。\n——我說的密度，是價值的密度。",
+      "hashtags": "#行銷 #社群經營 #品牌 #內容行銷 #行銷觀點",
+      "status": "pending"
+    }
+  ],
+  "recentPublished": [],
+  "pillars": [
+    {
+      "id": "market_insight",
+      "name": "市場觀察",
+      "description": "行銷趨勢、平台演算法變化、消費者行為洞察"
+    },
+    {
+      "id": "practical_tip",
+      "name": "實戰技巧",
+      "description": "可立即執行的行銷/廣告/社群操作技巧"
+    },
+    {
+      "id": "case_study",
+      "name": "案例拆解",
+      "description": "拆解成功/失敗的品牌行銷案例"
+    },
+    {
+      "id": "opinion",
+      "name": "觀點輸出",
+      "description": "對行銷產業的獨立觀點，引發討論"
+    },
+    {
+      "id": "behind_scenes",
+      "name": "幕後分享",
+      "description": "工作日常、接案心得、客戶互動（不洩密）"
+    },
+    {
+      "id": "value_bomb",
+      "name": "乾貨炸彈",
+      "description": "高資訊密度的教學型內容"
+    }
+  ]
+}
