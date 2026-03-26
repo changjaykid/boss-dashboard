@@ -1,24 +1,24 @@
 {
-  "lastUpdate": "2026-03-27 01:58:23",
-  "lastUpdateUTC": "2026-03-26T17:58:23.682666+00:00",
+  "lastUpdate": "2026-03-27 02:00:05",
+  "lastUpdateUTC": "2026-03-26T18:00:05.697632+00:00",
   "marketStatus": "STRONG_BEAR",
   "currentPrice": {
-    "bid": 4383.52,
-    "ask": 4384.02
+    "bid": 4382.02,
+    "ask": 4382.52
   },
   "indicators": {
     "trend_1h": "STRONG_BEAR",
     "trend_15m": "STRONG_BEAR",
-    "ema9_1h": 4426.94,
-    "ema21_1h": 4464.38,
-    "rsi_15m": 19.2,
-    "rsi_5m": 48.0,
-    "atr_15m": 20.01,
-    "atr_1h": 39.26
+    "ema9_1h": 4422.07,
+    "ema21_1h": 4460.71,
+    "rsi_15m": 18.9,
+    "rsi_5m": 45.3,
+    "atr_15m": 20.13,
+    "atr_1h": 38.83
   },
   "account": {
-    "balance": 31000.16,
-    "deposit": 31000.16,
+    "balance": 31000.14,
+    "deposit": 31000.14,
     "realizedPnl": 0.16,
     "totalTrades": 7,
     "closedTrades": 4,
@@ -30,15 +30,27 @@
   },
   "openPositions": [
     {
+      "dealId": "00000000-4bd8-c587-0460-7d740055311e",
+      "direction": "BUY",
+      "size": 0.01,
+      "entryPrice": 4384.04,
+      "stopLevel": 4344.74,
+      "profitLevel": 4541.14,
+      "currentBid": 4382.14,
+      "currentAsk": 4382.64,
+      "pnl": -1.9,
+      "openTime": "2026-03-26T17:58:23.614"
+    },
+    {
       "dealId": "00000000-4bd8-a6cb-0460-7d740055311e",
       "direction": "BUY",
       "size": 0.01,
       "entryPrice": 4383.12,
       "stopLevel": 4344.32,
       "profitLevel": 4538.32,
-      "currentBid": 4383.5,
-      "currentAsk": 4384.0,
-      "pnl": 0.38,
+      "currentBid": 4382.14,
+      "currentAsk": 4382.64,
+      "pnl": -0.98,
       "openTime": "2026-03-26T16:45:07.073"
     },
     {
@@ -48,9 +60,9 @@
       "entryPrice": 4395.18,
       "stopLevel": 4411.18,
       "profitLevel": 4331.28,
-      "currentBid": 4383.5,
-      "currentAsk": 4384.0,
-      "pnl": 11.18,
+      "currentBid": 4382.14,
+      "currentAsk": 4382.64,
+      "pnl": 12.54,
       "openTime": "2026-03-26T17:15:09.179"
     }
   ],
@@ -172,8 +184,9 @@
     }
   },
   "actions": [
-    "MON: BUY @4383.12 P/L=0.38pts",
-    "MON: SELL @4395.18 P/L=11.18pts",
-    "OPENED: BUY via 1H_RSI_EXTREME conf=55% SL=39.3 TP=157.1"
+    "MON: BUY @4384.04 P/L=-1.9pts",
+    "MON: BUY @4383.12 P/L=-0.98pts",
+    "MON: SELL @4395.18 P/L=12.54pts",
+    "MAX_POS: 3/3"
   ]
 }
