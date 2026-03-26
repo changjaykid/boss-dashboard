@@ -1,26 +1,26 @@
 {
-  "lastUpdate": "2026-03-26 22:16:33",
-  "lastUpdateUTC": "2026-03-26T14:16:33.603267+00:00",
+  "lastUpdate": "2026-03-26 22:30:06",
+  "lastUpdateUTC": "2026-03-26T14:30:06.563967+00:00",
   "marketStatus": "STRONG_BEAR",
   "currentPrice": {
-    "bid": 4458.01,
-    "ask": 4458.51
+    "bid": 4459.41,
+    "ask": 4459.91
   },
   "indicators": {
     "trend_1h": "STRONG_BEAR",
     "trend_15m": "STRONG_BULL",
-    "ema9_1h": 4448.89,
-    "ema21_1h": 4479.6,
-    "rsi_15m": 58.1,
-    "rsi_5m": 62.7,
-    "atr_15m": 18.54,
-    "atr_1h": 32.92
+    "ema9_1h": 4451.58,
+    "ema21_1h": 4480.83,
+    "rsi_15m": 58.0,
+    "rsi_5m": 62.8,
+    "atr_15m": 19.23,
+    "atr_1h": 33.88
   },
   "account": {
     "assumedCapital": 1000,
     "balance": 30999.66,
     "realizedPnl": -0.15,
-    "totalTrades": 2,
+    "totalTrades": 3,
     "closedTrades": 1,
     "wins": 0,
     "losses": 1,
@@ -66,6 +66,24 @@
       },
       "outcome": "OPEN",
       "pnl": null
+    },
+    {
+      "time": "2026-03-26T14:30:06.562860+00:00",
+      "strategy": "15M_MOMENTUM",
+      "direction": "BUY",
+      "confidence": 0.5,
+      "entry_bid": 4459.41,
+      "entry_ask": 4459.91,
+      "stop_distance": 19.2,
+      "tp_distance": 69.2,
+      "trend_1h": "STRONG_BEAR",
+      "rsi_15m": 58.0,
+      "rsi_1h": 34.6,
+      "result": {
+        "dealReference": "o_b4b420ea-550a-4e14-925f-9037a4f74dd5"
+      },
+      "outcome": "OPEN",
+      "pnl": null
     }
   ],
   "strategyStats": {
@@ -76,6 +94,6 @@
     }
   },
   "actions": [
-    "NO_SIGNAL: no valid entry found"
+    "OPENED: BUY via 15M_MOMENTUM conf=50% SL=19.2 TP=69.2"
   ]
 }
