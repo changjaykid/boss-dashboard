@@ -1,20 +1,20 @@
 {
-  "lastUpdate": "2026-03-26 23:00:06",
-  "lastUpdateUTC": "2026-03-26T15:00:06.205109+00:00",
+  "lastUpdate": "2026-03-26 23:15:05",
+  "lastUpdateUTC": "2026-03-26T15:15:05.720170+00:00",
   "marketStatus": "STRONG_BEAR",
   "currentPrice": {
-    "bid": 4466.99,
-    "ask": 4467.49
+    "bid": 4456.11,
+    "ask": 4456.61
   },
   "indicators": {
     "trend_1h": "STRONG_BEAR",
     "trend_15m": "STRONG_BULL",
-    "ema9_1h": 4453.95,
-    "ema21_1h": 4481.09,
-    "rsi_15m": 60.6,
-    "rsi_5m": 59.0,
-    "atr_15m": 20.61,
-    "atr_1h": 33.81
+    "ema9_1h": 4453.09,
+    "ema21_1h": 4479.88,
+    "rsi_15m": 57.6,
+    "rsi_5m": 54.0,
+    "atr_15m": 20.94,
+    "atr_1h": 34.34
   },
   "account": {
     "assumedCapital": 1000,
@@ -36,9 +36,9 @@
       "entryPrice": 4459.14,
       "stopLevel": 4483.34,
       "profitLevel": 4338.24,
-      "currentBid": 4465.42,
-      "currentAsk": 4465.92,
-      "pnl": -6.78,
+      "currentBid": 4456.71,
+      "currentAsk": 4457.21,
+      "pnl": 1.93,
       "openTime": "2026-03-26T14:45:05.681"
     },
     {
@@ -48,9 +48,9 @@
       "entryPrice": 4460.12,
       "stopLevel": 4440.92,
       "profitLevel": 4529.32,
-      "currentBid": 4465.42,
-      "currentAsk": 4465.92,
-      "pnl": 5.3,
+      "currentBid": 4456.71,
+      "currentAsk": 4457.21,
+      "pnl": -3.41,
       "openTime": "2026-03-26T14:30:06.457"
     }
   ],
@@ -137,8 +137,8 @@
     }
   },
   "actions": [
-    "MON: SELL @4459.14 P/L=-6.78pts",
-    "MON: BUY @4460.12 P/L=5.3pts",
+    "MON: SELL @4459.14 P/L=1.93pts",
+    "MON: BUY @4460.12 P/L=-3.41pts",
     "NO_SIGNAL: no valid entry found"
   ]
 }
