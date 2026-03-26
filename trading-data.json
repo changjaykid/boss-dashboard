@@ -1,26 +1,26 @@
 {
-  "lastUpdate": "2026-03-26 22:30:06",
-  "lastUpdateUTC": "2026-03-26T14:30:06.563967+00:00",
+  "lastUpdate": "2026-03-26 22:45:05",
+  "lastUpdateUTC": "2026-03-26T14:45:05.752576+00:00",
   "marketStatus": "STRONG_BEAR",
   "currentPrice": {
-    "bid": 4459.41,
-    "ask": 4459.91
+    "bid": 4459.16,
+    "ask": 4459.66
   },
   "indicators": {
     "trend_1h": "STRONG_BEAR",
     "trend_15m": "STRONG_BULL",
-    "ema9_1h": 4451.58,
-    "ema21_1h": 4480.83,
-    "rsi_15m": 58.0,
-    "rsi_5m": 62.8,
-    "atr_15m": 19.23,
-    "atr_1h": 33.88
+    "ema9_1h": 4453.4,
+    "ema21_1h": 4481.65,
+    "rsi_15m": 59.2,
+    "rsi_5m": 60.0,
+    "atr_15m": 20.13,
+    "atr_1h": 34.54
   },
   "account": {
     "assumedCapital": 1000,
-    "balance": 30999.66,
+    "balance": 30999.65,
     "realizedPnl": -0.15,
-    "totalTrades": 3,
+    "totalTrades": 4,
     "closedTrades": 1,
     "wins": 0,
     "losses": 1,
@@ -28,7 +28,20 @@
     "consecutiveLosses": 1,
     "consecutiveWins": 0
   },
-  "openPositions": [],
+  "openPositions": [
+    {
+      "dealId": "00000000-4bd8-57be-0460-7d740055311e",
+      "direction": "BUY",
+      "size": 0.01,
+      "entryPrice": 4460.12,
+      "stopLevel": 4440.92,
+      "profitLevel": 4529.32,
+      "currentBid": 4459.6,
+      "currentAsk": 4460.1,
+      "pnl": -0.52,
+      "openTime": "2026-03-26T14:30:06.457"
+    }
+  ],
   "recentTrades": [
     {
       "time": "2026-03-26T13:03:00Z",
@@ -84,6 +97,24 @@
       },
       "outcome": "OPEN",
       "pnl": null
+    },
+    {
+      "time": "2026-03-26T14:45:05.751382+00:00",
+      "strategy": "1H_EMA_BOUNCE",
+      "direction": "SELL",
+      "confidence": 0.55,
+      "entry_bid": 4459.16,
+      "entry_ask": 4459.66,
+      "stop_distance": 24.2,
+      "tp_distance": 120.9,
+      "trend_1h": "STRONG_BEAR",
+      "rsi_15m": 59.2,
+      "rsi_1h": 36.9,
+      "result": {
+        "dealReference": "o_3c493c09-eb35-4577-8d68-2904db90d230"
+      },
+      "outcome": "OPEN",
+      "pnl": null
     }
   ],
   "strategyStats": {
@@ -94,6 +125,7 @@
     }
   },
   "actions": [
-    "OPENED: BUY via 15M_MOMENTUM conf=50% SL=19.2 TP=69.2"
+    "MON: BUY @4460.12 P/L=-0.52pts",
+    "OPENED: SELL via 1H_EMA_BOUNCE conf=55% SL=24.2 TP=120.9"
   ]
 }
