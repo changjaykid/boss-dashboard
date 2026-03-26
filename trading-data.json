@@ -1,24 +1,24 @@
 {
-  "lastUpdate": "2026-03-26 21:36:12",
-  "lastUpdateUTC": "2026-03-26T13:36:12.994895+00:00",
+  "lastUpdate": "2026-03-26 22:16:33",
+  "lastUpdateUTC": "2026-03-26T14:16:33.603267+00:00",
   "marketStatus": "STRONG_BEAR",
   "currentPrice": {
-    "bid": 4435.52,
-    "ask": 4436.02
+    "bid": 4458.01,
+    "ask": 4458.51
   },
   "indicators": {
     "trend_1h": "STRONG_BEAR",
-    "trend_15m": "BULL",
-    "ema9_1h": 4447.49,
-    "ema21_1h": 4480.01,
-    "rsi_15m": 54.9,
-    "rsi_5m": 49.5,
-    "atr_15m": 18.5,
-    "atr_1h": 34.0
+    "trend_15m": "STRONG_BULL",
+    "ema9_1h": 4448.89,
+    "ema21_1h": 4479.6,
+    "rsi_15m": 58.1,
+    "rsi_5m": 62.7,
+    "atr_15m": 18.54,
+    "atr_1h": 32.92
   },
   "account": {
     "assumedCapital": 1000,
-    "balance": 30999.85,
+    "balance": 30999.66,
     "realizedPnl": -0.15,
     "totalTrades": 2,
     "closedTrades": 1,
@@ -76,6 +76,6 @@
     }
   },
   "actions": [
-    "OPENED: SELL via 15M_MOMENTUM conf=60% SL=18.5 TP=66.6"
+    "NO_SIGNAL: no valid entry found"
   ]
 }
