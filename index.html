@@ -180,29 +180,28 @@
                     </div>
                 </div>
 
-                <!-- Row 2 -->
-                <div class="grid grid-cols-2 gap-2 md:grid-cols-5 md:gap-4">
+                <!-- Row 2: 持倉 + 浮動盈虧 -->
+                <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
                     <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
                         <p class="text-[10px] md:text-xs text-gray-500 uppercase">持倉數</p>
                         <p class="text-lg md:text-2xl font-bold text-blue-400 mt-0.5" id="fx-open-count">0</p>
                     </div>
                     <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">連勝/連敗</p>
-                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="fx-streak">--/--</p>
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">浮動盈虧</p>
+                        <p class="text-lg md:text-2xl font-bold mt-0.5" id="fx-unrealized">--</p>
                     </div>
                     <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">1H 趨勢</p>
-                        <p class="text-base md:text-2xl font-bold mt-0.5" id="fx-trend">--</p>
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">已平倉筆數</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="fx-closed-count">0</p>
                     </div>
                     <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">15M 趨勢</p>
-                        <p class="text-base md:text-2xl font-bold mt-0.5" id="fx-trend-15m">--</p>
-                    </div>
-                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl col-span-2 md:col-span-1">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">XAUUSD</p>
-                        <p class="text-lg md:text-2xl font-bold text-yellow-400 mt-0.5" id="fx-price">--</p>
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">監控商品</p>
+                        <p class="text-lg md:text-2xl font-bold text-yellow-400 mt-0.5" id="fx-instruments">--</p>
                     </div>
                 </div>
+
+                <!-- Row 3: 各商品趨勢 -->
+                <div id="fx-instrument-cards" class="grid grid-cols-2 gap-2 md:grid-cols-5 md:gap-3"></div>
 
                 <!-- 持倉 -->
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
@@ -325,20 +324,22 @@ document.getElementById('fx-balance').textContent='$'+((a.balance||0).toLocaleSt
 document.getElementById('fx-winrate').textContent=a.winRate||'--';
 document.getElementById('fx-total-trades').textContent=a.totalTrades||0;
 document.getElementById('fx-open-count').textContent=(d.openPositions||[]).length;
-document.getElementById('fx-streak').textContent=(a.consecutiveWins||0)+'/'+(a.consecutiveLosses||0);
+document.getElementById('fx-closed-count').textContent=a.closedTrades||0;
+const ur=a.unrealizedPnl||0;const ure=document.getElementById('fx-unrealized');
+ure.textContent=(ur>=0?'+':'')+('$'+ur.toFixed(2));ure.className='text-lg md:text-2xl font-bold mt-0.5 '+(ur>=0?'text-green-400':'text-red-400');
+document.getElementById('fx-instruments').textContent=(d.instruments||[]).length+'個';
 
-const t1=d.indicators?.trend_1h||'';const te=document.getElementById('fx-trend');
-te.textContent=trendCN(t1);te.className='text-base md:text-2xl font-bold mt-0.5 '+trendColor(t1);
-const t15=d.indicators?.trend_15m||'';const t15e=document.getElementById('fx-trend-15m');
-t15e.textContent=trendCN(t15);t15e.className='text-base md:text-2xl font-bold mt-0.5 '+trendColor(t15);
-
-const pr=d.currentPrice||{};document.getElementById('fx-price').textContent=pr.bid?'$'+pr.bid.toFixed(2):'--';
+// Instrument cards
+const ic=document.getElementById('fx-instrument-cards');const inds=d.indicators||{};
+const iks=Object.keys(inds);
+if(iks.length){ic.innerHTML=iks.map(k=>{const v=inds[k];const t1=v.trend_1h||'';const t15=v.trend_15m||'';
+return`<div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl"><p class="text-[10px] md:text-xs font-bold text-white">${v.name||k}</p><div class="mt-1 space-y-0.5"><p class="text-[9px] text-gray-500">1H: <span class="${trendColor(t1)}">${trendCN(t1)}</span></p><p class="text-[9px] text-gray-500">15M: <span class="${trendColor(t15)}">${trendCN(t15)}</span></p><p class="text-[10px] text-yellow-400 mt-1">$${(v.bid||0).toLocaleString()}</p></div></div>`}).join('')}else{ic.innerHTML=''}
 
 // Positions
 const pb=document.getElementById('fx-open-positions');const ps=d.openPositions||[];
 if(!ps.length){pb.innerHTML='<div class="py-6 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">🔍 無持倉，監控中...</p></div>'}
 else{pb.innerHTML=ps.map(p=>{const pc=p.pnl>=0?'text-green-400':'text-red-400';const db=p.direction==='BUY'?'badge-buy':'badge-sell';
-return`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1.5"><div class="flex items-center space-x-2"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${db}">${p.direction}</span><span class="text-xs font-bold text-white">@ ${p.entryPrice}</span></div><span class="text-sm font-bold ${pc}">${p.pnl>=0?'+':''}$${p.pnl.toFixed(2)}</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>SL:${p.stopLevel||'--'}</span><span>TP:${p.profitLevel||'--'}</span><span>現價:${p.currentBid}</span></div></div>`}).join('')}
+return`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1.5"><div class="flex items-center space-x-2"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${db}">${p.direction}</span><span class="text-xs font-bold text-white">${p.instrument||'Gold'} @ ${p.entryPrice}</span></div><span class="text-sm font-bold ${pc}">${p.pnl>=0?'+':''}$${p.pnl.toFixed(2)}</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>手數:${p.size}</span><span>SL:${p.stopLevel||'--'}</span><span>TP:${p.profitLevel||'--'}</span><span>現價:${p.currentBid}</span></div></div>`}).join('')}
 
 // Closed Trades (only completed ones)
 const tb=document.getElementById('fx-closed-trades');const ts=(d.closedTrades||[]).slice().reverse();
