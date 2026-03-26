@@ -1,31 +1,31 @@
 {
-  "lastUpdate": "2026-03-26 21:30:47",
-  "lastUpdateUTC": "2026-03-26T13:30:47.336509+00:00",
+  "lastUpdate": "2026-03-26 21:31:36",
+  "lastUpdateUTC": "2026-03-26T13:31:36.830830+00:00",
   "marketStatus": "STRONG_BEAR",
   "currentPrice": {
-    "bid": 4447.97,
-    "ask": 4448.47
+    "bid": 4445.44,
+    "ask": 4445.94
   },
   "indicators": {
     "trend_1h": "STRONG_BEAR",
     "trend_15m": "STRONG_BULL",
     "ema9_1h": 4448.6,
     "ema21_1h": 4480.51,
-    "rsi_15m": 58.5,
-    "rsi_5m": 56.5,
-    "atr_15m": 17.62,
+    "rsi_15m": 60.1,
+    "rsi_5m": 59.2,
+    "atr_15m": 17.67,
     "atr_1h": 34.0
   },
   "account": {
     "assumedCapital": 1000,
     "balance": 30999.85,
-    "realizedPnl": 0,
+    "realizedPnl": -0.15,
     "totalTrades": 1,
-    "closedTrades": 0,
+    "closedTrades": 1,
     "wins": 0,
-    "losses": 0,
-    "winRate": "--",
-    "consecutiveLosses": 0,
+    "losses": 1,
+    "winRate": "0.0%",
+    "consecutiveLosses": 1,
     "consecutiveWins": 0
   },
   "openPositions": [],
@@ -44,11 +44,19 @@
       "result": {
         "dealReference": "o_d5dab949-be5a-427e-b7e7-c5ab2e9a2f70"
       },
-      "outcome": "OPEN",
-      "pnl": null
+      "outcome": "LOSS",
+      "pnl": -0.15,
+      "close_time": "2026-03-26T13:23:10Z",
+      "close_reason": "SL"
     }
   ],
-  "strategyStats": {},
+  "strategyStats": {
+    "TREND_FOLLOW": {
+      "wins": 0,
+      "losses": 1,
+      "pnl": -0.15
+    }
+  },
   "actions": [
     "NO_SIGNAL: no valid entry found"
   ]
