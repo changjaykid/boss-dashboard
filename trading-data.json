@@ -1,23 +1,24 @@
 {
-  "lastUpdate": "2026-03-26 21:17:25",
-  "lastUpdateUTC": "2026-03-26T13:17:25.815287+00:00",
+  "lastUpdate": "2026-03-26 21:30:47",
+  "lastUpdateUTC": "2026-03-26T13:30:47.336509+00:00",
   "marketStatus": "STRONG_BEAR",
   "currentPrice": {
-    "bid": 4440.32,
-    "ask": 4440.82
+    "bid": 4447.97,
+    "ask": 4448.47
   },
   "indicators": {
     "trend_1h": "STRONG_BEAR",
-    "ema9_1h": 4446.71,
-    "ema21_1h": 4479.65,
-    "rsi_15m": 56.6,
-    "rsi_5m": 50.9,
-    "atr_15m": 17.2,
-    "atr_1h": 33.41
+    "trend_15m": "STRONG_BULL",
+    "ema9_1h": 4448.6,
+    "ema21_1h": 4480.51,
+    "rsi_15m": 58.5,
+    "rsi_5m": 56.5,
+    "atr_15m": 17.62,
+    "atr_1h": 34.0
   },
   "account": {
     "assumedCapital": 1000,
-    "balance": 30999.97,
+    "balance": 30999.85,
     "realizedPnl": 0,
     "totalTrades": 1,
     "closedTrades": 0,
@@ -27,20 +28,7 @@
     "consecutiveLosses": 0,
     "consecutiveWins": 0
   },
-  "openPositions": [
-    {
-      "dealId": "00000000-4bd8-2fde-0460-7d740055311e",
-      "direction": "SELL",
-      "size": 0.01,
-      "entryPrice": 4437.95,
-      "stopLevel": 4452.95,
-      "profitLevel": 4407.95,
-      "currentBid": 4440.31,
-      "currentAsk": 4440.81,
-      "pnl": -2.86,
-      "openTime": "2026-03-26T13:04:53.591"
-    }
-  ],
+  "openPositions": [],
   "recentTrades": [
     {
       "time": "2026-03-26T13:03:00Z",
@@ -62,8 +50,6 @@
   ],
   "strategyStats": {},
   "actions": [
-    "MON: SELL @4437.95 P/L=-2.86pts",
-    "SKIP: already have SELL",
-    "NO_TRADE: signals too weak or slots full"
+    "NO_SIGNAL: no valid entry found"
   ]
 }
