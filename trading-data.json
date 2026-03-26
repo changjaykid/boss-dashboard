@@ -1,24 +1,24 @@
 {
-  "lastUpdate": "2026-03-27 00:45:04",
-  "lastUpdateUTC": "2026-03-26T16:45:04.990171+00:00",
+  "lastUpdate": "2026-03-27 01:00:06",
+  "lastUpdateUTC": "2026-03-26T17:00:06.148186+00:00",
   "marketStatus": "STRONG_BEAR",
   "currentPrice": {
-    "bid": 4381.31,
-    "ask": 4381.81
+    "bid": 4387.56,
+    "ask": 4388.06
   },
   "indicators": {
     "trend_1h": "STRONG_BEAR",
     "trend_15m": "STRONG_BEAR",
-    "ema9_1h": 4435.05,
-    "ema21_1h": 4470.03,
-    "rsi_15m": 27.6,
-    "rsi_5m": 15.4,
-    "atr_15m": 22.51,
+    "ema9_1h": 4437.77,
+    "ema21_1h": 4471.26,
+    "rsi_15m": 19.1,
+    "rsi_5m": 15.8,
+    "atr_15m": 21.24,
     "atr_1h": 38.81
   },
   "account": {
     "assumedCapital": 1000,
-    "balance": 31000.26,
+    "balance": 31000.23,
     "realizedPnl": -0.15,
     "totalTrades": 5,
     "closedTrades": 1,
@@ -30,15 +30,27 @@
   },
   "openPositions": [
     {
+      "dealId": "00000000-4bd8-a6cb-0460-7d740055311e",
+      "direction": "BUY",
+      "size": 0.01,
+      "entryPrice": 4383.12,
+      "stopLevel": 4344.32,
+      "profitLevel": 4538.32,
+      "currentBid": 4388.04,
+      "currentAsk": 4388.54,
+      "pnl": 4.92,
+      "openTime": "2026-03-26T16:45:07.073"
+    },
+    {
       "dealId": "00000000-4bd8-67a7-0460-7d740055311e",
       "direction": "SELL",
       "size": 0.01,
       "entryPrice": 4459.14,
-      "stopLevel": 4414.88,
+      "stopLevel": 4402.02,
       "profitLevel": null,
-      "currentBid": 4379.01,
-      "currentAsk": 4379.51,
-      "pnl": 79.63,
+      "currentBid": 4388.04,
+      "currentAsk": 4388.54,
+      "pnl": 70.6,
       "openTime": "2026-03-26T14:45:05.681"
     }
   ],
@@ -143,11 +155,11 @@
     }
   },
   "actions": [
-    "TRAIL_TIGHT: 00000000 stop\u21924402.02",
-    "MON: SELL @4459.14 P/L=79.63pts",
+    "MON: BUY @4383.12 P/L=4.92pts",
+    "MON: SELL @4459.14 P/L=70.6pts",
     "SKIP: already have SELL",
-    "SKIP: already have SELL",
-    "OPENED: BUY via 1H_RSI_EXTREME conf=55% SL=38.8 TP=155.2",
-    "SKIP: already have BUY"
+    "SKIP: already have BUY",
+    "SKIP: already have BUY",
+    "NO_TRADE: signals too weak or slots full"
   ]
 }
