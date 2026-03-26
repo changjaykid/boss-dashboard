@@ -1,20 +1,20 @@
 {
-  "lastUpdate": "2026-03-26 22:45:05",
-  "lastUpdateUTC": "2026-03-26T14:45:05.752576+00:00",
+  "lastUpdate": "2026-03-26 23:00:06",
+  "lastUpdateUTC": "2026-03-26T15:00:06.205109+00:00",
   "marketStatus": "STRONG_BEAR",
   "currentPrice": {
-    "bid": 4459.16,
-    "ask": 4459.66
+    "bid": 4466.99,
+    "ask": 4467.49
   },
   "indicators": {
     "trend_1h": "STRONG_BEAR",
     "trend_15m": "STRONG_BULL",
-    "ema9_1h": 4453.4,
-    "ema21_1h": 4481.65,
-    "rsi_15m": 59.2,
-    "rsi_5m": 60.0,
-    "atr_15m": 20.13,
-    "atr_1h": 34.54
+    "ema9_1h": 4453.95,
+    "ema21_1h": 4481.09,
+    "rsi_15m": 60.6,
+    "rsi_5m": 59.0,
+    "atr_15m": 20.61,
+    "atr_1h": 33.81
   },
   "account": {
     "assumedCapital": 1000,
@@ -30,15 +30,27 @@
   },
   "openPositions": [
     {
+      "dealId": "00000000-4bd8-67a7-0460-7d740055311e",
+      "direction": "SELL",
+      "size": 0.01,
+      "entryPrice": 4459.14,
+      "stopLevel": 4483.34,
+      "profitLevel": 4338.24,
+      "currentBid": 4465.42,
+      "currentAsk": 4465.92,
+      "pnl": -6.78,
+      "openTime": "2026-03-26T14:45:05.681"
+    },
+    {
       "dealId": "00000000-4bd8-57be-0460-7d740055311e",
       "direction": "BUY",
       "size": 0.01,
       "entryPrice": 4460.12,
       "stopLevel": 4440.92,
       "profitLevel": 4529.32,
-      "currentBid": 4459.6,
-      "currentAsk": 4460.1,
-      "pnl": -0.52,
+      "currentBid": 4465.42,
+      "currentAsk": 4465.92,
+      "pnl": 5.3,
       "openTime": "2026-03-26T14:30:06.457"
     }
   ],
@@ -125,7 +137,8 @@
     }
   },
   "actions": [
-    "MON: BUY @4460.12 P/L=-0.52pts",
-    "OPENED: SELL via 1H_EMA_BOUNCE conf=55% SL=24.2 TP=120.9"
+    "MON: SELL @4459.14 P/L=-6.78pts",
+    "MON: BUY @4460.12 P/L=5.3pts",
+    "NO_SIGNAL: no valid entry found"
   ]
 }
