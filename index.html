@@ -2,647 +2,364 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>老闆專屬主控板 (Boss Dashboard)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>老闆專屬主控板</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{screens:{xs:'480px'}}}}</script>
     <style>
-        body { background-color: #111827; color: #f3f4f6; }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #1f2937; }
-        ::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
-        .nav-item.active { background-color: rgba(79, 70, 229, 0.2); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.3); }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body { background: #111827; color: #f3f4f6; overflow: hidden; }
+        .nav-item.active { background: rgba(79,70,229,0.2); color: #a5b4fc; border: 1px solid rgba(99,102,241,0.3); }
         .section-view { display: none; }
         .section-view.active { display: block; }
         #auth-overlay { display: flex; }
         #app-content { display: none; }
         .trade-card { transition: all 0.2s; }
-        .trade-card:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
         .badge-buy { background: rgba(16,185,129,0.15); color: #34d399; border: 1px solid rgba(16,185,129,0.3); }
         .badge-sell { background: rgba(239,68,68,0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.3); }
         .badge-open { background: rgba(59,130,246,0.15); color: #60a5fa; border: 1px solid rgba(59,130,246,0.3); }
-        .badge-closed { background: rgba(107,114,128,0.15); color: #9ca3af; border: 1px solid rgba(107,114,128,0.3); }
         .badge-win { background: rgba(16,185,129,0.15); color: #34d399; }
         .badge-loss { background: rgba(239,68,68,0.15); color: #f87171; }
         .stat-card { background: linear-gradient(135deg, rgba(31,41,55,0.8), rgba(17,24,39,0.9)); }
-        
-        /* Mobile: hide sidebar, show hamburger */
-        @media (max-width: 768px) {
-            #sidebar { display: none; position: fixed; top: 0; left: 0; z-index: 40; height: 100vh; width: 260px; }
-            #sidebar.open { display: flex; }
-            #sidebar-overlay { display: none; }
-            #sidebar-overlay.open { display: block; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 30; }
-            #mobile-header { display: flex !important; }
-            main { width: 100%; }
-            .stat-card p:first-child { font-size: 0.65rem; }
-            .stat-card p:last-child { font-size: 1.1rem; }
-        }
+
+        /* Desktop sidebar */
         @media (min-width: 769px) {
-            #mobile-header { display: none !important; }
+            #mobile-bar { display: none !important; }
             #sidebar-overlay { display: none !important; }
+            #sidebar { display: flex !important; }
+        }
+        /* Mobile */
+        @media (max-width: 768px) {
+            #sidebar {
+                display: none; position: fixed; top: 0; left: 0; z-index: 50;
+                height: 100%; width: 280px;
+                transition: transform 0.25s ease;
+            }
+            #sidebar.open { display: flex; }
+            #sidebar-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 40; }
+            #sidebar-overlay.open { display: block; }
         }
     </style>
 </head>
-<body class="flex h-screen overflow-hidden antialiased font-sans">
+<body>
 
-    <!-- 密碼鎖層 -->
-    <div id="auth-overlay" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-900/90 backdrop-blur-md">
-        <div class="bg-gray-800 border border-gray-700 p-8 rounded-2xl shadow-2xl w-full max-w-sm">
-            <div class="text-center mb-6">
-                <span class="text-4xl block mb-2">🖤</span>
-                <h2 class="text-xl font-bold text-gray-100">管家主控板驗證</h2>
-                <p class="text-xs text-gray-500 mt-1">Boss Dashboard Auth</p>
-            </div>
-            <div class="space-y-4">
-                <div>
-                    <input type="password" id="pass-input" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors" placeholder="請輸入通行密碼" onkeypress="handleAuth(event)">
-                </div>
-                <button onclick="checkPass()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-4 rounded-lg transition-colors">解鎖進入</button>
-                <p id="auth-error" class="text-red-400 text-sm text-center hidden">密碼錯誤，請重新輸入。</p>
-            </div>
+<!-- 密碼鎖 -->
+<div id="auth-overlay" class="fixed inset-0 z-[100] flex items-center justify-center bg-gray-900/90 backdrop-blur-md px-4">
+    <div class="bg-gray-800 border border-gray-700 p-6 sm:p-8 rounded-2xl shadow-2xl w-full max-w-sm">
+        <div class="text-center mb-5">
+            <span class="text-3xl block mb-2">🖤</span>
+            <h2 class="text-lg font-bold text-gray-100">管家主控板</h2>
+        </div>
+        <div class="space-y-3">
+            <input type="password" id="pass-input" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-indigo-500" placeholder="請輸入密碼" onkeypress="if(event.key==='Enter')checkPass()">
+            <button onclick="checkPass()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 rounded-lg">解鎖</button>
+            <p id="auth-error" class="text-red-400 text-sm text-center hidden">密碼錯誤</p>
         </div>
     </div>
+</div>
 
-    <!-- 主控板內容 -->
-    <div id="app-content" class="flex w-full h-full">
-        <!-- Mobile Header -->
-        <div id="mobile-header" class="hidden fixed top-0 left-0 right-0 z-20 bg-gray-900 border-b border-gray-800 px-4 py-3 items-center justify-between">
-            <button onclick="toggleSidebar()" class="text-2xl text-gray-300">☰</button>
-            <div class="flex items-center space-x-2"><span class="text-xl">🖤</span><span class="text-lg font-bold text-indigo-400">管家主控板</span></div>
-            <div class="w-8"></div>
-        </div>
-        <!-- Sidebar Overlay (mobile) -->
-        <div id="sidebar-overlay" onclick="toggleSidebar()"></div>
-        <!-- 側邊欄 -->
-        <aside id="sidebar" class="w-72 bg-gray-900 border-r border-gray-800 flex flex-col shadow-2xl z-10">
-            <div class="p-6 border-b border-gray-800 flex items-center space-x-3">
-                <span class="text-3xl">🖤</span>
-                <div>
-                    <h1 class="text-xl font-bold tracking-wider text-indigo-400">管家主控板</h1>
-                    <p class="text-xs text-gray-500 mt-1">AI Assistant Dashboard</p>
-                </div>
-            </div>
-            
-            <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto" id="sidebar-nav">
-                <a href="#" onclick="switchTab('overview', this)" class="nav-item active flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors">
-                    <span>📊</span><span class="font-medium">總覽與每日回報</span>
-                </a>
-                
-                <div class="pt-4 pb-2"><p class="text-xs font-semibold text-gray-500 uppercase px-4">金融交易 (Finance)</p></div>
-                <a href="#" onclick="switchTab('stocks', this)" class="nav-item flex items-center space-x-3 px-4 py-2 hover:bg-gray-800 text-gray-300 rounded-lg transition-colors">
-                    <span>📈</span><span>股票專案</span>
-                </a>
-                <a href="#" onclick="switchTab('forex', this)" class="nav-item flex items-center space-x-3 px-4 py-2 hover:bg-gray-800 text-gray-300 rounded-lg transition-colors">
-                    <span>💱</span><span>外匯保證金專案</span>
-                </a>
-                <a href="#" onclick="switchTab('forex-auto', this)" class="nav-item flex items-center space-x-3 px-4 py-2 hover:bg-gray-800 text-gray-300 rounded-lg transition-colors">
-                    <span>🤖</span><span>外匯自動交易</span>
-                </a>
-                <a href="#" onclick="switchTab('crypto', this)" class="nav-item flex items-center space-x-3 px-4 py-2 hover:bg-gray-800 text-gray-300 rounded-lg transition-colors">
-                    <span>🪙</span><span>虛擬貨幣專案</span>
-                </a>
+<!-- 主內容 -->
+<div id="app-content" class="flex h-screen w-screen overflow-hidden">
 
-                <div class="pt-4 pb-2"><p class="text-xs font-semibold text-gray-500 uppercase px-4">營運管理 (Operations)</p></div>
-                <a href="#" onclick="switchTab('community', this)" class="nav-item flex items-center space-x-3 px-4 py-2 hover:bg-gray-800 text-gray-300 rounded-lg transition-colors">
-                    <span>🌐</span><span>社群專案</span>
-                </a>
-                <a href="#" onclick="switchTab('skills', this)" class="nav-item flex items-center space-x-3 px-4 py-2 hover:bg-gray-800 text-gray-300 rounded-lg transition-colors">
-                    <span>🛠️</span><span>技能專案</span>
-                </a>
-            </nav>
-            
-            <div class="p-4 border-t border-gray-800">
-                <div class="flex items-center space-x-3 text-sm text-green-400">
-                    <span class="relative flex h-3 w-3">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                    </span>
-                    <span>系統運作正常</span>
-                </div>
-            </div>
-        </aside>
-
-        <!-- 主內容區 -->
-        <main class="flex-1 flex flex-col bg-[#0b0f19] overflow-y-auto relative md:pt-0 pt-14">
-            <header class="px-4 py-4 md:p-8 border-b border-gray-800 bg-gray-900/50 backdrop-blur-sm sticky top-0 z-10">
-                <h2 id="header-title" class="text-lg md:text-2xl font-semibold text-gray-100">今日管家回報與活動狀態</h2>
-                <p id="header-subtitle" class="text-xs md:text-sm text-gray-400 mt-1">2026-03-26 · 隨時待命接收新指令</p>
-            </header>
-
-            <div class="p-4 md:p-8 space-y-6 md:space-y-8 max-w-7xl">
-                
-                <!-- 總覽 View -->
-                <div id="view-overview" class="section-view active space-y-8">
-                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
-                        <div class="flex items-center space-x-3 mb-6">
-                            <span class="text-xl">⚡</span><h3 class="text-xl font-medium text-indigo-300">最新執行紀錄</h3>
-                        </div>
-                        <div class="space-y-4">
-                            <div class="flex items-start space-x-4 p-3 bg-gray-800 rounded-lg border border-gray-700">
-                                <div class="mt-1"><span class="flex h-2.5 w-2.5 bg-green-500 rounded-full"></span></div>
-                                <div>
-                                    <p class="text-sm font-medium text-gray-200">🤖 外匯自動交易系統啟動</p>
-                                    <p class="text-xs text-gray-400 mt-1">XAUUSD 自動交易監控已上線。策略：多時間框架保守型（1H 趨勢 + 15M 進場）。假設本金 $1,000，固定 0.01 手。</p>
-                                </div>
-                                <span class="ml-auto text-xs text-gray-500">18:45</span>
-                            </div>
-                            <div class="flex items-start space-x-4 p-3 bg-gray-800 rounded-lg border border-gray-700">
-                                <div class="mt-1"><span class="flex h-2.5 w-2.5 bg-green-500 rounded-full"></span></div>
-                                <div>
-                                    <p class="text-sm font-medium text-gray-200">主控板部署至 GitHub Pages</p>
-                                    <p class="text-xs text-gray-400 mt-1">永久網址已上線：changjaykid.github.io/boss-dashboard</p>
-                                </div>
-                                <span class="ml-auto text-xs text-gray-500">18:27</span>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
-                        <div class="flex items-center space-x-3 mb-6">
-                            <span class="text-xl">📝</span><h3 class="text-xl font-medium text-indigo-300">每日綜合回報 (Daily Report)</h3>
-                        </div>
-                        <div class="min-h-[200px] flex items-center justify-center border-2 border-dashed border-gray-700 rounded-lg bg-gray-800/30">
-                            <div class="text-center">
-                                <span class="text-4xl block mb-3 text-gray-600">📭</span>
-                                <p class="text-gray-400 text-sm">目前尚無排程回報資料。</p>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <!-- 股票專案 View -->
-                <div id="view-stocks" class="section-view space-y-8">
-                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="flex items-center space-x-3">
-                                <span class="text-xl">📈</span><h3 class="text-xl font-medium text-indigo-300">每日 10 檔潛力股推薦</h3>
-                            </div>
-                            <span class="px-3 py-1 bg-indigo-900/50 border border-indigo-700 text-indigo-300 text-xs rounded-full">排程: 每日 08:00</span>
-                        </div>
-                        <div class="min-h-[200px] flex flex-col items-center justify-center border-2 border-dashed border-gray-700 rounded-lg bg-gray-800/30 p-8">
-                            <span class="text-4xl block mb-3 text-gray-600">⏳</span>
-                            <p class="text-gray-400 text-sm">股票分析報告尚未產生</p>
-                            <p class="text-gray-500 text-xs mt-2">管家將於明天早上 08:00 執行第一次盤後資料爬取與分析。</p>
-                        </div>
-                    </section>
-                </div>
-
-                <!-- 外匯保證金專案 View -->
-                <div id="view-forex" class="section-view space-y-8">
-                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
-                        <div class="flex items-center space-x-3 mb-6">
-                            <span class="text-xl">💱</span><h3 class="text-xl font-medium text-indigo-300">外匯保證金策略分析</h3>
-                        </div>
-                        <div class="min-h-[200px] flex items-center justify-center border-2 border-dashed border-gray-700 rounded-lg bg-gray-800/30">
-                            <div class="text-center">
-                                <p class="text-gray-400 text-sm">外匯策略研究與手動分析區塊。</p>
-                                <p class="text-gray-500 text-xs mt-1">請查看「外匯自動交易」頁面取得即時交易數據。</p>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <!-- ========== 外匯自動交易 View ========== -->
-                <div id="view-forex-auto" class="section-view space-y-8">
-                    
-                    <!-- 上次更新時間 -->
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center space-x-2 text-sm">
-                            <span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span></span>
-                            <span class="text-gray-400">最後更新：<span id="fx-last-update" class="text-gray-200">載入中...</span></span>
-                        </div>
-                        <button id="btn-refresh" onclick="refreshBtn()" class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs rounded-lg transition-colors">🔄 重新整理</button>
-                    </div>
-
-                    <!-- 帳戶總覽 -->
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="stat-card border border-gray-700/50 p-5 rounded-xl">
-                            <p class="text-xs text-gray-500 uppercase tracking-wider">假設本金</p>
-                            <p class="text-2xl font-bold text-white mt-1">$1,000</p>
-                        </div>
-                        <div class="stat-card border border-gray-700/50 p-5 rounded-xl">
-                            <p class="text-xs text-gray-500 uppercase tracking-wider">已實現盈虧</p>
-                            <p class="text-2xl font-bold mt-1" id="fx-pnl">$0.00</p>
-                        </div>
-                        <div class="stat-card border border-gray-700/50 p-5 rounded-xl">
-                            <p class="text-xs text-gray-500 uppercase tracking-wider">勝率</p>
-                            <p class="text-2xl font-bold text-gray-300 mt-1" id="fx-winrate">--</p>
-                        </div>
-                        <div class="stat-card border border-gray-700/50 p-5 rounded-xl">
-                            <p class="text-xs text-gray-500 uppercase tracking-wider">總交易筆數</p>
-                            <p class="text-2xl font-bold text-gray-300 mt-1" id="fx-total-trades">0</p>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-                        <div class="stat-card border border-gray-700/50 p-5 rounded-xl">
-                            <p class="text-xs text-gray-500 uppercase tracking-wider">目前持倉</p>
-                            <p class="text-2xl font-bold text-blue-400 mt-1" id="fx-open-count">0</p>
-                        </div>
-                        <div class="stat-card border border-gray-700/50 p-5 rounded-xl">
-                            <p class="text-xs text-gray-500 uppercase tracking-wider">連勝 / 連敗</p>
-                            <p class="text-2xl font-bold text-gray-300 mt-1" id="fx-streak">-- / --</p>
-                        </div>
-                        <div class="stat-card border border-gray-700/50 p-5 rounded-xl">
-                            <p class="text-xs text-gray-500 uppercase tracking-wider">1H 趨勢</p>
-                            <p class="text-2xl font-bold mt-1" id="fx-trend">--</p>
-                        </div>
-                        <div class="stat-card border border-gray-700/50 p-5 rounded-xl">
-                            <p class="text-xs text-gray-500 uppercase tracking-wider">15M 趨勢</p>
-                            <p class="text-2xl font-bold mt-1" id="fx-trend-15m">--</p>
-                        </div>
-                        <div class="stat-card border border-gray-700/50 p-5 rounded-xl">
-                            <p class="text-xs text-gray-500 uppercase tracking-wider">XAUUSD 報價</p>
-                            <p class="text-2xl font-bold text-yellow-400 mt-1" id="fx-price">--</p>
-                        </div>
-                    </div>
-
-                    <!-- 當前持倉 -->
-                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
-                        <div class="flex items-center space-x-3 mb-6">
-                            <span class="text-xl">📍</span><h3 class="text-xl font-medium text-blue-300">當前持倉 (Open Positions)</h3>
-                        </div>
-                        <div id="fx-open-positions" class="space-y-3"></div>
-                    </section>
-
-                    <!-- 最近交易 -->
-                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
-                        <div class="flex items-center space-x-3 mb-6">
-                            <span class="text-xl">📋</span><h3 class="text-xl font-medium text-gray-300">最近交易紀錄 (Recent Trades)</h3>
-                        </div>
-                        <div id="fx-recent-trades" class="space-y-3"></div>
-                    </section>
-
-                    <!-- 策略績效 -->
-                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
-                        <div class="flex items-center space-x-3 mb-6">
-                            <span class="text-xl">🧠</span><h3 class="text-xl font-medium text-purple-300">策略績效分析 (Strategy Performance)</h3>
-                        </div>
-                        <div id="fx-strategy-stats" class="space-y-3"></div>
-                    </section>
-
-                    <!-- 風控參數 -->
-                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
-                        <div class="flex items-center space-x-3 mb-6">
-                            <span class="text-xl">⚙️</span><h3 class="text-xl font-medium text-gray-300">風控參數 (Risk Management)</h3>
-                        </div>
-                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">每筆最大風險</p><p class="text-sm font-bold text-white">$200 (20%)</p></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">固定手數</p><p class="text-sm font-bold text-white">0.01 手</p></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">最大同時持倉</p><p class="text-sm font-bold text-white">3 筆 (測試期)</p></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">風報比區間</p><p class="text-sm font-bold text-white">1:1.5 ~ 1:4</p></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">止損範圍</p><p class="text-sm font-bold text-white">ATR-based (動態)</p></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">監控策略</p><p class="text-sm font-bold text-white">10 種 (15M×5 + 1H×5)</p></div>
-                        </div>
-                    </section>
-                </div>
-
-                <!-- ========== 技能專案 View ========== -->
-                <div id="view-skills" class="section-view space-y-8">
-
-                    <!-- 可用模型 -->
-                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
-                        <div class="flex items-center space-x-3 mb-6">
-                            <span class="text-xl">🧠</span><h3 class="text-xl font-medium text-indigo-300">可用 AI 模型 (Models)</h3>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="p-4 bg-gray-800 rounded-lg border border-indigo-700/50 trade-card">
-                                <div class="flex items-center justify-between mb-2">
-                                    <span class="text-sm font-bold text-white">anthropic/claude-opus-4-6</span>
-                                    <span class="px-2 py-0.5 text-xs rounded-full bg-green-900/50 text-green-300 border border-green-700/50">預設</span>
-                                </div>
-                                <p class="text-xs text-gray-400">最強推理模型 · 977k context · text+image</p>
-                                <p class="text-xs text-gray-500 mt-1">別名：opus · 用途：複雜分析、深度推理</p>
-                            </div>
-                            <div class="p-4 bg-gray-800 rounded-lg border border-gray-700/50 trade-card">
-                                <div class="flex items-center justify-between mb-2">
-                                    <span class="text-sm font-bold text-white">google/gemini-3-flash-preview</span>
-                                    <span class="px-2 py-0.5 text-xs rounded-full bg-blue-900/50 text-blue-300 border border-blue-700/50">LINE 預設</span>
-                                </div>
-                                <p class="text-xs text-gray-400">最快速省錢 · 1024k context · text+image</p>
-                                <p class="text-xs text-gray-500 mt-1">別名：gemini-flash · 用途：日常對話、快速回應</p>
-                            </div>
-                            <div class="p-4 bg-gray-800 rounded-lg border border-gray-700/50 trade-card">
-                                <div class="flex items-center justify-between mb-2">
-                                    <span class="text-sm font-bold text-white">google/gemini-3.1-pro-preview</span>
-                                    <span class="px-2 py-0.5 text-xs rounded-full bg-gray-700 text-gray-300">備用</span>
-                                </div>
-                                <p class="text-xs text-gray-400">均衡型 · 1024k context · text+image</p>
-                                <p class="text-xs text-gray-500 mt-1">別名：gemini · 用途：中等複雜度任務</p>
-                            </div>
-                            <div id="gpt54-card" class="p-4 bg-gray-800 rounded-lg border border-yellow-700/30 trade-card">
-                                <div class="flex items-center justify-between mb-2">
-                                    <span class="text-sm font-bold text-white">openai-codex/gpt-5.4</span>
-                                    <span id="gpt54-badge" class="px-2 py-0.5 text-xs rounded-full bg-yellow-900/50 text-yellow-300 border border-yellow-700/50">⚠️ Rate Limited</span>
-                                </div>
-                                <p class="text-xs text-gray-400">OpenAI 頂級模型 · 266k context · text+image</p>
-                                <p id="gpt54-status" class="text-xs text-gray-500 mt-1">目前有速率限制，暫不使用</p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- 已啟用技能 -->
-                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="flex items-center space-x-3">
-                                <span class="text-xl">✅</span><h3 class="text-xl font-medium text-green-300">已啟用技能 (17 Ready)</h3>
-                            </div>
-                            <span class="px-3 py-1 bg-green-900/30 border border-green-700/50 text-green-300 text-xs rounded-full">17 / 58</span>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>🐙</span><div><p class="text-sm text-white">github</p><p class="text-xs text-gray-500">GitHub PR、Issue、CI 管理</p></div></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>📦</span><div><p class="text-sm text-white">gh-issues</p><p class="text-xs text-gray-500">GitHub Issues 自動修復與 PR</p></div></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>📦</span><div><p class="text-sm text-white">gog</p><p class="text-xs text-gray-500">Google Workspace (Gmail, Calendar, Drive)</p></div></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>🔒</span><div><p class="text-sm text-white">healthcheck</p><p class="text-xs text-gray-500">主機安全審計與強化</p></div></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>📱</span><div><p class="text-sm text-white">node-connect</p><p class="text-xs text-gray-500">App 連線診斷</p></div></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>🎤</span><div><p class="text-sm text-white">openai-whisper-api</p><p class="text-xs text-gray-500">語音轉文字 (Whisper)</p></div></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>🗣️</span><div><p class="text-sm text-white">sag</p><p class="text-xs text-gray-500">ElevenLabs 文字轉語音</p></div></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>📝</span><div><p class="text-sm text-white">summarize</p><p class="text-xs text-gray-500">網頁/PDF/影片摘要</p></div></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>☔</span><div><p class="text-sm text-white">weather</p><p class="text-xs text-gray-500">天氣查詢與預報</p></div></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>🌐</span><div><p class="text-sm text-white">Agent Browser</p><p class="text-xs text-gray-500">無頭瀏覽器自動化</p></div></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>⚡</span><div><p class="text-sm text-white">auto-workflow</p><p class="text-xs text-gray-500">自動化工作流建構</p></div></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>🔄</span><div><p class="text-sm text-white">automation-workflows</p><p class="text-xs text-gray-500">跨工具自動化設計 (Zapier/Make/n8n)</p></div></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>🧬</span><div><p class="text-sm text-white">Self-Evolving Skill</p><p class="text-xs text-gray-500">自我進化學習系統</p></div></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>📈</span><div><p class="text-sm text-white">self-improvement</p><p class="text-xs text-gray-500">錯誤學習與持續改進</p></div></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>🛠️</span><div><p class="text-sm text-white">skill-creator</p><p class="text-xs text-gray-500">技能建立與審計</p></div></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>🏗️</span><div><p class="text-sm text-white">Skill Builder</p><p class="text-xs text-gray-500">高品質技能模組化建構</p></div></div>
-                            <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-3"><span>🛡️</span><div><p class="text-sm text-white">skill-vetter</p><p class="text-xs text-gray-500">技能安全審查</p></div></div>
-                        </div>
-                    </section>
-
-                    <!-- 未安裝技能 -->
-                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="flex items-center space-x-3">
-                                <span class="text-xl">📦</span><h3 class="text-xl font-medium text-gray-400">未安裝技能 (41 Missing)</h3>
-                            </div>
-                            <span class="px-3 py-1 bg-gray-700/50 border border-gray-600 text-gray-400 text-xs rounded-full">需要安裝依賴</span>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🔐</span><span class="text-sm text-gray-300">1password</span></div><p class="text-xs text-gray-500 mt-1">密碼管理器 CLI，安全存取與注入密鑰</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📝</span><span class="text-sm text-gray-300">apple-notes</span></div><p class="text-xs text-gray-500 mt-1">管理 macOS 備忘錄（建立、搜尋、編輯、刪除）</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>⏰</span><span class="text-sm text-gray-300">apple-reminders</span></div><p class="text-xs text-gray-500 mt-1">管理 macOS 提醒事項（新增、完成、刪除）</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🐻</span><span class="text-sm text-gray-300">bear-notes</span></div><p class="text-xs text-gray-500 mt-1">管理 Bear 筆記 App（建立、搜尋）</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📰</span><span class="text-sm text-gray-300">blogwatcher</span></div><p class="text-xs text-gray-500 mt-1">監控部落格與 RSS 訂閱更新</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📸</span><span class="text-sm text-gray-300">camsnap</span></div><p class="text-xs text-gray-500 mt-1">從 RTSP/ONVIF 攝影機擷取畫面或片段</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📦</span><span class="text-sm text-gray-300">clawhub</span></div><p class="text-xs text-gray-500 mt-1">搜尋、安裝、更新、發布 AI 技能</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🧩</span><span class="text-sm text-gray-300">coding-agent</span></div><p class="text-xs text-gray-500 mt-1">派遣 Codex/Claude Code 執行程式開發任務</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🎮</span><span class="text-sm text-gray-300">discord</span></div><p class="text-xs text-gray-500 mt-1">Discord 訊息操作與管理</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🛌</span><span class="text-sm text-gray-300">eightctl</span></div><p class="text-xs text-gray-500 mt-1">控制 Eight Sleep 智慧床墊溫度與鬧鐘</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>✨</span><span class="text-sm text-gray-300">gemini</span></div><p class="text-xs text-gray-500 mt-1">Gemini CLI 快速問答與生成</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🧲</span><span class="text-sm text-gray-300">gifgrep</span></div><p class="text-xs text-gray-500 mt-1">搜尋 GIF 動圖並下載</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📧</span><span class="text-sm text-gray-300">himalaya</span></div><p class="text-xs text-gray-500 mt-1">IMAP/SMTP 信箱管理（讀取、回覆、搜尋）</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📨</span><span class="text-sm text-gray-300">imsg</span></div><p class="text-xs text-gray-500 mt-1">iMessage/SMS 訊息發送與歷史查詢</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🧩</span><span class="text-sm text-gray-300">mcporter</span></div><p class="text-xs text-gray-500 mt-1">MCP 伺服器工具呼叫與設定</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📊</span><span class="text-sm text-gray-300">model-usage</span></div><p class="text-xs text-gray-500 mt-1">查看各模型使用量與成本統計</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📄</span><span class="text-sm text-gray-300">nano-pdf</span></div><p class="text-xs text-gray-500 mt-1">用自然語言指令編輯 PDF</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📝</span><span class="text-sm text-gray-300">notion</span></div><p class="text-xs text-gray-500 mt-1">Notion 頁面、資料庫、區塊管理</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>💎</span><span class="text-sm text-gray-300">obsidian</span></div><p class="text-xs text-gray-500 mt-1">Obsidian 筆記庫管理與自動化</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🎤</span><span class="text-sm text-gray-300">openai-whisper</span></div><p class="text-xs text-gray-500 mt-1">本機語音轉文字（離線，無需 API Key）</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>💡</span><span class="text-sm text-gray-300">openhue</span></div><p class="text-xs text-gray-500 mt-1">控制 Philips Hue 智慧燈光與場景</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🧿</span><span class="text-sm text-gray-300">oracle</span></div><p class="text-xs text-gray-500 mt-1">Oracle CLI 提示詞與檔案打包引擎</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🛵</span><span class="text-sm text-gray-300">ordercli</span></div><p class="text-xs text-gray-500 mt-1">Foodora 外送訂單查詢</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>👀</span><span class="text-sm text-gray-300">peekaboo</span></div><p class="text-xs text-gray-500 mt-1">macOS UI 擷取與自動化操作</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📜</span><span class="text-sm text-gray-300">session-logs</span></div><p class="text-xs text-gray-500 mt-1">搜尋與分析對話紀錄</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🔉</span><span class="text-sm text-gray-300">sherpa-onnx-tts</span></div><p class="text-xs text-gray-500 mt-1">本機離線文字轉語音</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>💬</span><span class="text-sm text-gray-300">slack</span></div><p class="text-xs text-gray-500 mt-1">Slack 訊息、反應、釘選管理</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🌊</span><span class="text-sm text-gray-300">songsee</span></div><p class="text-xs text-gray-500 mt-1">音頻頻譜圖視覺化生成</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🔊</span><span class="text-sm text-gray-300">sonoscli</span></div><p class="text-xs text-gray-500 mt-1">控制 Sonos 音響（播放、音量、群組）</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🎵</span><span class="text-sm text-gray-300">spotify-player</span></div><p class="text-xs text-gray-500 mt-1">Spotify 音樂播放與搜尋</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>✅</span><span class="text-sm text-gray-300">things-mac</span></div><p class="text-xs text-gray-500 mt-1">Things 3 待辦事項管理</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🧵</span><span class="text-sm text-gray-300">tmux</span></div><p class="text-xs text-gray-500 mt-1">遠端控制 tmux 終端機 session</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📋</span><span class="text-sm text-gray-300">trello</span></div><p class="text-xs text-gray-500 mt-1">Trello 看板、列表、卡片管理</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🔍</span><span class="text-sm text-gray-300">tavily-search</span></div><p class="text-xs text-gray-500 mt-1">LLM 最佳化網頁搜尋 API</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🎬</span><span class="text-sm text-gray-300">video-frames</span></div><p class="text-xs text-gray-500 mt-1">從影片擷取畫面或短片段</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📞</span><span class="text-sm text-gray-300">voice-call</span></div><p class="text-xs text-gray-500 mt-1">語音通話功能</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📱</span><span class="text-sm text-gray-300">wacli</span></div><p class="text-xs text-gray-500 mt-1">WhatsApp 訊息發送與歷史搜尋</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🐦</span><span class="text-sm text-gray-300">xurl</span></div><p class="text-xs text-gray-500 mt-1">X (Twitter) 發文、回覆、搜尋、DM</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🫐</span><span class="text-sm text-gray-300">blucli</span></div><p class="text-xs text-gray-500 mt-1">BluOS 音響控制</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>🫧</span><span class="text-sm text-gray-300">bluebubbles</span></div><p class="text-xs text-gray-500 mt-1">透過 BlueBubbles 發送 iMessage</p></div>
-                            <div class="p-3 bg-gray-800/50 rounded-lg border border-gray-700/30"><div class="flex items-center space-x-2"><span>📍</span><span class="text-sm text-gray-300">goplaces</span></div><p class="text-xs text-gray-500 mt-1">Google Places API 地點搜尋與評論</p></div>
-                        </div>
-                    </section>
-                </div>
-
-                <!-- 其他專案 View -->
-                <div id="view-placeholder" class="section-view space-y-8">
-                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
-                        <div class="flex items-center space-x-3 mb-6">
-                            <span class="text-xl">🚧</span><h3 class="text-xl font-medium text-indigo-300">建置中</h3>
-                        </div>
-                        <div class="min-h-[200px] flex items-center justify-center border-2 border-dashed border-gray-700 rounded-lg bg-gray-800/30">
-                            <div class="text-center">
-                                <p class="text-gray-400 text-sm">此專案的專屬報告區塊與排程任務尚未設定。</p>
-                                <p class="text-gray-500 text-xs mt-1">請隨時指示管家建立 Standing Order！</p>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-            </div>
-        </main>
+    <!-- Mobile top bar -->
+    <div id="mobile-bar" class="fixed top-0 left-0 right-0 z-30 bg-gray-900 border-b border-gray-800 px-4 py-2.5 flex items-center justify-between md:hidden">
+        <button onclick="toggleSidebar()" class="text-xl text-gray-300 p-1">☰</button>
+        <span class="text-sm font-bold text-indigo-400">🖤 管家主控板</span>
+        <div class="w-8"></div>
     </div>
 
-    <script>
-        function toggleSidebar() {
-            document.getElementById('sidebar').classList.toggle('open');
-            document.getElementById('sidebar-overlay').classList.toggle('open');
-        }
-        
-        function checkPass() {
-            const input = document.getElementById('pass-input').value;
-            if(input === '8888') {
-                document.getElementById('auth-overlay').style.display = 'none';
-                document.getElementById('app-content').style.display = 'flex';
-            } else {
-                document.getElementById('auth-error').classList.remove('hidden');
-            }
-        }
-        function handleAuth(e) { if(e.key === 'Enter') checkPass(); }
+    <div id="sidebar-overlay" onclick="toggleSidebar()"></div>
 
-        const titles = {
-            'overview': { title: '今日管家回報與活動狀態', sub: '2026-03-26 · 隨時待命接收新指令' },
-            'stocks': { title: '股票專案 (Stock Project)', sub: '追蹤前五日台股籌碼與基本面變化' },
-            'forex': { title: '外匯保證金專案 (Forex)', sub: '貨幣對與黃金策略分析' },
-            'forex-auto': { title: '🤖 外匯自動交易 (Auto Trading)', sub: 'XAUUSD · Capital.com API · 即時監控中' },
-            'crypto': { title: '虛擬貨幣專案 (Crypto)', sub: '加密貨幣熱點與技術面追蹤' },
-            'community': { title: '社群專案 (Community)', sub: '粉絲團與互動指標管理' },
-            'skills': { title: '技能專案 (Skills)', sub: '4 個 AI 模型 · 17 個已啟用技能 · 41 個可安裝' }
-        };
+    <!-- Sidebar -->
+    <aside id="sidebar" class="w-72 bg-gray-900 border-r border-gray-800 flex flex-col flex-shrink-0">
+        <div class="p-5 border-b border-gray-800 flex items-center space-x-3">
+            <span class="text-2xl">🖤</span>
+            <div>
+                <h1 class="text-lg font-bold text-indigo-400">管家主控板</h1>
+                <p class="text-[10px] text-gray-500">AI Assistant Dashboard</p>
+            </div>
+        </div>
+        <nav class="flex-1 px-3 py-4 space-y-1 overflow-y-auto" id="sidebar-nav">
+            <a href="#" onclick="switchTab('overview',this)" class="nav-item active flex items-center space-x-3 px-3 py-2.5 rounded-lg text-sm">
+                <span>📊</span><span>總覽</span>
+            </a>
+            <div class="pt-3 pb-1"><p class="text-[10px] font-semibold text-gray-500 uppercase px-3">金融交易</p></div>
+            <a href="#" onclick="switchTab('stocks',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>📈</span><span>股票專案</span></a>
+            <a href="#" onclick="switchTab('forex',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>💱</span><span>外匯保證金</span></a>
+            <a href="#" onclick="switchTab('forex-auto',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🤖</span><span>外匯自動交易</span></a>
+            <a href="#" onclick="switchTab('crypto',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🪙</span><span>虛擬貨幣</span></a>
+            <div class="pt-3 pb-1"><p class="text-[10px] font-semibold text-gray-500 uppercase px-3">營運管理</p></div>
+            <a href="#" onclick="switchTab('community',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🌐</span><span>社群專案</span></a>
+            <a href="#" onclick="switchTab('skills',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🛠️</span><span>技能專案</span></a>
+        </nav>
+        <div class="p-3 border-t border-gray-800">
+            <div class="flex items-center space-x-2 text-xs text-green-400">
+                <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-green-500"></span></span>
+                <span>系統正常</span>
+            </div>
+        </div>
+    </aside>
 
-        // ========== TRADING DATA LOADER ==========
-        const trendMap = {
-            'STRONG_BULL': '強勢看多 🟢',
-            'BULL': '看多 🟢',
-            'STRONG_BEAR': '強勢看空 🔴',
-            'BEAR': '看空 🔴',
-            'NEUTRAL': '盤整 ⚪'
-        };
-        function trendCN(t) { return trendMap[t] || t || '--'; }
-        function trendColor(t) {
-            if (!t) return 'text-gray-300';
-            if (t.includes('BULL')) return 'text-green-400';
-            if (t.includes('BEAR')) return 'text-red-400';
-            return 'text-gray-300';
-        }
-        
-        async function refreshBtn() {
-            const btn = document.getElementById('btn-refresh');
-            btn.textContent = '⏳ 載入中...';
-            btn.disabled = true;
-            await loadTradingData();
-            btn.textContent = '✅ 已更新';
-            btn.disabled = false;
-            setTimeout(() => { btn.textContent = '🔄 重新整理'; }, 2000);
-        }
-        
-        async function loadTradingData() {
-            try {
-                const resp = await fetch('trading-data.json?t=' + Date.now());
-                if (!resp.ok) return;
-                const d = await resp.json();
-                
-                // Update header
-                document.getElementById('fx-last-update').textContent = d.lastUpdate || '--';
-                
-                // Account stats
-                const acct = d.account || {};
-                const pnlEl = document.getElementById('fx-pnl');
-                const pnl = acct.realizedPnl || 0;
-                pnlEl.textContent = `$${pnl.toFixed(2)}`;
-                pnlEl.className = `text-2xl font-bold mt-1 ${pnl >= 0 ? 'text-green-400' : 'text-red-400'}`;
-                document.getElementById('fx-winrate').textContent = acct.winRate || '--';
-                document.getElementById('fx-total-trades').textContent = acct.totalTrades || 0;
-                document.getElementById('fx-open-count').textContent = (d.openPositions || []).length;
-                document.getElementById('fx-streak').textContent = `${acct.consecutiveWins || 0} / ${acct.consecutiveLosses || 0}`;
-                
-                // 1H Trend (Chinese)
-                const trend1h = d.indicators?.trend_1h || '';
-                const trendEl = document.getElementById('fx-trend');
-                trendEl.textContent = trendCN(trend1h);
-                trendEl.className = `text-2xl font-bold mt-1 ${trendColor(trend1h)}`;
-                
-                // 15M Trend (Chinese)
-                const trend15m = d.indicators?.trend_15m || '';
-                const trend15El = document.getElementById('fx-trend-15m');
-                trend15El.textContent = trendCN(trend15m);
-                trend15El.className = `text-2xl font-bold mt-1 ${trendColor(trend15m)}`;
-                
-                // Price
-                const price = d.currentPrice || {};
-                document.getElementById('fx-price').textContent = price.bid ? `$${price.bid.toFixed(2)}` : '--';
-                
-                // Open Positions
-                const posBox = document.getElementById('fx-open-positions');
-                const positions = d.openPositions || [];
-                if (positions.length === 0) {
-                    posBox.innerHTML = '<div class="flex items-center justify-center py-8 border-2 border-dashed border-gray-700 rounded-lg bg-gray-800/30"><div class="text-center"><span class="text-3xl block mb-2">🔍</span><p class="text-gray-400 text-sm">目前無持倉，管家正在監控盤面...</p></div></div>';
-                } else {
-                    posBox.innerHTML = positions.map(p => {
-                        const pnlColor = p.pnl >= 0 ? 'text-green-400' : 'text-red-400';
-                        const dirBadge = p.direction === 'BUY' ? 'badge-buy' : 'badge-sell';
-                        return `<div class="trade-card p-4 bg-gray-800 rounded-lg border border-gray-700">
-                            <div class="flex items-center justify-between mb-2">
-                                <div class="flex items-center space-x-3">
-                                    <span class="px-2 py-0.5 text-xs rounded-full ${dirBadge}">${p.direction}</span>
-                                    <span class="text-sm font-bold text-white">XAUUSD @ ${p.entryPrice}</span>
-                                </div>
-                                <span class="text-lg font-bold ${pnlColor}">${p.pnl >= 0 ? '+' : ''}$${p.pnl.toFixed(2)}</span>
+    <!-- Main -->
+    <main class="flex-1 flex flex-col bg-[#0b0f19] overflow-y-auto pt-11 md:pt-0">
+        <header class="px-4 py-3 md:px-8 md:py-6 border-b border-gray-800 bg-gray-900/50 backdrop-blur-sm sticky top-0 z-10">
+            <h2 id="header-title" class="text-base md:text-2xl font-semibold text-gray-100 truncate">今日管家回報</h2>
+            <p id="header-subtitle" class="text-[10px] md:text-sm text-gray-400 mt-0.5">隨時待命</p>
+        </header>
+
+        <div class="p-3 md:p-8 space-y-4 md:space-y-8 max-w-7xl w-full">
+
+            <!-- 總覽 -->
+            <div id="view-overview" class="section-view active space-y-4">
+                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">⚡ 最新紀錄</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3 p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+                            <span class="flex h-2 w-2 bg-green-500 rounded-full mt-1.5 flex-shrink-0"></span>
+                            <div class="min-w-0">
+                                <p class="text-xs md:text-sm font-medium text-gray-200">🤖 外匯自動交易系統啟動</p>
+                                <p class="text-[10px] md:text-xs text-gray-400 mt-0.5">XAUUSD 自動監控上線，多策略模式</p>
                             </div>
-                            <div class="flex space-x-6 text-xs text-gray-400">
-                                <span>手數: ${p.size}</span>
-                                <span>止損: ${p.stopLevel || '--'}</span>
-                                <span>止盈: ${p.profitLevel || '--'}</span>
-                                <span>現價: ${p.currentBid}/${p.currentAsk}</span>
+                        </div>
+                        <div class="flex items-start space-x-3 p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+                            <span class="flex h-2 w-2 bg-green-500 rounded-full mt-1.5 flex-shrink-0"></span>
+                            <div class="min-w-0">
+                                <p class="text-xs md:text-sm font-medium text-gray-200">主控板已上線</p>
+                                <p class="text-[10px] md:text-xs text-gray-400 mt-0.5">changjaykid.github.io/boss-dashboard</p>
                             </div>
-                        </div>`;
-                    }).join('');
-                }
-                
-                // Recent Trades
-                const tradesBox = document.getElementById('fx-recent-trades');
-                const trades = (d.recentTrades || []).slice().reverse();
-                if (trades.length === 0) {
-                    tradesBox.innerHTML = '<div class="flex items-center justify-center py-8 border-2 border-dashed border-gray-700 rounded-lg bg-gray-800/30"><div class="text-center"><span class="text-3xl block mb-2">📭</span><p class="text-gray-400 text-sm">尚無交易紀錄</p></div></div>';
-                } else {
-                    tradesBox.innerHTML = trades.map(t => {
-                        const dirBadge = t.direction === 'BUY' ? 'badge-buy' : 'badge-sell';
-                        let outBadge = 'badge-open';
-                        if (t.outcome === 'WIN') outBadge = 'badge-win';
-                        else if (t.outcome === 'LOSS') outBadge = 'badge-loss';
-                        const time = t.time ? new Date(t.time).toLocaleString('zh-TW', {timeZone:'Asia/Taipei', hour:'2-digit', minute:'2-digit', month:'2-digit', day:'2-digit'}) : '--';
-                        const pnlStr = t.pnl != null ? `$${t.pnl.toFixed(2)}` : '進行中';
-                        return `<div class="trade-card p-3 bg-gray-800 rounded-lg border border-gray-700">
-                            <div class="flex items-center justify-between mb-2">
-                                <div class="flex items-center space-x-2">
-                                    <span class="px-2 py-0.5 text-xs rounded-full ${dirBadge}">${t.direction}</span>
-                                    <span class="px-2 py-0.5 text-xs rounded-full ${outBadge}">${t.outcome}</span>
-                                    <span class="text-xs text-gray-300">${t.strategy}</span>
-                                </div>
-                                <span class="font-bold text-sm ${t.pnl != null && t.pnl >= 0 ? 'text-green-400' : t.pnl != null ? 'text-red-400' : 'text-blue-400'}">${pnlStr}</span>
-                            </div>
-                            <div class="flex flex-wrap gap-3 text-xs text-gray-400">
-                                <span>信心: ${(t.confidence*100).toFixed(0)}%</span>
-                                <span>SL:${t.stop_distance} TP:${t.tp_distance}</span>
-                                <span>${time}</span>
-                            </div>
-                        </div>`;
-                    }).join('');
-                }
-                
-                // Strategy Stats
-                const statsBox = document.getElementById('fx-strategy-stats');
-                const stats = d.strategyStats || {};
-                const statKeys = Object.keys(stats);
-                if (statKeys.length === 0) {
-                    statsBox.innerHTML = '<div class="p-4 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-500">累積交易數據後將自動產生各策略績效比較。目前運行中的策略：</p><ul class="text-xs text-gray-400 mt-2 space-y-1 list-disc list-inside"><li>15M: 趨勢跟隨、RSI反轉、布林回彈、動量突破、EMA交叉</li><li>1H: 趨勢延續、RSI極端、布林突破、EMA回彈、MACD交叉</li></ul></div>';
-                } else {
-                    statsBox.innerHTML = '<div class="grid grid-cols-1 md:grid-cols-2 gap-3">' + statKeys.map(k => {
-                        const s = stats[k];
-                        const total = s.wins + s.losses;
-                        const wr = total > 0 ? ((s.wins/total)*100).toFixed(1) : 0;
-                        const pnlColor = s.pnl >= 0 ? 'text-green-400' : 'text-red-400';
-                        return `<div class="p-4 bg-gray-800 rounded-lg border border-gray-700">
-                            <div class="flex items-center justify-between mb-2">
-                                <span class="text-sm font-bold text-white">${k}</span>
-                                <span class="text-xs ${pnlColor}">$${s.pnl.toFixed(2)}</span>
-                            </div>
-                            <div class="flex space-x-4 text-xs text-gray-400">
-                                <span>勝: ${s.wins}</span><span>敗: ${s.losses}</span><span>勝率: ${wr}%</span>
-                            </div>
-                        </div>`;
-                    }).join('') + '</div>';
-                }
-                
-            } catch(e) {
-                console.log('Trading data not available:', e);
-            }
-        }
-        
-        // Auto-refresh trading data every 60s when on forex-auto tab
-        let tradingRefreshInterval = null;
-        
-        function switchTab(viewId, element) {
-            // Close sidebar on mobile
-            document.getElementById('sidebar').classList.remove('open');
-            document.getElementById('sidebar-overlay').classList.remove('open');
-            
-            document.querySelectorAll('.nav-item').forEach(el => {
-                el.classList.remove('active', 'bg-indigo-600/20', 'text-indigo-300', 'border-indigo-500/30');
-            });
-            element.classList.add('active');
-            document.getElementById('header-title').innerText = titles[viewId]?.title || '專案詳情';
-            document.getElementById('header-subtitle').innerText = titles[viewId]?.sub || '資料載入中...';
-            document.querySelectorAll('.section-view').forEach(el => el.classList.remove('active'));
-            const targetView = document.getElementById('view-' + viewId);
-            if(targetView) { targetView.classList.add('active'); }
-            else { document.getElementById('view-placeholder').classList.add('active'); }
-            
-            // Auto-refresh trading data when on forex-auto tab
-            if (tradingRefreshInterval) { clearInterval(tradingRefreshInterval); tradingRefreshInterval = null; }
-            if (viewId === 'forex-auto') {
-                loadTradingData();
-                tradingRefreshInterval = setInterval(loadTradingData, 60000);
-            }
-        }
-    </script>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 股票 -->
+            <div id="view-stocks" class="section-view">
+                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">📈 每日潛力股</h3>
+                    <div class="py-8 text-center"><span class="text-3xl block mb-2 text-gray-600">⏳</span><p class="text-xs text-gray-400">尚未產生分析報告</p></div>
+                </section>
+            </div>
+
+            <!-- 外匯保證金 -->
+            <div id="view-forex" class="section-view">
+                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">💱 外匯保證金</h3>
+                    <div class="py-8 text-center"><p class="text-xs text-gray-400">請查看「外匯自動交易」頁面</p></div>
+                </section>
+            </div>
+
+            <!-- ===== 外匯自動交易 ===== -->
+            <div id="view-forex-auto" class="section-view space-y-4 md:space-y-6">
+
+                <!-- 更新時間 + 刷新 -->
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-2 text-xs">
+                        <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-green-500"></span></span>
+                        <span class="text-gray-400">更新：<span id="fx-last-update" class="text-gray-200">載入中</span></span>
+                    </div>
+                    <button id="btn-refresh" onclick="refreshBtn()" class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white text-xs rounded-lg">🔄 重新整理</button>
+                </div>
+
+                <!-- 帳戶卡片 Row 1 -->
+                <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">假設本金</p>
+                        <p class="text-lg md:text-2xl font-bold text-white mt-0.5">$1,000</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">已實現盈虧</p>
+                        <p class="text-lg md:text-2xl font-bold mt-0.5" id="fx-pnl">$0.00</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">勝率</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="fx-winrate">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">交易筆數</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="fx-total-trades">0</p>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="grid grid-cols-2 gap-2 md:grid-cols-5 md:gap-4">
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">持倉數</p>
+                        <p class="text-lg md:text-2xl font-bold text-blue-400 mt-0.5" id="fx-open-count">0</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">連勝/連敗</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="fx-streak">--/--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">1H 趨勢</p>
+                        <p class="text-base md:text-2xl font-bold mt-0.5" id="fx-trend">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">15M 趨勢</p>
+                        <p class="text-base md:text-2xl font-bold mt-0.5" id="fx-trend-15m">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl col-span-2 md:col-span-1">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">XAUUSD</p>
+                        <p class="text-lg md:text-2xl font-bold text-yellow-400 mt-0.5" id="fx-price">--</p>
+                    </div>
+                </div>
+
+                <!-- 持倉 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-blue-300 mb-3">📍 當前持倉</h3>
+                    <div id="fx-open-positions" class="space-y-2"></div>
+                </section>
+
+                <!-- 最近交易 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">📋 最近交易</h3>
+                    <div id="fx-recent-trades" class="space-y-2"></div>
+                </section>
+
+                <!-- 策略績效 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-purple-300 mb-3">🧠 策略績效</h3>
+                    <div id="fx-strategy-stats" class="space-y-2"></div>
+                </section>
+
+                <!-- 風控 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">⚙️ 風控參數</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">每筆風險</p><p class="text-xs md:text-sm font-bold text-white">$200 (20%)</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">手數</p><p class="text-xs md:text-sm font-bold text-white">0.01</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">最大持倉</p><p class="text-xs md:text-sm font-bold text-white">3 筆</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">風報比</p><p class="text-xs md:text-sm font-bold text-white">1:1.5~1:4</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">止損</p><p class="text-xs md:text-sm font-bold text-white">ATR 動態</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">策略數</p><p class="text-xs md:text-sm font-bold text-white">10 種</p></div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 技能 -->
+            <div id="view-skills" class="section-view space-y-4">
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">🧠 AI 模型</h3>
+                    <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4">
+                        <div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/50">
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold text-white">claude-opus-4-6</span><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-green-900/50 text-green-300 border border-green-700/50">預設</span></div>
+                            <p class="text-[10px] text-gray-400 mt-1">最強推理 · 977k context</p>
+                        </div>
+                        <div class="p-3 bg-gray-800 rounded-lg border border-gray-700/50">
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold text-white">gemini-3-flash</span><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-blue-900/50 text-blue-300 border border-blue-700/50">LINE</span></div>
+                            <p class="text-[10px] text-gray-400 mt-1">快速省錢 · 1024k context</p>
+                        </div>
+                        <div class="p-3 bg-gray-800 rounded-lg border border-gray-700/50">
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold text-white">gemini-3.1-pro</span><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-gray-700 text-gray-300">備用</span></div>
+                            <p class="text-[10px] text-gray-400 mt-1">均衡型 · 1024k context</p>
+                        </div>
+                        <div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30">
+                            <div class="flex items-center justify-between"><span class="text-xs font-bold text-white">gpt-5.4</span><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-yellow-900/50 text-yellow-300 border border-yellow-700/50">⚠️ Rate Limited</span></div>
+                            <p class="text-[10px] text-gray-400 mt-1">暫不使用</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-sm md:text-xl font-medium text-green-300">✅ 已啟用 (17)</h3>
+                        <span class="px-2 py-0.5 bg-green-900/30 border border-green-700/50 text-green-300 text-[10px] rounded-full">17/58</span>
+                    </div>
+                    <div class="grid grid-cols-1 xs:grid-cols-2 gap-2" id="skills-enabled">
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>🐙</span><div><p class="text-xs text-white">github</p></div></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>📦</span><div><p class="text-xs text-white">gh-issues</p></div></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>📦</span><div><p class="text-xs text-white">gog</p></div></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>🔒</span><div><p class="text-xs text-white">healthcheck</p></div></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>📱</span><div><p class="text-xs text-white">node-connect</p></div></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>🎤</span><div><p class="text-xs text-white">whisper-api</p></div></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>🗣️</span><div><p class="text-xs text-white">sag (TTS)</p></div></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>📝</span><div><p class="text-xs text-white">summarize</p></div></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>☔</span><div><p class="text-xs text-white">weather</p></div></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>🌐</span><div><p class="text-xs text-white">Agent Browser</p></div></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>⚡</span><div><p class="text-xs text-white">auto-workflow</p></div></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>🔄</span><div><p class="text-xs text-white">automation</p></div></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>🧬</span><div><p class="text-xs text-white">self-evolving</p></div></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>📈</span><div><p class="text-xs text-white">self-improve</p></div></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>🛠️</span><div><p class="text-xs text-white">skill-creator</p></div></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>🏗️</span><div><p class="text-xs text-white">skill-builder</p></div></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>🛡️</span><div><p class="text-xs text-white">skill-vetter</p></div></div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Placeholder -->
+            <div id="view-placeholder" class="section-view">
+                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
+                    <div class="py-8 text-center"><span class="text-3xl block mb-2 text-gray-600">🚧</span><p class="text-xs text-gray-400">建置中</p></div>
+                </section>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<script>
+function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('open')}
+function checkPass(){if(document.getElementById('pass-input').value==='8888'){document.getElementById('auth-overlay').style.display='none';document.getElementById('app-content').style.display='flex'}else{document.getElementById('auth-error').classList.remove('hidden')}}
+
+const titles={overview:{t:'今日管家回報',s:'隨時待命'},stocks:{t:'股票專案',s:'台股分析'},forex:{t:'外匯保證金',s:'策略分析'},'forex-auto':{t:'🤖 外匯自動交易',s:'XAUUSD · 即時監控中'},crypto:{t:'虛擬貨幣',s:'加密貨幣追蹤'},community:{t:'社群專案',s:'互動管理'},skills:{t:'技能專案',s:'4 模型 · 17 技能'}};
+const trendMap={'STRONG_BULL':'強勢看多 🟢','BULL':'看多 🟢','STRONG_BEAR':'強勢看空 🔴','BEAR':'看空 🔴','NEUTRAL':'盤整 ⚪'};
+function trendCN(t){return trendMap[t]||t||'--'}
+function trendColor(t){if(!t)return'text-gray-300';if(t.includes('BULL'))return'text-green-400';if(t.includes('BEAR'))return'text-red-400';return'text-gray-300'}
+
+async function refreshBtn(){const b=document.getElementById('btn-refresh');b.textContent='⏳ 載入中...';b.disabled=true;await loadTradingData();b.textContent='✅ 已更新';b.disabled=false;setTimeout(()=>{b.textContent='🔄 重新整理'},1500)}
+
+async function loadTradingData(){
+try{
+const r=await fetch('trading-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
+document.getElementById('fx-last-update').textContent=d.lastUpdate||'--';
+const a=d.account||{};
+const pe=document.getElementById('fx-pnl');const pn=a.realizedPnl||0;
+pe.textContent='$'+pn.toFixed(2);pe.className='text-lg md:text-2xl font-bold mt-0.5 '+(pn>=0?'text-green-400':'text-red-400');
+document.getElementById('fx-winrate').textContent=a.winRate||'--';
+document.getElementById('fx-total-trades').textContent=a.totalTrades||0;
+document.getElementById('fx-open-count').textContent=(d.openPositions||[]).length;
+document.getElementById('fx-streak').textContent=(a.consecutiveWins||0)+'/'+(a.consecutiveLosses||0);
+
+const t1=d.indicators?.trend_1h||'';const te=document.getElementById('fx-trend');
+te.textContent=trendCN(t1);te.className='text-base md:text-2xl font-bold mt-0.5 '+trendColor(t1);
+const t15=d.indicators?.trend_15m||'';const t15e=document.getElementById('fx-trend-15m');
+t15e.textContent=trendCN(t15);t15e.className='text-base md:text-2xl font-bold mt-0.5 '+trendColor(t15);
+
+const pr=d.currentPrice||{};document.getElementById('fx-price').textContent=pr.bid?'$'+pr.bid.toFixed(2):'--';
+
+// Positions
+const pb=document.getElementById('fx-open-positions');const ps=d.openPositions||[];
+if(!ps.length){pb.innerHTML='<div class="py-6 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">🔍 無持倉，監控中...</p></div>'}
+else{pb.innerHTML=ps.map(p=>{const pc=p.pnl>=0?'text-green-400':'text-red-400';const db=p.direction==='BUY'?'badge-buy':'badge-sell';
+return`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1.5"><div class="flex items-center space-x-2"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${db}">${p.direction}</span><span class="text-xs font-bold text-white">@ ${p.entryPrice}</span></div><span class="text-sm font-bold ${pc}">${p.pnl>=0?'+':''}$${p.pnl.toFixed(2)}</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>SL:${p.stopLevel||'--'}</span><span>TP:${p.profitLevel||'--'}</span><span>現價:${p.currentBid}</span></div></div>`}).join('')}
+
+// Trades
+const tb=document.getElementById('fx-recent-trades');const ts=(d.recentTrades||[]).slice().reverse();
+if(!ts.length){tb.innerHTML='<div class="py-6 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">📭 無紀錄</p></div>'}
+else{tb.innerHTML=ts.map(t=>{const db=t.direction==='BUY'?'badge-buy':'badge-sell';let ob='badge-open';if(t.outcome==='WIN')ob='badge-win';if(t.outcome==='LOSS')ob='badge-loss';
+const tm=t.time?new Date(t.time).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',hour:'2-digit',minute:'2-digit',month:'2-digit',day:'2-digit'}):'--';
+const ps=t.pnl!=null?'$'+t.pnl.toFixed(2):'進行中';const pc=t.pnl!=null&&t.pnl>=0?'text-green-400':t.pnl!=null?'text-red-400':'text-blue-400';
+return`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${db}">${t.direction}</span><span class="px-1.5 py-0.5 text-[10px] rounded-full ${ob}">${t.outcome}</span><span class="text-[10px] text-gray-300">${t.strategy}</span></div><span class="text-xs font-bold ${pc}">${ps}</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>${(t.confidence*100).toFixed(0)}%</span><span>SL:${t.stop_distance} TP:${t.tp_distance}</span><span>${tm}</span></div></div>`}).join('')}
+
+// Strategy stats
+const sb=document.getElementById('fx-strategy-stats');const ss=d.strategyStats||{};const sk=Object.keys(ss);
+if(!sk.length){sb.innerHTML='<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">累積數據後自動產生策略比較</p><ul class="text-[10px] text-gray-400 mt-1.5 space-y-0.5 list-disc list-inside"><li>15M: 趨勢跟隨、RSI、布林、動量、EMA</li><li>1H: 趨勢延續、RSI、布林突破、EMA、MACD</li></ul></div>'}
+else{sb.innerHTML='<div class="grid grid-cols-1 xs:grid-cols-2 gap-2">'+sk.map(k=>{const s=ss[k];const tt=s.wins+s.losses;const wr=tt>0?((s.wins/tt)*100).toFixed(1):0;const pc=s.pnl>=0?'text-green-400':'text-red-400';
+return`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><span class="text-xs font-bold text-white">${k}</span><span class="text-[10px] ${pc}">$${s.pnl.toFixed(2)}</span></div><div class="flex gap-3 text-[10px] text-gray-400"><span>勝:${s.wins}</span><span>敗:${s.losses}</span><span>${wr}%</span></div></div>`}).join('')+'</div>'}
+
+}catch(e){console.log('err',e)}
+}
+
+let tri=null;
+function switchTab(v,el){
+document.getElementById('sidebar').classList.remove('open');document.getElementById('sidebar-overlay').classList.remove('open');
+document.querySelectorAll('.nav-item').forEach(e=>e.classList.remove('active'));el.classList.add('active');
+document.getElementById('header-title').textContent=titles[v]?.t||'專案';document.getElementById('header-subtitle').textContent=titles[v]?.s||'';
+document.querySelectorAll('.section-view').forEach(e=>e.classList.remove('active'));
+const tv=document.getElementById('view-'+v);if(tv)tv.classList.add('active');else document.getElementById('view-placeholder').classList.add('active');
+if(tri){clearInterval(tri);tri=null}
+if(v==='forex-auto'){loadTradingData();tri=setInterval(loadTradingData,60000)}
+}
+</script>
 </body>
 </html>
