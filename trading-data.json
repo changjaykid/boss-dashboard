@@ -1,33 +1,33 @@
 {
-  "lastUpdate": "2026-03-27 23:33:31",
+  "lastUpdate": "2026-03-27 23:45:25",
   "currentPrice": {
     "GOLD": {
-      "bid": 4546.54,
-      "ask": 4547.04
+      "bid": 4532.94,
+      "ask": 4533.44
     },
     "SILVER": {
-      "bid": 71.266,
-      "ask": 71.346
+      "bid": 70.914,
+      "ask": 70.994
     },
     "COPPER": {
-      "bid": 5.54954,
-      "ask": 5.55226
+      "bid": 5.53979,
+      "ask": 5.54251
     },
     "EURUSDM2026": {
-      "bid": 1.1587,
-      "ask": 1.15879
+      "bid": 1.1578,
+      "ask": 1.15786
     },
     "US500": {
-      "bid": 6441.7,
-      "ask": 6442.1
+      "bid": 6431.6,
+      "ask": 6432.0
     },
     "OIL_CRUDE": {
-      "bid": 96.045,
-      "ask": 96.125
+      "bid": 96.521,
+      "ask": 96.553
     },
     "NATURALGAS": {
-      "bid": 3.0296,
-      "ask": 3.0346
+      "bid": 3.0321,
+      "ask": 3.0371
     }
   },
   "indicators": {
@@ -43,7 +43,7 @@
       "name": "XAGUSD",
       "regime": "TRENDING_UP",
       "pa": "",
-      "pattern": "None",
+      "pattern": "Double Bottom",
       "mtf_dir": "BUY",
       "ew_pos": "Unknown"
     },
@@ -51,7 +51,7 @@
       "name": "\u9285",
       "regime": "RANGING",
       "pa": "",
-      "pattern": "Double Top",
+      "pattern": "Double Bottom",
       "mtf_dir": "BUY",
       "ew_pos": "Unknown"
     },
@@ -68,7 +68,7 @@
       "regime": "TRENDING_DOWN",
       "pa": "",
       "pattern": "Double Top",
-      "mtf_dir": "NONE",
+      "mtf_dir": "SELL",
       "ew_pos": "Unknown"
     },
     "OIL_CRUDE": {
@@ -76,23 +76,23 @@
       "regime": "TRENDING_UP",
       "pa": "",
       "pattern": "Double Bottom",
-      "mtf_dir": "NONE",
+      "mtf_dir": "BUY",
       "ew_pos": "Unknown"
     },
     "NATURALGAS": {
       "name": "\u5929\u7136\u6c23",
       "regime": "TRENDING_UP",
       "pa": "",
-      "pattern": "None",
+      "pattern": "Double Top",
       "mtf_dir": "NONE",
       "ew_pos": "Unknown"
     }
   },
   "account": {
-    "balance": 30840.13,
+    "balance": 30819.7,
     "realizedPnl": -96.25,
-    "unrealizedPnl": -3630.81,
-    "totalTrades": 55,
+    "unrealizedPnl": 8.4,
+    "totalTrades": 56,
     "closedTrades": 53,
     "wins": 14,
     "losses": 39,
@@ -100,28 +100,15 @@
   },
   "openPositions": [
     {
-      "dealId": "00000000-4bdb-1652-0460-7d740055311e",
-      "direction": "SELL",
-      "size": 0.42,
-      "entryPrice": 45582.6,
-      "stopLevel": 45715.1,
-      "profitLevel": 45185.1,
-      "currentBid": 45668.3,
-      "currentAsk": 45670.3,
-      "pnl": -3683.4,
-      "instrument": "US Wall Street 30",
-      "epic": "US30"
-    },
-    {
       "dealId": "00000000-4bdb-165f-0460-7d740055311e",
       "direction": "BUY",
       "size": 0.03,
       "entryPrice": 4528.69,
       "stopLevel": 4499.39,
       "profitLevel": 4616.49,
-      "currentBid": 4546.22,
-      "currentAsk": 4546.72,
-      "pnl": 52.59,
+      "currentBid": 4531.49,
+      "currentAsk": 4531.99,
+      "pnl": 8.4,
       "instrument": "Gold",
       "epic": "GOLD"
     }
@@ -921,5 +908,7 @@
     "OIL_CRUDE",
     "NATURALGAS"
   ],
-  "actions": []
+  "actions": [
+    "OPENED SELL US500 Conf:0.75"
+  ]
 }
