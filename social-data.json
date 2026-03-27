@@ -3,7 +3,7 @@
   "threads": {
     "username": "freeeadman",
     "url": "https://www.threads.com/@freeeadman",
-    "apiConfigured": false,
+    "apiConfigured": true,
     "totalPublished": 0,
     "pendingDrafts": 1,
     "pillarDistribution": {}

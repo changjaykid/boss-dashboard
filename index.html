@@ -784,8 +784,25 @@ pb.innerHTML=pls.map(p=>`<div class="p-2.5 bg-gray-800 rounded-lg border border-
 }catch(e){console.log('social err',e)}
 }
 
-function approveDraft(id){
-alert('Threads API 尚未設定。\\n\\n請將草稿內容複製貼到 Threads 手動發佈。\\n\\n設定 API 後可自動發佈。');
+async function approveDraft(id){
+if(!confirm('確定要發佈這篇到 Threads？'))return;
+try{
+const cfg=await fetch('social-config.json?t='+Date.now()).then(r=>r.json());
+const tk=cfg.threads?.access_token;const uid=cfg.threads?.user_id;
+if(!tk||!uid){alert('API token 未設定');return}
+// Find draft content
+const sd=await fetch('social-data.json?t='+Date.now()).then(r=>r.json());
+const dr=(sd.drafts||[]).find(d=>d.id===id);
+if(!dr){alert('找不到草稿');return}
+const txt=dr.content+(dr.hashtags?'\\n\\n'+dr.hashtags:'');
+// Step 1: Create media container
+const c1=await fetch(`https://graph.threads.net/v1.0/${uid}/threads?media_type=TEXT&text=${encodeURIComponent(txt)}&access_token=${tk}`,{method:'POST'}).then(r=>r.json());
+if(!c1.id){alert('建立失敗: '+JSON.stringify(c1));return}
+// Step 2: Publish
+await new Promise(r=>setTimeout(r,3000));
+const c2=await fetch(`https://graph.threads.net/v1.0/${uid}/threads_publish?creation_id=${c1.id}&access_token=${tk}`,{method:'POST'}).then(r=>r.json());
+if(c2.id){alert('✅ 發佈成功！ID: '+c2.id)}else{alert('發佈失敗: '+JSON.stringify(c2))}
+}catch(e){alert('錯誤: '+e.message)}
 }
 function rejectDraft(id){
 if(confirm('確定不要這篇？')){
