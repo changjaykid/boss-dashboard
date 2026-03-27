@@ -1,51 +1,51 @@
 {
-  "lastUpdate": "2026-03-27 16:00:21",
+  "lastUpdate": "2026-03-27 16:15:19",
   "currentPrice": {
     "GOLD": {
-      "bid": 4446.67,
-      "ask": 4447.17
+      "bid": 4446.68,
+      "ask": 4447.18
     },
     "SILVER": {
-      "bid": 69.47,
-      "ask": 69.55
+      "bid": 69.373,
+      "ask": 69.453
     },
     "COPPER": {
-      "bid": 5.53039,
-      "ask": 5.53311
+      "bid": 5.53327,
+      "ask": 5.53599
     },
     "EURUSDM2026": {
-      "bid": 1.1558,
-      "ask": 1.15589
+      "bid": 1.15586,
+      "ask": 1.15595
     },
     "US500": {
-      "bid": 6501.1,
-      "ask": 6501.7
+      "bid": 6492.4,
+      "ask": 6493.0
     },
     "US30": {
-      "bid": 46092.2,
-      "ask": 46094.2
+      "bid": 46023.5,
+      "ask": 46025.5
     },
     "OIL_CRUDE": {
-      "bid": 94.164,
-      "ask": 94.244
+      "bid": 94.357,
+      "ask": 94.437
     },
     "NATURALGAS": {
-      "bid": 2.9951,
-      "ask": 3.0001
+      "bid": 2.9936,
+      "ask": 2.9986
     }
   },
   "indicators": {
     "GOLD": {
       "name": "XAUUSD",
       "type": "\u9ec3\u91d1",
-      "trend_1h": "BEAR",
+      "trend_1h": "STRONG_BULL",
       "trend_15m": "STRONG_BULL",
-      "rsi_1h": 62.9,
-      "rsi_15m": 53.4,
-      "atr_15m": 11.88,
-      "atr_1h": 32.84,
-      "bid": 4446.67,
-      "ask": 4447.17,
+      "rsi_1h": 64.9,
+      "rsi_15m": 53.3,
+      "atr_15m": 12.45,
+      "atr_1h": 31.64,
+      "bid": 4446.68,
+      "ask": 4447.18,
       "session": "ACTIVE"
     },
     "SILVER": {
@@ -53,25 +53,25 @@
       "type": "\u767d\u9280",
       "trend_1h": "STRONG_BULL",
       "trend_15m": "STRONG_BULL",
-      "rsi_1h": 62.4,
-      "rsi_15m": 55.2,
-      "atr_15m": 0.38,
-      "atr_1h": 0.99,
-      "bid": 69.47,
-      "ask": 69.55,
+      "rsi_1h": 65.3,
+      "rsi_15m": 43.7,
+      "atr_15m": 0.39,
+      "atr_1h": 0.95,
+      "bid": 69.373,
+      "ask": 69.453,
       "session": "ACTIVE"
     },
     "COPPER": {
       "name": "\u9285",
       "type": "\u91d1\u5c6c",
       "trend_1h": "STRONG_BULL",
-      "trend_15m": "STRONG_BULL",
-      "rsi_1h": 58.7,
-      "rsi_15m": 29.9,
+      "trend_15m": "STRONG_BEAR",
+      "rsi_1h": 62.5,
+      "rsi_15m": 27.4,
       "atr_15m": 0.01,
-      "atr_1h": 0.03,
-      "bid": 5.53039,
-      "ask": 5.53311,
+      "atr_1h": 0.02,
+      "bid": 5.53327,
+      "ask": 5.53599,
       "session": "ACTIVE"
     },
     "EURUSDM2026": {
@@ -80,24 +80,24 @@
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BEAR",
       "rsi_1h": 39.4,
-      "rsi_15m": 19.3,
+      "rsi_15m": 22.2,
       "atr_15m": 0.0,
       "atr_1h": 0.0,
-      "bid": 1.1558,
-      "ask": 1.15589,
+      "bid": 1.15586,
+      "ask": 1.15595,
       "session": "ACTIVE"
     },
     "US500": {
       "name": "S&P 500",
       "type": "\u6307\u6578",
       "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BULL",
-      "rsi_1h": 53.8,
-      "rsi_15m": 42.1,
-      "atr_15m": 6.62,
-      "atr_1h": 18.86,
-      "bid": 6501.1,
-      "ask": 6501.7,
+      "trend_15m": "STRONG_BEAR",
+      "rsi_1h": 47.4,
+      "rsi_15m": 33.9,
+      "atr_15m": 7.53,
+      "atr_1h": 19.26,
+      "bid": 6492.4,
+      "ask": 6493.0,
       "session": "INACTIVE"
     },
     "US30": {
@@ -105,12 +105,12 @@
       "type": "\u6307\u6578",
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BEAR",
-      "rsi_1h": 52.4,
-      "rsi_15m": 41.2,
-      "atr_15m": 42.39,
-      "atr_1h": 124.94,
-      "bid": 46092.2,
-      "ask": 46094.2,
+      "rsi_1h": 49.1,
+      "rsi_15m": 29.8,
+      "atr_15m": 48.48,
+      "atr_1h": 132.07,
+      "bid": 46023.5,
+      "ask": 46025.5,
       "session": "INACTIVE"
     },
     "OIL_CRUDE": {
@@ -118,12 +118,12 @@
       "type": "\u5546\u54c1",
       "trend_1h": "STRONG_BULL",
       "trend_15m": "STRONG_BULL",
-      "rsi_1h": 52.4,
-      "rsi_15m": 75.3,
-      "atr_15m": 0.41,
-      "atr_1h": 1.15,
-      "bid": 94.164,
-      "ask": 94.244,
+      "rsi_1h": 48.5,
+      "rsi_15m": 74.5,
+      "atr_15m": 0.42,
+      "atr_1h": 1.12,
+      "bid": 94.357,
+      "ask": 94.437,
       "session": "INACTIVE"
     },
     "NATURALGAS": {
@@ -131,19 +131,19 @@
       "type": "\u5546\u54c1",
       "trend_1h": "STRONG_BULL",
       "trend_15m": "STRONG_BULL",
-      "rsi_1h": 66.9,
-      "rsi_15m": 77.9,
+      "rsi_1h": 65.0,
+      "rsi_15m": 75.3,
       "atr_15m": 0.01,
       "atr_1h": 0.02,
-      "bid": 2.9951,
-      "ask": 3.0001,
+      "bid": 2.9936,
+      "ask": 2.9986,
       "session": "INACTIVE"
     }
   },
   "account": {
     "balance": 30922.87,
     "realizedPnl": -1.73,
-    "unrealizedPnl": 85.05,
+    "unrealizedPnl": 83.4,
     "totalTrades": 47,
     "closedTrades": 46,
     "wins": 10,
@@ -158,9 +158,9 @@
       "entryPrice": 4464.05,
       "stopLevel": 4463.05,
       "profitLevel": null,
-      "currentBid": 4446.54,
-      "currentAsk": 4447.04,
-      "pnl": 85.05,
+      "currentBid": 4446.87,
+      "currentAsk": 4447.37,
+      "pnl": 83.4,
       "instrument": "Gold",
       "epic": "GOLD"
     }
@@ -984,6 +984,7 @@
     "SKIP_US30: outside active session",
     "SKIP_\u539f\u6cb9: outside active session",
     "SKIP_\u5929\u7136\u6c23: outside active session",
+    "BLOCKED: BUY XAUUSD \u2014 opposing position exists",
     "NO_TRADE: no signal meets 70% confidence threshold"
   ]
 }
