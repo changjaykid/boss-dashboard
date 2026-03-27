@@ -1,25 +1,25 @@
 {
-  "lastUpdate": "2026-03-27 10:30:13",
+  "lastUpdate": "2026-03-27 10:45:15",
   "currentPrice": {
     "GOLD": {
-      "bid": 4430.59,
-      "ask": 4431.09
+      "bid": 4429.98,
+      "ask": 4430.48
     },
     "EURUSDM2026": {
-      "bid": 1.1579,
-      "ask": 1.15799
+      "bid": 1.1581,
+      "ask": 1.15819
     },
     "BTCUSD": {
-      "bid": 68951.3,
-      "ask": 69001.3
+      "bid": 68845.9,
+      "ask": 68895.9
     },
     "US500": {
-      "bid": 6498.1,
-      "ask": 6498.7
+      "bid": 6498.3,
+      "ask": 6498.9
     },
     "OIL_CRUDE": {
-      "bid": 92.408,
-      "ask": 92.488
+      "bid": 92.49,
+      "ask": 92.57
     }
   },
   "indicators": {
@@ -28,67 +28,67 @@
       "type": "\u9ec3\u91d1",
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BULL",
-      "rsi_1h": 51.0,
-      "rsi_15m": 58.0,
-      "atr_15m": 14.65,
+      "rsi_1h": 51.3,
+      "rsi_15m": 65.4,
+      "atr_15m": 12.92,
       "atr_1h": 40.19,
-      "bid": 4430.59,
-      "ask": 4431.09
+      "bid": 4429.98,
+      "ask": 4430.48
     },
     "EURUSDM2026": {
       "name": "EUR/USD",
       "type": "\u5916\u532f",
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BULL",
-      "rsi_1h": 51.6,
-      "rsi_15m": 51.3,
+      "rsi_1h": 52.7,
+      "rsi_15m": 55.6,
       "atr_15m": 0.0,
       "atr_1h": 0.0,
-      "bid": 1.1579,
-      "ask": 1.15799
+      "bid": 1.1581,
+      "ask": 1.15819
     },
     "BTCUSD": {
       "name": "BTC/USD",
       "type": "\u52a0\u5bc6\u8ca8\u5e63",
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BULL",
-      "rsi_1h": 40.6,
-      "rsi_15m": 56.9,
-      "atr_15m": 168.04,
-      "atr_1h": 491.26,
-      "bid": 68951.3,
-      "ask": 69001.3
+      "rsi_1h": 39.8,
+      "rsi_15m": 60.5,
+      "atr_15m": 153.27,
+      "atr_1h": 493.95,
+      "bid": 68845.9,
+      "ask": 68895.9
     },
     "US500": {
       "name": "S&P 500",
       "type": "\u6307\u6578",
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BULL",
-      "rsi_1h": 40.1,
-      "rsi_15m": 47.0,
-      "atr_15m": 7.09,
+      "rsi_1h": 40.6,
+      "rsi_15m": 50.2,
+      "atr_15m": 6.59,
       "atr_1h": 26.14,
-      "bid": 6498.1,
-      "ask": 6498.7
+      "bid": 6498.3,
+      "ask": 6498.9
     },
     "OIL_CRUDE": {
       "name": "\u539f\u6cb9",
       "type": "\u5546\u54c1",
       "trend_1h": "STRONG_BULL",
       "trend_15m": "STRONG_BEAR",
-      "rsi_1h": 39.1,
-      "rsi_15m": 43.2,
-      "atr_15m": 0.5,
-      "atr_1h": 1.34,
-      "bid": 92.408,
-      "ask": 92.488
+      "rsi_1h": 40.9,
+      "rsi_15m": 47.4,
+      "atr_15m": 0.51,
+      "atr_1h": 1.35,
+      "bid": 92.49,
+      "ask": 92.57
     }
   },
   "account": {
-    "balance": 30965.06,
+    "balance": 30961.17,
     "realizedPnl": -13.39,
-    "unrealizedPnl": 126.0,
-    "totalTrades": 30,
+    "unrealizedPnl": -266.44,
+    "totalTrades": 31,
     "closedTrades": 28,
     "wins": 7,
     "losses": 21,
@@ -102,9 +102,9 @@
       "entryPrice": 68897.9,
       "stopLevel": 68402.5,
       "profitLevel": 69897.9,
-      "currentBid": 68951.15,
-      "currentAsk": 69001.15,
-      "pnl": 213.0,
+      "currentBid": 68852.3,
+      "currentAsk": 68902.3,
+      "pnl": -182.4,
       "instrument": "Bitcoin/USD",
       "epic": "BTCUSD"
     },
@@ -115,9 +115,9 @@
       "entryPrice": 4419.27,
       "stopLevel": 4447.97,
       "profitLevel": 4275.67,
-      "currentBid": 4430.24,
-      "currentAsk": 4430.74,
-      "pnl": -45.88,
+      "currentBid": 4429.87,
+      "currentAsk": 4430.37,
+      "pnl": -44.4,
       "instrument": "Gold",
       "epic": "GOLD"
     },
@@ -128,9 +128,9 @@
       "entryPrice": 4420.46,
       "stopLevel": 4449.36,
       "profitLevel": 4276.06,
-      "currentBid": 4430.24,
-      "currentAsk": 4430.74,
-      "pnl": -41.12,
+      "currentBid": 4429.87,
+      "currentAsk": 4430.37,
+      "pnl": -39.64,
       "instrument": "Gold",
       "epic": "GOLD"
     }
@@ -697,6 +697,6 @@
     "OIL_CRUDE"
   ],
   "actions": [
-    "NO_TRADE: no qualified signal"
+    "OPENED: SELL XAUUSD via 1H_EMA\u56de\u5f48 conf=55% size=0.04"
   ]
 }
