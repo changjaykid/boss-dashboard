@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026/3/27 下午10:58:08",
+  "lastUpdate": "2026/3/27 下午11:00:00",
   "exchange": "MAX (MaiCoin)",
   "status": "connected",
   "account": {
@@ -24,32 +24,32 @@
     {
       "market": "btctwd",
       "name": "BTC/TWD",
-      "last": "2124489.7",
-      "open": "2218949.7",
+      "last": "2125176.9",
+      "open": "2221012.6",
       "high": "2222221.2",
       "low": "2110666",
-      "vol": "38.031",
-      "change": "-4.26"
+      "vol": "38.2412",
+      "change": "-4.31"
     },
     {
       "market": "ethtwd",
       "name": "ETH/TWD",
       "last": "63857.1",
-      "open": "66135.5",
+      "open": "66428.5",
       "high": "66517.9",
       "low": "63333",
-      "vol": "736.5425",
-      "change": "-3.45"
+      "vol": "736.7256",
+      "change": "-3.87"
     },
     {
       "market": "soltwd",
       "name": "SOL/TWD",
-      "last": "2667.7",
+      "last": "2673.7",
       "open": "2798.8",
       "high": "2806",
       "low": "2651.5",
-      "vol": "2321.146",
-      "change": "-4.68"
+      "vol": "2325.911",
+      "change": "-4.47"
     },
     {
       "market": "dogetwd",
@@ -74,22 +74,22 @@
     {
       "market": "btcusdt",
       "name": "BTC/USDT",
-      "last": "66187.05",
-      "open": "69492.23",
-      "high": "69544.74",
+      "last": "66244.25",
+      "open": "69544.74",
+      "high": "69462.45",
       "low": "65750",
-      "vol": "18.362",
-      "change": "-4.76"
+      "vol": "18.3554",
+      "change": "-4.75"
     },
     {
       "market": "ethusdt",
       "name": "ETH/USDT",
-      "last": "1990",
-      "open": "2068.04",
+      "last": "1991.11",
+      "open": "2077.5",
       "high": "2079.19",
       "low": "1969.09",
-      "vol": "544.9383",
-      "change": "-3.77"
+      "vol": "544.9778",
+      "change": "-4.16"
     },
     {
       "market": "solusdt",
@@ -98,7 +98,7 @@
       "open": "87.26",
       "high": "87.63",
       "low": "82.66",
-      "vol": "1028.073",
+      "vol": "1028.217",
       "change": "-4.66"
     }
   ],
@@ -109,5 +109,26 @@
       "value": "13",
       "label": "Extreme Fear"
     }
+  },
+  "simulation": {
+    "enabled": true,
+    "status": "RUNNING",
+    "initialCapital": 30000,
+    "currentCapital": 30000,
+    "available": 30000,
+    "realizedPnl": 0,
+    "returnPct": 0,
+    "totalTrades": 0,
+    "wins": 0,
+    "losses": 0,
+    "winRate": "--",
+    "maxDrawdown": 0,
+    "positions": [],
+    "closedTrades": [],
+    "strategyStats": {},
+    "consecutiveLosses": 0,
+    "pausedUntil": null,
+    "hoursRemaining": "47.9",
+    "lastUpdate": "2026/3/27 下午11:06:41"
   }
 }

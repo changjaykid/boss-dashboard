@@ -654,14 +654,76 @@
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
                     <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">⚙️ 風控參數</h3>
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">每筆風險</p><p class="text-xs font-bold text-gray-300">待設定</p></div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">槓桿上限</p><p class="text-xs font-bold text-gray-300">待設定</p></div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">最大持倉</p><p class="text-xs font-bold text-gray-300">待設定</p></div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">交易所</p><p class="text-xs font-bold text-gray-300">待設定</p></div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">策略數</p><p class="text-xs font-bold text-gray-300">待設定</p></div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">信心門檻</p><p class="text-xs font-bold text-gray-300">待設定</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">每筆風險</p><p class="text-xs font-bold text-yellow-400">2%</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">最大曝險</p><p class="text-xs font-bold text-yellow-400">30%</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">最大持倉</p><p class="text-xs font-bold text-yellow-400">3 筆</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">止損</p><p class="text-xs font-bold text-red-400">-1.5%</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">最低止盈</p><p class="text-xs font-bold text-green-400">+3%</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">信心門檻</p><p class="text-xs font-bold text-yellow-400">65%</p></div>
                     </div>
                 </section>
+
+                <!-- ========== 模擬交易區 ========== -->
+                <div class="border-t border-dashed border-yellow-600/50 pt-4 mt-4">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-lg">🎯</span>
+                        <h2 class="text-sm md:text-lg font-bold text-yellow-400">模擬交易 — 背水一戰模式</h2>
+                        <span class="px-2 py-0.5 text-[10px] rounded-full bg-yellow-900/50 text-yellow-300 border border-yellow-700/50" id="sim-status">載入中</span>
+                    </div>
+                    <p class="text-[10px] text-gray-500 mb-3">初始資金 NT$30,000 · 48小時利潤最大化 · 滾動複利 · 嚴格風控</p>
+
+                    <!-- 模擬帳戶概覽 -->
+                    <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-3 mb-3">
+                        <div class="stat-card border border-yellow-700/30 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500">現有資本</p>
+                            <p class="text-lg font-bold text-white" id="sim-capital">--</p>
+                        </div>
+                        <div class="stat-card border border-yellow-700/30 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500">已實現盈虧</p>
+                            <p class="text-lg font-bold text-gray-300" id="sim-pnl">--</p>
+                        </div>
+                        <div class="stat-card border border-yellow-700/30 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500">報酬率</p>
+                            <p class="text-lg font-bold text-gray-300" id="sim-return">--</p>
+                        </div>
+                        <div class="stat-card border border-yellow-700/30 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500">剩餘時間</p>
+                            <p class="text-lg font-bold text-orange-400" id="sim-remaining">--</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2 md:grid-cols-6 md:gap-3 mb-4">
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">總交易</p><p class="text-xs font-bold text-white" id="sim-total">0</p></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">勝</p><p class="text-xs font-bold text-green-400" id="sim-wins">0</p></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">敗</p><p class="text-xs font-bold text-red-400" id="sim-losses">0</p></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">勝率</p><p class="text-xs font-bold text-yellow-400" id="sim-winrate">--</p></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">最大回撤</p><p class="text-xs font-bold text-red-400" id="sim-drawdown">--</p></div>
+                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">可用資金</p><p class="text-xs font-bold text-gray-300" id="sim-available">--</p></div>
+                    </div>
+
+                    <!-- 模擬持倉 -->
+                    <section class="bg-gray-800/50 border border-yellow-700/30 p-3 md:p-5 rounded-xl mb-3">
+                        <h3 class="text-sm font-medium text-yellow-300 mb-2">📍 模擬持倉</h3>
+                        <div id="sim-positions" class="space-y-2">
+                            <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
+                        </div>
+                    </section>
+
+                    <!-- 模擬已完成交易 -->
+                    <section class="bg-gray-800/50 border border-yellow-700/30 p-3 md:p-5 rounded-xl mb-3">
+                        <h3 class="text-sm font-medium text-gray-300 mb-2">📋 模擬已完成交易（最近15筆）</h3>
+                        <div id="sim-closed" class="space-y-2">
+                            <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
+                        </div>
+                    </section>
+
+                    <!-- 模擬策略績效 -->
+                    <section class="bg-gray-800/50 border border-yellow-700/30 p-3 md:p-5 rounded-xl">
+                        <h3 class="text-sm font-medium text-purple-300 mb-2">🧠 策略績效比較</h3>
+                        <div id="sim-strategies" class="space-y-2">
+                            <p class="text-xs text-gray-400 text-center py-3">累積交易數據後自動產生</p>
+                        </div>
+                    </section>
+                </div>
             </div>
 
             <!-- Placeholder -->
@@ -882,8 +944,43 @@ const fv=parseInt(fg.value);
 fge.className='text-xs font-bold '+(fv<=25?'text-red-400':fv<=50?'text-orange-400':fv<=75?'text-yellow-400':'text-green-400');
 }
 
-// 風控區塊更新
-const riskSection=document.querySelector('#view-crypto-auto .text-sm.text-gray-300.mb-3');
+// ========== 模擬交易區 ==========
+const sim=d.simulation;
+if(sim){
+document.getElementById('sim-status').textContent=sim.status==='RUNNING'?'🟢 運行中':'⏹️ 已結束';
+document.getElementById('sim-status').className='px-2 py-0.5 text-[10px] rounded-full border '+(sim.status==='RUNNING'?'bg-green-900/50 text-green-300 border-green-700/50':'bg-gray-700 text-gray-400 border-gray-600');
+document.getElementById('sim-capital').textContent='NT$'+sim.currentCapital.toLocaleString();
+const pnlE=document.getElementById('sim-pnl');pnlE.textContent=(sim.realizedPnl>=0?'+':'')+'NT$'+sim.realizedPnl.toLocaleString();
+pnlE.className='text-lg font-bold '+(sim.realizedPnl>=0?'text-green-400':'text-red-400');
+const retE=document.getElementById('sim-return');retE.textContent=(sim.returnPct>=0?'+':'')+sim.returnPct+'%';
+retE.className='text-lg font-bold '+(sim.returnPct>=0?'text-green-400':'text-red-400');
+document.getElementById('sim-remaining').textContent=sim.hoursRemaining+'h';
+document.getElementById('sim-total').textContent=sim.totalTrades;
+document.getElementById('sim-wins').textContent=sim.wins;
+document.getElementById('sim-losses').textContent=sim.losses;
+document.getElementById('sim-winrate').textContent=sim.winRate;
+document.getElementById('sim-drawdown').textContent=sim.maxDrawdown+'%';
+document.getElementById('sim-available').textContent='NT$'+sim.available.toLocaleString();
+
+// 持倉
+const sp=document.getElementById('sim-positions');const spos=sim.positions||[];
+if(!spos.length){sp.innerHTML='<p class="text-xs text-gray-400 text-center py-3">🔍 無持倉，掃描中...</p>'}
+else{sp.innerHTML=spos.map(p=>{const pc=p.pnlTWD>=0?'text-green-400':'text-red-400';const dc=p.direction==='BUY'?'badge-buy':'badge-sell';
+const tm=p.openTime?new Date(p.openTime).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}):'';
+return`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-2"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${dc}">${p.direction}</span><span class="text-xs font-bold text-white">${p.market.toUpperCase()} @ ${p.entryPrice.toLocaleString()}</span></div><span class="text-sm font-bold ${pc}">${p.pnlTWD>=0?'+':''}NT$${(p.pnlTWD||0).toFixed(0)} (${(p.pnlPct||0).toFixed(2)}%)</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>倉位:NT$${p.sizeTWD}</span><span>信心:${(p.confidence*100).toFixed(0)}%</span><span>現價:${(p.currentPrice||0).toLocaleString()}</span><span>${tm}</span></div><p class="text-[9px] text-indigo-400 mt-1">${p.strategy}</p></div>`}).join('')}
+
+// 已完成
+const sc=document.getElementById('sim-closed');const sts=sim.closedTrades||[];
+if(!sts.length){sc.innerHTML='<p class="text-xs text-gray-400 text-center py-3">📭 尚無已完成交易</p>'}
+else{sc.innerHTML=sts.slice().reverse().map(t=>{const dc=t.direction==='BUY'?'badge-buy':'badge-sell';const oc=t.outcome==='WIN'?'badge-win':'badge-loss';const pc=t.pnlTWD>=0?'text-green-400':'text-red-400';
+const tm=t.closeTime?new Date(t.closeTime).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}):'';
+return`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${dc}">${t.direction}</span><span class="px-1.5 py-0.5 text-[10px] rounded-full ${oc}">${t.outcome}</span><span class="text-[10px] text-white">${t.market.toUpperCase()}</span></div><span class="text-xs font-bold ${pc}">${t.pnlTWD>=0?'+':''}NT$${t.pnlTWD}</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>${t.entryPrice}→${t.exitPrice}</span><span>${t.reason}</span><span>${t.pnlPct}%</span><span>${tm}</span></div><p class="text-[9px] text-indigo-400 mt-0.5">${t.strategy}</p></div>`}).join('')}
+
+// 策略績效
+const ss=document.getElementById('sim-strategies');const sst=sim.strategyStats||{};const ssk=Object.keys(sst);
+if(ssk.length){ss.innerHTML='<div class="grid grid-cols-1 md:grid-cols-2 gap-2">'+ssk.map(k=>{const s=sst[k];const tt=s.wins+s.losses;const wr=tt>0?((s.wins/tt)*100).toFixed(1):'0';const pc=s.pnl>=0?'text-green-400':'text-red-400';
+return`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><span class="text-[10px] font-bold text-white truncate max-w-[60%]">${k}</span><span class="text-xs ${pc}">NT$${s.pnl.toFixed(0)}</span></div><div class="flex gap-3 text-[10px] text-gray-400"><span>勝:${s.wins}</span><span>敗:${s.losses}</span><span>${wr}%</span></div></div>`}).join('')+'</div>'}
+}
 
 }catch(e){console.log('crypto err',e)}
 }
