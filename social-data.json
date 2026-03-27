@@ -1,17 +1,4 @@
 {
-  "lastUpdate": "2026-03-27 02:51:50",
-  "threads": {
-    "username": "freeeadman",
-    "url": "https://www.threads.com/@freeeadman",
-    "apiConfigured": true,
-    "totalPublished": 0,
-    "pendingDrafts": 1,
-    "pillarDistribution": {}
-  },
-  "instagram": {
-    "status": "準備中",
-    "note": "需要做圖能力，之後再調整"
-  },
   "drafts": [
     {
       "id": "2026-03-27-001",
@@ -24,37 +11,38 @@
       "status": "pending"
     }
   ],
-  "recentPublished": [],
+  "published": [],
+  "approvalQueue": [],
+  "apiStatus": "connected",
+  "account": {
+    "username": "freeeadman",
+    "url": "https://www.threads.com/@freeeadman"
+  },
   "pillars": [
     {
-      "id": "market_insight",
       "name": "市場觀察",
-      "description": "行銷趨勢、平台演算法變化、消費者行為洞察"
+      "description": "趨勢解讀、產業動態"
     },
     {
-      "id": "practical_tip",
       "name": "實戰技巧",
-      "description": "可立即執行的行銷/廣告/社群操作技巧"
+      "description": "行銷操作、廣告投放心得"
     },
     {
-      "id": "case_study",
       "name": "案例拆解",
-      "description": "拆解成功/失敗的品牌行銷案例"
+      "description": "成功/失敗案例分析"
     },
     {
-      "id": "opinion",
       "name": "觀點輸出",
-      "description": "對行銷產業的獨立觀點，引發討論"
+      "description": "犀利觀點、逆向思考"
     },
     {
-      "id": "behind_scenes",
       "name": "幕後分享",
-      "description": "工作日常、接案心得、客戶互動（不洩密）"
+      "description": "工作日常、真實經歷"
     },
     {
-      "id": "value_bomb",
       "name": "乾貨炸彈",
-      "description": "高資訊密度的教學型內容"
+      "description": "純乾貨、教學級內容"
     }
-  ]
+  ],
+  "lastUpdate": "2026/3/27 下午11:44:14"
 }
