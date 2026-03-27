@@ -1,25 +1,25 @@
 {
-  "lastUpdate": "2026-03-27 11:45:13",
+  "lastUpdate": "2026-03-27 12:00:15",
   "currentPrice": {
     "GOLD": {
-      "bid": 4434.89,
-      "ask": 4435.39
+      "bid": 4437.44,
+      "ask": 4437.94
     },
     "EURUSDM2026": {
-      "bid": 1.15785,
-      "ask": 1.15794
+      "bid": 1.15796,
+      "ask": 1.15805
     },
     "BTCUSD": {
-      "bid": 68795.25,
-      "ask": 68845.25
+      "bid": 68710.25,
+      "ask": 68760.25
     },
     "US500": {
-      "bid": 6503.2,
-      "ask": 6503.8
+      "bid": 6506.1,
+      "ask": 6506.7
     },
     "OIL_CRUDE": {
-      "bid": 92.826,
-      "ask": 92.906
+      "bid": 92.747,
+      "ask": 92.779
     }
   },
   "indicators": {
@@ -28,66 +28,66 @@
       "type": "\u9ec3\u91d1",
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BULL",
-      "rsi_1h": 52.4,
-      "rsi_15m": 65.9,
-      "atr_15m": 14.47,
-      "atr_1h": 39.82,
-      "bid": 4434.89,
-      "ask": 4435.39
+      "rsi_1h": 51.3,
+      "rsi_15m": 75.4,
+      "atr_15m": 13.3,
+      "atr_1h": 39.95,
+      "bid": 4437.44,
+      "ask": 4437.94
     },
     "EURUSDM2026": {
       "name": "EUR/USD",
       "type": "\u5916\u532f",
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BULL",
-      "rsi_1h": 48.1,
-      "rsi_15m": 59.8,
+      "rsi_1h": 47.9,
+      "rsi_15m": 73.1,
       "atr_15m": 0.0,
       "atr_1h": 0.0,
-      "bid": 1.15785,
-      "ask": 1.15794
+      "bid": 1.15796,
+      "ask": 1.15805
     },
     "BTCUSD": {
       "name": "BTC/USD",
       "type": "\u52a0\u5bc6\u8ca8\u5e63",
       "trend_1h": "STRONG_BEAR",
-      "trend_15m": "BEAR",
-      "rsi_1h": 33.4,
-      "rsi_15m": 58.5,
-      "atr_15m": 143.33,
+      "trend_15m": "STRONG_BEAR",
+      "rsi_1h": 32.1,
+      "rsi_15m": 52.3,
+      "atr_15m": 150.46,
       "atr_1h": 469.51,
-      "bid": 68795.25,
-      "ask": 68845.25
+      "bid": 68710.25,
+      "ask": 68760.25
     },
     "US500": {
       "name": "S&P 500",
       "type": "\u6307\u6578",
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BULL",
-      "rsi_1h": 31.3,
-      "rsi_15m": 52.8,
-      "atr_15m": 6.41,
-      "atr_1h": 24.14,
-      "bid": 6503.2,
-      "ask": 6503.8
+      "rsi_1h": 32.0,
+      "rsi_15m": 62.2,
+      "atr_15m": 6.22,
+      "atr_1h": 24.21,
+      "bid": 6506.1,
+      "ask": 6506.7
     },
     "OIL_CRUDE": {
       "name": "\u539f\u6cb9",
       "type": "\u5546\u54c1",
       "trend_1h": "STRONG_BULL",
-      "trend_15m": "STRONG_BEAR",
-      "rsi_1h": 43.8,
-      "rsi_15m": 59.8,
-      "atr_15m": 0.51,
+      "trend_15m": "BULL",
+      "rsi_1h": 43.7,
+      "rsi_15m": 48.0,
+      "atr_15m": 0.47,
       "atr_1h": 1.33,
-      "bid": 92.826,
-      "ask": 92.906
+      "bid": 92.747,
+      "ask": 92.779
     }
   },
   "account": {
-    "balance": 30947.57,
+    "balance": 30948.37,
     "realizedPnl": -14.71,
-    "unrealizedPnl": -963.69,
+    "unrealizedPnl": -880.05,
     "totalTrades": 33,
     "closedTrades": 29,
     "wins": 7,
@@ -102,9 +102,9 @@
       "entryPrice": 68897.9,
       "stopLevel": 68402.5,
       "profitLevel": 69897.9,
-      "currentBid": 68796.8,
-      "currentAsk": 68846.8,
-      "pnl": -404.4,
+      "currentBid": 68696.0,
+      "currentAsk": 68746.0,
+      "pnl": -807.6,
       "instrument": "Bitcoin/USD",
       "epic": "BTCUSD"
     },
@@ -115,9 +115,9 @@
       "entryPrice": 4419.27,
       "stopLevel": 4447.97,
       "profitLevel": 4275.67,
-      "currentBid": 4435.96,
-      "currentAsk": 4436.46,
-      "pnl": -68.76,
+      "currentBid": 4437.39,
+      "currentAsk": 4437.89,
+      "pnl": -74.48,
       "instrument": "Gold",
       "epic": "GOLD"
     },
@@ -128,9 +128,9 @@
       "entryPrice": 4430.64,
       "stopLevel": 4458.74,
       "profitLevel": 4289.94,
-      "currentBid": 4435.96,
-      "currentAsk": 4436.46,
-      "pnl": -23.28,
+      "currentBid": 4437.39,
+      "currentAsk": 4437.89,
+      "pnl": -29.0,
       "instrument": "Gold",
       "epic": "GOLD"
     },
@@ -141,9 +141,9 @@
       "entryPrice": 4420.46,
       "stopLevel": 4449.36,
       "profitLevel": 4276.06,
-      "currentBid": 4435.96,
-      "currentAsk": 4436.46,
-      "pnl": -64.0,
+      "currentBid": 4437.39,
+      "currentAsk": 4437.89,
+      "pnl": -69.72,
       "instrument": "Gold",
       "epic": "GOLD"
     },
@@ -154,9 +154,9 @@
       "entryPrice": 68766.15,
       "stopLevel": 68901.55,
       "profitLevel": 68224.75,
-      "currentBid": 68796.8,
-      "currentAsk": 68846.8,
-      "pnl": -403.25,
+      "currentBid": 68696.0,
+      "currentAsk": 68746.0,
+      "pnl": 100.75,
       "instrument": "Bitcoin/USD",
       "epic": "BTCUSD"
     }
