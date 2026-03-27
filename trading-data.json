@@ -1,37 +1,37 @@
 {
-  "lastUpdate": "2026-03-27 23:00:21",
+  "lastUpdate": "2026-03-27 23:15:22",
   "currentPrice": {
     "GOLD": {
-      "bid": 4512.17,
-      "ask": 4512.67
+      "bid": 4527.33,
+      "ask": 4527.83
     },
     "SILVER": {
-      "bid": 70.432,
-      "ask": 70.512
+      "bid": 71.162,
+      "ask": 71.242
     },
     "COPPER": {
-      "bid": 5.53614,
-      "ask": 5.53886
+      "bid": 5.53665,
+      "ask": 5.53937
     },
     "EURUSDM2026": {
-      "bid": 1.15706,
-      "ask": 1.15712
+      "bid": 1.15717,
+      "ask": 1.15723
     },
     "US500": {
-      "bid": 6429.0,
-      "ask": 6429.4
+      "bid": 6422.4,
+      "ask": 6422.8
     },
     "US30": {
-      "bid": 45615.1,
-      "ask": 45617.1
+      "bid": 45589.1,
+      "ask": 45591.1
     },
     "OIL_CRUDE": {
-      "bid": 97.043,
-      "ask": 97.123
+      "bid": 96.885,
+      "ask": 96.917
     },
     "NATURALGAS": {
-      "bid": 3.0356,
-      "ask": 3.0406
+      "bid": 3.0306,
+      "ask": 3.0356
     }
   },
   "indicators": {
@@ -40,12 +40,12 @@
       "type": "\u9ec3\u91d1",
       "trend_1h": "STRONG_BULL",
       "trend_15m": "STRONG_BULL",
-      "rsi_1h": 77.2,
-      "rsi_15m": 90.8,
-      "atr_15m": 18.93,
-      "atr_1h": 30.1,
-      "bid": 4512.17,
-      "ask": 4512.67,
+      "rsi_1h": 74.8,
+      "rsi_15m": 85.4,
+      "atr_15m": 20.92,
+      "atr_1h": 29.27,
+      "bid": 4527.33,
+      "ask": 4527.83,
       "session": "ACTIVE"
     },
     "SILVER": {
@@ -53,25 +53,25 @@
       "type": "\u767d\u9280",
       "trend_1h": "STRONG_BULL",
       "trend_15m": "STRONG_BULL",
-      "rsi_1h": 69.8,
-      "rsi_15m": 75.1,
-      "atr_15m": 0.61,
-      "atr_1h": 0.92,
-      "bid": 70.432,
-      "ask": 70.512,
+      "rsi_1h": 68.4,
+      "rsi_15m": 81.5,
+      "atr_15m": 0.67,
+      "atr_1h": 0.91,
+      "bid": 71.162,
+      "ask": 71.242,
       "session": "ACTIVE"
     },
     "COPPER": {
       "name": "\u9285",
       "type": "\u91d1\u5c6c",
-      "trend_1h": "STRONG_BEAR",
+      "trend_1h": "BULL",
       "trend_15m": "STRONG_BULL",
-      "rsi_1h": 60.4,
-      "rsi_15m": 70.9,
-      "atr_15m": 0.01,
+      "rsi_1h": 53.2,
+      "rsi_15m": 72.0,
+      "atr_15m": 0.02,
       "atr_1h": 0.02,
-      "bid": 5.53614,
-      "ask": 5.53886,
+      "bid": 5.53665,
+      "ask": 5.53937,
       "session": "ACTIVE"
     },
     "EURUSDM2026": {
@@ -79,12 +79,12 @@
       "type": "\u5916\u532f",
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BULL",
-      "rsi_1h": 48.6,
-      "rsi_15m": 65.8,
+      "rsi_1h": 42.5,
+      "rsi_15m": 73.5,
       "atr_15m": 0.0,
       "atr_1h": 0.0,
-      "bid": 1.15706,
-      "ask": 1.15712,
+      "bid": 1.15717,
+      "ask": 1.15723,
       "session": "ACTIVE"
     },
     "US500": {
@@ -92,12 +92,12 @@
       "type": "\u6307\u6578",
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BEAR",
-      "rsi_1h": 28.8,
-      "rsi_15m": 37.0,
-      "atr_15m": 14.93,
-      "atr_1h": 19.4,
-      "bid": 6429.0,
-      "ask": 6429.4,
+      "rsi_1h": 22.6,
+      "rsi_15m": 32.6,
+      "atr_15m": 15.19,
+      "atr_1h": 19.52,
+      "bid": 6422.4,
+      "ask": 6422.8,
       "session": "ACTIVE"
     },
     "US30": {
@@ -105,12 +105,12 @@
       "type": "\u6307\u6578",
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BEAR",
-      "rsi_1h": 24.2,
-      "rsi_15m": 33.1,
-      "atr_15m": 102.76,
-      "atr_1h": 124.23,
-      "bid": 45615.1,
-      "ask": 45617.1,
+      "rsi_1h": 23.9,
+      "rsi_15m": 32.0,
+      "atr_15m": 109.58,
+      "atr_1h": 132.49,
+      "bid": 45589.1,
+      "ask": 45591.1,
       "session": "ACTIVE"
     },
     "OIL_CRUDE": {
@@ -118,12 +118,12 @@
       "type": "\u5546\u54c1",
       "trend_1h": "STRONG_BULL",
       "trend_15m": "STRONG_BULL",
-      "rsi_1h": 77.8,
-      "rsi_15m": 67.3,
-      "atr_15m": 0.57,
-      "atr_1h": 1.01,
-      "bid": 97.043,
-      "ask": 97.123,
+      "rsi_1h": 88.6,
+      "rsi_15m": 64.0,
+      "atr_15m": 0.58,
+      "atr_1h": 0.96,
+      "bid": 96.885,
+      "ask": 96.917,
       "session": "ACTIVE"
     },
     "NATURALGAS": {
@@ -131,39 +131,26 @@
       "type": "\u5546\u54c1",
       "trend_1h": "STRONG_BULL",
       "trend_15m": "STRONG_BEAR",
-      "rsi_1h": 73.0,
-      "rsi_15m": 44.3,
+      "rsi_1h": 70.2,
+      "rsi_15m": 43.8,
       "atr_15m": 0.02,
       "atr_1h": 0.03,
-      "bid": 3.0356,
-      "ask": 3.0406,
+      "bid": 3.0306,
+      "ask": 3.0356,
       "session": "ACTIVE"
     }
   },
   "account": {
-    "balance": 30890.07,
-    "realizedPnl": -3.81,
-    "unrealizedPnl": -2777.73,
-    "totalTrades": 53,
-    "closedTrades": 51,
+    "balance": 30882.04,
+    "realizedPnl": -40.6,
+    "unrealizedPnl": -2.8,
+    "totalTrades": 55,
+    "closedTrades": 52,
     "wins": 14,
-    "losses": 37,
-    "winRate": "27.5%"
+    "losses": 38,
+    "winRate": "26.9%"
   },
   "openPositions": [
-    {
-      "dealId": "00000000-4bda-f738-0460-7d740055311e",
-      "direction": "SELL",
-      "size": 0.28,
-      "entryPrice": 45519.0,
-      "stopLevel": 45650.4,
-      "profitLevel": 45124.7,
-      "currentBid": 45615.1,
-      "currentAsk": 45617.1,
-      "pnl": -2746.8,
-      "instrument": "US Wall Street 30",
-      "epic": "US30"
-    },
     {
       "dealId": "00000000-4bda-ee1e-0460-7d740055311e",
       "direction": "SELL",
@@ -171,51 +158,14 @@
       "entryPrice": 6422.1,
       "stopLevel": 6440.6,
       "profitLevel": 6366.5,
-      "currentBid": 6428.3,
-      "currentAsk": 6428.7,
-      "pnl": -184.8,
+      "currentBid": 6421.8,
+      "currentAsk": 6422.2,
+      "pnl": -2.8,
       "instrument": "US 500",
       "epic": "US500"
-    },
-    {
-      "dealId": "00000000-4bda-ee10-0460-7d740055311e",
-      "direction": "BUY",
-      "size": 0.03,
-      "entryPrice": 4458.71,
-      "stopLevel": 4432.31,
-      "profitLevel": 4538.01,
-      "currentBid": 4510.0,
-      "currentAsk": 4510.5,
-      "pnl": 153.87,
-      "instrument": "Gold",
-      "epic": "GOLD"
     }
   ],
   "closedTrades": [
-    {
-      "time": "2026-03-26T22:45:16.519290+00:00",
-      "instrument": "GOLD",
-      "instrumentName": "XAUUSD",
-      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
-      "direction": "SELL",
-      "confidence": 0.6,
-      "size": 0.05,
-      "entry_bid": 4405.96,
-      "entry_ask": 4406.46,
-      "stop_distance": 19.8,
-      "tp_distance": 79.1,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 55.6,
-      "rsi_1h": 42.3,
-      "result": {
-        "dealReference": "o_4c38fac1-9ba2-4c43-8805-0159b1344c25"
-      },
-      "outcome": "LOSS",
-      "pnl": -0.2,
-      "close_time": "2026-03-27T01:30:13.983035+00:00",
-      "close_reason": "AUTO_DETECTED"
-    },
     {
       "time": "2026-03-26T23:45:15.383381+00:00",
       "instrument": "US500",
@@ -915,6 +865,31 @@
       "pnl": 1.54,
       "close_time": "2026-03-27T15:00:21.064158+00:00",
       "close_reason": "PROFIT_TAKE"
+    },
+    {
+      "time": "2026-03-27T14:30:18.392431+00:00",
+      "instrument": "US30",
+      "instrumentName": "US30",
+      "strategy": "\u8da8\u52e2\u5c0d\u9f4a",
+      "direction": "SELL",
+      "confidence": 0.74,
+      "size": 0.28,
+      "entry_bid": 45517.1,
+      "entry_ask": 45519.1,
+      "stop_distance": 131.4,
+      "tp_distance": 394.3,
+      "trend_1h": "STRONG_BEAR",
+      "trend_15m": "STRONG_BEAR",
+      "rsi_15m": 27.2,
+      "rsi_1h": 27.2,
+      "confirmation_score": "",
+      "result": {
+        "dealReference": "o_4ba6c72a-df82-45a6-8e57-8a6de96b08be"
+      },
+      "outcome": "LOSS",
+      "pnl": -36.79,
+      "close_time": "2026-03-27T15:15:20.014285+00:00",
+      "close_reason": "ESTIMATED"
     }
   ],
   "strategyStats": {
@@ -970,23 +945,22 @@
     },
     "\u8da8\u52e2\u5c0d\u9f4a": {
       "wins": 3,
-      "losses": 1,
-      "pnl": -3.55
+      "losses": 2,
+      "pnl": -40.339999999999996
     }
   },
   "review": {
-    "summary": "\u5df2\u5b8c\u6210 51 \u7b46\u4ea4\u6613\uff0c\u52dd\u7387 27.5%\uff0c\u7d2f\u8a08\u76c8\u8667 $-3.81",
+    "summary": "\u5df2\u5b8c\u6210 52 \u7b46\u4ea4\u6613\uff0c\u52dd\u7387 26.9%\uff0c\u7d2f\u8a08\u76c8\u8667 $-40.60",
     "lessons": [
       "\u7b56\u7565\u300c1H_RSI_EXTREME\u300d\u52dd\u7387\u504f\u4f4e (0%)\uff0c\u8003\u616e\u63d0\u9ad8\u9580\u6abb\u6216\u505c\u7528",
       "\u7b56\u7565\u300c15M_\u8da8\u52e2\u8ddf\u96a8\u300d\u52dd\u7387\u504f\u4f4e (12%)\uff0c\u8003\u616e\u63d0\u9ad8\u9580\u6abb\u6216\u505c\u7528",
       "\u7b56\u7565\u300c1H_EMA\u56de\u5f48\u300d\u52dd\u7387\u504f\u4f4e (25%)\uff0c\u8003\u616e\u63d0\u9ad8\u9580\u6abb\u6216\u505c\u7528",
-      "\u7b56\u7565\u300c\u8da8\u52e2\u5c0d\u9f4a\u300d\u8868\u73fe\u512a\u79c0 (75%)\uff0c\u53ef\u52a0\u5927\u6bd4\u91cd",
       "\u6574\u9ad4\u52dd\u7387\u504f\u4f4e\uff0c\u5efa\u8b70\u63d0\u9ad8\u4fe1\u5fc3\u5ea6\u9580\u6abb",
-      "\u5e73\u5747\u7372\u5229/\u8667\u640d\u6bd4 = 2.51\uff08\u826f\u597d\uff09",
+      "\u5e73\u5747\u7372\u5229/\u8667\u640d\u6bd4 = 1.72\uff08\u826f\u597d\uff09",
       "XAUUSD \u52dd\u7387 38%\uff0c\u76c8\u8667 $4.21",
       "BTCUSD \u52dd\u7387 6%\uff0c\u76c8\u8667 $-14.65",
       "S&P 500 \u52dd\u7387 38%\uff0c\u76c8\u8667 $16.56",
-      "US30 \u52dd\u7387 50%\uff0c\u76c8\u8667 $-9.93"
+      "US30 \u52dd\u7387 33%\uff0c\u76c8\u8667 $-46.72"
     ],
     "optimization": [
       "\u63d0\u9ad8\u4fe1\u5fc3\u5ea6\u9580\u6abb\uff1a\u6e1b\u5c11\u4f4e\u54c1\u8cea\u9032\u5834",
@@ -1000,10 +974,10 @@
       "losses": 2
     },
     "worstStrategy": {
-      "name": "1H_RSI\u6975\u7aef",
-      "pnl": -4.95,
-      "wins": 0,
-      "losses": 1
+      "name": "\u8da8\u52e2\u5c0d\u9f4a",
+      "pnl": -40.34,
+      "wins": 3,
+      "losses": 2
     }
   },
   "instruments": [
@@ -1017,7 +991,8 @@
     "NATURALGAS"
   ],
   "actions": [
-    "PROFIT_CLOSE: BUY Gold +51.3pts",
-    "MAX_POS: 3/3"
+    "BLOCKED: SELL S&P 500 \u2014 already have position",
+    "OPENED: SELL US30 via \u8da8\u52e2\u5c0d\u9f4a conf=77% size=0.42",
+    "OPENED: BUY XAUUSD via \u8da8\u52e2\u5c0d\u9f4a conf=74% size=0.03"
   ]
 }
