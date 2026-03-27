@@ -483,24 +483,42 @@
                         <h3 class="text-sm md:text-xl font-medium text-green-300">✅ 已啟用 (17)</h3>
                         <span class="px-2 py-0.5 bg-green-900/30 border border-green-700/50 text-green-300 text-[10px] rounded-full">17/58</span>
                     </div>
-                    <div class="grid grid-cols-1 xs:grid-cols-2 gap-2" id="skills-enabled">
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>🐙</span><div><p class="text-xs text-white">github</p></div></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>📦</span><div><p class="text-xs text-white">gh-issues</p></div></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>📦</span><div><p class="text-xs text-white">gog</p></div></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>🔒</span><div><p class="text-xs text-white">healthcheck</p></div></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>📱</span><div><p class="text-xs text-white">node-connect</p></div></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>🎤</span><div><p class="text-xs text-white">whisper-api</p></div></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>🗣️</span><div><p class="text-xs text-white">sag (TTS)</p></div></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>📝</span><div><p class="text-xs text-white">summarize</p></div></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>☔</span><div><p class="text-xs text-white">weather</p></div></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>🌐</span><div><p class="text-xs text-white">Agent Browser</p></div></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>⚡</span><div><p class="text-xs text-white">auto-workflow</p></div></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>🔄</span><div><p class="text-xs text-white">automation</p></div></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>🧬</span><div><p class="text-xs text-white">self-evolving</p></div></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>📈</span><div><p class="text-xs text-white">self-improve</p></div></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>🛠️</span><div><p class="text-xs text-white">skill-creator</p></div></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>🏗️</span><div><p class="text-xs text-white">skill-builder</p></div></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 flex items-center space-x-2"><span>🛡️</span><div><p class="text-xs text-white">skill-vetter</p></div></div>
+                    <div class="grid grid-cols-1 gap-2" id="skills-enabled">
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center space-x-2"><span>🐙</span><div><p class="text-xs font-bold text-white">github</p><p class="text-[10px] text-gray-400">GitHub 操作：PR、Issue、CI、Code Review、API 查詢</p></div></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center space-x-2"><span>📦</span><div><p class="text-xs font-bold text-white">gh-issues</p><p class="text-[10px] text-gray-400">自動抓 Issue → 派子代理修 Bug → 開 PR → 追蹤 Review</p></div></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center space-x-2"><span>📧</span><div><p class="text-xs font-bold text-white">gog</p><p class="text-[10px] text-gray-400">Google Workspace：Gmail、日曆、Drive、通訊錄、Sheets、Docs</p></div></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center space-x-2"><span>🔒</span><div><p class="text-xs font-bold text-white">healthcheck</p><p class="text-[10px] text-gray-400">主機安全掃描：防火牆、SSH、系統更新、風險評估</p></div></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center space-x-2"><span>📱</span><div><p class="text-xs font-bold text-white">node-connect</p><p class="text-[10px] text-gray-400">診斷 OpenClaw 節點連線問題（QR、配對、Tailscale）</p></div></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center space-x-2"><span>🎤</span><div><p class="text-xs font-bold text-white">whisper-api</p><p class="text-[10px] text-gray-400">OpenAI Whisper 語音轉文字（音檔 → 逐字稿）</p></div></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center space-x-2"><span>🗣️</span><div><p class="text-xs font-bold text-white">sag (TTS)</p><p class="text-[10px] text-gray-400">ElevenLabs 文字轉語音，支援多種聲音與風格</p></div></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center space-x-2"><span>📝</span><div><p class="text-xs font-bold text-white">summarize</p><p class="text-[10px] text-gray-400">摘要工具：網頁、PDF、圖片、音檔、YouTube 一鍵摘要</p></div></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center space-x-2"><span>☔</span><div><p class="text-xs font-bold text-white">weather</p><p class="text-[10px] text-gray-400">即時天氣與預報（wttr.in / Open-Meteo）</p></div></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center space-x-2"><span>🌐</span><div><p class="text-xs font-bold text-white">Agent Browser</p><p class="text-[10px] text-gray-400">無頭瀏覽器自動化：導航、點擊、輸入、截圖</p></div></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center space-x-2"><span>⚡</span><div><p class="text-xs font-bold text-white">auto-workflow</p><p class="text-[10px] text-gray-400">從重複任務自動建立工作流（省時自動化）</p></div></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center space-x-2"><span>🔄</span><div><p class="text-xs font-bold text-white">automation-workflows</p><p class="text-[10px] text-gray-400">設計自動化工作流：Zapier / Make / n8n 整合</p></div></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center space-x-2"><span>🧬</span><div><p class="text-xs font-bold text-white">self-evolving</p><p class="text-[10px] text-gray-400">元認知自學系統：根據經驗自動優化技能</p></div></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center space-x-2"><span>📈</span><div><p class="text-xs font-bold text-white">self-improvement</p><p class="text-[10px] text-gray-400">學習紀錄：錯誤修正、能力缺口偵測、持續改善</p></div></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center space-x-2"><span>🛠️</span><div><p class="text-xs font-bold text-white">skill-creator</p><p class="text-[10px] text-gray-400">建立、編輯、審核 AgentSkill 技能檔案</p></div></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center space-x-2"><span>🏗️</span><div><p class="text-xs font-bold text-white">skill-builder</p><p class="text-[10px] text-gray-400">高品質技能建構器：模組化、漸進式、省 Token 設計</p></div></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center space-x-2"><span>🛡️</span><div><p class="text-xs font-bold text-white">skill-vetter</p><p class="text-[10px] text-gray-400">技能安全審查：安裝前掃描紅旗、權限範圍、可疑模式</p></div></div></div>
+                    </div>
+                </section>
+
+                <!-- 推薦 Skills -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-sm md:text-xl font-medium text-yellow-300">⭐ 推薦安裝</h3>
+                        <a href="https://clawhub.com" target="_blank" class="text-[10px] text-indigo-400 hover:underline">更多技能 → ClawHub</a>
+                    </div>
+                    <div class="grid grid-cols-1 gap-2">
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-yellow-700/30"><div class="flex items-center justify-between"><div class="flex items-center space-x-2"><span>📊</span><div><p class="text-xs font-bold text-white">data-analysis</p><p class="text-[10px] text-gray-400">資料分析：CSV/Excel 讀取、統計、圖表生成</p></div></div><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-yellow-900/30 text-yellow-300 border border-yellow-700/50">推薦</span></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-yellow-700/30"><div class="flex items-center justify-between"><div class="flex items-center space-x-2"><span>🔔</span><div><p class="text-xs font-bold text-white">notifications</p><p class="text-[10px] text-gray-400">通知管理：跨平台推播、提醒、排程通知</p></div></div><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-yellow-900/30 text-yellow-300 border border-yellow-700/50">推薦</span></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-yellow-700/30"><div class="flex items-center justify-between"><div class="flex items-center space-x-2"><span>🖼️</span><div><p class="text-xs font-bold text-white">image-gen</p><p class="text-[10px] text-gray-400">AI 圖片生成：DALL-E / Stable Diffusion / Midjourney</p></div></div><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-yellow-900/30 text-yellow-300 border border-yellow-700/50">推薦</span></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-yellow-700/30"><div class="flex items-center justify-between"><div class="flex items-center space-x-2"><span>📰</span><div><p class="text-xs font-bold text-white">news-monitor</p><p class="text-[10px] text-gray-400">新聞監控：RSS/Twitter/Reddit 自動追蹤與摘要</p></div></div><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-yellow-900/30 text-yellow-300 border border-yellow-700/50">推薦</span></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-yellow-700/30"><div class="flex items-center justify-between"><div class="flex items-center space-x-2"><span>💰</span><div><p class="text-xs font-bold text-white">finance-tracker</p><p class="text-[10px] text-gray-400">財務追蹤：收支紀錄、預算管理、投資組合監控</p></div></div><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-yellow-900/30 text-yellow-300 border border-yellow-700/50">推薦</span></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-yellow-700/30"><div class="flex items-center justify-between"><div class="flex items-center space-x-2"><span>🎨</span><div><p class="text-xs font-bold text-white">canva-integration</p><p class="text-[10px] text-gray-400">Canva 整合：社群貼文圖片自動生成</p></div></div><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-yellow-900/30 text-yellow-300 border border-yellow-700/50">推薦</span></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-yellow-700/30"><div class="flex items-center justify-between"><div class="flex items-center space-x-2"><span>📅</span><div><p class="text-xs font-bold text-white">scheduler</p><p class="text-[10px] text-gray-400">智能排程：任務分配、時間管理、自動提醒</p></div></div><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-yellow-900/30 text-yellow-300 border border-yellow-700/50">推薦</span></div></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-yellow-700/30"><div class="flex items-center justify-between"><div class="flex items-center space-x-2"><span>🔍</span><div><p class="text-xs font-bold text-white">seo-optimizer</p><p class="text-[10px] text-gray-400">SEO 優化：關鍵字分析、內容建議、排名追蹤</p></div></div><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-yellow-900/30 text-yellow-300 border border-yellow-700/50">推薦</span></div></div>
                     </div>
                 </section>
             </div>
@@ -810,11 +828,13 @@ await loadSocialData();b.textContent='✅';b.disabled=false;setTimeout(()=>{b.te
 async function loadSocialData(){
 try{
 const r=await fetch('social-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
-const th=d.threads||{};
-document.getElementById('social-published').textContent=th.totalPublished||0;
-document.getElementById('social-pending').textContent=th.pendingDrafts||0;
-document.getElementById('social-api-status').textContent=th.apiConfigured?'✅ 已連接':'⚠️ 未設定';
-document.getElementById('social-api-status').className='text-lg font-bold '+(th.apiConfigured?'text-green-400':'text-yellow-400');
+const pubCount=(d.published||[]).length;
+const pendCount=(d.drafts||[]).length;
+const connected=d.apiStatus==='connected';
+document.getElementById('social-published').textContent=pubCount;
+document.getElementById('social-pending').textContent=pendCount;
+document.getElementById('social-api-status').textContent=connected?'✅ 已連接':'⚠️ 未設定';
+document.getElementById('social-api-status').className='text-lg font-bold '+(connected?'text-green-400':'text-yellow-400');
 document.getElementById('social-update').textContent=d.lastUpdate||'--';
 
 // Drafts
@@ -822,9 +842,10 @@ const db=document.getElementById('social-drafts');const drafts=d.drafts||[];
 if(!drafts.length){db.innerHTML='<div class="py-4 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">目前沒有待審核的草稿</p></div>'}
 else{db.innerHTML=drafts.map(dr=>{
 const pill=dr.pillar_name||dr.pillar||'';
+const statusBadge=dr.status==='failed'?'<span class="px-1.5 py-0.5 text-[10px] rounded-full bg-red-900/50 text-red-300 border border-red-700/50">發佈失敗</span>':'';
 return`<div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30">
 <div class="flex items-center justify-between mb-2">
-<div class="flex items-center gap-2"><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-indigo-900/50 text-indigo-300 border border-indigo-700/50">${pill}</span><span class="text-[10px] text-gray-400">${dr.created||''}</span></div>
+<div class="flex items-center gap-2"><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-indigo-900/50 text-indigo-300 border border-indigo-700/50">${pill}</span>${statusBadge}<span class="text-[10px] text-gray-400">${dr.created||''}</span></div>
 <div class="flex gap-2">
 <button onclick="approveDraft('${dr.id||''}')" class="px-2.5 py-1 bg-green-600 hover:bg-green-700 text-white text-[10px] rounded-lg">✅ 發佈</button>
 <button onclick="rejectDraft('${dr.id||''}')" class="px-2.5 py-1 bg-red-600/50 hover:bg-red-700 text-white text-[10px] rounded-lg">❌ 不用</button>
@@ -835,9 +856,9 @@ ${dr.hashtags?'<p class="text-[10px] text-indigo-400 mt-2">'+dr.hashtags+'</p>':
 </div>`}).join('')}
 
 // Published
-const rb=document.getElementById('social-recent');const pub=d.recentPublished||[];
+const rb=document.getElementById('social-recent');const pub=d.published||[];
 if(!pub.length){rb.innerHTML='<div class="py-4 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">尚無已發佈文章</p></div>'}
-else{rb.innerHTML=pub.map(p=>`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-green-900/50 text-green-300">${p.pillar_name||''}</span><span class="text-[10px] text-gray-400">${p.published_at||''}</span></div><p class="text-[10px] text-gray-300 line-clamp-2">${(p.content||'').substring(0,100)}...</p></div>`).join('')}
+else{rb.innerHTML=pub.map(p=>`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-green-900/50 text-green-300">${p.pillar_name||''}</span><span class="text-[10px] text-gray-400">${p.published_at||''}</span></div><p class="text-[10px] text-gray-300 line-clamp-2">${(p.content||'').substring(0,100)}...</p>${p.thread_url?'<a href="'+p.thread_url+'" target="_blank" class="text-[10px] text-indigo-400 hover:underline mt-1 inline-block">查看貼文 ↗</a>':''}</div>`).join('')}
 
 // Pillars
 const pb=document.getElementById('social-pillars');const pls=d.pillars||[];
