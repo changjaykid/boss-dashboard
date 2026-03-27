@@ -18,8 +18,8 @@
         .badge-buy { background: rgba(16,185,129,0.15); color: #34d399; border: 1px solid rgba(16,185,129,0.3); }
         .badge-sell { background: rgba(239,68,68,0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.3); }
         .badge-open { background: rgba(59,130,246,0.15); color: #60a5fa; border: 1px solid rgba(59,130,246,0.3); }
-        .badge-win { background: rgba(16,185,129,0.15); color: #34d399; }
-        .badge-loss { background: rgba(239,68,68,0.15); color: #f87171; }
+        .badge-win { background: rgba(239,68,68,0.15); color: #f87171; }
+        .badge-loss { background: rgba(16,185,129,0.15); color: #34d399; }
         .stat-card { background: linear-gradient(135deg, rgba(31,41,55,0.8), rgba(17,24,39,0.9)); }
 
         /* Desktop sidebar */
@@ -616,11 +616,11 @@ else{pb.innerHTML=ps.map(p=>{const pc=p.pnl>=0?'text-green-400':'text-red-400';c
 return`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1.5"><div class="flex items-center space-x-2"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${db}">${p.direction}</span><span class="text-xs font-bold text-white">${p.instrument||'Gold'} @ ${p.entryPrice}</span></div><span class="text-sm font-bold ${pc}">${p.pnl>=0?'+':''}$${p.pnl.toFixed(2)}</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>手數:${p.size}</span><span>SL:${p.stopLevel||'--'}</span><span>TP:${p.profitLevel||'--'}</span><span>現價:${p.currentBid}</span></div></div>`}).join('')}
 
 // Closed Trades (only completed ones)
-const tb=document.getElementById('fx-closed-trades');const ts=(d.closedTrades||[]).slice().reverse();
+const tb=document.getElementById('fx-closed-trades');const ts=(d.closedTrades||[]).slice().reverse().slice(0,15);
 if(!ts.length){tb.innerHTML='<div class="py-6 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">📭 無紀錄</p></div>'}
 else{tb.innerHTML=ts.map(t=>{const db=t.direction==='BUY'?'badge-buy':'badge-sell';let ob='badge-open';if(t.outcome==='WIN')ob='badge-win';if(t.outcome==='LOSS')ob='badge-loss';
 const tm=t.time?new Date(t.time).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',hour:'2-digit',minute:'2-digit',month:'2-digit',day:'2-digit'}):'--';
-const ps=t.pnl!=null?'$'+t.pnl.toFixed(2):'進行中';const pc=t.pnl!=null&&t.pnl>=0?'text-green-400':t.pnl!=null?'text-red-400':'text-blue-400';
+const ps=t.pnl!=null?'$'+t.pnl.toFixed(2):'進行中';const pc=t.pnl!=null&&t.pnl>=0?'text-red-400':t.pnl!=null?'text-green-400':'text-blue-400';
 return`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${db}">${t.direction}</span><span class="px-1.5 py-0.5 text-[10px] rounded-full ${ob}">${t.outcome}</span><span class="text-[10px] text-gray-300">${t.strategy}</span></div><span class="text-xs font-bold ${pc}">${ps}</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>${(t.confidence*100).toFixed(0)}%</span><span>SL:${t.stop_distance} TP:${t.tp_distance}</span><span>${tm}</span></div></div>`}).join('')}
 
 // Strategy stats
