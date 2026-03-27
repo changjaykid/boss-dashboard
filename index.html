@@ -679,7 +679,7 @@
 function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('open')}
 function checkPass(){if(document.getElementById('pass-input').value==='8888'){document.getElementById('auth-overlay').style.display='none';document.getElementById('app-content').style.display='flex'}else{document.getElementById('auth-error').classList.remove('hidden')}}
 
-const titles={overview:{t:'今日管家回報',s:'隨時待命'},stocks:{t:'股票專案',s:'台股分析'},forex:{t:'外匯保證金',s:'策略分析'},'forex-auto':{t:'🤖 外匯自動交易',s:'多商品 · v4 嚴格確認模式'},crypto:{t:'虛擬貨幣',s:'加密貨幣追蹤'},'crypto-auto':{t:'🤖 虛擬貨幣自動交易',s:'待串接 API'},community:{t:'社群專案',s:'互動管理'},skills:{t:'技能專案',s:'4 模型 · 17 技能'}};
+const titles={overview:{t:'今日管家回報',s:'隨時待命'},stocks:{t:'股票專案',s:'台股分析'},forex:{t:'外匯保證金',s:'策略分析'},'forex-auto':{t:'🤖 外匯自動交易',s:'多商品 · v4 嚴格確認模式'},crypto:{t:'虛擬貨幣',s:'加密貨幣追蹤'},'crypto-auto':{t:'🤖 虛擬貨幣自動交易',s:'MAX 交易所 · 即時監控'},community:{t:'社群專案',s:'互動管理'},skills:{t:'技能專案',s:'4 模型 · 17 技能'}};
 const trendMap={'STRONG_BULL':'強勢看多 🟢','BULL':'看多 🟢','STRONG_BEAR':'強勢看空 🔴','BEAR':'看空 🔴','NEUTRAL':'盤整 ⚪'};
 function trendCN(t){return trendMap[t]||t||'--'}
 function trendColor(t){if(!t)return'text-gray-300';if(t.includes('BULL'))return'text-green-400';if(t.includes('BEAR'))return'text-red-400';return'text-gray-300'}
@@ -804,6 +804,88 @@ const tv=document.getElementById('view-'+v);if(tv)tv.classList.add('active');els
 if(tri){clearInterval(tri);tri=null}
 if(v==='forex-auto'){loadTradingData();tri=setInterval(loadTradingData,900000)}
 if(v==='community'){loadSocialData()}
+if(v==='crypto-auto'){loadCryptoData();if(!window._cri)window._cri=setInterval(loadCryptoData,900000)}
+}
+
+// ========== CRYPTO AUTO TRADING ==========
+async function loadCryptoData(){
+try{
+const r=await fetch('crypto-trading-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
+
+// 狀態燈
+const statusEl=document.querySelector('#view-crypto-auto .text-yellow-300, #view-crypto-auto .text-green-300');
+if(statusEl){statusEl.textContent=d.status==='connected'?'已連接 MAX':'離線';statusEl.className=d.status==='connected'?'text-green-300':'text-red-300'}
+
+// 帳戶概覽
+const a=d.account||{};
+document.getElementById('ca-balance').textContent='NT$'+(a.totalValueTWD||'0');
+document.getElementById('ca-pnl').textContent='--';
+document.getElementById('ca-winrate').textContent='--';
+document.getElementById('ca-trades').textContent=(d.recentTrades||[]).length;
+document.getElementById('ca-open').textContent=(d.openOrders||[]).length;
+document.getElementById('ca-unrealized').textContent='--';
+document.getElementById('ca-coins').textContent=(d.tickers||[]).length+'個';
+document.getElementById('ca-exchange').textContent=d.exchange||'MAX';
+
+// 幣種卡片
+const cc=document.getElementById('ca-coin-cards');const tks=d.tickers||[];
+if(tks.length){cc.innerHTML=tks.map(t=>{
+const chg=parseFloat(t.change||0);const cc2=chg>=0?'text-green-400':'text-red-400';const arrow=chg>=0?'▲':'▼';
+return`<div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl">
+<p class="text-[10px] md:text-xs font-bold text-white">${t.name||t.market}</p>
+<p class="text-sm md:text-lg text-yellow-400 font-bold mt-1">${parseFloat(t.last).toLocaleString()}</p>
+<div class="flex items-center justify-between mt-1">
+<span class="text-[9px] ${cc2}">${arrow} ${Math.abs(chg)}%</span>
+<span class="text-[9px] text-gray-500">Vol:${parseFloat(t.vol||0).toFixed(2)}</span>
+</div>
+<div class="text-[9px] text-gray-500 mt-0.5">H:${parseFloat(t.high||0).toLocaleString()} L:${parseFloat(t.low||0).toLocaleString()}</div>
+</div>`}).join('')}
+
+// 帳戶持幣
+const pb=document.getElementById('ca-positions');const bals=(a.balances||[]).filter(b=>parseFloat(b.available)>0||parseFloat(b.locked)>0);
+if(!bals.length){pb.innerHTML='<div class="py-6 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">💰 帳戶幾乎為空，需入金後開始交易</p></div>'}
+else{pb.innerHTML=bals.map(b=>`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold text-white">${b.currency}</span>
+<span class="text-xs text-yellow-400">${parseFloat(b.available).toFixed(8)}</span>
+</div>
+<div class="text-[10px] text-gray-400 mt-1">鎖定: ${b.locked} | 質押: ${b.staked||'0'}</div>
+</div>`).join('')}
+
+// 已完成交易
+const tb=document.getElementById('ca-closed');const trades=(d.recentTrades||[]).slice(0,10);
+if(!trades.length){tb.innerHTML='<div class="py-6 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">📭 無近期交易</p></div>'}
+else{tb.innerHTML=trades.map(t=>{
+const side=t.side==='bid'?'BUY':'SELL';const sc=t.side==='bid'?'badge-buy':'badge-sell';
+const tm=t.createdAt?new Date(t.createdAt).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}):'--';
+return`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 text-[10px] rounded-full ${sc}">${side}</span>
+<span class="text-[10px] text-white font-bold">${(t.marketName||t.market||'').toUpperCase()}</span>
+</div>
+<span class="text-xs text-yellow-400">${parseFloat(t.funds||0).toFixed(2)}</span>
+</div>
+<div class="flex flex-wrap gap-2 text-[10px] text-gray-400">
+<span>價格:${parseFloat(t.price).toLocaleString()}</span>
+<span>量:${t.volume}</span>
+<span>手續費:${parseFloat(t.fee||0).toFixed(4)} ${(t.feeCurrency||'').toUpperCase()}</span>
+<span>${tm}</span>
+</div></div>`}).join('')}
+
+// 市場情緒
+const fg=d.marketSentiment?.fearGreed;
+if(fg){
+document.getElementById('ca-fear-greed').textContent=fg.value+' ('+fg.label+')';
+const fge=document.getElementById('ca-fear-greed');
+const fv=parseInt(fg.value);
+fge.className='text-xs font-bold '+(fv<=25?'text-red-400':fv<=50?'text-orange-400':fv<=75?'text-yellow-400':'text-green-400');
+}
+
+// 風控區塊更新
+const riskSection=document.querySelector('#view-crypto-auto .text-sm.text-gray-300.mb-3');
+
+}catch(e){console.log('crypto err',e)}
 }
 </script>
 </body>
