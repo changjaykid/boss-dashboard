@@ -88,6 +88,7 @@
             <a href="#" onclick="switchTab('forex',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>💱</span><span>外匯保證金</span></a>
             <a href="#" onclick="switchTab('forex-auto',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🤖</span><span>外匯自動交易</span></a>
             <a href="#" onclick="switchTab('crypto',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🪙</span><span>虛擬貨幣</span></a>
+            <a href="#" onclick="switchTab('crypto-auto',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🤖</span><span>虛擬貨幣自動交易</span></a>
             <div class="pt-3 pb-1"><p class="text-[10px] font-semibold text-gray-500 uppercase px-3">營運管理</p></div>
             <a href="#" onclick="switchTab('community',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🌐</span><span>社群專案</span></a>
             <a href="#" onclick="switchTab('skills',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🛠️</span><span>技能專案</span></a>
@@ -367,13 +368,10 @@
             <!-- ===== 外匯自動交易 ===== -->
             <div id="view-forex-auto" class="section-view space-y-4 md:space-y-6">
 
-                <!-- 更新時間 + 刷新 -->
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center space-x-2 text-xs">
-                        <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-green-500"></span></span>
-                        <span class="text-gray-400">更新：<span id="fx-last-update" class="text-gray-200">載入中</span></span>
-                    </div>
-                    <button id="btn-refresh" onclick="refreshBtn()" class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white text-xs rounded-lg">🔄 重新整理</button>
+                <!-- 更新時間 -->
+                <div class="flex items-center space-x-2 text-xs">
+                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-green-500"></span></span>
+                    <span class="text-gray-400">更新：<span id="fx-last-update" class="text-gray-200">載入中</span><span class="text-gray-600 ml-2">每 15 分鐘自動刷新</span></span>
                 </div>
 
                 <!-- 帳戶卡片 Row 1 -->
@@ -447,12 +445,12 @@
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
                     <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">⚙️ 風控參數</h3>
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">每筆風險</p><p class="text-xs md:text-sm font-bold text-white">$200 (20%)</p></div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">手數</p><p class="text-xs md:text-sm font-bold text-white">0.01</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">每筆風險</p><p class="text-xs md:text-sm font-bold text-white">$100 (10%)</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">手數</p><p class="text-xs md:text-sm font-bold text-white">0.01~0.1</p></div>
                         <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">最大持倉</p><p class="text-xs md:text-sm font-bold text-white">3 筆</p></div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">風報比</p><p class="text-xs md:text-sm font-bold text-white">1:1.5~1:4</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">信心門檻</p><p class="text-xs md:text-sm font-bold text-white">≥ 70%</p></div>
                         <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">止損</p><p class="text-xs md:text-sm font-bold text-white">ATR 動態</p></div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">策略數</p><p class="text-xs md:text-sm font-bold text-white">10 種</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">策略數</p><p class="text-xs md:text-sm font-bold text-white">3 種 (v4)</p></div>
                     </div>
                 </section>
             </div>
@@ -565,6 +563,107 @@
                 </section>
             </div>
 
+            <!-- 虛擬貨幣自動交易 -->
+            <div id="view-crypto-auto" class="section-view space-y-4 md:space-y-6">
+                <div class="flex items-center space-x-2 text-xs">
+                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-yellow-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-yellow-500"></span></span>
+                    <span class="text-gray-400">狀態：<span class="text-yellow-300">待串接 API</span></span>
+                </div>
+
+                <!-- 帳戶概覽 -->
+                <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">帳戶餘額</p>
+                        <p class="text-lg md:text-2xl font-bold text-white mt-0.5" id="ca-balance">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">已實現盈虧</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="ca-pnl">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">勝率</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="ca-winrate">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">交易筆數</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="ca-trades">--</p>
+                    </div>
+                </div>
+
+                <!-- 持倉總覽 -->
+                <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">持倉數</p>
+                        <p class="text-lg md:text-2xl font-bold text-blue-400 mt-0.5" id="ca-open">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">浮動盈虧</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="ca-unrealized">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">監控幣種</p>
+                        <p class="text-lg md:text-2xl font-bold text-yellow-400 mt-0.5" id="ca-coins">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">交易所</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="ca-exchange">--</p>
+                    </div>
+                </div>
+
+                <!-- 幣種趨勢卡片 -->
+                <div id="ca-coin-cards" class="grid grid-cols-2 gap-2 md:grid-cols-5 md:gap-3"></div>
+
+                <!-- 當前持倉 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-blue-300 mb-3">📍 當前持倉</h3>
+                    <div id="ca-positions" class="py-6 text-center border border-dashed border-gray-700 rounded-lg">
+                        <p class="text-xs text-gray-400">⏳ 等待 API 串接</p>
+                    </div>
+                </section>
+
+                <!-- 已完成交易 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">📋 已完成交易</h3>
+                    <div id="ca-closed" class="py-6 text-center border border-dashed border-gray-700 rounded-lg">
+                        <p class="text-xs text-gray-400">⏳ 等待 API 串接</p>
+                    </div>
+                </section>
+
+                <!-- 策略績效 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-purple-300 mb-3">🧠 策略績效</h3>
+                    <div id="ca-strategy" class="py-6 text-center border border-dashed border-gray-700 rounded-lg">
+                        <p class="text-xs text-gray-400">⏳ 等待交易數據</p>
+                    </div>
+                </section>
+
+                <!-- 資金費率 & 市場情緒 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-orange-300 mb-3">📡 市場情緒</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">恐懼貪婪指數</p><p class="text-xs font-bold text-gray-300" id="ca-fear-greed">--</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">BTC 資金費率</p><p class="text-xs font-bold text-gray-300" id="ca-funding">--</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">BTC 主導地位</p><p class="text-xs font-bold text-gray-300" id="ca-dominance">--</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">24H 爆倉</p><p class="text-xs font-bold text-gray-300" id="ca-liquidation">--</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">多空比</p><p class="text-xs font-bold text-gray-300" id="ca-longshort">--</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">總市值</p><p class="text-xs font-bold text-gray-300" id="ca-mcap">--</p></div>
+                    </div>
+                </section>
+
+                <!-- 風控 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">⚙️ 風控參數</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">每筆風險</p><p class="text-xs font-bold text-gray-300">待設定</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">槓桿上限</p><p class="text-xs font-bold text-gray-300">待設定</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">最大持倉</p><p class="text-xs font-bold text-gray-300">待設定</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">交易所</p><p class="text-xs font-bold text-gray-300">待設定</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">策略數</p><p class="text-xs font-bold text-gray-300">待設定</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">信心門檻</p><p class="text-xs font-bold text-gray-300">待設定</p></div>
+                    </div>
+                </section>
+            </div>
+
             <!-- Placeholder -->
             <div id="view-placeholder" class="section-view">
                 <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
@@ -580,12 +679,10 @@
 function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('open')}
 function checkPass(){if(document.getElementById('pass-input').value==='8888'){document.getElementById('auth-overlay').style.display='none';document.getElementById('app-content').style.display='flex'}else{document.getElementById('auth-error').classList.remove('hidden')}}
 
-const titles={overview:{t:'今日管家回報',s:'隨時待命'},stocks:{t:'股票專案',s:'台股分析'},forex:{t:'外匯保證金',s:'策略分析'},'forex-auto':{t:'🤖 外匯自動交易',s:'XAUUSD · 即時監控中'},crypto:{t:'虛擬貨幣',s:'加密貨幣追蹤'},community:{t:'社群專案',s:'互動管理'},skills:{t:'技能專案',s:'4 模型 · 17 技能'}};
+const titles={overview:{t:'今日管家回報',s:'隨時待命'},stocks:{t:'股票專案',s:'台股分析'},forex:{t:'外匯保證金',s:'策略分析'},'forex-auto':{t:'🤖 外匯自動交易',s:'多商品 · v4 嚴格確認模式'},crypto:{t:'虛擬貨幣',s:'加密貨幣追蹤'},'crypto-auto':{t:'🤖 虛擬貨幣自動交易',s:'待串接 API'},community:{t:'社群專案',s:'互動管理'},skills:{t:'技能專案',s:'4 模型 · 17 技能'}};
 const trendMap={'STRONG_BULL':'強勢看多 🟢','BULL':'看多 🟢','STRONG_BEAR':'強勢看空 🔴','BEAR':'看空 🔴','NEUTRAL':'盤整 ⚪'};
 function trendCN(t){return trendMap[t]||t||'--'}
 function trendColor(t){if(!t)return'text-gray-300';if(t.includes('BULL'))return'text-green-400';if(t.includes('BEAR'))return'text-red-400';return'text-gray-300'}
-
-async function refreshBtn(){const b=document.getElementById('btn-refresh');b.textContent='⏳ 載入中...';b.disabled=true;await loadTradingData();b.textContent='✅ 已更新';b.disabled=false;setTimeout(()=>{b.textContent='🔄 重新整理'},1500)}
 
 async function loadTradingData(){
 try{
@@ -705,7 +802,7 @@ document.getElementById('header-title').textContent=titles[v]?.t||'專案';docum
 document.querySelectorAll('.section-view').forEach(e=>e.classList.remove('active'));
 const tv=document.getElementById('view-'+v);if(tv)tv.classList.add('active');else document.getElementById('view-placeholder').classList.add('active');
 if(tri){clearInterval(tri);tri=null}
-if(v==='forex-auto'){loadTradingData();tri=setInterval(loadTradingData,60000)}
+if(v==='forex-auto'){loadTradingData();tri=setInterval(loadTradingData,900000)}
 if(v==='community'){loadSocialData()}
 }
 </script>
