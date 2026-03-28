@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "max-exchange-api-node": "^3.0.2"
+  }
+}

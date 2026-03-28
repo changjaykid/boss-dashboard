@@ -1,0 +1,75 @@
+{
+  "lastReviewAt": 5,
+  "lessons": [
+    {
+      "reviewAt": 5,
+      "timestamp": "2026-03-28T13:42:03.875Z",
+      "recentTrades": 5,
+      "winRate": 60,
+      "avgWinPct": 0.2,
+      "avgLossPct": 0.6,
+      "profitFactor": 0.51,
+      "capitalAtReview": 29659.691156656772,
+      "returnPct": -1.13,
+      "strategyPerformance": {
+        "日線強勢空頭+4H空頭+RSI超買+空頭(83)+雙RSI共振高位": {
+          "wins": 1,
+          "losses": 0,
+          "pnl": 50.49
+        },
+        "日線強勢空頭+4H空頭+RSI高位+空頭趨勢(67)+雙RSI共振高位": {
+          "wins": 1,
+          "losses": 0,
+          "pnl": 5.01
+        },
+        "日線強勢空頭+4H空頭+EMA8<21+布林極度擠壓(突破在即)": {
+          "wins": 0,
+          "losses": 2,
+          "pnl": -397.77000000000004
+        },
+        "日線強勢空頭+4H空頭+RSI超買+空頭(82)+雙RSI共振高位": {
+          "wins": 1,
+          "losses": 0,
+          "pnl": 1.96
+        }
+      },
+      "strategyTypePerformance": {
+        "unknown": {
+          "wins": 3,
+          "losses": 2,
+          "pnl": -340.31,
+          "avgHold": "2.4h"
+        }
+      },
+      "exitReasons": {
+        "TIME_EXIT": {
+          "count": 4,
+          "pnl": 40.61
+        },
+        "STOP_LOSS": {
+          "count": 1,
+          "pnl": -380.92
+        }
+      },
+      "marketPerformance": {
+        "ethtwd": {
+          "wins": 2,
+          "losses": 0,
+          "pnl": 52.45
+        },
+        "btctwd": {
+          "wins": 1,
+          "losses": 2,
+          "pnl": -392.76
+        }
+      },
+      "insights": [
+        "盈虧比<1，虧損大於獲利，需檢視止損/止盈設定",
+        "平均虧損遠大於平均獲利，止損太寬或止盈太早",
+        "時間止損頻繁，市場可能處於盤整，降低交易頻率",
+        "btctwd表現差(虧393)，暫時減少該市場交易"
+      ]
+    }
+  ],
+  "adjustments": []
+}

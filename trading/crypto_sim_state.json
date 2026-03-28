@@ -1,0 +1,245 @@
+{
+  "version": 2,
+  "capital": 29728.454975041102,
+  "available": -5054.545024958905,
+  "positions": [
+    {
+      "market": "ethtwd",
+      "direction": "SELL",
+      "entryPrice": 64906.1,
+      "sizeTWD": 34783,
+      "stopPct": 0.7963482190866065,
+      "strategy": "日線強勢空頭+4H空頭+EMA多頭排列+價<VWAP",
+      "strategyType": "trend_follow",
+      "signals": [
+        "日線強勢空頭",
+        "4H空頭",
+        "EMA多頭排列",
+        "價<VWAP",
+        "AI:雖然日線和4H趨勢顯示強空頭，但RSI指"
+      ],
+      "confidence": 0.48000000000000004,
+      "dailyTrend": "strong_down",
+      "rsi_15m": 46.9,
+      "rsi_1h": 70.6,
+      "openTime": "2026-03-28T17:44:00.547Z",
+      "peakPnl": -0.10492080097247955,
+      "currentPrice": 65014.4,
+      "pnlPct": -0.16685642797826847,
+      "pnlTWD": -58.03767134368112
+    }
+  ],
+  "closedTrades": [
+    {
+      "market": "ethtwd",
+      "direction": "SELL",
+      "entryPrice": 64362.9,
+      "exitPrice": 64227.5,
+      "sizeTWD": 24000,
+      "pnlTWD": 50.49,
+      "pnlPct": 0.21,
+      "reason": "TIME_EXIT",
+      "strategy": "日線強勢空頭+4H空頭+RSI超買+空頭(83)+雙RSI共振高位",
+      "signals": [
+        "日線強勢空頭",
+        "4H空頭",
+        "RSI超買+空頭(83)",
+        "雙RSI共振高位",
+        "EMA多頭排列",
+        "MACD雙正",
+        "布林極度擠壓(突破在即)",
+        "strong_bear"
+      ],
+      "confidence": 0.8,
+      "openTime": "2026-03-28T07:47:35.292Z",
+      "closeTime": "2026-03-28T10:02:01.151Z",
+      "outcome": "WIN"
+    },
+    {
+      "market": "btctwd",
+      "direction": "SELL",
+      "entryPrice": 2135192.8,
+      "exitPrice": 2129704.8,
+      "sizeTWD": 1950,
+      "pnlTWD": 5.01,
+      "pnlPct": 0.26,
+      "reason": "TIME_EXIT",
+      "strategy": "日線強勢空頭+4H空頭+RSI高位+空頭趨勢(67)+雙RSI共振高位",
+      "signals": [
+        "日線強勢空頭",
+        "4H空頭",
+        "RSI高位+空頭趨勢(67)",
+        "雙RSI共振高位",
+        "EMA多頭排列",
+        "MACD雙正",
+        "布林極度擠壓(突破在即)",
+        "strong_bear"
+      ],
+      "confidence": 0.7,
+      "openTime": "2026-03-28T08:13:22.456Z",
+      "closeTime": "2026-03-28T10:14:00.507Z",
+      "outcome": "WIN"
+    },
+    {
+      "market": "btctwd",
+      "direction": "SELL",
+      "entryPrice": 2128837,
+      "exitPrice": 2129999.9,
+      "sizeTWD": 30849,
+      "pnlTWD": -16.85,
+      "pnlPct": -0.05,
+      "reason": "TIME_EXIT",
+      "strategy": "日線強勢空頭+4H空頭+EMA8<21+布林極度擠壓(突破在即)",
+      "signals": [
+        "日線強勢空頭",
+        "4H空頭",
+        "EMA8<21",
+        "布林極度擠壓(突破在即)",
+        "價<VWAP"
+      ],
+      "confidence": 0.6,
+      "openTime": "2026-03-28T10:02:01.151Z",
+      "closeTime": "2026-03-28T12:02:00.589Z",
+      "outcome": "LOSS"
+    },
+    {
+      "market": "ethtwd",
+      "direction": "SELL",
+      "entryPrice": 64410.9,
+      "exitPrice": 64318.4,
+      "sizeTWD": 1365,
+      "pnlTWD": 1.96,
+      "pnlPct": 0.14,
+      "reason": "TIME_EXIT",
+      "strategy": "日線強勢空頭+4H空頭+RSI超買+空頭(82)+雙RSI共振高位",
+      "signals": [
+        "日線強勢空頭",
+        "4H空頭",
+        "RSI超買+空頭(82)",
+        "雙RSI共振高位",
+        "EMA多頭排列",
+        "MACD雙正",
+        "布林極度擠壓(突破在即)",
+        "strong_bear"
+      ],
+      "confidence": 0.8,
+      "openTime": "2026-03-28T08:24:32.210Z",
+      "closeTime": "2026-03-28T12:18:00.525Z",
+      "outcome": "WIN"
+    },
+    {
+      "market": "btctwd",
+      "direction": "SELL",
+      "entryPrice": 2129999.9,
+      "exitPrice": 2154313.1,
+      "sizeTWD": 33371,
+      "pnlTWD": -380.92,
+      "pnlPct": -1.14,
+      "reason": "STOP_LOSS",
+      "strategy": "日線強勢空頭+4H空頭+EMA8<21+布林極度擠壓(突破在即)",
+      "signals": [
+        "日線強勢空頭",
+        "4H空頭",
+        "EMA8<21",
+        "布林極度擠壓(突破在即)",
+        "價<VWAP"
+      ],
+      "confidence": 0.6,
+      "openTime": "2026-03-28T12:02:00.589Z",
+      "closeTime": "2026-03-28T13:42:01.136Z",
+      "outcome": "LOSS"
+    },
+    {
+      "market": "btctwd",
+      "direction": "SELL",
+      "entryPrice": 2152151.9,
+      "exitPrice": 2151539.9,
+      "sizeTWD": 34702,
+      "pnlTWD": 9.87,
+      "pnlPct": 0.03,
+      "reason": "TIME_EXIT",
+      "strategy": "日線強勢空頭+4H空頭+RSI超買+空頭(77)+EMA多頭排列",
+      "signals": [
+        "日線強勢空頭",
+        "4H空頭",
+        "RSI超買+空頭(77)",
+        "EMA多頭排列",
+        "MACD雙正",
+        "觸布林上軌",
+        "布林極度擠壓(突破在即)",
+        "放量(6.4x)"
+      ],
+      "confidence": 0.81,
+      "openTime": "2026-03-28T13:42:01.136Z",
+      "closeTime": "2026-03-28T15:44:01.042Z",
+      "outcome": "WIN"
+    },
+    {
+      "market": "btctwd",
+      "direction": "SELL",
+      "entryPrice": 2151539.9,
+      "exitPrice": 2147889.6,
+      "sizeTWD": 34714,
+      "pnlTWD": 58.9,
+      "pnlPct": 0.17,
+      "reason": "TIME_EXIT",
+      "strategy": "日線強勢空頭+4H空頭+RSI高位+空頭趨勢(68)+雙RSI共振高位",
+      "signals": [
+        "日線強勢空頭",
+        "4H空頭",
+        "RSI高位+空頭趨勢(68)",
+        "雙RSI共振高位",
+        "EMA多頭排列",
+        "MACD雙正"
+      ],
+      "confidence": 0.62,
+      "openTime": "2026-03-28T15:44:01.042Z",
+      "closeTime": "2026-03-28T17:44:00.547Z",
+      "outcome": "WIN"
+    }
+  ],
+  "totalTrades": 7,
+  "wins": 5,
+  "losses": 2,
+  "realizedPnl": -271.5450249588991,
+  "unrealizedPnl": -58.04,
+  "peakCapital": 30055.500719628242,
+  "maxDrawdown": 1.3169288599240667,
+  "consecutiveLosses": 0,
+  "lastLossTime": "2026-03-28T13:42:01.136Z",
+  "pausedUntil": null,
+  "strategyStats": {
+    "日線強勢空頭+4H空頭+RSI超買+空頭(83)+雙RSI共振高位": {
+      "wins": 1,
+      "losses": 0,
+      "pnl": 50.488713218329735
+    },
+    "日線強勢空頭+4H空頭+RSI高位+空頭趨勢(67)+雙RSI共振高位": {
+      "wins": 1,
+      "losses": 0,
+      "pnl": 5.01200640991296
+    },
+    "日線強勢空頭+4H空頭+EMA8<21+布林極度擠壓(突破在即)": {
+      "wins": 0,
+      "losses": 2,
+      "pnl": -397.7698290133968
+    },
+    "日線強勢空頭+4H空頭+RSI超買+空頭(82)+雙RSI共振高位": {
+      "wins": 1,
+      "losses": 0,
+      "pnl": 1.9602660419276863
+    },
+    "日線強勢空頭+4H空頭+RSI超買+空頭(77)+EMA多頭排列": {
+      "wins": 1,
+      "losses": 0,
+      "pnl": 9.86808784268434
+    },
+    "日線強勢空頭+4H空頭+RSI高位+空頭趨勢(68)+雙RSI共振高位": {
+      "wins": 1,
+      "losses": 0,
+      "pnl": 58.89573054164301
+    }
+  },
+  "dailyStats": {},
+  "lastRun": "2026-03-28T18:46:09.951Z"
+}

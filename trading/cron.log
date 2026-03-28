@@ -1,0 +1,4912 @@
+Traceback (most recent call last):
+  File "/Users/kid/.openclaw/workspace/trading/analyzer.py", line 8, in <module>
+    import json, sys, argparse, requests, os
+ModuleNotFoundError: No module named 'requests'
+Traceback (most recent call last):
+  File "/Users/kid/.openclaw/workspace/trading/analyzer.py", line 10, in <module>
+    import json, sys, argparse, requests, os
+ModuleNotFoundError: No module named 'requests'
+Traceback (most recent call last):
+  File "/Users/kid/.openclaw/workspace/trading/analyzer.py", line 10, in <module>
+    import json, sys, argparse, requests, os
+ModuleNotFoundError: No module named 'requests'
+Traceback (most recent call last):
+  File "/Users/kid/.openclaw/workspace/trading/analyzer.py", line 10, in <module>
+    import json, sys, argparse, requests, os
+ModuleNotFoundError: No module named 'requests'
+Traceback (most recent call last):
+  File "/Users/kid/.openclaw/workspace/trading/analyzer.py", line 10, in <module>
+    import json, sys, argparse, requests, os
+ModuleNotFoundError: No module named 'requests'
+{
+  "time": "2026-03-26T14:30:05.797486+00:00",
+  "price": {
+    "bid": 4459.41,
+    "ask": 4459.91
+  },
+  "balance": 30999.66,
+  "trend_1h": "STRONG_BEAR",
+  "trend_15m": "STRONG_BULL",
+  "ema9_1h": 4451.58,
+  "ema21_1h": 4480.83,
+  "rsi_1h": 34.6,
+  "rsi_15m": 58.0,
+  "rsi_5m": 62.8,
+  "atr_15m": 19.23,
+  "atr_1h": 33.88,
+  "bb_15m": {
+    "mid": 4439.19,
+    "upper": 4459.91,
+    "lower": 4418.48
+  },
+  "macd_15m": {
+    "line": 4.27,
+    "signal": 4.27,
+    "hist": 0.0
+  },
+  "actions": [
+    "OPENED: BUY via 15M_MOMENTUM conf=50% SL=19.2 TP=69.2"
+  ]
+}
+[main dcb61df] auto: update trading data 2026-03-26 22:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 30 insertions(+), 12 deletions(-)
+{
+  "time": "2026-03-26T14:45:04.976324+00:00",
+  "price": {
+    "bid": 4459.16,
+    "ask": 4459.66
+  },
+  "balance": 30999.65,
+  "trend_1h": "STRONG_BEAR",
+  "trend_15m": "STRONG_BULL",
+  "ema9_1h": 4453.4,
+  "ema21_1h": 4481.65,
+  "rsi_1h": 36.9,
+  "rsi_15m": 59.2,
+  "rsi_5m": 60.0,
+  "atr_15m": 20.13,
+  "atr_1h": 34.54,
+  "bb_15m": {
+    "mid": 4440.97,
+    "upper": 4462.37,
+    "lower": 4419.57
+  },
+  "macd_15m": {
+    "line": 5.82,
+    "signal": 5.82,
+    "hist": 0.0
+  },
+  "actions": [
+    "MON: BUY @4460.12 P/L=-0.52pts",
+    "OPENED: SELL via 1H_EMA_BOUNCE conf=55% SL=24.2 TP=120.9"
+  ]
+}
+[main 954c33c] auto: update trading data 2026-03-26 22:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 46 insertions(+), 14 deletions(-)
+{
+  "time": "2026-03-26T15:00:06.203534+00:00",
+  "price": {
+    "bid": 4466.99,
+    "ask": 4467.49
+  },
+  "balance": 30999.65,
+  "trend_1h": "STRONG_BEAR",
+  "trend_15m": "STRONG_BULL",
+  "ema9_1h": 4453.95,
+  "ema21_1h": 4481.09,
+  "rsi_1h": 31.4,
+  "rsi_15m": 60.6,
+  "rsi_5m": 59.0,
+  "atr_15m": 20.61,
+  "atr_1h": 33.81,
+  "bb_15m": {
+    "mid": 4443.04,
+    "upper": 4465.39,
+    "lower": 4420.7
+  },
+  "macd_15m": {
+    "line": 7.42,
+    "signal": 7.42,
+    "hist": 0.0
+  },
+  "actions": [
+    "MON: SELL @4459.14 P/L=-6.78pts",
+    "MON: BUY @4460.12 P/L=5.3pts",
+    "NO_SIGNAL: no valid entry found"
+  ]
+}
+[main e0f984b] auto: update trading data 2026-03-26 23:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 28 insertions(+), 15 deletions(-)
+{
+  "time": "2026-03-26T15:15:05.718674+00:00",
+  "price": {
+    "bid": 4456.11,
+    "ask": 4456.61
+  },
+  "balance": 30999.65,
+  "trend_1h": "STRONG_BEAR",
+  "trend_15m": "STRONG_BULL",
+  "ema9_1h": 4453.09,
+  "ema21_1h": 4479.88,
+  "rsi_1h": 34.6,
+  "rsi_15m": 57.6,
+  "rsi_5m": 54.0,
+  "atr_15m": 20.94,
+  "atr_1h": 34.34,
+  "bb_15m": {
+    "mid": 4444.65,
+    "upper": 4466.23,
+    "lower": 4423.08
+  },
+  "macd_15m": {
+    "line": 8.21,
+    "signal": 8.21,
+    "hist": 0.0
+  },
+  "actions": [
+    "MON: SELL @4459.14 P/L=1.93pts",
+    "MON: BUY @4460.12 P/L=-3.41pts",
+    "NO_SIGNAL: no valid entry found"
+  ]
+}
+[main d5b5d2d] auto: update trading data 2026-03-26 23:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 18 insertions(+), 18 deletions(-)
+{
+  "time": "2026-03-26T15:30:06.238935+00:00",
+  "price": {
+    "bid": 4452.55,
+    "ask": 4453.05
+  },
+  "balance": 30999.65,
+  "trend_1h": "STRONG_BEAR",
+  "trend_15m": "STRONG_BULL",
+  "ema9_1h": 4453.05,
+  "ema21_1h": 4479.86,
+  "rsi_1h": 34.5,
+  "rsi_15m": 66.0,
+  "rsi_5m": 48.8,
+  "atr_15m": 19.95,
+  "atr_1h": 34.48,
+  "bb_15m": {
+    "mid": 4445.14,
+    "upper": 4466.83,
+    "lower": 4423.44
+  },
+  "macd_15m": {
+    "line": 8.56,
+    "signal": 8.56,
+    "hist": 0.0
+  },
+  "actions": [
+    "MON: SELL @4459.14 P/L=5.33pts",
+    "MON: BUY @4460.12 P/L=-6.81pts",
+    "NO_SIGNAL: no valid entry found"
+  ]
+}
+[main 278cf74] auto: update trading data 2026-03-26 23:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 18 insertions(+), 18 deletions(-)
+{
+  "time": "2026-03-26T15:45:06.172447+00:00",
+  "price": {
+    "bid": 4440.89,
+    "ask": 4441.39
+  },
+  "balance": 30999.65,
+  "trend_1h": "STRONG_BEAR",
+  "trend_15m": "STRONG_BULL",
+  "ema9_1h": 4450.2,
+  "ema21_1h": 4478.57,
+  "rsi_1h": 32.8,
+  "rsi_15m": 48.8,
+  "rsi_5m": 26.3,
+  "atr_15m": 19.14,
+  "atr_1h": 35.35,
+  "bb_15m": {
+    "mid": 4445.78,
+    "upper": 4466.35,
+    "lower": 4425.2
+  },
+  "macd_15m": {
+    "line": 7.84,
+    "signal": 7.84,
+    "hist": 0.0
+  },
+  "actions": [
+    "MON: SELL @4459.14 P/L=18.61pts",
+    "SKIP: already have SELL",
+    "NO_TRADE: signals too weak or slots full"
+  ]
+}
+[main 71be7d7] auto: update trading data 2026-03-26 23:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 16 insertions(+), 28 deletions(-)
+{
+  "time": "2026-03-26T16:00:05.531684+00:00",
+  "price": {
+    "bid": 4436.66,
+    "ask": 4437.16
+  },
+  "balance": 30999.69,
+  "trend_1h": "STRONG_BEAR",
+  "trend_15m": "STRONG_BULL",
+  "ema9_1h": 4449.85,
+  "ema21_1h": 4478.41,
+  "rsi_1h": 32.6,
+  "rsi_15m": 50.0,
+  "rsi_5m": 33.2,
+  "atr_15m": 19.21,
+  "atr_1h": 35.54,
+  "bb_15m": {
+    "mid": 4445.52,
+    "upper": 4466.32,
+    "lower": 4424.72
+  },
+  "macd_15m": {
+    "line": 6.79,
+    "signal": 6.79,
+    "hist": 0.0
+  },
+  "actions": [
+    "TRAIL_BE: 00000000 stop\u21924458.14",
+    "MON: SELL @4459.14 P/L=21.88pts",
+    "NO_SIGNAL: no valid entry found"
+  ]
+}
+[main 6bc6046] auto: update trading data 2026-03-27 00:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 17 insertions(+), 17 deletions(-)
+{
+  "time": "2026-03-26T16:15:05.201484+00:00",
+  "price": {
+    "bid": 4437.96,
+    "ask": 4438.46
+  },
+  "balance": 30999.67,
+  "trend_1h": "STRONG_BEAR",
+  "trend_15m": "STRONG_BULL",
+  "ema9_1h": 4447.91,
+  "ema21_1h": 4475.87,
+  "rsi_1h": 36.4,
+  "rsi_15m": 55.8,
+  "rsi_5m": 24.5,
+  "atr_15m": 18.93,
+  "atr_1h": 34.58,
+  "bb_15m": {
+    "mid": 4445.33,
+    "upper": 4464.43,
+    "lower": 4426.23
+  },
+  "macd_15m": {
+    "line": 5.11,
+    "signal": 5.11,
+    "hist": 0.0
+  },
+  "actions": [
+    "MON: SELL @4459.14 P/L=19.47pts",
+    "NO_SIGNAL: no valid entry found"
+  ]
+}
+[main 8e259e7] auto: update trading data 2026-03-27 00:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 17 insertions(+), 18 deletions(-)
+{
+  "time": "2026-03-26T16:30:06.781953+00:00",
+  "price": {
+    "bid": 4391.7,
+    "ask": 4392.2
+  },
+  "balance": 31000.14,
+  "trend_1h": "STRONG_BEAR",
+  "trend_15m": "STRONG_BEAR",
+  "ema9_1h": 4439.34,
+  "ema21_1h": 4471.98,
+  "rsi_1h": 30.9,
+  "rsi_15m": 36.7,
+  "rsi_5m": 12.0,
+  "atr_15m": 22.2,
+  "atr_1h": 37.39,
+  "bb_15m": {
+    "mid": 4443.1,
+    "upper": 4472.76,
+    "lower": 4413.45
+  },
+  "macd_15m": {
+    "line": 1.25,
+    "signal": 1.25,
+    "hist": 0.0
+  },
+  "actions": [
+    "TRAIL_TIGHT: 00000000 stop\u21924414.88",
+    "MON: SELL @4459.14 P/L=66.46pts",
+    "SKIP: already have SELL",
+    "SKIP: already have SELL",
+    "NO_TRADE: signals too weak or slots full"
+  ]
+}
+[main 84ddba1] auto: update trading data 2026-03-27 00:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 20 insertions(+), 17 deletions(-)
+{
+  "time": "2026-03-26T16:45:04.174744+00:00",
+  "price": {
+    "bid": 4381.31,
+    "ask": 4381.81
+  },
+  "balance": 31000.26,
+  "trend_1h": "STRONG_BEAR",
+  "trend_15m": "STRONG_BEAR",
+  "ema9_1h": 4435.05,
+  "ema21_1h": 4470.03,
+  "rsi_1h": 28.8,
+  "rsi_15m": 27.6,
+  "rsi_5m": 15.4,
+  "atr_15m": 22.51,
+  "atr_1h": 38.81,
+  "bb_15m": {
+    "mid": 4440.1,
+    "upper": 4480.24,
+    "lower": 4399.97
+  },
+  "macd_15m": {
+    "line": -3.84,
+    "signal": -3.84,
+    "hist": 0.0
+  },
+  "actions": [
+    "TRAIL_TIGHT: 00000000 stop\u21924402.02",
+    "MON: SELL @4459.14 P/L=79.63pts",
+    "SKIP: already have SELL",
+    "SKIP: already have SELL",
+    "OPENED: BUY via 1H_RSI_EXTREME conf=55% SL=38.8 TP=155.2",
+    "SKIP: already have BUY"
+  ]
+}
+[main 171da66] auto: update trading data 2026-03-27 00:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 38 insertions(+), 19 deletions(-)
+{
+  "time": "2026-03-26T17:00:06.146667+00:00",
+  "price": {
+    "bid": 4387.56,
+    "ask": 4388.06
+  },
+  "balance": 31000.23,
+  "trend_1h": "STRONG_BEAR",
+  "trend_15m": "STRONG_BEAR",
+  "ema9_1h": 4437.77,
+  "ema21_1h": 4471.26,
+  "rsi_1h": 30.1,
+  "rsi_15m": 19.1,
+  "rsi_5m": 15.8,
+  "atr_15m": 21.24,
+  "atr_1h": 38.81,
+  "bb_15m": {
+    "mid": 4437.08,
+    "upper": 4483.37,
+    "lower": 4390.78
+  },
+  "macd_15m": {
+    "line": -8.57,
+    "signal": -8.57,
+    "hist": 0.0
+  },
+  "actions": [
+    "MON: BUY @4383.12 P/L=4.92pts",
+    "MON: SELL @4459.14 P/L=70.6pts",
+    "SKIP: already have SELL",
+    "SKIP: already have BUY",
+    "SKIP: already have BUY",
+    "NO_TRADE: signals too weak or slots full"
+  ]
+}
+[main a381326] auto: update trading data 2026-03-27 01:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 31 insertions(+), 19 deletions(-)
+{
+  "time": "2026-03-26T17:15:06.247308+00:00",
+  "price": {
+    "bid": 4395.29,
+    "ask": 4395.79
+  },
+  "balance": 31000.17,
+  "trend_1h": "STRONG_BEAR",
+  "trend_15m": "STRONG_BEAR",
+  "ema9_1h": 4429.35,
+  "ema21_1h": 4465.47,
+  "rsi_1h": 29.7,
+  "rsi_15m": 27.2,
+  "rsi_5m": 25.7,
+  "atr_15m": 19.97,
+  "atr_1h": 38.72,
+  "bb_15m": {
+    "mid": 4433.9,
+    "upper": 4486.03,
+    "lower": 4381.77
+  },
+  "macd_15m": {
+    "line": -12.37,
+    "signal": -12.37,
+    "hist": 0.0
+  },
+  "actions": [
+    "MON: BUY @4383.12 P/L=12.53pts",
+    "OPENED: SELL via 15M_TREND_FOLLOW conf=60% SL=16.0 TP=63.9",
+    "SKIP: already have BUY"
+  ]
+}
+[main 6bdb008] auto: update trading data 2026-03-27 01:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 36 insertions(+), 33 deletions(-)
+{
+  "time": "2026-03-26T17:30:06.291044+00:00",
+  "price": {
+    "bid": 4382.62,
+    "ask": 4383.12
+  },
+  "balance": 31000.16,
+  "trend_1h": "STRONG_BEAR",
+  "trend_15m": "STRONG_BEAR",
+  "ema9_1h": 4427.36,
+  "ema21_1h": 4464.57,
+  "rsi_1h": 27.9,
+  "rsi_15m": 18.6,
+  "rsi_5m": 25.9,
+  "atr_15m": 20.71,
+  "atr_1h": 38.78,
+  "bb_15m": {
+    "mid": 4431.96,
+    "upper": 4486.88,
+    "lower": 4377.04
+  },
+  "macd_15m": {
+    "line": -15.07,
+    "signal": -15.07,
+    "hist": 0.0
+  },
+  "actions": [
+    "MON: BUY @4383.12 P/L=1.24pts",
+    "MON: SELL @4395.18 P/L=10.32pts",
+    "SKIP: already have SELL",
+    "SKIP: already have BUY",
+    "SKIP: already have BUY",
+    "NO_TRADE: signals too weak or slots full"
+  ]
+}
+[main 966bcca] auto: update trading data 2026-03-27 01:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 32 insertions(+), 17 deletions(-)
+{
+  "time": "2026-03-26T17:45:04.042309+00:00",
+  "price": {
+    "bid": 4385.55,
+    "ask": 4386.05
+  },
+  "balance": 31000.16,
+  "trend_1h": "STRONG_BEAR",
+  "trend_15m": "STRONG_BEAR",
+  "ema9_1h": 4427.92,
+  "ema21_1h": 4464.82,
+  "rsi_1h": 28.2,
+  "rsi_15m": 26.9,
+  "rsi_5m": 51.9,
+  "atr_15m": 21.11,
+  "atr_1h": 39.26,
+  "bb_15m": {
+    "mid": 4430.73,
+    "upper": 4488.72,
+    "lower": 4372.74
+  },
+  "macd_15m": {
+    "line": -16.65,
+    "signal": -16.65,
+    "hist": 0.0
+  },
+  "actions": [
+    "MON: BUY @4383.12 P/L=2.69pts",
+    "MON: SELL @4395.18 P/L=8.87pts",
+    "SKIP: already have SELL",
+    "SKIP: already have BUY",
+    "NO_TRADE: signals too weak or slots full"
+  ]
+}
+[main a8a12e7] auto: update trading data 2026-03-27 01:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 18 insertions(+), 19 deletions(-)
+{
+  "time": "2026-03-26T18:00:05.695841+00:00",
+  "price": {
+    "bid": 4382.02,
+    "ask": 4382.52
+  },
+  "balance": 31000.14,
+  "trend_1h": "STRONG_BEAR",
+  "trend_15m": "STRONG_BEAR",
+  "ema9_1h": 4422.07,
+  "ema21_1h": 4460.71,
+  "rsi_1h": 20.4,
+  "rsi_15m": 18.9,
+  "rsi_5m": 45.3,
+  "atr_15m": 20.13,
+  "atr_1h": 38.83,
+  "bb_15m": {
+    "mid": 4428.39,
+    "upper": 4490.08,
+    "lower": 4366.69
+  },
+  "macd_15m": {
+    "line": -18.92,
+    "signal": -18.92,
+    "hist": 0.0
+  },
+  "actions": [
+    "MON: BUY @4384.04 P/L=-1.9pts",
+    "MON: BUY @4383.12 P/L=-0.98pts",
+    "MON: SELL @4395.18 P/L=12.54pts",
+    "MAX_POS: 3/3"
+  ]
+}
+[main 30f69b9] auto: update trading data 2026-03-27 02:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 34 insertions(+), 21 deletions(-)
+{
+  "time": "2026-03-26T18:15:14.162069+00:00",
+  "balance": 30996.51,
+  "prices": {
+    "GOLD": {
+      "bid": 4387.87,
+      "ask": 4388.37
+    },
+    "EURUSDM2026": {
+      "bid": 1.15709,
+      "ask": 1.15715
+    },
+    "BTCUSD": {
+      "bid": 68357.15,
+      "ask": 68407.15
+    },
+    "US500": {
+      "bid": 6495.0,
+      "ask": 6495.4
+    },
+    "OIL_CRUDE": {
+      "bid": 93.944,
+      "ask": 93.976
+    }
+  },
+  "actions": [
+    "MAX_POS: 5/5"
+  ]
+}
+[main d479a95] auto: update 2026-03-27 02:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 71 insertions(+), 46 deletions(-)
+{
+  "time": "2026-03-26T18:30:16.546839+00:00",
+  "balance": 31008.68,
+  "prices": {
+    "GOLD": {
+      "bid": 4374.61,
+      "ask": 4375.11
+    },
+    "EURUSDM2026": {
+      "bid": 1.15683,
+      "ask": 1.15689
+    },
+    "BTCUSD": {
+      "bid": 68159.8,
+      "ask": 68209.8
+    },
+    "US500": {
+      "bid": 6491.9,
+      "ask": 6492.3
+    },
+    "OIL_CRUDE": {
+      "bid": 93.618,
+      "ask": 93.65
+    }
+  },
+  "actions": [
+    "MAX_POS: 5/5"
+  ]
+}
+[main c55916e] auto: update 2026-03-27 02:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 56 insertions(+), 56 deletions(-)
+{
+  "time": "2026-03-26T18:45:16.459318+00:00",
+  "balance": 31002.49,
+  "prices": {
+    "GOLD": {
+      "bid": 4392.28,
+      "ask": 4392.78
+    },
+    "EURUSDM2026": {
+      "bid": 1.15729,
+      "ask": 1.15735
+    },
+    "BTCUSD": {
+      "bid": 68245.55,
+      "ask": 68295.55
+    },
+    "US500": {
+      "bid": 6495.7,
+      "ask": 6496.1
+    },
+    "OIL_CRUDE": {
+      "bid": 93.648,
+      "ask": 93.68
+    }
+  },
+  "actions": [
+    "OPENED: SELL XAUUSD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05"
+  ]
+}
+[main f8f7414] auto: update 2026-03-27 02:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 86 insertions(+), 74 deletions(-)
+{
+  "time": "2026-03-26T19:00:16.558732+00:00",
+  "balance": 30993.68,
+  "prices": {
+    "GOLD": {
+      "bid": 4395.35,
+      "ask": 4395.85
+    },
+    "EURUSDM2026": {
+      "bid": 1.15743,
+      "ask": 1.15749
+    },
+    "BTCUSD": {
+      "bid": 68412.25,
+      "ask": 68462.25
+    },
+    "US500": {
+      "bid": 6498.5,
+      "ask": 6498.9
+    },
+    "OIL_CRUDE": {
+      "bid": 93.615,
+      "ask": 93.647
+    }
+  },
+  "actions": [
+    "MAX_POS: 5/5"
+  ]
+}
+[main 64b734f] auto: update 2026-03-27 03:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 66 insertions(+), 53 deletions(-)
+{
+  "time": "2026-03-26T19:15:14.105488+00:00",
+  "balance": 30996.32,
+  "prices": {
+    "GOLD": {
+      "bid": 4387.99,
+      "ask": 4388.49
+    },
+    "EURUSDM2026": {
+      "bid": 1.15647,
+      "ask": 1.15653
+    },
+    "BTCUSD": {
+      "bid": 68380.65,
+      "ask": 68430.65
+    },
+    "US500": {
+      "bid": 6488.7,
+      "ask": 6489.1
+    },
+    "OIL_CRUDE": {
+      "bid": 93.768,
+      "ask": 93.848
+    }
+  },
+  "actions": [
+    "MAX_POS: 5/5"
+  ]
+}
+[main 592ce21] auto: update 2026-03-27 03:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 55 insertions(+), 55 deletions(-)
+{
+  "time": "2026-03-26T19:30:15.233619+00:00",
+  "balance": 30997.22,
+  "prices": {
+    "GOLD": {
+      "bid": 4382.73,
+      "ask": 4383.23
+    },
+    "EURUSDM2026": {
+      "bid": 1.15639,
+      "ask": 1.15645
+    },
+    "BTCUSD": {
+      "bid": 68380.55,
+      "ask": 68430.55
+    },
+    "US500": {
+      "bid": 6487.4,
+      "ask": 6487.8
+    },
+    "OIL_CRUDE": {
+      "bid": 93.564,
+      "ask": 93.644
+    }
+  },
+  "actions": [
+    "MAX_POS: 5/5"
+  ]
+}
+[main 90402c7] auto: update 2026-03-27 03:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 54 insertions(+), 54 deletions(-)
+{
+  "time": "2026-03-26T19:45:15.060652+00:00",
+  "balance": 30990.49,
+  "prices": {
+    "GOLD": {
+      "bid": 4379.41,
+      "ask": 4379.91
+    },
+    "EURUSDM2026": {
+      "bid": 1.15641,
+      "ask": 1.1565
+    },
+    "BTCUSD": {
+      "bid": 68559.2,
+      "ask": 68609.2
+    },
+    "US500": {
+      "bid": 6480.4,
+      "ask": 6480.8
+    },
+    "OIL_CRUDE": {
+      "bid": 93.722,
+      "ask": 93.754
+    }
+  },
+  "actions": [
+    "OPENED: SELL XAUUSD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05"
+  ]
+}
+[main 23a6809] auto: update 2026-03-27 03:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 92 insertions(+), 75 deletions(-)
+{
+  "time": "2026-03-26T20:00:12.816880+00:00",
+  "balance": 30992.7,
+  "prices": {
+    "GOLD": {
+      "bid": 4362.09,
+      "ask": 4362.59
+    },
+    "EURUSDM2026": {
+      "bid": 1.15618,
+      "ask": 1.15624
+    },
+    "BTCUSD": {
+      "bid": 68479.75,
+      "ask": 68529.75
+    },
+    "US500": {
+      "bid": 6474.3,
+      "ask": 6474.9
+    },
+    "OIL_CRUDE": {
+      "bid": 93.406,
+      "ask": 93.486
+    }
+  },
+  "actions": [
+    "PROFIT_CLOSE: SELL Gold +29.5pts",
+    "PROFIT_CLOSE: SELL Gold +25.7pts",
+    "TRAIL_BE: Gold SELL",
+    "MAX_POS: 5/5"
+  ]
+}
+[main bfa5392] auto: update 2026-03-27 04:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 133 insertions(+), 69 deletions(-)
+{
+  "time": "2026-03-26T20:15:12.717095+00:00",
+  "balance": 30992.4,
+  "prices": {
+    "GOLD": {
+      "bid": 4396.64,
+      "ask": 4397.14
+    },
+    "EURUSDM2026": {
+      "bid": 1.1585,
+      "ask": 1.15862
+    },
+    "BTCUSD": {
+      "bid": 69080.75,
+      "ask": 69130.75
+    },
+    "US500": {
+      "bid": 6502.3,
+      "ask": 6502.9
+    },
+    "OIL_CRUDE": {
+      "bid": 91.871,
+      "ask": 91.951
+    }
+  },
+  "actions": [
+    "OPENED: SELL XAUUSD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05",
+    "OPENED: SELL BTC/USD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05",
+    "OPENED: SELL S&P 500 via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.49"
+  ]
+}
+[main 8ad65eb] auto: update 2026-03-27 04:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 87 insertions(+), 104 deletions(-)
+{
+  "time": "2026-03-26T20:30:16.323834+00:00",
+  "balance": 30974.38,
+  "prices": {
+    "GOLD": {
+      "bid": 4404.43,
+      "ask": 4404.93
+    },
+    "EURUSDM2026": {
+      "bid": 1.15736,
+      "ask": 1.15745
+    },
+    "BTCUSD": {
+      "bid": 69096.95,
+      "ask": 69146.95
+    },
+    "US500": {
+      "bid": 6498.1,
+      "ask": 6498.7
+    },
+    "OIL_CRUDE": {
+      "bid": 92.446,
+      "ask": 92.526
+    }
+  },
+  "actions": [
+    "TRAIL_BE: Gold BUY",
+    "OPENED: SELL XAUUSD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05",
+    "OPENED: SELL BTC/USD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05",
+    "OPENED: SELL S&P 500 via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.49"
+  ]
+}
+[main 66f49b0] auto: update 2026-03-27 04:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 140 insertions(+), 63 deletions(-)
+{
+  "time": "2026-03-26T20:45:16.648830+00:00",
+  "balance": 30970.63,
+  "prices": {
+    "GOLD": {
+      "bid": 4407.11,
+      "ask": 4407.61
+    },
+    "EURUSDM2026": {
+      "bid": 1.15729,
+      "ask": 1.15738
+    },
+    "BTCUSD": {
+      "bid": 69098.6,
+      "ask": 69148.6
+    },
+    "US500": {
+      "bid": 6502.2,
+      "ask": 6502.8
+    },
+    "OIL_CRUDE": {
+      "bid": 92.818,
+      "ask": 92.898
+    }
+  },
+  "actions": [
+    "TRAIL_BE: Gold BUY",
+    "OPENED: SELL XAUUSD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05"
+  ]
+}
+[main 08a1e1f] auto: update 2026-03-27 04:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 136 insertions(+), 63 deletions(-)
+{
+  "time": "2026-03-26T21:00:24.303173+00:00",
+  "balance": 30986.61,
+  "prices": {
+    "GOLD": {
+      "bid": 4378.39,
+      "ask": 4378.89
+    },
+    "EURUSDM2026": {
+      "bid": 1.15664,
+      "ask": 1.15693
+    },
+    "BTCUSD": {
+      "bid": 68936.15,
+      "ask": 68986.15
+    },
+    "US500": {
+      "bid": 6488.8,
+      "ask": 6489.4
+    },
+    "OIL_CRUDE": {
+      "bid": 93.04,
+      "ask": 93.12
+    }
+  },
+  "actions": [
+    "TRAIL_BE: Gold SELL",
+    "NO_TRADE: no qualified signal"
+  ]
+}
+[main 57f2ba5] auto: update 2026-03-27 05:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 108 insertions(+), 74 deletions(-)
+{
+  "time": "2026-03-26T21:15:18.052895+00:00",
+  "balance": 30988.5,
+  "prices": {
+    "GOLD": {
+      "bid": 4378.39,
+      "ask": 4378.89
+    },
+    "EURUSDM2026": {
+      "bid": 1.15715,
+      "ask": 1.15775
+    },
+    "BTCUSD": {
+      "bid": 68842.45,
+      "ask": 68892.45
+    },
+    "US500": {
+      "bid": 6493.2,
+      "ask": 6494.7
+    },
+    "OIL_CRUDE": {
+      "bid": 93.04,
+      "ask": 93.12
+    }
+  },
+  "actions": [
+    "OPENED: SELL S&P 500 via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.49",
+    "OPENED: BUY BTC/USD via 1H_RSI\u6975\u7aef conf=55% size=0.04"
+  ]
+}
+[main d028829] auto: update 2026-03-27 05:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 38 insertions(+), 38 deletions(-)
+{
+  "time": "2026-03-26T21:30:18.146289+00:00",
+  "balance": 30987.62,
+  "prices": {
+    "GOLD": {
+      "bid": 4378.39,
+      "ask": 4378.89
+    },
+    "EURUSDM2026": {
+      "bid": 1.15686,
+      "ask": 1.15746
+    },
+    "BTCUSD": {
+      "bid": 69012.35,
+      "ask": 69062.35
+    },
+    "US500": {
+      "bid": 6490.3,
+      "ask": 6491.8
+    },
+    "OIL_CRUDE": {
+      "bid": 93.04,
+      "ask": 93.12
+    }
+  },
+  "actions": [
+    "MAX_POS: 5/5"
+  ]
+}
+[main b7163d1] auto: update 2026-03-27 05:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 99 insertions(+), 45 deletions(-)
+{
+  "time": "2026-03-26T21:45:16.931120+00:00",
+  "balance": 30987.65,
+  "prices": {
+    "GOLD": {
+      "bid": 4378.39,
+      "ask": 4378.89
+    },
+    "EURUSDM2026": {
+      "bid": 1.15723,
+      "ask": 1.15783
+    },
+    "BTCUSD": {
+      "bid": 68950.3,
+      "ask": 69000.3
+    },
+    "US500": {
+      "bid": 6489.0,
+      "ask": 6491.5
+    },
+    "OIL_CRUDE": {
+      "bid": 93.04,
+      "ask": 93.12
+    }
+  },
+  "actions": [
+    "MAX_POS: 5/5"
+  ]
+}
+[main 66a2f1f] auto: update 2026-03-27 05:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 35 insertions(+), 35 deletions(-)
+{
+  "time": "2026-03-26T22:00:17.824555+00:00",
+  "balance": 30989.57,
+  "prices": {
+    "GOLD": {
+      "bid": 4376.86,
+      "ask": 4378.66
+    },
+    "EURUSDM2026": {
+      "bid": 1.15698,
+      "ask": 1.15758
+    },
+    "BTCUSD": {
+      "bid": 68867.55,
+      "ask": 68917.55
+    },
+    "US500": {
+      "bid": 6489.7,
+      "ask": 6490.3
+    },
+    "OIL_CRUDE": {
+      "bid": 93.04,
+      "ask": 93.12
+    }
+  },
+  "actions": [
+    "MAX_POS: 5/5"
+  ]
+}
+[main 9cf3417] auto: update 2026-03-27 06:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 43 insertions(+), 43 deletions(-)
+{
+  "time": "2026-03-26T22:15:16.805484+00:00",
+  "balance": 30977.08,
+  "prices": {
+    "GOLD": {
+      "bid": 4402.94,
+      "ask": 4403.44
+    },
+    "EURUSDM2026": {
+      "bid": 1.15765,
+      "ask": 1.15776
+    },
+    "BTCUSD": {
+      "bid": 68895.55,
+      "ask": 68945.55
+    },
+    "US500": {
+      "bid": 6501.2,
+      "ask": 6501.8
+    },
+    "OIL_CRUDE": {
+      "bid": 92.511,
+      "ask": 92.591
+    }
+  },
+  "actions": [
+    "MAX_POS: 5/5"
+  ]
+}
+[main 7e56e62] auto: update 2026-03-27 06:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 57 insertions(+), 57 deletions(-)
+{
+  "time": "2026-03-26T22:30:16.181397+00:00",
+  "balance": 30982.78,
+  "prices": {
+    "GOLD": {
+      "bid": 4398.59,
+      "ask": 4399.09
+    },
+    "EURUSDM2026": {
+      "bid": 1.15761,
+      "ask": 1.15774
+    },
+    "BTCUSD": {
+      "bid": 68645.65,
+      "ask": 68695.65
+    },
+    "US500": {
+      "bid": 6496.7,
+      "ask": 6497.3
+    },
+    "OIL_CRUDE": {
+      "bid": 92.821,
+      "ask": 92.853
+    }
+  },
+  "actions": [
+    "PROFIT_CLOSE: SELL Bitcoin/USD +419.1pts",
+    "OPENED: SELL XAUUSD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05"
+  ]
+}
+[main 60c1dd2] auto: update 2026-03-27 06:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 90 insertions(+), 78 deletions(-)
+{
+  "time": "2026-03-26T22:45:15.683761+00:00",
+  "balance": 30985.38,
+  "prices": {
+    "GOLD": {
+      "bid": 4405.96,
+      "ask": 4406.46
+    },
+    "EURUSDM2026": {
+      "bid": 1.15788,
+      "ask": 1.15797
+    },
+    "BTCUSD": {
+      "bid": 68730.35,
+      "ask": 68780.35
+    },
+    "US500": {
+      "bid": 6498.5,
+      "ask": 6499.1
+    },
+    "OIL_CRUDE": {
+      "bid": 92.553,
+      "ask": 92.633
+    }
+  },
+  "actions": [
+    "OPENED: SELL XAUUSD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05"
+  ]
+}
+[main d507f1a] auto: update 2026-03-27 06:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 56 insertions(+), 57 deletions(-)
+{
+  "time": "2026-03-26T23:00:16.600345+00:00",
+  "balance": 30986.72,
+  "prices": {
+    "GOLD": {
+      "bid": 4411.64,
+      "ask": 4412.14
+    },
+    "EURUSDM2026": {
+      "bid": 1.15786,
+      "ask": 1.15795
+    },
+    "BTCUSD": {
+      "bid": 68854.05,
+      "ask": 68904.05
+    },
+    "US500": {
+      "bid": 6502.3,
+      "ask": 6502.9
+    },
+    "OIL_CRUDE": {
+      "bid": 92.55,
+      "ask": 92.63
+    }
+  },
+  "actions": [
+    "MAX_POS: 5/5"
+  ]
+}
+[main acba028] auto: update 2026-03-27 07:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 63 insertions(+), 50 deletions(-)
+{
+  "time": "2026-03-26T23:15:15.166858+00:00",
+  "balance": 30986.68,
+  "prices": {
+    "GOLD": {
+      "bid": 4392.06,
+      "ask": 4392.56
+    },
+    "EURUSDM2026": {
+      "bid": 1.15777,
+      "ask": 1.15786
+    },
+    "BTCUSD": {
+      "bid": 68747.45,
+      "ask": 68797.45
+    },
+    "US500": {
+      "bid": 6499.1,
+      "ask": 6499.7
+    },
+    "OIL_CRUDE": {
+      "bid": 92.652,
+      "ask": 92.732
+    }
+  },
+  "actions": [
+    "MAX_POS: 5/5"
+  ]
+}
+[main 1798167] auto: update 2026-03-27 07:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 55 insertions(+), 55 deletions(-)
+{
+  "time": "2026-03-26T23:30:16.902151+00:00",
+  "balance": 30982.69,
+  "prices": {
+    "GOLD": {
+      "bid": 4399.4,
+      "ask": 4399.9
+    },
+    "EURUSDM2026": {
+      "bid": 1.15781,
+      "ask": 1.1579
+    },
+    "BTCUSD": {
+      "bid": 68654.9,
+      "ask": 68704.9
+    },
+    "US500": {
+      "bid": 6499.2,
+      "ask": 6499.8
+    },
+    "OIL_CRUDE": {
+      "bid": 92.634,
+      "ask": 92.714
+    }
+  },
+  "actions": [
+    "MAX_POS: 5/5"
+  ]
+}
+[main fe6895d] auto: update 2026-03-27 07:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 56 insertions(+), 56 deletions(-)
+{
+  "time": "2026-03-26T23:45:14.638381+00:00",
+  "balance": 30976.4,
+  "prices": {
+    "GOLD": {
+      "bid": 4400.0,
+      "ask": 4400.75
+    },
+    "EURUSDM2026": {
+      "bid": 1.15762,
+      "ask": 1.15771
+    },
+    "BTCUSD": {
+      "bid": 68672.8,
+      "ask": 68722.8
+    },
+    "US500": {
+      "bid": 6504.9,
+      "ask": 6505.5
+    },
+    "OIL_CRUDE": {
+      "bid": 92.556,
+      "ask": 92.636
+    }
+  },
+  "actions": [
+    "OPENED: BUY S&P 500 via 15M_\u52d5\u91cf\u7a81\u7834 conf=50% size=0.23"
+  ]
+}
+[main cbeb691] auto: update 2026-03-27 07:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 89 insertions(+), 77 deletions(-)
+{
+  "time": "2026-03-27T00:00:13.518857+00:00",
+  "balance": 30978.72,
+  "prices": {
+    "GOLD": {
+      "bid": 4405.8,
+      "ask": 4406.3
+    },
+    "EURUSDM2026": {
+      "bid": 1.15745,
+      "ask": 1.15754
+    },
+    "BTCUSD": {
+      "bid": 68754.35,
+      "ask": 68804.35
+    },
+    "US500": {
+      "bid": 6508.6,
+      "ask": 6509.2
+    },
+    "OIL_CRUDE": {
+      "bid": 92.255,
+      "ask": 92.335
+    }
+  },
+  "actions": [
+    "NO_SIGNAL"
+  ]
+}
+[main 61b553c] auto: update 2026-03-27 08:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 63 insertions(+), 50 deletions(-)
+{
+  "time": "2026-03-27T00:15:14.458572+00:00",
+  "balance": 30980.22,
+  "prices": {
+    "GOLD": {
+      "bid": 4403.68,
+      "ask": 4404.18
+    },
+    "EURUSDM2026": {
+      "bid": 1.15731,
+      "ask": 1.1574
+    },
+    "BTCUSD": {
+      "bid": 68854.1,
+      "ask": 68904.1
+    },
+    "US500": {
+      "bid": 6506.2,
+      "ask": 6506.8
+    },
+    "OIL_CRUDE": {
+      "bid": 92.158,
+      "ask": 92.238
+    }
+  },
+  "actions": [
+    "OPENED: BUY BTC/USD via 15M_\u52d5\u91cf\u7a81\u7834 conf=50% size=0.02"
+  ]
+}
+[main 515c44e] auto: update 2026-03-27 08:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 89 insertions(+), 78 deletions(-)
+{
+  "time": "2026-03-27T00:30:13.683985+00:00",
+  "balance": 30967.54,
+  "prices": {
+    "GOLD": {
+      "bid": 4392.78,
+      "ask": 4393.28
+    },
+    "EURUSDM2026": {
+      "bid": 1.1568,
+      "ask": 1.15686
+    },
+    "BTCUSD": {
+      "bid": 68657.35,
+      "ask": 68707.35
+    },
+    "US500": {
+      "bid": 6495.8,
+      "ask": 6496.4
+    },
+    "OIL_CRUDE": {
+      "bid": 92.805,
+      "ask": 92.885
+    }
+  },
+  "actions": [
+    "OPENED: SELL BTC/USD via 15M_\u52d5\u91cf\u7a81\u7834 conf=60% size=0.05",
+    "OPENED: SELL S&P 500 via 15M_\u52d5\u91cf\u7a81\u7834 conf=60% size=0.49"
+  ]
+}
+[main c29d6ab] auto: update 2026-03-27 08:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 113 insertions(+), 109 deletions(-)
+{
+  "time": "2026-03-27T00:45:12.473292+00:00",
+  "balance": 30969.75,
+  "prices": {
+    "GOLD": {
+      "bid": 4390.6,
+      "ask": 4391.1
+    },
+    "EURUSDM2026": {
+      "bid": 1.15683,
+      "ask": 1.15689
+    },
+    "BTCUSD": {
+      "bid": 68625.7,
+      "ask": 68675.7
+    },
+    "US500": {
+      "bid": 6490.0,
+      "ask": 6490.6
+    },
+    "OIL_CRUDE": {
+      "bid": 93.053,
+      "ask": 93.133
+    }
+  },
+  "actions": [
+    "MAX_POS: 5/5"
+  ]
+}
+[main 334c152] auto: update 2026-03-27 08:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 110 insertions(+), 80 deletions(-)
+{
+  "time": "2026-03-27T01:00:15.155149+00:00",
+  "balance": 30968.76,
+  "prices": {
+    "GOLD": {
+      "bid": 4378.35,
+      "ask": 4378.85
+    },
+    "EURUSDM2026": {
+      "bid": 1.15714,
+      "ask": 1.15723
+    },
+    "BTCUSD": {
+      "bid": 68726.0,
+      "ask": 68776.0
+    },
+    "US500": {
+      "bid": 6492.5,
+      "ask": 6493.1
+    },
+    "OIL_CRUDE": {
+      "bid": 93.225,
+      "ask": 93.305
+    }
+  },
+  "actions": [
+    "TRAIL_BE: Gold SELL",
+    "MAX_POS: 5/5"
+  ]
+}
+[main da45b65] auto: update 2026-03-27 09:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 54 insertions(+), 53 deletions(-)
+{
+  "time": "2026-03-27T01:15:14.794736+00:00",
+  "balance": 30963.02,
+  "prices": {
+    "GOLD": {
+      "bid": 4395.63,
+      "ask": 4396.13
+    },
+    "EURUSDM2026": {
+      "bid": 1.15739,
+      "ask": 1.15748
+    },
+    "BTCUSD": {
+      "bid": 68798.35,
+      "ask": 68848.35
+    },
+    "US500": {
+      "bid": 6499.1,
+      "ask": 6499.7
+    },
+    "OIL_CRUDE": {
+      "bid": 92.616,
+      "ask": 92.696
+    }
+  },
+  "actions": [
+    "OPENED: BUY XAUUSD via 15M_\u52d5\u91cf\u7a81\u7834 conf=50% size=0.02"
+  ]
+}
+[main 657a5c2] auto: update 2026-03-27 09:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 57 insertions(+), 71 deletions(-)
+{
+  "time": "2026-03-27T01:30:13.981191+00:00",
+  "balance": 30962.54,
+  "prices": {
+    "GOLD": {
+      "bid": 4406.26,
+      "ask": 4406.76
+    },
+    "EURUSDM2026": {
+      "bid": 1.15764,
+      "ask": 1.15773
+    },
+    "BTCUSD": {
+      "bid": 68835.9,
+      "ask": 68885.9
+    },
+    "US500": {
+      "bid": 6501.5,
+      "ask": 6502.1
+    },
+    "OIL_CRUDE": {
+      "bid": 92.707,
+      "ask": 92.787
+    }
+  },
+  "actions": [
+    "OPENED: BUY XAUUSD via 15M_\u52d5\u91cf\u7a81\u7834 conf=50% size=0.02"
+  ]
+}
+[main 8a21cc0] auto: update 2026-03-27 09:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 97 insertions(+), 92 deletions(-)
+{
+  "time": "2026-03-27T01:45:11.316853+00:00",
+  "balance": 30962.95,
+  "prices": {
+    "GOLD": {
+      "bid": 4418.93,
+      "ask": 4419.43
+    },
+    "EURUSDM2026": {
+      "bid": 1.15788,
+      "ask": 1.15797
+    },
+    "BTCUSD": {
+      "bid": 68825.05,
+      "ask": 68875.05
+    },
+    "US500": {
+      "bid": 6500.9,
+      "ask": 6501.5
+    },
+    "OIL_CRUDE": {
+      "bid": 92.602,
+      "ask": 92.682
+    }
+  },
+  "actions": [
+    "PROFIT_CLOSE: BUY Gold +23.9pts",
+    "OPENED: SELL XAUUSD via 1H_EMA\u56de\u5f48 conf=55% size=0.04"
+  ]
+}
+[main faf9585] auto: update 2026-03-27 09:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 123 insertions(+), 114 deletions(-)
+{
+  "time": "2026-03-27T02:00:14.411795+00:00",
+  "balance": 30967.65,
+  "prices": {
+    "GOLD": {
+      "bid": 4417.72,
+      "ask": 4418.22
+    },
+    "EURUSDM2026": {
+      "bid": 1.15825,
+      "ask": 1.15831
+    },
+    "BTCUSD": {
+      "bid": 68990.55,
+      "ask": 69040.55
+    },
+    "US500": {
+      "bid": 6504.2,
+      "ask": 6504.8
+    },
+    "OIL_CRUDE": {
+      "bid": 91.446,
+      "ask": 91.526
+    }
+  },
+  "actions": [
+    "OPENED: SELL XAUUSD via 1H_EMA\u56de\u5f48 conf=55% size=0.04"
+  ]
+}
+[main caf951e] auto: update 2026-03-27 10:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 60 insertions(+), 61 deletions(-)
+{
+  "time": "2026-03-27T02:15:14.187292+00:00",
+  "balance": 30965.76,
+  "prices": {
+    "GOLD": {
+      "bid": 4434.33,
+      "ask": 4434.83
+    },
+    "EURUSDM2026": {
+      "bid": 1.15784,
+      "ask": 1.1579
+    },
+    "BTCUSD": {
+      "bid": 68978.0,
+      "ask": 69028.0
+    },
+    "US500": {
+      "bid": 6500.3,
+      "ask": 6500.9
+    },
+    "OIL_CRUDE": {
+      "bid": 92.231,
+      "ask": 92.263
+    }
+  },
+  "actions": [
+    "PROFIT_CLOSE: BUY Gold +27.5pts",
+    "NO_TRADE: no qualified signal"
+  ]
+}
+[main 2e2e234] auto: update 2026-03-27 10:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 125 insertions(+), 122 deletions(-)
+{
+  "time": "2026-03-27T02:30:12.966662+00:00",
+  "balance": 30965.06,
+  "prices": {
+    "GOLD": {
+      "bid": 4430.59,
+      "ask": 4431.09
+    },
+    "EURUSDM2026": {
+      "bid": 1.1579,
+      "ask": 1.15799
+    },
+    "BTCUSD": {
+      "bid": 68951.3,
+      "ask": 69001.3
+    },
+    "US500": {
+      "bid": 6498.1,
+      "ask": 6498.7
+    },
+    "OIL_CRUDE": {
+      "bid": 92.408,
+      "ask": 92.488
+    }
+  },
+  "actions": [
+    "NO_TRADE: no qualified signal"
+  ]
+}
+[main f228a61] auto: update 2026-03-27 10:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 49 insertions(+), 63 deletions(-)
+{
+  "time": "2026-03-27T02:45:13.983116+00:00",
+  "balance": 30961.17,
+  "prices": {
+    "GOLD": {
+      "bid": 4429.98,
+      "ask": 4430.48
+    },
+    "EURUSDM2026": {
+      "bid": 1.1581,
+      "ask": 1.15819
+    },
+    "BTCUSD": {
+      "bid": 68845.9,
+      "ask": 68895.9
+    },
+    "US500": {
+      "bid": 6498.3,
+      "ask": 6498.9
+    },
+    "OIL_CRUDE": {
+      "bid": 92.49,
+      "ask": 92.57
+    }
+  },
+  "actions": [
+    "OPENED: SELL XAUUSD via 1H_EMA\u56de\u5f48 conf=55% size=0.04"
+  ]
+}
+[main 6980e8e] auto: update 2026-03-27 10:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 50 insertions(+), 50 deletions(-)
+{
+  "time": "2026-03-27T03:00:12.749293+00:00",
+  "balance": 30960.81,
+  "prices": {
+    "GOLD": {
+      "bid": 4431.62,
+      "ask": 4432.12
+    },
+    "EURUSDM2026": {
+      "bid": 1.15785,
+      "ask": 1.15794
+    },
+    "BTCUSD": {
+      "bid": 68841.7,
+      "ask": 68891.7
+    },
+    "US500": {
+      "bid": 6497.1,
+      "ask": 6497.7
+    },
+    "OIL_CRUDE": {
+      "bid": 92.612,
+      "ask": 92.692
+    }
+  },
+  "actions": [
+    "NO_TRADE: no qualified signal"
+  ]
+}
+[main fe22fe4] auto: update 2026-03-27 11:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 62 insertions(+), 49 deletions(-)
+{
+  "time": "2026-03-27T03:15:13.780912+00:00",
+  "balance": 30955.01,
+  "prices": {
+    "GOLD": {
+      "bid": 4429.75,
+      "ask": 4430.25
+    },
+    "EURUSDM2026": {
+      "bid": 1.15762,
+      "ask": 1.15771
+    },
+    "BTCUSD": {
+      "bid": 68688.55,
+      "ask": 68738.55
+    },
+    "US500": {
+      "bid": 6494.4,
+      "ask": 6495.0
+    },
+    "OIL_CRUDE": {
+      "bid": 92.596,
+      "ask": 92.676
+    }
+  },
+  "actions": [
+    "OPENED: SELL BTC/USD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05"
+  ]
+}
+[main 2b9e929] auto: update 2026-03-27 11:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 56 insertions(+), 56 deletions(-)
+{
+  "time": "2026-03-27T03:30:13.362970+00:00",
+  "balance": 30950.47,
+  "prices": {
+    "GOLD": {
+      "bid": 4435.74,
+      "ask": 4436.24
+    },
+    "EURUSDM2026": {
+      "bid": 1.15756,
+      "ask": 1.15762
+    },
+    "BTCUSD": {
+      "bid": 68766.5,
+      "ask": 68816.5
+    },
+    "US500": {
+      "bid": 6496.1,
+      "ask": 6496.7
+    },
+    "OIL_CRUDE": {
+      "bid": 92.84,
+      "ask": 92.92
+    }
+  },
+  "actions": [
+    "OPENED: SELL BTC/USD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05"
+  ]
+}
+[main 2cff570] auto: update 2026-03-27 11:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 89 insertions(+), 89 deletions(-)
+{
+  "time": "2026-03-27T03:45:13.099945+00:00",
+  "balance": 30947.57,
+  "prices": {
+    "GOLD": {
+      "bid": 4434.89,
+      "ask": 4435.39
+    },
+    "EURUSDM2026": {
+      "bid": 1.15785,
+      "ask": 1.15794
+    },
+    "BTCUSD": {
+      "bid": 68795.25,
+      "ask": 68845.25
+    },
+    "US500": {
+      "bid": 6503.2,
+      "ask": 6503.8
+    },
+    "OIL_CRUDE": {
+      "bid": 92.826,
+      "ask": 92.906
+    }
+  },
+  "actions": [
+    "MAX_POS: 5/5"
+  ]
+}
+[main 15a0eef] auto: update 2026-03-27 11:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 68 insertions(+), 55 deletions(-)
+{
+  "time": "2026-03-27T04:00:15.013331+00:00",
+  "balance": 30948.37,
+  "prices": {
+    "GOLD": {
+      "bid": 4437.44,
+      "ask": 4437.94
+    },
+    "EURUSDM2026": {
+      "bid": 1.15796,
+      "ask": 1.15805
+    },
+    "BTCUSD": {
+      "bid": 68710.25,
+      "ask": 68760.25
+    },
+    "US500": {
+      "bid": 6506.1,
+      "ask": 6506.7
+    },
+    "OIL_CRUDE": {
+      "bid": 92.747,
+      "ask": 92.779
+    }
+  },
+  "actions": [
+    "MAX_POS: 5/5"
+  ]
+}
+[main b4892f6] auto: update 2026-03-27 12:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 56 insertions(+), 56 deletions(-)
+{
+  "time": "2026-03-27T04:15:14.574455+00:00",
+  "balance": 30954.98,
+  "prices": {
+    "GOLD": {
+      "bid": 4433.91,
+      "ask": 4434.41
+    },
+    "EURUSDM2026": {
+      "bid": 1.15793,
+      "ask": 1.15802
+    },
+    "BTCUSD": {
+      "bid": 68336.9,
+      "ask": 68386.9
+    },
+    "US500": {
+      "bid": 6503.8,
+      "ask": 6504.4
+    },
+    "OIL_CRUDE": {
+      "bid": 92.839,
+      "ask": 92.919
+    }
+  },
+  "actions": [
+    "PROFIT_CLOSE: SELL Bitcoin/USD +384.1pts",
+    "OPENED: SELL BTC/USD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05"
+  ]
+}
+[main e81c3dd] auto: update 2026-03-27 12:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 100 insertions(+), 113 deletions(-)
+{
+  "time": "2026-03-27T04:30:12.779033+00:00",
+  "balance": 30947.37,
+  "prices": {
+    "GOLD": {
+      "bid": 4433.97,
+      "ask": 4434.47
+    },
+    "EURUSDM2026": {
+      "bid": 1.15799,
+      "ask": 1.15805
+    },
+    "BTCUSD": {
+      "bid": 68441.9,
+      "ask": 68491.9
+    },
+    "US500": {
+      "bid": 6505.1,
+      "ask": 6505.7
+    },
+    "OIL_CRUDE": {
+      "bid": 92.975,
+      "ask": 93.007
+    }
+  },
+  "actions": [
+    "OPENED: SELL BTC/USD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05",
+    "OPENED: SELL XAUUSD via 15M_RSI\u53cd\u8f49 conf=50% size=0.02"
+  ]
+}
+[main e8eb023] auto: update 2026-03-27 12:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 86 insertions(+), 99 deletions(-)
+{
+  "time": "2026-03-27T04:45:14.123843+00:00",
+  "balance": 30939.7,
+  "prices": {
+    "GOLD": {
+      "bid": 4441.22,
+      "ask": 4441.72
+    },
+    "EURUSDM2026": {
+      "bid": 1.15826,
+      "ask": 1.15835
+    },
+    "BTCUSD": {
+      "bid": 68510.4,
+      "ask": 68560.4
+    },
+    "US500": {
+      "bid": 6507.6,
+      "ask": 6508.2
+    },
+    "OIL_CRUDE": {
+      "bid": 92.985,
+      "ask": 93.065
+    }
+  },
+  "actions": [
+    "OPENED: SELL BTC/USD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05"
+  ]
+}
+[main 564e021] auto: update 2026-03-27 12:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 99 insertions(+), 87 deletions(-)
+{
+  "time": "2026-03-27T05:00:13.093759+00:00",
+  "balance": 30936.99,
+  "prices": {
+    "GOLD": {
+      "bid": 4445.65,
+      "ask": 4446.15
+    },
+    "EURUSDM2026": {
+      "bid": 1.15825,
+      "ask": 1.15834
+    },
+    "BTCUSD": {
+      "bid": 68507.75,
+      "ask": 68557.75
+    },
+    "US500": {
+      "bid": 6510.8,
+      "ask": 6511.4
+    },
+    "OIL_CRUDE": {
+      "bid": 93.049,
+      "ask": 93.129
+    }
+  },
+  "actions": [
+    "OPENED: SELL BTC/USD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05",
+    "OPENED: SELL XAUUSD via 15M_RSI\u53cd\u8f49 conf=50% size=0.02"
+  ]
+}
+[main a072f93] auto: update 2026-03-27 13:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 116 insertions(+), 135 deletions(-)
+{
+  "time": "2026-03-27T05:15:12.810190+00:00",
+  "balance": 30926.14,
+  "prices": {
+    "GOLD": {
+      "bid": 4444.07,
+      "ask": 4444.57
+    },
+    "EURUSDM2026": {
+      "bid": 1.15853,
+      "ask": 1.15862
+    },
+    "BTCUSD": {
+      "bid": 68740.45,
+      "ask": 68790.45
+    },
+    "US500": {
+      "bid": 6522.6,
+      "ask": 6523.2
+    },
+    "OIL_CRUDE": {
+      "bid": 92.847,
+      "ask": 92.927
+    }
+  },
+  "actions": [
+    "OPENED: SELL BTC/USD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05",
+    "OPENED: SELL S&P 500 via 15M_RSI\u53cd\u8f49 conf=60% size=0.49"
+  ]
+}
+[main d6f79bc] auto: update 2026-03-27 13:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 116 insertions(+), 116 deletions(-)
+{
+  "time": "2026-03-27T05:30:13.075865+00:00",
+  "balance": 30936.02,
+  "prices": {
+    "GOLD": {
+      "bid": 4444.93,
+      "ask": 4445.43
+    },
+    "EURUSDM2026": {
+      "bid": 1.15809,
+      "ask": 1.15815
+    },
+    "BTCUSD": {
+      "bid": 68539.5,
+      "ask": 68589.5
+    },
+    "US500": {
+      "bid": 6517.3,
+      "ask": 6517.9
+    },
+    "OIL_CRUDE": {
+      "bid": 92.984,
+      "ask": 93.064
+    }
+  },
+  "actions": [
+    "OPENED: SELL BTC/USD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05"
+  ]
+}
+[main 28be980] auto: update 2026-03-27 13:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 108 insertions(+), 83 deletions(-)
+{
+  "time": "2026-03-27T05:45:12.903729+00:00",
+  "balance": 30929.23,
+  "prices": {
+    "GOLD": {
+      "bid": 4464.84,
+      "ask": 4465.34
+    },
+    "EURUSDM2026": {
+      "bid": 1.15831,
+      "ask": 1.1584
+    },
+    "BTCUSD": {
+      "bid": 68530.25,
+      "ask": 68580.25
+    },
+    "US500": {
+      "bid": 6515.3,
+      "ask": 6515.9
+    },
+    "OIL_CRUDE": {
+      "bid": 92.974,
+      "ask": 93.054
+    }
+  },
+  "actions": [
+    "TRAIL_BE: US 500 SELL",
+    "OPENED: SELL XAUUSD via 15M_RSI\u53cd\u8f49 conf=60% size=0.05",
+    "OPENED: SELL BTC/USD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05",
+    "OPENED: SELL S&P 500 via 1H_EMA\u56de\u5f48 conf=55% size=0.36"
+  ]
+}
+[main 2c88f5a] auto: update 2026-03-27 13:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 164 insertions(+), 181 deletions(-)
+{
+  "time": "2026-03-27T06:00:12.812044+00:00",
+  "balance": 30925.28,
+  "prices": {
+    "GOLD": {
+      "bid": 4454.78,
+      "ask": 4455.28
+    },
+    "EURUSDM2026": {
+      "bid": 1.15807,
+      "ask": 1.15816
+    },
+    "BTCUSD": {
+      "bid": 68561.1,
+      "ask": 68611.1
+    },
+    "US500": {
+      "bid": 6514.0,
+      "ask": 6514.6
+    },
+    "OIL_CRUDE": {
+      "bid": 93.314,
+      "ask": 93.346
+    }
+  },
+  "actions": [
+    "MAX_POS: 5/5"
+  ]
+}
+[main d023955] auto: update 2026-03-27 14:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 87 insertions(+), 51 deletions(-)
+{
+  "time": "2026-03-27T06:15:15.473823+00:00",
+  "balance": 30914.48,
+  "prices": {
+    "GOLD": {
+      "bid": 4470.43,
+      "ask": 4470.93
+    },
+    "EURUSDM2026": {
+      "bid": 1.15837,
+      "ask": 1.15846
+    },
+    "BTCUSD": {
+      "bid": 68682.9,
+      "ask": 68732.9
+    },
+    "US500": {
+      "bid": 6516.0,
+      "ask": 6516.6
+    },
+    "OIL_CRUDE": {
+      "bid": 93.11,
+      "ask": 93.142
+    }
+  },
+  "actions": [
+    "OPENED: SELL BTC/USD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05"
+  ]
+}
+[main f502684] auto: update 2026-03-27 14:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 90 insertions(+), 103 deletions(-)
+{
+  "time": "2026-03-27T06:30:15.266890+00:00",
+  "balance": 30902.57,
+  "prices": {
+    "GOLD": {
+      "bid": 4462.86,
+      "ask": 4463.36
+    },
+    "EURUSDM2026": {
+      "bid": 1.15795,
+      "ask": 1.15804
+    },
+    "BTCUSD": {
+      "bid": 68743.45,
+      "ask": 68793.45
+    },
+    "US500": {
+      "bid": 6517.9,
+      "ask": 6518.5
+    },
+    "OIL_CRUDE": {
+      "bid": 93.187,
+      "ask": 93.219
+    }
+  },
+  "actions": [
+    "OPENED: SELL BTC/USD via 15M_\u8da8\u52e2\u8ddf\u96a8 conf=60% size=0.05"
+  ]
+}
+[main c8135c9] auto: update 2026-03-27 14:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 88 insertions(+), 88 deletions(-)
+{
+  "time": "2026-03-27T06:45:10.173656+00:00",
+  "balance": 30914.09,
+  "prices": {
+    "GOLD": {
+      "bid": 4464.77,
+      "ask": 4465.27
+    },
+    "EURUSDM2026": {
+      "bid": 1.15774,
+      "ask": 1.15783
+    },
+    "US500": {
+      "bid": 6512.1,
+      "ask": 6512.7
+    },
+    "OIL_CRUDE": {
+      "bid": 93.33,
+      "ask": 93.41
+    }
+  },
+  "actions": [
+    "SKIP_XAUUSD: outside active session",
+    "SKIP_EUR/USD: outside active session",
+    "SKIP_S&P 500: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "BANNED_CLOSE: SELL Bitcoin/USD (instrument disabled)",
+    "BANNED_CLOSE: SELL Bitcoin/USD (instrument disabled)",
+    "NO_SIGNAL"
+  ]
+}
+[main cbefe1b] auto: update 2026-03-27 14:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 307 insertions(+), 61 deletions(-)
+{
+  "time": "2026-03-27T07:00:12.301108+00:00",
+  "balance": 30918.76,
+  "prices": {
+    "GOLD": {
+      "bid": 4458.66,
+      "ask": 4459.16
+    },
+    "EURUSDM2026": {
+      "bid": 1.15741,
+      "ask": 1.1575
+    },
+    "US500": {
+      "bid": 6508.2,
+      "ask": 6508.8
+    },
+    "OIL_CRUDE": {
+      "bid": 93.555,
+      "ask": 93.635
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "PROFIT_CLOSE: SELL US 500 +13.4pts",
+    "NO_SIGNAL"
+  ]
+}
+[main d0a400b] auto: update 2026-03-27 15:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 111 insertions(+), 141 deletions(-)
+{
+  "time": "2026-03-27T07:15:20.200571+00:00",
+  "balance": 30920.69,
+  "prices": {
+    "GOLD": {
+      "bid": 4454.84,
+      "ask": 4455.34
+    },
+    "SILVER": {
+      "bid": 69.784,
+      "ask": 69.834
+    },
+    "COPPER": {
+      "bid": 5.55624,
+      "ask": 5.55896
+    },
+    "EURUSDM2026": {
+      "bid": 1.15704,
+      "ask": 1.1571
+    },
+    "US500": {
+      "bid": 6503.7,
+      "ask": 6504.3
+    },
+    "US30": {
+      "bid": 46117.0,
+      "ask": 46119.0
+    },
+    "OIL_CRUDE": {
+      "bid": 94.122,
+      "ask": 94.154
+    },
+    "NATURALGAS": {
+      "bid": 2.9856,
+      "ask": 2.9906
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "TRAIL_BE: US 500 SELL",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main e17581c] auto: update 2026-03-27 15:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 116 insertions(+), 57 deletions(-)
+{
+  "time": "2026-03-27T07:30:18.203759+00:00",
+  "balance": 30922.65,
+  "prices": {
+    "GOLD": {
+      "bid": 4451.63,
+      "ask": 4452.13
+    },
+    "SILVER": {
+      "bid": 69.735,
+      "ask": 69.785
+    },
+    "COPPER": {
+      "bid": 5.55087,
+      "ask": 5.55359
+    },
+    "EURUSDM2026": {
+      "bid": 1.1564,
+      "ask": 1.15646
+    },
+    "US500": {
+      "bid": 6499.5,
+      "ask": 6500.1
+    },
+    "US30": {
+      "bid": 46084.0,
+      "ask": 46086.0
+    },
+    "OIL_CRUDE": {
+      "bid": 94.336,
+      "ask": 94.368
+    },
+    "NATURALGAS": {
+      "bid": 2.9946,
+      "ask": 2.9996
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "TRAIL_BE: Gold SELL",
+    "PROFIT_CLOSE: SELL US 500 +15.9pts",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main 3bce812] auto: update 2026-03-27 15:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 106 insertions(+), 103 deletions(-)
+{
+  "time": "2026-03-27T07:45:21.586021+00:00",
+  "balance": 30922.79,
+  "prices": {
+    "GOLD": {
+      "bid": 4448.17,
+      "ask": 4448.67
+    },
+    "SILVER": {
+      "bid": 69.566,
+      "ask": 69.646
+    },
+    "COPPER": {
+      "bid": 5.53863,
+      "ask": 5.54135
+    },
+    "EURUSDM2026": {
+      "bid": 1.15615,
+      "ask": 1.15621
+    },
+    "US500": {
+      "bid": 6500.4,
+      "ask": 6501.0
+    },
+    "US30": {
+      "bid": 46081.9,
+      "ask": 46083.9
+    },
+    "OIL_CRUDE": {
+      "bid": 94.588,
+      "ask": 94.668
+    },
+    "NATURALGAS": {
+      "bid": 2.9971,
+      "ask": 3.0021
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main 7514a96] auto: update 2026-03-27 15:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 65 insertions(+), 80 deletions(-)
+{
+  "time": "2026-03-27T08:00:19.658728+00:00",
+  "balance": 30922.87,
+  "prices": {
+    "GOLD": {
+      "bid": 4446.67,
+      "ask": 4447.17
+    },
+    "SILVER": {
+      "bid": 69.47,
+      "ask": 69.55
+    },
+    "COPPER": {
+      "bid": 5.53039,
+      "ask": 5.53311
+    },
+    "EURUSDM2026": {
+      "bid": 1.1558,
+      "ask": 1.15589
+    },
+    "US500": {
+      "bid": 6501.1,
+      "ask": 6501.7
+    },
+    "US30": {
+      "bid": 46092.2,
+      "ask": 46094.2
+    },
+    "OIL_CRUDE": {
+      "bid": 94.164,
+      "ask": 94.244
+    },
+    "NATURALGAS": {
+      "bid": 2.9951,
+      "ask": 3.0001
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main d476e28] auto: update 2026-03-27 16:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 62 insertions(+), 62 deletions(-)
+{
+  "time": "2026-03-27T08:15:18.975292+00:00",
+  "balance": 30922.87,
+  "prices": {
+    "GOLD": {
+      "bid": 4446.68,
+      "ask": 4447.18
+    },
+    "SILVER": {
+      "bid": 69.373,
+      "ask": 69.453
+    },
+    "COPPER": {
+      "bid": 5.53327,
+      "ask": 5.53599
+    },
+    "EURUSDM2026": {
+      "bid": 1.15586,
+      "ask": 1.15595
+    },
+    "US500": {
+      "bid": 6492.4,
+      "ask": 6493.0
+    },
+    "US30": {
+      "bid": 46023.5,
+      "ask": 46025.5
+    },
+    "OIL_CRUDE": {
+      "bid": 94.357,
+      "ask": 94.437
+    },
+    "NATURALGAS": {
+      "bid": 2.9936,
+      "ask": 2.9986
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "BLOCKED: BUY XAUUSD \u2014 opposing position exists",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main 9fe427c] auto: update 2026-03-27 16:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 67 insertions(+), 66 deletions(-)
+{
+  "time": "2026-03-27T08:30:17.974445+00:00",
+  "balance": 30923.49,
+  "prices": {
+    "GOLD": {
+      "bid": 4434.12,
+      "ask": 4434.62
+    },
+    "SILVER": {
+      "bid": 68.989,
+      "ask": 69.039
+    },
+    "COPPER": {
+      "bid": 5.52628,
+      "ask": 5.529
+    },
+    "EURUSDM2026": {
+      "bid": 1.15624,
+      "ask": 1.15633
+    },
+    "US500": {
+      "bid": 6485.8,
+      "ask": 6486.4
+    },
+    "US30": {
+      "bid": 45979.0,
+      "ask": 45981.0
+    },
+    "OIL_CRUDE": {
+      "bid": 95.192,
+      "ask": 95.224
+    },
+    "NATURALGAS": {
+      "bid": 2.9976,
+      "ask": 3.0026
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "PROFIT_CLOSE: SELL Gold +29.4pts",
+    "BLOCKED: BUY XAUUSD \u2014 opposing position exists",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main 0d942ba] auto: update 2026-03-27 16:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 100 insertions(+), 99 deletions(-)
+{
+  "time": "2026-03-27T08:45:18.524903+00:00",
+  "balance": 30923.41,
+  "prices": {
+    "GOLD": {
+      "bid": 4434.81,
+      "ask": 4435.31
+    },
+    "SILVER": {
+      "bid": 69.005,
+      "ask": 69.055
+    },
+    "COPPER": {
+      "bid": 5.53741,
+      "ask": 5.54013
+    },
+    "EURUSDM2026": {
+      "bid": 1.15636,
+      "ask": 1.15642
+    },
+    "US500": {
+      "bid": 6482.2,
+      "ask": 6482.8
+    },
+    "US30": {
+      "bid": 45959.5,
+      "ask": 45961.5
+    },
+    "OIL_CRUDE": {
+      "bid": 95.059,
+      "ask": 95.139
+    },
+    "NATURALGAS": {
+      "bid": 3.0156,
+      "ask": 3.0206
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main 4d88ad0] auto: update 2026-03-27 16:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 62 insertions(+), 78 deletions(-)
+{
+  "time": "2026-03-27T09:00:19.633069+00:00",
+  "balance": 30923.41,
+  "prices": {
+    "GOLD": {
+      "bid": 4424.13,
+      "ask": 4424.63
+    },
+    "SILVER": {
+      "bid": 68.809,
+      "ask": 68.859
+    },
+    "COPPER": {
+      "bid": 5.5348,
+      "ask": 5.53752
+    },
+    "EURUSDM2026": {
+      "bid": 1.15618,
+      "ask": 1.15627
+    },
+    "US500": {
+      "bid": 6478.5,
+      "ask": 6479.1
+    },
+    "US30": {
+      "bid": 45954.4,
+      "ask": 45956.4
+    },
+    "OIL_CRUDE": {
+      "bid": 95.22,
+      "ask": 95.252
+    },
+    "NATURALGAS": {
+      "bid": 3.0326,
+      "ask": 3.0376
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main 0d086df] auto: update 2026-03-27 17:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 58 insertions(+), 58 deletions(-)
+{
+  "time": "2026-03-27T09:15:16.633036+00:00",
+  "balance": 30923.41,
+  "prices": {
+    "GOLD": {
+      "bid": 4428.83,
+      "ask": 4429.33
+    },
+    "SILVER": {
+      "bid": 68.704,
+      "ask": 68.784
+    },
+    "COPPER": {
+      "bid": 5.51943,
+      "ask": 5.52215
+    },
+    "EURUSDM2026": {
+      "bid": 1.15595,
+      "ask": 1.15601
+    },
+    "US500": {
+      "bid": 6471.6,
+      "ask": 6472.2
+    },
+    "US30": {
+      "bid": 45901.4,
+      "ask": 45903.4
+    },
+    "OIL_CRUDE": {
+      "bid": 95.41,
+      "ask": 95.49
+    },
+    "NATURALGAS": {
+      "bid": 3.0396,
+      "ask": 3.0446
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main 3e11595] auto: update 2026-03-27 17:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 59 insertions(+), 59 deletions(-)
+{
+  "time": "2026-03-27T09:30:19.214731+00:00",
+  "balance": 30923.41,
+  "prices": {
+    "GOLD": {
+      "bid": 4434.48,
+      "ask": 4434.98
+    },
+    "SILVER": {
+      "bid": 68.984,
+      "ask": 69.034
+    },
+    "COPPER": {
+      "bid": 5.52982,
+      "ask": 5.53254
+    },
+    "EURUSDM2026": {
+      "bid": 1.1563,
+      "ask": 1.15636
+    },
+    "US500": {
+      "bid": 6480.6,
+      "ask": 6481.2
+    },
+    "US30": {
+      "bid": 45956.8,
+      "ask": 45958.8
+    },
+    "OIL_CRUDE": {
+      "bid": 95.311,
+      "ask": 95.391
+    },
+    "NATURALGAS": {
+      "bid": 3.0436,
+      "ask": 3.0486
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main a51ffd5] auto: update 2026-03-27 17:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 57 insertions(+), 57 deletions(-)
+{
+  "time": "2026-03-27T09:45:20.850857+00:00",
+  "balance": 30923.41,
+  "prices": {
+    "GOLD": {
+      "bid": 4431.21,
+      "ask": 4431.71
+    },
+    "SILVER": {
+      "bid": 68.867,
+      "ask": 68.917
+    },
+    "COPPER": {
+      "bid": 5.51295,
+      "ask": 5.51567
+    },
+    "EURUSDM2026": {
+      "bid": 1.15611,
+      "ask": 1.1562
+    },
+    "US500": {
+      "bid": 6480.3,
+      "ask": 6480.9
+    },
+    "US30": {
+      "bid": 45947.4,
+      "ask": 45949.4
+    },
+    "OIL_CRUDE": {
+      "bid": 95.114,
+      "ask": 95.146
+    },
+    "NATURALGAS": {
+      "bid": 3.0321,
+      "ask": 3.0371
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main 24d09cd] auto: update 2026-03-27 17:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 58 insertions(+), 58 deletions(-)
+{
+  "time": "2026-03-27T10:00:19.171469+00:00",
+  "balance": 30923.41,
+  "prices": {
+    "GOLD": {
+      "bid": 4428.3,
+      "ask": 4428.8
+    },
+    "SILVER": {
+      "bid": 68.559,
+      "ask": 68.639
+    },
+    "COPPER": {
+      "bid": 5.50721,
+      "ask": 5.50993
+    },
+    "EURUSDM2026": {
+      "bid": 1.15589,
+      "ask": 1.15598
+    },
+    "US500": {
+      "bid": 6468.6,
+      "ask": 6469.2
+    },
+    "US30": {
+      "bid": 45868.4,
+      "ask": 45870.4
+    },
+    "OIL_CRUDE": {
+      "bid": 95.326,
+      "ask": 95.406
+    },
+    "NATURALGAS": {
+      "bid": 3.0401,
+      "ask": 3.0451
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main 8f20083] auto: update 2026-03-27 18:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 54 insertions(+), 54 deletions(-)
+{
+  "time": "2026-03-27T10:15:17.533457+00:00",
+  "balance": 30923.41,
+  "prices": {
+    "GOLD": {
+      "bid": 4426.4,
+      "ask": 4426.9
+    },
+    "SILVER": {
+      "bid": 68.629,
+      "ask": 68.709
+    },
+    "COPPER": {
+      "bid": 5.51222,
+      "ask": 5.51494
+    },
+    "EURUSDM2026": {
+      "bid": 1.15607,
+      "ask": 1.15613
+    },
+    "US500": {
+      "bid": 6469.1,
+      "ask": 6469.7
+    },
+    "US30": {
+      "bid": 45888.9,
+      "ask": 45890.9
+    },
+    "OIL_CRUDE": {
+      "bid": 95.295,
+      "ask": 95.327
+    },
+    "NATURALGAS": {
+      "bid": 3.0411,
+      "ask": 3.0461
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main 02fe0f6] auto: update 2026-03-27 18:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 58 insertions(+), 58 deletions(-)
+{
+  "time": "2026-03-27T10:30:17.840416+00:00",
+  "balance": 30923.41,
+  "prices": {
+    "GOLD": {
+      "bid": 4427.68,
+      "ask": 4428.18
+    },
+    "SILVER": {
+      "bid": 68.697,
+      "ask": 68.777
+    },
+    "COPPER": {
+      "bid": 5.51123,
+      "ask": 5.51395
+    },
+    "EURUSDM2026": {
+      "bid": 1.15652,
+      "ask": 1.15661
+    },
+    "US500": {
+      "bid": 6468.9,
+      "ask": 6469.5
+    },
+    "US30": {
+      "bid": 45897.3,
+      "ask": 45899.3
+    },
+    "OIL_CRUDE": {
+      "bid": 95.437,
+      "ask": 95.517
+    },
+    "NATURALGAS": {
+      "bid": 3.0546,
+      "ask": 3.0596
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main fb30928] auto: update 2026-03-27 18:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 56 insertions(+), 56 deletions(-)
+{
+  "time": "2026-03-27T10:45:18.880831+00:00",
+  "balance": 30923.41,
+  "prices": {
+    "GOLD": {
+      "bid": 4415.08,
+      "ask": 4415.58
+    },
+    "SILVER": {
+      "bid": 68.323,
+      "ask": 68.373
+    },
+    "COPPER": {
+      "bid": 5.50124,
+      "ask": 5.50396
+    },
+    "EURUSDM2026": {
+      "bid": 1.15537,
+      "ask": 1.15543
+    },
+    "US500": {
+      "bid": 6459.3,
+      "ask": 6459.9
+    },
+    "US30": {
+      "bid": 45831.2,
+      "ask": 45833.2
+    },
+    "OIL_CRUDE": {
+      "bid": 95.813,
+      "ask": 95.893
+    },
+    "NATURALGAS": {
+      "bid": 3.0646,
+      "ask": 3.0696
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main 40e4ec3] auto: update 2026-03-27 18:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 59 insertions(+), 59 deletions(-)
+{
+  "time": "2026-03-27T11:00:18.472880+00:00",
+  "balance": 30923.41,
+  "prices": {
+    "GOLD": {
+      "bid": 4415.16,
+      "ask": 4415.66
+    },
+    "SILVER": {
+      "bid": 68.112,
+      "ask": 68.192
+    },
+    "COPPER": {
+      "bid": 5.494,
+      "ask": 5.49672
+    },
+    "EURUSDM2026": {
+      "bid": 1.15516,
+      "ask": 1.15522
+    },
+    "US500": {
+      "bid": 6453.3,
+      "ask": 6453.9
+    },
+    "US30": {
+      "bid": 45796.0,
+      "ask": 45798.0
+    },
+    "OIL_CRUDE": {
+      "bid": 96.218,
+      "ask": 96.298
+    },
+    "NATURALGAS": {
+      "bid": 3.0641,
+      "ask": 3.0691
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main 8d6113c] auto: update 2026-03-27 19:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 60 insertions(+), 60 deletions(-)
+{
+  "time": "2026-03-27T11:15:18.770854+00:00",
+  "balance": 30923.41,
+  "prices": {
+    "GOLD": {
+      "bid": 4413.44,
+      "ask": 4413.94
+    },
+    "SILVER": {
+      "bid": 68.06,
+      "ask": 68.11
+    },
+    "COPPER": {
+      "bid": 5.48726,
+      "ask": 5.48998
+    },
+    "EURUSDM2026": {
+      "bid": 1.15515,
+      "ask": 1.15524
+    },
+    "US500": {
+      "bid": 6448.5,
+      "ask": 6449.1
+    },
+    "US30": {
+      "bid": 45758.7,
+      "ask": 45760.7
+    },
+    "OIL_CRUDE": {
+      "bid": 96.105,
+      "ask": 96.185
+    },
+    "NATURALGAS": {
+      "bid": 3.0536,
+      "ask": 3.0586
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main b5b0393] auto: update 2026-03-27 19:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 60 insertions(+), 60 deletions(-)
+{
+  "time": "2026-03-27T11:30:18.284079+00:00",
+  "balance": 30923.41,
+  "prices": {
+    "GOLD": {
+      "bid": 4415.35,
+      "ask": 4415.85
+    },
+    "SILVER": {
+      "bid": 68.317,
+      "ask": 68.367
+    },
+    "COPPER": {
+      "bid": 5.49864,
+      "ask": 5.50136
+    },
+    "EURUSDM2026": {
+      "bid": 1.15516,
+      "ask": 1.15522
+    },
+    "US500": {
+      "bid": 6454.6,
+      "ask": 6455.2
+    },
+    "US30": {
+      "bid": 45810.3,
+      "ask": 45812.3
+    },
+    "OIL_CRUDE": {
+      "bid": 95.842,
+      "ask": 95.922
+    },
+    "NATURALGAS": {
+      "bid": 3.0686,
+      "ask": 3.0736
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main 67d4b50] auto: update 2026-03-27 19:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 55 insertions(+), 55 deletions(-)
+{
+  "time": "2026-03-27T11:45:17.377291+00:00",
+  "balance": 30923.41,
+  "prices": {
+    "GOLD": {
+      "bid": 4421.82,
+      "ask": 4422.32
+    },
+    "SILVER": {
+      "bid": 68.16,
+      "ask": 68.24
+    },
+    "COPPER": {
+      "bid": 5.4999,
+      "ask": 5.50262
+    },
+    "EURUSDM2026": {
+      "bid": 1.15512,
+      "ask": 1.15518
+    },
+    "US500": {
+      "bid": 6455.1,
+      "ask": 6455.7
+    },
+    "US30": {
+      "bid": 45816.9,
+      "ask": 45818.9
+    },
+    "OIL_CRUDE": {
+      "bid": 95.673,
+      "ask": 95.753
+    },
+    "NATURALGAS": {
+      "bid": 3.0566,
+      "ask": 3.0616
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main 821541d] auto: update 2026-03-27 19:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 57 insertions(+), 57 deletions(-)
+{
+  "time": "2026-03-27T12:00:18.596427+00:00",
+  "balance": 30923.41,
+  "prices": {
+    "GOLD": {
+      "bid": 4419.52,
+      "ask": 4420.02
+    },
+    "SILVER": {
+      "bid": 67.805,
+      "ask": 67.885
+    },
+    "COPPER": {
+      "bid": 5.49378,
+      "ask": 5.4965
+    },
+    "EURUSDM2026": {
+      "bid": 1.15474,
+      "ask": 1.1548
+    },
+    "US500": {
+      "bid": 6457.4,
+      "ask": 6458.0
+    },
+    "US30": {
+      "bid": 45814.9,
+      "ask": 45816.9
+    },
+    "OIL_CRUDE": {
+      "bid": 95.722,
+      "ask": 95.802
+    },
+    "NATURALGAS": {
+      "bid": 3.0556,
+      "ask": 3.0606
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main 44a8dda] auto: update 2026-03-27 20:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 58 insertions(+), 58 deletions(-)
+{
+  "time": "2026-03-27T12:15:19.673722+00:00",
+  "balance": 30923.41,
+  "prices": {
+    "GOLD": {
+      "bid": 4425.03,
+      "ask": 4425.53
+    },
+    "SILVER": {
+      "bid": 67.853,
+      "ask": 67.903
+    },
+    "COPPER": {
+      "bid": 5.48529,
+      "ask": 5.48801
+    },
+    "EURUSDM2026": {
+      "bid": 1.15428,
+      "ask": 1.15434
+    },
+    "US500": {
+      "bid": 6448.9,
+      "ask": 6449.5
+    },
+    "US30": {
+      "bid": 45768.6,
+      "ask": 45770.6
+    },
+    "OIL_CRUDE": {
+      "bid": 96.054,
+      "ask": 96.134
+    },
+    "NATURALGAS": {
+      "bid": 3.0651,
+      "ask": 3.0701
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main f83be5a] auto: update 2026-03-27 20:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 59 insertions(+), 59 deletions(-)
+{
+  "time": "2026-03-27T12:30:21.189959+00:00",
+  "balance": 30923.41,
+  "prices": {
+    "GOLD": {
+      "bid": 4429.29,
+      "ask": 4429.79
+    },
+    "SILVER": {
+      "bid": 67.995,
+      "ask": 68.045
+    },
+    "COPPER": {
+      "bid": 5.49605,
+      "ask": 5.49877
+    },
+    "EURUSDM2026": {
+      "bid": 1.15498,
+      "ask": 1.15504
+    },
+    "US500": {
+      "bid": 6453.3,
+      "ask": 6453.9
+    },
+    "US30": {
+      "bid": 45788.1,
+      "ask": 45790.1
+    },
+    "OIL_CRUDE": {
+      "bid": 96.072,
+      "ask": 96.152
+    },
+    "NATURALGAS": {
+      "bid": 3.0766,
+      "ask": 3.0816
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main 9357ca5] auto: update 2026-03-27 20:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 58 insertions(+), 58 deletions(-)
+{
+  "time": "2026-03-27T12:45:17.923282+00:00",
+  "balance": 30923.41,
+  "prices": {
+    "GOLD": {
+      "bid": 4434.36,
+      "ask": 4434.86
+    },
+    "SILVER": {
+      "bid": 67.894,
+      "ask": 67.974
+    },
+    "COPPER": {
+      "bid": 5.49281,
+      "ask": 5.49553
+    },
+    "EURUSDM2026": {
+      "bid": 1.15555,
+      "ask": 1.15561
+    },
+    "US500": {
+      "bid": 6450.9,
+      "ask": 6451.5
+    },
+    "US30": {
+      "bid": 45796.2,
+      "ask": 45798.2
+    },
+    "OIL_CRUDE": {
+      "bid": 95.928,
+      "ask": 95.96
+    },
+    "NATURALGAS": {
+      "bid": 3.0381,
+      "ask": 3.0431
+    }
+  },
+  "actions": [
+    "SKIP_S&P 500: outside active session",
+    "SKIP_US30: outside active session",
+    "SKIP_\u539f\u6cb9: outside active session",
+    "SKIP_\u5929\u7136\u6c23: outside active session",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main 7bf8633] auto: update 2026-03-27 20:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 57 insertions(+), 57 deletions(-)
+{
+  "time": "2026-03-27T13:00:22.250029+00:00",
+  "balance": 30923.41,
+  "prices": {
+    "GOLD": {
+      "bid": 4439.89,
+      "ask": 4440.39
+    },
+    "SILVER": {
+      "bid": 68.188,
+      "ask": 68.268
+    },
+    "COPPER": {
+      "bid": 5.49444,
+      "ask": 5.49716
+    },
+    "EURUSDM2026": {
+      "bid": 1.15549,
+      "ask": 1.15555
+    },
+    "US500": {
+      "bid": 6444.6,
+      "ask": 6445.2
+    },
+    "US30": {
+      "bid": 45754.0,
+      "ask": 45756.0
+    },
+    "OIL_CRUDE": {
+      "bid": 95.82,
+      "ask": 95.9
+    },
+    "NATURALGAS": {
+      "bid": 3.0436,
+      "ask": 3.0486
+    }
+  },
+  "actions": [
+    "OPENED: SELL S&P 500 via \u8da8\u52e2\u5c0d\u9f4a conf=71% size=0.15",
+    "OPENED: SELL US30 via \u8da8\u52e2\u5c0d\u9f4a conf=71% size=0.15"
+  ]
+}
+[main 19b2605] auto: update 2026-03-27 21:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 65 insertions(+), 68 deletions(-)
+{
+  "time": "2026-03-27T13:15:22.719234+00:00",
+  "balance": 30932.64,
+  "prices": {
+    "GOLD": {
+      "bid": 4428.92,
+      "ask": 4429.42
+    },
+    "SILVER": {
+      "bid": 67.787,
+      "ask": 67.837
+    },
+    "COPPER": {
+      "bid": 5.5012,
+      "ask": 5.50392
+    },
+    "EURUSDM2026": {
+      "bid": 1.15562,
+      "ask": 1.15568
+    },
+    "US500": {
+      "bid": 6438.0,
+      "ask": 6438.6
+    },
+    "US30": {
+      "bid": 45702.0,
+      "ask": 45704.0
+    },
+    "OIL_CRUDE": {
+      "bid": 96.18,
+      "ask": 96.212
+    },
+    "NATURALGAS": {
+      "bid": 3.0416,
+      "ask": 3.0466
+    }
+  },
+  "actions": [
+    "BLOCKED: SELL S&P 500 \u2014 already have position",
+    "BLOCKED: SELL US30 \u2014 already have position",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main cd8652f] auto: update 2026-03-27 21:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 94 insertions(+), 66 deletions(-)
+{
+  "time": "2026-03-27T13:30:22.812234+00:00",
+  "balance": 30924.01,
+  "prices": {
+    "GOLD": {
+      "bid": 4422.96,
+      "ask": 4423.46
+    },
+    "SILVER": {
+      "bid": 67.951,
+      "ask": 68.031
+    },
+    "COPPER": {
+      "bid": 5.51022,
+      "ask": 5.51294
+    },
+    "EURUSDM2026": {
+      "bid": 1.15647,
+      "ask": 1.15656
+    },
+    "US500": {
+      "bid": 6448.2,
+      "ask": 6448.6
+    },
+    "US30": {
+      "bid": 45731.5,
+      "ask": 45733.5
+    },
+    "OIL_CRUDE": {
+      "bid": 95.919,
+      "ask": 95.951
+    },
+    "NATURALGAS": {
+      "bid": 3.0506,
+      "ask": 3.0556
+    }
+  },
+  "actions": [
+    "BLOCKED: SELL S&P 500 \u2014 already have position",
+    "BLOCKED: SELL US30 \u2014 already have position",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main ddea64c] auto: update 2026-03-27 21:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 67 insertions(+), 67 deletions(-)
+{
+  "time": "2026-03-27T13:45:21.555949+00:00",
+  "balance": 30951.37,
+  "prices": {
+    "GOLD": {
+      "bid": 4430.06,
+      "ask": 4430.56
+    },
+    "SILVER": {
+      "bid": 68.191,
+      "ask": 68.271
+    },
+    "COPPER": {
+      "bid": 5.50847,
+      "ask": 5.51119
+    },
+    "EURUSDM2026": {
+      "bid": 1.15686,
+      "ask": 1.15692
+    },
+    "US500": {
+      "bid": 6435.6,
+      "ask": 6436.0
+    },
+    "US30": {
+      "bid": 45562.8,
+      "ask": 45564.8
+    },
+    "OIL_CRUDE": {
+      "bid": 96.463,
+      "ask": 96.495
+    },
+    "NATURALGAS": {
+      "bid": 3.0376,
+      "ask": 3.0426
+    }
+  },
+  "actions": [
+    "PROFIT_CLOSE: SELL US Wall Street 30 +177.2pts",
+    "BLOCKED: SELL S&P 500 \u2014 already have position",
+    "BLOCKED: SELL US30 \u2014 already have position",
+    "NO_TRADE: no signal meets 70% confidence threshold"
+  ]
+}
+[main 4c42de5] auto: update 2026-03-27 21:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 107 insertions(+), 100 deletions(-)
+{
+  "time": "2026-03-27T14:00:20.997963+00:00",
+  "balance": 30954.8,
+  "prices": {
+    "GOLD": {
+      "bid": 4433.04,
+      "ask": 4433.54
+    },
+    "SILVER": {
+      "bid": 67.995,
+      "ask": 68.075
+    },
+    "COPPER": {
+      "bid": 5.50298,
+      "ask": 5.5057
+    },
+    "EURUSDM2026": {
+      "bid": 1.15652,
+      "ask": 1.15661
+    },
+    "US500": {
+      "bid": 6413.6,
+      "ask": 6414.0
+    },
+    "US30": {
+      "bid": 45488.1,
+      "ask": 45490.1
+    },
+    "OIL_CRUDE": {
+      "bid": 96.761,
+      "ask": 96.841
+    },
+    "NATURALGAS": {
+      "bid": 3.0211,
+      "ask": 3.0261
+    }
+  },
+  "actions": [
+    "PROFIT_CLOSE: SELL US 500 +32.3pts",
+    "BLOCKED: SELL S&P 500 \u2014 already have position",
+    "OPENED: SELL US30 via \u8da8\u52e2\u5c0d\u9f4a conf=74% size=0.28"
+  ]
+}
+[main d6d8036] auto: update 2026-03-27 22:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 103 insertions(+), 115 deletions(-)
+{
+  "time": "2026-03-27T14:15:22.792776+00:00",
+  "balance": 30944.45,
+  "prices": {
+    "GOLD": {
+      "bid": 4459.23,
+      "ask": 4459.73
+    },
+    "SILVER": {
+      "bid": 68.618,
+      "ask": 68.698
+    },
+    "COPPER": {
+      "bid": 5.51299,
+      "ask": 5.51571
+    },
+    "EURUSDM2026": {
+      "bid": 1.15694,
+      "ask": 1.157
+    },
+    "US500": {
+      "bid": 6421.8,
+      "ask": 6422.2
+    },
+    "US30": {
+      "bid": 45529.5,
+      "ask": 45531.5
+    },
+    "OIL_CRUDE": {
+      "bid": 96.243,
+      "ask": 96.323
+    },
+    "NATURALGAS": {
+      "bid": 3.0006,
+      "ask": 3.0056
+    }
+  },
+  "actions": [
+    "OPENED: BUY XAUUSD via \u8da8\u52e2\u5c0d\u9f4a conf=74% size=0.03",
+    "OPENED: SELL S&P 500 via \u8da8\u52e2\u5c0d\u9f4a conf=74% size=0.28"
+  ]
+}
+[main 4f2d096] auto: update 2026-03-27 22:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 120 insertions(+), 120 deletions(-)
+{
+  "time": "2026-03-27T14:30:16.787834+00:00",
+  "balance": 30919.31,
+  "prices": {
+    "GOLD": {
+      "bid": 4453.79,
+      "ask": 4454.54
+    },
+    "SILVER": {
+      "bid": 68.614,
+      "ask": 68.694
+    },
+    "COPPER": {
+      "bid": 5.51412,
+      "ask": 5.51684
+    },
+    "EURUSDM2026": {
+      "bid": 1.15669,
+      "ask": 1.15675
+    },
+    "US500": {
+      "bid": 6416.7,
+      "ask": 6417.1
+    },
+    "US30": {
+      "bid": 45517.1,
+      "ask": 45519.1
+    },
+    "OIL_CRUDE": {
+      "bid": 96.894,
+      "ask": 96.974
+    },
+    "NATURALGAS": {
+      "bid": 3.0196,
+      "ask": 3.0246
+    }
+  },
+  "actions": [
+    "BLOCKED: BUY XAUUSD \u2014 already have position",
+    "BLOCKED: SELL S&P 500 \u2014 already have position",
+    "OPENED: SELL US30 via \u8da8\u52e2\u5c0d\u9f4a conf=74% size=0.28"
+  ]
+}
+[main be52d4d] auto: update 2026-03-27 22:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 87 insertions(+), 73 deletions(-)
+{
+  "time": "2026-03-27T14:45:23.974535+00:00",
+  "balance": 30911.57,
+  "prices": {
+    "GOLD": {
+      "bid": 4467.25,
+      "ask": 4467.75
+    },
+    "SILVER": {
+      "bid": 69.093,
+      "ask": 69.173
+    },
+    "COPPER": {
+      "bid": 5.51588,
+      "ask": 5.5186
+    },
+    "EURUSDM2026": {
+      "bid": 1.15675,
+      "ask": 1.15681
+    },
+    "US500": {
+      "bid": 6415.8,
+      "ask": 6416.2
+    },
+    "US30": {
+      "bid": 45550.8,
+      "ask": 45552.8
+    },
+    "OIL_CRUDE": {
+      "bid": 96.936,
+      "ask": 97.016
+    },
+    "NATURALGAS": {
+      "bid": 3.0286,
+      "ask": 3.0336
+    }
+  },
+  "actions": [
+    "MAX_POS: 3/3"
+  ]
+}
+[main e88b279] auto: update 2026-03-27 22:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 78 insertions(+), 67 deletions(-)
+{
+  "time": "2026-03-27T15:00:20.544003+00:00",
+  "balance": 30890.07,
+  "prices": {
+    "GOLD": {
+      "bid": 4512.17,
+      "ask": 4512.67
+    },
+    "SILVER": {
+      "bid": 70.432,
+      "ask": 70.512
+    },
+    "COPPER": {
+      "bid": 5.53614,
+      "ask": 5.53886
+    },
+    "EURUSDM2026": {
+      "bid": 1.15706,
+      "ask": 1.15712
+    },
+    "US500": {
+      "bid": 6429.0,
+      "ask": 6429.4
+    },
+    "US30": {
+      "bid": 45615.1,
+      "ask": 45617.1
+    },
+    "OIL_CRUDE": {
+      "bid": 97.043,
+      "ask": 97.123
+    },
+    "NATURALGAS": {
+      "bid": 3.0356,
+      "ask": 3.0406
+    }
+  },
+  "actions": [
+    "PROFIT_CLOSE: BUY Gold +51.3pts",
+    "MAX_POS: 3/3"
+  ]
+}
+[main 03e4ff0] auto: update 2026-03-27 23:00
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 108 insertions(+), 105 deletions(-)
+{
+  "time": "2026-03-27T15:15:19.607182+00:00",
+  "balance": 30882.04,
+  "prices": {
+    "GOLD": {
+      "bid": 4527.33,
+      "ask": 4527.83
+    },
+    "SILVER": {
+      "bid": 71.162,
+      "ask": 71.242
+    },
+    "COPPER": {
+      "bid": 5.53665,
+      "ask": 5.53937
+    },
+    "EURUSDM2026": {
+      "bid": 1.15717,
+      "ask": 1.15723
+    },
+    "US500": {
+      "bid": 6422.4,
+      "ask": 6422.8
+    },
+    "US30": {
+      "bid": 45589.1,
+      "ask": 45591.1
+    },
+    "OIL_CRUDE": {
+      "bid": 96.885,
+      "ask": 96.917
+    },
+    "NATURALGAS": {
+      "bid": 3.0306,
+      "ask": 3.0356
+    }
+  },
+  "actions": [
+    "BLOCKED: SELL S&P 500 \u2014 already have position",
+    "OPENED: SELL US30 via \u8da8\u52e2\u5c0d\u9f4a conf=77% size=0.42",
+    "OPENED: BUY XAUUSD via \u8da8\u52e2\u5c0d\u9f4a conf=74% size=0.03"
+  ]
+}
+[main 571d210] auto: update 2026-03-27 23:15
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 108 insertions(+), 133 deletions(-)
+{
+  "time": "2026-03-27T15:30:19.621915+00:00",
+  "balance": 30856.01,
+  "prices": {
+    "GOLD": {
+      "bid": 4542.12,
+      "ask": 4542.62
+    },
+    "SILVER": {
+      "bid": 71.178,
+      "ask": 71.258
+    },
+    "COPPER": {
+      "bid": 5.54291,
+      "ask": 5.54563
+    },
+    "EURUSDM2026": {
+      "bid": 1.15771,
+      "ask": 1.15777
+    },
+    "US500": {
+      "bid": 6431.8,
+      "ask": 6432.2
+    },
+    "US30": {
+      "bid": 45624.5,
+      "ask": 45626.5
+    },
+    "OIL_CRUDE": {
+      "bid": 96.356,
+      "ask": 96.388
+    },
+    "NATURALGAS": {
+      "bid": 3.0336,
+      "ask": 3.0386
+    }
+  },
+  "actions": [
+    "MAX_POS: 3/3"
+  ]
+}
+[main c88d31a] auto: update 2026-03-27 23:30
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 127 insertions(+), 102 deletions(-)
+帳戶餘額更新: 30840.13 -> 30819.7
+{
+  "time": "2026-03-27T15:45:24.264363+00:00",
+  "balance": 30819.7,
+  "prices": {
+    "GOLD": {
+      "bid": 4532.94,
+      "ask": 4533.44
+    },
+    "SILVER": {
+      "bid": 70.914,
+      "ask": 70.994
+    },
+    "COPPER": {
+      "bid": 5.53979,
+      "ask": 5.54251
+    },
+    "EURUSDM2026": {
+      "bid": 1.1578,
+      "ask": 1.15786
+    },
+    "US500": {
+      "bid": 6431.6,
+      "ask": 6432.0
+    },
+    "OIL_CRUDE": {
+      "bid": 96.521,
+      "ask": 96.553
+    },
+    "NATURALGAS": {
+      "bid": 3.0321,
+      "ask": 3.0371
+    }
+  },
+  "actions": [
+    "OPENED SELL US500 Conf:0.75"
+  ]
+}
+[main f279c7d] auto: update 2026-03-27 23:45
+ Committer: Kid舊mac <kid@KidjiumacdeMBP.hitronhub.home>
+您的姓名和信件位址皆根據您的使用者名稱和主機名稱自動設定。
+請檢查是否正確。您可以自行設定，這樣便不會再出現這個提示訊息。
+執行如下指令，在編輯器中遵循指引編輯您的設定檔案：
+
+    git config --global --edit
+
+設定完畢後，您可以使用下述指令，修正這個提交的提交者身份：
+
+    git commit --amend --reset-author
+
+ 1 file changed, 29 insertions(+), 40 deletions(-)

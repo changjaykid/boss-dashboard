@@ -1,0 +1,113 @@
+{
+  "lastUpdate": "2026/3/29 上午2:45:00",
+  "exchange": "MAX (MaiCoin)",
+  "status": "connected",
+  "account": {
+    "balances": [
+      {
+        "currency": "BTC",
+        "available": "5.5e-7",
+        "locked": "0",
+        "staked": "0"
+      },
+      {
+        "currency": "USDT",
+        "available": "9e-8",
+        "locked": "0",
+        "staked": "0"
+      }
+    ],
+    "totalValueTWD": "1.18",
+    "totalBalances": 2
+  },
+  "tickers": [
+    {
+      "market": "btctwd",
+      "name": "BTC/TWD",
+      "last": "2150126.5",
+      "open": "2114835.5",
+      "high": "2159501",
+      "low": "2110616.2",
+      "vol": "11.8967",
+      "change": "1.67"
+    },
+    {
+      "market": "ethtwd",
+      "name": "ETH/TWD",
+      "last": "65014.4",
+      "open": "63600",
+      "high": "65483.4",
+      "low": "63600",
+      "vol": "320.8792",
+      "change": "2.22"
+    },
+    {
+      "market": "soltwd",
+      "name": "SOL/TWD",
+      "last": "2677.1",
+      "open": "2645",
+      "high": "2702.9",
+      "low": "2633.3",
+      "vol": "1391.561",
+      "change": "1.21"
+    },
+    {
+      "market": "dogetwd",
+      "name": "DOGE/TWD",
+      "last": "2.9709",
+      "open": "2.8903",
+      "high": "3.0551",
+      "low": "2.8774",
+      "vol": "1310652.2",
+      "change": "2.79"
+    },
+    {
+      "market": "xrptwd",
+      "name": "XRP/TWD",
+      "last": "43.335",
+      "open": "42.431",
+      "high": "43.576",
+      "low": "42.431",
+      "vol": "14822.92",
+      "change": "2.13"
+    },
+    {
+      "market": "btcusdt",
+      "name": "BTC/USDT",
+      "last": "66950.58",
+      "open": "65872.76",
+      "high": "67266.9",
+      "low": "65755.39",
+      "vol": "5.6407",
+      "change": "1.64"
+    },
+    {
+      "market": "ethusdt",
+      "name": "ETH/USDT",
+      "last": "2022.16",
+      "open": "1983.6",
+      "high": "2043.61",
+      "low": "1980.5",
+      "vol": "185.9366",
+      "change": "1.94"
+    },
+    {
+      "market": "solusdt",
+      "name": "SOL/USDT",
+      "last": "83.38",
+      "open": "81.98",
+      "high": "84.23",
+      "low": "81.98",
+      "vol": "852.603",
+      "change": "1.71"
+    }
+  ],
+  "openOrders": [],
+  "recentTrades": [],
+  "marketSentiment": {
+    "fearGreed": {
+      "value": "12",
+      "label": "Extreme Fear"
+    }
+  }
+}

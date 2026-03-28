@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-browser": {
+      "version": "0.2.0",
+      "installedAt": 1774468741381
+    },
+    "gog": {
+      "version": "1.0.0",
+      "installedAt": 1774468744813
+    },
+    "liang-tavily-search": {
+      "version": "1.0.1",
+      "installedAt": 1774468749523
+    },
+    "self-improving-agent": {
+      "version": "3.0.6",
+      "installedAt": 1774468754008
+    },
+    "skill-vetter": {
+      "version": "1.0.0",
+      "installedAt": 1774468758219
+    },
+    "summarize": {
+      "version": "1.0.0",
+      "installedAt": 1774468762103
+    },
+    "automation-workflows": {
+      "version": "0.1.0",
+      "installedAt": 1774468773475
+    },
+    "skill-builder": {
+      "version": "1.0.5",
+      "installedAt": 1774468778221
+    },
+    "self-evolving-skill": {
+      "version": "1.0.2",
+      "installedAt": 1774468783222
+    },
+    "auto-workflow": {
+      "version": "1.0.0",
+      "installedAt": 1774468787579
+    },
+    "ai-web-automation": {
+      "version": "1.0.0",
+      "installedAt": 1774468802956
+    },
+    "sag": {
+      "version": "1.0.0",
+      "installedAt": 1774469365228
+    },
+    "free-ride": {
+      "version": "1.0.7",
+      "installedAt": 1774695857683
+    },
+    "desktop-control": {
+      "version": "1.0.0",
+      "installedAt": 1774695879603
+    },
+    "self-improving": {
+      "version": "1.2.16",
+      "installedAt": 1774695921792
+    },
+    "copywriting": {
+      "version": "0.1.0",
+      "installedAt": 1774695974154
+    },
+    "stock-market-pro": {
+      "version": "1.2.12",
+      "installedAt": 1774695992616
+    },
+    "proactive-agent": {
+      "version": "3.1.0",
+      "installedAt": 1774696028029
+    },
+    "nano-banana-pro": {
+      "version": "1.0.1",
+      "installedAt": 1774696046061
+    },
+    "cron-mastery": {
+      "version": "1.0.3",
+      "installedAt": 1774696127666
+    },
+    "remotion-video-toolkit": {
+      "version": "1.4.0",
+      "installedAt": 1774696098803
+    },
+    "find-skills-skill": {
+      "version": "1.0.0",
+      "installedAt": 1774696136492
+    },
+    "openclaw-find-skills": {
+      "version": "1.0.0",
+      "installedAt": 1774696165119
+    }
+  }
+}

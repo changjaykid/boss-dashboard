@@ -1,0 +1,42 @@
+{
+  "account": {
+    "assumed_capital": 1000,
+    "actual_balance": 31000,
+    "currency": "USD"
+  },
+  "risk_management": {
+    "max_risk_per_trade_pct": 20,
+    "max_risk_per_trade_usd": 200,
+    "lot_size": 0.01,
+    "max_concurrent_positions": 3,
+    "min_reward_risk_ratio": 2.0,
+    "max_reward_risk_ratio": 4,
+    "note": "每筆風險20%，手數根據止損距離動態計算"
+  },
+  "instruments": {
+    "active": ["GOLD", "EURUSDM2026", "US500", "OIL_CRUDE"],
+    "banned": ["BTCUSD", "ETHUSD", "LTCUSD", "XRPUSD"],
+    "note": "虛擬貨幣系列永久停用，另開專案處理"
+  },
+  "api": {
+    "base_url": "https://api-capital.backend-capital.com",
+    "identifier": "jaykidforextrading@gmail.com"
+  },
+  "strategy": {
+    "name": "v4_strict_confirmation",
+    "version": "4.0",
+    "description": "嚴格多重確認模式：3策略、0.70門檻、趨勢對齊、交易時段過濾",
+    "active_strategies": ["趨勢對齊", "RSI超賣反彈/超買回落", "布林擠壓突破"],
+    "min_confidence": 0.70,
+    "rules": [
+      "15M 必須順 1H 方向（嚴格趨勢對齊）",
+      "多重確認計分：RSI + 趨勢 + MACD + ATR 擴張，需 5/7 以上",
+      "禁止同商品反向下單",
+      "每商品最多 1 個持倉",
+      "交易時段過濾：僅在倫敦/紐約活躍時段進場",
+      "連續 3 敗暫停 2 小時",
+      "虛擬貨幣系列永久停用"
+    ]
+  },
+  "trade_log": "trading/trade_log.json"
+}

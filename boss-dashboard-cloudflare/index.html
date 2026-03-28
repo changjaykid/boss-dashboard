@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>老闆專屬主控板 (Boss Dashboard)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #111827; color: #f3f4f6; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1f2937; }
+        ::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
+        .nav-item.active { background-color: rgba(79, 70, 229, 0.2); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.3); }
+        .section-view { display: none; }
+        .section-view.active { display: block; }
+        #auth-overlay { display: flex; }
+        #app-content { display: none; }
+    </style>
+</head>
+<body class="flex h-screen overflow-hidden antialiased font-sans">
+
+    <!-- 密碼鎖層 -->
+    <div id="auth-overlay" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-900/90 backdrop-blur-md">
+        <div class="bg-gray-800 border border-gray-700 p-8 rounded-2xl shadow-2xl w-full max-w-sm">
+            <div class="text-center mb-6">
+                <span class="text-4xl block mb-2">🖤</span>
+                <h2 class="text-xl font-bold text-gray-100">管家主控板驗證</h2>
+                <p class="text-xs text-gray-500 mt-1">Boss Dashboard Auth</p>
+            </div>
+            <div class="space-y-4">
+                <div>
+                    <input type="password" id="pass-input" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors" placeholder="請輸入通行密碼" onkeypress="handleAuth(event)">
+                </div>
+                <button onclick="checkPass()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-4 rounded-lg transition-colors">
+                    解鎖進入
+                </button>
+                <p id="auth-error" class="text-red-400 text-sm text-center hidden">密碼錯誤，請重新輸入。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主控板內容 (驗證後顯示) -->
+    <div id="app-content" class="flex w-full h-full">
+        <!-- 側邊欄 -->
+        <aside class="w-72 bg-gray-900 border-r border-gray-800 flex flex-col shadow-2xl z-10">
+            <div class="p-6 border-b border-gray-800 flex items-center space-x-3">
+                <span class="text-3xl">🖤</span>
+                <div>
+                    <h1 class="text-xl font-bold tracking-wider text-indigo-400">管家主控板</h1>
+                    <p class="text-xs text-gray-500 mt-1">AI Assistant Dashboard</p>
+                </div>
+            </div>
+            
+            <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto" id="sidebar-nav">
+                <a href="#" onclick="switchTab('overview', this)" class="nav-item active flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors">
+                    <span>📊</span><span class="font-medium">總覽與每日回報</span>
+                </a>
+                
+                <div class="pt-4 pb-2"><p class="text-xs font-semibold text-gray-500 uppercase px-4">金融交易 (Finance)</p></div>
+                <a href="#" onclick="switchTab('stocks', this)" class="nav-item flex items-center space-x-3 px-4 py-2 hover:bg-gray-800 text-gray-300 rounded-lg transition-colors">
+                    <span>📈</span><span>股票專案</span>
+                </a>
+                <a href="#" onclick="switchTab('forex', this)" class="nav-item flex items-center space-x-3 px-4 py-2 hover:bg-gray-800 text-gray-300 rounded-lg transition-colors">
+                    <span>💱</span><span>外匯保證金專案</span>
+                </a>
+                <a href="#" onclick="switchTab('crypto', this)" class="nav-item flex items-center space-x-3 px-4 py-2 hover:bg-gray-800 text-gray-300 rounded-lg transition-colors">
+                    <span>🪙</span><span>虛擬貨幣專案</span>
+                </a>
+
+                <div class="pt-4 pb-2"><p class="text-xs font-semibold text-gray-500 uppercase px-4">營運管理 (Operations)</p></div>
+                <a href="#" onclick="switchTab('community', this)" class="nav-item flex items-center space-x-3 px-4 py-2 hover:bg-gray-800 text-gray-300 rounded-lg transition-colors">
+                    <span>🌐</span><span>社群專案</span>
+                </a>
+                <a href="#" onclick="switchTab('skills', this)" class="nav-item flex items-center space-x-3 px-4 py-2 hover:bg-gray-800 text-gray-300 rounded-lg transition-colors">
+                    <span>🛠️</span><span>技能專案</span>
+                </a>
+            </nav>
+            
+            <div class="p-4 border-t border-gray-800">
+                <div class="flex items-center space-x-3 text-sm text-green-400">
+                    <span class="relative flex h-3 w-3">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                    <span>系統運作正常</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 主內容區 -->
+        <main class="flex-1 flex flex-col bg-[#0b0f19] overflow-y-auto relative">
+            <header class="p-8 border-b border-gray-800 bg-gray-900/50 backdrop-blur-sm sticky top-0 z-10">
+                <h2 id="header-title" class="text-2xl font-semibold text-gray-100">今日管家回報與活動狀態</h2>
+                <p id="header-subtitle" class="text-sm text-gray-400 mt-2">2026-03-26 · 隨時待命接收新指令</p>
+            </header>
+
+            <div class="p-8 space-y-8 max-w-7xl">
+                
+                <!-- 總覽 View -->
+                <div id="view-overview" class="section-view active space-y-8">
+                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center space-x-3 mb-6">
+                            <span class="text-xl">⚡</span><h3 class="text-xl font-medium text-indigo-300">最新執行紀錄</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4 p-3 bg-gray-800 rounded-lg border border-gray-700">
+                                <div class="mt-1"><span class="flex h-2.5 w-2.5 bg-green-500 rounded-full"></span></div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-200">更新介面切換功能</p>
+                                    <p class="text-xs text-gray-400 mt-1">已為左側選單加入畫面切換邏輯，點擊即可切換專案內容。</p>
+                                </div>
+                                <span class="ml-auto text-xs text-gray-500">剛剛</span>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center space-x-3 mb-6">
+                            <span class="text-xl">📝</span><h3 class="text-xl font-medium text-indigo-300">每日綜合回報 (Daily Report)</h3>
+                        </div>
+                        <div class="min-h-[200px] flex items-center justify-center border-2 border-dashed border-gray-700 rounded-lg bg-gray-800/30">
+                            <div class="text-center">
+                                <span class="text-4xl block mb-3 text-gray-600">📭</span>
+                                <p class="text-gray-400 text-sm">目前尚無排程回報資料。</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- 股票專案 View -->
+                <div id="view-stocks" class="section-view space-y-8">
+                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xl">📈</span><h3 class="text-xl font-medium text-indigo-300">每日 10 檔潛力股推薦</h3>
+                            </div>
+                            <span class="px-3 py-1 bg-indigo-900/50 border border-indigo-700 text-indigo-300 text-xs rounded-full">排程: 每日 08:00</span>
+                        </div>
+                        <div id="stock-report-content" class="min-h-[200px] flex flex-col items-center justify-center border-2 border-dashed border-gray-700 rounded-lg bg-gray-800/30 p-8">
+                            <span class="text-4xl block mb-3 text-gray-600">⏳</span>
+                            <p class="text-gray-400 text-sm">股票分析報告尚未產生</p>
+                            <p class="text-gray-500 text-xs mt-2">管家將於明天早上 08:00 執行第一次盤後資料爬取與分析。<br>完成後，10檔推薦標的（包含名稱、代號、理由與注意事項）將會顯示在這裡。</p>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- 其他專案 View -->
+                <div id="view-placeholder" class="section-view space-y-8">
+                    <section class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center space-x-3 mb-6">
+                            <span class="text-xl">🚧</span><h3 class="text-xl font-medium text-indigo-300">建置中</h3>
+                        </div>
+                        <div class="min-h-[200px] flex items-center justify-center border-2 border-dashed border-gray-700 rounded-lg bg-gray-800/30">
+                            <div class="text-center">
+                                <p class="text-gray-400 text-sm">此專案的專屬報告區塊與排程任務尚未設定。</p>
+                                <p class="text-gray-500 text-xs mt-1">請隨時指示管家建立 Standing Order！</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // 簡單驗證邏輯 (老闆專屬密碼：8888)
+        function checkPass() {
+            const input = document.getElementById('pass-input').value;
+            if(input === '8888') {
+                document.getElementById('auth-overlay').style.display = 'none';
+                document.getElementById('app-content').style.display = 'flex';
+            } else {
+                document.getElementById('auth-error').classList.remove('hidden');
+            }
+        }
+        function handleAuth(e) {
+            if(e.key === 'Enter') checkPass();
+        }
+
+        const titles = {
+            'overview': { title: '今日管家回報與活動狀態', sub: '2026-03-26 · 隨時待命接收新指令' },
+            'stocks': { title: '股票專案 (Stock Project)', sub: '追蹤前五日台股籌碼與基本面變化' },
+            'forex': { title: '外匯保證金專案 (Forex)', sub: '貨幣對與黃金策略分析' },
+            'crypto': { title: '虛擬貨幣專案 (Crypto)', sub: '加密貨幣熱點與技術面追蹤' },
+            'community': { title: '社群專案 (Community)', sub: '粉絲團與互動指標管理' },
+            'skills': { title: '技能專案 (Skills)', sub: 'AI 技能訓練與功能開發' }
+        };
+
+        function switchTab(viewId, element) {
+            document.querySelectorAll('.nav-item').forEach(el => {
+                el.classList.remove('active', 'bg-indigo-600/20', 'text-indigo-300', 'border-indigo-500/30');
+                el.classList.add('text-gray-300', 'hover:bg-gray-800', 'border-transparent');
+            });
+            element.classList.remove('text-gray-300', 'hover:bg-gray-800', 'border-transparent');
+            element.classList.add('active', 'bg-indigo-600/20', 'text-indigo-300', 'border', 'border-indigo-500/30');
+
+            document.getElementById('header-title').innerText = titles[viewId]?.title || '專案詳情';
+            document.getElementById('header-subtitle').innerText = titles[viewId]?.sub || '資料載入中...';
+
+            document.querySelectorAll('.section-view').forEach(el => el.classList.remove('active'));
+            const targetView = document.getElementById('view-' + viewId);
+            if(targetView) {
+                targetView.classList.add('active');
+            } else {
+                document.getElementById('view-placeholder').classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

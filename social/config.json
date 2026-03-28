@@ -1,0 +1,25 @@
+{
+  "threads": {
+    "username": "freeeadman",
+    "url": "https://www.threads.com/@freeeadman",
+    "language": "zh-TW",
+    "frequency": "daily",
+    "positioning": "行銷、廣告操作、圖片製作、銷售頁製作、品牌、社群服務",
+    "tone": "專業、有觀點、懂市場、懂內容、懂商業、懂實戰",
+    "target_audience": "品牌主、廠商、電商品牌、創業者、需要行銷廣告協助的人",
+    "goal": "透過有價值有觀點有討論度的內容，吸引目標受眾注意，建立專業信任，促成合作",
+    "api_configured": true,
+    "user_id": "34532623686385756",
+    "access_token": "THAFrVqnd5lPBBUVRsbG1lbERqWGJJTjV2YTJUOXJKY3h3Wlc4Y3lpb0xJVEx1Y2N3MUU0dkRVcWRFYk1yN24xQnR6ZAUcxVl9hLUg0Uk50dDJQSldKSTNvUm9oZAUtVYUdPVF9xQ2N4Yi10Vzh2SU0wbHRaY0FmSkJYQkRSNjc4dlJEUDNoQTczaDBaVEo3MmcZD",
+    "app_id": "25567676029572336",
+    "token_type": "short_lived",
+    "token_note": "Token works for read+publish. Need to refresh periodically.",
+    "threads_user_id": "17841475373492689",
+    "app_secret": "216fc885979063987316a29e553931f0"
+  },
+  "instagram": {
+    "username": "freeeadman",
+    "status": "pending",
+    "note": "需要做圖，之後再調整"
+  }
+}

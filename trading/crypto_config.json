@@ -1,0 +1,24 @@
+{
+  "exchange": "MAX (MaiCoin)",
+  "api": {
+    "base_url": "https://max-api.maicoin.com",
+    "access_key": "YdxcAwrheJHg9LEJeFoRf2Jdlxebhrx36IzQd991",
+    "secret_key": "1ShpN4lxB3St7opi1v74bJIjRjGq0gHsA4NG7KeG"
+  },
+  "sdk": "max-exchange-api-node",
+  "status": "connected",
+  "account_snapshot": {
+    "btc": "0.00000055",
+    "usdt": "0.00000009",
+    "twd": "0",
+    "note": "帳戶幾乎為空，需入金後才能交易"
+  },
+  "instruments": {
+    "watchlist": ["btctwd", "ethtwd", "btcusdt", "ethusdt", "soltwd", "solusdt"],
+    "note": "待老闆確認要監控和交易哪些幣對"
+  },
+  "strategy": {
+    "name": "待定",
+    "note": "需老闆指定策略方向"
+  }
+}
