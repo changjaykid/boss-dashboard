@@ -92,6 +92,7 @@
             <div class="pt-3 pb-1"><p class="text-[10px] font-semibold text-gray-500 uppercase px-3">營運管理</p></div>
             <a href="#" onclick="switchTab('ad-business',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🎯</span><span>廣告業務</span></a>
             <a href="#" onclick="switchTab('community',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🌐</span><span>社群專案</span></a>
+            <a href="#" onclick="switchTab('community-ig',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>📸</span><span>社群專案IG</span></a>
             <a href="#" onclick="switchTab('shorts',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🎬</span><span>短影音專案</span></a>
             <a href="#" onclick="switchTab('skills',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🛠️</span><span>技能專案</span></a>
         </nav>
@@ -716,20 +717,67 @@
                     </div>
                 </section>
 
-                <!-- Instagram -->
-                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
-                    <h3 class="text-sm md:text-xl font-medium text-pink-300 mb-3">📸 Instagram · @freeeadman</h3>
-                    <div class="py-6 text-center border border-dashed border-gray-700 rounded-lg">
-                        <p class="text-xs text-gray-400">🚧 準備中 — 需要做圖能力，之後再調整</p>
-                    </div>
-                </section>
-
-
-
                 <!-- Content Pillars -->
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
                     <h3 class="text-xs md:text-sm font-medium text-gray-300 mb-3">📐 內容主軸</h3>
                     <div id="social-pillars" class="grid grid-cols-2 md:grid-cols-3 gap-2"></div>
+                </section>
+            </div>
+
+            <!-- 社群專案IG（獨立頁面） -->
+            <div id="view-community-ig" class="section-view space-y-4 md:space-y-6">
+
+                <!-- IG 主區塊 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-sm md:text-xl font-medium text-pink-300">📸 Instagram · @freeeadman</h3>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-4">
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500 uppercase">已發佈</p>
+                            <p class="text-lg font-bold text-white" id="ig-published">0</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500 uppercase">待審核</p>
+                            <p class="text-lg font-bold text-yellow-400" id="ig-pending">0</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500 uppercase">API 狀態</p>
+                            <p class="text-lg font-bold" id="ig-api-status">未設定</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500 uppercase">更新時間</p>
+                            <p class="text-xs font-bold text-gray-300 mt-1" id="ig-update">--</p>
+                        </div>
+                    </div>
+
+                    <!-- Pending Drafts -->
+                    <div class="mb-4">
+                        <h4 class="text-xs md:text-sm font-medium text-yellow-300 mb-3">📝 待審核草稿</h4>
+                        <div id="ig-drafts" class="space-y-3">
+                            <div class="py-4 text-center border border-dashed border-gray-700 rounded-lg">
+                                <p class="text-xs text-gray-400">🚧 準備中 — 需要做圖能力，之後再調整</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recently Published -->
+                    <div>
+                        <h4 class="text-xs md:text-sm font-medium text-green-300 mb-3">✅ 最近已發佈</h4>
+                        <div id="ig-recent" class="space-y-2">
+                            <p class="text-xs text-gray-500">尚無發佈紀錄</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- IG 內容規劃 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-xs md:text-sm font-medium text-gray-300 mb-3">📐 IG 內容規劃</h3>
+                    <div class="py-4 text-center border border-dashed border-gray-700 rounded-lg">
+                        <p class="text-xs text-gray-400">待規劃 — 圖文貼文、Reels、限時動態策略</p>
+                    </div>
                 </section>
             </div>
 
@@ -1022,7 +1070,7 @@
 function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('open')}
 function checkPass(){if(document.getElementById('pass-input').value==='8888'){document.getElementById('auth-overlay').style.display='none';document.getElementById('app-content').style.display='flex'}else{document.getElementById('auth-error').classList.remove('hidden')}}
 
-const titles={overview:{t:'今日管家回報',s:'隨時待命'},stocks:{t:'股票專案',s:'台股分析'},forex:{t:'外匯保證金',s:'策略分析'},'forex-auto':{t:'🤖 外匯自動交易',s:'多商品 · v4 嚴格確認模式'},crypto:{t:'虛擬貨幣',s:'加密貨幣追蹤'},'crypto-auto':{t:'🤖 虛擬貨幣自動交易',s:'MAX 交易所 · 即時監控'},'ad-business':{t:'🎯 廣告業務',s:'每日潛在客戶蒐集'},community:{t:'社群專案',s:'互動管理'},shorts:{t:'短影音專案',s:'寵物上班去 · 規劃中'},skills:{t:'技能專案',s:'4 模型 · 23 技能'}};
+const titles={overview:{t:'今日管家回報',s:'隨時待命'},stocks:{t:'股票專案',s:'台股分析'},forex:{t:'外匯保證金',s:'策略分析'},'forex-auto':{t:'🤖 外匯自動交易',s:'多商品 · v4 嚴格確認模式'},crypto:{t:'虛擬貨幣',s:'加密貨幣追蹤'},'crypto-auto':{t:'🤖 虛擬貨幣自動交易',s:'MAX 交易所 · 即時監控'},'ad-business':{t:'🎯 廣告業務',s:'每日潛在客戶蒐集'},community:{t:'社群專案',s:'互動管理'},'community-ig':{t:'社群專案IG',s:'Instagram · @freeeadman'},shorts:{t:'短影音專案',s:'寵物上班去 · 規劃中'},skills:{t:'技能專案',s:'4 模型 · 23 技能'}};
 const trendMap={'STRONG_BULL':'強勢看多 🟢','BULL':'看多 🟢','STRONG_BEAR':'強勢看空 🔴','BEAR':'看空 🔴','NEUTRAL':'盤整 ⚪'};
 function trendCN(t){return trendMap[t]||t||'--'}
 function trendColor(t){if(!t)return'text-gray-300';if(t.includes('BULL'))return'text-green-400';if(t.includes('BEAR'))return'text-red-400';return'text-gray-300'}
