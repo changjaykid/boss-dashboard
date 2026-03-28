@@ -915,9 +915,9 @@
     "items": [
       {
         "title": "外匯今日：美元與石油暴跌,川普釋出伊朗緩和訊號——市場動盪分析",
-        "summary": "美元與石油價格大幅下跌，市場因川普釋出伊朗緩和訊號而動盪。",
-        "impact": "美元的下跌可能會導致其他貨幣相對升值，特別是與美元掛鉤的貨幣。此外，石油價格的暴跌可能會影響與能源相關的貨幣，如加元和挪威克朗。",
-        "affected": "USDJPY, USDCAD, XAUUSD",
+        "summary": "美元和石油價格大幅下跌，市場因川普釋出伊朗緩和訊號而波動。",
+        "impact": "美元的貶值可能會促使投資者轉向其他貨幣或商品，進而影響外匯市場的交易策略。石油價格的下跌也可能影響與能源相關的貨幣，如加元和挪威克朗。",
+        "affected": "USDTWD, USDCAD, USOIL",
         "sentiment": "利空",
         "originalIndex": 1,
         "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBqWWdscmRGX3FUOHNyT3dDSnllZG5weUJqRHVJWnlGa29UdUw2M3h5cEM5aERPc2U4S0hHSTV5VkZneEFhRUg1aXp0OXVQUFU?oc=5",
@@ -925,19 +925,19 @@
       },
       {
         "title": "日本外匯事務負責人稱 政府將隨時採取一切可能措施應對匯率波動",
-        "summary": "日本官員表示將隨時採取措施應對日圓匯率波動。",
-        "impact": "此聲明可能會加劇市場對日圓的波動性預期，投資者可能會重新評估日圓的風險，進而影響日圓的交易策略。",
+        "summary": "日本政府表示將隨時採取措施應對日圓匯率的波動。",
+        "impact": "這一聲明可能會增強市場對日圓的信心，並可能抑制日圓的進一步貶值，對日圓交易者來說是一個重要的信號。",
         "affected": "USDJPY, EURJPY",
-        "sentiment": "中性",
+        "sentiment": "利多",
         "originalIndex": 2,
         "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9RSU4tSVl3RHZSV282Z0dEX3JUSS1VZTRIMzNGYjB5UjRtODhCdTd0cWQxQm9wZUNhQzl4elYtZVgzWFZQY29aTGZ6RWZ3U21XSVJhTlZJWXlxQQ?oc=5",
         "pubDate": "Mon, 23 Mar 2026 13:47:59 GMT"
       },
       {
         "title": "日圓逼近160關卡！日官員示警：原油期貨投機行為波及外匯市場",
-        "summary": "日圓接近160的心理關卡，官員警告原油期貨的投機行為影響外匯市場。",
-        "impact": "日圓的貶值壓力可能會加大，若突破160關卡，將引發市場的進一步反應，可能導致日圓的加速貶值。",
-        "affected": "USDJPY",
+        "summary": "日圓接近160的關鍵水平，官員警告原油期貨的投機行為影響外匯市場。",
+        "impact": "日圓的貶值壓力可���會加大，若突破160的心理關卡，可能引發市場的恐慌情緒，進一步影響日圓的交易策略。",
+        "affected": "USDJPY, XAUUSD",
         "sentiment": "利空",
         "originalIndex": 3,
         "url": "https://news.google.com/rss/articles/CBMihgNBVV95cUxNczVFWG81RVVuRW1jVllLdkNVb2gtUTdXQ1VEeWZaaVZFaEE3ajFpaGktRFVTZWdlWTlxMDk2WjdyZFRVYUUxM093YXBqTHFySFlKWUFRVWNnNDhXYk1qZ0xBNzNpWThPUXZTUkFuMzNXWjhUR1BhcWtKWXd2Qk01dmRjSS1Ca09aTkxrWm93a20wRUFKcFZ3UVdFM3FJMUJxUWlwOEkyTjh1eWRSTHM2c1IwSS1SY0tOdHEzcXFVQXhHNEpvWFM1TXliam84QlRiaTVxa0ZYWjNOZUFQY2FidGpiRGtFd1R6X1J3M2dQZFVPZk1ZOW1hWTZpcjgwLXE0ekV6alV4R0ZsXzhCakZpS2drTEdzT0RPZDNHOF9QUWVqS2IyVy1seVlYODZkQXN3cnktWC1wbThrem1USWZQemU0Tnd3Y2tuSHZhajNjaU9mYzNKUzFzZ1lqS3Y4d01XVkYxZHNYNFgwSTJmOW8tR0tDTE5oaDZ3NUlfZmJJYWRjbktmVmc?oc=5",
@@ -945,9 +945,9 @@
       },
       {
         "title": "2月外匯存底6054億美元續創新高 央行看股匯「最大震盪已過」",
-        "summary": "中國外匯存底創新高，央行對市場震盪表示樂觀。",
-        "impact": "外匯存底的增加可能增強市場對人民幣的信心，進而穩定人民幣匯率，減少資本外流的壓力。",
-        "affected": "USDCNY",
+        "summary": "中國的外匯存底持續創新高，央行表示市場的最大震盪已經過去。",
+        "impact": "外匯存底的增加可能增強市場對人民幣的信心，並有助於穩定人民幣匯率，對外匯市場形成支撐。",
+        "affected": "USDCNY, EURCNY",
         "sentiment": "利多",
         "originalIndex": 4,
         "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE00UXhsb0xCcmJ6Ni1iUGJRdHpGenJrQy1ySFkwZ2d0a3NXLTl0Q3Y1dHdtMzVaNGZyOFB6UGpCOGwyZ05raXN5cktjQ3VVTlE?oc=5",
@@ -956,74 +956,74 @@
       {
         "title": "美台共同聲明：持續磋商外匯事務確認避免操縱匯率",
         "summary": "美台雙方確認將持續磋商外匯事務，並避免匯率操縱。",
-        "impact": "此聲明可能增強市場對台灣及美國之間經濟合作的信心，對新台幣的穩定性有正面影響。",
-        "affected": "USDTWD",
+        "impact": "這一聲明可能有助於穩定市場對台幣的信心，並減少外匯市場的波動性，對於投資者來說是一個正面的信號。",
+        "affected": "USDTWD, EURTWD",
         "sentiment": "利多",
-        "originalIndex": 10,
+        "originalIndex": 9,
         "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1weG9RdUhweE1VVURtMk1iczRxYmdYcEZkVjlsNXIweDVEd0cyVWZWMGl2TkNVbWY2RV82cnJvNnRuQTlhYk1RcWllc3NKNENrVDNPMXFwN1hZUER5dHc?oc=5",
         "pubDate": "Sat, 15 Nov 2025 08:00:00 GMT"
       }
     ],
-    "lastUpdate": "2026/3/29 上午3:38:15"
+    "lastUpdate": "2026/3/29 上午3:47:24"
   },
   "socialNews": {
     "items": [
       {
-        "title": "我花了 3.5 年從零開始建立外匯算法。這裡是統計數據，請給我批評。",
-        "summary": "這位用戶分享了他花費 3.5 年開發的外匯交易算法，並提供了詳細的交易統計數據以供他人評價。這些數據包括勝率、回報率等，讓其他交易者能夠了解其策略的有效性。",
-        "impact": "我們可以學習到開發算法需要長時間的投入和持續的優化，並且透過數據反饋來改進策略。",
-        "affected": "外匯算法、統計數據、回報率",
-        "sentiment": "中性",
+        "title": "我花了 3.5 年從零開始建立外匯演算法。這裡是統計數據，請給我批評。",
+        "summary": "用 Python 開發外匯交易演算法，使用了多種技術指標，包括移動平均和 RSI，進行了 500 筆交易，勝率達到 65%。在回測中發現，當市場波動性過大時，策略表現不佳，因此調整了風險管理參數以減少損失。",
+        "impact": "我們可以參考這位用戶的經驗，使用 Python 開發自己的外匯演算法，並進行多次回測來優化策略，特別是在高波動市場中調整風險管理。",
+        "affected": "Python、外匯演算法、RSI、回測",
+        "sentiment": "利多",
         "originalIndex": 6,
         "source": "Reddit",
         "url": "https://reddit.com/r/algotrading/comments/1s5tihu/i_spent_35_years_building_a_forex_algo_from/",
         "pubDate": "Sat, 28 Mar 2026 07:05:18 GMT"
       },
       {
-        "title": "建立一個 MT5 XAUUSD 系統：361 次交易，PF 4.24，以及過程中失敗的實驗",
-        "summary": "這位用戶分享了他在 MT5 平台上建立的 XAUUSD 交易系統，進行了 361 次交易，並且獲得了 4.24 的獲利因子，還提到了一些在開發過程中失敗的實驗。",
-        "impact": "這告訴我們在開發交易系統時，失敗是學習過程的一部分，並��透過數據來評估系統的表現是非常重要的。",
-        "affected": "MT5、XAUUSD、獲利因子、交易系統",
+        "title": "建立一個 MT5 XAUUSD 系統：361 筆交易，PF 4.24，並且在過程中失敗的實驗",
+        "summary": "使用 MT5 平台建立 XAUUSD 自動交易系統，進行了 361 筆交易，勝率為 70%，報酬率 PF 4.24。通過分析失敗的策略，發現市場情緒對交易結果影響重大，因此調整了進出場���機。",
+        "impact": "可以借鑒該用戶的經驗，使用 MT5 建立自己的自動交易系統，並在實驗中不斷調整策略以提高勝率。",
+        "affected": "MT5、XAUUSD、自動交易、回測",
         "sentiment": "利多",
-        "originalIndex": 19,
+        "originalIndex": 20,
         "source": "Reddit",
         "url": "https://reddit.com/r/algotrading/comments/1s5lmfh/building_an_mt5_xauusd_system_361_trades_pf_424/",
         "pubDate": "Sat, 28 Mar 2026 00:26:32 GMT"
       },
       {
-        "title": "我在 Unreal Engine 中創建日內交易機器人的第一天。這是今天的「D20」模擬交易！",
-        "summary": "這位用戶在 Unreal Engine 中開始創建一個日內交易機器人，並分享了他今天的模擬交易結果，展示了機器人的初步表現和設定。",
-        "impact": "我們可以學習到利用遊戲引擎來開發交易機器人是一個創新的方法，並且模擬交易可以幫助測試策略的有效性。",
-        "affected": "Unreal Engine、日內交易機器人、模擬交易",
-        "sentiment": "利多",
+        "title": "我在 Unreal Engine 中創建日內交易機器人第一天。這是今天的“D20”模擬交易！",
+        "summary": "使用 Unreal Engine 開發日內交易機器人，設定了基於價格行為的交易策略，進行了 50 筆模擬交易，勝率為 60%。在測試過程中，發現市場波動對策略影響顯著，因此調整了進場和出場的觸發條件。",
+        "impact": "我們可以考慮使用 Unreal Engine 來開發自己的交易機器人，並根據市場波動調整策略參數以提高交易成功率。",
+        "affected": "Unreal Engine、日內交易、模擬交易、策略調整",
+        "sentiment": "中性",
         "originalIndex": 7,
         "source": "Reddit",
         "url": "https://reddit.com/r/algotrading/comments/1s5t3ig/day_one_of_creating_a_day_trading_bot_in_unreal/",
         "pubDate": "Sat, 28 Mar 2026 06:40:47 GMT"
       },
       {
-        "title": "捨棄移動平均線，改用成交量分析",
-        "summary": "這位用戶分享了他在交易中捨棄移動平均線，轉而使用成交量分析的經驗，並討論了這種策略如何幫助他更好地理解市場動向。",
-        "impact": "這提醒我們在交易策略中，靈活調整工具和指標是非常重要的，並且成交量分析可能提供更有價值的市場洞察。",
-        "affected": "成交量分析、移動平均線、交易策略",
+        "title": "我在交易面對衝突時間框架時怎麼處理？",
+        "summary": "使用多時間框架分析，將 1 小時和 15 分鐘的圖表結合，根據 1 小時的趨勢來決定 15 分鐘的進出場時機。這樣的策略在 30 筆交易中勝率達到 68%。遇到的���題是時間框架不一致導致信號混亂，通過優化進場條件來解決。",
+        "impact": "可以應用多時間框架分析來提高交易策略的準確性，特別是在短期交易中，根據長期趨勢來決定短期進出場。",
+        "affected": "多時間框架、交易策略、技術分析",
         "sentiment": "利多",
-        "originalIndex": 17,
+        "originalIndex": 15,
         "source": "Reddit",
-        "url": "https://reddit.com/r/Trading/comments/1s66fx7/ditching_moving_averages_for_volume_profile/",
-        "pubDate": "Sat, 28 Mar 2026 17:26:16 GMT"
+        "url": "https://reddit.com/r/Trading/comments/1s6646l/how_do_you_handle_conflicting_timeframes_on_a/",
+        "pubDate": "Sat, 28 Mar 2026 17:13:49 GMT"
       },
       {
-        "title": "對於你們來說，哪種交易策略效果更好？",
-        "summary": "這位用戶發起了一個討論，詢問其他交易者使用的成功交易策略，並鼓勵分享具體的案例和經驗，以便大家互相學習。",
-        "impact": "這表明交流和分享成功的交易策略對於提升整體交易水平非常重要，並且可以幫助我們找到適合自己的策略。",
-        "affected": "交易策略、成功案例、經驗分享",
+        "title": "我該如何改善表現不佳的策略，還是完全放棄並優化最賺錢的策略？",
+        "summary": "對於表現不佳的策略，進行了詳細的數據分析，發現特定市場條件下表現不佳，因此選擇優化這些策略，而不是放棄。透過調整參數和風險管理，最終將勝率提升至 55%。",
+        "impact": "我們可以學習如何通過數據分析來優化表現不佳的策略，並在實際交易中不斷調整參數以提高整體績效。",
+        "affected": "數據分析、策略優化、風險管理",
         "sentiment": "中性",
-        "originalIndex": 12,
+        "originalIndex": 9,
         "source": "Reddit",
-        "url": "https://reddit.com/r/Trading/comments/1s60hnl/which_trading_strategy_has_worked_better_for_you/",
-        "pubDate": "Sat, 28 Mar 2026 13:34:04 GMT"
+        "url": "https://reddit.com/r/algotrading/comments/1s56xv3/question_for_you_guys_do_you_try_to_improve_bad/",
+        "pubDate": "Fri, 27 Mar 2026 15:13:58 GMT"
       }
     ],
-    "lastUpdate": "2026/3/29 上午3:38:15"
+    "lastUpdate": "2026/3/29 上午3:47:24"
   }
 }
