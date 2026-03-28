@@ -91,6 +91,7 @@
             <a href="#" onclick="switchTab('crypto-auto',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🤖</span><span>虛擬貨幣自動交易</span></a>
             <div class="pt-3 pb-1"><p class="text-[10px] font-semibold text-gray-500 uppercase px-3">營運管理</p></div>
             <a href="#" onclick="switchTab('community',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🌐</span><span>社群專案</span></a>
+            <a href="#" onclick="switchTab('shorts',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🎬</span><span>短影音專案</span></a>
             <a href="#" onclick="switchTab('skills',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🛠️</span><span>技能專案</span></a>
         </nav>
         <div class="p-3 border-t border-gray-800">
@@ -641,51 +642,99 @@
                     </div>
                 </section>
 
-                <!-- 短影音專案 -->
-                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-sm md:text-xl font-medium text-purple-300">🎬 短影音專案</h3>
-                        <span class="px-2 py-0.5 text-[10px] rounded-full bg-purple-900/30 text-purple-300 border border-purple-700/50">規劃中</span>
-                    </div>
 
-                    <!-- IP 概念 -->
-                    <div class="mb-4 p-3 bg-gray-800 rounded-lg border border-purple-700/30">
-                        <p class="text-xs font-bold text-purple-300 mb-2">🐾 IP：寵物上班去</p>
-                        <div class="space-y-1.5 text-[10px] text-gray-300">
-                            <p>• 寵物體驗各行業（廚師、外送、DJ、醫生...）</p>
-                            <p>• 每集 15-30 秒，無語言、全球市場</p>
-                            <p>• 風格：半寫實擬人</p>
-                            <p>• 主角：狗/貓交替（A/B test 觀看數據）</p>
-                        </div>
-                    </div>
-
-                    <!-- 發布平台 -->
-                    <div class="mb-4">
-                        <p class="text-xs font-medium text-gray-400 mb-2">📱 發布平台</p>
-                        <div class="flex flex-wrap gap-1.5">
-                            <span class="px-2 py-0.5 text-[10px] rounded-full bg-gray-700 text-gray-300">Threads</span>
-                            <span class="px-2 py-0.5 text-[10px] rounded-full bg-gray-700 text-gray-300">IG Reels</span>
-                            <span class="px-2 py-0.5 text-[10px] rounded-full bg-gray-700 text-gray-300">FB Reels</span>
-                            <span class="px-2 py-0.5 text-[10px] rounded-full bg-gray-700 text-gray-300">YouTube Shorts</span>
-                            <span class="px-2 py-0.5 text-[10px] rounded-full bg-gray-700 text-gray-300">小紅書</span>
-                        </div>
-                    </div>
-
-                    <!-- 待確認事項 -->
-                    <div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30">
-                        <p class="text-xs font-bold text-yellow-300 mb-2">⏳ 待老闆確認</p>
-                        <div class="space-y-1.5 text-[10px] text-gray-300">
-                            <p>1. 狗/貓主角的角色設定（名字、個性、造型）</p>
-                            <p>2. 美術風格確認（半寫實擬人 ✓，細節待定）</p>
-                            <p>3. 各平台帳號 API 串接</p>
-                        </div>
-                    </div>
-                </section>
 
                 <!-- Content Pillars -->
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
                     <h3 class="text-xs md:text-sm font-medium text-gray-300 mb-3">📐 內容主軸</h3>
                     <div id="social-pillars" class="grid grid-cols-2 md:grid-cols-3 gap-2"></div>
+                </section>
+            </div>
+
+            <!-- 短影音專案（獨立頁面） -->
+            <div id="view-shorts" class="section-view space-y-4 md:space-y-6">
+
+                <!-- 狀態 -->
+                <div class="flex items-center space-x-2 text-xs">
+                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-purple-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-purple-500"></span></span>
+                    <span class="text-gray-400">狀態：<span class="text-purple-300">規劃中（暫緩）</span></span>
+                </div>
+
+                <!-- IP 概念 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-sm md:text-xl font-medium text-purple-300">🐾 IP：寵物上班去</h3>
+                        <span class="px-2 py-0.5 text-[10px] rounded-full bg-purple-900/30 text-purple-300 border border-purple-700/50">暫緩中</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
+                            <p class="text-xs font-bold text-gray-200 mb-2">📋 概念</p>
+                            <div class="space-y-1.5 text-[10px] text-gray-300">
+                                <p>• 寵物體驗各行業（廚師、外送、DJ、醫生...）</p>
+                                <p>• 每集 15-30 秒，無語言、面向全球</p>
+                                <p>• 天然反差感自帶笑點，題材無限</p>
+                                <p>• 每個行業可深耕出系列</p>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
+                            <p class="text-xs font-bold text-gray-200 mb-2">🎨 風格設定</p>
+                            <div class="space-y-1.5 text-[10px] text-gray-300">
+                                <p>• 美術：半寫實擬人</p>
+                                <p>• 主角：狗/貓交替（A/B test）</p>
+                                <p>• 偶爾有「同事」客串</p>
+                                <p>• 參考：MrTabbyTales</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 影片結構 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">🎬 影片結構（每集 15-30 秒）</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl text-center">
+                            <p class="text-lg">👔</p>
+                            <p class="text-[10px] text-gray-400 mt-1">第 1 秒</p>
+                            <p class="text-xs font-bold text-white">到職</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl text-center">
+                            <p class="text-lg">💼</p>
+                            <p class="text-[10px] text-gray-400 mt-1">第 2-8 秒</p>
+                            <p class="text-xs font-bold text-white">認真工作</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl text-center">
+                            <p class="text-lg">💥</p>
+                            <p class="text-[10px] text-gray-400 mt-1">第 9-12 秒</p>
+                            <p class="text-xs font-bold text-white">出包搞笑</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl text-center">
+                            <p class="text-lg">🔄</p>
+                            <p class="text-[10px] text-gray-400 mt-1">第 13-15 秒</p>
+                            <p class="text-xs font-bold text-white">反轉收尾</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 發布平台 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">📱 發布平台</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 text-xs rounded-lg bg-gray-800 text-gray-300 border border-gray-700">🧵 Threads</span>
+                        <span class="px-3 py-1.5 text-xs rounded-lg bg-gray-800 text-gray-300 border border-gray-700">📸 IG Reels</span>
+                        <span class="px-3 py-1.5 text-xs rounded-lg bg-gray-800 text-gray-300 border border-gray-700">📘 FB Reels</span>
+                        <span class="px-3 py-1.5 text-xs rounded-lg bg-gray-800 text-gray-300 border border-gray-700">▶️ YouTube Shorts</span>
+                        <span class="px-3 py-1.5 text-xs rounded-lg bg-gray-800 text-gray-300 border border-gray-700">📕 小紅書</span>
+                    </div>
+                </section>
+
+                <!-- 待確認事項 -->
+                <section class="bg-gray-800/50 border border-yellow-700/30 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">⏳ 待老闆確認後開工</h3>
+                    <div class="space-y-2 text-xs text-gray-300">
+                        <div class="flex items-center space-x-2"><span class="text-yellow-400">1.</span><span>狗/貓主角的角色設定（名字、個性、造型）</span></div>
+                        <div class="flex items-center space-x-2"><span class="text-yellow-400">2.</span><span>美術風格細節確認（半寫實擬人 ✓）</span></div>
+                        <div class="flex items-center space-x-2"><span class="text-yellow-400">3.</span><span>各平台帳號 API 串接</span></div>
+                    </div>
                 </section>
             </div>
 
@@ -867,7 +916,7 @@
 function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('open')}
 function checkPass(){if(document.getElementById('pass-input').value==='8888'){document.getElementById('auth-overlay').style.display='none';document.getElementById('app-content').style.display='flex'}else{document.getElementById('auth-error').classList.remove('hidden')}}
 
-const titles={overview:{t:'今日管家回報',s:'隨時待命'},stocks:{t:'股票專案',s:'台股分析'},forex:{t:'外匯保證金',s:'策略分析'},'forex-auto':{t:'🤖 外匯自動交易',s:'多商品 · v4 嚴格確認模式'},crypto:{t:'虛擬貨幣',s:'加密貨幣追蹤'},'crypto-auto':{t:'🤖 虛擬貨幣自動交易',s:'MAX 交易所 · 即時監控'},community:{t:'社群專案',s:'互動管理'},skills:{t:'技能專案',s:'4 模型 · 23 技能'}};
+const titles={overview:{t:'今日管家回報',s:'隨時待命'},stocks:{t:'股票專案',s:'台股分析'},forex:{t:'外匯保證金',s:'策略分析'},'forex-auto':{t:'🤖 外匯自動交易',s:'多商品 · v4 嚴格確認模式'},crypto:{t:'虛擬貨幣',s:'加密貨幣追蹤'},'crypto-auto':{t:'🤖 虛擬貨幣自動交易',s:'MAX 交易所 · 即時監控'},community:{t:'社群專案',s:'互動管理'},shorts:{t:'短影音專案',s:'寵物上班去 · 規劃中'},skills:{t:'技能專案',s:'4 模型 · 23 技能'}};
 const trendMap={'STRONG_BULL':'強勢看多 🟢','BULL':'看多 🟢','STRONG_BEAR':'強勢看空 🔴','BEAR':'看空 🔴','NEUTRAL':'盤整 ⚪'};
 function trendCN(t){return trendMap[t]||t||'--'}
 function trendColor(t){if(!t)return'text-gray-300';if(t.includes('BULL'))return'text-green-400';if(t.includes('BEAR'))return'text-red-400';return'text-gray-300'}
