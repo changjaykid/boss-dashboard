@@ -504,7 +504,7 @@
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
                     <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">⚙️ 風控參數</h3>
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">每筆風險</p><p class="text-xs md:text-sm font-bold text-white">$100 (10%)</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">每筆風險</p><p class="text-xs md:text-sm font-bold text-white">$200 (20%)</p></div>
                         <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">手數</p><p class="text-xs md:text-sm font-bold text-white">0.01~0.1</p></div>
                         <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">最大持倉</p><p class="text-xs md:text-sm font-bold text-white">3 筆</p></div>
                         <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">信心門檻</p><p class="text-xs md:text-sm font-bold text-white">≥ 70%</p></div>
@@ -1018,7 +1018,8 @@ if(!ts.length){tb.innerHTML='<div class="py-6 text-center border border-dashed b
 else{tb.innerHTML=ts.map(t=>{const db=t.direction==='BUY'?'badge-buy':'badge-sell';let ob='badge-open';if(t.outcome==='WIN')ob='badge-win';if(t.outcome==='LOSS')ob='badge-loss';
 const tm=t.time?new Date(t.time).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',hour:'2-digit',minute:'2-digit',month:'2-digit',day:'2-digit'}):'--';
 const ps=t.pnl!=null?'$'+t.pnl.toFixed(2):'進行中';const pc=t.pnl!=null&&t.pnl>=0?'text-red-400':t.pnl!=null?'text-green-400':'text-blue-400';
-return`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${db}">${t.direction}</span><span class="px-1.5 py-0.5 text-[10px] rounded-full ${ob}">${t.outcome}</span><span class="text-[10px] text-gray-300">${t.strategy}</span></div><span class="text-xs font-bold ${pc}">${ps}</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>${(t.confidence*100).toFixed(0)}%</span><span>SL:${t.stop_distance} TP:${t.tp_distance}</span><span>${tm}</span></div></div>`}).join('')}
+const instName=t.instrumentName||t.instrument||'--';
+return`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${db}">${t.direction}</span><span class="px-1.5 py-0.5 text-[10px] rounded-full ${ob}">${t.outcome}</span><span class="text-[10px] font-bold text-white">${instName}</span><span class="text-[10px] text-gray-300">${t.strategy}</span></div><span class="text-xs font-bold ${pc}">${ps}</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>手數:${t.size||'--'}</span><span>${(t.confidence*100).toFixed(0)}%</span><span>SL:${t.stop_distance} TP:${t.tp_distance}</span><span>${tm}</span></div></div>`}).join('')}
 
 // Strategy stats
 const sb=document.getElementById('fx-strategy-stats');const ss=d.strategyStats||{};const sk=Object.keys(ss);
