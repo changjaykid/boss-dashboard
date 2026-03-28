@@ -439,6 +439,7 @@
                     <div id="fx-social-list" class="space-y-3">
                         <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
                     </div>
+                    <div id="fx-social-summary"></div>
                 </section>
             </div>
 
@@ -839,6 +840,7 @@
                     <div id="crypto-social-list" class="space-y-3">
                         <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
                     </div>
+                    <div id="crypto-social-summary"></div>
                 </section>
             </div>
 
@@ -1160,12 +1162,20 @@ function renderNews(containerId, updateId, items, lastUpdate, mode) {
   box.innerHTML = items.map(n => `<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1.5"><span class="text-sm font-bold text-white">${n.title||''}</span><span class="px-1.5 py-0.5 text-xs rounded-full border ${sentimentBg(n.sentiment)} ${sentimentColor(n.sentiment)}">${n.sentiment||'--'}</span></div><p class="text-xs text-gray-300 mb-1">${n.summary||''}</p><p class="text-xs text-yellow-300 mb-1">${impactLabel}：${n.impact||'--'}</p><div class="flex items-center justify-between"><span class="text-[10px] text-indigo-400">${n.source?'['+n.source+'] ':''}${affectedLabel}${n.affected||''}</span>${n.url?'<a href="'+n.url+'" target="_blank" class="text-[10px] text-gray-500 hover:underline">原文 ↗</a>':''}</div></div>`).join('');
 }
 
+function renderActionSummary(containerId, text) {
+  const box = document.getElementById(containerId);
+  if (!box) return;
+  if (!text) { box.innerHTML = ''; return; }
+  const lines = text.split('\n').filter(l => l.trim());
+  box.innerHTML = `<div class="mt-4 p-4 bg-indigo-900/30 border border-indigo-700/50 rounded-lg"><div class="flex items-center space-x-2 mb-2"><span class="text-base">🧠</span><span class="text-sm font-bold text-indigo-300">管家總結：我們可以怎麼做</span></div><div class="text-xs text-gray-200 space-y-1.5">${lines.map(l => '<p>' + l + '</p>').join('')}</div></div>`;
+}
+
 async function loadForexNews() {
   try {
     const r = await fetch('trading-data.json?t='+Date.now()); if (!r.ok) return;
     const d = await r.json();
     if (d.news) renderNews('fx-news-list', 'fx-news-update', d.news.items, d.news.lastUpdate);
-    if (d.socialNews) renderNews('fx-social-list', 'fx-social-update', d.socialNews.items, d.socialNews.lastUpdate, 'social');
+    if (d.socialNews) { renderNews('fx-social-list', 'fx-social-update', d.socialNews.items, d.socialNews.lastUpdate, 'social'); renderActionSummary('fx-social-summary', d.socialNews.actionSummary); }
   } catch(e) {}
 }
 
@@ -1174,7 +1184,7 @@ async function loadCryptoNews() {
     const r = await fetch('crypto-trading-data.json?t='+Date.now()); if (!r.ok) return;
     const d = await r.json();
     if (d.news) renderNews('crypto-news-list', 'crypto-news-update', d.news.items, d.news.lastUpdate);
-    if (d.socialNews) renderNews('crypto-social-list', 'crypto-social-update', d.socialNews.items, d.socialNews.lastUpdate, 'social');
+    if (d.socialNews) { renderNews('crypto-social-list', 'crypto-social-update', d.socialNews.items, d.socialNews.lastUpdate, 'social'); renderActionSummary('crypto-social-summary', d.socialNews.actionSummary); }
   } catch(e) {}
 }
 
