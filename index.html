@@ -583,29 +583,6 @@
             <!-- 社群專案 -->
             <div id="view-community" class="section-view space-y-4 md:space-y-6">
 
-                <!-- GitHub Token 設定 (只需一次) -->
-                <section id="gh-token-setup" class="bg-gray-800/50 border border-yellow-700/30 p-3 md:p-4 rounded-xl" style="display:none;">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-2">
-                            <span>🔑</span>
-                            <div>
-                                <p class="text-xs font-bold text-yellow-300">GitHub Token 設定</p>
-                                <p class="text-[10px] text-gray-400">設定一次即可，存在瀏覽器中，之後發佈/拒絕直接操作</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <input id="gh-token-input" type="password" placeholder="ghp_xxxx..." class="px-2 py-1.5 bg-gray-900 border border-gray-600 rounded-lg text-xs text-white w-40 md:w-64 focus:border-indigo-500 focus:outline-none">
-                            <button onclick="saveGhToken()" class="px-3 py-1.5 bg-green-600 hover:bg-green-700 text-white text-xs rounded-lg whitespace-nowrap">💾 儲存</button>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Token 已設定提示 -->
-                <div id="gh-token-ok" class="flex items-center justify-between bg-gray-800/30 border border-green-900/30 px-3 py-2 rounded-lg" style="display:none;">
-                    <span class="text-[10px] text-green-400">🔑 GitHub Token 已設定</span>
-                    <button onclick="clearGhToken()" class="text-[10px] text-gray-500 hover:text-red-400">清除</button>
-                </div>
-
                 <!-- Threads -->
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
                     <div class="flex items-center justify-between mb-4">
@@ -927,8 +904,7 @@ return`<div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30">
 <div class="flex items-center justify-between mb-2">
 <div class="flex items-center gap-2"><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-indigo-900/50 text-indigo-300 border border-indigo-700/50">${pill}</span>${statusBadge}<span class="text-[10px] text-gray-400">${dr.created||''}</span></div>
 <div class="flex gap-2">
-<button onclick="approveDraft('${dr.id||''}')" class="px-2.5 py-1 bg-green-600 hover:bg-green-700 text-white text-[10px] rounded-lg">✅ 發佈</button>
-<button onclick="rejectDraft('${dr.id||''}')" class="px-2.5 py-1 bg-red-600/50 hover:bg-red-700 text-white text-[10px] rounded-lg">❌ 不用</button>
+<span class="px-2 py-1 text-[10px] text-gray-400 bg-gray-700/50 rounded-lg">💬 在 LINE 跟管家說「發」或「不要」</span>
 </div>
 </div>
 <p class="text-xs text-gray-200 whitespace-pre-wrap leading-relaxed">${dr.content||''}</p>
@@ -947,82 +923,9 @@ pb.innerHTML=pls.map(p=>`<div class="p-2.5 bg-gray-800 rounded-lg border border-
 }catch(e){console.log('social err',e)}
 }
 
-// ========== GitHub Token 管理 ==========
-function initGhTokenUI(){
-const hasToken=!!localStorage.getItem('gh_token');
-const setup=document.getElementById('gh-token-setup');
-const ok=document.getElementById('gh-token-ok');
-if(setup)setup.style.display=hasToken?'none':'block';
-if(ok)ok.style.display=hasToken?'flex':'none';
-}
-function saveGhToken(){
-const v=document.getElementById('gh-token-input').value.trim();
-if(!v){alert('請輸入 GitHub Token');return;}
-localStorage.setItem('gh_token',v);
-document.getElementById('gh-token-input').value='';
-initGhTokenUI();
-}
-function clearGhToken(){
-if(!confirm('確定清除 Token？之後操作需要重新設定'))return;
-localStorage.removeItem('gh_token');
-initGhTokenUI();
-}
-function getGhToken(){
-const t=localStorage.getItem('gh_token');
-if(!t){alert('請先在頁面頂部設定 GitHub Token');initGhTokenUI();return null;}
-return t;
-}
+// (審核操作已移至 LINE 對話)
 
-async function approveDraft(id){
-if(!confirm('確定發佈這篇到 Threads？')) return;
-const btn=event.target;btn.disabled=true;btn.textContent='⏳ 發佈中...';
-try{
-const token=getGhToken();
-if(!token){btn.disabled=false;btn.textContent='✅ 發佈';return;}
-const r=await fetch('social-data.json?t='+Date.now());
-const sd=r.ok?await r.json():{drafts:[],published:[],approvalQueue:[]};
-if(!sd.approvalQueue) sd.approvalQueue=[];
-sd.approvalQueue.push({id,action:'approve',time:new Date().toISOString()});
-const getR=await fetch('https://api.github.com/repos/changjaykid/boss-dashboard/contents/social-data.json',{headers:{'Authorization':'token '+token}});
-const getD=await getR.json();
-const sha=getD.sha||null;
-const putR=await fetch('https://api.github.com/repos/changjaykid/boss-dashboard/contents/social-data.json',{
-  method:'PUT',
-  headers:{'Authorization':'token '+token,'Content-Type':'application/json'},
-  body:JSON.stringify({message:'approve: '+id,content:btoa(unescape(encodeURIComponent(JSON.stringify(sd,null,2)))),sha})
-});
-if(putR.ok){
-  btn.textContent='✅ 已排隊';btn.className=btn.className.replace('bg-green-600','bg-gray-600');
-  alert('已標記發佈！管家會在 2 分鐘內自動發佈到 Threads。');
-}else{
-  const err=await putR.json();
-  if(putR.status===401){alert('Token 無效或過期，請重新設定');clearGhToken();}
-  else{alert('更新失敗：'+JSON.stringify(err));}
-  btn.disabled=false;btn.textContent='✅ 發佈';
-}
-}catch(e){alert('錯誤：'+e.message);btn.disabled=false;btn.textContent='✅ 發佈';}
-}
-async function rejectDraft(id){
-if(!confirm('確定不要這篇？')) return;
-try{
-const token=getGhToken();
-if(!token) return;
-const r=await fetch('social-data.json?t='+Date.now());
-const sd=r.ok?await r.json():{drafts:[],published:[],approvalQueue:[]};
-if(!sd.approvalQueue) sd.approvalQueue=[];
-sd.approvalQueue.push({id,action:'reject',time:new Date().toISOString()});
-const getR=await fetch('https://api.github.com/repos/changjaykid/boss-dashboard/contents/social-data.json',{headers:{'Authorization':'token '+token}});
-const getD=await getR.json();
-const putR=await fetch('https://api.github.com/repos/changjaykid/boss-dashboard/contents/social-data.json',{
-  method:'PUT',
-  headers:{'Authorization':'token '+token,'Content-Type':'application/json'},
-  body:JSON.stringify({message:'reject: '+id,content:btoa(unescape(encodeURIComponent(JSON.stringify(sd,null,2)))),sha:getD.sha})
-});
-if(putR.ok){alert('已移除');loadSocialData();}
-else if(putR.status===401){alert('Token 無效或過期，請重新設定');clearGhToken();}
-else{alert('失敗');}
-}catch(e){alert('錯誤：'+e.message);}
-}
+// 審核操作已移至 LINE 對話，主控板僅供預覽草稿
 
 let tri=null;
 function switchTab(v,el){
@@ -1033,7 +936,7 @@ document.querySelectorAll('.section-view').forEach(e=>e.classList.remove('active
 const tv=document.getElementById('view-'+v);if(tv)tv.classList.add('active');else document.getElementById('view-placeholder').classList.add('active');
 if(tri){clearInterval(tri);tri=null}
 if(v==='forex-auto'){loadTradingData();tri=setInterval(loadTradingData,900000)}
-if(v==='community'){initGhTokenUI();loadSocialData()}
+if(v==='community'){loadSocialData()}
 if(v==='crypto-auto'){loadCryptoData();if(!window._cri)window._cri=setInterval(loadCryptoData,900000)}
 }
 
