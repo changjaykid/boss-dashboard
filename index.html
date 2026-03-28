@@ -1147,15 +1147,17 @@ if(v==='ad-business'){loadAdBusinessData()}
 }
 
 // ========== NEWS ==========
-function renderNews(containerId, updateId, items, lastUpdate) {
+function renderNews(containerId, updateId, items, lastUpdate, mode) {
   const box = document.getElementById(containerId);
   const upd = document.getElementById(updateId);
   if (upd) upd.textContent = lastUpdate || '--';
   if (!box) return;
-  if (!items || !items.length) { box.innerHTML = '<p class="text-xs text-gray-400 text-center py-3">尚無新聞資料，中午 12:00 更新</p>'; return; }
+  if (!items || !items.length) { box.innerHTML = '<p class="text-xs text-gray-400 text-center py-3">尚無資料</p>'; return; }
   const sentimentColor = s => s === '利多' ? 'text-green-400' : s === '利空' ? 'text-red-400' : 'text-gray-300';
   const sentimentBg = s => s === '利多' ? 'bg-green-900/50 border-green-700/50' : s === '利空' ? 'bg-red-900/50 border-red-700/50' : 'bg-gray-700/50 border-gray-600/50';
-  box.innerHTML = items.map(n => `<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1.5"><span class="text-sm font-bold text-white">${n.title||''}</span><span class="px-1.5 py-0.5 text-xs rounded-full border ${sentimentBg(n.sentiment)} ${sentimentColor(n.sentiment)}">${n.sentiment||'--'}</span></div><p class="text-xs text-gray-300 mb-1">${n.summary||''}</p><p class="text-xs text-yellow-300 mb-1">影響：${n.impact||'--'}</p><div class="flex items-center justify-between"><span class="text-[10px] text-indigo-400">${n.source?'['+n.source+'] ':'' }${n.affected||''}</span>${n.url?'<a href="'+n.url+'" target="_blank" class="text-[10px] text-gray-500 hover:underline">原文 ↗</a>':''}</div></div>`).join('');
+  const impactLabel = mode === 'social' ? '💡 可參考' : '影響';
+  const affectedLabel = mode === 'social' ? '🔧 ' : '';
+  box.innerHTML = items.map(n => `<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1.5"><span class="text-sm font-bold text-white">${n.title||''}</span><span class="px-1.5 py-0.5 text-xs rounded-full border ${sentimentBg(n.sentiment)} ${sentimentColor(n.sentiment)}">${n.sentiment||'--'}</span></div><p class="text-xs text-gray-300 mb-1">${n.summary||''}</p><p class="text-xs text-yellow-300 mb-1">${impactLabel}：${n.impact||'--'}</p><div class="flex items-center justify-between"><span class="text-[10px] text-indigo-400">${n.source?'['+n.source+'] ':''}${affectedLabel}${n.affected||''}</span>${n.url?'<a href="'+n.url+'" target="_blank" class="text-[10px] text-gray-500 hover:underline">原文 ↗</a>':''}</div></div>`).join('');
 }
 
 async function loadForexNews() {
@@ -1163,7 +1165,7 @@ async function loadForexNews() {
     const r = await fetch('trading-data.json?t='+Date.now()); if (!r.ok) return;
     const d = await r.json();
     if (d.news) renderNews('fx-news-list', 'fx-news-update', d.news.items, d.news.lastUpdate);
-    if (d.socialNews) renderNews('fx-social-list', 'fx-social-update', d.socialNews.items, d.socialNews.lastUpdate);
+    if (d.socialNews) renderNews('fx-social-list', 'fx-social-update', d.socialNews.items, d.socialNews.lastUpdate, 'social');
   } catch(e) {}
 }
 
@@ -1172,7 +1174,7 @@ async function loadCryptoNews() {
     const r = await fetch('crypto-trading-data.json?t='+Date.now()); if (!r.ok) return;
     const d = await r.json();
     if (d.news) renderNews('crypto-news-list', 'crypto-news-update', d.news.items, d.news.lastUpdate);
-    if (d.socialNews) renderNews('crypto-social-list', 'crypto-social-update', d.socialNews.items, d.socialNews.lastUpdate);
+    if (d.socialNews) renderNews('crypto-social-list', 'crypto-social-update', d.socialNews.items, d.socialNews.lastUpdate, 'social');
   } catch(e) {}
 }
 
