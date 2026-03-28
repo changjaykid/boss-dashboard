@@ -114,8 +114,8 @@
     "items": [
       {
         "title": "女股神大倒貨！Ark Invest 拋售數千萬美元 Meta 與 Nvidia 股票，同步減持自家比特幣 ETF - 動區動趨",
-        "summary": "Ark Invest 減持比特幣 ETF，顯示出對市場的謹慎態度。",
-        "impact": "Ark Invest 的行動可能會引發市場對比特幣的信心下降，進一步影響投資者情緒，導致比特幣價格波動加劇。",
+        "summary": "Ark Invest 減持比特幣 ETF，顯示出對加密市場的信心減弱。",
+        "impact": "Ark Invest 的減持行為可能會引發市場對比特幣的擔憂，進一步影響投資者情緒，導致比特幣價格下滑。機構投資者的信心是市場穩定的重要因素，這一消息可能會引發更多的拋售行為。",
         "affected": "BTC",
         "sentiment": "利空",
         "originalIndex": 1,
@@ -123,19 +123,19 @@
         "pubDate": "Fri, 27 Mar 2026 17:04:45 GMT"
       },
       {
-        "title": "比特幣重挫逾3%跌破6.9萬美元 加密貨幣概念股應聲走低 - Yahoo股市",
-        "summary": "比特幣價格大幅下跌，影響整個加密貨幣市場。",
-        "impact": "比特幣的價格下跌可能會引發投資者恐慌，導致更多資金撤出市場，進一步壓低其他加密貨幣的價格。",
+        "title": "比特幣下試65600 市場信心分水嶺 - hkej.com",
+        "summary": "比特幣價格下探至65600美元，成為市場信心的關鍵指標。",
+        "impact": "如果比特幣價格持續低於65600美元，可能會引發更多的賣壓，進一步削弱市場信心，導致價格進一步下滑。這一價格水平將成為短期內投資者觀察的焦點。",
         "affected": "BTC",
         "sentiment": "利空",
-        "originalIndex": 8,
-        "url": "https://news.google.com/rss/articles/CBMi6wJBVV95cUxPbmMwUjQwMDBxa3M0SWJxVl9GUUE1MmhWQ1h2YUtfTmRDbVJCUmtQanBpRjY1d1NjcFZFQjVNdDY0T2FBdnJiRWpYSmlVOGJRS25rRzdYZVhkQkd5VVFtNTZhYWxuRHhBckg3ZkhQRDRMRDI1Qi1xNTdXNWFfQjRTY3o3US1VNWZCd25uaGZzTlVpMm5SNEIzMHF4RDlXWmVFUUVoRFZMaUdTU2U5cXVtd01hZnh0U3loR1BqRXQwYll3MU1MX1hmaGtCeUVaMlltMWxvdjVFTVZGbnJwRU13OFJHQ0pYZlk3MnFydjFWc2RDc2dSSnRQVkc4SVBJS3VhTnUzLUt0T0hpR0NXTXdnY0tkdm9VUjk0Y1pUc1g1N0xoVV83YlI3d2ZDUU0ycDUzWHhqY1dCM19xOXBhdG10LVdyYlNiQlJpVzVVeVdEZHQtREd5QktGMHVFWVRjN28zY1ptbkpldUgwTlE?oc=5",
-        "pubDate": "Fri, 27 Mar 2026 13:43:28 GMT"
+        "originalIndex": 5,
+        "url": "https://news.google.com/rss/articles/CBMi4gJBVV95cUxQUjB2aEVJbk5EckhYSURoVzNkNEdzX1Bycnh3ODRQdjZQNVJfc01fdFV1bmlLZWFnU1ZibG9YMFhsclJEVmNnMG9PN19rYkQ0RWRtTEwtNGpJMTh2Qlk3QjNyZy1iVTkzMUtvZTFVbGpRSzdRbVo2WDg5amFPQVBtb0hzRU1MZzB0OWFXWEc0M3hzd3MxQ3o4bk10eG85S3ZuZzNXQU9lYlY2SmREV05GMC1ZQ3hUNFpqV2I1S2h2dS0zeElzVlBEaHduSlo4NzhEVzBzQzRaNHdnaWFBRnpURGdnSUg2aTQtaHpuTXRUUURNZ1ZsWW04RHZPYlV1ZHJURkxOSVNZbzAwdUpvd2dZSng0UmlDcC1XWVZGYTdZNzJNZGp5NFFyUHhOZ1ZKNHlRUnlNUEhYbXQ5ZG5DcUtVYU5pSU40Q2JiTXgtN21DeXRFMEpEZ29hbk11OTVSVThVdlE?oc=5",
+        "pubDate": "Fri, 27 Mar 2026 18:54:04 GMT"
       },
       {
         "title": "逾 140 億美元比特幣期權週五到期，市場緊盯 7.5 萬美元「磁吸價位」 - 區塊客",
-        "summary": "大量比特幣期權到期，市場關注關鍵價位。",
-        "impact": "期權到期可能會引發價格波動，特別是在接近關鍵價位時，投資者需密切關注市場動向以調整策略。",
+        "summary": "大量比特幣期權即將到期，市場將關注7.5萬美元的關鍵價位。",
+        "impact": "期權到期可能會引發市場波動，尤其是當價格接近7.5萬美元時，可能會出現劇烈的買賣行為，影響比特幣的短期走勢。這一價位的突破或回落將對市場情緒產生重大影響。",
         "affected": "BTC",
         "sentiment": "中性",
         "originalIndex": 6,
@@ -143,27 +143,27 @@
         "pubDate": "Wed, 25 Mar 2026 18:17:36 GMT"
       },
       {
+        "title": "比特幣重挫逾3%跌破6.9萬美元 加密貨幣概念股應聲走低 - Yahoo股市",
+        "summary": "比特幣價格重挫，跌破6.9萬美元，影響相關概念股表現。",
+        "impact": "比特幣的重挫將直接影響投資者對加密貨幣市場的信心，可能導致更多的資金流出，加密貨幣概念股的表現也會受到拖累，進一步加劇市場的下行壓力。",
+        "affected": "BTC",
+        "sentiment": "利空",
+        "originalIndex": 8,
+        "url": "https://news.google.com/rss/articles/CBMi6wJBVV95cUxPbmMwUjQwMDBxa3M0SWJxVl9GUUE1MmhWQ1h2YUtfTmRDbVJCUmtQanBpRjY1d1NjcFZFQjVNdDY0T2FBdnJiRWpYSmlVOGJRS25rRzdYZVhkQkd5VVFtNTZhYWxuRHhBckg3ZkhQRDRMRDI1Qi1xNTdXNWFfQjRTY3o3US1VNWZCd25uaGZzTlVpMm5SNEIzMHF4RDlXWmVFUUVoRFZMaUdTU2U5cXVtd01hZnh0U3loR1BqRXQwYll3MU1MX1hmaGtCeUVaMlltMWxvdjVFTVZGbnJwRU13OFJHQ0pYZlk3MnFydjFWc2RDc2dSSnRQVkc4SVBJS3VhTnUzLUt0T0hpR0NXTXdnY0tkdm9VUjk0Y1pUc1g1N0xoVV83YlI3d2ZDUU0ycDUzWHhqY1dCM19xOXBhdG10LVdyYlNiQlJpVzVVeVdEZHQtREd5QktGMHVFWVRjN28zY1ptbkpldUgwTlE?oc=5",
+        "pubDate": "Fri, 27 Mar 2026 13:43:28 GMT"
+      },
+      {
         "title": "比特幣穩居加密貨幣龍頭地位 專家點出四大長期投資優勢 - PChome Online 新聞",
-        "summary": "專家分析比特幣的長期投資優勢，強調其市場地位。",
-        "impact": "這種正面的專家評價可能會吸引長期投資者進場，穩定比特幣的價格，並可能促進市場回暖。",
+        "summary": "專家指出比特幣的四大長期投資優勢，強調其在市場中的穩定性。",
+        "impact": "儘管���期內市場波動加劇，但專家的分析可能會吸引長期投資者重新評估比特幣的價值，增強市場信心，對比特幣的長期走勢形成支撐。",
         "affected": "BTC",
         "sentiment": "利多",
         "originalIndex": 4,
         "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQbFpaNXNfYlMwY055eXFOVVZKZFZINWdGZmM1U2EzTFBRbW1maHBJTnQ4dHFaNHNqLVcwdWhuT1EzU2tYOVpxZGFDTUV4X3JJOHZoc1U1anRxNmZwTE41RHFfcjhBVHJtdWF5NkhnOTgtNkdXbDVtLUZKMHpFQ2pHUWk0aWhZOXpVN0g3QQ?oc=5",
         "pubDate": "Fri, 27 Mar 2026 20:01:37 GMT"
-      },
-      {
-        "title": "比特幣下試65600 市場信心分水嶺 - hkej.com",
-        "summary": "比特幣價格測試重要支撐位，市場情緒緊張。",
-        "impact": "如果比特幣跌破此支撐位，可能會引發更大的賣壓，進一步削弱市場信心，導致價格持續下滑。",
-        "affected": "BTC",
-        "sentiment": "利空",
-        "originalIndex": 5,
-        "url": "https://news.google.com/rss/articles/CBMi4gJBVV95cUxQUjB2aEVJbk5EckhYSURoVzNkNEdzX1Bycnh3ODRQdjZQNVJfc01fdFV1bmlLZWFnU1ZibG9YMFhsclJEVmNnMG9PN19rYkQ0RWRtTEwtNGpJMTh2Qlk3QjNyZy1iVTkzMUtvZTFVbGpRSzdRbVo2WDg5amFPQVBtb0hzRU1MZzB0OWFXWEc0M3hzd3MxQ3o4bk10eG85S3ZuZzNXQU9lYlY2SmREV05GMC1ZQ3hUNFpqV2I1S2h2dS0zeElzVlBEaHduSlo4NzhEVzBzQzRaNHdnaWFBRnpURGdnSUg2aTQtaHpuTXRUUURNZ1ZsWW04RHZPYlV1ZHJURkxOSVNZbzAwdUpvd2dZSng0UmlDcC1XWVZGYTdZNzJNZGp5NFFyUHhOZ1ZKNHlRUnlNUEhYbXQ5ZG5DcUtVYU5pSU40Q2JiTXgtN21DeXRFMEpEZ29hbk11OTVSVThVdlE?oc=5",
-        "pubDate": "Fri, 27 Mar 2026 18:54:04 GMT"
       }
     ],
-    "lastUpdate": "2026/3/29 上午3:22:11"
+    "lastUpdate": "2026/3/29 上午3:27:10"
   },
   "simulation": {
     "enabled": true,
@@ -398,70 +398,70 @@
     },
     "consecutiveLosses": 0,
     "pausedUntil": null,
-    "hoursElapsed": "11.6",
+    "hoursElapsed": "11.7",
     "hoursRemaining": "646580.6",
     "startTime": "2026-03-28T15:44:00+08:00",
     "endTime": "2099-12-31T23:59:59+08:00",
-    "lastUpdate": "2026/3/29 上午3:22:10"
+    "lastUpdate": "2026/3/29 上午3:26:09"
   },
   "socialNews": {
     "items": [
       {
-        "title": "以色列空軍少校被控利用機密資訊在Polymarket下注",
-        "summary": "這則貼文討論了一名以色列空軍少校因利用機密資訊進行加密貨幣投注而被控的事件。",
-        "impact": "此事件可能引發對加密市場合規性及監管的關注，影響市場信心。",
-        "affected": "Polymarket",
-        "sentiment": "利空",
-        "originalIndex": 1,
+        "title": "我花了 3.5 年從零開始建立一個外匯演算法。這裡是統計數據，請給我批評。",
+        "summary": "討論者分享了自己建立外匯交易演算法的經驗和統計數據，尋求社群的意見。",
+        "impact": "這個討論提供了關於演算法交易的實際經驗和數據分析，對於想要開發 AI 交易系統的人來說非常有參考價值。",
+        "affected": "外匯交易演算法",
+        "sentiment": "中性",
+        "originalIndex": 14,
         "source": "Reddit",
-        "url": "https://reddit.com/r/CryptoCurrency/comments/1s5ey8a/israeli_air_force_major_charged_with_using/",
-        "pubDate": "Fri, 27 Mar 2026 20:01:45 GMT"
+        "url": "https://reddit.com/r/algotrading/comments/1s5tihu/i_spent_35_years_building_a_forex_algo_from/",
+        "pubDate": "Sat, 28 Mar 2026 07:05:18 GMT"
       },
       {
-        "title": "比特幣連續五個月下跌 - 再下跌一個月將創下歷史新高",
-        "summary": "討論比特幣連續五個月下跌的情況，並提到這可能是買入的好時機。",
-        "impact": "市場情緒可能轉向樂觀，吸引更多投資者進場。",
-        "affected": "比特幣",
-        "sentiment": "利多",
-        "originalIndex": 2,
-        "source": "Reddit",
-        "url": "https://reddit.com/r/CryptoCurrency/comments/1s5p3st/5_straight_red_months_for_bitcoin_one_more_and/",
-        "pubDate": "Sat, 28 Mar 2026 03:08:19 GMT"
-      },
-      {
-        "title": "以太坊持有者如果價格持續下跌",
-        "summary": "這則貼文探討了以太坊持有者在價格下跌時的心態和應對策略。",
-        "impact": "可能引發持有者的拋售壓力，進一步影響以太坊的價格走勢。",
-        "affected": "以太坊",
-        "sentiment": "利空",
-        "originalIndex": 5,
-        "source": "Reddit",
-        "url": "https://reddit.com/r/ethtrader/comments/1s46nun/eth_holders_if_the_price_keeps_falling/",
-        "pubDate": "Thu, 26 Mar 2026 12:54:52 GMT"
-      },
-      {
-        "title": "美國將成為全球比特幣和加密貨幣超級大國，特朗普總統表示",
-        "summary": "特朗普總統的言論引發了對美國在加密貨幣領域未來角色的討論。",
-        "impact": "如果美國真的成為加密貨幣的領導者，可能會吸引更多的資本流入市場。",
-        "affected": "比特幣",
-        "sentiment": "利多",
-        "originalIndex": 9,
-        "source": "Reddit",
-        "url": "https://reddit.com/r/CryptoCurrency/comments/1s5wccv/us_will_lead_as_global_bitcoin_crypto_superpower/",
-        "pubDate": "Sat, 28 Mar 2026 10:01:11 GMT"
-      },
-      {
-        "title": "以太坊主網每週活躍地址達到364萬 - 保持在歷史高位",
-        "summary": "以太坊的活躍地址數量持續增長，顯示出強勁的用戶參與度。",
-        "impact": "這表明以太坊生態系統的健康狀況，可能吸引更多投資者的注意。",
-        "affected": "以太坊",
+        "title": "第一天在虛幻引擎中創建日內交易機器人。這是今天的「D20」模擬交易！",
+        "summary": "討論者展示了他在虛幻引擎中開發日內交易機器人的進展和模擬交易結果。",
+        "impact": "這個討論展示了如何使用遊戲引擎來開發交易機器人，對於尋求創新解決方案的開發者來說非常有啟發性。",
+        "affected": "日內交易機器人",
         "sentiment": "利多",
         "originalIndex": 15,
         "source": "Reddit",
-        "url": "https://reddit.com/r/ethtrader/comments/1s4bc9z/ethereum_mainnet_weekly_active_addresses_hit_364m/",
-        "pubDate": "Thu, 26 Mar 2026 15:52:57 GMT"
+        "url": "https://reddit.com/r/algotrading/comments/1s5t3ig/day_one_of_creating_a_day_trading_bot_in_unreal/",
+        "pubDate": "Sat, 28 Mar 2026 06:40:47 GMT"
+      },
+      {
+        "title": "你們會嘗試改善表現不佳的策略，還是完全放棄並優化最大的贏利策略？",
+        "summary": "討論者詢問社群對於交易策略的管理方式，特別是如何處理表現不佳的策略。",
+        "impact": "這個討論提供了對於策略優化和風險管理的不同觀點，對於 AI 交易系統的調整與優化具有參考意義。",
+        "affected": "交易策略優化",
+        "sentiment": "中性",
+        "originalIndex": 18,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/algotrading/comments/1s56xv3/question_for_you_guys_do_you_try_to_improve_bad/",
+        "pubDate": "Fri, 27 Mar 2026 15:13:58 GMT"
+      },
+      {
+        "title": "為什麼華爾街突然對代幣化著迷",
+        "summary": "討論者分析了華爾街對代幣化的興趣上升的原因及其潛在影響。",
+        "impact": "這個討論揭示了代幣化對金融市場的影響，對於開發 AI 交易系統的策略設計有重要的啟示。",
+        "affected": "代幣化交易策略",
+        "sentiment": "利多",
+        "originalIndex": 19,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/CryptoCurrency/comments/1s616z6/heres_why_wall_street_suddenly_obsessed_with/",
+        "pubDate": "Sat, 28 Mar 2026 14:03:02 GMT"
+      },
+      {
+        "title": "以 PayPal 購買比特幣（使用 CoinPal）",
+        "summary": "討論者介紹了一種使用 PayPal 購買比特幣的方法，並分享了相關的工具。",
+        "impact": "這個討論提供了新的購買渠道，對於 AI 交易系統的資金流動性管理有實際的參考價值。",
+        "affected": "比���幣購買工具",
+        "sentiment": "利多",
+        "originalIndex": 24,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/Bitcoin/comments/1s61ehx/buy_bitcoins_with_paypal_using_coinpal/",
+        "pubDate": "Sat, 28 Mar 2026 14:11:21 GMT"
       }
     ],
-    "lastUpdate": "2026/3/29 上午3:22:11"
+    "lastUpdate": "2026/3/29 上午3:27:10"
   }
 }

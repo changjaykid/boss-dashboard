@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>老闆專屬主控板</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config={theme:{extend:{screens:{xs:'480px'},fontSize:{xs:['0.8125rem',{lineHeight:'1.25rem'}],sm:['0.9375rem',{lineHeight:'1.375rem'}],base:['1.0625rem',{lineHeight:'1.625rem'}],lg:['1.1875rem',{lineHeight:'1.75rem'}],xl:['1.375rem',{lineHeight:'1.875rem'}],'2xl':['1.625rem',{lineHeight:'2rem'}]}}}}</script>
+    <script>tailwind.config={theme:{extend:{screens:{xs:'480px'}}}}</script>
     <style>
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         body { background: #111827; color: #f3f4f6; overflow: hidden; }
@@ -433,7 +433,7 @@
                 </section>
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
                     <div class="flex items-center justify-between mb-3">
-                        <h3 class="text-sm md:text-xl font-medium text-cyan-300">🔥 X / Reddit 熱門討論（外匯）</h3>
+                        <h3 class="text-sm md:text-xl font-medium text-cyan-300">🔥 X / Reddit 熱門討論（AI 自動交易 · 外匯）</h3>
                         <span class="text-[10px] text-gray-400" id="fx-social-update">--</span>
                     </div>
                     <div id="fx-social-list" class="space-y-3">
@@ -833,7 +833,7 @@
                 </section>
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
                     <div class="flex items-center justify-between mb-3">
-                        <h3 class="text-sm md:text-xl font-medium text-cyan-300">🔥 X / Reddit 熱門討論（虛擬貨幣）</h3>
+                        <h3 class="text-sm md:text-xl font-medium text-cyan-300">🔥 X / Reddit 熱門討論（AI 自動交易 · 虛擬貨幣）</h3>
                         <span class="text-[10px] text-gray-400" id="crypto-social-update">--</span>
                     </div>
                     <div id="crypto-social-list" class="space-y-3">
@@ -1155,7 +1155,7 @@ function renderNews(containerId, updateId, items, lastUpdate) {
   if (!items || !items.length) { box.innerHTML = '<p class="text-xs text-gray-400 text-center py-3">尚無新聞資料，中午 12:00 更新</p>'; return; }
   const sentimentColor = s => s === '利多' ? 'text-green-400' : s === '利空' ? 'text-red-400' : 'text-gray-300';
   const sentimentBg = s => s === '利多' ? 'bg-green-900/50 border-green-700/50' : s === '利空' ? 'bg-red-900/50 border-red-700/50' : 'bg-gray-700/50 border-gray-600/50';
-  box.innerHTML = items.map(n => `<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1.5"><span class="text-xs font-bold text-white">${n.title||''}</span><span class="px-1.5 py-0.5 text-[10px] rounded-full border ${sentimentBg(n.sentiment)} ${sentimentColor(n.sentiment)}">${n.sentiment||'--'}</span></div><p class="text-[10px] text-gray-300 mb-1">${n.summary||''}</p><p class="text-[10px] text-yellow-300 mb-1">影響：${n.impact||'--'}</p><div class="flex items-center justify-between"><span class="text-[9px] text-indigo-400">${n.affected||''}</span>${n.url?'<a href="'+n.url+'" target="_blank" class="text-[9px] text-gray-500 hover:underline">原文 ↗</a>':''}</div></div>`).join('');
+  box.innerHTML = items.map(n => `<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1.5"><span class="text-sm font-bold text-white">${n.title||''}</span><span class="px-1.5 py-0.5 text-xs rounded-full border ${sentimentBg(n.sentiment)} ${sentimentColor(n.sentiment)}">${n.sentiment||'--'}</span></div><p class="text-xs text-gray-300 mb-1">${n.summary||''}</p><p class="text-xs text-yellow-300 mb-1">影響：${n.impact||'--'}</p><div class="flex items-center justify-between"><span class="text-[10px] text-indigo-400">${n.source?'['+n.source+'] ':'' }${n.affected||''}</span>${n.url?'<a href="'+n.url+'" target="_blank" class="text-[10px] text-gray-500 hover:underline">原文 ↗</a>':''}</div></div>`).join('');
 }
 
 async function loadForexNews() {
