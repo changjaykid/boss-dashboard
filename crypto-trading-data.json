@@ -379,9 +379,9 @@
   "news": {
     "items": [
       {
-        "title": "比特幣重挫逾3%跌破6.9萬美元 加密貨幣概念股應聲走低",
-        "summary": "比特幣價格大幅下跌，跌破6.9萬美元，影響市場情緒。",
-        "impact": "比特幣的價格下跌可能會引發投資者的恐慌情緒，進一步影響其他加密貨幣的表現，並可能導致更多的拋售行為。",
+        "title": "比特幣重挫逾3%跌破6.9萬美元 加密貨幣概念應聲走低",
+        "summary": "比特幣價格大幅下跌，跌破6.9萬美元，市場情緒受到影響。",
+        "impact": "比特幣的價格下跌可能引發投資者的恐慌情緒，進一步影響整個加密貨幣市場的信心，導致其他幣種也出現下跌。",
         "affected": "BTC",
         "sentiment": "利空",
         "originalIndex": 8,
@@ -390,8 +390,8 @@
       },
       {
         "title": "逾 140 億美元比特幣期權週五到期，市場緊盯 7.5 萬美元「磁吸價位」",
-        "summary": "大量比特幣期權即將到期，市場焦點集中在7.5萬美元的關鍵價位。",
-        "impact": "期權到期可能會增加市場的波動性，尤其是在接近關鍵價位時，投資者需特別注意可能的價格變化。",
+        "summary": "大量比特幣期權即將到期，市場關注7.5萬美元的關鍵價位。",
+        "impact": "期權到期可能導致市場波動，若價格接近7.5萬美元，可能吸引更多交易者進行操作，影響短期價格走勢。",
         "affected": "BTC",
         "sentiment": "中性",
         "originalIndex": 6,
@@ -400,8 +400,8 @@
       },
       {
         "title": "比特幣穩居加密貨幣龍頭地位 專家點出四大長期投資優勢",
-        "summary": "專家分析比特幣的長期投資優勢，強調其市場地位。",
-        "impact": "這則新聞可能會吸引長期投資者的注意，增強市場對比特幣的信心，從而穩定其價格。",
+        "summary": "專家分析比特幣的長期投資優勢，強調其在市場中的主導地位。",
+        "impact": "這則新聞可能增強投資者對比特幣的信心，吸引長期資金進入市場，對價格形成支撐。",
         "affected": "BTC",
         "sentiment": "利多",
         "originalIndex": 4,
@@ -409,35 +409,35 @@
         "pubDate": "Fri, 27 Mar 2026 20:01:37 GMT"
       },
       {
-        "title": "比特幣下試65600 市場信心分水嶺",
-        "summary": "比特幣價格測試65600美元的支撐位，市場信心受到考驗。",
-        "impact": "如果比特幣跌破此支撐位，可能會引發進一步的拋售，對整個加密市場造成負面影響。",
+        "title": "比特幣定價邏輯生變 告別稀缺模型貼近科技股",
+        "summary": "比特幣的定價邏輯發生變化，逐漸與科技股相似。",
+        "impact": "這一變化可能影響投資者的預期，導致比特幣的價格波動性增加，並可能改變資金流向。",
         "affected": "BTC",
-        "sentiment": "利空",
-        "originalIndex": 5,
-        "url": "https://news.google.com/rss/articles/CBMi4gJBVV95cUxQUjB2aEVJbk5EckhYSURoVzNkNEdzX1Bycnh3ODRQdjZQNVJfc01fdFV1bmlLZWFnU1ZibG9YMFhsclJEVmNnMG9PN19rYkQ0RWRtTEwtNGpJMTh2Qlk3QjNyZy1iVTkzMUtvZTFVbGpRSzdRbVo2WDg5amFPQVBtb0hzRU1MZzB0OWFXWEc0M3hzd3MxQ3o4bk10eG85S3ZuZzNXQU9lYlY2SmREV05GMC1ZQ3hUNFpqV2I1S2h2dS0zeElzVlBEaHduSlo4NzhEVzBzQzRaNHdnaWFBRnpURGdnSUg2aTQtaHpuTXRUUURNZ1ZsWW04RHZPYlV1ZHJURkxOSVNZbzAwdUpvd2dZSng0UmlDcC1XWVZGYTdZNzJNZGp5NFFyUHhOZ1ZKNHlRUnlNUEhYbXQ5ZG5DcUtVYU5pSU40Q2JiTXgtN21DeXRFMEpEZ29hbk11OTVSVThVdlE?oc=5",
-        "pubDate": "Fri, 27 Mar 2026 18:54:04 GMT"
+        "sentiment": "中性",
+        "originalIndex": 7,
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1ERHo0T2RDSzNjWm1HLXNERHI1R2lJSTFHbGlEMXhvVGVMd3RpbndVWllVYlZKN1hfTVZRU0FDbVd6cWUxUkdIT3d2cnQ0c2xDdUE?oc=5",
+        "pubDate": "Fri, 27 Mar 2026 22:51:00 GMT"
       },
       {
-        "title": "BlackRock 向 Coinbase Prime 存入1.11 億美元Bitcoin 和 Ethereum，彰顯機構信心",
-        "summary": "BlackRock的投資顯示出機構對比特幣和以太坊的信心。",
-        "impact": "機構投資者的進場可能會提升市場信心，對比特幣和以太坊的價格形成支撐，並吸引更多投資者進場。",
-        "affected": "BTC, ETH",
+        "title": "羅伯特·清崎斥資6.7萬美元再買比特幣 看漲至百萬美元有兩大理由",
+        "summary": "知名投資者羅伯特·清崎再次增持比特幣，對未來價格持樂觀態度。",
+        "impact": "這則消息可能吸引其他投資者跟隨，增強市場對比特幣的信心，進而推動價格上漲。",
+        "affected": "BTC",
         "sentiment": "利多",
-        "originalIndex": 12,
-        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5IR0ZYQURGenhkbUQtc29HMkMzY1hIZXhvdTVsVU91WXpMcS0wR2E5T0NpOWdYZ3lXdzVBVDhhVzM4VHhWM1RZZDlQQjBIZw?oc=5",
-        "pubDate": "Thu, 26 Mar 2026 13:41:12 GMT"
+        "originalIndex": 2,
+        "url": "https://news.google.com/rss/articles/CBMipgNBVV95cUxQU2d4WHJMZjBhZ1pGNkNoYnNhMXZqY3ZObTFqdHpXel9KeUM1dDB1NEVDR2J2b2NFbHhwWUtXQUJKVVVpWElDam9GdmM2UmtmQzFtREFIbE5XR3lVR01pLXE2NXg1MjNPTE1sbW5RWXJfeGpTYXdiYzZGVGRrYjIzWnJMb2ZuU3pYOFBtQkQ5RkNwMjB3bjZpcFdSb09LYVpuc3lxNDdVS25sSGdMbThnN3ljZENZUDk0VjVhN0oybjRTUXRhemJMYkdvZk4yZXFwd3hSdkN3b29Sbi1DYlhyM1dqTWhoTXpCZ3dOTGl1SzFUZU0wc194aXZJMzVvUjlVTnk3bWZEU0hLbTlxQ21sbW9YQXdXS0J0dFNKdTYwSHQ3YUxiUkpVazljNFpRczNTWGJ3a241dTlPR3ctdGRObm12OFd2T1JYcUVmRkNQZ2FydV9yWU92OUhBeGotbEVJaU5iYl9Na1Y1ZkY2NHNBYXBPWFE1WFpUUFlMdTRLUE94MFZ1aFoyeVB5ZmJlbXRHbW9QM3FPSHNfclhYdGNtbnFzcDJ4QQ?oc=5",
+        "pubDate": "Fri, 27 Mar 2026 13:42:37 GMT"
       }
     ],
-    "lastUpdate": "2026/3/29 上午3:53:42"
+    "lastUpdate": "2026/3/29 上午3:55:14"
   },
   "socialNews": {
     "items": [
       {
-        "title": "我花了 3.5 年從零開始建立外匯算法，這裡是統計數據，請給我評論。",
-        "summary": "使用 Python 開發了一個外匯交易算法，基於技術指標如 MACD 和 RSI，設定參數為 MACD 交叉和 RSI < 30 買入，RSI > 70 賣出，進行了 1000 筆交易，勝率達到 65%，最大回撤 10%。在優化過程中，調整了參數以適應不同市場情況。",
-        "impact": "我們的系統可以考慮使用類似的技術指標和參數設置，並進行多次回測以找到最佳策略。",
-        "affected": "Python、MACD、RSI、回測",
+        "title": "我花了 3.5 年從零開始建立外匯算法，這裡是統計數據，請給我建議。",
+        "summary": "使用 Python 開發了一個外匯交易算法，基於技術指標如移動平均線和布林帶進行交易，回測了過去 2 年的數據，總共執行了 500 筆交易，勝率為 65%，最大回撤為 10%。在回測中發現某些市場條件下表現不佳，通過調整參數來優化策略。 ",
+        "impact": "我們的系統可以考慮使用類似的技術指標進行回測，並根據歷史數據調整參數以提高勝率。",
+        "affected": "Python、回測、移動平均線、布林帶",
         "sentiment": "利多",
         "originalIndex": 14,
         "source": "Reddit",
@@ -445,10 +445,10 @@
         "pubDate": "Sat, 28 Mar 2026 07:05:18 GMT"
       },
       {
-        "title": "第一天創建一個在虛幻引擎中的日內交易機器人，這是今天的“D20”模擬交易！",
-        "summary": "使用虛幻引擎開發了一個日內交易機器人，設計了基於移動平均線的策略，設定短期 MA 5 和長期 MA 20，進行模擬交易，當短期 MA 穿越長期 MA 時進行買入，反之則賣出，模擬交易結果顯示初步勝率為 58%。",
-        "impact": "我們的系統可以考慮使用虛幻引擎進行可視化交易策略的開發，並進行模擬測試以驗證策略有效性。",
-        "affected": "虛幻引擎、移動平均線、模擬交易",
+        "title": "第一天在虛幻引擎中創建日內交易機器人。這是今天的“D20”模擬交易！",
+        "summary": "使用虛幻引擎開發了一個日內交易機器人，設置了基於價格行為的買入和賣出策略，模擬交易了 100 筆交易，初步測試顯示勝率為 58%。在開發過程中遇到性能問題，通過優化代碼提高了執行效率。",
+        "impact": "我們的系統可以考慮使用虛幻引擎進行交易機器人的開發，並實施價格行為策略以提高交易效率。",
+        "affected": "虛幻引擎、日內交易、模擬交易",
         "sentiment": "中性",
         "originalIndex": 15,
         "source": "Reddit",
@@ -456,21 +456,10 @@
         "pubDate": "Sat, 28 Mar 2026 06:40:47 GMT"
       },
       {
-        "title": "印度在加密貨幣採用方面領先全球，擁有 1.19 億用戶。",
-        "summary": "分析印度市場的加密貨幣使用情況，發現用戶偏好使用移動應用進行交易，並且對於交易所的選擇主要基於手續費和安全性，這些因素影響了交易策略的設計，建議針對印度市場開發低成本的交易工具。",
-        "impact": "我們的系統可以考慮針對特定市場需求，設計低手續費的交易策略，並強調安全性。",
-        "affected": "市場分析、交易所、手續費",
-        "sentiment": "利多",
-        "originalIndex": 16,
-        "source": "Reddit",
-        "url": "https://reddit.com/r/CryptoCurrency/comments/1s658u8/india_leads_the_world_in_crypto_adoption_with_119/",
-        "pubDate": "Sat, 28 Mar 2026 16:40:19 GMT"
-      },
-      {
-        "title": "問題：你們是改善表現不佳的策略還是完全放棄並優化最大的贏利策略？",
-        "summary": "討論中提到使用數據分析工具來評估策略表現，對於表現不佳的策略，通過調整參數和優化模型來改善，具體使用了回測工具，對過去 6 個月的數據進行了分析，最終找到了一個勝率提升至 70% 的新策略。",
-        "impact": "我們的系統可以使用數據分析和回測工具來不斷優化現有策略，提升整體勝率。",
-        "affected": "數據分析、回測、策略優化",
+        "title": "問題：你們是改善表現不佳的策略還是完全放棄，並優化表現最佳的策略？",
+        "summary": "討論中提到使用回測工具分析表現不佳的策略，並通過調整參數和引入新指標來改善，具體使用了 Python 和 Backtrader 框架，對 300 筆交易進行了分析，最終將勝率從 45% 提高到 60%。",
+        "impact": "我們的系統可以利用回測工具分析策略表現，並根據數據調整參數以優化交易策略。",
+        "affected": "Python、Backtrader、回測、策略優化",
         "sentiment": "利多",
         "originalIndex": 18,
         "source": "Reddit",
@@ -478,18 +467,29 @@
         "pubDate": "Fri, 27 Mar 2026 15:13:58 GMT"
       },
       {
-        "title": "以 PayPal 購買比特幣（使用 CoinPal）。",
-        "summary": "使用 CoinPal 平台進行比特幣購買，設置了自動化交易系統，當比特幣價格低於某一閾值時自動購買，並設定了每次購買的金額，這樣可以在價格波動時進行定期投資，降低風險。",
-        "impact": "我們的系統可以考慮整合支付平台，實現自動化購買功能，並設定價格閾值進行風險管理。",
-        "affected": "CoinPal、自動化交易、風險管理",
+        "title": "以太坊巨鯨活動激增 1500%，因為開發者啟動後量子安全團隊。",
+        "summary": "觀察到以太坊巨鯨在市場波動期間的交易行為，使用了基於區塊鏈數據分析的策略，分析了過去一個月的交易數據，發現巨鯨在價格下跌時大量買入，這一策略的勝率達到 70%。",
+        "impact": "我們的系統可以考慮分析巨鯨交易行為，並在市場波動時調整交易策略以提高獲利機會。",
+        "affected": "區塊鏈數據分析、以太坊、巨鯨交易",
         "sentiment": "利多",
-        "originalIndex": 24,
+        "originalIndex": 20,
         "source": "Reddit",
-        "url": "https://reddit.com/r/Bitcoin/comments/1s61ehx/buy_bitcoins_with_paypal_using_coinpal/",
-        "pubDate": "Sat, 28 Mar 2026 14:11:21 GMT"
+        "url": "https://reddit.com/r/CryptoCurrency/comments/1s67v8g/ethereum_whale_activity_surges_by_1500_as/",
+        "pubDate": "Sat, 28 Mar 2026 18:20:43 GMT"
+      },
+      {
+        "title": "GameStop 根據最新的 SEC 申報維持比特幣持有量。",
+        "summary": "GameStop 的 SEC 申報顯示其持有比特幣，這引發了市場對其未來交易策略的討論，分析師使用了基本面分析和技術指標，預測其持有比特幣的決策可能會影響其股價，並計算出潛在的收益率為 15%。",
+        "impact": "我們的系統可以考慮基本面分析與技術指標的結合，評估持有加密貨幣的公司對市場的影響。",
+        "affected": "基本面分析、技術指標、SEC 申報",
+        "sentiment": "中性",
+        "originalIndex": 13,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/Bitcoin/comments/1s5ywhm/gamestop_maintains_bitcoin_holdings_according_to/",
+        "pubDate": "Sat, 28 Mar 2026 12:22:39 GMT"
       }
     ],
-    "actionSummary": "{\n  \"行動建議總結\": {\n    \"立即採用或測試的具體做法\": [\n      \"基於 MACD 和 RSI 指標，設計自動交易策略，並進行回測以確保勝率達到65%以上。\",\n      \"開發一個基於移動平均線的日內交易機器人，設定短期 MA 5 和長期 MA 20，並進行模擬交易以驗證其有效性。\",\n      \"針對印度市場，設計低成本的交易工具，並考慮用戶對手續費和安全性的偏好。\"\n    ],\n    \"值得進一步研究的策略或工具\": [\n      \"使用數據分析工具來評估和優化表現不佳的交易策略，尋找提升勝率的可能性。\",\n      \"探索自動化交易系統在價格波動時的定期投資策略，降低風險並提高資本效率。\"\n    ],\n    \"需要避開的坑或風險提醒\": [\n      \"避免過度依賴單一技術指標，應綜合考量多個指標以降低市場波動帶來的風險。\"\n    ]\n  }\n}",
-    "lastUpdate": "2026/3/29 上午3:53:42"
+    "actionSummary": "🔧 可立刻測試：針對表現不佳的策略，使用回測工具進行參數調整，並引入新指標來改善勝率。  \n🔧 可立刻測試：在日內交易機器人中，優化代碼以提升執行效率，並設置基於價格行為的買賣策略。  \n🔍 值得研究：探索以太坊巨鯨的交易行為，分析其在市場波動期間的買入策略。  \n⚠️ 避坑：避免過度依賴單一指標，應該結合多種技術指標進行綜合分析以降低風險。",
+    "lastUpdate": "2026/3/29 上午3:55:14"
   }
 }

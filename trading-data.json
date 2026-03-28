@@ -915,9 +915,9 @@
     "items": [
       {
         "title": "外匯今日：美元與石油暴跌,川普釋出伊朗緩和訊號——市場動盪分析",
-        "summary": "美元和石油價格大幅下跌，市場因川普的伊朗緩和訊號而動盪。",
-        "impact": "美元的下跌可能會導致其他貨幣相對升值，特別是歐元和日圓。市場的不確定性也可能增加交易者的避險需求。",
-        "affected": "EURUSD, USDJPY, XTIUSD",
+        "summary": "美元和石油價格大幅下跌，市場因川普釋出伊朗緩和訊號而動盪。",
+        "impact": "美元的急劇下跌可能會導致其他貨幣相對升值，特別是與美元掛鉤的貨幣。此外，油價下跌可能會減輕通脹壓力，影響市場預期。",
+        "affected": "USDJPY, USOIL",
         "sentiment": "利空",
         "originalIndex": 1,
         "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBqWWdscmRGX3FUOHNyT3dDSnllZG5weUJqRHVJWnlGa29UdUw2M3h5cEM5aERPc2U4S0hHSTV5VkZneEFhRUg1aXp0OXVQUFU?oc=5",
@@ -925,9 +925,9 @@
       },
       {
         "title": "日本外匯事務負責人稱 政府將隨時採取一切可能措施應對匯率波動",
-        "summary": "日本官員表示將隨時採取措施應對匯率波動，顯示出對日圓貶值的擔憂。",
-        "impact": "這可能會引發市場對日圓的避險需求，並可能導致日圓短期內回升。市場將密切關注日本政府的具體行動。",
-        "affected": "USDJPY, EURJPY",
+        "summary": "日本官員表示將隨時採取行動以應對匯率的劇烈波動。",
+        "impact": "這一聲明可能會增加市場對日圓的波動性預期，並可能引發投資者對日圓的避險需求。",
+        "affected": "USDJPY",
         "sentiment": "中性",
         "originalIndex": 2,
         "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9RSU4tSVl3RHZSV282Z0dEX3JUSS1VZTRIMzNGYjB5UjRtODhCdTd0cWQxQm9wZUNhQzl4elYtZVgzWFZQY29aTGZ6RWZ3U21XSVJhTlZJWXlxQQ?oc=5",
@@ -935,9 +935,9 @@
       },
       {
         "title": "日圓逼近160關卡！日官員示警：原油期貨投機行為波及外匯市場",
-        "summary": "日圓接近160的心理關卡，官員警告原油期貨的投機行為影響外匯市場。",
-        "impact": "如果日圓突破160的關卡，可能會引發更大的市��波動，並促使日本政府介入以穩定匯率。",
-        "affected": "USDJPY, XTIUSD",
+        "summary": "��圓接近160的心理關卡，官員警告原油期貨的投機行為影響外匯市場。",
+        "impact": "日圓的貶值壓力可能加大，若突破160關卡，將引發更多市場關注和可能的干預行動。",
+        "affected": "USDJPY",
         "sentiment": "利空",
         "originalIndex": 3,
         "url": "https://news.google.com/rss/articles/CBMihgNBVV95cUxNczVFWG81RVVuRW1jVllLdkNVb2gtUTdXQ1VEeWZaaVZFaEE3ajFpaGktRFVTZWdlWTlxMDk2WjdyZFRVYUUxM093YXBqTHFySFlKWUFRVWNnNDhXYk1qZ0xBNzNpWThPUXZTUkFuMzNXWjhUR1BhcWtKWXd2Qk01dmRjSS1Ca09aTkxrWm93a20wRUFKcFZ3UVdFM3FJMUJxUWlwOEkyTjh1eWRSTHM2c1IwSS1SY0tOdHEzcXFVQXhHNEpvWFM1TXliam84QlRiaTVxa0ZYWjNOZUFQY2FidGpiRGtFd1R6X1J3M2dQZFVPZk1ZOW1hWTZpcjgwLXE0ekV6alV4R0ZsXzhCakZpS2drTEdzT0RPZDNHOF9QUWVqS2IyVy1seVlYODZkQXN3cnktWC1wbThrem1USWZQemU0Tnd3Y2tuSHZhajNjaU9mYzNKUzFzZ1lqS3Y4d01XVkYxZHNYNFgwSTJmOW8tR0tDTE5oaDZ3NUlfZmJJYWRjbktmVmc?oc=5",
@@ -945,9 +945,9 @@
       },
       {
         "title": "2月外匯存底6054億美元續創新高 央行看股匯「最大震盪已過」",
-        "summary": "中國的外匯存底創新高，央行表示股匯市場的最大震盪已經過去。",
-        "impact": "外匯存底的增加可能增強市場對人民幣的信心，並有助於穩定人民幣匯率。這可能對其他貨幣形成一定的支撐。",
-        "affected": "CNYUSD, EURCNY",
+        "summary": "中國外匯存底持續創新高，央行認為最大震盪已過。",
+        "impact": "外匯存底的增加可能增強市場對人民幣的信心，並穩定匯率，減少資本外流的風險。",
+        "affected": "USDCNY",
         "sentiment": "利多",
         "originalIndex": 4,
         "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE00UXhsb0xCcmJ6Ni1iUGJRdHpGenJrQy1ySFkwZ2d0a3NXLTl0Q3Y1dHdtMzVaNGZyOFB6UGpCOGwyZ05raXN5cktjQ3VVTlE?oc=5",
@@ -955,76 +955,76 @@
       },
       {
         "title": "美台共同聲明：持續磋商外匯事務確認避免操縱匯率",
-        "summary": "美台雙方確認將持續磋商外匯事務，並避免匯率操縱。",
-        "impact": "此聲明可能增強市場對台灣新台幣的信心，並減少市場對匯率操縱的擔憂，可能有助於穩定新台幣匯率。",
-        "affected": "TWDUSD, USDTWD",
+        "summary": "美台雙方確認將持續磋商外匯事務，並避免操縱匯率。",
+        "impact": "這一聲明有助於增強市場對台幣的信心，可能減少市場對台幣貶值的擔憂，穩定匯率。",
+        "affected": "USDTWD",
         "sentiment": "利多",
         "originalIndex": 10,
         "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1weG9RdUhweE1VVURtMk1iczRxYmdYcEZkVjlsNXIweDVEd0cyVWZWMGl2TkNVbWY2RV82cnJvNnRuQTlhYk1RcWllc3NKNENrVDNPMXFwN1hZUER5dHc?oc=5",
         "pubDate": "Sat, 15 Nov 2025 08:00:00 GMT"
       }
     ],
-    "lastUpdate": "2026/3/29 上午3:53:42"
+    "lastUpdate": "2026/3/29 上午3:55:14"
   },
   "socialNews": {
     "items": [
       {
-        "title": "我花了 3.5 年從零開始建立外匯算法。這裡是數據，請給我評論。",
-        "summary": "使用 Python 開發了一個外匯交易算法，基於歷史數據進行回測，總共執行了 500 筆交易，勝率達到 65%，最大回撤為 10%。在過程中遇到策略優化的挑戰，通過調整參數和引入新的技術指標來解決問題。",
-        "impact": "我們的系統可以參考這種基於歷史數據的回測方法，並考慮使用 Python 進行算法開發和優化。",
-        "affected": "Python、回測、算法交易",
+        "title": "建立MT5 XAUUSD系統：361筆交易，PF 4.24",
+        "summary": "使用MT5建立了一個針對XAUUSD的交易系統，進行了361筆交易，勝率未具體說明，但報酬因子(PF)為4.24。過程中遇到的問題包括策略失效，透過不斷調整參數來優化系統。這樣的回測結果顯示出系統的穩定性和潛在獲利能力。",
+        "impact": "我們的系統可以參考其報酬因子的計算方式，並進行類似的回測來評估策略的有效性。",
+        "affected": "MT5、回測、XAUUSD、報酬因子",
         "sentiment": "利多",
-        "originalIndex": 6,
-        "source": "Reddit",
-        "url": "https://reddit.com/r/algotrading/comments/1s5tihu/i_spent_35_years_building_a_forex_algo_from/",
-        "pubDate": "Sat, 28 Mar 2026 07:05:18 GMT"
-      },
-      {
-        "title": "建立一個 MT5 XAUUSD 系統：361 筆交易，PF 4.24，還有失敗的實驗。",
-        "summary": "在 MT5 平台上建立了一個針對 XAUUSD 的交易系統，執行了 361 筆交易，獲利因子為 4.24。系統使用了移動平均和其他技術指標，並在實驗中調整策略以提高效能，最終成功優化了交易結果。",
-        "impact": "我們的系統可以採用 MT5 進行外匯交易，並考慮使用獲利因子作為評估策略效能的指標。",
-        "affected": "MT5、XAUUSD、獲利因子、策略優化",
-        "sentiment": "利多",
-        "originalIndex": 21,
+        "originalIndex": 19,
         "source": "Reddit",
         "url": "https://reddit.com/r/algotrading/comments/1s5lmfh/building_an_mt5_xauusd_system_361_trades_pf_424/",
         "pubDate": "Sat, 28 Mar 2026 00:26:32 GMT"
       },
       {
-        "title": "我在虛幻引擎中創建日內交易機器人的第一天。這是今天的“D20”模擬交易！",
-        "summary": "使用虛幻引擎開發了一個日內交易機器人，進行模擬交易，設定了基於技術指標的自動買入和賣出策略。第一天的模擬交易結果顯示出一定的潛力，並計劃在未來進行更多的優化和實驗。",
-        "impact": "我們的系統可以考慮使用虛幻引擎進行交易機器人的開發，並探索模擬交易的潛力。",
+        "title": "建立交易機器人：在虛幻引擎中創建日內交易機器人",
+        "summary": "在虛幻引擎中創建了一個名為'D20'的日內交易機器人，進行模擬交易。具體的策略和指標未詳細說明，但強調了開發過程中的學習和調整。這個過程展示了如何利用遊戲引擎進行交易策略的實驗。",
+        "impact": "我們的系統可以考���使用虛幻引擎進行策略模擬，從而在可視化環境中進行測試和調整。",
         "affected": "虛幻引擎、日內交易、模擬交易",
         "sentiment": "中性",
-        "originalIndex": 7,
+        "originalIndex": 6,
         "source": "Reddit",
         "url": "https://reddit.com/r/algotrading/comments/1s5t3ig/day_one_of_creating_a_day_trading_bot_in_unreal/",
         "pubDate": "Sat, 28 Mar 2026 06:40:47 GMT"
       },
       {
-        "title": "拋棄移動平均，轉向成交量輪廓。",
-        "summary": "在交易策略中放棄了傳統的移動平均指標，轉而使用成交量輪廓來分析市場動向。這種方法幫助提高了進出場的準確性，並在多次交易中獲得了穩定的回報。",
-        "impact": "我們的系統可以考慮使用成交量輪廓作為主要分析工具，以提高���易策略的準確性。",
-        "affected": "成交量輪廓、交易策略、技術分析",
+        "title": "從零開始建立外匯算法：3.5年的經驗分享",
+        "summary": "花了3.5年從零開始建立外匯算法，分享了具體的統計數據，包括勝率和最大回撤等。雖然具體數字未提供，但強調了持續優化和調整策略的重要性，並邀請社群進行批評和建議。",
+        "impact": "我們的系統可以借鑒其長期開發的經驗，重視回測數據的收集與分析，以持續改進算法。",
+        "affected": "外匯算法、回測、策略優化",
         "sentiment": "利多",
-        "originalIndex": 20,
+        "originalIndex": 7,
         "source": "Reddit",
-        "url": "https://reddit.com/r/Trading/comments/1s66fx7/ditching_moving_averages_for_volume_profile/",
-        "pubDate": "Sat, 28 Mar 2026 17:26:16 GMT"
+        "url": "https://reddit.com/r/algotrading/comments/1s5tihu/i_spent_35_years_building_a_forex_algo_from/",
+        "pubDate": "Sat, 28 Mar 2026 07:05:18 GMT"
       },
       {
-        "title": "對於表現不佳的策略，你們是嘗試改善還是完全放棄？",
-        "summary": "討論中提到，對於表現不佳的交易策略，建議首先進行小規模的調整和優化，並觀察其改變後的表現。如果仍然無法達到預期效果，則考慮完全放棄並專注於優化表現良好的策略。",
-        "impact": "我們的系統可以建立一個策略評估框架，定期檢視和優化交易策略，以提高整體效能。",
-        "affected": "策略優化、交易評估、風險管理",
+        "title": "使用TACO追蹤器：在交易儀表板中建立追蹤器",
+        "summary": "在交易儀表板中建立了一個TACO追蹤器，因為在重大新聞事件中技術分析的有效性降低。這個追蹤器幫助他在市場波動時做出更快的反應，具體的指標和數據未提供。",
+        "impact": "我們的系統可以考慮在重大新聞發布時加入類似的追蹤器，以便更靈活地應對市場變化。",
+        "affected": "交易儀表板、TACO追蹤器、技術分析",
         "sentiment": "中性",
-        "originalIndex": 9,
+        "originalIndex": 8,
         "source": "Reddit",
-        "url": "https://reddit.com/r/algotrading/comments/1s56xv3/question_for_you_guys_do_you_try_to_improve_bad/",
-        "pubDate": "Fri, 27 Mar 2026 15:13:58 GMT"
+        "url": "https://reddit.com/r/algotrading/comments/1s63tsh/built_a_taco_tracker_inside_my_trading_dashboard/",
+        "pubDate": "Sat, 28 Mar 2026 15:46:24 GMT"
+      },
+      {
+        "title": "如何處理衝突的時間框架",
+        "summary": "討論了在交易設置中如何處理不同時間框架的衝突，具體建議是根據較長時間框架的趨勢來決定短期交易的方向，並使用技術指標來確認進出場時機。",
+        "impact": "我們的系統可以在策略中加入多時間框架分析，以提高交易決策的準確性。",
+        "affected": "時間框架、技術指標、交易策略",
+        "sentiment": "中性",
+        "originalIndex": 13,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/Trading/comments/1s6646l/how_do_you_handle_conflicting_timeframes_on_a/",
+        "pubDate": "Sat, 28 Mar 2026 17:13:49 GMT"
       }
     ],
-    "actionSummary": "{\n  \"行動建議總結\": {\n    \"立即採用或測試的具體做法\": [\n      \"考慮在現有的交易算法中引入成交量輪廓分析，以提高進出場的準確性。\",\n      \"對於表現不佳的策略，進行小規模的調整和優化，並持續觀察其表現變化。\",\n      \"在開發新策略時，進行充分的回測，確保勝率和風險控制在可接受的範圍內。\"\n    ],\n    \"值得進一步研究的策略或工具\": [\n      \"深入研究基於技術指標的自動交易策略，特別是針對日內交易的優化方法。\",\n      \"探索使用虛幻引擎或其他平台進行模擬交易的潛力，以便更好地測試和優化交易策略。\"\n    ],\n    \"需要避開的坑或風險提醒\": [\n      \"避免完全放棄表現不佳的策略，應先進行優化，否則可能錯失潛在的改進機會。\"\n    ]\n  }\n}",
-    "lastUpdate": "2026/3/29 上午3:53:42"
+    "actionSummary": "🔧 可立刻測試：建立基於報酬因子的交易系統，針對 XAUUSD 進行回測，並持續調整參數以優化結果。  \n🔧 可立刻測試：在交易儀表板中加入 TACO 追蹤器，快速反應重大新聞事件帶來的市場波動。  \n🔍 值得研究：探索使用虛幻引擎開發日內交易機器人的可能性，進行策略實驗。  \n⚠️ 避坑：避免在不同時間框架中產生衝突，應根據較長時間框架的趨勢來決定短期交易方向。  ",
+    "lastUpdate": "2026/3/29 上午3:55:14"
   }
 }
