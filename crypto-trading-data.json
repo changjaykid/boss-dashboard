@@ -115,7 +115,7 @@
       {
         "title": "女股神大倒貨！Ark Invest 拋售數千萬美元 Meta 與 Nvidia 股票，同步減持自家比特幣 ETF - 動區動趨",
         "summary": "Ark Invest 減持比特幣 ETF，顯示出對市場的謹慎態度。",
-        "impact": "這一舉動可能引發市場對比特幣的信心下降，因為大型機構的減持通常被視為對未來價格的負面預期。投資者可能會因此選擇觀望，進一步影響市場流動性。",
+        "impact": "Ark Invest 的行動可能會引發市場對比特幣的信心下降，進一步影響投資者情緒，導致比特幣價格波動加劇。",
         "affected": "BTC",
         "sentiment": "利空",
         "originalIndex": 1,
@@ -123,29 +123,9 @@
         "pubDate": "Fri, 27 Mar 2026 17:04:45 GMT"
       },
       {
-        "title": "比特幣下試65600 市場信心分水嶺 - hkej.com",
-        "summary": "比特幣價格下跌至65600美元，成為市場信心的關鍵指標。",
-        "impact": "若比特幣持續低於此價位，可能會引發更多賣壓，進一步推低價格，並影響整體加密貨幣市場的情緒和投資決策。",
-        "affected": "BTC",
-        "sentiment": "利空",
-        "originalIndex": 5,
-        "url": "https://news.google.com/rss/articles/CBMi4gJBVV95cUxQUjB2aEVJbk5EckhYSURoVzNkNEdzX1Bycnh3ODRQdjZQNVJfc01fdFV1bmlLZWFnU1ZibG9YMFhsclJEVmNnMG9PN19rYkQ0RWRtTEwtNGpJMTh2Qlk3QjNyZy1iVTkzMUtvZTFVbGpRSzdRbVo2WDg5amFPQVBtb0hzRU1MZzB0OWFXWEc0M3hzd3MxQ3o4bk10eG85S3ZuZzNXQU9lYlY2SmREV05GMC1ZQ3hUNFpqV2I1S2h2dS0zeElzVlBEaHduSlo4NzhEVzBzQzRaNHdnaWFBRnpURGdnSUg2aTQtaHpuTXRUUURNZ1ZsWW04RHZPYlV1ZHJURkxOSVNZbzAwdUpvd2dZSng0UmlDcC1XWVZGYTdZNzJNZGp5NFFyUHhOZ1ZKNHlRUnlNUEhYbXQ5ZG5DcUtVYU5pSU40Q2JiTXgtN21DeXRFMEpEZ29hbk11OTVSVThVdlE?oc=5",
-        "pubDate": "Fri, 27 Mar 2026 18:54:04 GMT"
-      },
-      {
-        "title": "逾 140 億美元比特幣期權週五到期，市場緊盯 7.5 萬���元「磁吸價位」 - 區塊客",
-        "summary": "比特幣期權到期日將對市場價格產生重大影響。",
-        "impact": "這些期權的到期可能導致價格波動，特別是若市場接近7.5萬美元的關鍵價位，可能會引發大量的買入或賣出行為，進一步影響市場走勢。",
-        "affected": "BTC",
-        "sentiment": "中性",
-        "originalIndex": 6,
-        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNYjBjeTVTT3ZLcG9fYjRKdTRrWlZNdmMtV0Q0Qm80Y1RIV3N5R25XYUFoeklUQ0dWSmJoNllvbE5TQTRFRkpBdFlyc1dFUXJ3MGFIMzFEbzZjaktPelRxZGROYjU5a016YWd1TTFqSjk5Qi1wMlBDQXJJRV9OY2htd1Y4UUhfMkJxSUFxdHZPNWZCQQ?oc=5",
-        "pubDate": "Wed, 25 Mar 2026 18:17:36 GMT"
-      },
-      {
         "title": "比特幣重挫逾3%跌破6.9萬美元 加密貨幣概念股應聲走低 - Yahoo股市",
-        "summary": "比特幣價格大幅下跌，影響相關概念股表現。",
-        "impact": "比特幣的重挫可能會引發投資者對整個加密市場的擔憂，導致相關概念股也受到賣壓，進一步加劇市場的不穩定性。",
+        "summary": "比特幣價格大幅下跌，影響整個加密貨幣市場。",
+        "impact": "比特幣的價格下跌可能會引發投資者恐慌，導致更多資金撤出市場，進一步壓低其他加密貨幣的價格。",
         "affected": "BTC",
         "sentiment": "利空",
         "originalIndex": 8,
@@ -153,16 +133,335 @@
         "pubDate": "Fri, 27 Mar 2026 13:43:28 GMT"
       },
       {
+        "title": "逾 140 億美元比特幣期權週五到期，市場緊盯 7.5 萬美元「磁吸價位」 - 區塊客",
+        "summary": "大量比特幣期權到期，市場關注關鍵價位。",
+        "impact": "期權到期可能會引發價格波動，特別是在接近關鍵價位時，投資者需密切關注市場動向以調整策略。",
+        "affected": "BTC",
+        "sentiment": "中性",
+        "originalIndex": 6,
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNYjBjeTVTT3ZLcG9fYjRKdTRrWlZNdmMtV0Q0Qm80Y1RIV3N5R25XYUFoeklUQ0dWSmJoNllvbE5TQTRFRkpBdFlyc1dFUXJ3MGFIMzFEbzZjaktPelRxZGROYjU5a016YWd1TTFqSjk5Qi1wMlBDQXJJRV9OY2htd1Y4UUhfMkJxSUFxdHZPNWZCQQ?oc=5",
+        "pubDate": "Wed, 25 Mar 2026 18:17:36 GMT"
+      },
+      {
         "title": "比特幣穩居加密貨幣龍頭地位 專家點出四大長期投資優勢 - PChome Online 新聞",
         "summary": "專家分析比特幣的長期投資優勢，強調其市場地位。",
-        "impact": "儘管短期內市場波動加劇，但專家的分析可能會吸引長期投資者的關注，增強市場信心，對比特幣的未來走勢形成支撐。",
+        "impact": "這種正面的專家評價可能會吸引長期投資者進場，穩定比特幣的價格，並可能促進市場回暖。",
         "affected": "BTC",
         "sentiment": "利多",
         "originalIndex": 4,
         "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQbFpaNXNfYlMwY055eXFOVVZKZFZINWdGZmM1U2EzTFBRbW1maHBJTnQ4dHFaNHNqLVcwdWhuT1EzU2tYOVpxZGFDTUV4X3JJOHZoc1U1anRxNmZwTE41RHFfcjhBVHJtdWF5NkhnOTgtNkdXbDVtLUZKMHpFQ2pHUWk0aWhZOXpVN0g3QQ?oc=5",
         "pubDate": "Fri, 27 Mar 2026 20:01:37 GMT"
+      },
+      {
+        "title": "比特幣下試65600 市場信心分水嶺 - hkej.com",
+        "summary": "比特幣價格測試重要支撐位，市場情緒緊張。",
+        "impact": "如果比特幣跌破此支撐位，可能會引發更大的賣壓，進一步削弱市場信心，導致價格持續下滑。",
+        "affected": "BTC",
+        "sentiment": "利空",
+        "originalIndex": 5,
+        "url": "https://news.google.com/rss/articles/CBMi4gJBVV95cUxQUjB2aEVJbk5EckhYSURoVzNkNEdzX1Bycnh3ODRQdjZQNVJfc01fdFV1bmlLZWFnU1ZibG9YMFhsclJEVmNnMG9PN19rYkQ0RWRtTEwtNGpJMTh2Qlk3QjNyZy1iVTkzMUtvZTFVbGpRSzdRbVo2WDg5amFPQVBtb0hzRU1MZzB0OWFXWEc0M3hzd3MxQ3o4bk10eG85S3ZuZzNXQU9lYlY2SmREV05GMC1ZQ3hUNFpqV2I1S2h2dS0zeElzVlBEaHduSlo4NzhEVzBzQzRaNHdnaWFBRnpURGdnSUg2aTQtaHpuTXRUUURNZ1ZsWW04RHZPYlV1ZHJURkxOSVNZbzAwdUpvd2dZSng0UmlDcC1XWVZGYTdZNzJNZGp5NFFyUHhOZ1ZKNHlRUnlNUEhYbXQ5ZG5DcUtVYU5pSU40Q2JiTXgtN21DeXRFMEpEZ29hbk11OTVSVThVdlE?oc=5",
+        "pubDate": "Fri, 27 Mar 2026 18:54:04 GMT"
       }
     ],
-    "lastUpdate": "2026/3/29 上午3:15:06"
+    "lastUpdate": "2026/3/29 上午3:22:11"
+  },
+  "simulation": {
+    "enabled": true,
+    "version": 2,
+    "status": "RUNNING",
+    "initialCapital": 30000,
+    "currentCapital": 29728.45,
+    "available": -5054.55,
+    "realizedPnl": -271.55,
+    "unrealizedPnl": 20.58,
+    "returnPct": -0.91,
+    "totalTrades": 7,
+    "wins": 5,
+    "losses": 2,
+    "winRate": "71.4%",
+    "maxDrawdown": 1.32,
+    "positions": [
+      {
+        "market": "ethtwd",
+        "direction": "SELL",
+        "entryPrice": 64906.1,
+        "currentPrice": 64867.7,
+        "sizeTWD": 34783,
+        "pnlPct": 0.06,
+        "pnlTWD": 20.58,
+        "strategy": "日線強勢空頭+4H空頭+EMA多頭排列+價<VWAP",
+        "confidence": 0.48000000000000004,
+        "dailyTrend": "strong_down",
+        "openTime": "2026-03-28T17:44:00.547Z"
+      }
+    ],
+    "closedTrades": [
+      {
+        "market": "ethtwd",
+        "direction": "SELL",
+        "entryPrice": 64362.9,
+        "exitPrice": 64227.5,
+        "sizeTWD": 24000,
+        "pnlTWD": 50.49,
+        "pnlPct": 0.21,
+        "reason": "TIME_EXIT",
+        "strategy": "日線強勢空頭+4H空頭+RSI超買+空頭(83)+雙RSI共振高位",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "RSI超買+空頭(83)",
+          "雙RSI共振高位",
+          "EMA多頭排列",
+          "MACD雙正",
+          "布林極度擠壓(突破在即)",
+          "strong_bear"
+        ],
+        "confidence": 0.8,
+        "openTime": "2026-03-28T07:47:35.292Z",
+        "closeTime": "2026-03-28T10:02:01.151Z",
+        "outcome": "WIN"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "entryPrice": 2135192.8,
+        "exitPrice": 2129704.8,
+        "sizeTWD": 1950,
+        "pnlTWD": 5.01,
+        "pnlPct": 0.26,
+        "reason": "TIME_EXIT",
+        "strategy": "日線強勢空頭+4H空頭+RSI高位+空頭趨勢(67)+雙RSI共振高位",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "RSI高位+空頭趨勢(67)",
+          "雙RSI共振高位",
+          "EMA多頭排列",
+          "MACD雙正",
+          "布林極度擠壓(突破在即)",
+          "strong_bear"
+        ],
+        "confidence": 0.7,
+        "openTime": "2026-03-28T08:13:22.456Z",
+        "closeTime": "2026-03-28T10:14:00.507Z",
+        "outcome": "WIN"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "entryPrice": 2128837,
+        "exitPrice": 2129999.9,
+        "sizeTWD": 30849,
+        "pnlTWD": -16.85,
+        "pnlPct": -0.05,
+        "reason": "TIME_EXIT",
+        "strategy": "日線強勢空頭+4H空頭+EMA8<21+布林極度擠壓(突破在即)",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "EMA8<21",
+          "布林極度擠壓(突破在即)",
+          "價<VWAP"
+        ],
+        "confidence": 0.6,
+        "openTime": "2026-03-28T10:02:01.151Z",
+        "closeTime": "2026-03-28T12:02:00.589Z",
+        "outcome": "LOSS"
+      },
+      {
+        "market": "ethtwd",
+        "direction": "SELL",
+        "entryPrice": 64410.9,
+        "exitPrice": 64318.4,
+        "sizeTWD": 1365,
+        "pnlTWD": 1.96,
+        "pnlPct": 0.14,
+        "reason": "TIME_EXIT",
+        "strategy": "日線強勢空頭+4H空頭+RSI超買+空頭(82)+雙RSI共振高位",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "RSI超買+空頭(82)",
+          "雙RSI共振高位",
+          "EMA多頭排列",
+          "MACD雙正",
+          "布林極度擠壓(突破在即)",
+          "strong_bear"
+        ],
+        "confidence": 0.8,
+        "openTime": "2026-03-28T08:24:32.210Z",
+        "closeTime": "2026-03-28T12:18:00.525Z",
+        "outcome": "WIN"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "entryPrice": 2129999.9,
+        "exitPrice": 2154313.1,
+        "sizeTWD": 33371,
+        "pnlTWD": -380.92,
+        "pnlPct": -1.14,
+        "reason": "STOP_LOSS",
+        "strategy": "日線強勢空頭+4H空頭+EMA8<21+布林極度擠壓(突破在即)",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "EMA8<21",
+          "布林極度擠壓(突破在即)",
+          "價<VWAP"
+        ],
+        "confidence": 0.6,
+        "openTime": "2026-03-28T12:02:00.589Z",
+        "closeTime": "2026-03-28T13:42:01.136Z",
+        "outcome": "LOSS"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "entryPrice": 2152151.9,
+        "exitPrice": 2151539.9,
+        "sizeTWD": 34702,
+        "pnlTWD": 9.87,
+        "pnlPct": 0.03,
+        "reason": "TIME_EXIT",
+        "strategy": "日線強勢空頭+4H空頭+RSI超買+空頭(77)+EMA多頭排列",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "RSI超買+空頭(77)",
+          "EMA多頭排列",
+          "MACD雙正",
+          "觸布林上軌",
+          "布林極度擠壓(突破在即)",
+          "放量(6.4x)"
+        ],
+        "confidence": 0.81,
+        "openTime": "2026-03-28T13:42:01.136Z",
+        "closeTime": "2026-03-28T15:44:01.042Z",
+        "outcome": "WIN"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "entryPrice": 2151539.9,
+        "exitPrice": 2147889.6,
+        "sizeTWD": 34714,
+        "pnlTWD": 58.9,
+        "pnlPct": 0.17,
+        "reason": "TIME_EXIT",
+        "strategy": "日線強勢空頭+4H空頭+RSI高位+空頭趨勢(68)+雙RSI共振高位",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "RSI高位+空頭趨勢(68)",
+          "雙RSI共振高位",
+          "EMA多頭排列",
+          "MACD雙正"
+        ],
+        "confidence": 0.62,
+        "openTime": "2026-03-28T15:44:01.042Z",
+        "closeTime": "2026-03-28T17:44:00.547Z",
+        "outcome": "WIN"
+      }
+    ],
+    "strategyStats": {
+      "日線強勢空頭+4H空頭+RSI超買+空頭(83)+雙RSI共振高位": {
+        "wins": 1,
+        "losses": 0,
+        "pnl": 50.488713218329735
+      },
+      "日線強勢空頭+4H空頭+RSI高位+空頭趨勢(67)+雙RSI共振高位": {
+        "wins": 1,
+        "losses": 0,
+        "pnl": 5.01200640991296
+      },
+      "日線強勢空頭+4H空頭+EMA8<21+布林極度擠壓(突破在即)": {
+        "wins": 0,
+        "losses": 2,
+        "pnl": -397.7698290133968
+      },
+      "日線強勢空頭+4H空頭+RSI超買+空頭(82)+雙RSI共振高位": {
+        "wins": 1,
+        "losses": 0,
+        "pnl": 1.9602660419276863
+      },
+      "日線強勢空頭+4H空頭+RSI超買+空頭(77)+EMA多頭排列": {
+        "wins": 1,
+        "losses": 0,
+        "pnl": 9.86808784268434
+      },
+      "日線強勢空頭+4H空頭+RSI高位+空頭趨勢(68)+雙RSI共振高位": {
+        "wins": 1,
+        "losses": 0,
+        "pnl": 58.89573054164301
+      }
+    },
+    "consecutiveLosses": 0,
+    "pausedUntil": null,
+    "hoursElapsed": "11.6",
+    "hoursRemaining": "646580.6",
+    "startTime": "2026-03-28T15:44:00+08:00",
+    "endTime": "2099-12-31T23:59:59+08:00",
+    "lastUpdate": "2026/3/29 上午3:22:10"
+  },
+  "socialNews": {
+    "items": [
+      {
+        "title": "以色列空軍少校被控利用機密資訊在Polymarket下注",
+        "summary": "這則貼文討論了一名以色列空軍少校因利用機密資訊進行加密貨幣投注而被控的事件。",
+        "impact": "此事件可能引發對加密市場合規性及監管的關注，影響市場信心。",
+        "affected": "Polymarket",
+        "sentiment": "利空",
+        "originalIndex": 1,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/CryptoCurrency/comments/1s5ey8a/israeli_air_force_major_charged_with_using/",
+        "pubDate": "Fri, 27 Mar 2026 20:01:45 GMT"
+      },
+      {
+        "title": "比特幣連續五個月下跌 - 再下跌一個月將創下歷史新高",
+        "summary": "討論比特幣連續五個月下跌的情況，並提到這可能是買入的好時機。",
+        "impact": "市場情緒可能轉向樂觀，吸引更多投資者進場。",
+        "affected": "比特幣",
+        "sentiment": "利多",
+        "originalIndex": 2,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/CryptoCurrency/comments/1s5p3st/5_straight_red_months_for_bitcoin_one_more_and/",
+        "pubDate": "Sat, 28 Mar 2026 03:08:19 GMT"
+      },
+      {
+        "title": "以太坊持有者如果價格持續下跌",
+        "summary": "這則貼文探討了以太坊持有者在價格下跌時的心態和應對策略。",
+        "impact": "可能引發持有者的拋售壓力，進一步影響以太坊的價格走勢。",
+        "affected": "以太坊",
+        "sentiment": "利空",
+        "originalIndex": 5,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/ethtrader/comments/1s46nun/eth_holders_if_the_price_keeps_falling/",
+        "pubDate": "Thu, 26 Mar 2026 12:54:52 GMT"
+      },
+      {
+        "title": "美國將成為全球比特幣和加密貨幣超級大國，特朗普總統表示",
+        "summary": "特朗普總統的言論引發了對美國在加密貨幣領域未來角色的討論。",
+        "impact": "如果美國真的成為加密貨幣的領導者，可能會吸引更多的資本流入市場。",
+        "affected": "比特幣",
+        "sentiment": "利多",
+        "originalIndex": 9,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/CryptoCurrency/comments/1s5wccv/us_will_lead_as_global_bitcoin_crypto_superpower/",
+        "pubDate": "Sat, 28 Mar 2026 10:01:11 GMT"
+      },
+      {
+        "title": "以太坊主網每週活躍地址達到364萬 - 保持在歷史高位",
+        "summary": "以太坊的活躍地址數量持續增長，顯示出強勁的用戶參與度。",
+        "impact": "這表明以太坊生態系統的健康狀況，可能吸引更多投資者的注意。",
+        "affected": "以太坊",
+        "sentiment": "利多",
+        "originalIndex": 15,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/ethtrader/comments/1s4bc9z/ethereum_mainnet_weekly_active_addresses_hit_364m/",
+        "pubDate": "Thu, 26 Mar 2026 15:52:57 GMT"
+      }
+    ],
+    "lastUpdate": "2026/3/29 上午3:22:11"
   }
 }

@@ -915,9 +915,9 @@
     "items": [
       {
         "title": "外匯今日：美元與石油暴跌,川普釋出伊朗緩和訊號——市場動盪分析",
-        "summary": "美元和石油價格大幅下跌，市場因川普的緩和訊號而動盪。",
-        "impact": "美元的貶值可能會影響其他貨幣的相對價值，特別是與石油相關的貨幣。市場的不穩定性可能導致投資者避險情緒上升。",
-        "affected": "USD/JPY, USD/CAD, WTI",
+        "summary": "美元和石油價格大幅下跌，因川普釋出有關伊朗的緩和訊號。",
+        "impact": "這一消息可能導致市場對美元的需求減少，進一步影響其他貨幣對美元的匯率。同時，油價的下跌也可能影響與能源相關的貨幣對。",
+        "affected": "USDJPY, USDCAD",
         "sentiment": "利空",
         "originalIndex": 1,
         "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBqWWdscmRGX3FUOHNyT3dDSnllZG5weUJqRHVJWnlGa29UdUw2M3h5cEM5aERPc2U4S0hHSTV5VkZneEFhRUg1aXp0OXVQUFU?oc=5",
@@ -925,9 +925,9 @@
       },
       {
         "title": "日本外匯事務負責人稱 政府將隨時採取一切可能措施應對匯率波動",
-        "summary": "日本官員表示將隨時準備應對日圓匯率的波動。",
-        "impact": "這一表態可能會增加市場對日圓的信心，並在短期內穩定日圓匯率，減少投資者的恐慌情緒。",
-        "affected": "USD/JPY",
+        "summary": "日本官員表示將隨時採取措施應對日圓匯率的波動。",
+        "impact": "此言論可能增加市場對日圓的波動性預期，投資者可能會調整持倉以應對潛在的干預行動。",
+        "affected": "USDJPY",
         "sentiment": "中性",
         "originalIndex": 2,
         "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9RSU4tSVl3RHZSV282Z0dEX3JUSS1VZTRIMzNGYjB5UjRtODhCdTd0cWQxQm9wZUNhQzl4elYtZVgzWFZQY29aTGZ6RWZ3U21XSVJhTlZJWXlxQQ?oc=5",
@@ -935,9 +935,9 @@
       },
       {
         "title": "日圓逼近160關卡！日官員示警：原油期貨投機行為波及外匯市場",
-        "summary": "日圓匯率��近160，官員警告原油期貨投機行為影響外匯市場。",
-        "impact": "若日圓貶值突破160，可能引發市場恐慌，進一步影響日圓的穩定性，並可能導致其他貨幣的波動。",
-        "affected": "USD/JPY",
+        "summary": "���圓匯率逼近160，官員警告原油期貨的投機行為影響外匯市場。",
+        "impact": "日圓的貶值可能會引發市場對日本經濟的擔憂，進而影響日圓對其他主要貨幣的匯率。",
+        "affected": "USDJPY",
         "sentiment": "利空",
         "originalIndex": 3,
         "url": "https://news.google.com/rss/articles/CBMihgNBVV95cUxNczVFWG81RVVuRW1jVllLdkNVb2gtUTdXQ1VEeWZaaVZFaEE3ajFpaGktRFVTZWdlWTlxMDk2WjdyZFRVYUUxM093YXBqTHFySFlKWUFRVWNnNDhXYk1qZ0xBNzNpWThPUXZTUkFuMzNXWjhUR1BhcWtKWXd2Qk01dmRjSS1Ca09aTkxrWm93a20wRUFKcFZ3UVdFM3FJMUJxUWlwOEkyTjh1eWRSTHM2c1IwSS1SY0tOdHEzcXFVQXhHNEpvWFM1TXliam84QlRiaTVxa0ZYWjNOZUFQY2FidGpiRGtFd1R6X1J3M2dQZFVPZk1ZOW1hWTZpcjgwLXE0ekV6alV4R0ZsXzhCakZpS2drTEdzT0RPZDNHOF9QUWVqS2IyVy1seVlYODZkQXN3cnktWC1wbThrem1USWZQemU0Tnd3Y2tuSHZhajNjaU9mYzNKUzFzZ1lqS3Y4d01XVkYxZHNYNFgwSTJmOW8tR0tDTE5oaDZ3NUlfZmJJYWRjbktmVmc?oc=5",
@@ -945,25 +945,85 @@
       },
       {
         "title": "2月外匯存底6054億美元續創新高 央行看股匯「最大震盪已過」",
-        "summary": "中國的外匯存底持續增長，顯示央行對市場的信心。",
-        "impact": "外匯存底的增加可能會提升人民幣的穩定性，並減少市場對人民幣貶值的擔憂，對其他貨幣形成支持。",
-        "affected": "CNY/USD",
+        "summary": "中國的外匯存底創下新高，央行認為市場的最大震盪已經過去。",
+        "impact": "外匯存底的增加可能增強市場對人民幣的信心，進而穩定人民幣匯率，減少市場波動。",
+        "affected": "USDCNY",
         "sentiment": "利多",
         "originalIndex": 4,
         "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE00UXhsb0xCcmJ6Ni1iUGJRdHpGenJrQy1ySFkwZ2d0a3NXLTl0Q3Y1dHdtMzVaNGZyOFB6UGpCOGwyZ05raXN5cktjQ3VVTlE?oc=5",
         "pubDate": "Thu, 05 Mar 2026 08:00:00 GMT"
       },
       {
-        "title": "金融危機以來最慘！韓元崩跌引爆「三重危機」 升息、不升息都錯成死局",
-        "summary": "韓元面臨嚴重貶值，經濟形勢堪憂。",
-        "impact": "韓元的崩跌將對韓國的進出口造成壓力，可能引發資本外流，進一步加劇外匯市場的波動。",
-        "affected": "USD/KRW",
-        "sentiment": "利空",
+        "title": "美台共同聲明：持續磋商外匯事務確認避免操縱匯率",
+        "summary": "美台雙方確認將持續磋商外匯事務，並避免操縱匯率。",
+        "impact": "這一聲明可能增強市場對台灣元的信心，減少市場對匯率操縱的擔憂，穩定台灣元的匯率。",
+        "affected": "USDTWD",
+        "sentiment": "利多",
         "originalIndex": 10,
-        "url": "https://news.google.com/rss/articles/CBMiqANBVV95cUxOVGR3UWROV3NtbGFfWHNveTRxNnVwa3pEOTZFMF9MZ2NPcUxOYTNsUGtiV2Z6NDVmY0R4dlJHYUZCXzJqRURJVVBma3g0VDMtUmpwVmVSU2pMaTlXb3VMMkVtRk9nVWxVVmFnMncyVml1cjF4eHhXMTVQbl81d1pGLXVxMkZTMTZNeG96ZTBNa0lZWUVhYTN2Z3FLb19WaVA4OXotYUQ1eEN1ZmFyc0VEVmV0MFBtcVhaVkpoWEp1VzdDbzlRS1BrVVc2OG1FRmRzR1d6Skg1VEdLblJVcV9fWU02TzVqWUtDa1c5X3EwZ2pxVG5vQVNwRFRPcHppTWRHQWszeXpiT0FzVzcwMHhhUzA3NGVxeHFDQVYybU9wQS1KdXlpWHV1a0Y5VVNTM1lEQTZZN2pwM2ZuZWtsMUhhcEdkemtVYjhCM1d2UzdMRWVLR29KenBaUFFaaTlvZlJFemwxdFdXcGdrM3kyNkhLdUo2VjhMaGZnRFVTRFc3cTl1b2VyRnFoSzctVTlVUm55TlA0Nm9ib3ZuSGlyYUJHZTZNbEJjU3Ju?oc=5",
-        "pubDate": "Mon, 23 Mar 2026 07:19:06 GMT"
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1weG9RdUhweE1VVURtMk1iczRxYmdYcEZkVjlsNXIweDVEd0cyVWZWMGl2TkNVbWY2RV82cnJvNnRuQTlhYk1RcWllc3NKNENrVDNPMXFwN1hZUER5dHc?oc=5",
+        "pubDate": "Sat, 15 Nov 2025 08:00:00 GMT"
       }
     ],
-    "lastUpdate": "2026/3/29 上午3:15:06"
+    "lastUpdate": "2026/3/29 上午3:22:11"
+  },
+  "socialNews": {
+    "items": [
+      {
+        "title": "日本考慮動用1.4兆美元外匯儲備以建立石油期貨的空頭頭寸",
+        "summary": "日本可能利用其龐大的外匯儲備來對抗油價波動，這引發了市場的廣泛關注。",
+        "impact": "如果日本實施此計劃，可能會對油價及日圓產生重大影響，進而影響全球外匯市場。",
+        "affected": "日圓、油價",
+        "sentiment": "利空",
+        "originalIndex": 2,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/wallstreetbets/comments/1s583mx/japan_considering_tapping_into_14trillion_foreign/",
+        "pubDate": "Fri, 27 Mar 2026 15:55:48 GMT"
+      },
+      {
+        "title": "歐元/美元波段偏向 — 為什麼我這週看空",
+        "summary": "討論者分享了他對歐元/美元的看法，並提供了看空的理由。",
+        "impact": "這可能影響投資者對歐元和美元的交易決策，尤其是在即將到來的經濟數據發布前。",
+        "affected": "歐元/美元",
+        "sentiment": "利空",
+        "originalIndex": 22,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/Forex/comments/1s61hmo/eurusd_swing_bias_why_im_looking_short_this_week/",
+        "pubDate": "Sat, 28 Mar 2026 14:14:45 GMT"
+      },
+      {
+        "title": "道瓊斯和納斯達克綜合指數接近-10%修正區域",
+        "summary": "市場指數的下滑引發了對經濟前景的擔憂，並引發了投資者的討論。",
+        "impact": "這可能導致資本流出股市，轉向外匯市場，影響美元及其他主要貨幣的表現。",
+        "affected": "美元、主要貨幣對",
+        "sentiment": "利空",
+        "originalIndex": 4,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/wallstreetbets/comments/1s5gc52/dow_jones_nasdaq_composite_close_in_10_correction/",
+        "pubDate": "Fri, 27 Mar 2026 20:54:35 GMT"
+      },
+      {
+        "title": "SoftBank獲得400億美元貸款以增強對OpenAI的投資",
+        "summary": "SoftBank的資金運作可能會影響科技股及相關貨幣的走勢。",
+        "impact": "這筆貸款可能會推動科技股上漲，進而影響美元及日圓的需求。",
+        "affected": "日圓、美元",
+        "sentiment": "利多",
+        "originalIndex": 6,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/wallstreetbets/comments/1s62kzo/softbank_secures_40_billion_loan_to_boost_openai/",
+        "pubDate": "Sat, 28 Mar 2026 14:58:34 GMT"
+      },
+      {
+        "title": "為什麼大多數交易者在學習策略後仍然失敗？",
+        "summary": "討論者探討了交易者失敗的原因，並分享了經驗教訓。",
+        "impact": "這對新手交易者有重要的教育意義，可能影響他們的交易決策和風險管理。",
+        "affected": "所有貨幣對",
+        "sentiment": "中性",
+        "originalIndex": 16,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/Trading/comments/1s61hnj/why_do_most_traders_fail_even_after_learning/",
+        "pubDate": "Sat, 28 Mar 2026 14:14:46 GMT"
+      }
+    ],
+    "lastUpdate": "2026/3/29 上午3:22:11"
   }
 }

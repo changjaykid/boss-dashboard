@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>老闆專屬主控板</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config={theme:{extend:{screens:{xs:'480px'}}}}</script>
+    <script>tailwind.config={theme:{extend:{screens:{xs:'480px'},fontSize:{xs:['0.8125rem',{lineHeight:'1.25rem'}],sm:['0.9375rem',{lineHeight:'1.375rem'}],base:['1.0625rem',{lineHeight:'1.625rem'}],lg:['1.1875rem',{lineHeight:'1.75rem'}],xl:['1.375rem',{lineHeight:'1.875rem'}],'2xl':['1.625rem',{lineHeight:'2rem'}]}}}}</script>
     <style>
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         body { background: #111827; color: #f3f4f6; overflow: hidden; }
@@ -431,6 +431,15 @@
                         <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
                     </div>
                 </section>
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-sm md:text-xl font-medium text-cyan-300">🔥 X / Reddit 熱門討論（外匯）</h3>
+                        <span class="text-[10px] text-gray-400" id="fx-social-update">--</span>
+                    </div>
+                    <div id="fx-social-list" class="space-y-3">
+                        <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
+                    </div>
+                </section>
             </div>
 
             <!-- ===== 外匯自動交易 ===== -->
@@ -822,6 +831,15 @@
                         <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
                     </div>
                 </section>
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-sm md:text-xl font-medium text-cyan-300">🔥 X / Reddit 熱門討論（虛擬貨幣）</h3>
+                        <span class="text-[10px] text-gray-400" id="crypto-social-update">--</span>
+                    </div>
+                    <div id="crypto-social-list" class="space-y-3">
+                        <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
+                    </div>
+                </section>
             </div>
 
             <!-- 虛擬貨幣自動交易 -->
@@ -1145,6 +1163,7 @@ async function loadForexNews() {
     const r = await fetch('trading-data.json?t='+Date.now()); if (!r.ok) return;
     const d = await r.json();
     if (d.news) renderNews('fx-news-list', 'fx-news-update', d.news.items, d.news.lastUpdate);
+    if (d.socialNews) renderNews('fx-social-list', 'fx-social-update', d.socialNews.items, d.socialNews.lastUpdate);
   } catch(e) {}
 }
 
@@ -1153,6 +1172,7 @@ async function loadCryptoNews() {
     const r = await fetch('crypto-trading-data.json?t='+Date.now()); if (!r.ok) return;
     const d = await r.json();
     if (d.news) renderNews('crypto-news-list', 'crypto-news-update', d.news.items, d.news.lastUpdate);
+    if (d.socialNews) renderNews('crypto-social-list', 'crypto-social-update', d.socialNews.items, d.socialNews.lastUpdate);
   } catch(e) {}
 }
 
