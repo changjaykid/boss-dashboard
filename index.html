@@ -417,10 +417,19 @@
             </div>
 
             <!-- 外匯保證金 -->
-            <div id="view-forex" class="section-view">
+            <div id="view-forex" class="section-view space-y-4">
                 <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
                     <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">💱 外匯保證金</h3>
-                    <div class="py-8 text-center"><p class="text-xs text-gray-400">請查看「外匯自動交易」頁面</p></div>
+                    <div class="py-4 text-center"><p class="text-xs text-gray-400">請查看「外匯自動交易」頁面</p></div>
+                </section>
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-sm md:text-xl font-medium text-yellow-300">📰 外匯重大新聞（24H）</h3>
+                        <span class="text-[10px] text-gray-400" id="fx-news-update">--</span>
+                    </div>
+                    <div id="fx-news-list" class="space-y-3">
+                        <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
+                    </div>
                 </section>
             </div>
 
@@ -875,6 +884,17 @@
                     </div>
                 </section>
 
+                <!-- 虛擬貨幣新聞 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-sm md:text-xl font-medium text-yellow-300">📰 虛擬貨幣重大新聞（24H）</h3>
+                        <span class="text-[10px] text-gray-400" id="crypto-news-update">--</span>
+                    </div>
+                    <div id="crypto-news-list" class="space-y-3">
+                        <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
+                    </div>
+                </section>
+
                 <!-- 資金費率 & 市場情緒 -->
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
                     <h3 class="text-sm md:text-xl font-medium text-orange-300 mb-3">📡 市場情緒</h3>
@@ -1099,10 +1119,38 @@ document.getElementById('header-title').textContent=titles[v]?.t||'專案';docum
 document.querySelectorAll('.section-view').forEach(e=>e.classList.remove('active'));
 const tv=document.getElementById('view-'+v);if(tv)tv.classList.add('active');else document.getElementById('view-placeholder').classList.add('active');
 if(tri){clearInterval(tri);tri=null}
-if(v==='forex-auto'){loadTradingData();tri=setInterval(loadTradingData,900000)}
+if(v==='forex'||v==='forex-auto'){loadTradingData();tri=setInterval(loadTradingData,900000);loadForexNews()}
 if(v==='community'){loadSocialData()}
-if(v==='crypto-auto'){loadCryptoData();if(!window._cri)window._cri=setInterval(loadCryptoData,900000)}
+if(v==='crypto'||v==='crypto-auto'){loadCryptoData();loadCryptoNews();if(!window._cri)window._cri=setInterval(loadCryptoData,900000)}
 if(v==='ad-business'){loadAdBusinessData()}
+}
+
+// ========== NEWS ==========
+function renderNews(containerId, updateId, items, lastUpdate) {
+  const box = document.getElementById(containerId);
+  const upd = document.getElementById(updateId);
+  if (upd) upd.textContent = lastUpdate || '--';
+  if (!box) return;
+  if (!items || !items.length) { box.innerHTML = '<p class="text-xs text-gray-400 text-center py-3">尚無新聞資料，中午 12:00 更新</p>'; return; }
+  const sentimentColor = s => s === '利多' ? 'text-green-400' : s === '利空' ? 'text-red-400' : 'text-gray-300';
+  const sentimentBg = s => s === '利多' ? 'bg-green-900/50 border-green-700/50' : s === '利空' ? 'bg-red-900/50 border-red-700/50' : 'bg-gray-700/50 border-gray-600/50';
+  box.innerHTML = items.map(n => `<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1.5"><span class="text-xs font-bold text-white">${n.title||''}</span><span class="px-1.5 py-0.5 text-[10px] rounded-full border ${sentimentBg(n.sentiment)} ${sentimentColor(n.sentiment)}">${n.sentiment||'--'}</span></div><p class="text-[10px] text-gray-300 mb-1">${n.summary||''}</p><p class="text-[10px] text-yellow-300 mb-1">影響：${n.impact||'--'}</p><div class="flex items-center justify-between"><span class="text-[9px] text-indigo-400">${n.affected||''}</span>${n.url?'<a href="'+n.url+'" target="_blank" class="text-[9px] text-gray-500 hover:underline">原文 ↗</a>':''}</div></div>`).join('');
+}
+
+async function loadForexNews() {
+  try {
+    const r = await fetch('trading-data.json?t='+Date.now()); if (!r.ok) return;
+    const d = await r.json();
+    if (d.news) renderNews('fx-news-list', 'fx-news-update', d.news.items, d.news.lastUpdate);
+  } catch(e) {}
+}
+
+async function loadCryptoNews() {
+  try {
+    const r = await fetch('crypto-trading-data.json?t='+Date.now()); if (!r.ok) return;
+    const d = await r.json();
+    if (d.news) renderNews('crypto-news-list', 'crypto-news-update', d.news.items, d.news.lastUpdate);
+  } catch(e) {}
 }
 
 // ========== AD BUSINESS ==========
