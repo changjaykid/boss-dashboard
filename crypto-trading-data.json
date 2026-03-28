@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026/3/29 上午3:00:01",
+  "lastUpdate": "2026/3/29 上午3:15:00",
   "exchange": "MAX (MaiCoin)",
   "status": "connected",
   "account": {
@@ -24,82 +24,82 @@
     {
       "market": "btctwd",
       "name": "BTC/TWD",
-      "last": "2150405.3",
-      "open": "2114835.5",
+      "last": "2147470.8",
+      "open": "2113910.2",
       "high": "2159501",
-      "low": "2110616.2",
-      "vol": "11.9002",
-      "change": "1.68"
+      "low": "2112494.1",
+      "vol": "11.8367",
+      "change": "1.59"
     },
     {
       "market": "ethtwd",
       "name": "ETH/TWD",
-      "last": "65014.4",
-      "open": "63787.8",
+      "last": "64867.7",
+      "open": "63685.4",
       "high": "65483.4",
-      "low": "63600",
-      "vol": "320.2761",
-      "change": "1.92"
+      "low": "63641.9",
+      "vol": "320.2837",
+      "change": "1.86"
     },
     {
       "market": "soltwd",
       "name": "SOL/TWD",
-      "last": "2685.9",
-      "open": "2649.9",
+      "last": "2671.1",
+      "open": "2639.8",
       "high": "2702.9",
       "low": "2639.8",
-      "vol": "1394.736",
-      "change": "1.36"
+      "vol": "1393.325",
+      "change": "1.19"
     },
     {
       "market": "dogetwd",
       "name": "DOGE/TWD",
-      "last": "2.9751",
-      "open": "2.892",
+      "last": "2.956",
+      "open": "2.89",
       "high": "3.0551",
       "low": "2.8846",
-      "vol": "1310433.8",
-      "change": "2.87"
+      "vol": "1321755.5",
+      "change": "2.28"
     },
     {
       "market": "xrptwd",
       "name": "XRP/TWD",
-      "last": "43.335",
-      "open": "42.513",
+      "last": "43.187",
+      "open": "42.531",
       "high": "43.576",
-      "low": "42.431",
-      "vol": "14772.76",
-      "change": "1.93"
+      "low": "42.436",
+      "vol": "14577.05",
+      "change": "1.54"
     },
     {
       "market": "btcusdt",
       "name": "BTC/USDT",
-      "last": "66908.75",
-      "open": "65909.09",
+      "last": "66833.97",
+      "open": "65807.31",
       "high": "67266.9",
       "low": "65755.39",
-      "vol": "5.6461",
-      "change": "1.52"
+      "vol": "5.5847",
+      "change": "1.56"
     },
     {
       "market": "ethusdt",
       "name": "ETH/USDT",
       "last": "2023.17",
-      "open": "1983.6",
+      "open": "1982.99",
       "high": "2043.61",
       "low": "1981.66",
-      "vol": "186.0138",
-      "change": "1.99"
+      "vol": "185.8878",
+      "change": "2.03"
     },
     {
       "market": "solusdt",
       "name": "SOL/USDT",
-      "last": "83.38",
+      "last": "83.19",
       "open": "81.98",
       "high": "84.23",
       "low": "81.98",
-      "vol": "852.603",
-      "change": "1.71"
+      "vol": "867.746",
+      "change": "1.48"
     }
   ],
   "openOrders": [],
@@ -110,243 +110,59 @@
       "label": "Extreme Fear"
     }
   },
-  "simulation": {
-    "enabled": true,
-    "version": 2,
-    "status": "RUNNING",
-    "initialCapital": 30000,
-    "currentCapital": 29728.45,
-    "available": -5054.55,
-    "realizedPnl": -271.55,
-    "unrealizedPnl": -58.04,
-    "returnPct": -0.91,
-    "totalTrades": 7,
-    "wins": 5,
-    "losses": 2,
-    "winRate": "71.4%",
-    "maxDrawdown": 1.32,
-    "positions": [
+  "news": {
+    "items": [
       {
-        "market": "ethtwd",
-        "direction": "SELL",
-        "entryPrice": 64906.1,
-        "currentPrice": 65014.4,
-        "sizeTWD": 34783,
-        "pnlPct": -0.17,
-        "pnlTWD": -58.04,
-        "strategy": "日線強勢空頭+4H空頭+EMA多頭排列+價<VWAP",
-        "confidence": 0.48000000000000004,
-        "dailyTrend": "strong_down",
-        "openTime": "2026-03-28T17:44:00.547Z"
+        "title": "女股神大倒貨！Ark Invest 拋售數千萬美元 Meta 與 Nvidia 股票，同步減持自家比特幣 ETF - 動區動趨",
+        "summary": "Ark Invest 減持比特幣 ETF，顯示出對市場的謹慎態度。",
+        "impact": "這一舉動可能引發市場對比特幣的信心下降，因為大型機構的減持通常被視為對未來價格的負面預期。投資者可能會因此選擇觀望，進一步影響市場流動性。",
+        "affected": "BTC",
+        "sentiment": "利空",
+        "originalIndex": 1,
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPZ1VjQTRqVDF5WWVaeWduNjhudFk4bXROVThvVWdEVXAzdWdHNnJyVFNqVHRDeHRfUW16RnliX2c4bXJ2bXpSS1JEWnZENGlGaHNpZ2NqVElVaExZWGV6Y3puM3BrcnR4N0MwYWliVTRxaTdCY2NvZTQ5RERYNW9tWENkck9jaG8?oc=5",
+        "pubDate": "Fri, 27 Mar 2026 17:04:45 GMT"
+      },
+      {
+        "title": "比特幣下試65600 市場信心分水嶺 - hkej.com",
+        "summary": "比特幣價格下跌至65600美元，成為市場信心的關鍵指標。",
+        "impact": "若比特幣持續低於此價位，可能會引發更多賣壓，進一步推低價格，並影響整體加密貨幣市場的情緒和投資決策。",
+        "affected": "BTC",
+        "sentiment": "利空",
+        "originalIndex": 5,
+        "url": "https://news.google.com/rss/articles/CBMi4gJBVV95cUxQUjB2aEVJbk5EckhYSURoVzNkNEdzX1Bycnh3ODRQdjZQNVJfc01fdFV1bmlLZWFnU1ZibG9YMFhsclJEVmNnMG9PN19rYkQ0RWRtTEwtNGpJMTh2Qlk3QjNyZy1iVTkzMUtvZTFVbGpRSzdRbVo2WDg5amFPQVBtb0hzRU1MZzB0OWFXWEc0M3hzd3MxQ3o4bk10eG85S3ZuZzNXQU9lYlY2SmREV05GMC1ZQ3hUNFpqV2I1S2h2dS0zeElzVlBEaHduSlo4NzhEVzBzQzRaNHdnaWFBRnpURGdnSUg2aTQtaHpuTXRUUURNZ1ZsWW04RHZPYlV1ZHJURkxOSVNZbzAwdUpvd2dZSng0UmlDcC1XWVZGYTdZNzJNZGp5NFFyUHhOZ1ZKNHlRUnlNUEhYbXQ5ZG5DcUtVYU5pSU40Q2JiTXgtN21DeXRFMEpEZ29hbk11OTVSVThVdlE?oc=5",
+        "pubDate": "Fri, 27 Mar 2026 18:54:04 GMT"
+      },
+      {
+        "title": "逾 140 億美元比特幣期權週五到期，市場緊盯 7.5 萬���元「磁吸價位」 - 區塊客",
+        "summary": "比特幣期權到期日將對市場價格產生重大影響。",
+        "impact": "這些期權的到期可能導致價格波動，特別是若市場接近7.5萬美元的關鍵價位，可能會引發大量的買入或賣出行為，進一步影響市場走勢。",
+        "affected": "BTC",
+        "sentiment": "中性",
+        "originalIndex": 6,
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNYjBjeTVTT3ZLcG9fYjRKdTRrWlZNdmMtV0Q0Qm80Y1RIV3N5R25XYUFoeklUQ0dWSmJoNllvbE5TQTRFRkpBdFlyc1dFUXJ3MGFIMzFEbzZjaktPelRxZGROYjU5a016YWd1TTFqSjk5Qi1wMlBDQXJJRV9OY2htd1Y4UUhfMkJxSUFxdHZPNWZCQQ?oc=5",
+        "pubDate": "Wed, 25 Mar 2026 18:17:36 GMT"
+      },
+      {
+        "title": "比特幣重挫逾3%跌破6.9萬美元 加密貨幣概念股應聲走低 - Yahoo股市",
+        "summary": "比特幣價格大幅下跌，影響相關概念股表現。",
+        "impact": "比特幣的重挫可能會引發投資者對整個加密市場的擔憂，導致相關概念股也受到賣壓，進一步加劇市場的不穩定性。",
+        "affected": "BTC",
+        "sentiment": "利空",
+        "originalIndex": 8,
+        "url": "https://news.google.com/rss/articles/CBMi6wJBVV95cUxPbmMwUjQwMDBxa3M0SWJxVl9GUUE1MmhWQ1h2YUtfTmRDbVJCUmtQanBpRjY1d1NjcFZFQjVNdDY0T2FBdnJiRWpYSmlVOGJRS25rRzdYZVhkQkd5VVFtNTZhYWxuRHhBckg3ZkhQRDRMRDI1Qi1xNTdXNWFfQjRTY3o3US1VNWZCd25uaGZzTlVpMm5SNEIzMHF4RDlXWmVFUUVoRFZMaUdTU2U5cXVtd01hZnh0U3loR1BqRXQwYll3MU1MX1hmaGtCeUVaMlltMWxvdjVFTVZGbnJwRU13OFJHQ0pYZlk3MnFydjFWc2RDc2dSSnRQVkc4SVBJS3VhTnUzLUt0T0hpR0NXTXdnY0tkdm9VUjk0Y1pUc1g1N0xoVV83YlI3d2ZDUU0ycDUzWHhqY1dCM19xOXBhdG10LVdyYlNiQlJpVzVVeVdEZHQtREd5QktGMHVFWVRjN28zY1ptbkpldUgwTlE?oc=5",
+        "pubDate": "Fri, 27 Mar 2026 13:43:28 GMT"
+      },
+      {
+        "title": "比特幣穩居加密貨幣龍頭地位 專家點出四大長期投資優勢 - PChome Online 新聞",
+        "summary": "專家分析比特幣的長期投資優勢，強調其市場地位。",
+        "impact": "儘管短期內市場波動加劇，但專家的分析可能會吸引長期投資者的關注，增強市場信心，對比特幣的未來走勢形成支撐。",
+        "affected": "BTC",
+        "sentiment": "利多",
+        "originalIndex": 4,
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQbFpaNXNfYlMwY055eXFOVVZKZFZINWdGZmM1U2EzTFBRbW1maHBJTnQ4dHFaNHNqLVcwdWhuT1EzU2tYOVpxZGFDTUV4X3JJOHZoc1U1anRxNmZwTE41RHFfcjhBVHJtdWF5NkhnOTgtNkdXbDVtLUZKMHpFQ2pHUWk0aWhZOXpVN0g3QQ?oc=5",
+        "pubDate": "Fri, 27 Mar 2026 20:01:37 GMT"
       }
     ],
-    "closedTrades": [
-      {
-        "market": "ethtwd",
-        "direction": "SELL",
-        "entryPrice": 64362.9,
-        "exitPrice": 64227.5,
-        "sizeTWD": 24000,
-        "pnlTWD": 50.49,
-        "pnlPct": 0.21,
-        "reason": "TIME_EXIT",
-        "strategy": "日線強勢空頭+4H空頭+RSI超買+空頭(83)+雙RSI共振高位",
-        "signals": [
-          "日線強勢空頭",
-          "4H空頭",
-          "RSI超買+空頭(83)",
-          "雙RSI共振高位",
-          "EMA多頭排列",
-          "MACD雙正",
-          "布林極度擠壓(突破在即)",
-          "strong_bear"
-        ],
-        "confidence": 0.8,
-        "openTime": "2026-03-28T07:47:35.292Z",
-        "closeTime": "2026-03-28T10:02:01.151Z",
-        "outcome": "WIN"
-      },
-      {
-        "market": "btctwd",
-        "direction": "SELL",
-        "entryPrice": 2135192.8,
-        "exitPrice": 2129704.8,
-        "sizeTWD": 1950,
-        "pnlTWD": 5.01,
-        "pnlPct": 0.26,
-        "reason": "TIME_EXIT",
-        "strategy": "日線強勢空頭+4H空頭+RSI高位+空頭趨勢(67)+雙RSI共振高位",
-        "signals": [
-          "日線強勢空頭",
-          "4H空頭",
-          "RSI高位+空頭趨勢(67)",
-          "雙RSI共振高位",
-          "EMA多頭排列",
-          "MACD雙正",
-          "布林極度擠壓(突破在即)",
-          "strong_bear"
-        ],
-        "confidence": 0.7,
-        "openTime": "2026-03-28T08:13:22.456Z",
-        "closeTime": "2026-03-28T10:14:00.507Z",
-        "outcome": "WIN"
-      },
-      {
-        "market": "btctwd",
-        "direction": "SELL",
-        "entryPrice": 2128837,
-        "exitPrice": 2129999.9,
-        "sizeTWD": 30849,
-        "pnlTWD": -16.85,
-        "pnlPct": -0.05,
-        "reason": "TIME_EXIT",
-        "strategy": "日線強勢空頭+4H空頭+EMA8<21+布林極度擠壓(突破在即)",
-        "signals": [
-          "日線強勢空頭",
-          "4H空頭",
-          "EMA8<21",
-          "布林極度擠壓(突破在即)",
-          "價<VWAP"
-        ],
-        "confidence": 0.6,
-        "openTime": "2026-03-28T10:02:01.151Z",
-        "closeTime": "2026-03-28T12:02:00.589Z",
-        "outcome": "LOSS"
-      },
-      {
-        "market": "ethtwd",
-        "direction": "SELL",
-        "entryPrice": 64410.9,
-        "exitPrice": 64318.4,
-        "sizeTWD": 1365,
-        "pnlTWD": 1.96,
-        "pnlPct": 0.14,
-        "reason": "TIME_EXIT",
-        "strategy": "日線強勢空頭+4H空頭+RSI超買+空頭(82)+雙RSI共振高位",
-        "signals": [
-          "日線強勢空頭",
-          "4H空頭",
-          "RSI超買+空頭(82)",
-          "雙RSI共振高位",
-          "EMA多頭排列",
-          "MACD雙正",
-          "布林極度擠壓(突破在即)",
-          "strong_bear"
-        ],
-        "confidence": 0.8,
-        "openTime": "2026-03-28T08:24:32.210Z",
-        "closeTime": "2026-03-28T12:18:00.525Z",
-        "outcome": "WIN"
-      },
-      {
-        "market": "btctwd",
-        "direction": "SELL",
-        "entryPrice": 2129999.9,
-        "exitPrice": 2154313.1,
-        "sizeTWD": 33371,
-        "pnlTWD": -380.92,
-        "pnlPct": -1.14,
-        "reason": "STOP_LOSS",
-        "strategy": "日線強勢空頭+4H空頭+EMA8<21+布林極度擠壓(突破在即)",
-        "signals": [
-          "日線強勢空頭",
-          "4H空頭",
-          "EMA8<21",
-          "布林極度擠壓(突破在即)",
-          "價<VWAP"
-        ],
-        "confidence": 0.6,
-        "openTime": "2026-03-28T12:02:00.589Z",
-        "closeTime": "2026-03-28T13:42:01.136Z",
-        "outcome": "LOSS"
-      },
-      {
-        "market": "btctwd",
-        "direction": "SELL",
-        "entryPrice": 2152151.9,
-        "exitPrice": 2151539.9,
-        "sizeTWD": 34702,
-        "pnlTWD": 9.87,
-        "pnlPct": 0.03,
-        "reason": "TIME_EXIT",
-        "strategy": "日線強勢空頭+4H空頭+RSI超買+空頭(77)+EMA多頭排列",
-        "signals": [
-          "日線強勢空頭",
-          "4H空頭",
-          "RSI超買+空頭(77)",
-          "EMA多頭排列",
-          "MACD雙正",
-          "觸布林上軌",
-          "布林極度擠壓(突破在即)",
-          "放量(6.4x)"
-        ],
-        "confidence": 0.81,
-        "openTime": "2026-03-28T13:42:01.136Z",
-        "closeTime": "2026-03-28T15:44:01.042Z",
-        "outcome": "WIN"
-      },
-      {
-        "market": "btctwd",
-        "direction": "SELL",
-        "entryPrice": 2151539.9,
-        "exitPrice": 2147889.6,
-        "sizeTWD": 34714,
-        "pnlTWD": 58.9,
-        "pnlPct": 0.17,
-        "reason": "TIME_EXIT",
-        "strategy": "日線強勢空頭+4H空頭+RSI高位+空頭趨勢(68)+雙RSI共振高位",
-        "signals": [
-          "日線強勢空頭",
-          "4H空頭",
-          "RSI高位+空頭趨勢(68)",
-          "雙RSI共振高位",
-          "EMA多頭排列",
-          "MACD雙正"
-        ],
-        "confidence": 0.62,
-        "openTime": "2026-03-28T15:44:01.042Z",
-        "closeTime": "2026-03-28T17:44:00.547Z",
-        "outcome": "WIN"
-      }
-    ],
-    "strategyStats": {
-      "日線強勢空頭+4H空頭+RSI超買+空頭(83)+雙RSI共振高位": {
-        "wins": 1,
-        "losses": 0,
-        "pnl": 50.488713218329735
-      },
-      "日線強勢空頭+4H空頭+RSI高位+空頭趨勢(67)+雙RSI共振高位": {
-        "wins": 1,
-        "losses": 0,
-        "pnl": 5.01200640991296
-      },
-      "日線強勢空頭+4H空頭+EMA8<21+布林極度擠壓(突破在即)": {
-        "wins": 0,
-        "losses": 2,
-        "pnl": -397.7698290133968
-      },
-      "日線強勢空頭+4H空頭+RSI超買+空頭(82)+雙RSI共振高位": {
-        "wins": 1,
-        "losses": 0,
-        "pnl": 1.9602660419276863
-      },
-      "日線強勢空頭+4H空頭+RSI超買+空頭(77)+EMA多頭排列": {
-        "wins": 1,
-        "losses": 0,
-        "pnl": 9.86808784268434
-      },
-      "日線強勢空頭+4H空頭+RSI高位+空頭趨勢(68)+雙RSI共振高位": {
-        "wins": 1,
-        "losses": 0,
-        "pnl": 58.89573054164301
-      }
-    },
-    "consecutiveLosses": 0,
-    "pausedUntil": null,
-    "hoursElapsed": "11.4",
-    "hoursRemaining": "646580.9",
-    "startTime": "2026-03-28T15:44:00+08:00",
-    "endTime": "2099-12-31T23:59:59+08:00",
-    "lastUpdate": "2026/3/29 上午3:06:10"
+    "lastUpdate": "2026/3/29 上午3:15:06"
   }
 }

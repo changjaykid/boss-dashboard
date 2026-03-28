@@ -915,9 +915,9 @@
     "items": [
       {
         "title": "外匯今日：美元與石油暴跌,川普釋出伊朗緩和訊號——市場動盪分析",
-        "summary": "美元和石油價格大幅下跌，市場因川普的伊朗緩和訊號而動盪。",
-        "impact": "美元的貶值可能會促使其他貨幣上漲，特別是與美元掛鉤的貨幣。此外，石油價格的下跌可能會影響與能源相關的貨幣，如加元和挪威克朗。",
-        "affected": "USD, CAD, NOK",
+        "summary": "美元和石油價格大幅下跌，市場因川普的緩和訊號而動盪。",
+        "impact": "美元的貶值可能會影響其他貨幣的相對價值，特別是與石油相關的貨幣。市場的不穩定性可能導致投資者避險情緒上升。",
+        "affected": "USD/JPY, USD/CAD, WTI",
         "sentiment": "利空",
         "originalIndex": 1,
         "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBqWWdscmRGX3FUOHNyT3dDSnllZG5weUJqRHVJWnlGa29UdUw2M3h5cEM5aERPc2U4S0hHSTV5VkZneEFhRUg1aXp0OXVQUFU?oc=5",
@@ -925,45 +925,45 @@
       },
       {
         "title": "日本外匯事務負責人稱 政府將隨時採取一切可能措施應對匯率波動",
-        "summary": "日本官員表示將隨時採取行動以應對日圓匯率的波動。",
-        "impact": "這一聲明可能會增加市場對日圓的信心，減少日圓的波動性，對日圓的支持可能會使其在外匯市場上表現更穩定。",
-        "affected": "JPY",
-        "sentiment": "利多",
+        "summary": "日本官員表示將隨時準備應對日圓匯率的波動。",
+        "impact": "這一表態可能會增加市場對日圓的信心，並在短期內穩定日圓匯率，減少投資者的恐慌情緒。",
+        "affected": "USD/JPY",
+        "sentiment": "中性",
         "originalIndex": 2,
         "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9RSU4tSVl3RHZSV282Z0dEX3JUSS1VZTRIMzNGYjB5UjRtODhCdTd0cWQxQm9wZUNhQzl4elYtZVgzWFZQY29aTGZ6RWZ3U21XSVJhTlZJWXlxQQ?oc=5",
         "pubDate": "Mon, 23 Mar 2026 13:47:59 GMT"
       },
       {
-        "title": "日圓逼近160關卡！日官員示警：原油期貨投機行��波及外匯市場",
-        "summary": "日圓匯率接近160，官員警告原油期貨投機行為影響外匯市場。",
-        "impact": "日圓的貶值可能會加劇市場的不穩定性，並引發投資者對日圓的擔憂，進而影響日圓對其他主要貨幣的匯率。",
-        "affected": "JPY, USD",
+        "title": "日圓逼近160關卡！日官員示警：原油期貨投機行為波及外匯市場",
+        "summary": "日圓匯率��近160，官員警告原油期貨投機行為影響外匯市場。",
+        "impact": "若日圓貶值突破160，可能引發市場恐慌，進一步影響日圓的穩定性，並可能導致其他貨幣的波動。",
+        "affected": "USD/JPY",
         "sentiment": "利空",
         "originalIndex": 3,
         "url": "https://news.google.com/rss/articles/CBMihgNBVV95cUxNczVFWG81RVVuRW1jVllLdkNVb2gtUTdXQ1VEeWZaaVZFaEE3ajFpaGktRFVTZWdlWTlxMDk2WjdyZFRVYUUxM093YXBqTHFySFlKWUFRVWNnNDhXYk1qZ0xBNzNpWThPUXZTUkFuMzNXWjhUR1BhcWtKWXd2Qk01dmRjSS1Ca09aTkxrWm93a20wRUFKcFZ3UVdFM3FJMUJxUWlwOEkyTjh1eWRSTHM2c1IwSS1SY0tOdHEzcXFVQXhHNEpvWFM1TXliam84QlRiaTVxa0ZYWjNOZUFQY2FidGpiRGtFd1R6X1J3M2dQZFVPZk1ZOW1hWTZpcjgwLXE0ekV6alV4R0ZsXzhCakZpS2drTEdzT0RPZDNHOF9QUWVqS2IyVy1seVlYODZkQXN3cnktWC1wbThrem1USWZQemU0Tnd3Y2tuSHZhajNjaU9mYzNKUzFzZ1lqS3Y4d01XVkYxZHNYNFgwSTJmOW8tR0tDTE5oaDZ3NUlfZmJJYWRjbktmVmc?oc=5",
         "pubDate": "Mon, 23 Mar 2026 03:05:14 GMT"
       },
       {
-        "title": "中國外匯存底6連升連續15個月增持黃金",
-        "summary": "中國外匯存底持續增長，並且連續15個月增持黃金。",
-        "impact": "外匯存底的增長可能會增強人民幣的穩定性，並對市場情緒產生正面影響，尤其是在全球經濟不確定性上升的情況下。",
-        "affected": "CNY, XAUUSD",
+        "title": "2月外匯存底6054億美元續創新高 央行看股匯「最大震盪已過」",
+        "summary": "中國的外匯存底持續增長，顯示央行對市場的信心。",
+        "impact": "外匯存底的增加可能會提升人民幣的穩定性，並減少市場對人民幣貶值的擔憂，對其他貨幣形成支持。",
+        "affected": "CNY/USD",
         "sentiment": "利多",
-        "originalIndex": 8,
-        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5KY1dDNU1mQ1QybjlKTFVnWW1uaG9oaXBtYjFqeTdpaVRjYU9yZzZiU2NPSG9DUUtuTE96bU1FZGZ2SVFJSWFzVUJkMy1FVUlkUVNpdXpZQQ?oc=5",
-        "pubDate": "Sat, 07 Feb 2026 08:00:00 GMT"
+        "originalIndex": 4,
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE00UXhsb0xCcmJ6Ni1iUGJRdHpGenJrQy1ySFkwZ2d0a3NXLTl0Q3Y1dHdtMzVaNGZyOFB6UGpCOGwyZ05raXN5cktjQ3VVTlE?oc=5",
+        "pubDate": "Thu, 05 Mar 2026 08:00:00 GMT"
       },
       {
         "title": "金融危機以來最慘！韓元崩跌引爆「三重危機」 升息、不升息都錯成死局",
-        "summary": "韓元大幅貶值，導致市場出現三重危機。",
-        "impact": "韓元的崩跌可能會引發投資者對韓國經濟的擔憂，進而影響韓元對其他貨幣的匯率，並可能引發資本外流。",
-        "affected": "KRW",
+        "summary": "韓元面臨嚴重貶值，經濟形勢堪憂。",
+        "impact": "韓元的崩跌將對韓國的進出口造成壓力，可能引發資本外流，進一步加劇外匯市場的波動。",
+        "affected": "USD/KRW",
         "sentiment": "利空",
-        "originalIndex": 9,
+        "originalIndex": 10,
         "url": "https://news.google.com/rss/articles/CBMiqANBVV95cUxOVGR3UWROV3NtbGFfWHNveTRxNnVwa3pEOTZFMF9MZ2NPcUxOYTNsUGtiV2Z6NDVmY0R4dlJHYUZCXzJqRURJVVBma3g0VDMtUmpwVmVSU2pMaTlXb3VMMkVtRk9nVWxVVmFnMncyVml1cjF4eHhXMTVQbl81d1pGLXVxMkZTMTZNeG96ZTBNa0lZWUVhYTN2Z3FLb19WaVA4OXotYUQ1eEN1ZmFyc0VEVmV0MFBtcVhaVkpoWEp1VzdDbzlRS1BrVVc2OG1FRmRzR1d6Skg1VEdLblJVcV9fWU02TzVqWUtDa1c5X3EwZ2pxVG5vQVNwRFRPcHppTWRHQWszeXpiT0FzVzcwMHhhUzA3NGVxeHFDQVYybU9wQS1KdXlpWHV1a0Y5VVNTM1lEQTZZN2pwM2ZuZWtsMUhhcEdkemtVYjhCM1d2UzdMRWVLR29KenBaUFFaaTlvZlJFemwxdFdXcGdrM3kyNkhLdUo2VjhMaGZnRFVTRFc3cTl1b2VyRnFoSzctVTlVUm55TlA0Nm9ib3ZuSGlyYUJHZTZNbEJjU3Ju?oc=5",
         "pubDate": "Mon, 23 Mar 2026 07:19:06 GMT"
       }
     ],
-    "lastUpdate": "2026/3/29 上午2:46:27"
+    "lastUpdate": "2026/3/29 上午3:15:06"
   }
 }
