@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026/3/29 下午5:00:00",
+  "lastUpdate": "2026/3/29 下午6:00:00",
   "exchange": "MAX (MaiCoin)",
   "status": "connected",
   "account": {
@@ -24,82 +24,82 @@
     {
       "market": "btctwd",
       "name": "BTC/TWD",
-      "last": "2143927.7",
-      "open": "2131805.3",
+      "last": "2139953.4",
+      "open": "2129122.5",
       "high": "2159501",
       "low": "2124355.9",
-      "vol": "10.812",
-      "change": "0.57"
+      "vol": "10.5961",
+      "change": "0.51"
     },
     {
       "market": "ethtwd",
       "name": "ETH/TWD",
-      "last": "64390.7",
-      "open": "64163.6",
+      "last": "64217.6",
+      "open": "64150.7",
       "high": "65483.4",
       "low": "63939.3",
-      "vol": "358.1389",
-      "change": "0.35"
+      "vol": "349.1402",
+      "change": "0.10"
     },
     {
       "market": "soltwd",
       "name": "SOL/TWD",
-      "last": "2654.9",
-      "open": "2682",
+      "last": "2650.4",
+      "open": "2666",
       "high": "2702.9",
       "low": "2629.5",
-      "vol": "1348.714",
-      "change": "-1.01"
+      "vol": "1316.11",
+      "change": "-0.59"
     },
     {
       "market": "dogetwd",
       "name": "DOGE/TWD",
-      "last": "2.9363",
+      "last": "2.917",
       "open": "2.9234",
       "high": "3.0551",
       "low": "2.9069",
-      "vol": "1476065.4",
-      "change": "0.44"
+      "vol": "1496945.4",
+      "change": "-0.22"
     },
     {
       "market": "xrptwd",
       "name": "XRP/TWD",
       "last": "42.9",
-      "open": "42.925",
+      "open": "42.924",
       "high": "43.576",
       "low": "42.711",
-      "vol": "13447.05",
+      "vol": "13348.08",
       "change": "-0.06"
     },
     {
       "market": "btcusdt",
       "name": "BTC/USDT",
-      "last": "66722.51",
-      "open": "66424.68",
+      "last": "66571.44",
+      "open": "66297.38",
       "high": "67266.9",
       "low": "66150",
-      "vol": "5.6059",
-      "change": "0.45"
+      "vol": "5.5921",
+      "change": "0.41"
     },
     {
       "market": "ethusdt",
       "name": "ETH/USDT",
-      "last": "2003.71",
-      "open": "2000",
+      "last": "1998.91",
+      "open": "1999.65",
       "high": "2043.61",
       "low": "1990.8",
-      "vol": "243.213",
-      "change": "0.19"
+      "vol": "245.5893",
+      "change": "-0.04"
     },
     {
       "market": "solusdt",
       "name": "SOL/USDT",
       "last": "82.52",
-      "open": "83.5",
+      "open": "82.91",
       "high": "84.23",
       "low": "81.9",
-      "vol": "429.8",
-      "change": "-1.17"
+      "vol": "370.466",
+      "change": "-0.47"
     }
   ],
   "openOrders": [],
@@ -115,29 +115,29 @@
     "version": 2,
     "status": "RUNNING",
     "initialCapital": 30000,
-    "currentCapital": 29809.8,
-    "available": -5068.2,
-    "realizedPnl": -190.2,
-    "unrealizedPnl": 71.57,
-    "returnPct": -0.63,
-    "totalTrades": 13,
-    "wins": 9,
+    "currentCapital": 29878.87,
+    "available": -5079.13,
+    "realizedPnl": -121.13,
+    "unrealizedPnl": 6.8,
+    "returnPct": -0.4,
+    "totalTrades": 14,
+    "wins": 10,
     "losses": 4,
-    "winRate": "69.2%",
+    "winRate": "71.4%",
     "maxDrawdown": 1.37,
     "positions": [
       {
-        "market": "btctwd",
+        "market": "ethtwd",
         "direction": "SELL",
-        "entryPrice": 2144200,
-        "currentPrice": 2139800.1,
-        "sizeTWD": 34878,
-        "pnlPct": 0.21,
-        "pnlTWD": 71.57,
-        "strategy": "日線強勢空頭+4H空頭+EMA8<21+布林極度擠壓(突破在即)",
-        "confidence": 0.5,
+        "entryPrice": 64230.1,
+        "currentPrice": 64217.6,
+        "sizeTWD": 34958,
+        "pnlPct": 0.02,
+        "pnlTWD": 6.8,
+        "strategy": "日線強勢空頭+4H空頭+EMA空頭排列+MACD雙負",
+        "confidence": 0.67,
         "dailyTrend": "strong_down",
-        "openTime": "2026-03-29T07:54:00.882Z"
+        "openTime": "2026-03-29T09:54:01.115Z"
       }
     ],
     "closedTrades": [
@@ -448,6 +448,29 @@
         "openTime": "2026-03-29T05:54:00.644Z",
         "closeTime": "2026-03-29T07:54:00.882Z",
         "outcome": "LOSS"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "entryPrice": 2144200,
+        "exitPrice": 2139953.4,
+        "sizeTWD": 34878,
+        "pnlTWD": 69.08,
+        "pnlPct": 0.2,
+        "reason": "TIME_EXIT",
+        "strategy": "日線強勢空頭+4H空頭+EMA8<21+布林極度擠壓(突破在即)",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "EMA8<21",
+          "布林極度擠壓(突破在即)",
+          "價<VWAP",
+          "AI:雖然趨勢強烈，但RSI顯示可能出現反彈風"
+        ],
+        "confidence": 0.5,
+        "openTime": "2026-03-29T07:54:00.882Z",
+        "closeTime": "2026-03-29T09:54:01.115Z",
+        "outcome": "WIN"
       }
     ],
     "strategyStats": {
@@ -462,9 +485,9 @@
         "pnl": 5.01200640991296
       },
       "日線強勢空頭+4H空頭+EMA8<21+布林極度擠壓(突破在即)": {
-        "wins": 0,
+        "wins": 1,
         "losses": 2,
-        "pnl": -397.7698290133968
+        "pnl": -328.6937564455378
       },
       "日線強勢空頭+4H空頭+RSI超買+空頭(82)+雙RSI共振高位": {
         "wins": 1,
@@ -507,12 +530,12 @@
         "pnl": -29.994451388394296
       }
     },
-    "consecutiveLosses": 1,
+    "consecutiveLosses": 0,
     "pausedUntil": null,
-    "hoursElapsed": "25.5",
-    "hoursRemaining": "646566.8",
+    "hoursElapsed": "26.3",
+    "hoursRemaining": "646566.0",
     "startTime": "2026-03-28T15:44:00+08:00",
     "endTime": "2099-12-31T23:59:59+08:00",
-    "lastUpdate": "2026/3/29 下午5:12:11"
+    "lastUpdate": "2026/3/29 下午6:00:09"
   }
 }
