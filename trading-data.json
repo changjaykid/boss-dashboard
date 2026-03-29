@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-03-30 00:45:24",
+  "lastUpdate": "2026-03-30 01:00:25",
   "currentPrice": {
     "GOLD": {
       "bid": 4493.14,
@@ -12,10 +12,6 @@
     "COPPER": {
       "bid": 5.48686,
       "ask": 5.48958
-    },
-    "EURUSDM2026": {
-      "bid": 1.15473,
-      "ask": 1.15533
     },
     "US500": {
       "bid": 6354.2,
@@ -49,14 +45,6 @@
     },
     "COPPER": {
       "name": "\u9285",
-      "regime": "TRENDING_DOWN",
-      "pa": "",
-      "pattern": "Double Top",
-      "mtf_dir": "SELL",
-      "ew_pos": "Unknown"
-    },
-    "EURUSDM2026": {
-      "name": "EUR/USD",
       "regime": "TRENDING_DOWN",
       "pa": "",
       "pattern": "Double Top",
