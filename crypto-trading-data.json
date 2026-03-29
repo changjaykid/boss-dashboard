@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026/3/29 上午3:45:00",
+  "lastUpdate": "2026/3/29 下午12:00:01",
   "exchange": "MAX (MaiCoin)",
   "status": "connected",
   "account": {
@@ -24,89 +24,89 @@
     {
       "market": "btctwd",
       "name": "BTC/TWD",
-      "last": "2148788.2",
-      "open": "2116635.4",
+      "last": "2146990.9",
+      "open": "2126747.2",
       "high": "2159501",
-      "low": "2115274",
-      "vol": "11.6816",
-      "change": "1.52"
+      "low": "2123900",
+      "vol": "12.1962",
+      "change": "0.95"
     },
     {
       "market": "ethtwd",
       "name": "ETH/TWD",
-      "last": "64905.9",
-      "open": "63896.2",
+      "last": "64629.4",
+      "open": "63896.8",
       "high": "65483.4",
-      "low": "63641.9",
-      "vol": "317.8967",
-      "change": "1.58"
+      "low": "63814.1",
+      "vol": "375.3205",
+      "change": "1.15"
     },
     {
       "market": "soltwd",
       "name": "SOL/TWD",
-      "last": "2671.1",
-      "open": "2654.2",
+      "last": "2666",
+      "open": "2654",
       "high": "2702.9",
-      "low": "2639.8",
-      "vol": "1386.415",
-      "change": "0.64"
+      "low": "2629.5",
+      "vol": "1635.195",
+      "change": "0.45"
     },
     {
       "market": "dogetwd",
       "name": "DOGE/TWD",
-      "last": "2.956",
-      "open": "2.902",
+      "last": "2.9334",
+      "open": "2.894",
       "high": "3.0551",
       "low": "2.8846",
-      "vol": "1320284.6",
-      "change": "1.86"
+      "vol": "1528921",
+      "change": "1.36"
     },
     {
       "market": "xrptwd",
       "name": "XRP/TWD",
-      "last": "43.187",
-      "open": "42.686",
+      "last": "42.951",
+      "open": "42.549",
       "high": "43.576",
-      "low": "42.436",
-      "vol": "14326.99",
-      "change": "1.17"
+      "low": "42.549",
+      "vol": "16065.8",
+      "change": "0.94"
     },
     {
       "market": "btcusdt",
       "name": "BTC/USDT",
-      "last": "66884.19",
-      "open": "66037.78",
+      "last": "66907.99",
+      "open": "66187.05",
       "high": "67266.9",
-      "low": "65840.16",
-      "vol": "5.4427",
-      "change": "1.28"
+      "low": "66150",
+      "vol": "6.2554",
+      "change": "1.09"
     },
     {
       "market": "ethusdt",
       "name": "ETH/USDT",
-      "last": "2023.17",
-      "open": "1995.09",
+      "last": "2012.46",
+      "open": "1991.25",
       "high": "2043.61",
-      "low": "1981.66",
-      "vol": "183.063",
-      "change": "1.41"
+      "low": "1990",
+      "vol": "231.901",
+      "change": "1.07"
     },
     {
       "market": "solusdt",
       "name": "SOL/USDT",
       "last": "83.19",
-      "open": "82.78",
+      "open": "82.65",
       "high": "84.23",
-      "low": "81.98",
-      "vol": "867.106",
-      "change": "0.50"
+      "low": "81.9",
+      "vol": "705.499",
+      "change": "0.65"
     }
   ],
   "openOrders": [],
   "recentTrades": [],
   "marketSentiment": {
     "fearGreed": {
-      "value": "12",
+      "value": "9",
       "label": "Extreme Fear"
     }
   },
@@ -115,29 +115,29 @@
     "version": 2,
     "status": "RUNNING",
     "initialCapital": 30000,
-    "currentCapital": 29728.56,
-    "available": -5054.44,
-    "realizedPnl": -271.44,
-    "unrealizedPnl": 0,
-    "returnPct": -0.9,
-    "totalTrades": 8,
-    "wins": 6,
-    "losses": 2,
-    "winRate": "75.0%",
-    "maxDrawdown": 1.32,
+    "currentCapital": 29642.47,
+    "available": -5038.53,
+    "realizedPnl": -357.53,
+    "unrealizedPnl": 119.89,
+    "returnPct": -1.19,
+    "totalTrades": 11,
+    "wins": 8,
+    "losses": 3,
+    "winRate": "72.7%",
+    "maxDrawdown": 1.37,
     "positions": [
       {
-        "market": "btctwd",
+        "market": "ethtwd",
         "direction": "SELL",
-        "entryPrice": 2148788.2,
-        "currentPrice": 2148788.2,
-        "sizeTWD": 34783,
-        "pnlPct": 0,
-        "pnlTWD": 0,
-        "strategy": "日線強勢空頭+4H空頭+EMA多頭排列+布林極度擠壓(突破在即)",
-        "confidence": 0.48000000000000004,
+        "entryPrice": 64853.6,
+        "currentPrice": 64629.4,
+        "sizeTWD": 34681,
+        "pnlPct": 0.35,
+        "pnlTWD": 119.89,
+        "strategy": "日線強勢空頭+4H空頭+RSI超買+空頭(81)+EMA8>21",
+        "confidence": 0.76,
         "dailyTrend": "strong_down",
-        "openTime": "2026-03-28T19:44:00.800Z"
+        "openTime": "2026-03-29T03:18:00.968Z"
       }
     ],
     "closedTrades": [
@@ -329,6 +329,76 @@
         "openTime": "2026-03-28T17:44:00.547Z",
         "closeTime": "2026-03-28T19:44:00.800Z",
         "outcome": "WIN"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "entryPrice": 2148788.2,
+        "exitPrice": 2146000.1,
+        "sizeTWD": 34783,
+        "pnlTWD": 45.13,
+        "pnlPct": 0.13,
+        "reason": "TIME_EXIT",
+        "strategy": "日線強勢空頭+4H空頭+EMA多頭排列+布林極度擠壓(突破在即)",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "EMA多頭排列",
+          "布林極度擠壓(突破在即)",
+          "價<VWAP",
+          "AI:雖然日線和4H趨勢顯示空頭，但RSI指標"
+        ],
+        "confidence": 0.48000000000000004,
+        "openTime": "2026-03-28T19:44:00.800Z",
+        "closeTime": "2026-03-28T21:44:00.569Z",
+        "outcome": "WIN"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "entryPrice": 2146000.1,
+        "exitPrice": 2140000,
+        "sizeTWD": 34835,
+        "pnlTWD": 97.4,
+        "pnlPct": 0.28,
+        "reason": "TIME_EXIT",
+        "strategy": "日線強勢空頭+4H空頭+EMA多頭排列+布林極度擠壓(突破在即)",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "EMA多頭排列",
+          "布林極度擠壓(突破在即)",
+          "價<VWAP",
+          "strong_bear",
+          "AI:雖然日線和4H趨勢均顯示空頭，但RSI指"
+        ],
+        "confidence": 0.5,
+        "openTime": "2026-03-28T21:44:00.569Z",
+        "closeTime": "2026-03-29T02:16:00.502Z",
+        "outcome": "WIN"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "entryPrice": 2140000,
+        "exitPrice": 2153999.2,
+        "sizeTWD": 34949,
+        "pnlTWD": -228.63,
+        "pnlPct": -0.65,
+        "reason": "STOP_LOSS",
+        "strategy": "日線強勢空頭+4H空頭+EMA空頭排列+MACD雙正",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "EMA空頭排列",
+          "MACD雙正",
+          "布林極度擠壓(突破在即)",
+          "AI:雖然日線和4H趨勢顯示強空頭，但RSI接"
+        ],
+        "confidence": 0.47,
+        "openTime": "2026-03-29T02:16:00.502Z",
+        "closeTime": "2026-03-29T03:18:00.968Z",
+        "outcome": "LOSS"
       }
     ],
     "strategyStats": {
@@ -366,130 +436,140 @@
         "wins": 1,
         "losses": 0,
         "pnl": 0.10717944846322254
+      },
+      "日線強勢空頭+4H空頭+EMA多頭排列+布林極度擠壓(突破在即)": {
+        "wins": 2,
+        "losses": 0,
+        "pnl": 142.52848081601607
+      },
+      "日線強勢空頭+4H空頭+EMA空頭排列+MACD雙正": {
+        "wins": 0,
+        "losses": 1,
+        "pnl": -228.62525271028346
       }
     },
-    "consecutiveLosses": 0,
+    "consecutiveLosses": 1,
     "pausedUntil": null,
-    "hoursElapsed": "12.2",
-    "hoursRemaining": "646580.1",
+    "hoursElapsed": "20.3",
+    "hoursRemaining": "646572.0",
     "startTime": "2026-03-28T15:44:00+08:00",
     "endTime": "2099-12-31T23:59:59+08:00",
-    "lastUpdate": "2026/3/29 上午3:54:10"
+    "lastUpdate": "2026/3/29 下午12:00:10"
   },
   "news": {
     "items": [
       {
-        "title": "比特幣重挫逾3%跌破6.9萬美元 加密貨幣概念應聲走低",
-        "summary": "比特幣價格大幅下跌，跌破6.9萬美元，市場情緒受到影響。",
-        "impact": "比特幣的價格下跌可能引發投資者的恐慌情緒，進一步影響整個加密貨幣市場的信心，導致其他幣種也出現下跌。",
+        "title": "比特幣重挫逾3%跌破6.9萬美元 加密貨幣概念股應聲走低",
+        "summary": "比特幣價格大幅下跌，跌破6.9萬美元，影響市場信心。",
+        "impact": "比特幣的重挫可能引發投資者的恐慌情緒，進一步影響其他加密貨幣的價格走勢，造成整體市場的下行壓力。",
         "affected": "BTC",
         "sentiment": "利空",
-        "originalIndex": 8,
+        "originalIndex": 9,
         "url": "https://news.google.com/rss/articles/CBMi6wJBVV95cUxPbmMwUjQwMDBxa3M0SWJxVl9GUUE1MmhWQ1h2YUtfTmRDbVJCUmtQanBpRjY1d1NjcFZFQjVNdDY0T2FBdnJiRWpYSmlVOGJRS25rRzdYZVhkQkd5VVFtNTZhYWxuRHhBckg3ZkhQRDRMRDI1Qi1xNTdXNWFfQjRTY3o3US1VNWZCd25uaGZzTlVpMm5SNEIzMHF4RDlXWmVFUUVoRFZMaUdTU2U5cXVtd01hZnh0U3loR1BqRXQwYll3MU1MX1hmaGtCeUVaMlltMWxvdjVFTVZGbnJwRU13OFJHQ0pYZlk3MnFydjFWc2RDc2dSSnRQVkc4SVBJS3VhTnUzLUt0T0hpR0NXTXdnY0tkdm9VUjk0Y1pUc1g1N0xoVV83YlI3d2ZDUU0ycDUzWHhqY1dCM19xOXBhdG10LVdyYlNiQlJpVzVVeVdEZHQtREd5QktGMHVFWVRjN28zY1ptbkpldUgwTlE?oc=5",
         "pubDate": "Fri, 27 Mar 2026 13:43:28 GMT"
       },
       {
-        "title": "逾 140 億美元比特幣期權週五到期，市場緊盯 7.5 萬美元「磁吸價位」",
-        "summary": "大量比特幣期權即將到期，市場關注7.5萬美元的關鍵價位。",
-        "impact": "期權到期可能導致市場波動，若價格接近7.5萬美元，可能吸引更多交易者進行操作，影響短期價格走勢。",
+        "title": "羅伯特·清崎斥資6.7萬美元再買比特幣 看漲至百萬美元有兩大理由",
+        "summary": "知名投資者羅伯特·清崎再次增持比特幣，預測未來將達到百萬美元。",
+        "impact": "這一消息可能會提升市場對比特幣的信心，吸引更多投資者進場，從而推高比特幣的價格。",
+        "affected": "BTC",
+        "sentiment": "利多",
+        "originalIndex": 4,
+        "url": "https://news.google.com/rss/articles/CBMipgNBVV95cUxQU2d4WHJMZjBhZ1pGNkNoYnNhMXZqY3ZObTFqdHpXel9KeUM1dDB1NEVDR2J2b2NFbHhwWUtXQUJKVVVpWElDam9GdmM2UmtmQzFtREFIbE5XR3lVR01pLXE2NXg1MjNPTE1sbW5RWXJfeGpTYXdiYzZGVGRrYjIzWnJMb2ZuU3pYOFBtQkQ5RkNwMjB3bjZpcFdSb09LYVpuc3lxNDdVS25sSGdMbThnN3ljZENZUDk0VjVhN0oybjRTUXRhemJMYkdvZk4yZXFwd3hSdkN3b29Sbi1DYlhyM1dqTWhoTXpCZ3dOTGl1SzFUZU0wc194aXZJMzVvUjlVTnk3bWZEU0hLbTlxQ21sbW9YQXdXS0J0dFNKdTYwSHQ3YUxiUkpVazljNFpRczNTWGJ3a241dTlPR3ctdGRObm12OFd2T1JYcUVmRkNQZ2FydV9yWU92OUhBeGotbEVJaU5iYl9Na1Y1ZkY2NHNBYXBPWFE1WFpUUFlMdTRLUE94MFZ1aFoyeVB5ZmJlbXRHbW9QM3FPSHNfclhYdGNtbnFzcDJ4QQ?oc=5",
+        "pubDate": "Fri, 27 Mar 2026 13:42:37 GMT"
+      },
+      {
+        "title": "比特幣定價邏輯生變 告別稀缺模型貼近科技股",
+        "summary": "比特幣的定價邏輯正在發生變化，逐漸與科技股接軌。",
+        "impact": "這一變化可能會影響投資者對比特幣的看法，促使其更像一種資產類別而非單純的數位貨幣，可能導致資金流向的重新配置。",
         "affected": "BTC",
         "sentiment": "中性",
-        "originalIndex": 6,
-        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNYjBjeTVTT3ZLcG9fYjRKdTRrWlZNdmMtV0Q0Qm80Y1RIV3N5R25XYUFoeklUQ0dWSmJoNllvbE5TQTRFRkpBdFlyc1dFUXJ3MGFIMzFEbzZjaktPelRxZGROYjU5a016YWd1TTFqSjk5Qi1wMlBDQXJJRV9OY2htd1Y4UUhfMkJxSUFxdHZPNWZCQQ?oc=5",
-        "pubDate": "Wed, 25 Mar 2026 18:17:36 GMT"
+        "originalIndex": 8,
+        "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxQRlFqWHUzSFNrVFMwSWx4LWJERm9TX3NCTVFJeW1ONXcwUXZNOVYtSzdrNm84LXVzdWdBYmllQWl3bzgzWlZqVjRRNDZVLWVLNUZGZWdfbV9KeW9POGltZE1Zdnl0bGM3d0JiSWo0ejJKY0NQX3k4RXZfNVZFdmZ0dERkc1F0QlFmODRVZ2ZlYTRYTndQMm96THkzcmRxRUVLSGc0dGhGTVpzNmFSbFJiTXZvZ1FWZU1Xd1oxWjRWTnQ5N3ZXSjYzLUIxZGZOWW10T1h6SVJLTkZfN05raG5RU01NN1JscENsMnU0SllCRjk1WnhhcXpMdDVNVzZTMy1LRzJYTTdua2VYMFVXNGZKUDU3T3JPWV9Rc0ZGbDNpQjVHRk14d1NKZm9wNmFjV3ZmWWFEUzlHejJoaF9SbjdLclZYb3QxZ1RWOTVYcQ?oc=5",
+        "pubDate": "Fri, 27 Mar 2026 22:51:15 GMT"
+      },
+      {
+        "title": "美伊戰爭第28 天，JPMorgan 說比特幣通過了「數位黃金」的資格考試",
+        "summary": "JPMorgan認為比特幣已經證明其作為數位黃金的價值。",
+        "impact": "這一評價可能會提升機構投資者對比特幣的信心，進一步推動資金流入，加強比特幣的市場地位。",
+        "affected": "BTC",
+        "sentiment": "利多",
+        "originalIndex": 5,
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9pWlpKdGN5bFE0cXQtdlVJR3BTcF82eWx2aVY2RjgyaGJmRWR2VU5JeFpjUHlPaUYzeE10WFotb3ZJdDJnemdMd0NxWjJ3N0RmNGdoeU1PQzNabndJQnd0Ui14MWlLcVYxWFd2bk1XLU4tT0VjOG5JVmhzRQ?oc=5",
+        "pubDate": "Sat, 28 Mar 2026 05:11:48 GMT"
       },
       {
         "title": "比特幣穩居加密貨幣龍頭地位 專家點出四大長期投資優勢",
         "summary": "專家分析比特幣的長期投資優勢，強調其在市場中的主導地位。",
-        "impact": "這則新聞可能增強投資者對比特幣的信心，吸引長期資金進入市場，對價格形成支撐。",
+        "impact": "這一分析有助於增強投資者對比特幣的信心，可能吸引更多長期投資者進場，進一步穩定其價格。",
         "affected": "BTC",
         "sentiment": "利多",
-        "originalIndex": 4,
+        "originalIndex": 6,
         "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQbFpaNXNfYlMwY055eXFOVVZKZFZINWdGZmM1U2EzTFBRbW1maHBJTnQ4dHFaNHNqLVcwdWhuT1EzU2tYOVpxZGFDTUV4X3JJOHZoc1U1anRxNmZwTE41RHFfcjhBVHJtdWF5NkhnOTgtNkdXbDVtLUZKMHpFQ2pHUWk0aWhZOXpVN0g3QQ?oc=5",
         "pubDate": "Fri, 27 Mar 2026 20:01:37 GMT"
-      },
-      {
-        "title": "比特幣定價邏輯生變 告別稀缺模型貼近科技股",
-        "summary": "比特幣的定價邏輯發生變化，逐漸與科技股相似。",
-        "impact": "這一變化可能影響投資者的預期，導致比特幣的價格波動性增加，並可能改變資金流向。",
-        "affected": "BTC",
-        "sentiment": "中性",
-        "originalIndex": 7,
-        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1ERHo0T2RDSzNjWm1HLXNERHI1R2lJSTFHbGlEMXhvVGVMd3RpbndVWllVYlZKN1hfTVZRU0FDbVd6cWUxUkdIT3d2cnQ0c2xDdUE?oc=5",
-        "pubDate": "Fri, 27 Mar 2026 22:51:00 GMT"
-      },
-      {
-        "title": "羅伯特·清崎斥資6.7萬美元再買比特幣 看漲至百萬美元有兩大理由",
-        "summary": "知名投資者羅伯特·清崎再次增持比特幣，對未來價格持樂觀態度。",
-        "impact": "這則消息可能吸引其他投資者跟隨，增強市場對比特幣的信心，進而推動價格上漲。",
-        "affected": "BTC",
-        "sentiment": "利多",
-        "originalIndex": 2,
-        "url": "https://news.google.com/rss/articles/CBMipgNBVV95cUxQU2d4WHJMZjBhZ1pGNkNoYnNhMXZqY3ZObTFqdHpXel9KeUM1dDB1NEVDR2J2b2NFbHhwWUtXQUJKVVVpWElDam9GdmM2UmtmQzFtREFIbE5XR3lVR01pLXE2NXg1MjNPTE1sbW5RWXJfeGpTYXdiYzZGVGRrYjIzWnJMb2ZuU3pYOFBtQkQ5RkNwMjB3bjZpcFdSb09LYVpuc3lxNDdVS25sSGdMbThnN3ljZENZUDk0VjVhN0oybjRTUXRhemJMYkdvZk4yZXFwd3hSdkN3b29Sbi1DYlhyM1dqTWhoTXpCZ3dOTGl1SzFUZU0wc194aXZJMzVvUjlVTnk3bWZEU0hLbTlxQ21sbW9YQXdXS0J0dFNKdTYwSHQ3YUxiUkpVazljNFpRczNTWGJ3a241dTlPR3ctdGRObm12OFd2T1JYcUVmRkNQZ2FydV9yWU92OUhBeGotbEVJaU5iYl9Na1Y1ZkY2NHNBYXBPWFE1WFpUUFlMdTRLUE94MFZ1aFoyeVB5ZmJlbXRHbW9QM3FPSHNfclhYdGNtbnFzcDJ4QQ?oc=5",
-        "pubDate": "Fri, 27 Mar 2026 13:42:37 GMT"
       }
     ],
-    "lastUpdate": "2026/3/29 上午3:55:14"
+    "lastUpdate": "2026/3/29 下午12:00:00"
   },
   "socialNews": {
     "items": [
       {
-        "title": "我花了 3.5 年從零開始建立外匯算法，這裡是統計數據，請給我建議。",
-        "summary": "使用 Python 開發了一個外匯交易算法，基於技術指標如移動平均線和布林帶進行交易，回測了過去 2 年的數據，總共執行了 500 筆交易，勝率為 65%，最大回撤為 10%。在回測中發現某些市場條件下表現不佳，通過調整參數來優化策略。 ",
-        "impact": "我們的系統可以考慮使用類似的技術指標進行回測，並根據歷史數據調整參數以提高勝率。",
-        "affected": "Python、回測、移動平均線、布林帶",
-        "sentiment": "利多",
-        "originalIndex": 14,
-        "source": "Reddit",
-        "url": "https://reddit.com/r/algotrading/comments/1s5tihu/i_spent_35_years_building_a_forex_algo_from/",
-        "pubDate": "Sat, 28 Mar 2026 07:05:18 GMT"
-      },
-      {
-        "title": "第一天在虛幻引擎中創建日內交易機器人。這是今天的“D20”模擬交易！",
-        "summary": "使用虛幻引擎開發了一個日內交易機器人，設置了基於價格行為的買入和賣出策略，模擬交易了 100 筆交易，初步測試顯示勝率為 58%。在開發過程中遇到性能問題，通過優化代碼提高了執行效率。",
-        "impact": "我們的系統可以考慮使用虛幻引擎進行交易機器人的開發，並實施價格行為策略以提高交易效率。",
-        "affected": "虛幻引擎、日內交易、模擬交易",
+        "title": "第一天創建日內交易機器人的經驗分享",
+        "summary": "使用 Unreal Engine 開發日內交易機器人，命名為「D20」，目前進行紙上交易，測試不同的策略和參數，記錄每筆交易的結果以進行後續優化。初步測試中發現某些策略在高波動市場中表現較好。",
+        "impact": "可以考慮使用 Unreal Engine 作為開發平台，並進行紙上交易來測試策略的可行性，這樣可以在實際投入資金前進行充分的模擬。",
+        "affected": "Unreal Engine、日內交易、策略測試、紙上交易",
         "sentiment": "中性",
-        "originalIndex": 15,
+        "originalIndex": 11,
         "source": "Reddit",
         "url": "https://reddit.com/r/algotrading/comments/1s5t3ig/day_one_of_creating_a_day_trading_bot_in_unreal/",
         "pubDate": "Sat, 28 Mar 2026 06:40:47 GMT"
       },
       {
-        "title": "問題：你們是改善表現不佳的策略還是完全放棄，並優化表現最佳的策略？",
-        "summary": "討論中提到使用回測工具分析表現不佳的策略，並通過調整參數和引入新指標來改善，具體使用了 Python 和 Backtrader 框架，對 300 筆交易進行了分析，最終將勝率從 45% 提高到 60%。",
-        "impact": "我們的系統可以利用回測工具分析策略表現，並根據數據調整參數以優化交易策略。",
-        "affected": "Python、Backtrader、回測、策略優化",
+        "title": "花了3.5年從零開始建立外匯算法的經驗",
+        "summary": "使用 Python 開發外匯交易算法，設計了多種策略並進行回測，最終選擇了基於移動平均線的策略，勝率達到65%，最大回撤為10%。在開發過程中遇到數據不準確的問題，通過使用多個數據源來解決。",
+        "impact": "可以借鑒其使用 Python 開發算法的經驗，並考慮使用移動平均線作為交易策略的一部分，進行多數據源的整合以提高準確性。",
+        "affected": "Python、外匯算法、移���平均線、回測",
         "sentiment": "利多",
-        "originalIndex": 18,
+        "originalIndex": 13,
         "source": "Reddit",
-        "url": "https://reddit.com/r/algotrading/comments/1s56xv3/question_for_you_guys_do_you_try_to_improve_bad/",
-        "pubDate": "Fri, 27 Mar 2026 15:13:58 GMT"
+        "url": "https://reddit.com/r/algotrading/comments/1s5tihu/i_spent_35_years_building_a_forex_algo_from/",
+        "pubDate": "Sat, 28 Mar 2026 07:05:18 GMT"
       },
       {
-        "title": "以太坊巨鯨活動激增 1500%，因為開發者啟動後量子安全團隊。",
-        "summary": "觀察到以太坊巨鯨在市場波動期間的交易行為，使用了基於區塊鏈數據分析的策略，分析了過去一個月的交易數據，發現巨鯨在價格下跌時大量買入，這一策略的勝率達到 70%。",
-        "impact": "我們的系統可以考慮分析巨鯨交易行為，並在市場波動時調整交易策略以提高獲利機會。",
-        "affected": "區塊鏈數據分析、以太坊、巨鯨交易",
+        "title": "以太坊鯨魚活動激增1500%的原因分析",
+        "summary": "分析以太坊鯨魚的交易行為，發現其在市場波動期間大量購買，並使用技術指標如 RSI 和 MACD 進行決策，這些指標幫助他們在低點進場。這些交易活動的數據被用來預測市場趨勢。",
+        "impact": "可以考慮將 RSI 和 MACD 指標納入我們的交易系統中，以便在市場波動時做出更明智的交易決策。",
+        "affected": "以太坊、RSI、MACD、交易行為分析",
         "sentiment": "利多",
-        "originalIndex": 20,
+        "originalIndex": 9,
         "source": "Reddit",
         "url": "https://reddit.com/r/CryptoCurrency/comments/1s67v8g/ethereum_whale_activity_surges_by_1500_as/",
         "pubDate": "Sat, 28 Mar 2026 18:20:43 GMT"
       },
       {
-        "title": "GameStop 根據最新的 SEC 申報維持比特幣持有量。",
-        "summary": "GameStop 的 SEC 申報顯示其持有比特幣，這引發了市場對其未來交易策略的討論，分析師使用了基本面分析和技術指標，預測其持有比特幣的決策可能會影響其股價，並計算出潛在的收益率為 15%。",
-        "impact": "我們的系統可以考慮基本面分析與技術指標的結合，評估持有加密貨幣的公司對市場的影響。",
-        "affected": "基本面分析、技術指標、SEC 申報",
-        "sentiment": "中性",
-        "originalIndex": 13,
+        "title": "比特幣持有者的五年持有統計分析",
+        "summary": "收集並分析了過去五年比特幣的持有者數據，發現長期持有者的平均回報率達到400%，並且持有時間越長，回報率越高。這些數據幫助制定了長期持有策略。",
+        "impact": "可以考慮將長期持有策略納入我們的交易系統，並設計相應的風險管理措施以應對市場波動。",
+        "affected": "比特幣、長期持有、回報率、數據分析",
+        "sentiment": "利多",
+        "originalIndex": 8,
         "source": "Reddit",
-        "url": "https://reddit.com/r/Bitcoin/comments/1s5ywhm/gamestop_maintains_bitcoin_holdings_according_to/",
-        "pubDate": "Sat, 28 Mar 2026 12:22:39 GMT"
+        "url": "https://reddit.com/r/Bitcoin/comments/1s62ck3/five_year_holding_stats_thatll_blow_your_mind/",
+        "pubDate": "Sat, 28 Mar 2026 14:49:10 GMT"
+      },
+      {
+        "title": "關於改善表現不佳策略的討論",
+        "summary": "討論中提到對於表現不佳的交易策略，應該進行優化而不是完全放棄，通過調整參數和��試不同的市場條件來找到最佳的執行方式，並且分享了具體的調整過程和結果。",
+        "impact": "可以在我們的系統中實施持續優化的機制，定期檢視和調整策略以提高整體表現。",
+        "affected": "策略優化、參數調整、交易表現",
+        "sentiment": "中性",
+        "originalIndex": 19,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/algotrading/comments/1s56xv3/question_for_you_guys_do_you_try_to_improve_bad/",
+        "pubDate": "Fri, 27 Mar 2026 15:13:58 GMT"
       }
     ],
-    "actionSummary": "🔧 可立刻測試：針對表現不佳的策略，使用回測工具進行參數調整，並引入新指標來改善勝率。  \n🔧 可立刻測試：在日內交易機器人中，優化代碼以提升執行效率，並設置基於價格行為的買賣策略。  \n🔍 值得研究：探索以太坊巨鯨的交易行為，分析其在市場波動期間的買入策略。  \n⚠️ 避坑：避免過度依賴單一指標，應該結合多種技術指標進行綜合分析以降低風險。",
-    "lastUpdate": "2026/3/29 上午3:55:14"
+    "actionSummary": "🔧 可立刻測試：將移動平均線策略應用於日內交易，設定短期和長期均線交叉作為進場信號。  \n🔧 可立刻測試：在高波動市場中使用 RSI 和 MACD 指標進行進場決策，並記錄每次交易的結果以便優化。  \n🔍 值得研究：深入分析以太坊鯨魚的交易行為，探討其對市場趨勢的影響及其策略的可行性。  \n⚠️ 避坑：避免依賴單一數據源，應使用多個數據來源以確保數據的準確性和可靠性。",
+    "lastUpdate": "2026/3/29 下午12:00:00"
   }
 }
