@@ -118,7 +118,7 @@
     "currentCapital": 29809.8,
     "available": -5068.2,
     "realizedPnl": -190.2,
-    "unrealizedPnl": 10.15,
+    "unrealizedPnl": 71.57,
     "returnPct": -0.63,
     "totalTrades": 13,
     "wins": 9,
@@ -130,10 +130,10 @@
         "market": "btctwd",
         "direction": "SELL",
         "entryPrice": 2144200,
-        "currentPrice": 2143576.1,
+        "currentPrice": 2139800.1,
         "sizeTWD": 34878,
-        "pnlPct": 0.03,
-        "pnlTWD": 10.15,
+        "pnlPct": 0.21,
+        "pnlTWD": 71.57,
         "strategy": "日線強勢空頭+4H空頭+EMA8<21+布林極度擠壓(突破在即)",
         "confidence": 0.5,
         "dailyTrend": "strong_down",
@@ -509,10 +509,10 @@
     },
     "consecutiveLosses": 1,
     "pausedUntil": null,
-    "hoursElapsed": "25.3",
+    "hoursElapsed": "25.4",
     "hoursRemaining": "646566.9",
     "startTime": "2026-03-28T15:44:00+08:00",
     "endTime": "2099-12-31T23:59:59+08:00",
-    "lastUpdate": "2026/3/29 下午5:04:09"
+    "lastUpdate": "2026/3/29 下午5:08:11"
   }
 }
