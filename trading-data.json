@@ -1026,5 +1026,48 @@
     ],
     "actionSummary": "🔧 可立刻測試：建立基於報酬因子的交易系統，針對 XAUUSD 進行回測，並持續調整參數以優化結果。  \n🔧 可立刻測試：在交易儀表板中加入 TACO 追蹤器，快速反應重大新聞事件帶來的市場波動。  \n🔍 值得研究：探索使用虛幻引擎開發日內交易機器人的可能性，進行策略實驗。  \n⚠️ 避坑：避免在不同時間框架中產生衝突，應根據較長時間框架的趨勢來決定短期交易方向。  ",
     "lastUpdate": "2026/3/29 上午3:55:14"
+  },
+  "review": {
+    "summary": "本週總盈虧約 -$96。GOLD(+$5.26) 和 US500(+$16.56) 證明趨勢對齊策略有效，但 US30(-$102) 和 BTC(-$15) 因倉位過大和過度交易造成嚴重虧損。核心問題：position sizing + 缺少冷卻機制。",
+    "bestStrategy": {
+      "name": "趨勢對齊（GOLD+US500）",
+      "pnl": 32.96,
+      "wins": 3,
+      "losses": 0
+    },
+    "worstStrategy": {
+      "name": "趨勢對齊（US30）",
+      "pnl": -102.37,
+      "wins": 1,
+      "losses": 3
+    },
+    "lessons": [
+      "Position Sizing 是生死線 — US30 用 0.42 手單筆虧 $55，同策略 US500 用 0.15 手就賺錢",
+      "BTC 6 小時內開 17 筆，大部分被洗出場 → 需要冷卻機制",
+      "逆勢 RSI 極端策略在強趨勢中 3 筆全虧 → 已在 TRENDING 市況禁用",
+      "最好的交易集中在倫敦/紐約重疊時段 13:00-17:00 UTC",
+      "US30 和 BTCUSD 已加入禁止交易清單"
+    ],
+    "optimization": [
+      "🔧 Confidence 門檻 0.75 → 0.80",
+      "🔧 固定最小手數，移除動態加碼",
+      "🔧 同商品冷卻期 1 小時",
+      "🔧 每日最大交易次數限制 10 筆",
+      "🔧 高波動率環境自動提高門檻",
+      "🔧 引入 trailing stop（盈利 > 1.5x SL 時移動止損到成本）",
+      "📅 下週重點：週三 ADP+ISM、週五 Good Friday 休市 + NFP",
+      "🚫 週五不交易（Good Friday + NFP + 零流動性）"
+    ]
+  },
+  "weekendStudy": {
+    "date": "2026-03-29",
+    "weekPnl": -95.95,
+    "bestInstrument": "US500 (+$16.56)",
+    "worstInstrument": "US30 (-$102.37)",
+    "nextWeekPlan": "保守操作，驗證優化參數，週五前清倉",
+    "keyEvents": [
+      "週三 ADP+ISM",
+      "週五 NFP + Good Friday"
+    ]
   }
 }
