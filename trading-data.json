@@ -1,33 +1,33 @@
 {
-  "lastUpdate": "2026-03-27 23:45:25",
+  "lastUpdate": "2026-03-30 00:00:23",
   "currentPrice": {
     "GOLD": {
-      "bid": 4532.94,
-      "ask": 4533.44
+      "bid": 4493.14,
+      "ask": 4493.64
     },
     "SILVER": {
-      "bid": 70.914,
-      "ask": 70.994
+      "bid": 69.78,
+      "ask": 69.83
     },
     "COPPER": {
-      "bid": 5.53979,
-      "ask": 5.54251
+      "bid": 5.48686,
+      "ask": 5.48958
     },
     "EURUSDM2026": {
-      "bid": 1.1578,
-      "ask": 1.15786
+      "bid": 1.15473,
+      "ask": 1.15533
     },
     "US500": {
-      "bid": 6431.6,
-      "ask": 6432
+      "bid": 6354.2,
+      "ask": 6354.8
     },
     "OIL_CRUDE": {
-      "bid": 96.521,
-      "ask": 96.553
+      "bid": 99.737,
+      "ask": 99.817
     },
     "NATURALGAS": {
-      "bid": 3.0321,
-      "ask": 3.0371
+      "bid": 3.0735,
+      "ask": 3.0755
     }
   },
   "indicators": {
@@ -35,8 +35,8 @@
       "name": "XAUUSD",
       "regime": "TRENDING_UP",
       "pa": "",
-      "pattern": "None",
-      "mtf_dir": "BUY",
+      "pattern": "Double Top",
+      "mtf_dir": "NONE",
       "ew_pos": "Unknown"
     },
     "SILVER": {
@@ -44,15 +44,15 @@
       "regime": "TRENDING_UP",
       "pa": "",
       "pattern": "Double Bottom",
-      "mtf_dir": "BUY",
+      "mtf_dir": "NONE",
       "ew_pos": "Unknown"
     },
     "COPPER": {
-      "name": "銅",
-      "regime": "RANGING",
+      "name": "\u9285",
+      "regime": "TRENDING_DOWN",
       "pa": "",
-      "pattern": "Double Bottom",
-      "mtf_dir": "BUY",
+      "pattern": "Double Top",
+      "mtf_dir": "SELL",
       "ew_pos": "Unknown"
     },
     "EURUSDM2026": {
@@ -60,65 +60,51 @@
       "regime": "TRENDING_DOWN",
       "pa": "",
       "pattern": "Double Top",
-      "mtf_dir": "NONE",
+      "mtf_dir": "SELL",
       "ew_pos": "Unknown"
     },
     "US500": {
       "name": "S&P 500",
       "regime": "TRENDING_DOWN",
       "pa": "",
-      "pattern": "Double Top",
+      "pattern": "None",
       "mtf_dir": "SELL",
       "ew_pos": "Unknown"
     },
     "OIL_CRUDE": {
-      "name": "原油",
+      "name": "\u539f\u6cb9",
       "regime": "TRENDING_UP",
       "pa": "",
-      "pattern": "Double Bottom",
+      "pattern": "None",
       "mtf_dir": "BUY",
       "ew_pos": "Unknown"
     },
     "NATURALGAS": {
-      "name": "天然氣",
+      "name": "\u5929\u7136\u6c23",
       "regime": "TRENDING_UP",
       "pa": "",
-      "pattern": "Double Top",
-      "mtf_dir": "NONE",
+      "pattern": "None",
+      "mtf_dir": "BUY",
       "ew_pos": "Unknown"
     }
   },
   "account": {
-    "balance": 30819.7,
+    "balance": 30820.06,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 8.4,
+    "unrealizedPnl": 0,
     "totalTrades": 56,
     "closedTrades": 53,
     "wins": 14,
     "losses": 39,
     "winRate": "26.4%"
   },
-  "openPositions": [
-    {
-      "dealId": "00000000-4bdb-165f-0460-7d740055311e",
-      "direction": "BUY",
-      "size": 0.03,
-      "entryPrice": 4528.69,
-      "stopLevel": 4499.39,
-      "profitLevel": 4616.49,
-      "currentBid": 4531.49,
-      "currentAsk": 4531.99,
-      "pnl": 8.4,
-      "instrument": "Gold",
-      "epic": "GOLD"
-    }
-  ],
+  "openPositions": [],
   "closedTrades": [
     {
       "time": "2026-03-27T00:15:14.870084+00:00",
       "instrument": "BTCUSD",
       "instrumentName": "BTC/USD",
-      "strategy": "15M_動量突破",
+      "strategy": "15M_\u52d5\u91cf\u7a81\u7834",
       "direction": "BUY",
       "confidence": 0.5,
       "size": 0.02,
@@ -128,7 +114,7 @@
       "tp_distance": 645.9,
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BULL",
-      "rsi_15m": 41,
+      "rsi_15m": 41.0,
       "rsi_1h": 38.5,
       "result": {
         "dealReference": "o_3e817f9f-c513-4b05-95ee-12c12b28c172"
@@ -142,7 +128,7 @@
       "time": "2026-03-27T00:30:14.932590+00:00",
       "instrument": "BTCUSD",
       "instrumentName": "BTC/USD",
-      "strategy": "15M_動量突破",
+      "strategy": "15M_\u52d5\u91cf\u7a81\u7834",
       "direction": "SELL",
       "confidence": 0.6,
       "size": 0.05,
@@ -166,7 +152,7 @@
       "time": "2026-03-27T00:30:15.342615+00:00",
       "instrument": "US500",
       "instrumentName": "S&P 500",
-      "strategy": "15M_動量突破",
+      "strategy": "15M_\u52d5\u91cf\u7a81\u7834",
       "direction": "SELL",
       "confidence": 0.6,
       "size": 0.49,
@@ -190,7 +176,7 @@
       "time": "2026-03-27T01:15:15.988714+00:00",
       "instrument": "GOLD",
       "instrumentName": "XAUUSD",
-      "strategy": "15M_動量突破",
+      "strategy": "15M_\u52d5\u91cf\u7a81\u7834",
       "direction": "BUY",
       "confidence": 0.5,
       "size": 0.02,
@@ -214,7 +200,7 @@
       "time": "2026-03-27T01:30:15.841939+00:00",
       "instrument": "GOLD",
       "instrumentName": "XAUUSD",
-      "strategy": "15M_動量突破",
+      "strategy": "15M_\u52d5\u91cf\u7a81\u7834",
       "direction": "BUY",
       "confidence": 0.5,
       "size": 0.02,
@@ -238,7 +224,7 @@
       "time": "2026-03-27T01:45:12.157457+00:00",
       "instrument": "GOLD",
       "instrumentName": "XAUUSD",
-      "strategy": "1H_EMA回彈",
+      "strategy": "1H_EMA\u56de\u5f48",
       "direction": "SELL",
       "confidence": 0.55,
       "size": 0.04,
@@ -248,7 +234,7 @@
       "tp_distance": 143.6,
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BULL",
-      "rsi_15m": 58,
+      "rsi_15m": 58.0,
       "rsi_1h": 45.7,
       "result": {
         "dealReference": "o_dc181ab3-e28d-464a-b9ec-131705e18c37"
@@ -262,7 +248,7 @@
       "time": "2026-03-27T02:00:14.826248+00:00",
       "instrument": "GOLD",
       "instrumentName": "XAUUSD",
-      "strategy": "1H_EMA回彈",
+      "strategy": "1H_EMA\u56de\u5f48",
       "direction": "SELL",
       "confidence": 0.55,
       "size": 0.04,
@@ -286,7 +272,7 @@
       "time": "2026-03-27T02:45:14.414949+00:00",
       "instrument": "GOLD",
       "instrumentName": "XAUUSD",
-      "strategy": "1H_EMA回彈",
+      "strategy": "1H_EMA\u56de\u5f48",
       "direction": "SELL",
       "confidence": 0.55,
       "size": 0.04,
@@ -310,7 +296,7 @@
       "time": "2026-03-27T03:15:14.628895+00:00",
       "instrument": "BTCUSD",
       "instrumentName": "BTC/USD",
-      "strategy": "15M_趨勢跟隨",
+      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
       "direction": "SELL",
       "confidence": 0.6,
       "size": 0.05,
@@ -321,7 +307,7 @@
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "BEAR",
       "rsi_15m": 48.6,
-      "rsi_1h": 32,
+      "rsi_1h": 32.0,
       "result": {
         "dealReference": "o_d547d874-5377-45b2-9b36-01b0b9bbc392"
       },
@@ -334,7 +320,7 @@
       "time": "2026-03-27T03:30:13.804454+00:00",
       "instrument": "BTCUSD",
       "instrumentName": "BTC/USD",
-      "strategy": "15M_趨勢跟隨",
+      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
       "direction": "SELL",
       "confidence": 0.6,
       "size": 0.05,
@@ -345,7 +331,7 @@
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BEAR",
       "rsi_15m": 50.7,
-      "rsi_1h": 33,
+      "rsi_1h": 33.0,
       "result": {
         "dealReference": "o_80b39581-f12b-4c3f-8887-7128b9b114ad"
       },
@@ -358,7 +344,7 @@
       "time": "2026-03-27T04:15:15.364450+00:00",
       "instrument": "BTCUSD",
       "instrumentName": "BTC/USD",
-      "strategy": "15M_趨勢跟隨",
+      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
       "direction": "SELL",
       "confidence": 0.6,
       "size": 0.05,
@@ -382,7 +368,7 @@
       "time": "2026-03-27T04:30:13.212169+00:00",
       "instrument": "BTCUSD",
       "instrumentName": "BTC/USD",
-      "strategy": "15M_趨勢跟隨",
+      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
       "direction": "SELL",
       "confidence": 0.6,
       "size": 0.05,
@@ -406,7 +392,7 @@
       "time": "2026-03-27T04:30:14.745076+00:00",
       "instrument": "GOLD",
       "instrumentName": "XAUUSD",
-      "strategy": "15M_RSI反轉",
+      "strategy": "15M_RSI\u53cd\u8f49",
       "direction": "SELL",
       "confidence": 0.5,
       "size": 0.02,
@@ -430,14 +416,14 @@
       "time": "2026-03-27T04:45:14.553600+00:00",
       "instrument": "BTCUSD",
       "instrumentName": "BTC/USD",
-      "strategy": "15M_趨勢跟隨",
+      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
       "direction": "SELL",
       "confidence": 0.6,
       "size": 0.05,
       "entry_bid": 68510.4,
       "entry_ask": 68560.4,
       "stop_distance": 125.7,
-      "tp_distance": 503,
+      "tp_distance": 503.0,
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BEAR",
       "rsi_15m": 34.4,
@@ -454,7 +440,7 @@
       "time": "2026-03-27T05:00:13.521522+00:00",
       "instrument": "BTCUSD",
       "instrumentName": "BTC/USD",
-      "strategy": "15M_趨勢跟隨",
+      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
       "direction": "SELL",
       "confidence": 0.6,
       "size": 0.05,
@@ -465,7 +451,7 @@
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BEAR",
       "rsi_15m": 36.5,
-      "rsi_1h": 32,
+      "rsi_1h": 32.0,
       "result": {
         "dealReference": "o_ba33b36f-4cb4-4fdf-a29a-376b17a9ecdb"
       },
@@ -478,7 +464,7 @@
       "time": "2026-03-27T05:00:14.544998+00:00",
       "instrument": "GOLD",
       "instrumentName": "XAUUSD",
-      "strategy": "15M_RSI反轉",
+      "strategy": "15M_RSI\u53cd\u8f49",
       "direction": "SELL",
       "confidence": 0.5,
       "size": 0.02,
@@ -502,7 +488,7 @@
       "time": "2026-03-27T05:15:13.238217+00:00",
       "instrument": "BTCUSD",
       "instrumentName": "BTC/USD",
-      "strategy": "15M_趨勢跟隨",
+      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
       "direction": "SELL",
       "confidence": 0.6,
       "size": 0.05,
@@ -513,7 +499,7 @@
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BEAR",
       "rsi_15m": 46.9,
-      "rsi_1h": 44,
+      "rsi_1h": 44.0,
       "result": {
         "dealReference": "o_78c02168-af77-4c8c-92ab-dafba81a70f5"
       },
@@ -526,7 +512,7 @@
       "time": "2026-03-27T05:15:13.647252+00:00",
       "instrument": "US500",
       "instrumentName": "S&P 500",
-      "strategy": "15M_RSI反轉",
+      "strategy": "15M_RSI\u53cd\u8f49",
       "direction": "SELL",
       "confidence": 0.6,
       "size": 0.49,
@@ -550,7 +536,7 @@
       "time": "2026-03-27T05:30:14.150536+00:00",
       "instrument": "BTCUSD",
       "instrumentName": "BTC/USD",
-      "strategy": "15M_趨勢跟隨",
+      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
       "direction": "SELL",
       "confidence": 0.6,
       "size": 0.05,
@@ -574,13 +560,13 @@
       "time": "2026-03-27T05:45:13.758288+00:00",
       "instrument": "GOLD",
       "instrumentName": "XAUUSD",
-      "strategy": "15M_RSI反轉",
+      "strategy": "15M_RSI\u53cd\u8f49",
       "direction": "SELL",
       "confidence": 0.6,
       "size": 0.05,
       "entry_bid": 4464.84,
       "entry_ask": 4465.34,
-      "stop_distance": 13,
+      "stop_distance": 13.0,
       "tp_distance": 43.2,
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BULL",
@@ -598,7 +584,7 @@
       "time": "2026-03-27T05:45:14.577034+00:00",
       "instrument": "BTCUSD",
       "instrumentName": "BTC/USD",
-      "strategy": "15M_趨勢跟隨",
+      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
       "direction": "SELL",
       "confidence": 0.6,
       "size": 0.05,
@@ -622,17 +608,17 @@
       "time": "2026-03-27T05:45:15.724760+00:00",
       "instrument": "US500",
       "instrumentName": "S&P 500",
-      "strategy": "1H_EMA回彈",
+      "strategy": "1H_EMA\u56de\u5f48",
       "direction": "SELL",
       "confidence": 0.55,
       "size": 0.36,
       "entry_bid": 6515.3,
       "entry_ask": 6515.9,
-      "stop_distance": 15,
-      "tp_distance": 75,
+      "stop_distance": 15.0,
+      "tp_distance": 75.0,
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BULL",
-      "rsi_15m": 67,
+      "rsi_15m": 67.0,
       "rsi_1h": 42.9,
       "result": {
         "dealReference": "o_51b30c2f-65f4-48fd-9482-8369e94fe338"
@@ -646,13 +632,13 @@
       "time": "2026-03-27T06:15:15.822312+00:00",
       "instrument": "BTCUSD",
       "instrumentName": "BTC/USD",
-      "strategy": "15M_趨勢跟隨",
+      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
       "direction": "SELL",
       "confidence": 0.6,
       "size": 0.05,
       "entry_bid": 68682.9,
       "entry_ask": 68732.9,
-      "stop_distance": 140,
+      "stop_distance": 140.0,
       "tp_distance": 559.8,
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BEAR",
@@ -670,13 +656,13 @@
       "time": "2026-03-27T06:30:16.107757+00:00",
       "instrument": "BTCUSD",
       "instrumentName": "BTC/USD",
-      "strategy": "15M_趨勢跟隨",
+      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
       "direction": "SELL",
       "confidence": 0.6,
       "size": 0.05,
       "entry_bid": 68743.45,
       "entry_ask": 68793.45,
-      "stop_distance": 135,
+      "stop_distance": 135.0,
       "tp_distance": 539.8,
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BEAR",
@@ -694,7 +680,7 @@
       "time": "2026-03-27T13:00:25.023860+00:00",
       "instrument": "US500",
       "instrumentName": "S&P 500",
-      "strategy": "趨勢對齊",
+      "strategy": "\u8da8\u52e2\u5c0d\u9f4a",
       "direction": "SELL",
       "confidence": 0.71,
       "size": 0.15,
@@ -704,7 +690,7 @@
       "tp_distance": 51.5,
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 20,
+      "rsi_15m": 20.0,
       "rsi_1h": 28.5,
       "confirmation_score": "",
       "result": {
@@ -719,12 +705,12 @@
       "time": "2026-03-27T13:00:25.449783+00:00",
       "instrument": "US30",
       "instrumentName": "US30",
-      "strategy": "趨勢對齊",
+      "strategy": "\u8da8\u52e2\u5c0d\u9f4a",
       "direction": "SELL",
       "confidence": 0.71,
       "size": 0.15,
-      "entry_bid": 45754,
-      "entry_ask": 45756,
+      "entry_bid": 45754.0,
+      "entry_ask": 45756.0,
       "stop_distance": 108.9,
       "tp_distance": 326.7,
       "trend_1h": "STRONG_BEAR",
@@ -744,7 +730,7 @@
       "time": "2026-03-27T14:00:22.584245+00:00",
       "instrument": "US30",
       "instrumentName": "US30",
-      "strategy": "趨勢對齊",
+      "strategy": "\u8da8\u52e2\u5c0d\u9f4a",
       "direction": "SELL",
       "confidence": 0.74,
       "size": 0.28,
@@ -769,7 +755,7 @@
       "time": "2026-03-27T14:15:25.029829+00:00",
       "instrument": "GOLD",
       "instrumentName": "XAUUSD",
-      "strategy": "趨勢對齊",
+      "strategy": "\u8da8\u52e2\u5c0d\u9f4a",
       "direction": "BUY",
       "confidence": 0.74,
       "size": 0.03,
@@ -779,7 +765,7 @@
       "tp_distance": 79.3,
       "trend_1h": "STRONG_BULL",
       "trend_15m": "STRONG_BULL",
-      "rsi_15m": 77,
+      "rsi_15m": 77.0,
       "rsi_1h": 71.2,
       "confirmation_score": "",
       "result": {
@@ -794,7 +780,7 @@
       "time": "2026-03-27T14:30:18.392431+00:00",
       "instrument": "US30",
       "instrumentName": "US30",
-      "strategy": "趨勢對齊",
+      "strategy": "\u8da8\u52e2\u5c0d\u9f4a",
       "direction": "SELL",
       "confidence": 0.74,
       "size": 0.28,
@@ -819,7 +805,7 @@
       "time": "2026-03-27T15:15:21.959289+00:00",
       "instrument": "US30",
       "instrumentName": "US30",
-      "strategy": "趨勢對齊",
+      "strategy": "\u8da8\u52e2\u5c0d\u9f4a",
       "direction": "SELL",
       "confidence": 0.77,
       "size": 0.42,
@@ -829,7 +815,7 @@
       "tp_distance": 397.5,
       "trend_1h": "STRONG_BEAR",
       "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 32,
+      "rsi_15m": 32.0,
       "rsi_1h": 23.9,
       "confirmation_score": "",
       "result": {
@@ -867,32 +853,32 @@
       "losses": 0,
       "pnl": 0.19
     },
-    "15M_趨勢跟隨": {
+    "15M_\u8da8\u52e2\u8ddf\u96a8": {
       "wins": 3,
       "losses": 22,
       "pnl": -4.799999999999999
     },
-    "1H_RSI極端": {
+    "1H_RSI\u6975\u7aef": {
       "wins": 0,
       "losses": 1,
       "pnl": -4.95
     },
-    "15M_動量突破": {
+    "15M_\u52d5\u91cf\u7a81\u7834": {
       "wins": 2,
       "losses": 4,
       "pnl": -2.7
     },
-    "1H_EMA回彈": {
+    "1H_EMA\u56de\u5f48": {
       "wins": 1,
       "losses": 3,
       "pnl": 4.859999999999999
     },
-    "15M_RSI反轉": {
+    "15M_RSI\u53cd\u8f49": {
       "wins": 2,
       "losses": 2,
       "pnl": 7.76
     },
-    "趨勢對齊": {
+    "\u8da8\u52e2\u5c0d\u9f4a": {
       "wins": 3,
       "losses": 3,
       "pnl": -95.99
@@ -908,166 +894,5 @@
     "OIL_CRUDE",
     "NATURALGAS"
   ],
-  "actions": [
-    "OPENED SELL US500 Conf:0.75"
-  ],
-  "news": {
-    "items": [
-      {
-        "title": "外匯今日：美元與石油暴跌,川普釋出伊朗緩和訊號——市場動盪分析",
-        "summary": "美元和石油價格大幅下跌，市場因川普釋出伊朗緩和訊號而動盪。",
-        "impact": "美元的下跌可能會促使投資者轉向其他貨幣，增加外匯市場的波動性。石油價格的下滑也可能影響與能源相關的貨幣對的表現。",
-        "affected": "USDTWD, USDCAD, XAUUSD",
-        "sentiment": "利空",
-        "originalIndex": 1,
-        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBqWWdscmRGX3FUOHNyT3dDSnllZG5weUJqRHVJWnlGa29UdUw2M3h5cEM5aERPc2U4S0hHSTV5VkZneEFhRUg1aXp0OXVQUFU?oc=5",
-        "pubDate": "Mon, 23 Mar 2026 22:30:46 GMT"
-      },
-      {
-        "title": "日本外匯事務負責人稱 政府將隨時採取一切可能措施應對匯率波動",
-        "summary": "日本政府表示將隨時採取措施應對日圓匯率波動。",
-        "impact": "這一表態可能會穩定市場情緒，減少日圓的波動性，並可能吸引投資者重新評估日圓的風險。",
-        "affected": "USDJPY",
-        "sentiment": "中性",
-        "originalIndex": 2,
-        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9RSU4tSVl3RHZSV282Z0dEX3JUSS1VZTRIMzNGYjB5UjRtODhCdTd0cWQxQm9wZUNhQzl4elYtZVgzWFZQY29aTGZ6RWZ3U21XSVJhTlZJWXlxQQ?oc=5",
-        "pubDate": "Mon, 23 Mar 2026 13:47:59 GMT"
-      },
-      {
-        "title": "日圓逼近160關卡！日官員示警：原油期貨投機行為波及外匯市場",
-        "summary": "日圓接近160的關卡，官員警告原油期貨的投機行為影響外匯市場。",
-        "impact": "日圓的貶值可能會加劇市場的不安，進一步引發投資者的避險需求，導致日圓對其他貨幣的波動加劇。",
-        "affected": "USDJPY, EURJPY",
-        "sentiment": "利空",
-        "originalIndex": 3,
-        "url": "https://news.google.com/rss/articles/CBMihgNBVV95cUxNczVFWG81RVVuRW1jVllLdkNVb2gtUTdXQ1VEeWZaaVZFaEE3ajFpaGktRFVTZWdlWTlxMDk2WjdyZFRVYUUxM093YXBqTHFySFlKWUFRVWNnNDhXYk1qZ0xBNzNpWThPUXZTUkFuMzNXWjhUR1BhcWtKWXd2Qk01dmRjSS1Ca09aTkxrWm93a20wRUFKcFZ3UVdFM3FJMUJxUWlwOEkyTjh1eWRSTHM2c1IwSS1SY0tOdHEzcXFVQXhHNEpvWFM1TXliam84QlRiaTVxa0ZYWjNOZUFQY2FidGpiRGtFd1R6X1J3M2dQZFVPZk1ZOW1hWTZpcjgwLXE0ekV6alV4R0ZsXzhCakZpS2drTEdzT0RPZDNHOF9QUWVqS2IyVy1seVlYODZkQXN3cnktWC1wbThrem1USWZQemU0Tnd3Y2tuSHZhajNjaU9mYzNKUzFzZ1lqS3Y4d01XVkYxZHNYNFgwSTJmOW8tR0tDTE5oaDZ3NUlfZmJJYWRjbktmVmc?oc=5",
-        "pubDate": "Mon, 23 Mar 2026 03:05:14 GMT"
-      },
-      {
-        "title": "2月外匯存底6054億美元續創新高 央行看股匯「最大震盪已過」",
-        "summary": "中國的外匯存底創新高，央行認為市場的最大震盪已經過去。",
-        "impact": "外匯存底的增加可能會增強市場對人民幣的信心，穩定人民幣匯率，並可能吸引更多外資流入。",
-        "affected": "USDCNY",
-        "sentiment": "利多",
-        "originalIndex": 4,
-        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE00UXhsb0xCcmJ6Ni1iUGJRdHpGenJrQy1ySFkwZ2d0a3NXLTl0Q3Y1dHdtMzVaNGZyOFB6UGpCOGwyZ05raXN5cktjQ3VVTlE?oc=5",
-        "pubDate": "Thu, 05 Mar 2026 08:00:00 GMT"
-      },
-      {
-        "title": "金融危機以來最慘！韓元崩跌引爆「三重危機」 升息、不升息都錯成死局",
-        "summary": "韓元面臨崩跌，造成多重經濟危機，升息與否都無法解決問題。",
-        "impact": "韓元的貶值將影響到韓國的貿易和投資環境，可能引發資本外流，進一步加劇韓元的貶值壓力。",
-        "affected": "USDKRW",
-        "sentiment": "利空",
-        "originalIndex": 7,
-        "url": "https://news.google.com/rss/articles/CBMiqANBVV95cUxOVGR3UWROV3NtbGFfWHNveTRxNnVwa3pEOTZFMF9MZ2NPcUxOYTNsUGtiV2Z6NDVmY0R4dlJHYUZCXzJqRURJVVBma3g0VDMtUmpwVmVSU2pMaTlXb3VMMkVtRk9nVWxVVmFnMncyVml1cjF4eHhXMTVQbl81d1pGLXVxMkZTMTZNeG96ZTBNa0lZWUVhYTN2Z3FLb19WaVA4OXotYUQ1eEN1ZmFyc0VEVmV0MFBtcVhaVkpoWEp1VzdDbzlRS1BrVVc2OG1FRmRzR1d6Skg1VEdLblJVcV9fWU02TzVqWUtDa1c5X3EwZ2pxVG5vQVNwRFRPcHppTWRHQWszeXpiT0FzVzcwMHhhUzA3NGVxeHFDQVYybU9wQS1KdXlpWHV1a0Y5VVNTM1lEQTZZN2pwM2ZuZWtsMUhhcEdkemtVYjhCM1d2UzdMRWVLR29KenBaUFFaaTlvZlJFemwxdFdXcGdrM3kyNkhLdUo2VjhMaGZnRFVTRFc3cTl1b2VyRnFoSzctVTlVUm55TlA0Nm9ib3ZuSGlyYUJHZTZNbEJjU3Ju?oc=5",
-        "pubDate": "Mon, 23 Mar 2026 07:19:06 GMT"
-      }
-    ],
-    "lastUpdate": "2026/3/29 下午12:00:00"
-  },
-  "socialNews": {
-    "items": [
-      {
-        "title": "我花了 3.5 年從零開始建立外匯算法，這裡是統計數據，請給我評論。",
-        "summary": "用 Python 開發了一個外匯交易算法，進行了超過 500 次交易，勝率達到 65%。使用了多種技術指標，包括 RSI 和 MACD，並進行了回測以優化參數。最大回撤為 10%，在實盤中遇到流動性問題，通過調整交易時間段來解決。",
-        "impact": "我們的系統可以參考其使用的技術指標和回測方法，進行相似的策略開發和優化。",
-        "affected": "Python、外匯算法、RSI、MACD、回測",
-        "sentiment": "利多",
-        "originalIndex": 6,
-        "source": "Reddit",
-        "url": "https://reddit.com/r/algotrading/comments/1s5tihu/i_spent_35_years_building_a_forex_algo_from/",
-        "pubDate": "Sat, 28 Mar 2026 07:05:18 GMT"
-      },
-      {
-        "title": "在我的交易儀表板中建立了一個 TACO 追蹤器，因為當總統實時發文關於轟炸伊朗時，技術分析毫無用處。",
-        "summary": "使用 JavaScript 開發了一個交易儀表板，整合了即時新聞和市場數據，並根據新聞事件調整交易策略。這個系統能夠在重大新聞發布時自動暫停交易，避免損失。",
-        "impact": "我們的系統可以整合即時新聞來源，以便在重要事件發生時自動調整或暫停交易。",
-        "affected": "JavaScript、交易儀表板、即時新聞���風險管理",
-        "sentiment": "中性",
-        "originalIndex": 8,
-        "source": "Reddit",
-        "url": "https://reddit.com/r/algotrading/comments/1s63tsh/built_a_taco_tracker_inside_my_trading_dashboard/",
-        "pubDate": "Sat, 28 Mar 2026 15:46:24 GMT"
-      },
-      {
-        "title": "建立一個 MT5 XAUUSD 系統：361 筆交易，PF 4.24，以及過程中失敗的實驗。",
-        "summary": "在 MT5 上開發了一個黃金交易系統，進行了 361 筆交易，獲得了 4.24 的盈虧比。使用了多種技術指標進行策略優化，並在回測中發現某些參數設定導致了不必要的損失，最終調整後成功提高了勝率。",
-        "impact": "我們的系統可以參考其盈虧比和回測過程，進行相似的策略開發和優化。",
-        "affected": "MT5、XAUUSD、盈虧比、回測、策略優化",
-        "sentiment": "利多",
-        "originalIndex": 21,
-        "source": "Reddit",
-        "url": "https://reddit.com/r/algotrading/comments/1s5lmfh/building_an_mt5_xauusd_system_361_trades_pf_424/",
-        "pubDate": "Sat, 28 Mar 2026 00:26:32 GMT"
-      },
-      {
-        "title": "這週感覺...奇怪。好奇是否有人注意到同樣的情況。",
-        "summary": "觀察市場情緒變化，並使用 Python 分析社交媒體數據來預測市場走勢。根據情緒指標調整交易策略，這週的交易結果顯示情緒指標能有效預測短期波動。",
-        "impact": "我們的系統可以整合社交媒體情緒分析，作為輔助指標來調整交易策略。",
-        "affected": "Python、社交媒體分析、情緒指標、短期交易",
-        "sentiment": "中性",
-        "originalIndex": 18,
-        "source": "Reddit",
-        "url": "https://reddit.com/r/Trading/comments/1s6gz09/this_week_felt_weird_curious_if_anyone_else/",
-        "pubDate": "Sun, 29 Mar 2026 00:39:48 GMT"
-      },
-      {
-        "title": "對於算法交易者，誰擁有非常高的勝率/高正期望值。",
-        "summary": "分享了一個基於 Python 的算法交易系統，勝率達到 70%。使用了多種技術指標，並針對不同市場條件進行了優化。系統能夠自動調整策略參數以適應市場變化，並在回測中表現良好。",
-        "impact": "我們的系統可以參考其高勝率的策略設計，並考慮自動調整參數以適應市場變化。",
-        "affected": "Python、算法交易、高勝率、策略優化、回測",
-        "sentiment": "利多",
-        "originalIndex": 23,
-        "source": "Reddit",
-        "url": "https://reddit.com/r/Trading/comments/1s6e6ck/for_algo_traders_who_have_a_very_high_winrate/",
-        "pubDate": "Sat, 28 Mar 2026 22:35:49 GMT"
-      }
-    ],
-    "actionSummary": "🔧 可立刻測試：整合即時新聞數據，當重大新聞事件發生時自動暫停交易以避免損失。  \n🔧 可立刻測試：使用情緒指標分析社交媒體數據，根據市場情緒調整交易策略。  \n🔍 值得研究：開發一個基於 Python 的自動調整策略參數系統，以適應不同市場條件。  \n⚠️ 避坑：注意流動性問題，避免在低流動性時段進行交易，以減少潛在損失。",
-    "lastUpdate": "2026/3/29 下午12:00:00"
-  },
-  "review": {
-    "summary": "本週總盈虧約 -$96。GOLD(+$5.26) 和 US500(+$16.56) 證明趨勢對齊策略有效，但 US30(-$102) 和 BTC(-$15) 因倉位過大和過度交易造成嚴重虧損。核心問題：position sizing + 缺少冷卻機制。",
-    "bestStrategy": {
-      "name": "趨勢對齊（GOLD+US500）",
-      "pnl": 32.96,
-      "wins": 3,
-      "losses": 0
-    },
-    "worstStrategy": {
-      "name": "趨勢對齊（US30）",
-      "pnl": -102.37,
-      "wins": 1,
-      "losses": 3
-    },
-    "lessons": [
-      "Position Sizing 是生死線 — US30 用 0.42 手單筆虧 $55，同策略 US500 用 0.15 手就賺錢",
-      "BTC 6 小時內開 17 筆，大部分被洗出場 → 需要冷卻機制",
-      "逆勢 RSI 極端策略在強趨勢中 3 筆全虧 → 已在 TRENDING 市況禁用",
-      "最好的交易集中在倫敦/紐約重疊時段 13:00-17:00 UTC",
-      "US30 和 BTCUSD 已加入禁止交易清單"
-    ],
-    "optimization": [
-      "🔧 Confidence 門檻 0.75 → 0.80",
-      "🔧 固定最小手數，移除動態加碼",
-      "🔧 同商品冷卻期 1 小時",
-      "🔧 每日最大交易次數限制 10 筆",
-      "🔧 高波動率環境自動提高門檻",
-      "🔧 引入 trailing stop（盈利 > 1.5x SL 時移動止損到成本）",
-      "📅 下週重點：週三 ADP+ISM、週五 Good Friday 休市 + NFP",
-      "🚫 週五不交易（Good Friday + NFP + 零流動性）"
-    ]
-  },
-  "weekendStudy": {
-    "date": "2026-03-29",
-    "weekPnl": -95.95,
-    "bestInstrument": "US500 (+$16.56)",
-    "worstInstrument": "US30 (-$102.37)",
-    "nextWeekPlan": "保守操作，驗證優化參數，週五前清倉",
-    "keyEvents": [
-      "週三 ADP+ISM",
-      "週五 NFP + Good Friday"
-    ]
-  }
+  "actions": []
 }
