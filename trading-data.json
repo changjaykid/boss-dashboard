@@ -1,33 +1,33 @@
 {
-  "lastUpdate": "2026-03-31 01:10:26",
+  "lastUpdate": "2026-03-31 01:20:21",
   "currentPrice": {
     "GOLD": {
-      "bid": 4534.8,
-      "ask": 4535.3
+      "bid": 4524.35,
+      "ask": 4524.85
     },
     "EURUSDM2026": {
-      "bid": 1.15016,
-      "ask": 1.15022
+      "bid": 1.14974,
+      "ask": 1.14983
     },
     "GBPUSD": {
-      "bid": 1.3192,
-      "ask": 1.31934
+      "bid": 1.31874,
+      "ask": 1.31888
     },
     "USDJPYM2026": {
-      "bid": 158.486,
-      "ask": 158.506
+      "bid": 158.563,
+      "ask": 158.583
     },
     "US30": {
-      "bid": 45422.9,
-      "ask": 45424.9
+      "bid": 45330.1,
+      "ask": 45332.1
     },
     "US500": {
-      "bid": 6377.8,
-      "ask": 6378.2
+      "bid": 6365.8,
+      "ask": 6366.2
     },
     "US100": {
-      "bid": 23094.7,
-      "ask": 23096.5
+      "bid": 23053.6,
+      "ask": 23055.4
     }
   },
   "indicators": {
@@ -60,7 +60,7 @@
       "regime": "TRENDING_DOWN",
       "pa": "",
       "pattern": "Double Top",
-      "mtf_dir": "SELL",
+      "mtf_dir": "NONE",
       "ew_pos": "Unknown"
     },
     "US30": {
@@ -68,7 +68,7 @@
       "regime": "TRENDING_UP",
       "pa": "",
       "pattern": "Double Top",
-      "mtf_dir": "NONE",
+      "mtf_dir": "SELL",
       "ew_pos": "Unknown"
     },
     "US500": {
@@ -89,10 +89,10 @@
     }
   },
   "account": {
-    "balance": 30796.01,
+    "balance": 30801.62,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 889.33,
-    "totalTrades": 66,
+    "unrealizedPnl": 1525.0,
+    "totalTrades": 67,
     "closedTrades": 53,
     "wins": 14,
     "losses": 39,
@@ -100,28 +100,15 @@
   },
   "openPositions": [
     {
-      "dealId": "00000000-4c89-0202-0460-7d740055311e",
-      "direction": "BUY",
-      "size": 0.01,
-      "entryPrice": 4549.43,
-      "stopLevel": 4528.23,
-      "profitLevel": 4594.43,
-      "currentBid": 4534.76,
-      "currentAsk": 4535.26,
-      "pnl": -14.67,
-      "instrument": "Gold",
-      "epic": "GOLD"
-    },
-    {
       "dealId": "00000000-4c88-f7e0-0460-7d740055311e",
       "direction": "SELL",
       "size": 0.1,
       "entryPrice": 6395.5,
       "stopLevel": 6415.3,
       "profitLevel": 6355.8,
-      "currentBid": 6378.7,
-      "currentAsk": 6379.1,
-      "pnl": 164.0,
+      "currentBid": 6364.4,
+      "currentAsk": 6364.8,
+      "pnl": 307.0,
       "instrument": "US 500",
       "epic": "US500"
     },
@@ -132,9 +119,9 @@
       "entryPrice": 23172.7,
       "stopLevel": 23254.3,
       "profitLevel": 23009.5,
-      "currentBid": 23096.9,
-      "currentAsk": 23098.7,
-      "pnl": 740.0,
+      "currentBid": 23049.1,
+      "currentAsk": 23050.9,
+      "pnl": 1218.0,
       "instrument": "US Tech 100",
       "epic": "US100"
     }
@@ -933,5 +920,7 @@
     "US500",
     "US100"
   ],
-  "actions": []
+  "actions": [
+    "OPENED SELL US30 Conf:0.80"
+  ]
 }
