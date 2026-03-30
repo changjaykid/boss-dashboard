@@ -149,22 +149,47 @@
                 <!-- 更新時間 -->
                 <div class="flex items-center space-x-2 text-xs">
                     <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-green-500"></span></span>
-                    <span class="text-gray-400">更新：<span class="text-gray-200">2026/03/28 08:00</span>（基準日 03/27 盤後）</span>
+                    <span class="text-gray-400">更新：<span class="text-gray-200">2026/03/30 08:00</span>（基準日 03/27 盤後＋週末國際盤）</span>
                 </div>
+
+                <!-- ⚠️ 美股暴跌警示 -->
+                <section class="bg-red-900/20 border border-red-700/50 p-4 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-red-300 mb-3">🚨 美股週五暴跌 — 週一開低預警</h3>
+                    <div class="grid grid-cols-3 gap-2 md:gap-4 mb-3">
+                        <div class="stat-card border border-red-700/50 p-3 md:p-5 rounded-xl">
+                            <p class="text-[10px] md:text-xs text-gray-500 uppercase">道瓊工業</p>
+                            <p class="text-lg md:text-2xl font-bold text-red-400 mt-0.5">45,166</p>
+                            <p class="text-[10px] text-red-400">▼ 793（-1.73%）</p>
+                        </div>
+                        <div class="stat-card border border-red-700/50 p-3 md:p-5 rounded-xl">
+                            <p class="text-[10px] md:text-xs text-gray-500 uppercase">S&P 500</p>
+                            <p class="text-lg md:text-2xl font-bold text-red-400 mt-0.5">6,368</p>
+                            <p class="text-[10px] text-red-400">▼ 108（-1.67%）</p>
+                        </div>
+                        <div class="stat-card border border-red-700/50 p-3 md:p-5 rounded-xl">
+                            <p class="text-[10px] md:text-xs text-gray-500 uppercase">那斯達克</p>
+                            <p class="text-lg md:text-2xl font-bold text-red-400 mt-0.5">大跌</p>
+                            <p class="text-[10px] text-red-400">≈ -2% 科技重挫</p>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-gray-800 rounded-lg border border-red-700/30">
+                        <p class="text-[10px] text-red-300">🛡️ <strong>今日策略：防禦為主、佈局為輔。</strong>開低是佈局機會，不是逃命訊號。優先高殖利率防禦股，PCB 不追開盤。</p>
+                    </div>
+                </section>
 
                 <!-- 大盤概況 -->
                 <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
-                    <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">📊 大盤概況</h3>
+                    <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">📊 大盤概況（03/27 收盤）</h3>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 mb-4">
                         <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
                             <p class="text-[10px] md:text-xs text-gray-500 uppercase">加權指數</p>
                             <p class="text-lg md:text-2xl font-bold text-red-400 mt-0.5">33,112.59</p>
-                            <p class="text-[10px] text-red-400">▼ 225.03（-0.68%）</p>
+                            <p class="text-[10px] text-red-400">▼ 225.03（-0.68%）連三黑</p>
                         </div>
                         <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                            <p class="text-[10px] md:text-xs text-gray-500 uppercase">盤面特徵</p>
-                            <p class="text-lg md:text-2xl font-bold text-yellow-400 mt-0.5">連兩黑</p>
-                            <p class="text-[10px] text-gray-400">電子弱 · 傳產強</p>
+                            <p class="text-[10px] md:text-xs text-gray-500 uppercase">三大法人</p>
+                            <p class="text-lg md:text-2xl font-bold text-red-400 mt-0.5">-383億</p>
+                            <p class="text-[10px] text-red-400">外資 -363 · 投信 -2 · 自營 -18</p>
                         </div>
                         <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
                             <p class="text-[10px] md:text-xs text-gray-500 uppercase">前次命中率</p>
@@ -178,13 +203,14 @@
                         </div>
                     </div>
                     <div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
-                        <p class="text-[10px] text-gray-500 mb-1.5">🔥 強勢類股</p>
+                        <p class="text-[10px] text-gray-500 mb-1.5">🔥 強勢類股（傳產主導，美股衝擊小）</p>
                         <div class="flex flex-wrap gap-1.5">
                             <span class="px-2 py-0.5 text-[10px] rounded-full bg-green-900/50 text-green-300 border border-green-700/50">玻璃陶瓷 +2.81% 🚀</span>
                             <span class="px-2 py-0.5 text-[10px] rounded-full bg-green-900/50 text-green-300 border border-green-700/50">造紙 +2.07% 🚀</span>
                             <span class="px-2 py-0.5 text-[10px] rounded-full bg-green-900/50 text-green-300 border border-green-700/50">化學 +1.15%</span>
-                            <span class="px-2 py-0.5 text-[10px] rounded-full bg-green-900/50 text-green-300 border border-green-700/50">油電燃氣 +1.04%</span>
                             <span class="px-2 py-0.5 text-[10px] rounded-full bg-green-900/50 text-green-300 border border-green-700/50">水泥窯製 +0.91%</span>
+                            <span class="px-2 py-0.5 text-[10px] rounded-full bg-green-900/50 text-green-300 border border-green-700/50">食品 +0.55%</span>
+                            <span class="px-2 py-0.5 text-[10px] rounded-full bg-green-900/50 text-green-300 border border-green-700/50">電子零組件 +0.53%</span>
                         </div>
                     </div>
                 </section>
@@ -193,11 +219,41 @@
                 <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
                     <div class="flex items-center justify-between mb-4">
                         <h3 class="text-sm md:text-xl font-medium text-green-300">📈 今日 10 檔潛力股</h3>
-                        <span class="px-2 py-0.5 text-[10px] rounded-full bg-yellow-900/50 text-yellow-300 border border-yellow-700/50">💰 ≤50元: 6檔</span>
+                        <span class="px-2 py-0.5 text-[10px] rounded-full bg-yellow-900/50 text-yellow-300 border border-yellow-700/50">💰 ≤50元: 6檔 ｜ 🛡️防禦型</span>
                     </div>
                     <div class="grid grid-cols-1 xs:grid-cols-2 gap-2 md:gap-3">
 
-                        <!-- 1. 正隆 -->
+                        <!-- 1. 亞泥 🆕 -->
+                        <div class="p-3 bg-gray-800 rounded-lg border border-blue-700/30">
+                            <div class="flex items-center justify-between mb-1.5">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="text-xs font-bold text-white">亞泥</span>
+                                    <span class="text-[10px] text-gray-400">1102</span>
+                                    <span class="px-1 py-0.5 text-[9px] rounded bg-yellow-900/50 text-yellow-300">💰 &lt;50</span>
+                                    <span class="px-1 py-0.5 text-[9px] rounded bg-blue-900/50 text-blue-300">🆕</span>
+                                </div>
+                                <span class="text-sm font-bold text-gray-200">~34.00</span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 mb-1">水泥 ｜ 殖利率 6.47% · P/B 0.69</p>
+                            <p class="text-[10px] text-gray-300">🛡️高息避風港＋低估值＋水泥類逆勢+0.91%</p>
+                        </div>
+
+                        <!-- 2. 泰山 🆕 -->
+                        <div class="p-3 bg-gray-800 rounded-lg border border-blue-700/30">
+                            <div class="flex items-center justify-between mb-1.5">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="text-xs font-bold text-white">泰山</span>
+                                    <span class="text-[10px] text-gray-400">1218</span>
+                                    <span class="px-1 py-0.5 text-[9px] rounded bg-yellow-900/50 text-yellow-300">💰 &lt;50</span>
+                                    <span class="px-1 py-0.5 text-[9px] rounded bg-blue-900/50 text-blue-300">🆕</span>
+                                </div>
+                                <span class="text-sm font-bold text-gray-200">~18.45</span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 mb-1">食品 ｜ 殖利率 7.32% · P/B 0.71</p>
+                            <p class="text-[10px] text-gray-300">🛡️全市場最高息之一＋食品防禦＋低價親民</p>
+                        </div>
+
+                        <!-- 3. 正隆 -->
                         <div class="p-3 bg-gray-800 rounded-lg border border-green-700/30">
                             <div class="flex items-center justify-between mb-1.5">
                                 <div class="flex items-center gap-1.5">
@@ -207,11 +263,11 @@
                                 </div>
                                 <span class="text-sm font-bold text-green-400">20.15</span>
                             </div>
-                            <p class="text-[10px] text-gray-500 mb-1">造紙 ｜ 類股連兩日暴漲</p>
-                            <p class="text-[10px] text-gray-300">造紙龍頭＋大漲後穩住不回落＋量能12倍放大</p>
+                            <p class="text-[10px] text-gray-500 mb-1">造紙 ｜ 類股連兩日暴漲 +6.8%</p>
+                            <p class="text-[10px] text-gray-300">造紙龍頭＋大漲後穩守＋傳產不受美股連動</p>
                         </div>
 
-                        <!-- 2. 中鋼 -->
+                        <!-- 4. 中鋼 -->
                         <div class="p-3 bg-gray-800 rounded-lg border border-green-700/30">
                             <div class="flex items-center justify-between mb-1.5">
                                 <div class="flex items-center gap-1.5">
@@ -221,36 +277,8 @@
                                 </div>
                                 <span class="text-sm font-bold text-red-400">19.60</span>
                             </div>
-                            <p class="text-[10px] text-gray-500 mb-1">鋼鐵 ｜ -0.76%</p>
-                            <p class="text-[10px] text-gray-300">殖利率題材＋賣壓減輕＋傳產輪動補漲空間</p>
-                        </div>
-
-                        <!-- 3. 群創 -->
-                        <div class="p-3 bg-gray-800 rounded-lg border border-green-700/30">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <div class="flex items-center gap-1.5">
-                                    <span class="text-xs font-bold text-white">群創</span>
-                                    <span class="text-[10px] text-gray-400">3481</span>
-                                    <span class="px-1 py-0.5 text-[9px] rounded bg-yellow-900/50 text-yellow-300">💰 &lt;50</span>
-                                </div>
-                                <span class="text-sm font-bold text-red-400">24.80</span>
-                            </div>
-                            <p class="text-[10px] text-gray-500 mb-1">面板 ｜ 全市場量第4</p>
-                            <p class="text-[10px] text-gray-300">1.74億股＋24-25元底部支撐＋Q2旺季</p>
-                        </div>
-
-                        <!-- 4. 友達 -->
-                        <div class="p-3 bg-gray-800 rounded-lg border border-green-700/30">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <div class="flex items-center gap-1.5">
-                                    <span class="text-xs font-bold text-white">友達</span>
-                                    <span class="text-[10px] text-gray-400">2409</span>
-                                    <span class="px-1 py-0.5 text-[9px] rounded bg-yellow-900/50 text-yellow-300">💰 &lt;50</span>
-                                </div>
-                                <span class="text-sm font-bold text-red-400">14.40</span>
-                            </div>
-                            <p class="text-[10px] text-gray-500 mb-1">面板 ｜ -2.70%</p>
-                            <p class="text-[10px] text-gray-300">極低價位＋車用面板＋Micro LED新技術</p>
+                            <p class="text-[10px] text-gray-500 mb-1">鋼鐵 ｜ 賣壓枯竭中</p>
+                            <p class="text-[10px] text-gray-300">🛡️殖利率防禦＋量縮至2,581萬＋19.50強支撐</p>
                         </div>
 
                         <!-- 5. 台聚 -->
@@ -263,8 +291,8 @@
                                 </div>
                                 <span class="text-sm font-bold text-green-400">16.20</span>
                             </div>
-                            <p class="text-[10px] text-gray-500 mb-1">化學 ｜ 類股 +1.15%</p>
-                            <p class="text-[10px] text-gray-300">化學類強勢＋8,656萬股爆量＋EVA綠能材料</p>
+                            <p class="text-[10px] text-gray-500 mb-1">化學 ｜ 量能排名全市場#16</p>
+                            <p class="text-[10px] text-gray-300">化學類+1.15%＋8,656萬股爆量＋EVA綠能材料</p>
                         </div>
 
                         <!-- 6. 正文 -->
@@ -277,52 +305,25 @@
                                 </div>
                                 <span class="text-sm font-bold text-green-400">37.10</span>
                             </div>
-                            <p class="text-[10px] text-gray-500 mb-1">通信網路 ｜ +1.37%</p>
-                            <p class="text-[10px] text-gray-300">1.16億股爆量逆勢收紅＋Wi-Fi 7＋AI網通</p>
+                            <p class="text-[10px] text-gray-500 mb-1">通信網路 ｜ 逆勢收紅 +1.37%</p>
+                            <p class="text-[10px] text-gray-300">1.16億股爆量＋Wi-Fi 7＋35元若守住為買點</p>
                         </div>
 
-                        <!-- 7. 華通 -->
+                        <!-- 7. 敬鵬 🆕 -->
                         <div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30">
                             <div class="flex items-center justify-between mb-1.5">
                                 <div class="flex items-center gap-1.5">
-                                    <span class="text-xs font-bold text-white">華通</span>
-                                    <span class="text-[10px] text-gray-400">2313</span>
-                                    <span class="px-1 py-0.5 text-[9px] rounded bg-red-900/50 text-red-300">🔥 漲停</span>
+                                    <span class="text-xs font-bold text-white">敬鵬</span>
+                                    <span class="text-[10px] text-gray-400">2355</span>
+                                    <span class="px-1 py-0.5 text-[9px] rounded bg-blue-900/50 text-blue-300">🆕</span>
                                 </div>
-                                <span class="text-sm font-bold text-green-400">270.00</span>
+                                <span class="text-sm font-bold text-green-400">50.50</span>
                             </div>
-                            <p class="text-[10px] text-gray-500 mb-1">PCB ｜ +9.98% 🚀🚀</p>
-                            <p class="text-[10px] text-gray-300">AI PCB龍頭連日漲停＋1.56億股＋⚠️等拉回</p>
+                            <p class="text-[10px] text-gray-500 mb-1">PCB ｜ +2.22% 量能#15</p>
+                            <p class="text-[10px] text-gray-300">PCB新兵＋汽車板長期賽道＋價位遠低於華通</p>
                         </div>
 
-                        <!-- 8. 燿華 -->
-                        <div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <div class="flex items-center gap-1.5">
-                                    <span class="text-xs font-bold text-white">燿華</span>
-                                    <span class="text-[10px] text-gray-400">2367</span>
-                                </div>
-                                <span class="text-sm font-bold text-green-400">78.20</span>
-                            </div>
-                            <p class="text-[10px] text-gray-500 mb-1">PCB ｜ +3.85%</p>
-                            <p class="text-[10px] text-gray-300">全市場最大量3.41億股＋AI PCB＋振幅11%注意</p>
-                        </div>
-
-                        <!-- 9. 定穎投控 -->
-                        <div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <div class="flex items-center gap-1.5">
-                                    <span class="text-xs font-bold text-white">定穎投控</span>
-                                    <span class="text-[10px] text-gray-400">3715</span>
-                                    <span class="px-1 py-0.5 text-[9px] rounded bg-red-900/50 text-red-300">🔥 漲停</span>
-                                </div>
-                                <span class="text-sm font-bold text-green-400">203.50</span>
-                            </div>
-                            <p class="text-[10px] text-gray-500 mb-1">PCB ｜ +10.00% 🚀🚀</p>
-                            <p class="text-[10px] text-gray-300">車用＋AI板雙引擎＋連兩日飆漲20%＋⚠️過熱</p>
-                        </div>
-
-                        <!-- 10. 台玻 -->
+                        <!-- 8. 台玻 -->
                         <div class="p-3 bg-gray-800 rounded-lg border border-green-700/30">
                             <div class="flex items-center justify-between mb-1.5">
                                 <div class="flex items-center gap-1.5">
@@ -331,8 +332,36 @@
                                 </div>
                                 <span class="text-sm font-bold text-green-400">54.90</span>
                             </div>
-                            <p class="text-[10px] text-gray-500 mb-1">玻璃 ｜ +3.00%</p>
-                            <p class="text-[10px] text-gray-300">玻璃陶瓷連兩日最強＋太陽能玻璃＋5,691萬股</p>
+                            <p class="text-[10px] text-gray-500 mb-1">玻璃 ｜ +3.00% 類股最強</p>
+                            <p class="text-[10px] text-gray-300">玻璃陶瓷連兩日暴漲＋太陽能玻璃＋5,691萬股</p>
+                        </div>
+
+                        <!-- 9. 燿華 ⚠️等拉回 -->
+                        <div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30">
+                            <div class="flex items-center justify-between mb-1.5">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="text-xs font-bold text-white">燿華</span>
+                                    <span class="text-[10px] text-gray-400">2367</span>
+                                    <span class="px-1 py-0.5 text-[9px] rounded bg-yellow-900/50 text-yellow-300">⚠️ 等拉回</span>
+                                </div>
+                                <span class="text-sm font-bold text-green-400">78.20</span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 mb-1">PCB ｜ 全市場量王 3.41億股</p>
+                            <p class="text-[10px] text-gray-300">法人淨買892萬股＋AI PCB＋⚠️美股暴跌恐跳空</p>
+                        </div>
+
+                        <!-- 10. 華通 ⚠️純觀察 -->
+                        <div class="p-3 bg-gray-800 rounded-lg border border-red-700/30">
+                            <div class="flex items-center justify-between mb-1.5">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="text-xs font-bold text-white">華通</span>
+                                    <span class="text-[10px] text-gray-400">2313</span>
+                                    <span class="px-1 py-0.5 text-[9px] rounded bg-red-900/50 text-red-300">⚠️⚠️ 純觀察</span>
+                                </div>
+                                <span class="text-sm font-bold text-green-400">270.00</span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 mb-1">PCB ｜ 連日漲停＋法人淨買1,221萬股</p>
+                            <p class="text-[10px] text-gray-300">AI PCB龍頭＋⚠️不建議追買，等240-250區間</p>
                         </div>
 
                     </div>
@@ -340,79 +369,99 @@
 
                 <!-- 復盤 -->
                 <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
-                    <h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">🔄 前次推薦復盤（03/26→03/27）</h3>
+                    <h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">🔄 前次推薦預估影響（03/28推薦 → 美股暴跌衝擊）</h3>
+                    <p class="text-[10px] text-gray-400 mb-3">📌 週末無交易，以下為基於美股暴跌的預估衝擊評估</p>
                     <div class="grid grid-cols-1 xs:grid-cols-2 gap-2 md:gap-3 mb-3">
                         <div class="p-2.5 bg-gray-800 rounded-lg border border-green-700/30">
                             <div class="flex items-center justify-between">
-                                <span class="text-[10px] text-white">華通 2313</span>
-                                <span class="text-[10px] font-bold text-green-400">+9.98% 🚀</span>
+                                <span class="text-[10px] text-white">正隆 1904</span>
+                                <span class="text-[10px] font-bold text-green-400">⚡ 影響小</span>
                             </div>
-                            <p class="text-[9px] text-gray-500">245.50→270.00 漲停</p>
+                            <p class="text-[9px] text-gray-500">造紙非美股連動，防禦力強</p>
                         </div>
                         <div class="p-2.5 bg-gray-800 rounded-lg border border-green-700/30">
                             <div class="flex items-center justify-between">
-                                <span class="text-[10px] text-white">定穎 3715</span>
-                                <span class="text-[10px] font-bold text-green-400">+10.00% 🚀</span>
+                                <span class="text-[10px] text-white">中鋼 2002</span>
+                                <span class="text-[10px] font-bold text-green-400">⚡ 影響小</span>
                             </div>
-                            <p class="text-[9px] text-gray-500">185.00→203.50 漲停</p>
+                            <p class="text-[9px] text-gray-500">殖利率防禦股，跌幅有限</p>
                         </div>
                         <div class="p-2.5 bg-gray-800 rounded-lg border border-green-700/30">
                             <div class="flex items-center justify-between">
-                                <span class="text-[10px] text-white">瑞軒 2489</span>
-                                <span class="text-[10px] font-bold text-green-400">+9.87%</span>
+                                <span class="text-[10px] text-white">台聚 1304</span>
+                                <span class="text-[10px] font-bold text-green-400">⚡ 影響小</span>
                             </div>
-                            <p class="text-[9px] text-gray-500">31.90→35.05 大漲</p>
-                        </div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-green-700/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-[10px] text-white">燿華 2367</span>
-                                <span class="text-[10px] font-bold text-green-400">+3.85%</span>
-                            </div>
-                            <p class="text-[9px] text-gray-500">75.30→78.20</p>
+                            <p class="text-[9px] text-gray-500">化學類非電子連動</p>
                         </div>
                         <div class="p-2.5 bg-gray-800 rounded-lg border border-green-700/30">
                             <div class="flex items-center justify-between">
                                 <span class="text-[10px] text-white">台玻 1802</span>
-                                <span class="text-[10px] font-bold text-green-400">+3.00%</span>
+                                <span class="text-[10px] font-bold text-green-400">⚡ 影響小</span>
                             </div>
-                            <p class="text-[9px] text-gray-500">53.30→54.90</p>
-                        </div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-[10px] text-white">正隆 1904</span>
-                                <span class="text-[10px] text-gray-400">0.00%</span>
-                            </div>
-                            <p class="text-[9px] text-gray-500">20.15→20.15 持平</p>
+                            <p class="text-[9px] text-gray-500">傳產玻璃類，美股連動低</p>
                         </div>
                         <div class="p-2.5 bg-gray-800 rounded-lg border border-red-700/30">
                             <div class="flex items-center justify-between">
-                                <span class="text-[10px] text-white">力積電 6770</span>
-                                <span class="text-[10px] font-bold text-red-400">-5.73%</span>
+                                <span class="text-[10px] text-white">華通 2313</span>
+                                <span class="text-[10px] font-bold text-red-400">🔴 高風險</span>
                             </div>
-                            <p class="text-[9px] text-gray-500">62.80→59.20 ⚠️量大收黑</p>
+                            <p class="text-[9px] text-gray-500">連漲停＋美股暴跌 = 跳空開低</p>
                         </div>
                         <div class="p-2.5 bg-gray-800 rounded-lg border border-red-700/30">
                             <div class="flex items-center justify-between">
-                                <span class="text-[10px] text-white">元晶 6443</span>
-                                <span class="text-[10px] font-bold text-red-400">-2.81%</span>
+                                <span class="text-[10px] text-white">燿華 2367</span>
+                                <span class="text-[10px] font-bold text-red-400">🔴 高風險</span>
                             </div>
-                            <p class="text-[9px] text-gray-500">46.30→45.00</p>
+                            <p class="text-[9px] text-gray-500">PCB 過熱＋外盤利空加速修正</p>
+                        </div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-red-700/30">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] text-white">定穎 3715</span>
+                                <span class="text-[10px] font-bold text-red-400">🔴 高風險</span>
+                            </div>
+                            <p class="text-[9px] text-gray-500">兩日+20%嚴重過熱</p>
+                        </div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-yellow-700/30">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] text-white">正文 4906</span>
+                                <span class="text-[10px] font-bold text-yellow-400">⚠️ 中性偏空</span>
+                            </div>
+                            <p class="text-[9px] text-gray-500">有科技屬性但非權值股</p>
                         </div>
                     </div>
                     <div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30">
                         <p class="text-[10px] text-gray-500 mb-1">🔧 本次優化落實</p>
                         <ul class="text-[10px] text-gray-300 space-y-0.5 list-disc list-inside">
-                            <li>「量大收黑」改標記為「避開」而非「觀察」</li>
-                            <li>弱勢族群（面板、太陽能）減少配置</li>
-                            <li>強勢族群延續性追蹤（PCB、造紙、玻璃陶瓷）</li>
-                            <li>待加入：技術指標（MA/RSI/KD）、三大法人買賣超</li>
+                            <li>美股暴跌 → 大幅增加高殖利率防禦股比重（新增亞泥、泰山）</li>
+                            <li>PCB 過熱股改為「等拉回」/ 「純觀察」策略</li>
+                            <li>新增三大法人買賣超數據追蹤（華通淨買1,221萬股、燿華淨買892萬股）</li>
+                            <li>新增敬鵬作為低價 PCB 替代標的（50元 vs 華通270元）</li>
                         </ul>
+                    </div>
+                </section>
+
+                <!-- 操作建議 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-cyan-300 mb-3">🎯 週一操作建議</h3>
+                    <div class="space-y-2">
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-cyan-700/30">
+                            <p class="text-[10px] text-cyan-300 font-bold">1️⃣ 防禦型（亞泥、泰山、中鋼、正隆）優先</p>
+                            <p class="text-[10px] text-gray-400">殖利率保護＋傳產不受美股連動，開低即是佈局點</p>
+                        </div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-cyan-700/30">
+                            <p class="text-[10px] text-cyan-300 font-bold">2️⃣ PCB（燿華、華通）不追開盤</p>
+                            <p class="text-[10px] text-gray-400">等盤中量縮企穩；燿華看74元、華通看240-250</p>
+                        </div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-cyan-700/30">
+                            <p class="text-[10px] text-cyan-300 font-bold">3️⃣ 關注 10:00 後走勢</p>
+                            <p class="text-[10px] text-gray-400">開低走高 → 買盤承接力強，可加碼；持續破底 → 觀望</p>
+                        </div>
                     </div>
                 </section>
 
                 <!-- 免責 -->
                 <div class="text-[9px] text-gray-600 text-center py-2">
-                    ⚠️ AI 分析參考，非投資建議。所有數據基於 TWSE 盤後公開資訊。投資有風險，請自行判斷。
+                    ⚠️ AI 分析參考，非投資建議。所有數據基於 TWSE 盤後公開資訊及國際盤資訊。投資有風險，請自行判斷。
                 </div>
 
             </div>
