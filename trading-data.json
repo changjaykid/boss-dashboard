@@ -1,33 +1,33 @@
 {
-  "lastUpdate": "2026-03-30 21:00:22",
+  "lastUpdate": "2026-03-30 21:10:22",
   "currentPrice": {
     "GOLD": {
-      "bid": 4571.83,
-      "ask": 4572.33
+      "bid": 4568.1,
+      "ask": 4568.6
     },
     "EURUSDM2026": {
-      "bid": 1.15236,
-      "ask": 1.15245
+      "bid": 1.15218,
+      "ask": 1.15227
     },
     "GBPUSD": {
-      "bid": 1.323,
-      "ask": 1.32314
+      "bid": 1.32264,
+      "ask": 1.32278
     },
     "USDJPYM2026": {
-      "bid": 158.374,
-      "ask": 158.395
+      "bid": 158.395,
+      "ask": 158.416
     },
     "US30": {
-      "bid": 45542.1,
-      "ask": 45544.1
+      "bid": 45494.3,
+      "ask": 45496.3
     },
     "US500": {
-      "bid": 6423.3,
-      "ask": 6423.9
+      "bid": 6416.3,
+      "ask": 6416.9
     },
     "US100": {
-      "bid": 23330.0,
-      "ask": 23331.8
+      "bid": 23308.0,
+      "ask": 23309.8
     }
   },
   "indicators": {
@@ -35,7 +35,7 @@
       "name": "XAUUSD",
       "regime": "TRENDING_UP",
       "pa": "",
-      "pattern": "None",
+      "pattern": "Double Top",
       "mtf_dir": "BUY",
       "ew_pos": "Unknown"
     },
@@ -65,7 +65,7 @@
     },
     "US30": {
       "name": "US30",
-      "regime": "TRENDING_DOWN",
+      "regime": "RANGING",
       "pa": "",
       "pattern": "Double Top",
       "mtf_dir": "NONE",
@@ -73,7 +73,7 @@
     },
     "US500": {
       "name": "S&P 500",
-      "regime": "TRENDING_DOWN",
+      "regime": "RANGING",
       "pa": "",
       "pattern": "Double Top",
       "mtf_dir": "NONE",
@@ -81,7 +81,7 @@
     },
     "US100": {
       "name": "NAS100",
-      "regime": "TRENDING_DOWN",
+      "regime": "RANGING",
       "pa": "",
       "pattern": "Double Top",
       "mtf_dir": "NONE",
@@ -89,9 +89,9 @@
     }
   },
   "account": {
-    "balance": 30820.42,
+    "balance": 30820.39,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 13.31,
+    "unrealizedPnl": 9.83,
     "totalTrades": 59,
     "closedTrades": 53,
     "wins": 14,
@@ -106,9 +106,9 @@
       "entryPrice": 4558.25,
       "stopLevel": 4542.75,
       "profitLevel": 4586.05,
-      "currentBid": 4571.56,
-      "currentAsk": 4572.06,
-      "pnl": 13.31,
+      "currentBid": 4568.08,
+      "currentAsk": 4568.58,
+      "pnl": 9.83,
       "instrument": "Gold",
       "epic": "GOLD"
     }
