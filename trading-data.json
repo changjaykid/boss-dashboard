@@ -1,17 +1,17 @@
 {
-  "lastUpdate": "2026-03-30 19:40:23",
+  "lastUpdate": "2026-03-30 19:50:21",
   "currentPrice": {
     "GOLD": {
-      "bid": 4541.66,
-      "ask": 4542.16
+      "bid": 4570.65,
+      "ask": 4571.15
     },
     "EURUSDM2026": {
-      "bid": 1.15291,
-      "ask": 1.15297
+      "bid": 1.15282,
+      "ask": 1.15288
     },
     "GBPUSD": {
-      "bid": 1.32382,
-      "ask": 1.32396
+      "bid": 1.32363,
+      "ask": 1.32377
     }
   },
   "indicators": {
@@ -41,30 +41,16 @@
     }
   },
   "account": {
-    "balance": 30820.17,
+    "balance": 30820.43,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 10.96,
-    "totalTrades": 57,
+    "unrealizedPnl": 0,
+    "totalTrades": 58,
     "closedTrades": 53,
     "wins": 14,
     "losses": 39,
     "winRate": "26.4%"
   },
-  "openPositions": [
-    {
-      "dealId": "00000000-4c63-c247-0460-7d740055311e",
-      "direction": "BUY",
-      "size": 0.01,
-      "entryPrice": 4530.73,
-      "stopLevel": 4512.33,
-      "profitLevel": 4567.63,
-      "currentBid": 4541.69,
-      "currentAsk": 4542.19,
-      "pnl": 10.96,
-      "instrument": "Gold",
-      "epic": "GOLD"
-    }
-  ],
+  "openPositions": [],
   "closedTrades": [
     {
       "time": "2026-03-27T00:15:14.870084+00:00",
@@ -859,5 +845,7 @@
     "US500",
     "US100"
   ],
-  "actions": []
+  "actions": [
+    "OPENED BUY GOLD Conf:0.65"
+  ]
 }
