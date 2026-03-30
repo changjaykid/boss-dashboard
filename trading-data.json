@@ -1,33 +1,33 @@
 {
-  "lastUpdate": "2026-03-30 23:10:24",
+  "lastUpdate": "2026-03-30 23:20:24",
   "currentPrice": {
     "GOLD": {
-      "bid": 4534.58,
-      "ask": 4535.08
+      "bid": 4529.87,
+      "ask": 4530.37
     },
     "EURUSDM2026": {
-      "bid": 1.14924,
-      "ask": 1.14933
+      "bid": 1.149,
+      "ask": 1.14909
     },
     "GBPUSD": {
-      "bid": 1.31846,
-      "ask": 1.3186
+      "bid": 1.3182,
+      "ask": 1.31834
     },
     "USDJPYM2026": {
-      "bid": 158.636,
-      "ask": 158.649
+      "bid": 158.642,
+      "ask": 158.655
     },
     "US30": {
-      "bid": 45504.0,
-      "ask": 45506.0
+      "bid": 45506.2,
+      "ask": 45508.2
     },
     "US500": {
-      "bid": 6395.2,
-      "ask": 6395.6
+      "bid": 6387.2,
+      "ask": 6387.6
     },
     "US100": {
-      "bid": 23171.3,
-      "ask": 23173.1
+      "bid": 23122.1,
+      "ask": 23123.9
     }
   },
   "indicators": {
@@ -35,7 +35,7 @@
       "name": "XAUUSD",
       "regime": "TRENDING_UP",
       "pa": "",
-      "pattern": "Double Bottom",
+      "pattern": "Double Top",
       "mtf_dir": "NONE",
       "ew_pos": "Unknown"
     },
@@ -51,7 +51,7 @@
       "name": "GBP/USD",
       "regime": "TRENDING_DOWN",
       "pa": "",
-      "pattern": "Double Bottom",
+      "pattern": "Double Top",
       "mtf_dir": "SELL",
       "ew_pos": "Unknown"
     },
@@ -75,30 +75,57 @@
       "name": "S&P 500",
       "regime": "RANGING",
       "pa": "",
-      "pattern": "Double Bottom",
+      "pattern": "Double Top",
       "mtf_dir": "SELL",
       "ew_pos": "Unknown"
     },
     "US100": {
       "name": "NAS100",
-      "regime": "RANGING",
+      "regime": "TRENDING_DOWN",
       "pa": "",
-      "pattern": "Double Bottom",
+      "pattern": "Double Top",
       "mtf_dir": "SELL",
       "ew_pos": "Unknown"
     }
   },
   "account": {
-    "balance": 30787.16,
+    "balance": 30792.24,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 0,
+    "unrealizedPnl": 530.0,
     "totalTrades": 65,
     "closedTrades": 53,
     "wins": 14,
     "losses": 39,
     "winRate": "26.4%"
   },
-  "openPositions": [],
+  "openPositions": [
+    {
+      "dealId": "00000000-4c88-f7e0-0460-7d740055311e",
+      "direction": "SELL",
+      "size": 0.1,
+      "entryPrice": 6395.5,
+      "stopLevel": 6415.3,
+      "profitLevel": 6355.8,
+      "currentBid": 6388.0,
+      "currentAsk": 6388.4,
+      "pnl": 71.0,
+      "instrument": "US 500",
+      "epic": "US500"
+    },
+    {
+      "dealId": "00000000-4c88-f7ed-0460-7d740055311e",
+      "direction": "SELL",
+      "size": 0.1,
+      "entryPrice": 23172.7,
+      "stopLevel": 23254.3,
+      "profitLevel": 23009.5,
+      "currentBid": 23125.0,
+      "currentAsk": 23126.8,
+      "pnl": 459.0,
+      "instrument": "US Tech 100",
+      "epic": "US100"
+    }
+  ],
   "closedTrades": [
     {
       "time": "2026-03-27T00:15:14.870084+00:00",
@@ -893,8 +920,5 @@
     "US500",
     "US100"
   ],
-  "actions": [
-    "OPENED SELL US500 Conf:0.74",
-    "OPENED SELL US100 Conf:0.69"
-  ]
+  "actions": []
 }
