@@ -1,17 +1,17 @@
 {
-  "lastUpdate": "2026-03-30 19:50:21",
+  "lastUpdate": "2026-03-30 20:00:20",
   "currentPrice": {
     "GOLD": {
-      "bid": 4570.65,
-      "ask": 4571.15
+      "bid": 4559.56,
+      "ask": 4560.06
     },
     "EURUSDM2026": {
-      "bid": 1.15282,
-      "ask": 1.15288
+      "bid": 1.15233,
+      "ask": 1.15242
     },
     "GBPUSD": {
-      "bid": 1.32363,
-      "ask": 1.32377
+      "bid": 1.32306,
+      "ask": 1.3232
     }
   },
   "indicators": {
@@ -41,10 +41,10 @@
     }
   },
   "account": {
-    "balance": 30820.43,
+    "balance": 30820.29,
     "realizedPnl": -96.25,
     "unrealizedPnl": 0,
-    "totalTrades": 58,
+    "totalTrades": 59,
     "closedTrades": 53,
     "wins": 14,
     "losses": 39,
