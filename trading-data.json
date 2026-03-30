@@ -1,42 +1,22 @@
 {
-  "lastUpdate": "2026-03-30 18:50:22",
+  "lastUpdate": "2026-03-30 19:00:21",
   "currentPrice": {
     "GOLD": {
-      "bid": 4532.15,
-      "ask": 4532.65
-    },
-    "SILVER": {
-      "bid": 70.771,
-      "ask": 70.821
-    },
-    "COPPER": {
-      "bid": 5.54241,
-      "ask": 5.54513
+      "bid": 4533.4,
+      "ask": 4533.9
     },
     "EURUSDM2026": {
-      "bid": 1.15312,
-      "ask": 1.15318
+      "bid": 1.15283,
+      "ask": 1.15289
+    },
+    "GBPUSD": {
+      "bid": 1.32291,
+      "ask": 1.32305
     }
   },
   "indicators": {
     "GOLD": {
       "name": "XAUUSD",
-      "regime": "TRENDING_UP",
-      "pa": "",
-      "pattern": "Double Top",
-      "mtf_dir": "BUY",
-      "ew_pos": "Unknown"
-    },
-    "SILVER": {
-      "name": "XAGUSD",
-      "regime": "TRENDING_UP",
-      "pa": "",
-      "pattern": "Double Bottom",
-      "mtf_dir": "BUY",
-      "ew_pos": "Unknown"
-    },
-    "COPPER": {
-      "name": "\u9285",
       "regime": "TRENDING_UP",
       "pa": "",
       "pattern": "Double Top",
@@ -50,12 +30,20 @@
       "pattern": "Double Top",
       "mtf_dir": "SELL",
       "ew_pos": "Unknown"
+    },
+    "GBPUSD": {
+      "name": "GBP/USD",
+      "regime": "TRENDING_DOWN",
+      "pa": "",
+      "pattern": "None",
+      "mtf_dir": "SELL",
+      "ew_pos": "Unknown"
     }
   },
   "account": {
-    "balance": 30820.07,
+    "balance": 30820.08,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 1.1,
+    "unrealizedPnl": 2.02,
     "totalTrades": 57,
     "closedTrades": 53,
     "wins": 14,
@@ -70,9 +58,9 @@
       "entryPrice": 4530.73,
       "stopLevel": 4512.33,
       "profitLevel": 4567.63,
-      "currentBid": 4531.83,
-      "currentAsk": 4532.33,
-      "pnl": 1.1,
+      "currentBid": 4532.75,
+      "currentAsk": 4533.25,
+      "pnl": 2.02,
       "instrument": "Gold",
       "epic": "GOLD"
     }
@@ -864,13 +852,12 @@
   },
   "instruments": [
     "GOLD",
-    "SILVER",
-    "COPPER",
     "EURUSDM2026",
-    "US500",
+    "GBPUSD",
+    "USDJPYM2026",
     "US30",
-    "OIL_CRUDE",
-    "NATURALGAS"
+    "US500",
+    "US100"
   ],
   "actions": []
 }
