@@ -1,21 +1,21 @@
 {
-  "lastUpdate": "2026-03-30 15:00:25",
+  "lastUpdate": "2026-03-30 15:10:22",
   "currentPrice": {
     "GOLD": {
-      "bid": 4533.42,
-      "ask": 4533.92
+      "bid": 4533.01,
+      "ask": 4533.51
     },
     "SILVER": {
-      "bid": 70.387,
-      "ask": 70.467
+      "bid": 70.507,
+      "ask": 70.587
     },
     "COPPER": {
-      "bid": 5.52827,
-      "ask": 5.53099
+      "bid": 5.52802,
+      "ask": 5.53074
     },
     "EURUSDM2026": {
-      "bid": 1.15525,
-      "ask": 1.15534
+      "bid": 1.15471,
+      "ask": 1.15477
     }
   },
   "indicators": {
@@ -37,7 +37,7 @@
     },
     "COPPER": {
       "name": "\u9285",
-      "regime": "RANGING",
+      "regime": "TRENDING_UP",
       "pa": "",
       "pattern": "Double Bottom",
       "mtf_dir": "BUY",
@@ -48,21 +48,35 @@
       "regime": "TRENDING_DOWN",
       "pa": "",
       "pattern": "Double Top",
-      "mtf_dir": "NONE",
+      "mtf_dir": "SELL",
       "ew_pos": "Unknown"
     }
   },
   "account": {
-    "balance": 30820.06,
+    "balance": 30820.08,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 0,
+    "unrealizedPnl": 2.4,
     "totalTrades": 57,
     "closedTrades": 53,
     "wins": 14,
     "losses": 39,
     "winRate": "26.4%"
   },
-  "openPositions": [],
+  "openPositions": [
+    {
+      "dealId": "00000000-4c63-c247-0460-7d740055311e",
+      "direction": "BUY",
+      "size": 0.01,
+      "entryPrice": 4530.73,
+      "stopLevel": 4512.33,
+      "profitLevel": 4567.63,
+      "currentBid": 4533.13,
+      "currentAsk": 4533.63,
+      "pnl": 2.4,
+      "instrument": "Gold",
+      "epic": "GOLD"
+    }
+  ],
   "closedTrades": [
     {
       "time": "2026-03-27T00:15:14.870084+00:00",
@@ -858,7 +872,5 @@
     "OIL_CRUDE",
     "NATURALGAS"
   ],
-  "actions": [
-    "OPENED BUY GOLD Conf:0.65"
-  ]
+  "actions": []
 }
