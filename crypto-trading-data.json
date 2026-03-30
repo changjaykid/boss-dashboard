@@ -319,8 +319,8 @@
     "items": [
       {
         "title": "幣市 Q1 大幅修正比特幣重挫兩成 地緣政治與監管成關鍵阻力",
-        "summary": "比特幣在第一季度遭遇重大修正，跌幅達20%。",
-        "impact": "地緣政治緊張和監管不確定性使得投資者情緒低迷，可能導致進一步的賣壓，影響市場信心。這種情況可能會使比特幣價格持續承壓。",
+        "summary": "比特幣在第一季遭遇重大修正，跌幅達20%。",
+        "impact": "地緣政治緊張局勢及監管政策的不確定性對市場情緒造成壓力，可能導致投資者對比特幣的信心下降，進一步影響價格走勢。",
         "affected": "BTC",
         "sentiment": "利空",
         "originalIndex": 1,
@@ -328,9 +328,19 @@
         "pubDate": "Sun, 29 Mar 2026 09:33:58 GMT"
       },
       {
+        "title": "關鍵地緣政治與經濟事件逼近 比特幣波動料加劇",
+        "summary": "隨著地緣政治和經濟事件的臨近，比特幣的價格波動預計將加劇。",
+        "impact": "市場對未來事件的擔憂可能導致比特幣的價格出現劇烈波動，增加交易風險。",
+        "affected": "BTC",
+        "sentiment": "利空",
+        "originalIndex": 4,
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5Dal9adWlOYmNoMGRJaFI2d0JWX0trU3JBcnBLbzBrVV9JaTN2R3RVX2ZfODZxVVBjdjVhZ1ZjOEtaWW9fazVQNThLODZsRFpuRGc?oc=5",
+        "pubDate": "Sun, 29 Mar 2026 10:05:00 GMT"
+      },
+      {
         "title": "比特幣巨鯨轉移 3300 萬美元至幣安 市場憂失守 6 萬美元關卡",
-        "summary": "一位比特幣巨鯨將3300萬美元的比特幣轉移至幣安，引發市場對價格下跌的擔憂。",
-        "impact": "巨鯨的轉移行為通常會引發市場恐慌，投資者可能會擔心比特幣失守重要的支撐位，進一步加劇市場的波動性。",
+        "summary": "一位比特幣巨鯨將3300萬美元的比特幣轉移至幣安，市場對價格下跌的擔憂加劇。",
+        "impact": "巨鯨的轉移行為通常被視為市場情緒的指標，可能引發其他投資者的恐慌賣出，進一步壓低比特幣價格。",
         "affected": "BTC",
         "sentiment": "利空",
         "originalIndex": 6,
@@ -338,19 +348,9 @@
         "pubDate": "Sat, 28 Mar 2026 12:10:56 GMT"
       },
       {
-        "title": "分析：Bitfinex比特幣多頭頭寸創28箇月新高，或成反曏看跌信號",
-        "summary": "Bitfinex的比特幣多頭頭寸達到28個月以來的新高，可能暗示市場即將出現反轉。",
-        "impact": "雖然多頭頭寸增加可能顯示出市場的信心，但也可能引發短期內的價格回調，因為過度的多頭情緒可能導致市場修正。",
-        "affected": "BTC",
-        "sentiment": "中性",
-        "originalIndex": 3,
-        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBvOGd0ZUxzRHBUSTNpWkRkYVkzVXEtZnRLWUtHTV83NjUzRVhUdzRLbFVqd0NCUkZsTkY1SHZNcmt5aDU2cmVmcVQ5MlFlcnVBNDEzT0NVTEN6MEhTRHpDZy1TdUN6dw?oc=5",
-        "pubDate": "Mon, 30 Mar 2026 01:16:11 GMT"
-      },
-      {
         "title": "買房不用賣幣了！美國房貸巨頭打破傳統，比特幣可當「頭期款抵押品」",
-        "summary": "美國房貸公司開始接受比特幣作為頭期款的抵押品，顯示出加密貨幣的主流接受度提升。",
-        "impact": "這一舉措可能會吸引更多投資者進入加密貨幣市場，提升比特幣的需求，從而對價格形成支撐，利好市場情緒。",
+        "summary": "美國房貸公司允許比特幣作為頭期款的抵押品，創新金融產品的出現。",
+        "impact": "這一政策可能會吸引更多傳統投資者進入加密貨幣市場，提升比特幣的需求和價格穩定性。",
         "affected": "BTC",
         "sentiment": "利多",
         "originalIndex": 5,
@@ -358,37 +358,37 @@
         "pubDate": "Sun, 29 Mar 2026 07:38:56 GMT"
       },
       {
-        "title": "富爸爸警告：通膨、債務、戰爭讓世界進入「新蕭條」，比特幣、以太坊、黃金是唯一救贖",
-        "summary": "知名投資者警告全球經濟面臨新蕭條，並指出比特幣和以太坊可能成為投資避風港。",
-        "impact": "在經濟不確定性加劇的背景下，投資者可能會轉向比特幣和以太坊等數位資產作為保值工具，這可能會推動其價格上��。",
+        "title": "BlackRock 向 Coinbase Prime 存入1.11 億美元Bitcoin 和 Ethereum，彰顯機構信心",
+        "summary": "BlackRock向Coinbase存入超過1億美元的比特幣和以太坊，顯示機構對加密市場的信心。",
+        "impact": "機構投資者的進一步參與可能會提升市場的穩定性和信心，對比特幣和以太坊的價格形成支撐。",
         "affected": "BTC, ETH",
         "sentiment": "利多",
-        "originalIndex": 10,
-        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNVy1WSThtenluR3V4ejJpMFVQOG9YTS1iQWhKR2VXWGtzUUlBX1R0cGdHZWcwZjZkSEtLdmZyWElxMndGSGJkc1hScnZIVDA1UVdMZVV0bEFRTS11MVgzbWgyOTM5Vm4wdGVST3VHakJDMzByaUZNRER1OWVQbmh1ZUtyN0FHelVqVVRXNlByRURxN05qR1JQQg?oc=5",
-        "pubDate": "Mon, 30 Mar 2026 02:56:42 GMT"
+        "originalIndex": 11,
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE54RlZueW1SSVhMRG4yY1JZdXp2NkRxdjlZUGgxbDVONG9IQjUzQXp6TXBLZlZCaVZ1d3hXUXRBMzlwcjZPQ3c0TjRYY0VaQlU?oc=5",
+        "pubDate": "Thu, 26 Mar 2026 13:35:04 GMT"
       }
     ],
-    "lastUpdate": "2026/3/30 上午11:22:23"
+    "lastUpdate": "2026/3/30 上午11:23:04"
   },
   "socialNews": {
     "items": [
       {
         "title": "第一天創建日內交易機器人",
-        "summary": "使用 Unreal Engine 開發了一個名為 'D20' 的日內交易機器人，進行模擬交易，並分享了初步的交易結果。具體策略和指標尚未公開，但強調了實作過程中的挑戰與學習。這是個實驗性質的項目，未來可能會進行更多的優化與測試。",
-        "impact": "可以考慮使用 Unreal Engine 開發自己的交易機器人，並進行模擬交易以測試策略的有效性。",
+        "summary": "用 Unreal Engine 開發了一個日內交易機器人，命名為「D20」，目前正在進行模擬交易，並分享了初步的交易結果和策略思路。這位用戶具體描述了如何設計機器人架構及其運行邏輯。",
+        "impact": "可以考慮使用 Unreal Engine 來開發交易機器人，並模擬不同的交易策略，進行實時測試。",
         "affected": "Unreal Engine、模擬交易、日內交易",
-        "sentiment": "中性",
+        "sentiment": "利多",
         "originalIndex": 7,
         "source": "Reddit",
         "url": "https://reddit.com/r/algotrading/comments/1s5t3ig/day_one_of_creating_a_day_trading_bot_in_unreal/",
         "pubDate": "Sat, 28 Mar 2026 06:40:47 GMT"
       },
       {
-        "title": "花了3.5年從零開始建構外匯演算法",
-        "summary": "用 Python 開發了一個外匯交易演算法，詳細分享了交易統計數據，包括勝率和回報率。強調了在開發過程中遇到的問題，如數據質量和策略優化，並提供了具體的改進建議。",
-        "impact": "可以參考其在數據質量和策略優化上的經驗，提升我們的交易系統的穩定性和盈利能力。",
-        "affected": "Python、外匯交易、演算法交易、回測",
-        "sentiment": "利多",
+        "title": "花了3.5年從零開始建立外匯算法",
+        "summary": "這位用戶分享了他從頭開始建立外匯交易算法的過程，使用 Python 編寫，並提供了具體的交易統計數據，包括勝率、最大回撤和收益率，並請求社群給予反饋。",
+        "impact": "可以參考其算法設計和回測方法，並根據其統計數據進行優化。",
+        "affected": "Python、外匯算法、回測",
+        "sentiment": "中性",
         "originalIndex": 11,
         "source": "Reddit",
         "url": "https://reddit.com/r/algotrading/comments/1s5tihu/i_spent_35_years_building_a_forex_algo_from/",
@@ -396,9 +396,9 @@
       },
       {
         "title": "動態DCA與常規DCA的回測",
-        "summary": "進行了過去4年的動態定期定額(DCA)與常規DCA的回測，分析了兩者的表現差異，並提供了具體的數據支持其結論。結果顯示動態DCA在特定市場條件下表現更佳。",
-        "impact": "我們可以將動態DCA策略納入交易系統，以提高在波動市場中的投資回報。",
-        "affected": "DCA、回測、投資策略",
+        "summary": "用戶回測了過去4年動態DCA（定期定額）與常規DCA的表現，並提供了具體的回測數據和結果，分析了兩者的優缺點。",
+        "impact": "可以將動態DCA策略應用於自動交易系統中，根據市場變化調整投資額度。",
+        "affected": "DCA、回測、策略分析",
         "sentiment": "利多",
         "originalIndex": 16,
         "source": "Reddit",
@@ -406,29 +406,29 @@
         "pubDate": "Sun, 29 Mar 2026 23:16:27 GMT"
       },
       {
-        "title": "在交易儀表板中建立TACO追蹤器",
-        "summary": "開發了一個名為 TACO 的追蹤器，集成到交易儀表板中，能夠即時反映市場動態，特別是在重大新聞事件發生時。這樣的設計幫助交易者更快做出反應。",
-        "impact": "可以考慮在我們的交易系統中加入即時市場動態追蹤功能，以提升反應速度和決策質量。",
-        "affected": "交易儀表板、即時數據、新聞事件",
-        "sentiment": "利多",
-        "originalIndex": 9,
-        "source": "Reddit",
-        "url": "https://reddit.com/r/algotrading/comments/1s63tsh/built_a_taco_tracker_inside_my_trading_dashboard/",
-        "pubDate": "Sat, 28 Mar 2026 15:46:24 GMT"
-      },
-      {
-        "title": "建立免費的比特幣新聞聚合器",
-        "summary": "開發了一個無廣告、無追蹤的比特幣新聞聚合器，使用 Python 和 Flask 框架，能夠即時收集和整理市場新聞，幫助交易者獲取最新資訊。",
-        "impact": "可以考慮開發類似的新聞聚合工具，幫助我們的交易系統整合市場資訊，提升決策的準確性。",
-        "affected": "Python、Flask、新聞聚合、即時資訊",
-        "sentiment": "利多",
+        "title": "建立免費比特幣新聞聚合器",
+        "summary": "這位用戶開發了一個免費的比特幣新聞聚合器，使用 JavaScript 和 Node.js，並強調了無廣告、無追蹤和無Cookies的特點，分享了技術架構和實現過程。",
+        "impact": "可以考慮將新聞聚合功能整合到交易系統中，提供即時市場資訊。",
+        "affected": "JavaScript、Node.js、新聞聚合",
+        "sentiment": "中性",
         "originalIndex": 17,
         "source": "Reddit",
         "url": "https://reddit.com/r/Bitcoin/comments/1s74jrf/i_built_a_free_bitcoin_news_aggregator_no_ads_no/",
         "pubDate": "Sun, 29 Mar 2026 19:32:10 GMT"
+      },
+      {
+        "title": "比特幣牛市押注達到28個月高點",
+        "summary": "分析師指出，比特幣的牛市押注在Bitfinex達到28個月的高點，並分析了這一現象對市場的潛在影響，提供了具體的數據和市場情緒分析。",
+        "impact": "可以利用市場情緒指標來調整交易策略，增加在牛市中的投資比重。",
+        "affected": "市場情緒、比特幣、Bitfinex",
+        "sentiment": "利多",
+        "originalIndex": 23,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/CryptoCurrency/comments/1s726e0/bitcoin_bullish_bets_hit_a_28month_high_on/",
+        "pubDate": "Sun, 29 Mar 2026 18:02:57 GMT"
       }
     ],
-    "actionSummary": "🔧 可立刻測試：整合動態DCA策略，根據市場波動調整投資金額，提升回報潛力。  \n🔧 可立刻測試：在交易儀表板中加入TACO追蹤器，實時監控重大新聞事件對市場的影響。  \n🔍 值得研究：探索使用Python開發的外匯交易演算法，分析其勝率和回報率以優化交易策略。  \n⚠️ 避坑：注意數據質量問題，確保使用的歷史數據準確無誤，以免影響策略回測結果。  ",
-    "lastUpdate": "2026/3/30 上午11:22:23"
+    "actionSummary": "🔧 可立刻測試：實施日內交易機器人「D20」的模擬交易，觀察其策略效果並進行調整。  \n🔧 可立刻測試：利用回測結果對比動態DCA與常規DCA的表現，選擇適合的投資策略。  \n🔍 值得研究：深入分析比特幣牛市押注的市場情緒，評估其對未來價格走勢的影響。  \n⚠️ 避坑：避免過度依賴單一交易策略，應保持多元化以降低風險。",
+    "lastUpdate": "2026/3/30 上午11:23:04"
   }
 }
