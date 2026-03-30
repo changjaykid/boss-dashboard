@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026/3/30\u2009\u4e0b\u53488:45:01",
+  "lastUpdate": "2026/3/30 下午9:15:01",
   "exchange": "MAX (MaiCoin)",
   "status": "connected",
   "account": {
@@ -24,82 +24,82 @@
     {
       "market": "btctwd",
       "name": "BTC/TWD",
-      "last": "2178257.7",
-      "open": "2142559",
+      "last": "2179448",
+      "open": "2138665.6",
       "high": "2180708.6",
       "low": "2091379.3",
-      "vol": "17.7338",
-      "change": "1.67"
+      "vol": "17.7833",
+      "change": "1.91"
     },
     {
       "market": "ethtwd",
       "name": "ETH/TWD",
-      "last": "66540.6",
-      "open": "64205.7",
+      "last": "66526.5",
+      "open": "63880.1",
       "high": "66739.5",
       "low": "62423.7",
-      "vol": "780.7319",
-      "change": "3.64"
+      "vol": "781.9636",
+      "change": "4.14"
     },
     {
       "market": "soltwd",
       "name": "SOL/TWD",
-      "last": "2710",
-      "open": "2640",
+      "last": "2717.3",
+      "open": "2634.9",
       "high": "2722",
       "low": "2548.6",
-      "vol": "2843.27",
-      "change": "2.65"
+      "vol": "2304.824",
+      "change": "3.13"
     },
     {
       "market": "dogetwd",
       "name": "DOGE/TWD",
-      "last": "2.9789",
-      "open": "2.9126",
+      "last": "2.9897",
+      "open": "2.9092",
       "high": "3.0119",
       "low": "2.85",
-      "vol": "2269074.2",
-      "change": "2.28"
+      "vol": "2161090",
+      "change": "2.77"
     },
     {
       "market": "xrptwd",
       "name": "XRP/TWD",
-      "last": "43.523",
-      "open": "42.89",
+      "last": "43.35",
+      "open": "42.625",
       "high": "43.851",
       "low": "41.8",
-      "vol": "59069.72",
-      "change": "1.48"
+      "vol": "58239.81",
+      "change": "1.70"
     },
     {
       "market": "btcusdt",
       "name": "BTC/USDT",
-      "last": "67869",
-      "open": "66757.33",
+      "last": "67919.98",
+      "open": "66600.37",
       "high": "67983.13",
       "low": "65011.12",
-      "vol": "8.8056",
-      "change": "1.67"
+      "vol": "8.9493",
+      "change": "1.98"
     },
     {
       "market": "ethusdt",
       "name": "ETH/USDT",
-      "last": "2073",
-      "open": "1998.84",
+      "last": "2073.02",
+      "open": "1985.05",
       "high": "2079.33",
       "low": "1939.68",
-      "vol": "362.7225",
-      "change": "3.71"
+      "vol": "359.0329",
+      "change": "4.43"
     },
     {
       "market": "solusdt",
       "name": "SOL/USDT",
-      "last": "84.3",
-      "open": "82.78",
+      "last": "84.69",
+      "open": "81.74",
       "high": "84.85",
       "low": "79.23",
-      "vol": "441.683",
-      "change": "1.84"
+      "vol": "397.216",
+      "change": "3.61"
     }
   ],
   "openOrders": [],
@@ -116,16 +116,31 @@
     "status": "RUNNING",
     "initialCapital": 29827.766613567066,
     "currentCapital": 29181.3,
-    "available": 29181.3,
+    "available": 5836.3,
     "realizedPnl": -646.47,
-    "unrealizedPnl": 0,
+    "unrealizedPnl": -31.05,
     "returnPct": -2.17,
     "totalTrades": 9,
     "wins": 3,
     "losses": 6,
     "winRate": "33.3%",
     "maxDrawdown": 3.31,
-    "positions": [],
+    "positions": [
+      {
+        "market": "ethtwd",
+        "direction": "BUY",
+        "entryPrice": 66757.9,
+        "currentPrice": 66669.1,
+        "sizeTWD": 23345,
+        "pnlPct": -0.13,
+        "pnlTWD": -31.05,
+        "riskRewardRatio": 2.08,
+        "strategy": "日線偏多+雙RSI共振高位+EMA多頭排列+MACD雙正",
+        "confidence": 0.95,
+        "dailyTrend": "up",
+        "openTime": "2026-03-30T13:22:00.957Z"
+      }
+    ],
     "closedTrades": [
       {
         "market": "btctwd",
@@ -137,16 +152,16 @@
         "pnlPct": 0.09,
         "riskRewardRatio": 2.08,
         "reason": "TIME_EXIT",
-        "strategy": "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d+4H\u7a7a\u982d+EMA\u7a7a\u982d\u6392\u5217+MACD\u96d9\u8ca0",
+        "strategy": "日線強勢空頭+4H空頭+EMA空頭排列+MACD雙負",
         "signals": [
-          "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d",
-          "4H\u7a7a\u982d",
-          "EMA\u7a7a\u982d\u6392\u5217",
-          "MACD\u96d9\u8ca0",
-          "\u5e03\u6797\u64e0\u58d3",
-          "\u50f9<VWAP",
+          "日線強勢空頭",
+          "4H空頭",
+          "EMA空頭排列",
+          "MACD雙負",
+          "布林擠壓",
+          "價<VWAP",
           "strong_bear",
-          "AI:\u5f37\u70c8\u7684\u7a7a\u982d\u4fe1\u865f\uff0c\u5efa\u8b70\u8b39\u614e\u64cd\u4f5c\u3002"
+          "AI:強烈的空頭信號，建議謹慎操作。"
         ],
         "confidence": 0.74,
         "openTime": "2026-03-29T14:23:02.510Z",
@@ -163,14 +178,14 @@
         "pnlPct": 1.39,
         "riskRewardRatio": 2.08,
         "reason": "TAKE_PROFIT_STRONG",
-        "strategy": "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d+4H\u7a7a\u982d+EMA\u7a7a\u982d\u6392\u5217+\u89f8\u5e03\u6797\u4e0a\u8ecc",
+        "strategy": "日線強勢空頭+4H空頭+EMA空頭排列+觸布林上軌",
         "signals": [
-          "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d",
-          "4H\u7a7a\u982d",
-          "EMA\u7a7a\u982d\u6392\u5217",
-          "\u89f8\u5e03\u6797\u4e0a\u8ecc",
-          "\u5e03\u6797\u64e0\u58d3",
-          "AI:\u77ed\u671f\u5167\u7a7a\u982d\u58d3\u529b\u5f37\u52c1\uff0c\u4f46\u9700\u6ce8\u610fRSI\u56de\u5347\u98a8\u96aa\u3002"
+          "日線強勢空頭",
+          "4H空頭",
+          "EMA空頭排列",
+          "觸布林上軌",
+          "布林擠壓",
+          "AI:短期內空頭壓力強勁，但需注意RSI回升風險。"
         ],
         "confidence": 0.59,
         "openTime": "2026-03-29T20:22:00.481Z",
@@ -187,19 +202,19 @@
         "pnlPct": -0.78,
         "riskRewardRatio": 2.08,
         "reason": "STOP_LOSS",
-        "strategy": "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d+4H\u7a7a\u982d+\u96d9RSI\u5171\u632f\u4f4e\u4f4d+EMA\u7a7a\u982d\u6392\u5217",
+        "strategy": "日線強勢空頭+4H空頭+雙RSI共振低位+EMA空頭排列",
         "signals": [
-          "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d",
-          "4H\u7a7a\u982d",
-          "\u96d9RSI\u5171\u632f\u4f4e\u4f4d",
-          "EMA\u7a7a\u982d\u6392\u5217",
-          "MACD\u96d9\u8ca0",
-          "\u89f8\u5e03\u6797\u4e0b\u8ecc",
-          "\u5e03\u6797\u64e0\u58d3",
-          "\u50f9<VWAP",
-          "\u653e\u91cf(102.8x)",
+          "日線強勢空頭",
+          "4H空頭",
+          "雙RSI共振低位",
+          "EMA空頭排列",
+          "MACD雙負",
+          "觸布林下軌",
+          "布林擠壓",
+          "價<VWAP",
+          "放量(102.8x)",
           "strong_bear",
-          "AI:\u5e02\u5834\u986f\u793a\u5f37\u70c8\u7684\u7a7a\u982d\u4fe1\u865f\uff0c\u5efa\u8b70\u8b39\u614e\u64cd\u4f5c\u3002"
+          "AI:市場顯示強烈的空頭信號，建議謹慎操作。"
         ],
         "confidence": 0.8200000000000001,
         "openTime": "2026-03-29T22:44:00.826Z",
@@ -216,14 +231,14 @@
         "pnlPct": -1.66,
         "riskRewardRatio": 2.08,
         "reason": "STOP_LOSS",
-        "strategy": "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d+4H\u7a7a\u982d+EMA\u7a7a\u982d\u6392\u5217+\u653e\u91cf(2.9x)",
+        "strategy": "日線強勢空頭+4H空頭+EMA空頭排列+放量(2.9x)",
         "signals": [
-          "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d",
-          "4H\u7a7a\u982d",
-          "EMA\u7a7a\u982d\u6392\u5217",
-          "\u653e\u91cf(2.9x)",
+          "日線強勢空頭",
+          "4H空頭",
+          "EMA空頭排列",
+          "放量(2.9x)",
           "shooting_star",
-          "AI:\u5e02\u5834\u986f\u793a\u5f37\u70c8\u7684\u7a7a\u982d\u4fe1\u865f\uff0c\u5efa\u8b70\u8b39\u614e\u64cd\u4f5c\u3002"
+          "AI:市場顯示強烈的空頭信號，建議謹慎操作。"
         ],
         "confidence": 0.7100000000000001,
         "openTime": "2026-03-29T23:02:00.281Z",
@@ -240,13 +255,13 @@
         "pnlPct": -0.88,
         "riskRewardRatio": 2.08,
         "reason": "STOP_LOSS",
-        "strategy": "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d+4H\u7a7a\u982d+EMA\u7a7a\u982d\u6392\u5217+\u653e\u91cf(1.7x)",
+        "strategy": "日線強勢空頭+4H空頭+EMA空頭排列+放量(1.7x)",
         "signals": [
-          "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d",
-          "4H\u7a7a\u982d",
-          "EMA\u7a7a\u982d\u6392\u5217",
-          "\u653e\u91cf(1.7x)",
-          "AI:\u5e02\u5834\u986f\u793a\u5f37\u70c8\u7684\u7a7a\u982d\u8da8\u52e2\uff0c\u5efa\u8b70\u8b39\u614e\u64cd\u4f5c\u3002"
+          "日線強勢空頭",
+          "4H空頭",
+          "EMA空頭排列",
+          "放量(1.7x)",
+          "AI:市場顯示強烈的空頭趨勢，建議謹慎操作。"
         ],
         "confidence": 0.55,
         "openTime": "2026-03-30T00:26:00.709Z",
@@ -263,15 +278,15 @@
         "pnlPct": 0.51,
         "riskRewardRatio": 2.08,
         "reason": "TRAILING_STOP",
-        "strategy": "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d+4H\u7a7a\u982d+RSI\u8d85\u8cb7+\u7a7a\u982d(78)+EMA\u591a\u982d\u6392\u5217",
+        "strategy": "日線強勢空頭+4H空頭+RSI超買+空頭(78)+EMA多頭排列",
         "signals": [
-          "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d",
-          "4H\u7a7a\u982d",
-          "RSI\u8d85\u8cb7+\u7a7a\u982d(78)",
-          "EMA\u591a\u982d\u6392\u5217",
-          "MACD\u96d9\u6b63",
-          "\u89f8\u5e03\u6797\u4e0a\u8ecc",
-          "AI:\u96d6\u7136\u4fe1\u5fc3\u9ad8\uff0c\u4f46RSI\u8d85\u8cb7\u9700\u8b39\u614e\u3002"
+          "日線強勢空頭",
+          "4H空頭",
+          "RSI超買+空頭(78)",
+          "EMA多頭排列",
+          "MACD雙正",
+          "觸布林上軌",
+          "AI:雖然信心高，但RSI超買需謹慎。"
         ],
         "confidence": 0.64,
         "openTime": "2026-03-30T02:48:01.121Z",
@@ -288,16 +303,16 @@
         "pnlPct": -0.88,
         "riskRewardRatio": 2.08,
         "reason": "STOP_LOSS",
-        "strategy": "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d+4H\u7a7a\u982d+RSI\u9ad8\u4f4d+\u7a7a\u982d\u8da8\u52e2(70)+EMA\u591a\u982d\u6392\u5217",
+        "strategy": "日線強勢空頭+4H空頭+RSI高位+空頭趨勢(70)+EMA多頭排列",
         "signals": [
-          "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d",
-          "4H\u7a7a\u982d",
-          "RSI\u9ad8\u4f4d+\u7a7a\u982d\u8da8\u52e2(70)",
-          "EMA\u591a\u982d\u6392\u5217",
-          "MACD\u96d9\u6b63",
-          "\u89f8\u5e03\u6797\u4e0a\u8ecc",
+          "日線強勢空頭",
+          "4H空頭",
+          "RSI高位+空頭趨勢(70)",
+          "EMA多頭排列",
+          "MACD雙正",
+          "觸布林上軌",
           "shooting_star",
-          "AI:\u77ed\u671f\u5167\u4ecd\u6709\u4e0b\u884c\u58d3\u529b\uff0c\u4f46\u9700\u6ce8\u610fRSI\u9ad8\u4f4d\u56de\u8abf\u98a8\u96aa\u3002"
+          "AI:短期內仍有下行壓力，但需注意RSI高位回調風險。"
         ],
         "confidence": 0.66,
         "openTime": "2026-03-30T02:56:00.141Z",
@@ -314,15 +329,15 @@
         "pnlPct": -1.08,
         "riskRewardRatio": 2.08,
         "reason": "STOP_LOSS",
-        "strategy": "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d+4H\u7a7a\u982d+RSI\u8d85\u8cb7+\u7a7a\u982d(77)+\u96d9RSI\u5171\u632f\u9ad8\u4f4d",
+        "strategy": "日線強勢空頭+4H空頭+RSI超買+空頭(77)+雙RSI共振高位",
         "signals": [
-          "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d",
-          "4H\u7a7a\u982d",
-          "RSI\u8d85\u8cb7+\u7a7a\u982d(77)",
-          "\u96d9RSI\u5171\u632f\u9ad8\u4f4d",
-          "EMA\u591a\u982d\u6392\u5217",
-          "MACD\u96d9\u6b63",
-          "AI:\u5e02\u5834\u986f\u793a\u5f37\u70c8\u7684\u7a7a\u982d\u4fe1\u865f\uff0c\u4f46\u9700\u6ce8\u610fRSI\u8d85\u8cb7\u98a8\u96aa\u3002"
+          "日線強勢空頭",
+          "4H空頭",
+          "RSI超買+空頭(77)",
+          "雙RSI共振高位",
+          "EMA多頭排列",
+          "MACD雙正",
+          "AI:市場顯示強烈的空頭信號，但需注意RSI超買風險。"
         ],
         "confidence": 0.62,
         "openTime": "2026-03-30T04:02:00.937Z",
@@ -339,16 +354,16 @@
         "pnlPct": -0.45,
         "riskRewardRatio": 2.08,
         "reason": "TIME_EXIT",
-        "strategy": "\u65e5\u7dda\u504f\u591a+\u96d9RSI\u5171\u632f\u9ad8\u4f4d+EMA\u591a\u982d\u6392\u5217+MACD\u96d9\u6b63",
+        "strategy": "日線偏多+雙RSI共振高位+EMA多頭排列+MACD雙正",
         "signals": [
-          "\u65e5\u7dda\u504f\u591a",
-          "\u96d9RSI\u5171\u632f\u9ad8\u4f4d",
-          "EMA\u591a\u982d\u6392\u5217",
-          "MACD\u96d9\u6b63",
-          "\u50f9>VWAP",
-          "\u653e\u91cf(4.9x)",
+          "日線偏多",
+          "雙RSI共振高位",
+          "EMA多頭排列",
+          "MACD雙正",
+          "價>VWAP",
+          "放量(4.9x)",
           "strong_bull",
-          "AI:\u76ee\u524d\u4fe1\u865f\u5f37\u52c1\uff0c\u4f46\u9700\u6ce8\u610fRSI\u9ad8\u4f4d\u56de\u8abf\u98a8\u96aa\u3002"
+          "AI:目前信號強勁，但需注意RSI高位回調風險。"
         ],
         "confidence": 0.83,
         "openTime": "2026-03-30T05:28:00.785Z",
@@ -357,47 +372,47 @@
       }
     ],
     "strategyStats": {
-      "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d+4H\u7a7a\u982d+EMA\u7a7a\u982d\u6392\u5217+MACD\u96d9\u8ca0": {
+      "日線強勢空頭+4H空頭+EMA空頭排列+MACD雙負": {
         "wins": 1,
         "losses": 0,
         "pnl": 22.3534024798533
       },
-      "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d+4H\u7a7a\u982d+EMA\u7a7a\u982d\u6392\u5217+\u89f8\u5e03\u6797\u4e0a\u8ecc": {
+      "日線強勢空頭+4H空頭+EMA空頭排列+觸布林上軌": {
         "wins": 1,
         "losses": 0,
         "pnl": 331.242882111157
       },
-      "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d+4H\u7a7a\u982d+\u96d9RSI\u5171\u632f\u4f4e\u4f4d+EMA\u7a7a\u982d\u6392\u5217": {
+      "日線強勢空頭+4H空頭+雙RSI共振低位+EMA空頭排列": {
         "wins": 0,
         "losses": 1,
         "pnl": -187.81337457037807
       },
-      "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d+4H\u7a7a\u982d+EMA\u7a7a\u982d\u6392\u5217+\u653e\u91cf(2.9x)": {
+      "日線強勢空頭+4H空頭+EMA空頭排列+放量(2.9x)": {
         "wins": 0,
         "losses": 1,
         "pnl": -398.26411845730047
       },
-      "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d+4H\u7a7a\u982d+EMA\u7a7a\u982d\u6392\u5217+\u653e\u91cf(1.7x)": {
+      "日線強勢空頭+4H空頭+EMA空頭排列+放量(1.7x)": {
         "wins": 0,
         "losses": 1,
         "pnl": -208.18481979936337
       },
-      "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d+4H\u7a7a\u982d+RSI\u8d85\u8cb7+\u7a7a\u982d(78)+EMA\u591a\u982d\u6392\u5217": {
+      "日線強勢空頭+4H空頭+RSI超買+空頭(78)+EMA多頭排列": {
         "wins": 1,
         "losses": 0,
         "pnl": 72.23219203572661
       },
-      "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d+4H\u7a7a\u982d+RSI\u9ad8\u4f4d+\u7a7a\u982d\u8da8\u52e2(70)+EMA\u591a\u982d\u6392\u5217": {
+      "日線強勢空頭+4H空頭+RSI高位+空頭趨勢(70)+EMA多頭排列": {
         "wins": 0,
         "losses": 1,
         "pnl": -82.52766155276615
       },
-      "\u65e5\u7dda\u5f37\u52e2\u7a7a\u982d+4H\u7a7a\u982d+RSI\u8d85\u8cb7+\u7a7a\u982d(77)+\u96d9RSI\u5171\u632f\u9ad8\u4f4d": {
+      "日線強勢空頭+4H空頭+RSI超買+空頭(77)+雙RSI共振高位": {
         "wins": 0,
         "losses": 1,
         "pnl": -153.67237383177618
       },
-      "\u65e5\u7dda\u504f\u591a+\u96d9RSI\u5171\u632f\u9ad8\u4f4d+EMA\u591a\u982d\u6392\u5217+MACD\u96d9\u6b63": {
+      "日線偏多+雙RSI共振高位+EMA多頭排列+MACD雙正": {
         "wins": 0,
         "losses": 1,
         "pnl": -41.83714715216323
@@ -406,6 +421,6 @@
     "consecutiveLosses": 3,
     "pausedUntil": null,
     "v3StartTime": "2026-03-29T14:22:40.804Z",
-    "lastUpdate": "2026/3/30\u2009\u4e0b\u53488:56:10"
+    "lastUpdate": "2026/3/30 下午9:28:09"
   }
 }
