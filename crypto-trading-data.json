@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026/3/30 上午8:00:00",
+  "lastUpdate": "2026/3/30 上午10:55:00",
   "exchange": "MAX (MaiCoin)",
   "status": "connected",
   "account": {
@@ -17,89 +17,89 @@
         "staked": "0"
       }
     ],
-    "totalValueTWD": "1.17",
+    "totalValueTWD": "1.18",
     "totalBalances": 2
   },
   "tickers": [
     {
       "market": "btctwd",
       "name": "BTC/TWD",
-      "last": "2122433.9",
-      "open": "2131393",
+      "last": "2148260.8",
+      "open": "2143527.4",
       "high": "2155357.9",
       "low": "2091379.3",
-      "vol": "13.4118",
-      "change": "-0.42"
+      "vol": "14.0521",
+      "change": "0.22"
     },
     {
       "market": "ethtwd",
       "name": "ETH/TWD",
-      "last": "63770.6",
-      "open": "64091.3",
-      "high": "64853.6",
+      "last": "64739.1",
+      "open": "64342.3",
+      "high": "64988.9",
       "low": "62423.7",
-      "vol": "362.0726",
-      "change": "-0.50"
+      "vol": "428.4497",
+      "change": "0.62"
     },
     {
       "market": "soltwd",
       "name": "SOL/TWD",
-      "last": "2621",
-      "open": "2635",
+      "last": "2662.5",
+      "open": "2654.2",
       "high": "2671.9",
       "low": "2548.6",
-      "vol": "2100.854",
-      "change": "-0.53"
+      "vol": "2114.295",
+      "change": "0.31"
     },
     {
       "market": "dogetwd",
       "name": "DOGE/TWD",
-      "last": "2.907",
-      "open": "2.92",
-      "high": "2.9419",
+      "last": "2.9444",
+      "open": "2.93",
+      "high": "2.9599",
       "low": "2.85",
-      "vol": "1328467.8",
-      "change": "-0.45"
+      "vol": "1392608.1",
+      "change": "0.49"
     },
     {
       "market": "xrptwd",
       "name": "XRP/TWD",
-      "last": "42.7",
-      "open": "42.866",
-      "high": "43.133",
+      "last": "43.129",
+      "open": "42.93",
+      "high": "43.327",
       "low": "41.8",
-      "vol": "25005.68",
-      "change": "-0.39"
+      "vol": "30444.7",
+      "change": "0.46"
     },
     {
       "market": "btcusdt",
       "name": "BTC/USDT",
-      "last": "66029.21",
-      "open": "66362.23",
+      "last": "67040.17",
+      "open": "66734.37",
       "high": "67108.71",
       "low": "65011.12",
-      "vol": "5.9405",
-      "change": "-0.50"
+      "vol": "5.5183",
+      "change": "0.46"
     },
     {
       "market": "ethusdt",
       "name": "ETH/USDT",
-      "last": "1985.39",
-      "open": "1994.63",
-      "high": "2019.03",
+      "last": "2019.23",
+      "open": "2004.16",
+      "high": "2022.08",
       "low": "1939.68",
-      "vol": "209.9969",
-      "change": "-0.46"
+      "vol": "241.4627",
+      "change": "0.75"
     },
     {
       "market": "solusdt",
       "name": "SOL/USDT",
-      "last": "81.37",
-      "open": "82",
+      "last": "83.07",
+      "open": "82.7",
       "high": "83.19",
       "low": "79.23",
-      "vol": "345.45",
-      "change": "-0.77"
+      "vol": "367.407",
+      "change": "0.45"
     }
   ],
   "openOrders": [],
@@ -111,137 +111,78 @@
     }
   },
   "simulation": {
-    "enabled": true,
     "version": 3,
-    "status": "RUNNING",
-    "initialCapital": 29827.766613567066,
-    "currentCapital": 29993.55,
-    "available": 5998.55,
-    "realizedPnl": 165.78,
-    "unrealizedPnl": -8.26,
-    "returnPct": 0.56,
-    "totalTrades": 3,
+    "capital": 29387.1,
+    "available": 5877.1,
+    "startCapital": 29827.77,
+    "realizedPnl": -440.67,
+    "unrealizedPnl": 86.47,
+    "totalTrades": 5,
     "wins": 2,
-    "losses": 1,
-    "winRate": "66.7%",
-    "maxDrawdown": 0.62,
-    "positions": [
+    "losses": 3,
+    "winRate": "40.0%",
+    "maxDrawdown": 2.63,
+    "openPositions": [
+      {
+        "market": "soltwd",
+        "direction": "SELL",
+        "entryPrice": 2687,
+        "currentPrice": 2670.6,
+        "pnlPct": 0.61,
+        "pnlTWD": 86.47,
+        "strategy": "日線強勢空頭+4H空頭+RSI超買+空頭(78)+EMA多頭排列"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "entryPrice": 2151000,
+        "currentPrice": 0,
+        "pnlPct": 0,
+        "pnlTWD": 0,
+        "strategy": "日線強勢空頭+4H空頭+RSI高位+空頭趨勢(70)+EMA多頭排列"
+      }
+    ],
+    "recentTrades": [
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "pnlTWD": 22.35,
+        "pnlPct": 0.09,
+        "reason": "TIME_EXIT",
+        "outcome": "WIN"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "pnlTWD": 331.24,
+        "pnlPct": 1.39,
+        "reason": "TAKE_PROFIT_STRONG",
+        "outcome": "WIN"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "pnlTWD": -187.81,
+        "pnlPct": -0.78,
+        "reason": "STOP_LOSS",
+        "outcome": "LOSS"
+      },
       {
         "market": "dogetwd",
         "direction": "SELL",
-        "entryPrice": 2.904,
-        "currentPrice": 2.905,
-        "sizeTWD": 23995,
-        "pnlPct": -0.03,
-        "pnlTWD": -8.26,
-        "riskRewardRatio": 2.08,
-        "strategy": "日線強勢空頭+4H空頭+EMA空頭排列+放量(2.9x)",
-        "confidence": 0.7100000000000001,
-        "dailyTrend": "strong_down",
-        "openTime": "2026-03-29T23:02:00.281Z"
-      }
-    ],
-    "closedTrades": [
-      {
-        "market": "btctwd",
-        "direction": "SELL",
-        "entryPrice": 2138926.7,
-        "exitPrice": 2136923,
-        "sizeTWD": 23862,
-        "pnlTWD": 22.35,
-        "pnlPct": 0.09,
-        "riskRewardRatio": 2.08,
-        "reason": "TIME_EXIT",
-        "strategy": "日線強勢空頭+4H空頭+EMA空頭排列+MACD雙負",
-        "signals": [
-          "日線強勢空頭",
-          "4H空頭",
-          "EMA空頭排列",
-          "MACD雙負",
-          "布林擠壓",
-          "價<VWAP",
-          "strong_bear",
-          "AI:強烈的空頭信號，建議謹慎操作。"
-        ],
-        "confidence": 0.74,
-        "openTime": "2026-03-29T14:23:02.510Z",
-        "closeTime": "2026-03-29T20:20:00.648Z",
-        "outcome": "WIN"
-      },
-      {
-        "market": "btctwd",
-        "direction": "SELL",
-        "entryPrice": 2139398.4,
-        "exitPrice": 2109722.5,
-        "sizeTWD": 23880,
-        "pnlTWD": 331.24,
-        "pnlPct": 1.39,
-        "riskRewardRatio": 2.08,
-        "reason": "TAKE_PROFIT_STRONG",
-        "strategy": "日線強勢空頭+4H空頭+EMA空頭排列+觸布林上軌",
-        "signals": [
-          "日線強勢空頭",
-          "4H空頭",
-          "EMA空頭排列",
-          "觸布林上軌",
-          "布林擠壓",
-          "AI:短期內空頭壓力強勁，但需注意RSI回升風險。"
-        ],
-        "confidence": 0.59,
-        "openTime": "2026-03-29T20:22:00.481Z",
-        "closeTime": "2026-03-29T22:44:00.826Z",
-        "outcome": "WIN"
-      },
-      {
-        "market": "btctwd",
-        "direction": "SELL",
-        "entryPrice": 2109785.9,
-        "exitPrice": 2126197,
-        "sizeTWD": 24145,
-        "pnlTWD": -187.81,
-        "pnlPct": -0.78,
-        "riskRewardRatio": 2.08,
+        "pnlTWD": -398.26,
+        "pnlPct": -1.66,
         "reason": "STOP_LOSS",
-        "strategy": "日線強勢空頭+4H空頭+雙RSI共振低位+EMA空頭排列",
-        "signals": [
-          "日線強勢空頭",
-          "4H空頭",
-          "雙RSI共振低位",
-          "EMA空頭排列",
-          "MACD雙負",
-          "觸布林下軌",
-          "布林擠壓",
-          "價<VWAP",
-          "放量(102.8x)",
-          "strong_bear",
-          "AI:市場顯示強烈的空頭信號，建議謹慎操作。"
-        ],
-        "confidence": 0.8200000000000001,
-        "openTime": "2026-03-29T22:44:00.826Z",
-        "closeTime": "2026-03-29T23:02:00.281Z",
+        "outcome": "LOSS"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "pnlTWD": -208.18,
+        "pnlPct": -0.88,
+        "reason": "STOP_LOSS",
         "outcome": "LOSS"
       }
-    ],
-    "strategyStats": {
-      "日線強勢空頭+4H空頭+EMA空頭排列+MACD雙負": {
-        "wins": 1,
-        "losses": 0,
-        "pnl": 22.3534024798533
-      },
-      "日線強勢空頭+4H空頭+EMA空頭排列+觸布林上軌": {
-        "wins": 1,
-        "losses": 0,
-        "pnl": 331.242882111157
-      },
-      "日線強勢空頭+4H空頭+雙RSI共振低位+EMA空頭排列": {
-        "wins": 0,
-        "losses": 1,
-        "pnl": -187.81337457037807
-      }
-    },
-    "consecutiveLosses": 1,
-    "pausedUntil": null,
-    "v3StartTime": "2026-03-29T14:22:40.804Z",
-    "lastUpdate": "2026/3/30 上午8:06:07"
+    ]
   }
 }
