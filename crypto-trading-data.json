@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026/3/30 下午8:00:00",
+  "lastUpdate": "2026/3/30 下午8:30:00",
   "exchange": "MAX (MaiCoin)",
   "status": "connected",
   "account": {
@@ -17,89 +17,89 @@
         "staked": "0"
       }
     ],
-    "totalValueTWD": "1.19",
+    "totalValueTWD": "1.20",
     "totalBalances": 2
   },
   "tickers": [
     {
       "market": "btctwd",
       "name": "BTC/TWD",
-      "last": "2171404.4",
-      "open": "2145878.6",
+      "last": "2176455.7",
+      "open": "2144486.6",
       "high": "2180000",
       "low": "2091379.3",
-      "vol": "17.4471",
-      "change": "1.19"
+      "vol": "17.5721",
+      "change": "1.49"
     },
     {
       "market": "ethtwd",
       "name": "ETH/TWD",
-      "last": "66428.4",
-      "open": "64340",
+      "last": "66383.2",
+      "open": "64300",
       "high": "66739.5",
       "low": "62423.7",
-      "vol": "765.8356",
-      "change": "3.25"
+      "vol": "776.439",
+      "change": "3.24"
     },
     {
       "market": "soltwd",
       "name": "SOL/TWD",
-      "last": "2706.7",
-      "open": "2653.1",
+      "last": "2708.2",
+      "open": "2651.7",
       "high": "2722",
       "low": "2548.6",
-      "vol": "2906.032",
-      "change": "2.02"
+      "vol": "2903.876",
+      "change": "2.13"
     },
     {
       "market": "dogetwd",
       "name": "DOGE/TWD",
-      "last": "2.98",
-      "open": "2.9272",
+      "last": "2.9789",
+      "open": "2.917",
       "high": "3.0119",
       "low": "2.85",
-      "vol": "2285013.5",
-      "change": "1.80"
+      "vol": "2273468",
+      "change": "2.12"
     },
     {
       "market": "xrptwd",
       "name": "XRP/TWD",
-      "last": "43.324",
-      "open": "42.891",
+      "last": "43.4",
+      "open": "42.89",
       "high": "43.851",
       "low": "41.8",
-      "vol": "50903.12",
-      "change": "1.01"
+      "vol": "58982.19",
+      "change": "1.19"
     },
     {
       "market": "btcusdt",
       "name": "BTC/USDT",
-      "last": "67680",
-      "open": "66951.39",
+      "last": "67897.22",
+      "open": "66757.33",
       "high": "67983.13",
       "low": "65011.12",
-      "vol": "6.7085",
-      "change": "1.09"
+      "vol": "8.7887",
+      "change": "1.71"
     },
     {
       "market": "ethusdt",
       "name": "ETH/USDT",
-      "last": "2074.29",
-      "open": "2003.81",
+      "last": "2070.37",
+      "open": "2002.59",
       "high": "2079.33",
       "low": "1939.68",
-      "vol": "357.8577",
-      "change": "3.52"
+      "vol": "359.8581",
+      "change": "3.38"
     },
     {
       "market": "solusdt",
       "name": "SOL/USDT",
-      "last": "84.37",
+      "last": "84.3",
       "open": "82.78",
       "high": "84.85",
       "low": "79.23",
-      "vol": "433.364",
-      "change": "1.92"
+      "vol": "441.683",
+      "change": "1.84"
     }
   ],
   "openOrders": [],
@@ -406,14 +406,14 @@
     "consecutiveLosses": 3,
     "pausedUntil": null,
     "v3StartTime": "2026-03-29T14:22:40.804Z",
-    "lastUpdate": "2026/3/30 下午8:00:12"
+    "lastUpdate": "2026/3/30 下午8:36:11"
   },
   "news": {
     "items": [
       {
         "title": "比特幣急挫失守 6.5 萬美元關卡 逾 2.3 億美元多頭部位遭清算",
         "summary": "比特幣價格跌破6.5萬美元，導致大量多頭部位被清算。",
-        "impact": "這一價格下跌可能引發市場恐慌，進一步加劇賣壓，對多頭投資者造成重大損失，可能會影響市場信心。",
+        "impact": "這一價格下跌可能引發市場恐慌，進一步加劇賣壓，對多頭情緒造成打擊。投資者需謹慎觀察市場走勢，避免進一步損失。",
         "affected": "BTC",
         "sentiment": "利空",
         "originalIndex": 1,
@@ -422,8 +422,8 @@
       },
       {
         "title": "Bitfinex比特幣多頭部位飆新高 分析師示警潛在下跌風險",
-        "summary": "Bitfinex的比特幣多頭部位達到新高，但分析師警告可能面臨下跌風險。",
-        "impact": "儘管多頭部位增加顯示市場信心，但分析師的警告可能使投資者對未來價格走勢感到不安，增加市場波動性。",
+        "summary": "Bitfinex的比特幣多頭持倉達到新高，但分析師警告存在下跌風險。",
+        "impact": "雖然多頭持倉增長顯示市場信心，但分析師的警告可能使投資者對未來價格走勢感到不安，進而影響市場情緒。",
         "affected": "BTC",
         "sentiment": "中性",
         "originalIndex": 3,
@@ -431,19 +431,9 @@
         "pubDate": "Mon, 30 Mar 2026 08:47:55 GMT"
       },
       {
-        "title": "中東緊張局勢衝擊投資信心 比特幣跌破7萬美元關卡",
-        "summary": "中東的緊張局勢影響了投資者信心，導致比特幣價格跌破7萬美元。",
-        "impact": "地緣政治因素對市場情緒的影響顯著，可能導致資金流出加密貨幣市場，進一步壓低價格。",
-        "affected": "BTC",
-        "sentiment": "利空",
-        "originalIndex": 9,
-        "url": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxNeTQ0NGNoS2p0ZTYtMzVxamtPX1kxcFpzRzJBcG9fendhOWVVYmkwMXIyT3hwSE82RnR2bVdzb0YtLXQ4dXMxTlFWVzMxVVY1UlJreGE1Wk10aWpsdFRiNTg2ZWp5TXFOT1J1MmlwZUljR1RmcF9WNEFpaXhjRTB1TG96a0lGclRaUVZfejdQME9aNUNodG53SFpETWE1aVZ0VWp5M1lVNm5adGNlNnYwbkJHdC1GSVNYV01UUmw3Zi0wU01jTFFtaWxUYmlVQ2NFRnFrRS1Fb01JeVZoSDM3SHh0RTNJZjZTU0FRN0ZST1luSGYyR2h4aGhEOWpTR3BKdXFmMHhPMy0wdVBzQ29ZWUoyQUZFZ3dVb0xTT3hqZmJfcHdqb3hmNG9rLUUyMTRNWElWMkotSTNvVktEYkM0RnVZb1NXdW41SGRxWVRMTGV0MXpxRHVVa2M5MzdZV3dScy1DNjJR?oc=5",
-        "pubDate": "Mon, 30 Mar 2026 07:58:06 GMT"
-      },
-      {
         "title": "富爸爸警告：通膨、債務、戰爭讓世界進入「新蕭條」，比特幣、以太坊、黃金是唯一救贖",
-        "summary": "知名投資者警告全球經濟面臨新蕭條，比特幣和以太坊被視為避險資產。",
-        "impact": "這種觀點可能吸引更多投資者將資金轉向比特幣和以太坊，作為對抗經濟不確定性的工具，從而提升這些資產的需求。",
+        "summary": "知名投資者警告經濟不穩定，認為比特幣和以太坊是避險資產。",
+        "impact": "這一言論可能吸引更多投資者將比特幣和以太坊視為避險工具，從而提升其需求和價格。",
         "affected": "BTC, ETH",
         "sentiment": "利多",
         "originalIndex": 6,
@@ -451,25 +441,35 @@
         "pubDate": "Mon, 30 Mar 2026 02:56:42 GMT"
       },
       {
-        "title": "摩根士丹利殺瘋了！推全美最便宜比特幣 ETF，0.14% 超低管理費輾壓全場",
-        "summary": "摩根士丹利推出超低管理費的比特幣ETF，吸引投資者關注。",
-        "impact": "這一舉措可能促進更多傳統投資者進入加密貨幣市場，進一步提升比特幣的流動性和市場接受度。",
+        "title": "買房不用賣幣了！美國房貸巨頭打破傳統，比特幣可當「頭期款抵押品」",
+        "summary": "美國房貸公司允許使用比特幣作為購房的頭期款抵押品。",
+        "impact": "這一創新可能促進比特幣的流通和使用，進一步提升其在主流金融體系中的地位，吸引更多投資者進場。",
         "affected": "BTC",
         "sentiment": "利多",
+        "originalIndex": 4,
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPQlI2Y28zV2lPVzV6UExjSzM4NEl0dTA3VUNsbWtyQ2NyZEpwbG1qS1JjLVp1bzAtWTRxaHlQRE4wRU44bktCYmh5NGV4UG5fbjhmUXZBdm1wam5jaWhpWEN3bjFGbWxkbS1UazNyM2hFYUtuYl9xU2FoYVVSTGoyZXA0MA?oc=5",
+        "pubDate": "Sun, 29 Mar 2026 07:38:56 GMT"
+      },
+      {
+        "title": "比特幣首度「三黑」收官 面臨6萬美元關卡考驗 交易者備戰Q2",
+        "summary": "比特幣連續三日收黑，面臨6萬美元的關鍵支撐位。",
+        "impact": "如果比特幣無法守住6萬美元關卡，可能會引發進一步的賣壓，影響市場信心，投資者需密切關注後續走勢。",
+        "affected": "BTC",
+        "sentiment": "利空",
         "originalIndex": 10,
-        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5Xdl9KU2ZWeTdqN1BzOGZ5R1I5UTV6SUdUeGRNTk83LVBYeEh1dWNOejRSWXZKWXR5bTdOT01oU0pWNGUyemJPdXFfcktxSk0?oc=5",
-        "pubDate": "Mon, 30 Mar 2026 08:01:08 GMT"
+        "url": "https://news.google.com/rss/articles/CBMi-AJBVV95cUxQZjFZS1M5WWxCVXVIRXp4X19kQTA2X1hwOTF2MHpfN2Y0QkpiaVhGdjdYazJER0phblRQajBNcEpxc1JIakJVNFZRcThpbFRhQlo4MmtxOUZkZHdMZnRLdHNreTk4bUZVVFJ1dXpVUkpFWWpieF9nN1RQVmJ6V25aSm50eHhiYTFESFl3SEYyNzdyVGc1bU5NcDRvWW56eVlDYWlnSDFLRTRfd3pxbGxYRl9GSHg3ZWZHcnZhVm9mb0ktS0dXLUdzY0EyY1ZFSWdKRlhScERfcS14TmY5OW9ES0o5cnBqQ0ZET095M1BIbWFjbUZxa2RPN0JGRTl3QjZvUW9ReEtFVVRyZmxJRjh4T2ZSdm1VOTZKZkEyQXExaV9mYmR3Ymhtb1VaYWtWTDEwTmdCVk4xSklrMHc5UTJKSXdQWk14LXdYa0RTWVhpa05mWkVnb2hXVUxwcFV0S0NNTzdMOE5BbU1ONHM4OTgwUDJFMWJ4ZEZ4?oc=5",
+        "pubDate": "Mon, 30 Mar 2026 09:31:07 GMT"
       }
     ],
-    "lastUpdate": "2026/3/30 下午8:00:00"
+    "lastUpdate": "2026/3/30 下午8:37:17"
   },
   "socialNews": {
     "items": [
       {
-        "title": "在虛幻引擎中創建日內交易機器人",
-        "summary": "使用虛幻引擎開發了一個名為「D20」的日內交易機器人，進行模擬交易。設置了基本的買入和賣出策略，並在模擬環境中運行，觀察其表現。這個過程中遇到了一些技術挑戰，如如何優化交易執行速度，最終通過調整代碼解決了問題。",
-        "impact": "我們可以考慮使用虛幻引擎來開發交易機器人，並進行模擬測試，這樣可以快速迭代和調整策略。",
-        "affected": "虛幻引擎、模擬交易、策略開發",
+        "title": "第一天創建日內交易機器人",
+        "summary": "用 Unreal Engine 開發了一個名為 'D20' 的日內交易機器人，進行模擬交易。設計了基本的交易邏輯，但尚未分享具體的指標或策略。希望透過這個過程學習如何實現自動交易。遇到的問題包括如何優化交易策略以適應市場變化。",
+        "impact": "可以考慮使用 Unreal Engine 進行交易機器人的開發，並在此基礎上實現更複雜的交易策略和指標。",
+        "affected": "Unreal Engine、模擬交易、日內交易",
         "sentiment": "中性",
         "originalIndex": 10,
         "source": "Reddit",
@@ -477,21 +477,10 @@
         "pubDate": "Sat, 28 Mar 2026 06:40:47 GMT"
       },
       {
-        "title": "從零開始建立外匯算法",
-        "summary": "花了3.5年時間從頭開始建立一個外匯交易算法，使用Python進行開發，並進行了多次回測以評估其表現。最終的統計數據顯示，算法在不同市場條件下的勝率約為58%。在回測中遇到的問題包括過度擬合，通過調整參數來解決。",
-        "impact": "我們可以借鑒這種長期開發和回測的方式，使用Python來建立自己的加密貨幣交易算法，並進行嚴格的測試。",
-        "affected": "Python、外匯算法、回測",
-        "sentiment": "利多",
-        "originalIndex": 13,
-        "source": "Reddit",
-        "url": "https://reddit.com/r/algotrading/comments/1s5tihu/i_spent_35_years_building_a_forex_algo_from/",
-        "pubDate": "Sat, 28 Mar 2026 07:05:18 GMT"
-      },
-      {
         "title": "動態DCA與常規DCA的回測",
-        "summary": "對動態平均成本法(Dynamic DCA)與常規平均成本法(Regular DCA)進行了過去4年的回測，發現動態DCA在市場波動時的表現優於常規DCA，具體數據顯示動態DCA的勝率提升了10%。回測中使用了Python和Pandas進行數據處理。",
-        "impact": "我們可以考慮實施動態DCA策略，根據市場情況調整投資額，這樣能提高長期投資的回報率。",
-        "affected": "Python、DCA、回測",
+        "summary": "進行了動態DCA（定期定額）與常規DCA的回測，持續4年，分析不同市場條件下的表現。具體數據未公開，但強調動態DCA在波動市場中的優勢。",
+        "impact": "可以考慮在自動交易系統中實施動態DCA策略，根據市場波動調整投資額度，以提高長期收益。",
+        "affected": "DCA、回測、策略優化",
         "sentiment": "利多",
         "originalIndex": 14,
         "source": "Reddit",
@@ -499,29 +488,40 @@
         "pubDate": "Sun, 29 Mar 2026 23:16:27 GMT"
       },
       {
-        "title": "建立完整的交易管道",
-        "summary": "在Rust中建立了一個完整的Lopez de Prado交易管道，進行了442次測試，所有測試均通過，但在OOS測試中AUC為0.50，顯示模型表現不佳。為了改善模型，計劃進一步調整特徵選擇和參數設置。",
-        "impact": "我們可以考慮使用Rust來構建高效的交易系統，並專注於特徵工程和模型調整，以提高預測準確性。",
-        "affected": "Rust、交易管道、模型調整",
-        "sentiment": "中性",
-        "originalIndex": 18,
-        "source": "Reddit",
-        "url": "https://reddit.com/r/algotrading/comments/1s77s5k/built_a_full_lopez_de_prado_pipeline_in_rust_442/",
-        "pubDate": "Sun, 29 Mar 2026 21:36:46 GMT"
-      },
-      {
-        "title": "使用技術分析的交易儀表板",
-        "summary": "在交易儀表板中建立了一個TACO追蹤器，因為在總統即時發佈有關伊朗的消息時，技術分析的有效性受到質疑。這個追蹤器能夠即時反映市場情緒和消息影響，幫助交易者做出更快的決策。",
-        "impact": "我們可以在交易系統中加入即時市場情緒追蹤功能，這樣能更好地應對突發事件對市場的影響。",
-        "affected": "交易儀表板、即時數據、技術分析",
+        "title": "使用交易儀表板追蹤TACO",
+        "summary": "在交易儀表板中建立了一個TACO追蹤器，因為技術分析在市場波動時顯得無效。這個追蹤器幫助用戶在不穩定的市場中做出更好的交易決策。",
+        "impact": "可以在自動交易系統中加入類似的市場情緒追蹤工具，以便在重大新聞事件發生時調整交易策略。",
+        "affected": "交易儀表板、技術分析、情緒追蹤",
         "sentiment": "中性",
         "originalIndex": 11,
         "source": "Reddit",
         "url": "https://reddit.com/r/algotrading/comments/1s63tsh/built_a_taco_tracker_inside_my_trading_dashboard/",
         "pubDate": "Sat, 28 Mar 2026 15:46:24 GMT"
+      },
+      {
+        "title": "成功達成2 BTC里程碑",
+        "summary": "用戶分享了他在短時間內達到2 BTC的持有量，並提到使用了多種交易策略，包括日內交易和長期持有。具體的交易策略和指標未詳細說明，但強調了市場時機的重要性。",
+        "impact": "可以參考用戶的持有策略，結合日內交易與長期持有，以便在不同市場環境中靈活應對。",
+        "affected": "日內交易、長期持有、策略組合",
+        "sentiment": "利多",
+        "originalIndex": 9,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/Bitcoin/comments/1s7abne/hit_my_2_btc_milestone_earlier_than_expected/",
+        "pubDate": "Sun, 29 Mar 2026 23:22:40 GMT"
+      },
+      {
+        "title": "Morgan Stanley比特幣ETF即將推出",
+        "summary": "根據Bloomberg分析師的報導，Morgan Stanley的比特幣ETF可能在下個月推出，這將吸引更多機構投資者進入市場。雖然未提供具體的交易策略，但這一消息可能影響市場情緒。",
+        "impact": "可以考慮在自動交易系統中加入對市場新聞的反應機制，及時調整交易策略以應對潛在的市場波動。",
+        "affected": "比特幣ETF、機構投資、新聞反應",
+        "sentiment": "利多",
+        "originalIndex": 25,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/Bitcoin/comments/1s7o7qr/morgan_stanleys_bitcoin_etf_likely_to_launch/",
+        "pubDate": "Mon, 30 Mar 2026 11:45:01 GMT"
       }
     ],
-    "actionSummary": "🔧 可立刻測試：在自動交易系統中實施動態DCA策略，根據市場波動調整買入時機。  \n🔧 可立刻測試：建立技術分析儀表板，實時追蹤市場情緒和消息影響，輔助交易決策。  \n🔍 值得研究：深入探討外匯算法的參數調整，特別是針對過度擬合的解決方案。  \n⚠️ 避坑：避免在模擬交易中忽視技術挑戰，確保交易執行速度優化以免影響實際表現。  ",
-    "lastUpdate": "2026/3/30 下午8:00:00"
+    "actionSummary": "🔧 可立刻測試：實施動態DCA策略，根據市場波動調整投資金額，以提高在不穩定市場中的表現。  \n🔧 可立刻測試：在交易儀表板中加入TACO追蹤器，幫助決策時考慮市場情緒和技術分析的局限性。  \n🔍 值得研究：深入分析Morgan Stanley比特幣ETF的市場影響，評估其對機構投資者進入市場的潛在影響。  \n⚠️ 避坑：避免過度依賴單一交易策略，應該多元化策略以降低風險。",
+    "lastUpdate": "2026/3/30 下午8:37:17"
   }
 }
