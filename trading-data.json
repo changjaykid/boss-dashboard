@@ -1,21 +1,21 @@
 {
-  "lastUpdate": "2026-03-30 16:10:25",
+  "lastUpdate": "2026-03-30 16:20:24",
   "currentPrice": {
     "GOLD": {
-      "bid": 4535.73,
-      "ask": 4536.23
+      "bid": 4532.54,
+      "ask": 4533.04
     },
     "SILVER": {
-      "bid": 70.668,
-      "ask": 70.748
+      "bid": 70.54,
+      "ask": 70.62
     },
     "COPPER": {
-      "bid": 5.54709,
-      "ask": 5.54981
+      "bid": 5.53732,
+      "ask": 5.54004
     },
     "EURUSDM2026": {
-      "bid": 1.1533,
-      "ask": 1.15336
+      "bid": 1.15334,
+      "ask": 1.1534
     }
   },
   "indicators": {
@@ -39,7 +39,7 @@
       "name": "\u9285",
       "regime": "TRENDING_UP",
       "pa": "",
-      "pattern": "Double Bottom",
+      "pattern": "Double Top",
       "mtf_dir": "BUY",
       "ew_pos": "Unknown"
     },
@@ -53,9 +53,9 @@
     }
   },
   "account": {
-    "balance": 30820.11,
+    "balance": 30820.08,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 4.41,
+    "unrealizedPnl": 1.94,
     "totalTrades": 57,
     "closedTrades": 53,
     "wins": 14,
@@ -70,9 +70,9 @@
       "entryPrice": 4530.73,
       "stopLevel": 4512.33,
       "profitLevel": 4567.63,
-      "currentBid": 4535.14,
-      "currentAsk": 4535.64,
-      "pnl": 4.41,
+      "currentBid": 4532.67,
+      "currentAsk": 4533.17,
+      "pnl": 1.94,
       "instrument": "Gold",
       "epic": "GOLD"
     }
