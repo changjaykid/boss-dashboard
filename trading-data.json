@@ -1,33 +1,33 @@
 {
-  "lastUpdate": "2026-03-31 03:20:23",
+  "lastUpdate": "2026-03-31 03:30:24",
   "currentPrice": {
     "GOLD": {
-      "bid": 4496.28,
-      "ask": 4496.78
+      "bid": 4501.83,
+      "ask": 4502.33
     },
     "EURUSDM2026": {
-      "bid": 1.14949,
-      "ask": 1.14955
+      "bid": 1.14952,
+      "ask": 1.14961
     },
     "GBPUSD": {
-      "bid": 1.31765,
-      "ask": 1.31779
+      "bid": 1.31777,
+      "ask": 1.31791
     },
     "USDJPYM2026": {
-      "bid": 158.699,
-      "ask": 158.717
+      "bid": 158.695,
+      "ask": 158.714
     },
     "US30": {
-      "bid": 45112.8,
-      "ask": 45114.8
+      "bid": 45078.7,
+      "ask": 45080.7
     },
     "US500": {
-      "bid": 6324.5,
-      "ask": 6324.9
+      "bid": 6320.3,
+      "ask": 6320.7
     },
     "US100": {
-      "bid": 22870.1,
-      "ask": 22871.9
+      "bid": 22855.2,
+      "ask": 22857.0
     }
   },
   "indicators": {
@@ -89,11 +89,11 @@
     }
   },
   "account": {
-    "balance": 30845.44,
+    "balance": 30850.89,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 3813.0,
-    "totalTrades": 69,
-    "closedTrades": 66,
+    "unrealizedPnl": 1768.0,
+    "totalTrades": 70,
+    "closedTrades": 67,
     "wins": 14,
     "losses": 39,
     "winRate": "26.4%"
@@ -106,9 +106,9 @@
       "entryPrice": 23006.8,
       "stopLevel": 23089.7,
       "profitLevel": 22841.0,
-      "currentBid": 22869.7,
-      "currentAsk": 22871.5,
-      "pnl": 1353.0,
+      "currentBid": 22859.8,
+      "currentAsk": 22861.6,
+      "pnl": 1452.0,
       "instrument": "US Tech 100",
       "epic": "US100"
     },
@@ -119,52 +119,14 @@
       "entryPrice": 6353.4,
       "stopLevel": 6371.9,
       "profitLevel": 6316.4,
-      "currentBid": 6324.8,
-      "currentAsk": 6325.2,
-      "pnl": 282.0,
+      "currentBid": 6321.4,
+      "currentAsk": 6321.8,
+      "pnl": 316.0,
       "instrument": "US 500",
       "epic": "US500"
-    },
-    {
-      "dealId": "00000000-4c89-1c87-0460-7d740055311e",
-      "direction": "SELL",
-      "size": 0.1,
-      "entryPrice": 45330.6,
-      "stopLevel": 45459.4,
-      "profitLevel": 45073.0,
-      "currentBid": 45110.8,
-      "currentAsk": 45112.8,
-      "pnl": 2178.0,
-      "instrument": "US Wall Street 30",
-      "epic": "US30"
     }
   ],
   "closedTrades": [
-    {
-      "time": "2026-03-27T14:15:25.402860+00:00",
-      "instrument": "US500",
-      "instrumentName": "S&P 500",
-      "strategy": "\u8da8\u52e2\u5c0d\u9f4a",
-      "direction": "SELL",
-      "confidence": 0.74,
-      "size": 0.28,
-      "entry_bid": 6421.8,
-      "entry_ask": 6422.2,
-      "stop_distance": 18.5,
-      "tp_distance": 55.6,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 32.8,
-      "rsi_1h": 26.2,
-      "confirmation_score": "",
-      "result": {
-        "dealReference": "o_813b80a1-225f-4627-8cbc-b49ace87b667"
-      },
-      "outcome": "CLOSED_BY_BROKER",
-      "pnl": null,
-      "close_time": "2026-03-30T17:32:29.450500+00:00",
-      "close_reason": "SL/TP_BY_BROKER"
-    },
     {
       "time": "2026-03-27T14:30:18.392431+00:00",
       "instrument": "US30",
@@ -360,6 +322,17 @@
       "outcome": "CLOSED_BY_BROKER",
       "close_time": "2026-03-30T17:32:29.450552+00:00",
       "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-03-30T17:20:20.926186+00:00",
+      "instrument": "US30",
+      "strategy": "V5_TRENDING_UP",
+      "direction": "SELL",
+      "confidence": 0.8,
+      "size": 0.1,
+      "outcome": "CLOSED_BY_BROKER",
+      "close_time": "2026-03-30T19:30:23.178768+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
     }
   ],
   "strategyStats": {
@@ -425,7 +398,7 @@
     },
     "V5_TRENDING_UP": {
       "wins": 0,
-      "losses": 4,
+      "losses": 5,
       "pnl": 0
     },
     "V5_RANGING": {
@@ -443,7 +416,10 @@
     "US500",
     "US100"
   ],
-  "actions": [],
+  "actions": [
+    "SYNC_CLOSE: US30 SELL (broker closed)",
+    "OPENED SELL US30 Conf:0.71"
+  ],
   "review": {
     "summary": "14\u52dd/39\u6557\uff0c\u52dd\u7387 26.4%\uff0c\u7d2f\u8a08\u76c8\u8667 $-96.25",
     "bestStrategy": {
