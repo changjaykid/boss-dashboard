@@ -1095,10 +1095,18 @@
                     </section>
 
                     <!-- 模擬策略績效 -->
-                    <section class="bg-gray-800/50 border border-yellow-700/30 p-3 md:p-5 rounded-xl">
+                    <section class="bg-gray-800/50 border border-yellow-700/30 p-3 md:p-5 rounded-xl mb-3">
                         <h3 class="text-sm font-medium text-purple-300 mb-2">🧠 策略績效比較</h3>
                         <div id="sim-strategies" class="space-y-2">
                             <p class="text-xs text-gray-400 text-center py-3">累積交易數據後自動產生</p>
+                        </div>
+                    </section>
+
+                    <!-- 模擬覆盤與自我優化 -->
+                    <section class="bg-gray-800/50 border border-yellow-700/30 p-3 md:p-5 rounded-xl">
+                        <h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">📊 復盤與自我優化</h3>
+                        <div id="sim-review" class="space-y-3">
+                            <p class="text-xs text-gray-500">需要更多交易數據才能產生復盤</p>
                         </div>
                     </section>
                 </div>
@@ -1424,6 +1432,18 @@ return`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div cla
 const ss=document.getElementById('sim-strategies');const sst=sim.strategyStats||{};const ssk=Object.keys(sst);
 if(ssk.length){ss.innerHTML='<div class="grid grid-cols-1 md:grid-cols-2 gap-2">'+ssk.map(k=>{const s=sst[k];const tt=s.wins+s.losses;const wr=tt>0?((s.wins/tt)*100).toFixed(1):'0';const pc=s.pnl>=0?'text-green-400':'text-red-400';
 return`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><span class="text-[10px] font-bold text-white truncate max-w-[60%]">${k}</span><span class="text-xs ${pc}">NT$${s.pnl.toFixed(0)}</span></div><div class="flex gap-3 text-[10px] text-gray-400"><span>勝:${s.wins}</span><span>敗:${s.losses}</span><span>${wr}%</span></div></div>`}).join('')+'</div>'}
+
+// 虛擬貨幣覆盤
+const srb=document.getElementById('sim-review');const srv=d.review||{};
+let srhtml='';
+if(srv['總覽']){srhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500 mb-1">📝 總結</p><p class="text-xs text-gray-200">${srv['總覽']}</p></div>`}
+if(srv['最大回撤']){srhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-red-700/30"><p class="text-[10px] text-gray-500 mb-1">📉 最大回撤</p><p class="text-xs text-red-400">${srv['最大回撤']}</p></div>`}
+if(srv['最佳策略']){srhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-green-700/30"><p class="text-[10px] text-gray-500 mb-1">🏆 最佳策略</p><p class="text-xs text-green-400">${srv['最佳策略']}</p></div>`}
+if(srv['最差策略']){srhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-red-700/30"><p class="text-[10px] text-gray-500 mb-1">⚠️ 最差策略</p><p class="text-xs text-red-400">${srv['最差策略']}</p></div>`}
+if(srv['最近覆盤']){srhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30"><p class="text-[10px] text-gray-500 mb-1">🎓 最近覆盤</p><p class="text-xs text-gray-300">${srv['最近覆盤']}</p></div>`}
+if(srv['優化建議']&&srv['優化建議'].length){srhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30"><p class="text-[10px] text-gray-500 mb-1">🔧 優化方向</p><ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">${srv['優化建議'].map(o=>'<li>'+o+'</li>').join('')}</ul></div>`}
+if(!srhtml)srhtml='<p class="text-xs text-gray-500">需要更多交易數據才能產生復盤</p>';
+srb.innerHTML=srhtml;
 }
 
 }catch(e){console.log('crypto err',e)}
