@@ -1,33 +1,33 @@
 {
-  "lastUpdate": "2026-03-31 01:50:23",
+  "lastUpdate": "2026-03-31 02:00:23",
   "currentPrice": {
     "GOLD": {
-      "bid": 4517.05,
-      "ask": 4517.55
+      "bid": 4514.84,
+      "ask": 4515.34
     },
     "EURUSDM2026": {
-      "bid": 1.14983,
-      "ask": 1.14992
+      "bid": 1.14963,
+      "ask": 1.14969
     },
     "GBPUSD": {
-      "bid": 1.31897,
-      "ask": 1.31911
+      "bid": 1.31843,
+      "ask": 1.31857
     },
     "USDJPYM2026": {
-      "bid": 158.55,
-      "ask": 158.568
+      "bid": 158.588,
+      "ask": 158.607
     },
     "US30": {
-      "bid": 45298.7,
-      "ask": 45300.7
+      "bid": 45320.8,
+      "ask": 45322.8
     },
     "US500": {
-      "bid": 6358.4,
-      "ask": 6358.8
+      "bid": 6359.6,
+      "ask": 6360.0
     },
     "US100": {
-      "bid": 23017.5,
-      "ask": 23019.3
+      "bid": 23023.0,
+      "ask": 23024.8
     }
   },
   "indicators": {
@@ -67,7 +67,7 @@
       "name": "US30",
       "regime": "TRENDING_UP",
       "pa": "",
-      "pattern": "Double Top",
+      "pattern": "None",
       "mtf_dir": "SELL",
       "ew_pos": "Unknown"
     },
@@ -89,9 +89,9 @@
     }
   },
   "account": {
-    "balance": 30806.11,
+    "balance": 30804.98,
     "realizedPnl": -96.25,
-    "unrealizedPnl": -109.0,
+    "unrealizedPnl": -170.0,
     "totalTrades": 69,
     "closedTrades": 66,
     "wins": 14,
@@ -106,9 +106,9 @@
       "entryPrice": 23006.8,
       "stopLevel": 23089.7,
       "profitLevel": 22841.0,
-      "currentBid": 23028.1,
-      "currentAsk": 23029.9,
-      "pnl": -231.0,
+      "currentBid": 23024.5,
+      "currentAsk": 23026.3,
+      "pnl": -195.0,
       "instrument": "US Tech 100",
       "epic": "US100"
     },
@@ -119,9 +119,9 @@
       "entryPrice": 6353.4,
       "stopLevel": 6371.9,
       "profitLevel": 6316.4,
-      "currentBid": 6360.4,
-      "currentAsk": 6360.8,
-      "pnl": -74.0,
+      "currentBid": 6359.8,
+      "currentAsk": 6360.2,
+      "pnl": -68.0,
       "instrument": "US 500",
       "epic": "US500"
     },
@@ -132,9 +132,9 @@
       "entryPrice": 45330.6,
       "stopLevel": 45459.4,
       "profitLevel": 45073.0,
-      "currentBid": 45309.0,
-      "currentAsk": 45311.0,
-      "pnl": 196.0,
+      "currentBid": 45319.3,
+      "currentAsk": 45321.3,
+      "pnl": 93.0,
       "instrument": "US Wall Street 30",
       "epic": "US30"
     }
