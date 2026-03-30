@@ -1239,9 +1239,11 @@ document.getElementById('header-title').textContent=titles[v]?.t||'專案';docum
 document.querySelectorAll('.section-view').forEach(e=>e.classList.remove('active'));
 const tv=document.getElementById('view-'+v);if(tv)tv.classList.add('active');else document.getElementById('view-placeholder').classList.add('active');
 if(tri){clearInterval(tri);tri=null}
-if(v==='forex'||v==='forex-auto'){loadTradingData();tri=setInterval(loadTradingData,900000);loadForexNews()}
+if(v==='forex'){loadForexNews()}
+if(v==='forex-auto'){loadTradingData();tri=setInterval(loadTradingData,900000)}
 if(v==='community'){loadSocialData()}
-if(v==='crypto'||v==='crypto-auto'){loadCryptoData();loadCryptoNews();if(!window._cri)window._cri=setInterval(loadCryptoData,900000)}
+if(v==='crypto'){loadCryptoNews()}
+if(v==='crypto-auto'){loadCryptoData();if(!window._cri)window._cri=setInterval(loadCryptoData,900000)}
 if(v==='ad-business'){loadAdBusinessData()}
 }
 
@@ -1277,7 +1279,7 @@ function renderActionSummary(containerId, raw) {
 
 async function loadForexNews() {
   try {
-    const r = await fetch('trading-data.json?t='+Date.now()); if (!r.ok) return;
+    const r = await fetch('forex-news.json?t='+Date.now()); if (!r.ok) return;
     const d = await r.json();
     if (d.news) renderNews('fx-news-list', 'fx-news-update', d.news.items, d.news.lastUpdate);
     if (d.socialNews) { renderNews('fx-social-list', 'fx-social-update', d.socialNews.items, d.socialNews.lastUpdate, 'social'); renderActionSummary('fx-social-summary', d.socialNews.actionSummary); }
@@ -1286,7 +1288,7 @@ async function loadForexNews() {
 
 async function loadCryptoNews() {
   try {
-    const r = await fetch('crypto-trading-data.json?t='+Date.now()); if (!r.ok) return;
+    const r = await fetch('crypto-news.json?t='+Date.now()); if (!r.ok) return;
     const d = await r.json();
     if (d.news) renderNews('crypto-news-list', 'crypto-news-update', d.news.items, d.news.lastUpdate);
     if (d.socialNews) { renderNews('crypto-social-list', 'crypto-social-update', d.socialNews.items, d.socialNews.lastUpdate, 'social'); renderActionSummary('crypto-social-summary', d.socialNews.actionSummary); }

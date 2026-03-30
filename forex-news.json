@@ -1,0 +1,118 @@
+{
+  "news": {
+    "items": [
+      {
+        "title": "2月外匯存底衝上6,054.87億美元 再創歷史新高",
+        "summary": "中國的外匯存底在2月達到6054.87億美元，創下歷史新高。",
+        "impact": "外匯存底的增加通常顯示出國家經濟的穩定性，可能增強人民幣的信心，對人民幣匯率形成支持。",
+        "affected": "CNYUSD",
+        "sentiment": "利多",
+        "originalIndex": 1,
+        "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxOVldWQjd5dm43TFdMRTM4MFBPNUw3ekZOS19rcTdFNEdZMGdJQk9pSXIzZktWSGMxLUpPNUNBX1RlTVhsdXVENzZESjJHUlV4NlRHNEtwUVl2VEc4bHZndXExN0loY2daSU9Qc0Z4dEE4UVBLcV93akZ1QTBrcGZndVVORnhER2dfMFlBZ0N5dXhkckhCelhlbnJnelFvWHliM1h0bkxpc0FqRnYwTXdGdEFaR1VrYXRqZlhKdndHRXN0cEkwU2puMHhhcWlzQldNVFZTS0NLQmNHMjdTTTdNaTVXOHpiTHlpc1lkNmZBVXFtOGF0akw5R0oxSmVYNzUxeGFLSmtVaFBYNGFBd0llV3dNai1VVkQxVDVHdmdvREZKRFp3N29qaw?oc=5",
+        "pubDate": "Thu, 05 Mar 2026 08:00:00 GMT"
+      },
+      {
+        "title": "外匯今日：美元與石油暴跌,川普釋出伊朗緩和訊號——市場動盪分析",
+        "summary": "美元和石油價格因川普釋出伊朗緩和訊號而暴跌。",
+        "impact": "美元的下跌可能會促使投資者轉向其他貨幣，增加市場的波動性，並可能影響美國的貿易平衡。",
+        "affected": "USDJPY, USDCAD",
+        "sentiment": "利空",
+        "originalIndex": 2,
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBqWWdscmRGX3FUOHNyT3dDSnllZG5weUJqRHVJWnlGa29UdUw2M3h5cEM5aERPc2U4S0hHSTV5VkZneEFhRUg1aXp0OXVQUFU?oc=5",
+        "pubDate": "Mon, 23 Mar 2026 22:30:46 GMT"
+      },
+      {
+        "title": "日本外匯事務負責人稱 政府將隨時採取一切可能措施應對匯率波動",
+        "summary": "日本政府表示將隨時採取措施應對匯率波動。",
+        "impact": "這一聲明可能��對日圓產生支持作用，因為市場預期政府會干預以穩定匯率。",
+        "affected": "JPYUSD",
+        "sentiment": "利多",
+        "originalIndex": 4,
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9RSU4tSVl3RHZSV282Z0dEX3JUSS1VZTRIMzNGYjB5UjRtODhCdTd0cWQxQm9wZUNhQzl4elYtZVgzWFZQY29aTGZ6RWZ3U21XSVJhTlZJWXlxQQ?oc=5",
+        "pubDate": "Mon, 23 Mar 2026 13:47:59 GMT"
+      },
+      {
+        "title": "央行出手穩匯！新台幣守住31.7元 外匯局長：最大震盪已結束",
+        "summary": "台灣央行出手干預，穩住新台幣匯率。",
+        "impact": "央行的干預行動可能會減少市場的不確定性，穩定新台幣的匯率，吸引外資流入。",
+        "affected": "TWDUSD",
+        "sentiment": "利多",
+        "originalIndex": 8,
+        "url": "https://news.google.com/rss/articles/CBMi8AJBVV95cUxOOVJrUVN4NXVHb0pxYmlXYUZjSXU5Q1dsaGMzbndtb3ZFeTY0am1uei1KT1U2amJjSkllMWVEMk9FTnlNOFlJRVIwbFp0TkdJbWJJWnNDYjZ0QzdfZnR2cmFXUnFrU1Z0YVNFVnRNWktCRzM2c0VOdExxZEJWMzh6Ml9WVmRPQU10TVdWVlNnYzIwUnVoc2tZVkNrdjNkSzVpX1V0bEpDSUwzQnBtYU9RNk9BMGgwWDBDUk0yQjNfSHZ0MV83cXZsMXh5UWROLXFUaGlWNTBWajFNeERiWFNLRGhIRlRlZEcxQ25jQ01nanlSdnpsVldxYUFfU1VycFlMcnVUMzd5VldtYlpsdnkwRlZzNDBjMnpueFYzYmdncmJxeDB6elltZnB2TzZQY1BwT1lLR0MxamVjWERRc0J3c000OVAtUWRUUlZMRHlNanFHQzdxNEtLckJVZUFZbmQtMGVmdnNNTlNNaUkwY0FCTA?oc=5",
+        "pubDate": "Thu, 05 Mar 2026 08:00:00 GMT"
+      },
+      {
+        "title": "外匯存底連3月創高 2月突破6054億美元",
+        "summary": "中國的外匯存底連續三個月創新高，2月突破6054億美元。",
+        "impact": "持續增加的外匯存底可能會增強市場對人民幣的信心，並可能對全球市場產生正面影響。",
+        "affected": "CNYUSD",
+        "sentiment": "利多",
+        "originalIndex": 10,
+        "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPTi1tNUt5N0hFMExDMjFzMFFGUTBYdXNCSHB1R0dhUnpHbXkwU2pyZ09adXlWT0RYdll0bHgtcXZ6TElMY2NWWGZmaDBGUGNfNW1PY192bzdnRzFQOXpyZVBxa3NxSWRNdWJ0Y2lpUGdCNTRCV3VNSFZOTXQ2SXlmc0RlQlEzVW5SaEFrUVR1Q012czVURURubUQxLXdxdmRRM3o2V2tDU0FoUUs0RXJjX21rVkZLOVNoN3JoMGdleGRBbE1MVXZVWlF1aUFTOUFTNzdhenVfN29iejh6Vk45eGowemtnNFU5VjhPQzJJOUhHOV9KbVlCeE5NSXZzdkl2YjlmTw?oc=5",
+        "pubDate": "Fri, 06 Mar 2026 08:00:00 GMT"
+      }
+    ],
+    "lastUpdate": "2026/3/30 下午8:55:42"
+  },
+  "socialNews": {
+    "items": [
+      {
+        "title": "第一天在虛幻引擎中創建日內交易機器人",
+        "summary": "使用虛幻引擎開發了一個日內交易機器人，命名為「D20」，目前進行紙上交易，測試其性能。具體策略和參數尚未公開，但目標是實現自動化交易。遇到的挑戰包括如何優化交易算法以適應市場波動。",
+        "impact": "可以考慮使用虛幻引擎進行交易機器人的開發，特別是在視覺化和用戶界面方面，這可以提升使用者體驗。",
+        "affected": "虛幻引擎、日內交易、交易機器人",
+        "sentiment": "中性",
+        "originalIndex": 2,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/algotrading/comments/1s5t3ig/day_one_of_creating_a_day_trading_bot_in_unreal/",
+        "pubDate": "Sat, 28 Mar 2026 06:40:47 GMT"
+      },
+      {
+        "title": "建立完整的Lopez de Prado管道",
+        "summary": "使用Rust語言構建了一個完整的Lopez de Prado交易管道，進行了442次測試，無錯誤，但在OOS測試中AUC為0.50。面臨的問題是如何提高模型的預測能力，可能需要調整參數或增加數據集。",
+        "impact": "可以借鑒其使用Rust進行高效能交易系統開發的經���，尤其是在性能測試和算法優化方面。",
+        "affected": "Rust、算法交易、性能測試、AUC",
+        "sentiment": "中性",
+        "originalIndex": 6,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/algotrading/comments/1s77s5k/built_a_full_lopez_de_prado_pipeline_in_rust_442/",
+        "pubDate": "Sun, 29 Mar 2026 21:36:46 GMT"
+      },
+      {
+        "title": "找到我的算法交易的第一絲成功",
+        "summary": "分享了自己在算法交易中首次獲利的經驗，使用了一些基本的技術指標進行交易。具體的策略和參數未詳細說明，但強調了持續調整和優化算法的重要性。",
+        "impact": "可以從中學習到持續優化算法的重要性，並考慮在初期使用簡單的技術指標來測試交易策略的有效性。",
+        "affected": "算法交易、技術指標、優化",
+        "sentiment": "利多",
+        "originalIndex": 9,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/algotrading/comments/1s7eqm7/finding_my_first_glimpse_of_success_with_my_algo/",
+        "pubDate": "Mon, 30 Mar 2026 02:45:27 GMT"
+      },
+      {
+        "title": "你們如何在交易中保持一致性？",
+        "summary": "討論了保持交易一致性的重要性，分享了幾種方法，包括設置明確的交易規則和紀律。用戶提到使用日誌記錄交易行為，以便分析和改進。",
+        "impact": "可以考慮在系統中加入交易日誌功能，幫助用戶追蹤自己的交易行為和情緒，從而提高交易的一致性。",
+        "affected": "交易紀律、交易日誌、行為分析",
+        "sentiment": "中性",
+        "originalIndex": 16,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/Trading/comments/1s7jo3f/how_did_you_guys_actually_get_consistent_in/",
+        "pubDate": "Mon, 30 Mar 2026 07:17:19 GMT"
+      },
+      {
+        "title": "你們在交易中給自己什麼懲罰？",
+        "summary": "用戶分享了在違反交易規則後給自己的懲罰措施，這些措施包括暫停交易或減少交易資金。這樣的懲罰機制有助於提高交易紀律和自我控制。",
+        "impact": "可以考慮在系統中設置懲罰機制，幫助用戶在違反交易規則時自我約束，從而提高長期交易的成功率。",
+        "affected": "交易紀律、懲罰機制、自我控制",
+        "sentiment": "中性",
+        "originalIndex": 17,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/Forex/comments/1s7ffcv/what_punishment_do_you_give_yourself_when_you/",
+        "pubDate": "Mon, 30 Mar 2026 03:19:39 GMT"
+      }
+    ],
+    "actionSummary": "🔧 可立刻測試：開發一個簡單的日誌系統，記錄每次交易的決策過程與結果，以便後續分析與優化。  \n🔧 可立刻測試：設置明確的交易規則，並在違反規則後立即執行懲罰措施，如暫停交易一週。  \n🔍 值得研究：探索使用虛幻引擎開發的日內交易機器人，評估其自動化交易的潛力。  \n⚠️ 避坑：避免依賴單一技術指標，應該結合多種指標以提高交易策略的穩定性。",
+    "lastUpdate": "2026/3/30 下午8:55:42"
+  }
+}
