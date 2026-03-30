@@ -1,17 +1,33 @@
 {
-  "lastUpdate": "2026-03-30 20:50:20",
+  "lastUpdate": "2026-03-30 21:00:22",
   "currentPrice": {
     "GOLD": {
-      "bid": 4569.7,
-      "ask": 4570.2
+      "bid": 4571.83,
+      "ask": 4572.33
     },
     "EURUSDM2026": {
-      "bid": 1.15242,
-      "ask": 1.15251
+      "bid": 1.15236,
+      "ask": 1.15245
     },
     "GBPUSD": {
-      "bid": 1.32347,
-      "ask": 1.32361
+      "bid": 1.323,
+      "ask": 1.32314
+    },
+    "USDJPYM2026": {
+      "bid": 158.374,
+      "ask": 158.395
+    },
+    "US30": {
+      "bid": 45542.1,
+      "ask": 45544.1
+    },
+    "US500": {
+      "bid": 6423.3,
+      "ask": 6423.9
+    },
+    "US100": {
+      "bid": 23330.0,
+      "ask": 23331.8
     }
   },
   "indicators": {
@@ -38,12 +54,44 @@
       "pattern": "Double Top",
       "mtf_dir": "SELL",
       "ew_pos": "Unknown"
+    },
+    "USDJPYM2026": {
+      "name": "USD/JPY",
+      "regime": "TRENDING_DOWN",
+      "pa": "",
+      "pattern": "Double Top",
+      "mtf_dir": "SELL",
+      "ew_pos": "Unknown"
+    },
+    "US30": {
+      "name": "US30",
+      "regime": "TRENDING_DOWN",
+      "pa": "",
+      "pattern": "Double Top",
+      "mtf_dir": "NONE",
+      "ew_pos": "Unknown"
+    },
+    "US500": {
+      "name": "S&P 500",
+      "regime": "TRENDING_DOWN",
+      "pa": "",
+      "pattern": "Double Top",
+      "mtf_dir": "NONE",
+      "ew_pos": "Unknown"
+    },
+    "US100": {
+      "name": "NAS100",
+      "regime": "TRENDING_DOWN",
+      "pa": "",
+      "pattern": "Double Top",
+      "mtf_dir": "NONE",
+      "ew_pos": "Unknown"
     }
   },
   "account": {
-    "balance": 30820.4,
+    "balance": 30820.42,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 11.22,
+    "unrealizedPnl": 13.31,
     "totalTrades": 59,
     "closedTrades": 53,
     "wins": 14,
@@ -58,9 +106,9 @@
       "entryPrice": 4558.25,
       "stopLevel": 4542.75,
       "profitLevel": 4586.05,
-      "currentBid": 4569.47,
-      "currentAsk": 4569.97,
-      "pnl": 11.22,
+      "currentBid": 4571.56,
+      "currentAsk": 4572.06,
+      "pnl": 13.31,
       "instrument": "Gold",
       "epic": "GOLD"
     }
