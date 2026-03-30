@@ -1,17 +1,17 @@
 {
-  "lastUpdate": "2026-03-30 19:00:21",
+  "lastUpdate": "2026-03-30 19:10:20",
   "currentPrice": {
     "GOLD": {
-      "bid": 4533.4,
-      "ask": 4533.9
+      "bid": 4535.06,
+      "ask": 4535.56
     },
     "EURUSDM2026": {
-      "bid": 1.15283,
-      "ask": 1.15289
+      "bid": 1.15303,
+      "ask": 1.15309
     },
     "GBPUSD": {
-      "bid": 1.32291,
-      "ask": 1.32305
+      "bid": 1.32371,
+      "ask": 1.32385
     }
   },
   "indicators": {
@@ -35,15 +35,15 @@
       "name": "GBP/USD",
       "regime": "TRENDING_DOWN",
       "pa": "",
-      "pattern": "None",
+      "pattern": "Double Top",
       "mtf_dir": "SELL",
       "ew_pos": "Unknown"
     }
   },
   "account": {
-    "balance": 30820.08,
+    "balance": 30820.11,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 2.02,
+    "unrealizedPnl": 4.02,
     "totalTrades": 57,
     "closedTrades": 53,
     "wins": 14,
@@ -58,9 +58,9 @@
       "entryPrice": 4530.73,
       "stopLevel": 4512.33,
       "profitLevel": 4567.63,
-      "currentBid": 4532.75,
-      "currentAsk": 4533.25,
-      "pnl": 2.02,
+      "currentBid": 4534.75,
+      "currentAsk": 4535.25,
+      "pnl": 4.02,
       "instrument": "Gold",
       "epic": "GOLD"
     }
