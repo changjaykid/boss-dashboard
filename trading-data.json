@@ -1,33 +1,33 @@
 {
-  "lastUpdate": "2026-03-31 03:40:26",
+  "lastUpdate": "2026-03-31 03:50:25",
   "currentPrice": {
     "GOLD": {
-      "bid": 4506.03,
-      "ask": 4506.53
+      "bid": 4507.3,
+      "ask": 4507.8
     },
     "EURUSDM2026": {
-      "bid": 1.14982,
-      "ask": 1.14988
+      "bid": 1.14975,
+      "ask": 1.14981
     },
     "GBPUSD": {
-      "bid": 1.31837,
-      "ask": 1.31851
+      "bid": 1.31809,
+      "ask": 1.31823
     },
     "USDJPYM2026": {
-      "bid": 158.685,
-      "ask": 158.704
+      "bid": 158.713,
+      "ask": 158.732
     },
     "US30": {
-      "bid": 45120.1,
-      "ask": 45122.1
+      "bid": 45192.5,
+      "ask": 45194.5
     },
     "US500": {
-      "bid": 6327.6,
-      "ask": 6328.0
+      "bid": 6337.2,
+      "ask": 6337.6
     },
     "US100": {
-      "bid": 22880.0,
-      "ask": 22881.8
+      "bid": 22923.7,
+      "ask": 22925.5
     }
   },
   "indicators": {
@@ -75,7 +75,7 @@
       "name": "S&P 500",
       "regime": "TRENDING_DOWN",
       "pa": "",
-      "pattern": "Double Bottom",
+      "pattern": "None",
       "mtf_dir": "SELL",
       "ew_pos": "Unknown"
     },
@@ -83,17 +83,17 @@
       "name": "NAS100",
       "regime": "TRENDING_DOWN",
       "pa": "",
-      "pattern": "Double Bottom",
+      "pattern": "None",
       "mtf_dir": "SELL",
       "ew_pos": "Unknown"
     }
   },
   "account": {
-    "balance": 30844.3,
+    "balance": 30833.95,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 1165.0,
-    "totalTrades": 70,
-    "closedTrades": 67,
+    "unrealizedPnl": 1244.0,
+    "totalTrades": 71,
+    "closedTrades": 68,
     "wins": 14,
     "losses": 39,
     "winRate": "26.4%"
@@ -106,24 +106,11 @@
       "entryPrice": 23006.8,
       "stopLevel": 23089.7,
       "profitLevel": 22841.0,
-      "currentBid": 22875.8,
-      "currentAsk": 22877.6,
-      "pnl": 1292.0,
+      "currentBid": 22901.6,
+      "currentAsk": 22903.4,
+      "pnl": 1034.0,
       "instrument": "US Tech 100",
       "epic": "US100"
-    },
-    {
-      "dealId": "00000000-4c89-4b48-0460-7d740055311e",
-      "direction": "SELL",
-      "size": 0.1,
-      "entryPrice": 45081.9,
-      "stopLevel": 45181.8,
-      "profitLevel": 44882.1,
-      "currentBid": 45119.4,
-      "currentAsk": 45121.4,
-      "pnl": -395.0,
-      "instrument": "US Wall Street 30",
-      "epic": "US30"
     },
     {
       "dealId": "00000000-4c89-20f4-0460-7d740055311e",
@@ -132,39 +119,14 @@
       "entryPrice": 6353.4,
       "stopLevel": 6371.9,
       "profitLevel": 6316.4,
-      "currentBid": 6326.2,
-      "currentAsk": 6326.6,
-      "pnl": 268.0,
+      "currentBid": 6332.0,
+      "currentAsk": 6332.4,
+      "pnl": 210.0,
       "instrument": "US 500",
       "epic": "US500"
     }
   ],
   "closedTrades": [
-    {
-      "time": "2026-03-27T14:30:18.392431+00:00",
-      "instrument": "US30",
-      "instrumentName": "US30",
-      "strategy": "\u8da8\u52e2\u5c0d\u9f4a",
-      "direction": "SELL",
-      "confidence": 0.74,
-      "size": 0.28,
-      "entry_bid": 45517.1,
-      "entry_ask": 45519.1,
-      "stop_distance": 131.4,
-      "tp_distance": 394.3,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 27.2,
-      "rsi_1h": 27.2,
-      "confirmation_score": "",
-      "result": {
-        "dealReference": "o_4ba6c72a-df82-45a6-8e57-8a6de96b08be"
-      },
-      "outcome": "LOSS",
-      "pnl": -36.79,
-      "close_time": "2026-03-27T15:15:20.014285+00:00",
-      "close_reason": "ESTIMATED"
-    },
     {
       "time": "2026-03-27T15:15:21.959289+00:00",
       "instrument": "US30",
@@ -346,6 +308,17 @@
       "outcome": "CLOSED_BY_BROKER",
       "close_time": "2026-03-30T19:30:23.178768+00:00",
       "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-03-30T19:30:24.699583+00:00",
+      "instrument": "US30",
+      "strategy": "V5_TRENDING_UP",
+      "direction": "SELL",
+      "confidence": 0.71,
+      "size": 0.1,
+      "outcome": "CLOSED_BY_BROKER",
+      "close_time": "2026-03-30T19:50:23.759751+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
     }
   ],
   "strategyStats": {
@@ -411,7 +384,7 @@
     },
     "V5_TRENDING_UP": {
       "wins": 0,
-      "losses": 5,
+      "losses": 6,
       "pnl": 0
     },
     "V5_RANGING": {
@@ -429,7 +402,10 @@
     "US500",
     "US100"
   ],
-  "actions": [],
+  "actions": [
+    "SYNC_CLOSE: US30 SELL (broker closed)",
+    "OPENED SELL US30 Conf:0.71"
+  ],
   "review": {
     "summary": "14\u52dd/39\u6557\uff0c\u52dd\u7387 26.4%\uff0c\u7d2f\u8a08\u76c8\u8667 $-96.25",
     "bestStrategy": {
