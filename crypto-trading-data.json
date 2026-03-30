@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026/3/30 上午11:15:01",
+  "lastUpdate": "2026/3/30 下午4:45:00",
   "exchange": "MAX (MaiCoin)",
   "status": "connected",
   "account": {
@@ -17,89 +17,89 @@
         "staked": "0"
       }
     ],
-    "totalValueTWD": "1.18",
+    "totalValueTWD": "1.20",
     "totalBalances": 2
   },
   "tickers": [
     {
       "market": "btctwd",
       "name": "BTC/TWD",
-      "last": "2147070",
-      "open": "2145667.2",
-      "high": "2160344.8",
+      "last": "2176455.7",
+      "open": "2144167.5",
+      "high": "2180000",
       "low": "2091379.3",
-      "vol": "14.7765",
-      "change": "0.07"
+      "vol": "17.1438",
+      "change": "1.51"
     },
     {
       "market": "ethtwd",
       "name": "ETH/TWD",
-      "last": "65105.6",
-      "open": "64537.3",
-      "high": "65450.8",
+      "last": "66350",
+      "open": "64415.6",
+      "high": "66553.2",
       "low": "62423.7",
-      "vol": "477.8207",
-      "change": "0.88"
+      "vol": "657.7343",
+      "change": "3.00"
     },
     {
       "market": "soltwd",
       "name": "SOL/TWD",
-      "last": "2660.7",
-      "open": "2660.5",
-      "high": "2687",
+      "last": "2722",
+      "open": "2654.9",
+      "high": "2722",
       "low": "2548.6",
-      "vol": "2143.673",
-      "change": "0.01"
+      "vol": "2553.035",
+      "change": "2.53"
     },
     {
       "market": "dogetwd",
       "name": "DOGE/TWD",
-      "last": "2.9539",
-      "open": "2.9339",
-      "high": "2.9745",
+      "last": "3.0119",
+      "open": "2.9363",
+      "high": "3.0119",
       "low": "2.85",
-      "vol": "1424033.6",
-      "change": "0.68"
+      "vol": "1981538.3",
+      "change": "2.57"
     },
     {
       "market": "xrptwd",
       "name": "XRP/TWD",
-      "last": "43.131",
-      "open": "42.979",
-      "high": "43.429",
+      "last": "43.851",
+      "open": "42.9",
+      "high": "43.851",
       "low": "41.8",
-      "vol": "31622.85",
-      "change": "0.35"
+      "vol": "39894.51",
+      "change": "2.22"
     },
     {
       "market": "btcusdt",
       "name": "BTC/USDT",
-      "last": "67000",
-      "open": "66800.99",
-      "high": "67428.57",
+      "last": "67747.33",
+      "open": "66750",
+      "high": "67900",
       "low": "65011.12",
-      "vol": "6.092",
-      "change": "0.30"
+      "vol": "6.2289",
+      "change": "1.49"
     },
     {
       "market": "ethusdt",
       "name": "ETH/USDT",
-      "last": "2032.89",
-      "open": "2008.82",
-      "high": "2042.85",
+      "last": "2065.62",
+      "open": "2003.71",
+      "high": "2073.94",
       "low": "1939.68",
-      "vol": "258.0754",
-      "change": "1.20"
+      "vol": "314.8977",
+      "change": "3.09"
     },
     {
       "market": "solusdt",
       "name": "SOL/USDT",
-      "last": "83.07",
-      "open": "82.78",
-      "high": "83.84",
+      "last": "84.85",
+      "open": "82.52",
+      "high": "84.85",
       "low": "79.23",
-      "vol": "378.905",
-      "change": "0.35"
+      "vol": "398.9",
+      "change": "2.82"
     }
   ],
   "openOrders": [],
@@ -115,44 +115,30 @@
     "version": 3,
     "status": "RUNNING",
     "initialCapital": 29827.766613567066,
-    "currentCapital": 29387.1,
-    "available": 5877.1,
-    "realizedPnl": -440.67,
-    "unrealizedPnl": 135.65,
-    "returnPct": -1.48,
-    "totalTrades": 5,
-    "wins": 2,
-    "losses": 3,
-    "winRate": "40.0%",
-    "maxDrawdown": 2.63,
+    "currentCapital": 29223.13,
+    "available": 19946.13,
+    "realizedPnl": -604.63,
+    "unrealizedPnl": 3.72,
+    "returnPct": -2.03,
+    "totalTrades": 8,
+    "wins": 3,
+    "losses": 5,
+    "winRate": "37.5%",
+    "maxDrawdown": 3.17,
     "positions": [
       {
-        "market": "soltwd",
-        "direction": "SELL",
-        "entryPrice": 2687,
-        "currentPrice": 2662.1,
-        "sizeTWD": 14167,
-        "pnlPct": 0.93,
-        "pnlTWD": 131.28,
+        "market": "dogetwd",
+        "direction": "BUY",
+        "entryPrice": 2.9935,
+        "currentPrice": 2.9947,
+        "sizeTWD": 9277,
+        "pnlPct": 0.04,
+        "pnlTWD": 3.72,
         "riskRewardRatio": 2.08,
-        "strategy": "日線強勢空頭+4H空頭+RSI超買+空頭(78)+EMA多頭排列",
-        "confidence": 0.64,
-        "dailyTrend": "strong_down",
-        "openTime": "2026-03-30T02:48:01.121Z"
-      },
-      {
-        "market": "btctwd",
-        "direction": "SELL",
-        "entryPrice": 2151000,
-        "currentPrice": 2149995.5,
-        "sizeTWD": 9343,
-        "pnlPct": 0.05,
-        "pnlTWD": 4.36,
-        "riskRewardRatio": 2.08,
-        "strategy": "日線強勢空頭+4H空頭+RSI高位+空頭趨勢(70)+EMA多頭排列",
-        "confidence": 0.66,
-        "dailyTrend": "strong_down",
-        "openTime": "2026-03-30T02:56:00.141Z"
+        "strategy": "日線偏多+雙RSI共振高位+EMA多頭排列+MACD雙正",
+        "confidence": 0.83,
+        "dailyTrend": "up",
+        "openTime": "2026-03-30T05:28:00.785Z"
       }
     ],
     "closedTrades": [
@@ -281,6 +267,82 @@
         "openTime": "2026-03-30T00:26:00.709Z",
         "closeTime": "2026-03-30T02:48:01.121Z",
         "outcome": "LOSS"
+      },
+      {
+        "market": "soltwd",
+        "direction": "SELL",
+        "entryPrice": 2687,
+        "exitPrice": 2673.3,
+        "sizeTWD": 14167,
+        "pnlTWD": 72.23,
+        "pnlPct": 0.51,
+        "riskRewardRatio": 2.08,
+        "reason": "TRAILING_STOP",
+        "strategy": "日線強勢空頭+4H空頭+RSI超買+空頭(78)+EMA多頭排列",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "RSI超買+空頭(78)",
+          "EMA多頭排列",
+          "MACD雙正",
+          "觸布林上軌",
+          "AI:雖然信心高，但RSI超買需謹慎。"
+        ],
+        "confidence": 0.64,
+        "openTime": "2026-03-30T02:48:01.121Z",
+        "closeTime": "2026-03-30T03:26:00.962Z",
+        "outcome": "WIN"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "entryPrice": 2151000,
+        "exitPrice": 2170000,
+        "sizeTWD": 9343,
+        "pnlTWD": -82.53,
+        "pnlPct": -0.88,
+        "riskRewardRatio": 2.08,
+        "reason": "STOP_LOSS",
+        "strategy": "日線強勢空頭+4H空頭+RSI高位+空頭趨勢(70)+EMA多頭排列",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "RSI高位+空頭趨勢(70)",
+          "EMA多頭排列",
+          "MACD雙正",
+          "觸布林上軌",
+          "shooting_star",
+          "AI:短期內仍有下行壓力，但需注意RSI高位回調風險。"
+        ],
+        "confidence": 0.66,
+        "openTime": "2026-03-30T02:56:00.141Z",
+        "closeTime": "2026-03-30T05:02:00.879Z",
+        "outcome": "LOSS"
+      },
+      {
+        "market": "soltwd",
+        "direction": "SELL",
+        "entryPrice": 2675,
+        "exitPrice": 2703.9,
+        "sizeTWD": 14224,
+        "pnlTWD": -153.67,
+        "pnlPct": -1.08,
+        "riskRewardRatio": 2.08,
+        "reason": "STOP_LOSS",
+        "strategy": "日線強勢空頭+4H空頭+RSI超買+空頭(77)+雙RSI共振高位",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "RSI超買+空頭(77)",
+          "雙RSI共振高位",
+          "EMA多頭排列",
+          "MACD雙正",
+          "AI:市場顯示強烈的空頭信號，但需注意RSI超買風險。"
+        ],
+        "confidence": 0.62,
+        "openTime": "2026-03-30T04:02:00.937Z",
+        "closeTime": "2026-03-30T08:02:00.495Z",
+        "outcome": "LOSS"
       }
     ],
     "strategyStats": {
@@ -308,127 +370,26 @@
         "wins": 0,
         "losses": 1,
         "pnl": -208.18481979936337
+      },
+      "日線強勢空頭+4H空頭+RSI超買+空頭(78)+EMA多頭排列": {
+        "wins": 1,
+        "losses": 0,
+        "pnl": 72.23219203572661
+      },
+      "日線強勢空頭+4H空頭+RSI高位+空頭趨勢(70)+EMA多頭排列": {
+        "wins": 0,
+        "losses": 1,
+        "pnl": -82.52766155276615
+      },
+      "日線強勢空頭+4H空頭+RSI超買+空頭(77)+雙RSI共振高位": {
+        "wins": 0,
+        "losses": 1,
+        "pnl": -153.67237383177618
       }
     },
-    "consecutiveLosses": 3,
+    "consecutiveLosses": 2,
     "pausedUntil": null,
     "v3StartTime": "2026-03-29T14:22:40.804Z",
-    "lastUpdate": "2026/3/30 上午11:22:06"
-  },
-  "news": {
-    "items": [
-      {
-        "title": "幣市 Q1 大幅修正比特幣重挫兩成 地緣政治與監管成關鍵阻力",
-        "summary": "比特幣在第一季遭遇重大修正，跌幅達20%。",
-        "impact": "地緣政治緊張局勢及監管政策的不確定性對市場情緒造成壓力，可能導致投資者對比特幣的信心下降，進一步影響價格走勢。",
-        "affected": "BTC",
-        "sentiment": "利空",
-        "originalIndex": 1,
-        "url": "https://news.google.com/rss/articles/CBMijgNBVV95cUxQZDgyd1g3SE5jU2c4MG1Ha2h5eC1pVkxsSGdJcmVGN2JLSXpQYTMzUkFkZkg3eVNoM2dMdTJNNWU1NEZPN3YzMFVNRVV2X1JwLWN4WFVFNzBTY1NLNDBTYi1DemFiQUx0dlBaeVlGQ1J6VEh1bkhWMGI4enFYVExBTnhwR1Y2ek9zcGZyaDZpZGlPMWcxQk5tR2lpUzBhdkMtclJUTERvZW5QNTVkbVRfOWxWa25sc0ZKT09sLW9NRlRPSUZnMWVQOUVTbVZQRWEzNXRYRkIzTzlvNGxEZXJaTmxHS01LVGtkUVdBMkJ6cTNKQmxCWER0dmZ5aXlBeFRtM3FwNVRITk9PYXdtQmdScUNkQ3hjeUNvcTNSNUN2eVFZQ1BmY0VuM0I0SGg3ckFWUEJ6TXZKYWJpZ1lRcEZrcEJmZlQ0VEJJajVvQU9wS0dFVlFaeUtvZ3Q1NVVLMDJid0taQ2VfQllxWVY4YTFGM2JEOGR6QnZUSlZQVFJuWHZSam04aGIxTlZlcXdCdw?oc=5",
-        "pubDate": "Sun, 29 Mar 2026 09:33:58 GMT"
-      },
-      {
-        "title": "關鍵地緣政治與經濟事件逼近 比特幣波動料加劇",
-        "summary": "隨著地緣政治和經濟事件的臨近，比特幣的價格波動預計將加劇。",
-        "impact": "市場對未來事件的擔憂可能導致比特幣的價格出現劇烈波動，增加交易風險。",
-        "affected": "BTC",
-        "sentiment": "利空",
-        "originalIndex": 4,
-        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5Dal9adWlOYmNoMGRJaFI2d0JWX0trU3JBcnBLbzBrVV9JaTN2R3RVX2ZfODZxVVBjdjVhZ1ZjOEtaWW9fazVQNThLODZsRFpuRGc?oc=5",
-        "pubDate": "Sun, 29 Mar 2026 10:05:00 GMT"
-      },
-      {
-        "title": "比特幣巨鯨轉移 3300 萬美元至幣安 市場憂失守 6 萬美元關卡",
-        "summary": "一位比特幣巨鯨將3300萬美元的比特幣轉移至幣安，市場對價格下跌的擔憂加劇。",
-        "impact": "巨鯨的轉移行為通常被視為市場情緒的指標，可能引發其他投資者的恐慌賣出，進一步壓低比特幣價格。",
-        "affected": "BTC",
-        "sentiment": "利空",
-        "originalIndex": 6,
-        "url": "https://news.google.com/rss/articles/CBMivwJBVV95cUxNVEtrWnBtTjNJWjVxSllGRXBGQV9pc29HR3RlbF80akdYbjBZNFVsLVAyeGdEN1F5clpvS25PbUFZamFaMTB3ZG9KYVE0Qk9BOGxhSHc5UDBXV0ZvUE90QmdYUXJVUWY2azFtTWpMTU53ZGZya3h3MkFZbWxFY3VBZFJiWnNtXzU4cWtfelBSeHoxeWpDQk1KNGR3aVd2MzdHa1ZJWmxtWWkyRFRpNkJubDd3VmhsSUZfQ09lX1YyOUJ2MUpJQ3o3b1BPNWRRd2dfMnFyd1VILWtSVkRjTVhiTDItTVVZSk5NbWVzbkEtbEU3SlR6VmVIRDFabk52d1JJcE5YNjRtcU5BN3ViUzdxeW9WRm9ud0hTQWFrWDlUQmZ3VTJ4WGJxb0dVeGFHSkFhd0s3VG5qT2Q0Y2xycmQ0?oc=5",
-        "pubDate": "Sat, 28 Mar 2026 12:10:56 GMT"
-      },
-      {
-        "title": "買房不用賣幣了！美國房貸巨頭打破傳統，比特幣可當「頭期款抵押品」",
-        "summary": "美國房貸公司允許比特幣作為頭期款的抵押品，創新金融產品的出現。",
-        "impact": "這一政策可能會吸引更多傳統投資者進入加密貨幣市場，提升比特幣的需求和價格穩定性。",
-        "affected": "BTC",
-        "sentiment": "利多",
-        "originalIndex": 5,
-        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPQlI2Y28zV2lPVzV6UExjSzM4NEl0dTA3VUNsbWtyQ2NyZEpwbG1qS1JjLVp1bzAtWTRxaHlQRE4wRU44bktCYmh5NGV4UG5fbjhmUXZBdm1wam5jaWhpWEN3bjFGbWxkbS1UazNyM2hFYUtuYl9xU2FoYVVSTGoyZXA0MA?oc=5",
-        "pubDate": "Sun, 29 Mar 2026 07:38:56 GMT"
-      },
-      {
-        "title": "BlackRock 向 Coinbase Prime 存入1.11 億美元Bitcoin 和 Ethereum，彰顯機構信心",
-        "summary": "BlackRock向Coinbase存入超過1億美元的比特幣和以太坊，顯示機構對加密市場的信心。",
-        "impact": "機構投資者的進一步參與可能會提升市場的穩定性和信心，對比特幣和以太坊的價格形成支撐。",
-        "affected": "BTC, ETH",
-        "sentiment": "利多",
-        "originalIndex": 11,
-        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE54RlZueW1SSVhMRG4yY1JZdXp2NkRxdjlZUGgxbDVONG9IQjUzQXp6TXBLZlZCaVZ1d3hXUXRBMzlwcjZPQ3c0TjRYY0VaQlU?oc=5",
-        "pubDate": "Thu, 26 Mar 2026 13:35:04 GMT"
-      }
-    ],
-    "lastUpdate": "2026/3/30 上午11:23:04"
-  },
-  "socialNews": {
-    "items": [
-      {
-        "title": "第一天創建日內交易機器人",
-        "summary": "用 Unreal Engine 開發了一個日內交易機器人，命名為「D20」，目前正在進行模擬交易，並分享了初步的交易結果和策略思路。這位用戶具體描述了如何設計機器人架構及其運行邏輯。",
-        "impact": "可以考慮使用 Unreal Engine 來開發交易機器人，並模擬不同的交易策略，進行實時測試。",
-        "affected": "Unreal Engine、模擬交易、日內交易",
-        "sentiment": "利多",
-        "originalIndex": 7,
-        "source": "Reddit",
-        "url": "https://reddit.com/r/algotrading/comments/1s5t3ig/day_one_of_creating_a_day_trading_bot_in_unreal/",
-        "pubDate": "Sat, 28 Mar 2026 06:40:47 GMT"
-      },
-      {
-        "title": "花了3.5年從零開始建立外匯算法",
-        "summary": "這位用戶分享了他從頭開始建立外匯交易算法的過程，使用 Python 編寫，並提供了具體的交易統計數據，包括勝率、最大回撤和收益率，並請求社群給予反饋。",
-        "impact": "可以參考其算法設計和回測方法，並根據其統計數據進行優化。",
-        "affected": "Python、外匯算法、回測",
-        "sentiment": "中性",
-        "originalIndex": 11,
-        "source": "Reddit",
-        "url": "https://reddit.com/r/algotrading/comments/1s5tihu/i_spent_35_years_building_a_forex_algo_from/",
-        "pubDate": "Sat, 28 Mar 2026 07:05:18 GMT"
-      },
-      {
-        "title": "動態DCA與常規DCA的回測",
-        "summary": "用戶回測了過去4年動態DCA（定期定額）與常規DCA的表現，並提供了具體的回測數據和結果，分析了兩者的優缺點。",
-        "impact": "可以將動態DCA策略應用於自動交易系統中，根據市場變化調整投資額度。",
-        "affected": "DCA、回測、策略分析",
-        "sentiment": "利多",
-        "originalIndex": 16,
-        "source": "Reddit",
-        "url": "https://reddit.com/r/Bitcoin/comments/1s7a6i6/i_backtested_dynamic_dca_vs_regular_dca_over_the/",
-        "pubDate": "Sun, 29 Mar 2026 23:16:27 GMT"
-      },
-      {
-        "title": "建立免費比特幣新聞聚合器",
-        "summary": "這位用戶開發了一個免費的比特幣新聞聚合器，使用 JavaScript 和 Node.js，並強調了無廣告、無追蹤和無Cookies的特點，分享了技術架構和實現過程。",
-        "impact": "可以考慮將新聞聚合功能整合到交易系統中，提供即時市場資訊。",
-        "affected": "JavaScript、Node.js、新聞聚合",
-        "sentiment": "中性",
-        "originalIndex": 17,
-        "source": "Reddit",
-        "url": "https://reddit.com/r/Bitcoin/comments/1s74jrf/i_built_a_free_bitcoin_news_aggregator_no_ads_no/",
-        "pubDate": "Sun, 29 Mar 2026 19:32:10 GMT"
-      },
-      {
-        "title": "比特幣牛市押注達到28個月高點",
-        "summary": "分析師指出，比特幣的牛市押注在Bitfinex達到28個月的高點，並分析了這一現象對市場的潛在影響，提供了具體的數據和市場情緒分析。",
-        "impact": "可以利用市場情緒指標來調整交易策略，增加在牛市中的投資比重。",
-        "affected": "市場情緒、比特幣、Bitfinex",
-        "sentiment": "利多",
-        "originalIndex": 23,
-        "source": "Reddit",
-        "url": "https://reddit.com/r/CryptoCurrency/comments/1s726e0/bitcoin_bullish_bets_hit_a_28month_high_on/",
-        "pubDate": "Sun, 29 Mar 2026 18:02:57 GMT"
-      }
-    ],
-    "actionSummary": "🔧 可立刻測試：實施日內交易機器人「D20」的模擬交易，觀察其策略效果並進行調整。  \n🔧 可立刻測試：利用回測結果對比動態DCA與常規DCA的表現，選擇適合的投資策略。  \n🔍 值得研究：深入分析比特幣牛市押注的市場情緒，評估其對未來價格走勢的影響。  \n⚠️ 避坑：避免過度依賴單一交易策略，應保持多元化以降低風險。",
-    "lastUpdate": "2026/3/30 上午11:23:04"
+    "lastUpdate": "2026/3/30 下午4:54:07"
   }
 }
