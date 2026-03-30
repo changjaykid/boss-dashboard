@@ -1,12 +1,62 @@
 {
-  "lastUpdate": "2026-03-30 14:50:23",
-  "currentPrice": {},
-  "indicators": {},
+  "lastUpdate": "2026-03-30 15:00:25",
+  "currentPrice": {
+    "GOLD": {
+      "bid": 4533.42,
+      "ask": 4533.92
+    },
+    "SILVER": {
+      "bid": 70.387,
+      "ask": 70.467
+    },
+    "COPPER": {
+      "bid": 5.52827,
+      "ask": 5.53099
+    },
+    "EURUSDM2026": {
+      "bid": 1.15525,
+      "ask": 1.15534
+    }
+  },
+  "indicators": {
+    "GOLD": {
+      "name": "XAUUSD",
+      "regime": "TRENDING_UP",
+      "pa": "",
+      "pattern": "None",
+      "mtf_dir": "BUY",
+      "ew_pos": "Unknown"
+    },
+    "SILVER": {
+      "name": "XAGUSD",
+      "regime": "TRENDING_UP",
+      "pa": "",
+      "pattern": "None",
+      "mtf_dir": "BUY",
+      "ew_pos": "Unknown"
+    },
+    "COPPER": {
+      "name": "\u9285",
+      "regime": "RANGING",
+      "pa": "",
+      "pattern": "Double Bottom",
+      "mtf_dir": "BUY",
+      "ew_pos": "Unknown"
+    },
+    "EURUSDM2026": {
+      "name": "EUR/USD",
+      "regime": "TRENDING_DOWN",
+      "pa": "",
+      "pattern": "Double Top",
+      "mtf_dir": "NONE",
+      "ew_pos": "Unknown"
+    }
+  },
   "account": {
     "balance": 30820.06,
     "realizedPnl": -96.25,
     "unrealizedPnl": 0,
-    "totalTrades": 56,
+    "totalTrades": 57,
     "closedTrades": 53,
     "wins": 14,
     "losses": 39,
@@ -808,5 +858,7 @@
     "OIL_CRUDE",
     "NATURALGAS"
   ],
-  "actions": []
+  "actions": [
+    "OPENED BUY GOLD Conf:0.65"
+  ]
 }
