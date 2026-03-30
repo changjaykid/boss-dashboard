@@ -109,5 +109,210 @@
       "value": "8",
       "label": "Extreme Fear"
     }
+  },
+  "simulation": {
+    "enabled": true,
+    "version": 3,
+    "status": "RUNNING",
+    "initialCapital": 29827.766613567066,
+    "currentCapital": 29387.1,
+    "available": 5877.1,
+    "realizedPnl": -440.67,
+    "unrealizedPnl": 119.11,
+    "returnPct": -1.48,
+    "totalTrades": 5,
+    "wins": 2,
+    "losses": 3,
+    "winRate": "40.0%",
+    "maxDrawdown": 2.63,
+    "positions": [
+      {
+        "market": "soltwd",
+        "direction": "SELL",
+        "entryPrice": 2687,
+        "currentPrice": 2666.3,
+        "sizeTWD": 14167,
+        "pnlPct": 0.77,
+        "pnlTWD": 109.14,
+        "riskRewardRatio": 2.08,
+        "strategy": "日線強勢空頭+4H空頭+RSI超買+空頭(78)+EMA多頭排列",
+        "confidence": 0.64,
+        "dailyTrend": "strong_down",
+        "openTime": "2026-03-30T02:48:01.121Z"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "entryPrice": 2151000,
+        "currentPrice": 2148705.4,
+        "sizeTWD": 9343,
+        "pnlPct": 0.11,
+        "pnlTWD": 9.97,
+        "riskRewardRatio": 2.08,
+        "strategy": "日線強勢空頭+4H空頭+RSI高位+空頭趨勢(70)+EMA多頭排列",
+        "confidence": 0.66,
+        "dailyTrend": "strong_down",
+        "openTime": "2026-03-30T02:56:00.141Z"
+      }
+    ],
+    "closedTrades": [
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "entryPrice": 2138926.7,
+        "exitPrice": 2136923,
+        "sizeTWD": 23862,
+        "pnlTWD": 22.35,
+        "pnlPct": 0.09,
+        "riskRewardRatio": 2.08,
+        "reason": "TIME_EXIT",
+        "strategy": "日線強勢空頭+4H空頭+EMA空頭排列+MACD雙負",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "EMA空頭排列",
+          "MACD雙負",
+          "布林擠壓",
+          "價<VWAP",
+          "strong_bear",
+          "AI:強烈的空頭信號，建議謹慎操作。"
+        ],
+        "confidence": 0.74,
+        "openTime": "2026-03-29T14:23:02.510Z",
+        "closeTime": "2026-03-29T20:20:00.648Z",
+        "outcome": "WIN"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "entryPrice": 2139398.4,
+        "exitPrice": 2109722.5,
+        "sizeTWD": 23880,
+        "pnlTWD": 331.24,
+        "pnlPct": 1.39,
+        "riskRewardRatio": 2.08,
+        "reason": "TAKE_PROFIT_STRONG",
+        "strategy": "日線強勢空頭+4H空頭+EMA空頭排列+觸布林上軌",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "EMA空頭排列",
+          "觸布林上軌",
+          "布林擠壓",
+          "AI:短期內空頭壓力強勁，但需注意RSI回升風險。"
+        ],
+        "confidence": 0.59,
+        "openTime": "2026-03-29T20:22:00.481Z",
+        "closeTime": "2026-03-29T22:44:00.826Z",
+        "outcome": "WIN"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "entryPrice": 2109785.9,
+        "exitPrice": 2126197,
+        "sizeTWD": 24145,
+        "pnlTWD": -187.81,
+        "pnlPct": -0.78,
+        "riskRewardRatio": 2.08,
+        "reason": "STOP_LOSS",
+        "strategy": "日線強勢空頭+4H空頭+雙RSI共振低位+EMA空頭排列",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "雙RSI共振低位",
+          "EMA空頭排列",
+          "MACD雙負",
+          "觸布林下軌",
+          "布林擠壓",
+          "價<VWAP",
+          "放量(102.8x)",
+          "strong_bear",
+          "AI:市場顯示強烈的空頭信號，建議謹慎操作。"
+        ],
+        "confidence": 0.8200000000000001,
+        "openTime": "2026-03-29T22:44:00.826Z",
+        "closeTime": "2026-03-29T23:02:00.281Z",
+        "outcome": "LOSS"
+      },
+      {
+        "market": "dogetwd",
+        "direction": "SELL",
+        "entryPrice": 2.904,
+        "exitPrice": 2.9522,
+        "sizeTWD": 23995,
+        "pnlTWD": -398.26,
+        "pnlPct": -1.66,
+        "riskRewardRatio": 2.08,
+        "reason": "STOP_LOSS",
+        "strategy": "日線強勢空頭+4H空頭+EMA空頭排列+放量(2.9x)",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "EMA空頭排列",
+          "放量(2.9x)",
+          "shooting_star",
+          "AI:市場顯示強烈的空頭信號，建議謹慎操作。"
+        ],
+        "confidence": 0.7100000000000001,
+        "openTime": "2026-03-29T23:02:00.281Z",
+        "closeTime": "2026-03-30T00:20:00.641Z",
+        "outcome": "LOSS"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "entryPrice": 2139240.5,
+        "exitPrice": 2158051,
+        "sizeTWD": 23676,
+        "pnlTWD": -208.18,
+        "pnlPct": -0.88,
+        "riskRewardRatio": 2.08,
+        "reason": "STOP_LOSS",
+        "strategy": "日線強勢空頭+4H空頭+EMA空頭排列+放量(1.7x)",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "EMA空頭排列",
+          "放量(1.7x)",
+          "AI:市場顯示強烈的空頭趨勢，建議謹慎操作。"
+        ],
+        "confidence": 0.55,
+        "openTime": "2026-03-30T00:26:00.709Z",
+        "closeTime": "2026-03-30T02:48:01.121Z",
+        "outcome": "LOSS"
+      }
+    ],
+    "strategyStats": {
+      "日線強勢空頭+4H空頭+EMA空頭排列+MACD雙負": {
+        "wins": 1,
+        "losses": 0,
+        "pnl": 22.3534024798533
+      },
+      "日線強勢空頭+4H空頭+EMA空頭排列+觸布林上軌": {
+        "wins": 1,
+        "losses": 0,
+        "pnl": 331.242882111157
+      },
+      "日線強勢空頭+4H空頭+雙RSI共振低位+EMA空頭排列": {
+        "wins": 0,
+        "losses": 1,
+        "pnl": -187.81337457037807
+      },
+      "日線強勢空頭+4H空頭+EMA空頭排列+放量(2.9x)": {
+        "wins": 0,
+        "losses": 1,
+        "pnl": -398.26411845730047
+      },
+      "日線強勢空頭+4H空頭+EMA空頭排列+放量(1.7x)": {
+        "wins": 0,
+        "losses": 1,
+        "pnl": -208.18481979936337
+      }
+    },
+    "consecutiveLosses": 3,
+    "pausedUntil": null,
+    "v3StartTime": "2026-03-29T14:22:40.804Z",
+    "lastUpdate": "2026/3/30 上午11:08:05"
   }
 }
