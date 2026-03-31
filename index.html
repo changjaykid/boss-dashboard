@@ -1229,7 +1229,7 @@ ${dr.hashtags?'<p class="text-[10px] text-indigo-400 mt-2">'+dr.hashtags+'</p>':
 </div>`}).join('')}
 
 // Published
-const rb=document.getElementById('social-recent');const pub=(d.published||[]).slice().sort((a,b)=>new Date(b.published_at||0)-new Date(a.published_at||0));
+const rb=document.getElementById('social-recent');const pub=d.published||[];
 if(!pub.length){rb.innerHTML='<div class="py-4 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">尚無已發佈文章</p></div>'}
 else{rb.innerHTML=pub.map(p=>`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-green-900/50 text-green-300">${p.pillar_name||''}</span><span class="text-[10px] text-gray-400">${p.published_at||''}</span></div><p class="text-[10px] text-gray-300 line-clamp-2">${(p.content||'').substring(0,100)}...</p>${p.thread_url?'<a href="'+p.thread_url+'" target="_blank" class="text-[10px] text-indigo-400 hover:underline mt-1 inline-block">查看貼文 ↗</a>':''}</div>`).join('')}
 
