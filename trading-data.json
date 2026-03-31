@@ -1,13 +1,13 @@
 {
-  "lastUpdate": "2026-03-31 09:50:21",
+  "lastUpdate": "2026-03-31 11:50:20",
   "currentPrice": {
     "GOLD": {
-      "bid": 4602.73,
-      "ask": 4603.23
+      "bid": 4553.56,
+      "ask": 4554.06
     },
     "USDJPYM2026": {
-      "bid": 158.748,
-      "ask": 158.767
+      "bid": 158.732,
+      "ask": 158.752
     }
   },
   "indicators": {
@@ -16,12 +16,12 @@
       "regime": "TRENDING_UP",
       "pa": "",
       "pattern": "None",
-      "mtf_dir": "BUY",
+      "mtf_dir": "NONE",
       "ew_pos": "Unknown"
     },
     "USDJPYM2026": {
       "name": "USD/JPY",
-      "regime": "TRENDING_DOWN",
+      "regime": "RANGING",
       "pa": "",
       "pattern": "Double Top",
       "mtf_dir": "NONE",
@@ -29,28 +29,17 @@
     }
   },
   "account": {
-    "balance": 30832.57,
+    "balance": 30832.32,
     "realizedPnl": -96.25,
     "unrealizedPnl": 0,
     "totalTrades": 72,
-    "closedTrades": 71,
+    "closedTrades": 72,
     "wins": 14,
     "losses": 39,
     "winRate": "26.4%"
   },
   "openPositions": [],
   "closedTrades": [
-    {
-      "time": "2026-03-30T07:00:24.516182+00:00",
-      "instrument": "GOLD",
-      "strategy": "V5_TRENDING_UP",
-      "direction": "BUY",
-      "confidence": 0.65,
-      "size": 0.01,
-      "outcome": "CLOSED_BY_BROKER",
-      "close_time": "2026-03-30T17:32:29.450521+00:00",
-      "close_reason": "SL/TP_BY_BROKER"
-    },
     {
       "time": "2026-03-30T11:50:21.552728+00:00",
       "instrument": "GOLD",
@@ -204,6 +193,17 @@
       "outcome": "CLOSED_BY_BROKER",
       "close_time": "2026-03-31T01:50:21.503739+00:00",
       "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-03-31T01:50:21.927009+00:00",
+      "instrument": "GOLD",
+      "strategy": "V5_TRENDING_UP",
+      "direction": "BUY",
+      "confidence": 0.69,
+      "size": 0.01,
+      "outcome": "CLOSED_BY_BROKER",
+      "close_time": "2026-03-31T03:50:20.404930+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
     }
   ],
   "strategyStats": {
@@ -269,7 +269,7 @@
     },
     "V5_TRENDING_UP": {
       "wins": 0,
-      "losses": 7,
+      "losses": 8,
       "pnl": 0
     },
     "V5_RANGING": {
@@ -288,10 +288,7 @@
     "US100"
   ],
   "actions": [
-    "SYNC_CLOSE: US100 SELL (broker closed)",
-    "SYNC_CLOSE: US500 SELL (broker closed)",
-    "SYNC_CLOSE: US30 SELL (broker closed)",
-    "OPENED BUY GOLD Conf:0.69"
+    "SYNC_CLOSE: GOLD BUY (broker closed)"
   ],
   "review": {
     "summary": "14\u52dd/39\u6557\uff0c\u52dd\u7387 26.4%\uff0c\u7d2f\u8a08\u76c8\u8667 $-96.25",
