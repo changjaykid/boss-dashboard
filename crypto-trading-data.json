@@ -1,109 +1,109 @@
 {
-  "lastUpdate": "2026/03/31 20:00:15",
+  "lastUpdate": "2026/03/31 22:00:12",
   "exchange": "MAX (MaiCoin)",
   "status": "connected",
   "account": {
-    "capital": 28674.06,
-    "realizedPnl": 0,
-    "unrealizedPnl": -54.13,
-    "netEquity": 28619.93,
-    "todayPnl": 0,
-    "weekPnl": 0,
-    "totalTrades": 0,
-    "closedTrades": 0,
+    "capital": 28349.29,
+    "realizedPnl": -324.77,
+    "unrealizedPnl": 51,
+    "netEquity": 28400.29,
+    "todayPnl": -324.77,
+    "weekPnl": -324.77,
+    "totalTrades": 1,
+    "closedTrades": 1,
     "openCount": 1,
     "wins": 0,
-    "losses": 0,
-    "winRate": "--",
+    "losses": 1,
+    "winRate": "0.0%",
     "avgWin": 0,
-    "avgLoss": 0,
+    "avgLoss": -324.77,
     "riskRewardRatio": 0,
     "maxConsecutiveWins": 0,
-    "maxConsecutiveLosses": 0,
+    "maxConsecutiveLosses": 1,
     "maxSingleWin": 0,
-    "maxSingleLoss": 0,
-    "maxDrawdown": 0
+    "maxSingleLoss": -324.77,
+    "maxDrawdown": 1.13
   },
   "tickers": [
     {
       "market": "btctwd",
       "name": "BTC/TWD",
-      "last": "2139296.1",
-      "open": "2171404.4",
+      "last": "2156177.9",
+      "open": "2164907.4",
       "high": "2195000",
       "low": "2118273",
-      "vol": "21.8689",
-      "change": "-1.48"
+      "vol": "20.6629",
+      "change": "-0.40"
     },
     {
       "market": "ethtwd",
       "name": "ETH/TWD",
-      "last": "65493.5",
-      "open": "66428.4",
+      "last": "66461.5",
+      "open": "66115.7",
       "high": "67069.4",
       "low": "64548.4",
-      "vol": "997.0122",
-      "change": "-1.41"
+      "vol": "1098.0214",
+      "change": "0.52"
     },
     {
       "market": "soltwd",
       "name": "SOL/TWD",
-      "last": "2591.2",
-      "open": "2706.7",
-      "high": "2725.7",
+      "last": "2617.4",
+      "open": "2695",
+      "high": "2719.5",
       "low": "2575",
-      "vol": "2455.913",
-      "change": "-4.27"
+      "vol": "2358.335",
+      "change": "-2.88"
     },
     {
       "market": "dogetwd",
       "name": "DOGE/TWD",
-      "last": "2.905",
-      "open": "2.98",
-      "high": "2.9925",
+      "last": "2.9347",
+      "open": "2.9774",
+      "high": "2.9905",
       "low": "2.8695",
-      "vol": "2180431.4",
-      "change": "-2.52"
+      "vol": "2803025.5",
+      "change": "-1.43"
     },
     {
       "market": "xrptwd",
       "name": "XRP/TWD",
-      "last": "42.23",
-      "open": "43.324",
-      "high": "43.523",
+      "last": "42.566",
+      "open": "43.187",
+      "high": "43.259",
       "low": "41.913",
-      "vol": "94541.94",
-      "change": "-2.53"
+      "vol": "86735.19",
+      "change": "-1.44"
     },
     {
       "market": "btcusdt",
       "name": "BTC/USDT",
-      "last": "66666",
-      "open": "67680",
+      "last": "67315.76",
+      "open": "67474.58",
       "high": "68383.83",
       "low": "66000",
-      "vol": "12.4096",
-      "change": "-1.50"
+      "vol": "7.7477",
+      "change": "-0.24"
     },
     {
       "market": "ethusdt",
       "name": "ETH/USDT",
-      "last": "2040.37",
-      "open": "2074.29",
+      "last": "2076.94",
+      "open": "2058.79",
       "high": "2090.38",
       "low": "2014.07",
-      "vol": "559.1469",
-      "change": "-1.64"
+      "vol": "543.1897",
+      "change": "0.88"
     },
     {
       "market": "solusdt",
       "name": "SOL/USDT",
-      "last": "80.56",
-      "open": "84.37",
-      "high": "84.94",
+      "last": "81.85",
+      "open": "84.01",
+      "high": "84.64",
       "low": "80.2",
-      "vol": "360.583",
-      "change": "-4.52"
+      "vol": "411.715",
+      "change": "-2.57"
     }
   ],
   "openOrders": [],
@@ -119,38 +119,68 @@
     "version": 4,
     "status": "RUNNING",
     "initialCapital": 28674.059799071925,
-    "currentCapital": 28674.06,
-    "available": 5735.06,
-    "realizedPnl": 0,
-    "unrealizedPnl": -54.13,
-    "returnPct": 0,
-    "totalTrades": 0,
+    "currentCapital": 28349.29,
+    "available": 5670.29,
+    "realizedPnl": -324.77,
+    "unrealizedPnl": 51,
+    "returnPct": -1.13,
+    "totalTrades": 1,
     "wins": 0,
-    "losses": 0,
-    "winRate": "--",
-    "maxDrawdown": 0,
+    "losses": 1,
+    "winRate": "0.0%",
+    "maxDrawdown": 1.13,
     "positions": [
+      {
+        "market": "ethusdt",
+        "direction": "BUY",
+        "entryPrice": 2072.28,
+        "currentPrice": 2076.94,
+        "sizeTWD": 22679,
+        "pnlPct": 0.22,
+        "pnlTWD": 51,
+        "riskRewardRatio": 2.08,
+        "strategy": "trend_mtf_alignment",
+        "confidence": 0.95,
+        "dailyTrend": "strong_down",
+        "openTime": "2026-03-31T13:48:00.815Z"
+      }
+    ],
+    "closedTrades": [
       {
         "market": "soltwd",
         "direction": "SELL",
         "entryPrice": 2585.1,
-        "currentPrice": 2591.2,
+        "exitPrice": 2621.7,
         "sizeTWD": 22939,
-        "pnlPct": -0.24,
-        "pnlTWD": -54.13,
+        "pnlTWD": -324.77,
+        "pnlPct": -1.42,
         "riskRewardRatio": 2.08,
+        "reason": "STOP_LOSS",
         "strategy": "trend_mtf_alignment",
+        "signals": [
+          "trend_mtf_alignment",
+          "AI:強烈的下行趨勢支持賣出信號。"
+        ],
         "confidence": 0.8,
-        "dailyTrend": "strong_down",
-        "openTime": "2026-03-31T11:23:02.674Z"
+        "openTime": "2026-03-31T11:23:02.674Z",
+        "closeTime": "2026-03-31T13:48:00.815Z",
+        "outcome": "LOSS"
       }
     ],
-    "closedTrades": [],
-    "strategyStats": {},
-    "consecutiveLosses": 0,
+    "strategyStats": {
+      "trend_mtf_alignment": {
+        "wins": 0,
+        "losses": 1,
+        "pnl": -324.77,
+        "winRate": "0.0%",
+        "riskReward": 0,
+        "rank": 1
+      }
+    },
+    "consecutiveLosses": 1,
     "pausedUntil": null,
     "v4StartTime": "2026-03-31T11:23:02.673Z",
-    "lastUpdate": "2026/03/31 20:00:15"
+    "lastUpdate": "2026/03/31 22:00:12"
   },
   "instruments": [
     "btctwd",
@@ -162,31 +192,69 @@
   ],
   "openPositions": [
     {
+      "market": "ethusdt",
+      "direction": "BUY",
+      "entryPrice": 2072.28,
+      "currentPrice": 2076.94,
+      "sizeTWD": 22679,
+      "pnlPct": 0.22,
+      "pnlTWD": 51,
+      "riskRewardRatio": 2.08,
+      "strategy": "trend_mtf_alignment",
+      "confidence": 0.95,
+      "dailyTrend": "strong_down",
+      "openTime": "2026-03-31T13:48:00.815Z"
+    }
+  ],
+  "closedTrades": [
+    {
       "market": "soltwd",
       "direction": "SELL",
       "entryPrice": 2585.1,
-      "currentPrice": 2591.2,
+      "exitPrice": 2621.7,
       "sizeTWD": 22939,
-      "pnlPct": -0.24,
-      "pnlTWD": -54.13,
+      "pnlTWD": -324.77,
+      "pnlPct": -1.42,
       "riskRewardRatio": 2.08,
+      "reason": "STOP_LOSS",
       "strategy": "trend_mtf_alignment",
+      "signals": [
+        "trend_mtf_alignment",
+        "AI:強烈的下行趨勢支持賣出信號。"
+      ],
       "confidence": 0.8,
-      "dailyTrend": "strong_down",
-      "openTime": "2026-03-31T11:23:02.674Z"
+      "openTime": "2026-03-31T11:23:02.674Z",
+      "closeTime": "2026-03-31T13:48:00.815Z",
+      "outcome": "LOSS"
     }
   ],
-  "closedTrades": [],
-  "strategyStats": {},
+  "strategyStats": {
+    "trend_mtf_alignment": {
+      "wins": 0,
+      "losses": 1,
+      "pnl": -324.77,
+      "winRate": "0.0%",
+      "riskReward": 0,
+      "rank": 1
+    }
+  },
   "review": {
-    "summary": "v4 引擎 | 0勝/0敗 | 勝率 0% | 報酬 0.00% | 15 策略模組化",
-    "bestStrategy": null,
+    "summary": "v4 引擎 | 0勝/1敗 | 勝率 0.0% | 報酬 -1.13% | 15 策略模組化",
+    "bestStrategy": {
+      "name": "trend_mtf_alignment",
+      "pnl": -324.77,
+      "wins": 0,
+      "losses": 1
+    },
     "worstStrategy": null,
-    "lessons": [],
+    "lessons": [
+      "累計 1 筆交易，勝率 0.0%",
+      "風報比偏低，需要讓獲利單跑更久",
+      "勝率偏低，但只要風報比 > 2.0 就能獲利"
+    ],
     "optimization": [],
     "strategiesUnderTest": [
       "trend_ema_cross",
-      "trend_mtf_alignment",
       "trend_momentum_chase",
       "trend_elliott_wave3",
       "trend_flag_breakout",
@@ -225,5 +293,7 @@
     "testingPhase": true
   },
   "alerts": [],
-  "actions": []
+  "actions": [
+    "調高止盈倍數或收緊止損"
+  ]
 }
