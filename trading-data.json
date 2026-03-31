@@ -1,13 +1,13 @@
 {
-  "lastUpdate": "2026-03-31 11:50:20",
+  "lastUpdate": "2026-03-31 12:00:19",
   "currentPrice": {
     "GOLD": {
-      "bid": 4553.56,
-      "ask": 4554.06
+      "bid": 4557.38,
+      "ask": 4557.88
     },
     "USDJPYM2026": {
-      "bid": 158.732,
-      "ask": 158.752
+      "bid": 158.739,
+      "ask": 158.759
     }
   },
   "indicators": {
@@ -16,7 +16,7 @@
       "regime": "TRENDING_UP",
       "pa": "",
       "pattern": "None",
-      "mtf_dir": "NONE",
+      "mtf_dir": "BUY",
       "ew_pos": "Unknown"
     },
     "USDJPYM2026": {
@@ -32,7 +32,7 @@
     "balance": 30832.32,
     "realizedPnl": -96.25,
     "unrealizedPnl": 0,
-    "totalTrades": 72,
+    "totalTrades": 73,
     "closedTrades": 72,
     "wins": 14,
     "losses": 39,
@@ -288,7 +288,7 @@
     "US100"
   ],
   "actions": [
-    "SYNC_CLOSE: GOLD BUY (broker closed)"
+    "OPENED BUY GOLD Conf:0.64"
   ],
   "review": {
     "summary": "14\u52dd/39\u6557\uff0c\u52dd\u7387 26.4%\uff0c\u7d2f\u8a08\u76c8\u8667 $-96.25",
