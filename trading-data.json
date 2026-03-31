@@ -1,13 +1,13 @@
 {
-  "lastUpdate": "2026-03-31 13:20:23",
+  "lastUpdate": "2026-03-31 13:30:19",
   "currentPrice": {
     "GOLD": {
-      "bid": 4558.3,
-      "ask": 4558.8
+      "bid": 4560.93,
+      "ask": 4561.43
     },
     "USDJPYM2026": {
-      "bid": 158.545,
-      "ask": 158.566
+      "bid": 158.613,
+      "ask": 158.636
     }
   },
   "indicators": {
@@ -29,9 +29,9 @@
     }
   },
   "account": {
-    "balance": 30832.32,
+    "balance": 30832.35,
     "realizedPnl": -96.25,
-    "unrealizedPnl": -0.2,
+    "unrealizedPnl": 2.54,
     "totalTrades": 73,
     "closedTrades": 72,
     "wins": 14,
@@ -46,9 +46,9 @@
       "entryPrice": 4558.36,
       "stopLevel": 4534.16,
       "profitLevel": 4618.96,
-      "currentBid": 4558.16,
-      "currentAsk": 4558.66,
-      "pnl": -0.2,
+      "currentBid": 4560.9,
+      "currentAsk": 4561.4,
+      "pnl": 2.54,
       "instrument": "Gold",
       "epic": "GOLD"
     }
