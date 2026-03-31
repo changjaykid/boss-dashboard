@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-03-31 17:50:21",
+  "lastUpdate": "2026-03-31 18:00:22",
   "account": {
-    "balance": 30832.32,
+    "balance": 30832.29,
     "realizedPnl": -96.25,
-    "unrealizedPnl": -0.34,
-    "netEquity": 30831.98,
+    "unrealizedPnl": -2.91,
+    "netEquity": 30829.38,
     "todayPnl": 0,
     "weekPnl": 0,
     "totalTrades": 73,
@@ -39,9 +39,9 @@
       "entryPrice": 4558.36,
       "stopLevel": 4534.16,
       "profitLevel": 4618.96,
-      "currentBid": 4558.02,
-      "currentAsk": 4558.52,
-      "pnl": -0.34,
+      "currentBid": 4555.45,
+      "currentAsk": 4555.95,
+      "pnl": -2.91,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-03-31T12:00:23.567"
@@ -514,33 +514,33 @@
   ],
   "currentPrice": {
     "GOLD": {
-      "bid": 4558.08,
-      "ask": 4558.58
+      "bid": 4555.45,
+      "ask": 4555.95
     },
     "EURUSDM2026": {
-      "bid": 1.15039,
-      "ask": 1.15045
+      "bid": 1.15051,
+      "ask": 1.1506
     },
     "GBPUSD": {
-      "bid": 1.32111,
-      "ask": 1.32125
+      "bid": 1.32138,
+      "ask": 1.32152
     }
   },
   "indicators": {
     "GOLD": {
       "name": "XAUUSD",
       "regime": "RANGING",
-      "rsi": 47.7,
-      "macd_hist": -0.3294,
-      "atr": 9.4743,
-      "bb_width": 0.0061,
-      "ema9": 4562.4401,
-      "ema21": 4563.3891
+      "rsi": 46.1,
+      "macd_hist": -1.203,
+      "atr": 9.2871,
+      "bb_width": 0.0059,
+      "ema9": 4560.5728,
+      "ema21": 4561.8844
     },
     "EURUSDM2026": {
       "name": "EUR/USD",
       "regime": "RANGING",
-      "rsi": 45.2,
+      "rsi": 46.4,
       "macd_hist": -0.0,
       "atr": 0.0006,
       "bb_width": 0.0009,
@@ -550,15 +550,17 @@
     "GBPUSD": {
       "name": "GBP/USD",
       "regime": "RANGING",
-      "rsi": 53.4,
-      "macd_hist": 0.0002,
-      "atr": 0.001,
-      "bb_width": 0.002,
-      "ema9": 1.321,
-      "ema21": 1.3207
+      "rsi": 63.7,
+      "macd_hist": 0.0001,
+      "atr": 0.0009,
+      "bb_width": 0.0019,
+      "ema9": 1.3211,
+      "ema21": 1.3208
     }
   },
   "actions": [
+    "BLOCKED: EURUSDM2026 BUY \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62",
+    "BLOCKED: GBPUSD SELL \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62",
     "BLOCKED: EURUSDM2026 SELL \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62",
     "BLOCKED: EURUSDM2026 SELL \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62"
   ]
