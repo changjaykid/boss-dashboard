@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-03-31 13:40:38",
+  "lastUpdate": "2026-03-31 13:50:18",
   "account": {
     "balance": 30832.52,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 20.27,
-    "netEquity": 30852.79,
+    "unrealizedPnl": 20.21,
+    "netEquity": 30852.73,
     "todayPnl": 0,
     "weekPnl": 0,
     "totalTrades": 73,
@@ -39,9 +39,9 @@
       "entryPrice": 4558.36,
       "stopLevel": 4534.16,
       "profitLevel": 4618.96,
-      "currentBid": 4578.63,
-      "currentAsk": 4579.13,
-      "pnl": 20.27,
+      "currentBid": 4578.57,
+      "currentAsk": 4579.07,
+      "pnl": 20.21,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-03-31T12:00:23.567"
@@ -514,57 +514,38 @@
   ],
   "currentPrice": {
     "GOLD": {
-      "bid": 4578.18,
-      "ask": 4578.68
+      "bid": 4578.48,
+      "ask": 4578.98
     },
     "USDJPYM2026": {
-      "bid": 158.619,
-      "ask": 158.639
+      "bid": 158.598,
+      "ask": 158.619
     }
   },
   "indicators": {
     "GOLD": {
       "name": "XAUUSD",
       "regime": "RANGING",
-      "rsi": 44.2,
-      "macd_hist": -2.3483,
-      "atr": 13.6882,
-      "bb_width": 0.0164,
-      "ema9": 4564.4155,
-      "ema21": 4555.6859
+      "rsi": 48.6,
+      "macd_hist": -0.5249,
+      "atr": 13.0679,
+      "bb_width": 0.0159,
+      "ema9": 4567.4098,
+      "ema21": 4558.4214
     },
     "USDJPYM2026": {
       "name": "USD/JPY",
       "regime": "RANGING",
-      "rsi": 38.1,
+      "rsi": 39.7,
       "macd_hist": -0.0059,
-      "atr": 0.0655,
-      "bb_width": 0.0022,
-      "ema9": 158.6552,
-      "ema21": 158.7189
+      "atr": 0.0622,
+      "bb_width": 0.0019,
+      "ema9": 158.6468,
+      "ema21": 158.7111
     }
   },
   "actions": [
-    "PNL_RECOVERED: US500 SELL \u2192 $0",
-    "PNL_RECOVERED: GOLD BUY \u2192 $0",
-    "PNL_RECOVERED: US500 SELL \u2192 $0",
-    "PNL_RECOVERED: GOLD BUY \u2192 $0",
-    "PNL_RECOVERED: GOLD BUY \u2192 $0",
-    "PNL_RECOVERED: GOLD BUY \u2192 $0",
-    "PNL_RECOVERED: US500 SELL \u2192 $0",
-    "PNL_RECOVERED: US100 SELL \u2192 $0",
-    "PNL_RECOVERED: US30 SELL \u2192 $0",
-    "PNL_RECOVERED: US30 SELL \u2192 $0",
-    "PNL_RECOVERED: US500 SELL \u2192 $0",
-    "PNL_RECOVERED: US100 SELL \u2192 $0",
-    "PNL_RECOVERED: GOLD BUY \u2192 $0",
-    "PNL_RECOVERED: US30 SELL \u2192 $0",
-    "PNL_RECOVERED: US100 SELL \u2192 $0",
-    "PNL_RECOVERED: US500 SELL \u2192 $0",
-    "PNL_RECOVERED: US30 SELL \u2192 $0",
-    "PNL_RECOVERED: US30 SELL \u2192 $0",
-    "PNL_RECOVERED: GOLD BUY \u2192 $0",
-    "BLOCKED: GOLD BUY \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62\u4ea4\u6613",
+    "BLOCKED: GOLD BUY \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62",
     "BLOCKED: GOLD BUY \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62",
     "BLOCKED: USDJPYM2026 SELL \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62",
     "BLOCKED: USDJPYM2026 BUY \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62"
