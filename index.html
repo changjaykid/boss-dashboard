@@ -991,78 +991,87 @@
                 </section>
             </div>
 
-            <!-- 虛擬貨幣自動交易 -->
+            <!-- 虛擬貨幣自動交易 v4 -->
             <div id="view-crypto-auto" class="section-view space-y-4 md:space-y-6">
                 <div class="flex items-center space-x-2 text-xs">
-                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-yellow-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-yellow-500"></span></span>
-                    <span class="text-gray-400">狀態：<span class="text-yellow-300">待串接 API</span></span>
+                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-green-500"></span></span>
+                    <span class="text-gray-400">狀態：<span class="text-green-300" id="ca-status">v4 運行中</span></span>
+                    <span class="text-[10px] text-gray-500 ml-2">更新：<span id="ca-last-update">--</span></span>
                 </div>
 
-                <!-- 帳戶概覽 -->
+                <!-- 帳戶總覽 (v4) -->
                 <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
                     <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">帳戶餘額</p>
-                        <p class="text-lg md:text-2xl font-bold text-white mt-0.5" id="ca-balance">--</p>
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">淨值</p>
+                        <p class="text-lg md:text-2xl font-bold text-white mt-0.5" id="ca-net-equity">--</p>
                     </div>
                     <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">已實現盈虧</p>
-                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="ca-pnl">--</p>
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">今日盈虧</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="ca-today-pnl">--</p>
                     </div>
                     <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">勝率</p>
-                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="ca-winrate">--</p>
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">本週盈虧</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="ca-week-pnl">--</p>
                     </div>
                     <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">交易筆數</p>
-                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="ca-trades">--</p>
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">最大回撤</p>
+                        <p class="text-lg md:text-2xl font-bold text-red-400 mt-0.5" id="ca-max-dd">--</p>
                     </div>
                 </div>
 
-                <!-- 持倉總覽 -->
-                <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
-                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">持倉數</p>
-                        <p class="text-lg md:text-2xl font-bold text-blue-400 mt-0.5" id="ca-open">--</p>
-                    </div>
-                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">浮動盈虧</p>
-                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="ca-unrealized">--</p>
-                    </div>
-                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">監控幣種</p>
-                        <p class="text-lg md:text-2xl font-bold text-yellow-400 mt-0.5" id="ca-coins">--</p>
-                    </div>
-                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">交易所</p>
-                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="ca-exchange">--</p>
-                    </div>
+                <!-- 完整交易統計 (v4) -->
+                <div class="grid grid-cols-3 gap-2 md:grid-cols-6 md:gap-3">
+                    <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">總交易</p><p class="text-xs font-bold text-white" id="ca-total-trades">0</p></div>
+                    <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">勝率</p><p class="text-xs font-bold text-yellow-400" id="ca-winrate">--</p></div>
+                    <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">風報比</p><p class="text-xs font-bold text-indigo-400" id="ca-rr-ratio">--</p></div>
+                    <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">平均賺</p><p class="text-xs font-bold text-green-400" id="ca-avg-win">--</p></div>
+                    <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">平均虧</p><p class="text-xs font-bold text-red-400" id="ca-avg-loss">--</p></div>
+                    <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">持倉數</p><p class="text-xs font-bold text-blue-400" id="ca-open-count">0</p></div>
+                </div>
+                <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-3">
+                    <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">最大連勝</p><p class="text-xs font-bold text-green-400" id="ca-max-consec-w">0</p></div>
+                    <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">最大連敗</p><p class="text-xs font-bold text-red-400" id="ca-max-consec-l">0</p></div>
+                    <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">單筆最大賺</p><p class="text-xs font-bold text-green-400" id="ca-max-win">--</p></div>
+                    <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">單筆最大虧</p><p class="text-xs font-bold text-red-400" id="ca-max-loss">--</p></div>
                 </div>
 
                 <!-- 幣種趨勢卡片 -->
                 <div id="ca-coin-cards" class="grid grid-cols-2 gap-2 md:grid-cols-5 md:gap-3"></div>
 
-                <!-- 當前持倉 -->
+                <!-- 當前持倉 (v4) -->
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
                     <h3 class="text-sm md:text-xl font-medium text-blue-300 mb-3">📍 當前持倉</h3>
-                    <div id="ca-positions" class="py-6 text-center border border-dashed border-gray-700 rounded-lg">
-                        <p class="text-xs text-gray-400">⏳ 等待 API 串接</p>
+                    <div id="ca-positions" class="space-y-2">
+                        <p class="text-xs text-gray-400 text-center py-3">🔍 無持倉，掃描中...</p>
                     </div>
                 </section>
 
-                <!-- 已完成交易 -->
+                <!-- 已完成交易 (v4) -->
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
-                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">📋 已完成交易</h3>
-                    <div id="ca-closed" class="py-6 text-center border border-dashed border-gray-700 rounded-lg">
-                        <p class="text-xs text-gray-400">⏳ 等待 API 串接</p>
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">📋 已完成交易（最近20筆）</h3>
+                    <div id="ca-closed" class="space-y-2">
+                        <p class="text-xs text-gray-400 text-center py-3">📭 無紀錄</p>
                     </div>
                 </section>
 
-                <!-- 策略績效 -->
+                <!-- 策略績效 (v4 排名) -->
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
-                    <h3 class="text-sm md:text-xl font-medium text-purple-300 mb-3">🧠 策略績效</h3>
-                    <div id="ca-strategy" class="py-6 text-center border border-dashed border-gray-700 rounded-lg">
-                        <p class="text-xs text-gray-400">⏳ 等待交易數據</p>
+                    <h3 class="text-sm md:text-xl font-medium text-purple-300 mb-3">🧠 策略績效（排名）</h3>
+                    <div id="ca-strategy" class="space-y-2">
+                        <p class="text-xs text-gray-400 text-center py-3">累積交易數據後自動產生</p>
                     </div>
+                </section>
+
+                <!-- 風控參數 (v4 動態) -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">⚙️ 風控參數</h3>
+                    <div id="ca-risk-params" class="grid grid-cols-2 md:grid-cols-3 gap-2"></div>
+                </section>
+
+                <!-- 異常警報 (v4 新增) -->
+                <section id="ca-alerts-section" class="bg-gray-800/50 border border-red-700/30 p-3 md:p-6 rounded-xl" style="display:none">
+                    <h3 class="text-sm md:text-xl font-medium text-red-300 mb-3">🚨 異常警報</h3>
+                    <div id="ca-alerts" class="space-y-2"></div>
                 </section>
 
                 <!-- 資金費率 & 市場情緒 -->
@@ -1078,88 +1087,13 @@
                     </div>
                 </section>
 
-                <!-- 風控 -->
-                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
-                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">⚙️ 風控參數</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">每筆風險</p><p class="text-xs font-bold text-yellow-400">2%</p></div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">最大曝險</p><p class="text-xs font-bold text-yellow-400">30%</p></div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">最大持倉</p><p class="text-xs font-bold text-yellow-400">3 筆</p></div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">止損</p><p class="text-xs font-bold text-red-400">-1.5%</p></div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">最低止盈</p><p class="text-xs font-bold text-green-400">+3%</p></div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">信心門檻</p><p class="text-xs font-bold text-yellow-400">65%</p></div>
+                <!-- 復盤與自我優化 (v4 完整) -->
+                <section class="bg-gray-800/50 border border-yellow-700/30 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">📊 復盤與自我優化</h3>
+                    <div id="ca-review" class="space-y-3">
+                        <p class="text-xs text-gray-500">需要更多交易數據才能產生復盤</p>
                     </div>
                 </section>
-
-                <!-- ========== 模擬交易區 ========== -->
-                <div class="border-t border-dashed border-yellow-600/50 pt-4 mt-4">
-                    <div class="flex items-center space-x-2 mb-4">
-                        <span class="text-lg">🎯</span>
-                        <h2 class="text-sm md:text-lg font-bold text-yellow-400">模擬交易 — 背水一戰模式</h2>
-                        <span class="px-2 py-0.5 text-[10px] rounded-full bg-yellow-900/50 text-yellow-300 border border-yellow-700/50" id="sim-status">載入中</span>
-                    </div>
-                    <p class="text-[10px] text-gray-500 mb-3">初始資金 NT$30,000 · 48小時利潤最大化 · 滾動複利 · 嚴格風控</p>
-
-                    <!-- 模擬帳戶概覽 -->
-                    <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-3 mb-3">
-                        <div class="stat-card border border-yellow-700/30 p-3 rounded-xl">
-                            <p class="text-[10px] text-gray-500">現有資本</p>
-                            <p class="text-lg font-bold text-white" id="sim-capital">--</p>
-                        </div>
-                        <div class="stat-card border border-yellow-700/30 p-3 rounded-xl">
-                            <p class="text-[10px] text-gray-500">已實現盈虧</p>
-                            <p class="text-lg font-bold text-gray-300" id="sim-pnl">--</p>
-                        </div>
-                        <div class="stat-card border border-yellow-700/30 p-3 rounded-xl">
-                            <p class="text-[10px] text-gray-500">報酬率</p>
-                            <p class="text-lg font-bold text-gray-300" id="sim-return">--</p>
-                        </div>
-                        <div class="stat-card border border-yellow-700/30 p-3 rounded-xl">
-                            <p class="text-[10px] text-gray-500">剩餘時間</p>
-                            <p class="text-lg font-bold text-orange-400" id="sim-remaining">--</p>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-3 gap-2 md:grid-cols-6 md:gap-3 mb-4">
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">總交易</p><p class="text-xs font-bold text-white" id="sim-total">0</p></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">勝</p><p class="text-xs font-bold text-green-400" id="sim-wins">0</p></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">敗</p><p class="text-xs font-bold text-red-400" id="sim-losses">0</p></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">勝率</p><p class="text-xs font-bold text-yellow-400" id="sim-winrate">--</p></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">最大回撤</p><p class="text-xs font-bold text-red-400" id="sim-drawdown">--</p></div>
-                        <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">可用資金</p><p class="text-xs font-bold text-gray-300" id="sim-available">--</p></div>
-                    </div>
-
-                    <!-- 模擬持倉 -->
-                    <section class="bg-gray-800/50 border border-yellow-700/30 p-3 md:p-5 rounded-xl mb-3">
-                        <h3 class="text-sm font-medium text-yellow-300 mb-2">📍 模擬持倉</h3>
-                        <div id="sim-positions" class="space-y-2">
-                            <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
-                        </div>
-                    </section>
-
-                    <!-- 模擬已完成交易 -->
-                    <section class="bg-gray-800/50 border border-yellow-700/30 p-3 md:p-5 rounded-xl mb-3">
-                        <h3 class="text-sm font-medium text-gray-300 mb-2">📋 模擬已完成交易（最近15筆）</h3>
-                        <div id="sim-closed" class="space-y-2">
-                            <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
-                        </div>
-                    </section>
-
-                    <!-- 模擬策略績效 -->
-                    <section class="bg-gray-800/50 border border-yellow-700/30 p-3 md:p-5 rounded-xl mb-3">
-                        <h3 class="text-sm font-medium text-purple-300 mb-2">🧠 策略績效比較</h3>
-                        <div id="sim-strategies" class="space-y-2">
-                            <p class="text-xs text-gray-400 text-center py-3">累積交易數據後自動產生</p>
-                        </div>
-                    </section>
-
-                    <!-- 模擬覆盤與自我優化 -->
-                    <section class="bg-gray-800/50 border border-yellow-700/30 p-3 md:p-5 rounded-xl">
-                        <h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">📊 復盤與自我優化</h3>
-                        <div id="sim-review" class="space-y-3">
-                            <p class="text-xs text-gray-500">需要更多交易數據才能產生復盤</p>
-                        </div>
-                    </section>
-                </div>
             </div>
 
             <!-- Placeholder -->
@@ -1177,7 +1111,7 @@
 function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('open')}
 function checkPass(){if(document.getElementById('pass-input').value==='8888'){document.getElementById('auth-overlay').style.display='none';document.getElementById('app-content').style.display='flex'}else{document.getElementById('auth-error').classList.remove('hidden')}}
 
-const titles={overview:{t:'今日管家回報',s:'隨時待命'},stocks:{t:'股票專案',s:'台股分析'},forex:{t:'外匯保證金',s:'策略分析'},'forex-auto':{t:'🤖 外匯自動交易',s:'多商品 · v4 嚴格確認模式'},crypto:{t:'虛擬貨幣',s:'加密貨幣追蹤'},'crypto-auto':{t:'🤖 虛擬貨幣自動交易',s:'MAX 交易所 · 即時監控'},'ad-business':{t:'🎯 廣告業務',s:'每日潛在客戶蒐集'},community:{t:'社群專案',s:'互動管理'},'community-ig':{t:'社群專案IG',s:'Instagram · @freeeadman'},shorts:{t:'短影音專案',s:'寵物上班去 · 規劃中'},skills:{t:'技能專案',s:'4 模型 · 23 技能'}};
+const titles={overview:{t:'今日管家回報',s:'隨時待命'},stocks:{t:'股票專案',s:'台股分析'},forex:{t:'外匯保證金',s:'策略分析'},'forex-auto':{t:'🤖 外匯自動交易',s:'多商品 · v4 嚴格確認模式'},crypto:{t:'虛擬貨幣',s:'加密貨幣追蹤'},'crypto-auto':{t:'🤖 虛擬貨幣自動交易',s:'MAX 交易所 · v4 策略模組化'},'ad-business':{t:'🎯 廣告業務',s:'每日潛在客戶蒐集'},community:{t:'社群專案',s:'互動管理'},'community-ig':{t:'社群專案IG',s:'Instagram · @freeeadman'},shorts:{t:'短影音專案',s:'寵物上班去 · 規劃中'},skills:{t:'技能專案',s:'4 模型 · 23 技能'}};
 const trendMap={'STRONG_BULL':'強勢看多 🟢','BULL':'看多 🟢','STRONG_BEAR':'強勢看空 🔴','BEAR':'看空 🔴','NEUTRAL':'盤整 ⚪'};
 function trendCN(t){return trendMap[t]||t||'--'}
 function trendColor(t){if(!t)return'text-gray-300';if(t.includes('BULL'))return'text-green-400';if(t.includes('BEAR'))return'text-red-400';return'text-gray-300'}
@@ -1409,25 +1343,34 @@ box.innerHTML=leads.map(x=>`<div class="p-3 bg-gray-800 rounded-lg border border
 }catch(e){console.log('ad biz err',e)}
 }
 
-// ========== CRYPTO AUTO TRADING ==========
+// ========== CRYPTO AUTO TRADING v4 ==========
 async function loadCryptoData(){
 try{
 const r=await fetch('crypto-trading-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
+const sim=d.simulation||{};const acct=d.account||{};
 
-// 狀態燈
-const statusEl=document.querySelector('#view-crypto-auto .text-yellow-300, #view-crypto-auto .text-green-300');
-if(statusEl){statusEl.textContent=d.status==='connected'?'已連接 MAX':'離線';statusEl.className=d.status==='connected'?'text-green-300':'text-red-300'}
+// 狀態 & 更新時間
+const stEl=document.getElementById('ca-status');
+if(stEl){stEl.textContent=sim.version?'v'+sim.version+' 運行中':'離線';stEl.className=sim.status==='RUNNING'?'text-green-300':'text-red-300'}
+const luEl=document.getElementById('ca-last-update');if(luEl)luEl.textContent=d.lastUpdate||sim.lastUpdate||'--';
 
-// 帳戶概覽
-const a=d.account||{};
-document.getElementById('ca-balance').textContent='NT$'+(a.totalValueTWD||'0');
-document.getElementById('ca-pnl').textContent='--';
-document.getElementById('ca-winrate').textContent='--';
-document.getElementById('ca-trades').textContent=(d.recentTrades||[]).length;
-document.getElementById('ca-open').textContent=(d.openOrders||[]).length;
-document.getElementById('ca-unrealized').textContent='--';
-document.getElementById('ca-coins').textContent=(d.tickers||[]).length+'個';
-document.getElementById('ca-exchange').textContent=d.exchange||'MAX';
+// 帳戶總覽 (v4)
+const ne=acct.netEquity||sim.currentCapital||0;const neEl=document.getElementById('ca-net-equity');if(neEl)neEl.textContent='NT$'+ne.toLocaleString();
+const tdp=acct.todayPnl||0;const tdEl=document.getElementById('ca-today-pnl');if(tdEl){tdEl.textContent=(tdp>=0?'+':'')+'NT$'+tdp.toFixed(0);tdEl.className='text-lg md:text-2xl font-bold mt-0.5 '+(tdp>=0?'text-green-400':'text-red-400')}
+const wkp=acct.weekPnl||0;const wkEl=document.getElementById('ca-week-pnl');if(wkEl){wkEl.textContent=(wkp>=0?'+':'')+'NT$'+wkp.toFixed(0);wkEl.className='text-lg md:text-2xl font-bold mt-0.5 '+(wkp>=0?'text-green-400':'text-red-400')}
+const ddEl=document.getElementById('ca-max-dd');if(ddEl)ddEl.textContent=(acct.maxDrawdown||sim.maxDrawdown||0).toFixed(1)+'%';
+
+// 完整交易統計
+const ttEl=document.getElementById('ca-total-trades');if(ttEl)ttEl.textContent=acct.totalTrades||sim.totalTrades||0;
+const wrEl=document.getElementById('ca-winrate');if(wrEl)wrEl.textContent=acct.winRate||sim.winRate||'--';
+const rrEl=document.getElementById('ca-rr-ratio');if(rrEl)rrEl.textContent=acct.riskRewardRatio||'--';
+const awEl=document.getElementById('ca-avg-win');if(awEl)awEl.textContent='NT$'+(acct.avgWin||0).toFixed(0);
+const alEl=document.getElementById('ca-avg-loss');if(alEl)alEl.textContent='NT$'+(acct.avgLoss||0).toFixed(0);
+const ocEl=document.getElementById('ca-open-count');if(ocEl)ocEl.textContent=acct.openCount||(sim.positions||[]).length||0;
+const mcwEl=document.getElementById('ca-max-consec-w');if(mcwEl)mcwEl.textContent=acct.maxConsecutiveWins||0;
+const mclEl=document.getElementById('ca-max-consec-l');if(mclEl)mclEl.textContent=acct.maxConsecutiveLosses||0;
+const mwEl=document.getElementById('ca-max-win');if(mwEl)mwEl.textContent='NT$'+(acct.maxSingleWin||0).toFixed(0);
+const mlEl=document.getElementById('ca-max-loss');if(mlEl)mlEl.textContent='NT$'+(acct.maxSingleLoss||0).toFixed(0);
 
 // 幣種卡片
 const cc=document.getElementById('ca-coin-cards');const tks=d.tickers||[];
@@ -1439,41 +1382,43 @@ return`<div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl">
 <div class="flex items-center justify-between mt-1">
 <span class="text-[9px] ${cc2}">${arrow} ${Math.abs(chg)}%</span>
 <span class="text-[9px] text-gray-500">Vol:${parseFloat(t.vol||0).toFixed(2)}</span>
-</div>
-<div class="text-[9px] text-gray-500 mt-0.5">H:${parseFloat(t.high||0).toLocaleString()} L:${parseFloat(t.low||0).toLocaleString()}</div>
-</div>`}).join('')}
-
-// 帳戶持幣
-const pb=document.getElementById('ca-positions');const bals=(a.balances||[]).filter(b=>parseFloat(b.available)>0||parseFloat(b.locked)>0);
-if(!bals.length){pb.innerHTML='<div class="py-6 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">💰 帳戶幾乎為空，需入金後開始交易</p></div>'}
-else{pb.innerHTML=bals.map(b=>`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
-<div class="flex items-center justify-between">
-<span class="text-xs font-bold text-white">${b.currency}</span>
-<span class="text-xs text-yellow-400">${parseFloat(b.available).toFixed(8)}</span>
-</div>
-<div class="text-[10px] text-gray-400 mt-1">鎖定: ${b.locked} | 質押: ${b.staked||'0'}</div>
-</div>`).join('')}
-
-// 已完成交易
-const tb=document.getElementById('ca-closed');const trades=(d.recentTrades||[]).slice(0,10);
-if(!trades.length){tb.innerHTML='<div class="py-6 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">📭 無近期交易</p></div>'}
-else{tb.innerHTML=trades.map(t=>{
-const side=t.side==='bid'?'BUY':'SELL';const sc=t.side==='bid'?'badge-buy':'badge-sell';
-const tm=t.createdAt?new Date(t.createdAt).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}):'--';
-return`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
-<div class="flex items-center justify-between mb-1">
-<div class="flex items-center gap-1.5">
-<span class="px-1.5 py-0.5 text-[10px] rounded-full ${sc}">${side}</span>
-<span class="text-[10px] text-white font-bold">${(t.marketName||t.market||'').toUpperCase()}</span>
-</div>
-<span class="text-xs text-yellow-400">${parseFloat(t.funds||0).toFixed(2)}</span>
-</div>
-<div class="flex flex-wrap gap-2 text-[10px] text-gray-400">
-<span>價格:${parseFloat(t.price).toLocaleString()}</span>
-<span>量:${t.volume}</span>
-<span>手續費:${parseFloat(t.fee||0).toFixed(4)} ${(t.feeCurrency||'').toUpperCase()}</span>
-<span>${tm}</span>
 </div></div>`}).join('')}
+
+// 當前持倉 (v4: 讀 simulation.positions)
+const pb=document.getElementById('ca-positions');const spos=sim.positions||d.openPositions||[];
+if(!spos.length){pb.innerHTML='<p class="text-xs text-gray-400 text-center py-3">🔍 無持倉，掃描中...</p>'}
+else{pb.innerHTML=spos.map(p=>{const pc=(p.pnlTWD||0)>=0?'text-green-400':'text-red-400';const dc=p.direction==='BUY'?'badge-buy':'badge-sell';
+const tm=p.openTime?new Date(p.openTime).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}):'';
+return`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-2"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${dc}">${p.direction}</span><span class="text-xs font-bold text-white">${(p.market||'').toUpperCase()} @ ${(p.entryPrice||0).toLocaleString()}</span></div><span class="text-sm font-bold ${pc}">${(p.pnlTWD||0)>=0?'+':''}NT$${(p.pnlTWD||0).toFixed(0)} (${(p.pnlPct||0).toFixed(2)}%)</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>倉位:NT$${p.sizeTWD||0}</span><span>信心:${((p.confidence||0)*100).toFixed(0)}%</span><span>RR:${p.riskRewardRatio||'-'}:1</span><span>現價:${(p.currentPrice||0).toLocaleString()}</span><span>${tm}</span></div><p class="text-[9px] text-indigo-400 mt-1">${p.strategy||''}</p></div>`}).join('')}
+
+// 已完成交易 (v4: 最近20筆)
+const tb=document.getElementById('ca-closed');const sts=(sim.closedTrades||d.closedTrades||[]).slice(-20);
+if(!sts.length){tb.innerHTML='<p class="text-xs text-gray-400 text-center py-3">📭 尚無已完成交易</p>'}
+else{tb.innerHTML=sts.slice().reverse().map(t=>{const dc=t.direction==='BUY'?'badge-buy':'badge-sell';const oc=t.outcome==='WIN'?'badge-win':'badge-loss';const pc=(t.pnlTWD||0)>=0?'text-green-400':'text-red-400';
+const tm=t.closeTime?new Date(t.closeTime).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}):'';
+return`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${dc}">${t.direction}</span><span class="px-1.5 py-0.5 text-[10px] rounded-full ${oc}">${t.outcome}</span><span class="text-[10px] text-white">${(t.market||'').toUpperCase()}</span></div><span class="text-xs font-bold ${pc}">${(t.pnlTWD||0)>=0?'+':''}NT$${t.pnlTWD||0}</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>${t.entryPrice||''}→${t.exitPrice||''}</span><span>${t.reason||''}</span><span>${t.pnlPct||0}%</span><span>${tm}</span></div><p class="text-[9px] text-indigo-400 mt-0.5">${t.strategy||''}</p></div>`}).join('')}
+
+// 策略績效 (v4: 排名、勝率、風報比)
+const sb=document.getElementById('ca-strategy');const sst=d.strategyStats||sim.strategyStats||{};const ssk=Object.keys(sst);
+if(ssk.length){const sorted=ssk.slice().sort((a,b)=>(sst[a].rank||99)-(sst[b].rank||99));sb.innerHTML='<div class="grid grid-cols-1 xs:grid-cols-2 gap-2">'+sorted.map(k=>{const s=sst[k];const tt=(s.wins||0)+(s.losses||0);const wr=s.winRate||(tt>0?((s.wins/tt)*100).toFixed(1)+'%':'--');const pc=(s.pnl||0)>=0?'text-green-400':'text-red-400';const rr=s.riskReward||'--';const rank=s.rank||'--';
+return`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 text-[9px] rounded-full bg-indigo-900/50 text-indigo-300 border border-indigo-700/50">#${rank}</span><span class="text-xs font-bold text-white">${k}</span></div><span class="text-[10px] ${pc}">NT$${(s.pnl||0).toFixed(0)}</span></div><div class="flex gap-3 text-[10px] text-gray-400"><span>勝:${s.wins||0}</span><span>敗:${s.losses||0}</span><span>勝率:${wr}</span><span>RR:${rr}</span></div></div>`}).join('')+'</div>'}else{sb.innerHTML='<p class="text-xs text-gray-400 text-center py-3">累積交易數據後自動產生策略比較</p>'}
+
+// 風控參數 (v4 動態)
+const rpb=document.getElementById('ca-risk-params');const rp=d.riskParams||{};
+if(rpb){const rpItems=[
+{label:'最大持倉',value:rp.maxPositions||5},
+{label:'最大曝險',value:rp.maxExposure||'80%'},
+{label:'基礎風險',value:rp.baseRisk||'1.5%'},
+{label:'止損方式',value:rp.slMethod||'ATR x 1.2'},
+{label:'最低風報比',value:rp.minRiskReward||'2.0:1'},
+{label:'移動止盈',value:rp.trailingStop||'0.5% activate'},
+{label:'模式',value:rp.mode||'simulation',highlight:true},
+{label:'測試階段',value:rp.testingPhase?'是（不暫停）':'否',highlight:rp.testingPhase},
+];rpb.innerHTML=rpItems.map(i=>`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">${i.label}</p><p class="text-xs font-bold ${i.highlight?'text-orange-400':'text-white'}">${i.value}</p></div>`).join('')}
+
+// 異常警報 (v4 新增)
+const alertSec=document.getElementById('ca-alerts-section');const alertBox=document.getElementById('ca-alerts');const alerts=d.alerts||[];
+if(alertSec&&alertBox){if(alerts.length){alertSec.style.display='';alertBox.innerHTML=alerts.map(a=>`<div class="p-2.5 bg-gray-800 rounded-lg border border-red-700/30"><p class="text-xs text-red-300">${a}</p></div>`).join('')}else{alertSec.style.display='none'}}
 
 // 市場情緒
 const fg=d.marketSentiment?.fearGreed;
@@ -1484,55 +1429,19 @@ const fv=parseInt(fg.value);
 fge.className='text-xs font-bold '+(fv<=25?'text-red-400':fv<=50?'text-orange-400':fv<=75?'text-yellow-400':'text-green-400');
 }
 
-// ========== 模擬交易區 ==========
-const sim=d.simulation;
-if(sim){
-document.getElementById('sim-status').textContent=sim.status==='RUNNING'?'🟢 運行中':'⏹️ 已結束';
-document.getElementById('sim-status').className='px-2 py-0.5 text-[10px] rounded-full border '+(sim.status==='RUNNING'?'bg-green-900/50 text-green-300 border-green-700/50':'bg-gray-700 text-gray-400 border-gray-600');
-document.getElementById('sim-capital').textContent='NT$'+sim.currentCapital.toLocaleString();
-const pnlE=document.getElementById('sim-pnl');pnlE.textContent=(sim.realizedPnl>=0?'+':'')+'NT$'+sim.realizedPnl.toLocaleString();
-pnlE.className='text-lg font-bold '+(sim.realizedPnl>=0?'text-green-400':'text-red-400');
-const retE=document.getElementById('sim-return');retE.textContent=(sim.returnPct>=0?'+':'')+sim.returnPct+'%';
-retE.className='text-lg font-bold '+(sim.returnPct>=0?'text-green-400':'text-red-400');
-document.getElementById('sim-remaining').textContent=sim.hoursRemaining+'h';
-document.getElementById('sim-total').textContent=sim.totalTrades;
-document.getElementById('sim-wins').textContent=sim.wins;
-document.getElementById('sim-losses').textContent=sim.losses;
-document.getElementById('sim-winrate').textContent=sim.winRate;
-document.getElementById('sim-drawdown').textContent=sim.maxDrawdown+'%';
-document.getElementById('sim-available').textContent='NT$'+sim.available.toLocaleString();
-
-// 持倉
-const sp=document.getElementById('sim-positions');const spos=sim.positions||[];
-if(!spos.length){sp.innerHTML='<p class="text-xs text-gray-400 text-center py-3">🔍 無持倉，掃描中...</p>'}
-else{sp.innerHTML=spos.map(p=>{const pc=p.pnlTWD>=0?'text-green-400':'text-red-400';const dc=p.direction==='BUY'?'badge-buy':'badge-sell';
-const tm=p.openTime?new Date(p.openTime).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}):'';
-return`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-2"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${dc}">${p.direction}</span><span class="text-xs font-bold text-white">${p.market.toUpperCase()} @ ${p.entryPrice.toLocaleString()}</span></div><span class="text-sm font-bold ${pc}">${p.pnlTWD>=0?'+':''}NT$${(p.pnlTWD||0).toFixed(0)} (${(p.pnlPct||0).toFixed(2)}%)</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>倉位:NT$${p.sizeTWD}</span><span>信心:${(p.confidence*100).toFixed(0)}%</span><span>現價:${(p.currentPrice||0).toLocaleString()}</span><span>${tm}</span></div><p class="text-[9px] text-indigo-400 mt-1">${p.strategy}</p></div>`}).join('')}
-
-// 已完成
-const sc=document.getElementById('sim-closed');const sts=sim.closedTrades||[];
-if(!sts.length){sc.innerHTML='<p class="text-xs text-gray-400 text-center py-3">📭 尚無已完成交易</p>'}
-else{sc.innerHTML=sts.slice().reverse().map(t=>{const dc=t.direction==='BUY'?'badge-buy':'badge-sell';const oc=t.outcome==='WIN'?'badge-win':'badge-loss';const pc=t.pnlTWD>=0?'text-green-400':'text-red-400';
-const tm=t.closeTime?new Date(t.closeTime).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}):'';
-return`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${dc}">${t.direction}</span><span class="px-1.5 py-0.5 text-[10px] rounded-full ${oc}">${t.outcome}</span><span class="text-[10px] text-white">${t.market.toUpperCase()}</span></div><span class="text-xs font-bold ${pc}">${t.pnlTWD>=0?'+':''}NT$${t.pnlTWD}</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>${t.entryPrice}→${t.exitPrice}</span><span>${t.reason}</span><span>${t.pnlPct}%</span><span>${tm}</span></div><p class="text-[9px] text-indigo-400 mt-0.5">${t.strategy}</p></div>`}).join('')}
-
-// 策略績效
-const ss=document.getElementById('sim-strategies');const sst=sim.strategyStats||{};const ssk=Object.keys(sst);
-if(ssk.length){ss.innerHTML='<div class="grid grid-cols-1 md:grid-cols-2 gap-2">'+ssk.map(k=>{const s=sst[k];const tt=s.wins+s.losses;const wr=tt>0?((s.wins/tt)*100).toFixed(1):'0';const pc=s.pnl>=0?'text-green-400':'text-red-400';
-return`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><span class="text-[10px] font-bold text-white truncate max-w-[60%]">${k}</span><span class="text-xs ${pc}">NT$${s.pnl.toFixed(0)}</span></div><div class="flex gap-3 text-[10px] text-gray-400"><span>勝:${s.wins}</span><span>敗:${s.losses}</span><span>${wr}%</span></div></div>`}).join('')+'</div>'}
-
-// 虛擬貨幣覆盤
-const srb=document.getElementById('sim-review');const srv=d.review||{};
-let srhtml='';
-if(srv['總覽']){srhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500 mb-1">📝 總結</p><p class="text-xs text-gray-200">${srv['總覽']}</p></div>`}
-if(srv['最大回撤']){srhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-red-700/30"><p class="text-[10px] text-gray-500 mb-1">📉 最大回撤</p><p class="text-xs text-red-400">${srv['最大回撤']}</p></div>`}
-if(srv['最佳策略']){srhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-green-700/30"><p class="text-[10px] text-gray-500 mb-1">🏆 最佳策略</p><p class="text-xs text-green-400">${srv['最佳策略']}</p></div>`}
-if(srv['最差策略']){srhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-red-700/30"><p class="text-[10px] text-gray-500 mb-1">⚠️ 最差策略</p><p class="text-xs text-red-400">${srv['最差策略']}</p></div>`}
-if(srv['最近覆盤']){srhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30"><p class="text-[10px] text-gray-500 mb-1">🎓 最近覆盤</p><p class="text-xs text-gray-300">${srv['最近覆盤']}</p></div>`}
-if(srv['優化建議']&&srv['優化建議'].length){srhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30"><p class="text-[10px] text-gray-500 mb-1">🔧 優化方向</p><ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">${srv['優化建議'].map(o=>'<li>'+o+'</li>').join('')}</ul></div>`}
-if(!srhtml)srhtml='<p class="text-xs text-gray-500">需要更多交易數據才能產生復盤</p>';
-srb.innerHTML=srhtml;
-}
+// 復盤與自我優化 (v4 完整)
+const rb=document.getElementById('ca-review');const rv=d.review||{};
+let rhtml='';
+if(rv.summary){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500 mb-1">📝 總結</p><p class="text-xs text-gray-200">${rv.summary}</p></div>`}
+if(rv.bestStrategy){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-green-700/30"><p class="text-[10px] text-gray-500 mb-1">🏆 最佳策略</p><p class="text-xs text-green-400">${rv.bestStrategy.name} — 盈虧 NT$${rv.bestStrategy.pnl}（勝${rv.bestStrategy.wins} 敗${rv.bestStrategy.losses}）</p></div>`}
+if(rv.worstStrategy){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-red-700/30"><p class="text-[10px] text-gray-500 mb-1">⚠️ 最差策略</p><p class="text-xs text-red-400">${rv.worstStrategy.name} — 盈虧 NT$${rv.worstStrategy.pnl}（勝${rv.worstStrategy.wins} 敗${rv.worstStrategy.losses}）</p></div>`}
+if(rv.lessons&&rv.lessons.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30"><p class="text-[10px] text-gray-500 mb-1">🎓 系統學到了什麼</p><ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">${rv.lessons.map(l=>'<li>'+l+'</li>').join('')}</ul></div>`}
+if(rv.optimization&&rv.optimization.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30"><p class="text-[10px] text-gray-500 mb-1">🔧 優化方向</p><ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">${rv.optimization.map(o=>'<li>'+o+'</li>').join('')}</ul></div>`}
+if(rv.strategiesUnderTest&&rv.strategiesUnderTest.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-blue-700/30"><p class="text-[10px] text-gray-500 mb-1">🧪 測試中策略</p><div class="flex flex-wrap gap-1.5 mt-1">${rv.strategiesUnderTest.map(s=>'<span class="px-1.5 py-0.5 text-[9px] rounded-full bg-blue-900/50 text-blue-300 border border-blue-700/50">'+s+'</span>').join('')}</div></div>`}
+if(rv.recentChanges&&rv.recentChanges.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-cyan-700/30"><p class="text-[10px] text-gray-500 mb-1">📝 最近變更</p><ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">${rv.recentChanges.map(c=>'<li>'+c+'</li>').join('')}</ul></div>`}
+if(rv.nextSteps&&rv.nextSteps.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-green-700/30"><p class="text-[10px] text-gray-500 mb-1">🎯 下一步</p><ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">${rv.nextSteps.map(s=>'<li>'+s+'</li>').join('')}</ul></div>`}
+if(!rhtml)rhtml='<p class="text-xs text-gray-500">需要更多交易數據才能產生復盤</p>';
+rb.innerHTML=rhtml;
 
 }catch(e){console.log('crypto err',e)}
 }
