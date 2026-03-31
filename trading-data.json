@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-01 07:20:22",
+  "lastUpdate": "2026-04-01 07:30:23",
   "account": {
-    "balance": 30947.21,
+    "balance": 30952.76,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 9588.09,
-    "netEquity": 40535.3,
+    "unrealizedPnl": 10132.6,
+    "netEquity": 41085.36,
     "todayPnl": 0,
     "weekPnl": 0,
     "totalTrades": 100,
@@ -39,9 +39,9 @@
       "entryPrice": 6489.4,
       "stopLevel": 6457.2,
       "profitLevel": 6553.9,
-      "currentBid": 6529.9,
-      "currentAsk": 6530.5,
-      "pnl": 405.0,
+      "currentBid": 6531.6,
+      "currentAsk": 6532.2,
+      "pnl": 422.0,
       "instrument": "US 500",
       "epic": "US500",
       "createdDate": "2026-04-01T00:40:28.184"
@@ -53,9 +53,9 @@
       "entryPrice": 6488.2,
       "stopLevel": 6462.4,
       "profitLevel": 6552.7,
-      "currentBid": 6529.9,
-      "currentAsk": 6530.5,
-      "pnl": 417.0,
+      "currentBid": 6531.6,
+      "currentAsk": 6532.2,
+      "pnl": 434.0,
       "instrument": "US 500",
       "epic": "US500",
       "createdDate": "2026-04-01T00:40:27.821"
@@ -67,9 +67,9 @@
       "entryPrice": 4666.94,
       "stopLevel": 4646.34,
       "profitLevel": 4744.84,
-      "currentBid": 4673.83,
-      "currentAsk": 4674.33,
-      "pnl": 6.89,
+      "currentBid": 4683.0,
+      "currentAsk": 4683.5,
+      "pnl": 16.06,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-01T02:20:25.767"
@@ -81,9 +81,9 @@
       "entryPrice": 46079.7,
       "stopLevel": 45883.2,
       "profitLevel": 46417.9,
-      "currentBid": 46306.3,
-      "currentAsk": 46308.3,
-      "pnl": 2266.0,
+      "currentBid": 46318.5,
+      "currentAsk": 46320.5,
+      "pnl": 2388.0,
       "instrument": "US Wall Street 30",
       "epic": "US30",
       "createdDate": "2026-04-01T00:40:29.294"
@@ -95,9 +95,9 @@
       "entryPrice": 4667.25,
       "stopLevel": 4641.55,
       "profitLevel": 4718.75,
-      "currentBid": 4673.83,
-      "currentAsk": 4674.33,
-      "pnl": 6.58,
+      "currentBid": 4683.0,
+      "currentAsk": 4683.5,
+      "pnl": 15.75,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-01T02:20:24.778"
@@ -109,9 +109,9 @@
       "entryPrice": 4667.21,
       "stopLevel": 4646.61,
       "profitLevel": 4718.71,
-      "currentBid": 4673.83,
-      "currentAsk": 4674.33,
-      "pnl": 6.62,
+      "currentBid": 4683.0,
+      "currentAsk": 4683.5,
+      "pnl": 15.79,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-01T02:20:24.417"
@@ -123,9 +123,9 @@
       "entryPrice": 46101.7,
       "stopLevel": 45905.2,
       "profitLevel": 46593.0,
-      "currentBid": 46306.3,
-      "currentAsk": 46308.3,
-      "pnl": 2046.0,
+      "currentBid": 46318.5,
+      "currentAsk": 46320.5,
+      "pnl": 2168.0,
       "instrument": "US Wall Street 30",
       "epic": "US30",
       "createdDate": "2026-04-01T00:40:26.638"
@@ -137,9 +137,9 @@
       "entryPrice": 46095.2,
       "stopLevel": 45849.5,
       "profitLevel": 46586.5,
-      "currentBid": 46306.3,
-      "currentAsk": 46308.3,
-      "pnl": 2111.0,
+      "currentBid": 46318.5,
+      "currentAsk": 46320.5,
+      "pnl": 2233.0,
       "instrument": "US Wall Street 30",
       "epic": "US30",
       "createdDate": "2026-04-01T00:40:27.046"
@@ -151,9 +151,9 @@
       "entryPrice": 23548.5,
       "stopLevel": 23407.4,
       "profitLevel": 23830.6,
-      "currentBid": 23780.8,
-      "currentAsk": 23782.6,
-      "pnl": 2323.0,
+      "currentBid": 23792.5,
+      "currentAsk": 23794.3,
+      "pnl": 2440.0,
       "instrument": "US Tech 100",
       "epic": "US100",
       "createdDate": "2026-04-01T00:40:28.592"
@@ -695,23 +695,24 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4673.93,
-      "ask": 4674.43
+      "bid": 4683.27,
+      "ask": 4683.77
     }
   },
   "indicators": {
     "GOLD": {
       "name": "XAUUSD",
       "regime": "RANGING",
-      "rsi": 55.5,
-      "macd_hist": -1.6556,
-      "atr": 13.6757,
-      "bb_width": 0.0065,
-      "ema9": 4675.0297,
-      "ema21": 4663.9579
+      "rsi": 63.2,
+      "macd_hist": -0.7959,
+      "atr": 13.5964,
+      "bb_width": 0.0063,
+      "ema9": 4677.2803,
+      "ema21": 4665.6076
     }
   },
   "actions": [
-    "BLOCKED: GOLD BUY \u2014 UTC 22:00-00:00 \u7981\u6b62\u958b\u65b0\u5009"
+    "BLOCKED: GOLD BUY \u2014 UTC 22:00-00:00 \u7981\u6b62\u958b\u65b0\u5009",
+    "BLOCKED: GOLD SELL \u2014 UTC 22:00-00:00 \u7981\u6b62\u958b\u65b0\u5009"
   ]
 }
