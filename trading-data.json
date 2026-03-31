@@ -1,120 +1,45 @@
 {
-  "lastUpdate": "2026-03-31 05:46:32",
-  "currentPrice": {},
-  "indicators": {},
+  "lastUpdate": "2026-03-31 09:50:21",
+  "currentPrice": {
+    "GOLD": {
+      "bid": 4602.73,
+      "ask": 4603.23
+    },
+    "USDJPYM2026": {
+      "bid": 158.748,
+      "ask": 158.767
+    }
+  },
+  "indicators": {
+    "GOLD": {
+      "name": "XAUUSD",
+      "regime": "TRENDING_UP",
+      "pa": "",
+      "pattern": "None",
+      "mtf_dir": "BUY",
+      "ew_pos": "Unknown"
+    },
+    "USDJPYM2026": {
+      "name": "USD/JPY",
+      "regime": "TRENDING_DOWN",
+      "pa": "",
+      "pattern": "Double Top",
+      "mtf_dir": "NONE",
+      "ew_pos": "Unknown"
+    }
+  },
   "account": {
-    "balance": 30836.06,
+    "balance": 30832.57,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 1312.0,
-    "totalTrades": 71,
-    "closedTrades": 68,
+    "unrealizedPnl": 0,
+    "totalTrades": 72,
+    "closedTrades": 71,
     "wins": 14,
     "losses": 39,
     "winRate": "26.4%"
   },
-  "openPositions": [
-    {
-      "dealId": "00000000-4c89-1ff1-0460-7d740055311e",
-      "direction": "SELL",
-      "size": 0.1,
-      "entryPrice": 23006.8,
-      "stopLevel": 23089.7,
-      "profitLevel": 22841.0,
-      "currentBid": 22914.4,
-      "currentAsk": 22916.2,
-      "pnl": 906.0,
-      "instrument": "US Tech 100",
-      "epic": "US100"
-    },
-    {
-      "dealId": "00000000-4c89-50cb-0460-7d740055311e",
-      "direction": "SELL",
-      "size": 0.1,
-      "entryPrice": 45199.6,
-      "stopLevel": 45306.8,
-      "profitLevel": 44829.4,
-      "currentBid": 45173.2,
-      "currentAsk": 45175.2,
-      "pnl": 244.0,
-      "instrument": "US Wall Street 30",
-      "epic": "US30"
-    },
-    {
-      "dealId": "00000000-4c89-20f4-0460-7d740055311e",
-      "direction": "SELL",
-      "size": 0.1,
-      "entryPrice": 6353.4,
-      "stopLevel": 6371.9,
-      "profitLevel": 6316.4,
-      "currentBid": 6336.6,
-      "currentAsk": 6337.2,
-      "pnl": 162.0,
-      "instrument": "US 500",
-      "epic": "US500"
-    }
-  ],
+  "openPositions": [],
   "closedTrades": [
-    {
-      "time": "2026-03-27T15:15:21.959289+00:00",
-      "instrument": "US30",
-      "instrumentName": "US30",
-      "strategy": "\u8da8\u52e2\u5c0d\u9f4a",
-      "direction": "SELL",
-      "confidence": 0.77,
-      "size": 0.42,
-      "entry_bid": 45589.1,
-      "entry_ask": 45591.1,
-      "stop_distance": 132.5,
-      "tp_distance": 397.5,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 32.0,
-      "rsi_1h": 23.9,
-      "confirmation_score": "",
-      "result": {
-        "dealReference": "o_a0e5d441-3bc5-486b-a764-7a5aecc538bc"
-      },
-      "outcome": "LOSS",
-      "pnl": -55.65,
-      "close_time": "2026-03-27T15:30:20.066383+00:00",
-      "close_reason": "ESTIMATED"
-    },
-    {
-      "time": "2026-03-27T15:15:22.339209+00:00",
-      "instrument": "GOLD",
-      "instrumentName": "XAUUSD",
-      "strategy": "\u8da8\u52e2\u5c0d\u9f4a",
-      "direction": "BUY",
-      "confidence": 0.74,
-      "size": 0.03,
-      "entry_bid": 4527.33,
-      "entry_ask": 4527.83,
-      "stop_distance": 29.3,
-      "tp_distance": 87.8,
-      "trend_1h": "STRONG_BULL",
-      "trend_15m": "STRONG_BULL",
-      "rsi_15m": 85.4,
-      "rsi_1h": 74.8,
-      "confirmation_score": "",
-      "result": {
-        "dealReference": "o_159a0071-4d6c-4112-8716-388203bcccc2"
-      },
-      "outcome": "CLOSED_BY_BROKER",
-      "pnl": null,
-      "close_time": "2026-03-30T17:32:29.450511+00:00",
-      "close_reason": "SL/TP_BY_BROKER"
-    },
-    {
-      "time": "2026-03-27T15:45:25.497710+00:00",
-      "instrument": "US500",
-      "strategy": "V5_TRENDING_DOWN",
-      "direction": "SELL",
-      "confidence": 0.75,
-      "size": 0.1,
-      "outcome": "CLOSED_BY_BROKER",
-      "close_time": "2026-03-30T17:32:29.450517+00:00",
-      "close_reason": "SL/TP_BY_BROKER"
-    },
     {
       "time": "2026-03-30T07:00:24.516182+00:00",
       "instrument": "GOLD",
@@ -237,6 +162,28 @@
       "close_reason": "SL/TP_BY_BROKER"
     },
     {
+      "time": "2026-03-30T17:30:22.598649+00:00",
+      "instrument": "US100",
+      "strategy": "V5_TRENDING_DOWN",
+      "direction": "SELL",
+      "confidence": 0.65,
+      "size": 0.1,
+      "outcome": "CLOSED_BY_BROKER",
+      "close_time": "2026-03-31T01:50:21.503724+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-03-30T17:32:30.999475+00:00",
+      "instrument": "US500",
+      "strategy": "V5_RANGING",
+      "direction": "SELL",
+      "confidence": 0.65,
+      "size": 0.1,
+      "outcome": "CLOSED_BY_BROKER",
+      "close_time": "2026-03-31T01:50:21.503733+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
       "time": "2026-03-30T19:30:24.699583+00:00",
       "instrument": "US30",
       "strategy": "V5_TRENDING_UP",
@@ -245,6 +192,17 @@
       "size": 0.1,
       "outcome": "CLOSED_BY_BROKER",
       "close_time": "2026-03-30T19:50:23.759751+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-03-30T19:50:25.506771+00:00",
+      "instrument": "US30",
+      "strategy": "V5_TRENDING_UP",
+      "direction": "SELL",
+      "confidence": 0.71,
+      "size": 0.1,
+      "outcome": "CLOSED_BY_BROKER",
+      "close_time": "2026-03-31T01:50:21.503739+00:00",
       "close_reason": "SL/TP_BY_BROKER"
     }
   ],
@@ -306,17 +264,17 @@
     },
     "V5_TRENDING_DOWN": {
       "wins": 0,
-      "losses": 3,
+      "losses": 4,
       "pnl": 0
     },
     "V5_TRENDING_UP": {
       "wins": 0,
-      "losses": 6,
+      "losses": 7,
       "pnl": 0
     },
     "V5_RANGING": {
       "wins": 0,
-      "losses": 4,
+      "losses": 5,
       "pnl": 0
     }
   },
@@ -329,7 +287,12 @@
     "US500",
     "US100"
   ],
-  "actions": [],
+  "actions": [
+    "SYNC_CLOSE: US100 SELL (broker closed)",
+    "SYNC_CLOSE: US500 SELL (broker closed)",
+    "SYNC_CLOSE: US30 SELL (broker closed)",
+    "OPENED BUY GOLD Conf:0.69"
+  ],
   "review": {
     "summary": "14\u52dd/39\u6557\uff0c\u52dd\u7387 26.4%\uff0c\u7d2f\u8a08\u76c8\u8667 $-96.25",
     "bestStrategy": {
