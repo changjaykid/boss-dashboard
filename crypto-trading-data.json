@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026/3/31 上午3:30:01",
+  "lastUpdate": "2026/3/31 上午3:45:00",
   "exchange": "MAX (MaiCoin)",
   "status": "connected",
   "account": {
@@ -24,52 +24,52 @@
     {
       "market": "btctwd",
       "name": "BTC/TWD",
-      "last": "2125308.9",
-      "open": "2132574.9",
+      "last": "2124280.6",
+      "open": "2131035",
       "high": "2185714.2",
       "low": "2091379.3",
-      "vol": "22.8925",
-      "change": "-0.34"
+      "vol": "23.0863",
+      "change": "-0.32"
     },
     {
       "market": "ethtwd",
       "name": "ETH/TWD",
-      "last": "64555.5",
-      "open": "64156.3",
+      "last": "64710.2",
+      "open": "64087.7",
       "high": "66834.7",
       "low": "62423.7",
-      "vol": "1054.2382",
-      "change": "0.62"
+      "vol": "1052.3892",
+      "change": "0.97"
     },
     {
       "market": "soltwd",
       "name": "SOL/TWD",
-      "last": "2630.8",
+      "last": "2641.1",
       "open": "2620",
       "high": "2725.7",
       "low": "2548.6",
-      "vol": "2239.93",
-      "change": "0.41"
+      "vol": "2244.93",
+      "change": "0.81"
     },
     {
       "market": "dogetwd",
       "name": "DOGE/TWD",
-      "last": "2.9069",
+      "last": "2.9032",
       "open": "2.9052",
       "high": "3.0119",
       "low": "2.85",
-      "vol": "2701199.4",
-      "change": "0.06"
+      "vol": "2703621.8",
+      "change": "-0.07"
     },
     {
       "market": "xrptwd",
       "name": "XRP/TWD",
-      "last": "42.367",
-      "open": "42.325",
+      "last": "42.299",
+      "open": "42.3",
       "high": "43.851",
       "low": "41.8",
-      "vol": "86214.85",
-      "change": "0.10"
+      "vol": "85972.61",
+      "change": "-0.00"
     },
     {
       "market": "btcusdt",
@@ -78,7 +78,7 @@
       "open": "66435.83",
       "high": "68135.59",
       "low": "65011.12",
-      "vol": "13.7222",
+      "vol": "13.8123",
       "change": "-0.22"
     },
     {
@@ -88,18 +88,18 @@
       "open": "1998.17",
       "high": "2083.57",
       "low": "1939.68",
-      "vol": "558.8108",
+      "vol": "558.8258",
       "change": "0.93"
     },
     {
       "market": "solusdt",
       "name": "SOL/USDT",
       "last": "82.08",
-      "open": "81.76",
+      "open": "81.7",
       "high": "84.94",
       "low": "79.23",
-      "vol": "369.739",
-      "change": "0.39"
+      "vol": "357.294",
+      "change": "0.47"
     }
   ],
   "openOrders": [],
@@ -115,44 +115,30 @@
     "version": 3,
     "status": "RUNNING",
     "initialCapital": 29827.766613567066,
-    "currentCapital": 28747.98,
-    "available": 5749.98,
-    "realizedPnl": -1079.79,
-    "unrealizedPnl": 332.32,
-    "returnPct": -3.62,
-    "totalTrades": 12,
-    "wins": 3,
-    "losses": 9,
-    "winRate": "25.0%",
-    "maxDrawdown": 4.75,
+    "currentCapital": 28476.69,
+    "available": 5695.69,
+    "realizedPnl": -1351.08,
+    "unrealizedPnl": -97.4,
+    "returnPct": -4.53,
+    "totalTrades": 15,
+    "wins": 5,
+    "losses": 10,
+    "winRate": "33.3%",
+    "maxDrawdown": 5.65,
     "positions": [
       {
-        "market": "btcusdt",
-        "direction": "SELL",
-        "entryPrice": 67263.15,
-        "currentPrice": 66291.73,
-        "sizeTWD": 22098,
-        "pnlPct": 1.44,
-        "pnlTWD": 319.14,
+        "market": "ethtwd",
+        "direction": "BUY",
+        "entryPrice": 66657.5,
+        "currentPrice": 66372.5,
+        "sizeTWD": 22781,
+        "pnlPct": -0.43,
+        "pnlTWD": -97.4,
         "riskRewardRatio": 2.08,
-        "strategy": "日線強勢空頭+4H空頭+EMA8<21+MACD雙負",
-        "confidence": 0.68,
-        "dailyTrend": "strong_down",
-        "openTime": "2026-03-30T16:56:00.695Z"
-      },
-      {
-        "market": "btctwd",
-        "direction": "SELL",
-        "entryPrice": 2156888.3,
-        "currentPrice": 2125308.9,
-        "sizeTWD": 900,
-        "pnlPct": 1.46,
-        "pnlTWD": 13.18,
-        "riskRewardRatio": 2.08,
-        "strategy": "日線強勢空頭+4H空頭+EMA8<21+MACD雙負",
-        "confidence": 0.6,
-        "dailyTrend": "strong_down",
-        "openTime": "2026-03-30T16:56:00.695Z"
+        "strategy": "日線偏多+EMA多頭排列+觸布林上軌+價>VWAP",
+        "confidence": 0.69,
+        "dailyTrend": "up",
+        "openTime": "2026-03-31T01:50:00.785Z"
       }
     ],
     "closedTrades": [
@@ -464,6 +450,79 @@
         "openTime": "2026-03-30T14:36:00.256Z",
         "closeTime": "2026-03-30T15:00:00.448Z",
         "outcome": "LOSS"
+      },
+      {
+        "market": "btcusdt",
+        "direction": "SELL",
+        "entryPrice": 67263.15,
+        "exitPrice": 66615.38,
+        "sizeTWD": 22098,
+        "pnlTWD": 212.81,
+        "pnlPct": 0.96,
+        "riskRewardRatio": 2.08,
+        "reason": "TRAILING_STOP",
+        "strategy": "日線強勢空頭+4H空頭+EMA8<21+MACD雙負",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "EMA8<21",
+          "MACD雙負",
+          "布林擠壓",
+          "價<VWAP",
+          "strong_bear",
+          "AI:市場顯示強烈的空頭信號，建議謹慎操作。"
+        ],
+        "confidence": 0.68,
+        "openTime": "2026-03-30T16:56:00.695Z",
+        "closeTime": "2026-03-30T20:40:00.789Z",
+        "outcome": "WIN"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "entryPrice": 2156888.3,
+        "exitPrice": 2135968.1,
+        "sizeTWD": 900,
+        "pnlTWD": 8.73,
+        "pnlPct": 0.97,
+        "riskRewardRatio": 2.08,
+        "reason": "TRAILING_STOP",
+        "strategy": "日線強勢空頭+4H空頭+EMA8<21+MACD雙負",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "EMA8<21",
+          "MACD雙負",
+          "布林擠壓",
+          "價<VWAP",
+          "AI:市場顯示強烈的空頭信號，建議謹慎操作。"
+        ],
+        "confidence": 0.6,
+        "openTime": "2026-03-30T16:56:00.695Z",
+        "closeTime": "2026-03-30T20:40:00.789Z",
+        "outcome": "WIN"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "entryPrice": 2135968.1,
+        "exitPrice": 2181388.9,
+        "sizeTWD": 23176,
+        "pnlTWD": -492.83,
+        "pnlPct": -2.13,
+        "riskRewardRatio": 2.08,
+        "reason": "STOP_LOSS",
+        "strategy": "日線強勢空頭+4H空頭+EMA空頭排列+價<VWAP",
+        "signals": [
+          "日線強勢空頭",
+          "4H空頭",
+          "EMA空頭排列",
+          "價<VWAP"
+        ],
+        "confidence": 0.62,
+        "openTime": "2026-03-30T20:40:00.789Z",
+        "closeTime": "2026-03-31T01:50:00.785Z",
+        "outcome": "LOSS"
       }
     ],
     "strategyStats": {
@@ -516,16 +575,26 @@
         "wins": 0,
         "losses": 2,
         "pnl": -208.74136872861754
+      },
+      "日線強勢空頭+4H空頭+EMA8<21+MACD雙負": {
+        "wins": 2,
+        "losses": 0,
+        "pnl": 221.54156308952204
+      },
+      "日線強勢空頭+4H空頭+EMA空頭排列+價<VWAP": {
+        "wins": 0,
+        "losses": 1,
+        "pnl": -492.8315459392842
       }
     },
-    "consecutiveLosses": 6,
+    "consecutiveLosses": 1,
     "pausedUntil": "2026-03-30T16:00:00.448Z",
     "v3StartTime": "2026-03-29T14:22:40.804Z",
-    "lastUpdate": "2026/3/31 上午3:30:09"
+    "lastUpdate": "2026/3/31 上午11:50:13"
   },
   "review": {
-    "總覽": "3勝/9敗，勝率 25.0%，累計報酬 -3.62%",
-    "最大回撤": "4.749234588682769%",
+    "總覽": "5勝/10敗，勝率 33.3%，累計報酬 -4.53%",
+    "最大回撤": "5.648100500620488%",
     "最佳策略": "日線強勢空頭+4H空頭+EMA空頭排列+MACD雙負（1勝/0敗，PnL NT$0）",
     "最差策略": "日線強勢空頭+4H空頭+EMA空頭排列+MACD雙負（1勝/0敗，PnL NT$0）",
     "最近覆盤": "第15筆 | 勝率70% | 盈虧比1.55"
