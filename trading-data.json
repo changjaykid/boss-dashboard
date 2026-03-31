@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-03-31 14:50:20",
+  "lastUpdate": "2026-03-31 15:00:21",
   "account": {
     "balance": 30832.31,
     "realizedPnl": -96.25,
-    "unrealizedPnl": -2.19,
-    "netEquity": 30830.12,
+    "unrealizedPnl": -0.52,
+    "netEquity": 30831.79,
     "todayPnl": 0,
     "weekPnl": 0,
     "totalTrades": 73,
@@ -39,9 +39,9 @@
       "entryPrice": 4558.36,
       "stopLevel": 4534.16,
       "profitLevel": 4618.96,
-      "currentBid": 4556.17,
-      "currentAsk": 4556.67,
-      "pnl": -2.19,
+      "currentBid": 4557.84,
+      "currentAsk": 4558.34,
+      "pnl": -0.52,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-03-31T12:00:23.567"
@@ -514,39 +514,69 @@
   ],
   "currentPrice": {
     "GOLD": {
-      "bid": 4556.96,
-      "ask": 4557.46
+      "bid": 4557.79,
+      "ask": 4558.29
+    },
+    "EURUSDM2026": {
+      "bid": 1.15108,
+      "ask": 1.15114
+    },
+    "GBPUSD": {
+      "bid": 1.32048,
+      "ask": 1.32062
     },
     "USDJPYM2026": {
       "bid": 158.75,
-      "ask": 158.769
+      "ask": 158.768
     }
   },
   "indicators": {
     "GOLD": {
       "name": "XAUUSD",
       "regime": "RANGING",
-      "rsi": 46.9,
-      "macd_hist": -0.661,
-      "atr": 12.4964,
-      "bb_width": 0.0094,
-      "ema9": 4561.2162,
-      "ema21": 4560.6962
+      "rsi": 53.9,
+      "macd_hist": -0.5548,
+      "atr": 11.4882,
+      "bb_width": 0.0081,
+      "ema9": 4560.6852,
+      "ema21": 4561.2456
+    },
+    "EURUSDM2026": {
+      "name": "EUR/USD",
+      "regime": "RANGING",
+      "rsi": 49.5,
+      "macd_hist": 0.0,
+      "atr": 0.0005,
+      "bb_width": 0.0014,
+      "ema9": 1.1508,
+      "ema21": 1.1508
+    },
+    "GBPUSD": {
+      "name": "GBP/USD",
+      "regime": "RANGING",
+      "rsi": 54.6,
+      "macd_hist": 0.0001,
+      "atr": 0.0007,
+      "bb_width": 0.0014,
+      "ema9": 1.3203,
+      "ema21": 1.3201
     },
     "USDJPYM2026": {
       "name": "USD/JPY",
       "regime": "RANGING",
-      "rsi": 54.2,
-      "macd_hist": 0.018,
-      "atr": 0.0837,
+      "rsi": 54.0,
+      "macd_hist": 0.0178,
+      "atr": 0.0858,
       "bb_width": 0.0014,
-      "ema9": 158.683,
-      "ema21": 158.7114
+      "ema9": 158.6826,
+      "ema21": 158.7112
     }
   },
   "actions": [
+    "BLOCKED: EURUSDM2026 BUY \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62",
     "BLOCKED: USDJPYM2026 BUY \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62",
     "BLOCKED: USDJPYM2026 BUY \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62",
-    "BLOCKED: USDJPYM2026 BUY \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62"
+    "BLOCKED: USDJPYM2026 BUY \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62",
+    "BLOCKED: EURUSDM2026 BUY \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62"
   ]
 }
