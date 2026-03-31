@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-03-31 13:50:18",
+  "lastUpdate": "2026-03-31 14:00:21",
   "account": {
-    "balance": 30832.52,
+    "balance": 30832.4,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 20.21,
-    "netEquity": 30852.73,
+    "unrealizedPnl": 8.68,
+    "netEquity": 30841.08,
     "todayPnl": 0,
     "weekPnl": 0,
     "totalTrades": 73,
@@ -39,9 +39,9 @@
       "entryPrice": 4558.36,
       "stopLevel": 4534.16,
       "profitLevel": 4618.96,
-      "currentBid": 4578.57,
-      "currentAsk": 4579.07,
-      "pnl": 20.21,
+      "currentBid": 4567.04,
+      "currentAsk": 4567.54,
+      "pnl": 8.68,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-03-31T12:00:23.567"
@@ -514,40 +514,40 @@
   ],
   "currentPrice": {
     "GOLD": {
-      "bid": 4578.48,
-      "ask": 4578.98
+      "bid": 4567.1,
+      "ask": 4567.6
     },
     "USDJPYM2026": {
-      "bid": 158.598,
-      "ask": 158.619
+      "bid": 158.635,
+      "ask": 158.655
     }
   },
   "indicators": {
     "GOLD": {
       "name": "XAUUSD",
       "regime": "RANGING",
-      "rsi": 48.6,
-      "macd_hist": -0.5249,
-      "atr": 13.0679,
-      "bb_width": 0.0159,
-      "ema9": 4567.4098,
-      "ema21": 4558.4214
+      "rsi": 38.7,
+      "macd_hist": -0.8968,
+      "atr": 13.3886,
+      "bb_width": 0.0139,
+      "ema9": 4565.5896,
+      "ema21": 4558.2836
     },
     "USDJPYM2026": {
       "name": "USD/JPY",
       "regime": "RANGING",
-      "rsi": 39.7,
-      "macd_hist": -0.0059,
-      "atr": 0.0622,
+      "rsi": 43.1,
+      "macd_hist": -0.0035,
+      "atr": 0.0652,
       "bb_width": 0.0019,
-      "ema9": 158.6468,
-      "ema21": 158.7111
+      "ema9": 158.6536,
+      "ema21": 158.7142
     }
   },
   "actions": [
+    "BLOCKED: USDJPYM2026 BUY \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62",
     "BLOCKED: GOLD BUY \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62",
     "BLOCKED: GOLD BUY \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62",
-    "BLOCKED: USDJPYM2026 SELL \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62",
-    "BLOCKED: USDJPYM2026 BUY \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62"
+    "BLOCKED: USDJPYM2026 SELL \u2014 \u9023\u8667 21 \u6b21\uff0c\u7576\u65e5\u505c\u6b62"
   ]
 }
