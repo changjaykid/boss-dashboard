@@ -2,19 +2,19 @@
   "news": {
     "items": [
       {
-        "title": "2月外匯存底衝上6,054.87億美元 再創歷史新高",
-        "summary": "中國的外匯存底在2月達到6054.87億美元，創下歷史新高。",
-        "impact": "外匯存底的增加通常顯示出國家經濟的穩定性，可能增強人民幣的信心，對人民幣匯率形成支持。",
+        "title": "外匯存底連3月創高 2月突破6054億美元",
+        "summary": "中國的外匯存底持續增長，顯示出資本流入的強勁趨勢。",
+        "impact": "外匯存底的增加可能增強人民幣的穩定性，對市場信心有正面影響，可能導致人民幣升值。",
         "affected": "CNYUSD",
         "sentiment": "利多",
         "originalIndex": 1,
-        "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxOVldWQjd5dm43TFdMRTM4MFBPNUw3ekZOS19rcTdFNEdZMGdJQk9pSXIzZktWSGMxLUpPNUNBX1RlTVhsdXVENzZESjJHUlV4NlRHNEtwUVl2VEc4bHZndXExN0loY2daSU9Qc0Z4dEE4UVBLcV93akZ1QTBrcGZndVVORnhER2dfMFlBZ0N5dXhkckhCelhlbnJnelFvWHliM1h0bkxpc0FqRnYwTXdGdEFaR1VrYXRqZlhKdndHRXN0cEkwU2puMHhhcWlzQldNVFZTS0NLQmNHMjdTTTdNaTVXOHpiTHlpc1lkNmZBVXFtOGF0akw5R0oxSmVYNzUxeGFLSmtVaFBYNGFBd0llV3dNai1VVkQxVDVHdmdvREZKRFp3N29qaw?oc=5",
-        "pubDate": "Thu, 05 Mar 2026 08:00:00 GMT"
+        "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPTi1tNUt5N0hFMExDMjFzMFFGUTBYdXNCSHB1R0dhUnpHbXkwU2pyZ09adXlWT0RYdll0bHgtcXZ6TElMY2NWWGZmaDBGUGNfNW1PY192bzdnRzFQOXpyZVBxa3NxSWRNdWJ0Y2lpUGdCNTRCV3VNSFZOTXQ2SXlmc0RlQlEzVW5SaEFrUVR1Q012czVURURubUQxLXdxdmRRM3o2V2tDU0FoUUs0RXJjX21rVkZLOVNoN3JoMGdleGRBbE1MVXZVWlF1aUFTOUFTNzdhenVfN29iejh6Vk45eGowemtnNFU5VjhPQzJJOUhHOV9KbVlCeE5NSXZzdkl2YjlmTw?oc=5",
+        "pubDate": "Fri, 06 Mar 2026 08:00:00 GMT"
       },
       {
         "title": "外匯今日：美元與石油暴跌,川普釋出伊朗緩和訊號——市場動盪分析",
-        "summary": "美元和石油價格因川普釋出伊朗緩和訊號而暴跌。",
-        "impact": "美元的下跌可能會促使投資者轉向其他貨幣，增加市場的波動性，並可能影響美國的貿易平衡。",
+        "summary": "美元和石油價格因為地緣政治緩和而大幅下跌。",
+        "impact": "美元的貶值可能會促進其他貨幣的升值，特別是與石油相關的貨幣，如加元和挪威克朗。",
         "affected": "USDJPY, USDCAD",
         "sentiment": "利空",
         "originalIndex": 2,
@@ -22,97 +22,97 @@
         "pubDate": "Mon, 23 Mar 2026 22:30:46 GMT"
       },
       {
-        "title": "日本外匯事務負責人稱 政府將隨時採取一切可能措施應對匯率波動",
-        "summary": "日本政府表示將隨時採取措施應對匯率波動。",
-        "impact": "這一聲明可能��對日圓產生支持作用，因為市場預期政府會干預以穩定匯率。",
+        "title": "日本外匯干預：政府對日圓波動發出關鍵警告，標誌著重大政策轉變",
+        "summary": "日本政府對日圓的波動性發出警告，暗示可能進行外匯干預。",
+        "impact": "如果日本政府實施干預措施，將可能導致日圓短期內大幅波動，影響全球外匯市場的情緒。",
         "affected": "JPYUSD",
-        "sentiment": "利多",
-        "originalIndex": 4,
-        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9RSU4tSVl3RHZSV282Z0dEX3JUSS1VZTRIMzNGYjB5UjRtODhCdTd0cWQxQm9wZUNhQzl4elYtZVgzWFZQY29aTGZ6RWZ3U21XSVJhTlZJWXlxQQ?oc=5",
-        "pubDate": "Mon, 23 Mar 2026 13:47:59 GMT"
+        "sentiment": "中性",
+        "originalIndex": 9,
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9IOWUxR0FGR21NMl9uUWJFSktONlZ6bHRxWDRlVThxYTd3N2ZsM2ViRjN4YTEzUnd5UDRkV0lMNkhlWUZmTXFhS0V2SU8yaDg?oc=5",
+        "pubDate": "Mon, 23 Mar 2026 05:04:12 GMT"
       },
       {
-        "title": "央行出手穩匯！新台幣守住31.7元 外匯局長：最大震盪已結束",
-        "summary": "台灣央行出手干預，穩住新台幣匯率。",
-        "impact": "央行的干預行動可能會減少市場的不確定性，穩定新台幣的匯率，吸引外資流入。",
-        "affected": "TWDUSD",
+        "title": "恐慌賣壓襲股市？中東動盪市場忙避險 外匯專家曝「3投資」最受益",
+        "summary": "中東局勢動盪導致市場避險情緒上升，影響資金流向。",
+        "impact": "避險需求上升可能推高黃金和瑞士法郎的需求，進而影響相關貨幣對的匯率。",
+        "affected": "XAUUSD, CHFUSD",
         "sentiment": "利多",
         "originalIndex": 8,
-        "url": "https://news.google.com/rss/articles/CBMi8AJBVV95cUxOOVJrUVN4NXVHb0pxYmlXYUZjSXU5Q1dsaGMzbndtb3ZFeTY0am1uei1KT1U2amJjSkllMWVEMk9FTnlNOFlJRVIwbFp0TkdJbWJJWnNDYjZ0QzdfZnR2cmFXUnFrU1Z0YVNFVnRNWktCRzM2c0VOdExxZEJWMzh6Ml9WVmRPQU10TVdWVlNnYzIwUnVoc2tZVkNrdjNkSzVpX1V0bEpDSUwzQnBtYU9RNk9BMGgwWDBDUk0yQjNfSHZ0MV83cXZsMXh5UWROLXFUaGlWNTBWajFNeERiWFNLRGhIRlRlZEcxQ25jQ01nanlSdnpsVldxYUFfU1VycFlMcnVUMzd5VldtYlpsdnkwRlZzNDBjMnpueFYzYmdncmJxeDB6elltZnB2TzZQY1BwT1lLR0MxamVjWERRc0J3c000OVAtUWRUUlZMRHlNanFHQzdxNEtLckJVZUFZbmQtMGVmdnNNTlNNaUkwY0FCTA?oc=5",
-        "pubDate": "Thu, 05 Mar 2026 08:00:00 GMT"
+        "url": "https://news.google.com/rss/articles/CBMimgNBVV95cUxPejdtMmFwVUZMcnM3MldsUFluODhldzloU2lCQVBOT29pejcwSU1hckh2QmhSOGtWeHlibGRqekdndzE1Q0gwY0Jxb1hOYVVmeUFIVzlmSENWRnhYM2Y3RXpIT0dsQjBCVHZwbFU5SFlCcUdldTNGREgyR25TN3J2MTVGZDkwV2RTMjNSakhiM3hjRFlGTGpoNmREOHFLQ3drQm9vSUlDQ2VnNDIybFVIM1I1NGFzQm5pNlplV196M0RtSGhmdkRXYS01MFMxQktTb3FhZ3JhbmtXclYzM1lhdUpUbmlXYU83Rm5PZThsYmZSUWdkdnVTWl85SkhFdHRvZDJrbzBqZWpvODJkM0pIcHNVRjlUbVZtSEVKRnQ5R1hReW1FSnhGQ2VfOGZfYlB0a3JzQmxiaHJsdXBQaUZUMkpZM2V0V3k2cGF4SGMxdXk1N0ZvUmYybnR3MHNCSkpzZk9iREx4V2ZVbUs1cVpPRU9NTy1hMUZPb2puajlFLVhQRzRhT05iWl80NG16UlJLMEQ4SFEyRDNaQQ?oc=5",
+        "pubDate": "Sat, 28 Feb 2026 08:00:00 GMT"
       },
       {
-        "title": "外匯存底連3月創高 2月突破6054億美元",
-        "summary": "中國的外匯存底連續三個月創新高，2月突破6054億美元。",
-        "impact": "持續增加的外匯存底可能會增強市場對人民幣的信心，並可能對全球市場產生正面影響。",
-        "affected": "CNYUSD",
-        "sentiment": "利多",
-        "originalIndex": 10,
-        "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPTi1tNUt5N0hFMExDMjFzMFFGUTBYdXNCSHB1R0dhUnpHbXkwU2pyZ09adXlWT0RYdll0bHgtcXZ6TElMY2NWWGZmaDBGUGNfNW1PY192bzdnRzFQOXpyZVBxa3NxSWRNdWJ0Y2lpUGdCNTRCV3VNSFZOTXQ2SXlmc0RlQlEzVW5SaEFrUVR1Q012czVURURubUQxLXdxdmRRM3o2V2tDU0FoUUs0RXJjX21rVkZLOVNoN3JoMGdleGRBbE1MVXZVWlF1aUFTOUFTNzdhenVfN29iejh6Vk45eGowemtnNFU5VjhPQzJJOUhHOV9KbVlCeE5NSXZzdkl2YjlmTw?oc=5",
-        "pubDate": "Fri, 06 Mar 2026 08:00:00 GMT"
+        "title": "美財長：美國將重新掌控霍爾木茲海峽",
+        "summary": "美國財長表示將加強對霍爾木茲海峽的控制，影響全球石油供應。",
+        "impact": "這一聲明可能會影響石油價格，進而影響與石油相關的貨幣，如加元和阿聯酋迪拉姆。",
+        "affected": "USDCAD, AEDUSD",
+        "sentiment": "中性",
+        "originalIndex": 11,
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQZmM3dV9Ua09SLTNUZFlOTWZzcG5kUFV6cW51ckk2RnhiUDYxcW5KUjVIZVZVdjc1b1RKNUJWR0RVd2JSWmE3X21xRW9yeUFsWlNLT05pclduTmVGRWNOWU1Oa1l2cWc4RjUtZm9JdHpyUXRpWXFCNEtwOThzZ3hYS2djdDBVQm9LSWUwVmtTS1VoeVdrZF93?oc=5",
+        "pubDate": "Tue, 31 Mar 2026 00:34:00 GMT"
       }
     ],
-    "lastUpdate": "2026/3/30 下午8:55:42"
+    "lastUpdate": "2026/3/31 下午8:00:00"
   },
   "socialNews": {
     "items": [
       {
-        "title": "第一天在虛幻引擎中創建日內交易機器人",
-        "summary": "使用虛幻引擎開發了一個日內交易機器人，命名為「D20」，目前進行紙上交易，測試其性能。具體策略和參數尚未公開，但目標是實現自動化交易。遇到的挑戰包括如何優化交易算法以適應市場波動。",
-        "impact": "可以考慮使用虛幻引擎進行交易機器人的開發，特別是在視覺化和用戶界面方面，這可以提升使用者體驗。",
-        "affected": "虛幻引擎、日內交易、交易機器人",
-        "sentiment": "中性",
-        "originalIndex": 2,
-        "source": "Reddit",
-        "url": "https://reddit.com/r/algotrading/comments/1s5t3ig/day_one_of_creating_a_day_trading_bot_in_unreal/",
-        "pubDate": "Sat, 28 Mar 2026 06:40:47 GMT"
-      },
-      {
-        "title": "建立完整的Lopez de Prado管道",
-        "summary": "使用Rust語言構建了一個完整的Lopez de Prado交易管道，進行了442次測試，無錯誤，但在OOS測試中AUC為0.50。面臨的問題是如何提高模型的預測能力，可能需要調整參數或增加數據集。",
-        "impact": "可以借鑒其使用Rust進行高效能交易系統開發的經���，尤其是在性能測試和算法優化方面。",
-        "affected": "Rust、算法交易、性能測試、AUC",
-        "sentiment": "中性",
+        "title": "如何開始製作交易機器人？",
+        "summary": "用 Python 開發一個簡單的交易機器人，設定了基本的買入賣出策略，使用 EMA 和 RSI 指標。參數設定為 RSI < 30 時買入，RSI > 70 時賣出，並且在 15 分鐘 K 線上進行回測。回測結果顯示勝率為 62%，最大回撤為 8%。",
+        "impact": "我們的系統可以參考這個策略，實作 RSI 指標的自動交易，並進行回測以優化參數。",
+        "affected": "Python、RSI、回測",
+        "sentiment": "利多",
         "originalIndex": 6,
         "source": "Reddit",
-        "url": "https://reddit.com/r/algotrading/comments/1s77s5k/built_a_full_lopez_de_prado_pipeline_in_rust_442/",
-        "pubDate": "Sun, 29 Mar 2026 21:36:46 GMT"
+        "url": "https://reddit.com/r/algotrading/comments/1s7njuu/where_can_i_begin_making_a_algobot_to_trade_i/",
+        "pubDate": "Mon, 30 Mar 2026 11:10:49 GMT"
       },
       {
-        "title": "找到我的算法交易的第一絲成功",
-        "summary": "分享了自己在算法交易中首次獲利的經驗，使用了一些基本的技術指標進行交易。具體的策略和參數未詳細說明，但強調了持續調整和優化算法的重要性。",
-        "impact": "可以從中學習到持續優化算法的重要性，並考慮在初期使用簡單的技術指標來測試交易策略的有效性。",
-        "affected": "算法交易、技術指標、優化",
+        "title": "如何處理虧損交易？",
+        "summary": "分享了在交易中遇到虧損時的心理調適方法，建議記錄每次交易的決策過程，並分析失敗的原因。這樣可以幫助未來避免重蹈覆轍，並改善交易策略。也提到使用 MyFxBook 來追蹤交易表現。",
+        "impact": "我們的系統可以加入交易日誌功能，讓用戶能夠記錄和分析每次交易的決策過程，從而改進策��。",
+        "affected": "MyFxBook、交易日誌",
+        "sentiment": "中性",
+        "originalIndex": 19,
+        "source": "Reddit",
+        "url": "https://reddit.com/r/Trading/comments/1s8jtdx/how_do_you_handle_losing_trades/",
+        "pubDate": "Tue, 31 Mar 2026 10:38:30 GMT"
+      },
+      {
+        "title": "如何進行多指標的擺動策略？",
+        "summary": "討論了使用多個技術指標進行擺動交易的策略，建議結合 EMA、RSI 和成交量來提高交易成功率。並且分享了如何驗證這些指標的有效性，並進行策略優化。",
+        "impact": "我們的系統可以整合多個技術指標，並提供策略驗證工具，幫助用戶優化交易策略。",
+        "affected": "EMA、RSI、成交量、策略驗證",
         "sentiment": "利多",
-        "originalIndex": 9,
+        "originalIndex": 21,
         "source": "Reddit",
-        "url": "https://reddit.com/r/algotrading/comments/1s7eqm7/finding_my_first_glimpse_of_success_with_my_algo/",
-        "pubDate": "Mon, 30 Mar 2026 02:45:27 GMT"
+        "url": "https://reddit.com/r/algotrading/comments/1s82s3r/question_about_multiindicator_swing_strategies/",
+        "pubDate": "Mon, 30 Mar 2026 20:45:31 GMT"
       },
       {
-        "title": "你們如何在交易中保持一致性？",
-        "summary": "討論了保持交易一致性的重要性，分享了幾種方法，包括設置明確的交易規則和紀律。用戶提到使用日誌記錄交易行為，以便分析和改進。",
-        "impact": "可以考慮在系統中加入交易日誌功能，幫助用戶追蹤自己的交易行為和情緒，從而提高交易的一致性。",
-        "affected": "交易紀律、交易日誌、行為分析",
-        "sentiment": "中性",
-        "originalIndex": 16,
+        "title": "如何追蹤交易表現？",
+        "summary": "開發了一個免費的 ROI 追蹤工具，能夠幫助交易者記錄和分析自己的交易表現。這個工具可以自動計算每筆交易的回報率，並提供可視化的數據分析，幫助用戶了解自己的交易狀況。",
+        "impact": "我們的系統可以考慮加入 ROI 追蹤功能，幫助用戶更好地分析和優化交易表現。",
+        "affected": "ROI 追蹤、數據分析",
+        "sentiment": "利多",
+        "originalIndex": 23,
         "source": "Reddit",
-        "url": "https://reddit.com/r/Trading/comments/1s7jo3f/how_did_you_guys_actually_get_consistent_in/",
-        "pubDate": "Mon, 30 Mar 2026 07:17:19 GMT"
+        "url": "https://reddit.com/r/Forex/comments/1s8ke6k/built_a_free_prop_firm_roi_tracker_does_anyone/",
+        "pubDate": "Tue, 31 Mar 2026 11:09:04 GMT"
       },
       {
-        "title": "你們在交易中給自己什麼懲罰？",
-        "summary": "用戶分享了在違反交易規則後給自己的懲罰措施，這些措施包括暫停交易或減少交易資金。這樣的懲罰機制有助於提高交易紀律和自我控制。",
-        "impact": "可以考慮在系統中設置懲罰機制，幫助用戶在違反交易規則時自我約束，從而提高長期交易的成功率。",
-        "affected": "交易紀律、懲罰機制、自我控制",
+        "title": "如何設置硬體和基��設施？",
+        "summary": "分享了建立交易系統的硬體和基礎設施設置，包括選擇合適的伺服器、網路連接和備份方案。強調硬體穩定性對於高頻交易的重要性，並提供了一些具體的設備推薦。",
+        "impact": "我們的系統可以參考這些硬體設置建議，確保交易系統的穩定性和可靠性。",
+        "affected": "硬體設置、高頻交易",
         "sentiment": "中性",
-        "originalIndex": 17,
+        "originalIndex": 12,
         "source": "Reddit",
-        "url": "https://reddit.com/r/Forex/comments/1s7ffcv/what_punishment_do_you_give_yourself_when_you/",
-        "pubDate": "Mon, 30 Mar 2026 03:19:39 GMT"
+        "url": "https://reddit.com/r/algotrading/comments/1s8fc0y/hardware_infra_set_up/",
+        "pubDate": "Tue, 31 Mar 2026 06:08:46 GMT"
       }
     ],
-    "actionSummary": "🔧 可立刻測試：開發一個簡單的日誌系統，記錄每次交易的決策過程與結果，以便後續分析與優化。  \n🔧 可立刻測試：設置明確的交易規則，並在違反規則後立即執行懲罰措施，如暫停交易一週。  \n🔍 值得研究：探索使用虛幻引擎開發的日內交易機器人，評估其自動化交易的潛力。  \n⚠️ 避坑：避免依賴單一技術指標，應該結合多種指標以提高交易策略的穩定性。",
-    "lastUpdate": "2026/3/30 下午8:55:42"
+    "actionSummary": "🔧 可立刻測試：使用 Python 開發的交易機器人，設定 RSI < 30 時買入，RSI > 70 時賣出，並在 15 分鐘 K 線上進行回測。  \n🔧 可立刻測試：開發免費的 ROI 追蹤工具，記錄每筆交易的回報率並進行可視化分析。  \n🔍 值得研究：結合 EMA、RSI 和成交量的多指標擺動策略，進行策略優化和有效性驗證。  \n⚠️ 避坑：避免忽視心理調適，記錄每次交易的決策過程以分析失敗原因，防止重蹈覆轍。  ",
+    "lastUpdate": "2026/3/31 下午8:00:00"
   }
 }
