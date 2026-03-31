@@ -509,6 +509,10 @@
                         <p class="text-lg md:text-2xl font-bold text-white mt-0.5" id="fx-balance">--</p>
                     </div>
                     <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">淨值</p>
+                        <p class="text-lg md:text-2xl font-bold text-white mt-0.5" id="fx-net-equity">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
                         <p class="text-[10px] md:text-xs text-gray-500 uppercase">已實現盈虧</p>
                         <p class="text-lg md:text-2xl font-bold mt-0.5" id="fx-pnl">$0.00</p>
                     </div>
@@ -516,30 +520,77 @@
                         <p class="text-[10px] md:text-xs text-gray-500 uppercase">勝率</p>
                         <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="fx-winrate">--</p>
                     </div>
-                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">交易筆數</p>
-                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="fx-total-trades">0</p>
-                    </div>
                 </div>
 
-                <!-- Row 2: 持倉 + 浮動盈虧 -->
+                <!-- Row 2: 今日/本週/浮動/保證金 -->
                 <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
                     <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">持倉數</p>
-                        <p class="text-lg md:text-2xl font-bold text-blue-400 mt-0.5" id="fx-open-count">0</p>
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">今日盈虧</p>
+                        <p class="text-lg md:text-2xl font-bold mt-0.5" id="fx-today-pnl">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">本週盈虧</p>
+                        <p class="text-lg md:text-2xl font-bold mt-0.5" id="fx-week-pnl">--</p>
                     </div>
                     <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
                         <p class="text-[10px] md:text-xs text-gray-500 uppercase">浮動盈虧</p>
                         <p class="text-lg md:text-2xl font-bold mt-0.5" id="fx-unrealized">--</p>
                     </div>
                     <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">已平倉筆數</p>
-                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="fx-closed-count">0</p>
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">保證金使用</p>
+                        <p class="text-lg md:text-2xl font-bold text-yellow-400 mt-0.5" id="fx-margin-pct">--</p>
                     </div>
-                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">監控商品</p>
-                        <p class="text-lg md:text-2xl font-bold text-yellow-400 mt-0.5" id="fx-instruments">--</p>
+                </div>
+
+                <!-- Row 3: 交易統計 -->
+                <div class="grid grid-cols-3 gap-2 md:grid-cols-6 md:gap-3">
+                    <div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl text-center">
+                        <p class="text-[9px] md:text-[10px] text-gray-500">總交易</p>
+                        <p class="text-sm md:text-lg font-bold text-white" id="fx-total-trades">0</p>
                     </div>
+                    <div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl text-center">
+                        <p class="text-[9px] md:text-[10px] text-gray-500">持倉</p>
+                        <p class="text-sm md:text-lg font-bold text-blue-400" id="fx-open-count">0</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl text-center">
+                        <p class="text-[9px] md:text-[10px] text-gray-500">已平倉</p>
+                        <p class="text-sm md:text-lg font-bold text-gray-300" id="fx-closed-count">0</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl text-center">
+                        <p class="text-[9px] md:text-[10px] text-gray-500">風報比</p>
+                        <p class="text-sm md:text-lg font-bold text-yellow-400" id="fx-rr-ratio">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl text-center">
+                        <p class="text-[9px] md:text-[10px] text-gray-500">最大連勝</p>
+                        <p class="text-sm md:text-lg font-bold text-green-400" id="fx-max-consec-w">0</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl text-center">
+                        <p class="text-[9px] md:text-[10px] text-gray-500">最大連虧</p>
+                        <p class="text-sm md:text-lg font-bold text-red-400" id="fx-max-consec-l">0</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-3">
+                    <div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl text-center">
+                        <p class="text-[9px] md:text-[10px] text-gray-500">平均獲利</p>
+                        <p class="text-sm md:text-lg font-bold text-green-400" id="fx-avg-win">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl text-center">
+                        <p class="text-[9px] md:text-[10px] text-gray-500">平均虧損</p>
+                        <p class="text-sm md:text-lg font-bold text-red-400" id="fx-avg-loss">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl text-center">
+                        <p class="text-[9px] md:text-[10px] text-gray-500">最大單筆獲利</p>
+                        <p class="text-sm md:text-lg font-bold text-green-400" id="fx-max-win">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl text-center">
+                        <p class="text-[9px] md:text-[10px] text-gray-500">最大單筆虧損</p>
+                        <p class="text-sm md:text-lg font-bold text-red-400" id="fx-max-loss">--</p>
+                    </div>
+                </div>
+
+                <!-- 監控商品數 -->
+                <div class="flex items-center space-x-2 text-xs text-gray-400">
+                    <span>📡 監控商品：</span><span class="text-yellow-400" id="fx-instruments">--</span>
                 </div>
 
                 <!-- Row 3: 各商品趨勢 -->
@@ -569,17 +620,16 @@
                     <div id="fx-review" class="space-y-3"></div>
                 </section>
 
-                <!-- 風控 -->
+                <!-- 風控參數 -->
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
                     <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">⚙️ 風控參數</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">實戰資金</p><p class="text-xs md:text-sm font-bold text-yellow-400">$500 USD</p></div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">每筆風險</p><p class="text-xs md:text-sm font-bold text-white">20%（$100）</p></div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">手數</p><p class="text-xs md:text-sm font-bold text-white">動態計算</p></div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">最大持倉</p><p class="text-xs md:text-sm font-bold text-white">3 筆</p></div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">止損</p><p class="text-xs md:text-sm font-bold text-white">ATR 動態</p></div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">實戰倒數</p><p class="text-xs md:text-sm font-bold text-orange-400">測試3週中</p></div>
-                    </div>
+                    <div id="fx-risk-params" class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4"></div>
+                </section>
+
+                <!-- 異常警報 -->
+                <section id="fx-alerts-section" class="bg-gray-800/50 border border-red-700/30 p-3 md:p-6 rounded-xl" style="display:none">
+                    <h3 class="text-sm md:text-xl font-medium text-red-300 mb-3">🚨 異常警報</h3>
+                    <div id="fx-alerts" class="space-y-2"></div>
                 </section>
             </div>
 
@@ -1142,11 +1192,23 @@ pe.textContent='$'+pn.toFixed(2);pe.className='text-lg md:text-2xl font-bold mt-
 document.getElementById('fx-balance').textContent='$'+((a.balance||0).toLocaleString());
 document.getElementById('fx-winrate').textContent=a.winRate||'--';
 document.getElementById('fx-total-trades').textContent=a.totalTrades||0;
-document.getElementById('fx-open-count').textContent=(d.openPositions||[]).length;
+document.getElementById('fx-open-count').textContent=a.openCount||(d.openPositions||[]).length;
 document.getElementById('fx-closed-count').textContent=a.closedTrades||0;
 const ur=a.unrealizedPnl||0;const ure=document.getElementById('fx-unrealized');
 ure.textContent=(ur>=0?'+':'')+('$'+ur.toFixed(2));ure.className='text-lg md:text-2xl font-bold mt-0.5 '+(ur>=0?'text-green-400':'text-red-400');
 document.getElementById('fx-instruments').textContent=(d.instruments||[]).length+'個';
+// New v6 fields
+const neEl=document.getElementById('fx-net-equity');if(neEl){neEl.textContent='$'+((a.netEquity||a.balance||0).toLocaleString())}
+const tdp=a.todayPnl||0;const tdEl=document.getElementById('fx-today-pnl');if(tdEl){tdEl.textContent=(tdp>=0?'+':'')+'$'+tdp.toFixed(2);tdEl.className='text-lg md:text-2xl font-bold mt-0.5 '+(tdp>=0?'text-green-400':'text-red-400')}
+const wkp=a.weekPnl||0;const wkEl=document.getElementById('fx-week-pnl');if(wkEl){wkEl.textContent=(wkp>=0?'+':'')+'$'+wkp.toFixed(2);wkEl.className='text-lg md:text-2xl font-bold mt-0.5 '+(wkp>=0?'text-green-400':'text-red-400')}
+const mpEl=document.getElementById('fx-margin-pct');if(mpEl)mpEl.textContent=a.marginUsagePercent||'--';
+const rrEl=document.getElementById('fx-rr-ratio');if(rrEl)rrEl.textContent=a.riskRewardRatio||'--';
+const mcwEl=document.getElementById('fx-max-consec-w');if(mcwEl)mcwEl.textContent=a.maxConsecutiveWins||0;
+const mclEl=document.getElementById('fx-max-consec-l');if(mclEl)mclEl.textContent=a.maxConsecutiveLosses||0;
+const awEl=document.getElementById('fx-avg-win');if(awEl)awEl.textContent='$'+(a.avgWin||0).toFixed(2);
+const alEl=document.getElementById('fx-avg-loss');if(alEl)alEl.textContent='$'+(a.avgLoss||0).toFixed(2);
+const mwEl=document.getElementById('fx-max-win');if(mwEl)mwEl.textContent='$'+(a.maxSingleWin||0).toFixed(2);
+const mlEl=document.getElementById('fx-max-loss');if(mlEl)mlEl.textContent='$'+(a.maxSingleLoss||0).toFixed(2);
 
 // Instrument cards
 const ic=document.getElementById('fx-instrument-cards');const inds=d.indicators||{};
@@ -1167,9 +1229,9 @@ else{tb.innerHTML=ts.map(t=>{const db=t.direction==='BUY'?'badge-buy':'badge-sel
 let ob='badge-open';let outcomeLabel=t.outcome||'--';
 if(t.outcome==='WIN'){ob='badge-win'}else if(t.outcome==='LOSS'){ob='badge-loss'}else if(t.outcome==='CLOSED_BY_BROKER'){ob='badge-loss';outcomeLabel='券商平倉'}
 const tm=t.time?new Date(t.time).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',hour:'2-digit',minute:'2-digit',month:'2-digit',day:'2-digit'}):'--';
-const hasPnl=t.pnl!=null&&typeof t.pnl==='number';
-const ps=hasPnl?'$'+t.pnl.toFixed(2):(t.close_reason||'待確認');
-const pc=hasPnl&&t.pnl>=0?'text-green-400':hasPnl?'text-red-400':'text-yellow-400';
+const pnlVal=typeof t.pnl==='number'?t.pnl:0;
+const ps='$'+pnlVal.toFixed(2);
+const pc=pnlVal>=0?'text-green-400':'text-red-400';
 const instName=t.instrumentName||t.instrument||'--';
 const conf=t.confidence!=null?((t.confidence*100).toFixed(0)+'%'):'--';
 return`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${db}">${t.direction}</span><span class="px-1.5 py-0.5 text-[10px] rounded-full ${ob}">${outcomeLabel}</span><span class="text-[10px] font-bold text-white">${instName}</span><span class="text-[10px] text-gray-300">${t.strategy||''}</span></div><span class="text-xs font-bold ${pc}">${ps}</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>手數:${t.size||'--'}</span><span>${conf}</span><span>${tm}</span></div></div>`}).join('')}
@@ -1177,8 +1239,8 @@ return`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div cla
 // Strategy stats
 const sb=document.getElementById('fx-strategy-stats');const ss=d.strategyStats||{};const sk=Object.keys(ss);
 if(!sk.length){sb.innerHTML='<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">累積數據後自動產生策略比較</p><ul class="text-[10px] text-gray-400 mt-1.5 space-y-0.5 list-disc list-inside"><li>15M: 趨勢跟隨、RSI、布林、動量、EMA</li><li>1H: 趨勢延續、RSI、布林突破、EMA、MACD</li></ul></div>'}
-else{sb.innerHTML='<div class="grid grid-cols-1 xs:grid-cols-2 gap-2">'+sk.map(k=>{const s=ss[k];const tt=s.wins+s.losses;const wr=tt>0?((s.wins/tt)*100).toFixed(1):0;const pc=s.pnl>=0?'text-green-400':'text-red-400';
-return`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><span class="text-xs font-bold text-white">${k}</span><span class="text-[10px] ${pc}">$${s.pnl.toFixed(2)}</span></div><div class="flex gap-3 text-[10px] text-gray-400"><span>勝:${s.wins}</span><span>敗:${s.losses}</span><span>${wr}%</span></div></div>`}).join('')+'</div>'}
+else{const sorted=sk.slice().sort((a,b)=>(ss[b].pnl||0)-(ss[a].pnl||0));sb.innerHTML='<div class="grid grid-cols-1 xs:grid-cols-2 gap-2">'+sorted.map(k=>{const s=ss[k];const tt=s.wins+s.losses;const wr=s.winRate||(tt>0?((s.wins/tt)*100).toFixed(1)+'%':'--');const pc=s.pnl>=0?'text-green-400':'text-red-400';const rr=s.riskReward||'--';const rank=s.rank||'--';
+return`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 text-[9px] rounded-full bg-indigo-900/50 text-indigo-300 border border-indigo-700/50">#${rank}</span><span class="text-xs font-bold text-white">${k}</span></div><span class="text-[10px] ${pc}">$${(s.pnl||0).toFixed(2)}</span></div><div class="flex gap-3 text-[10px] text-gray-400"><span>勝:${s.wins}</span><span>敗:${s.losses}</span><span>勝率:${wr}</span><span>RR:${rr}</span></div></div>`}).join('')+'</div>'}
 
 // Review & Insights
 const rb=document.getElementById('fx-review');const rv=d.review||{};
@@ -1188,8 +1250,29 @@ if(rv.bestStrategy){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border
 if(rv.worstStrategy&&rv.worstStrategy.name!==rv.bestStrategy?.name){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-red-700/30"><p class="text-[10px] text-gray-500 mb-1">⚠️ 最差策略</p><p class="text-xs text-red-400">${rv.worstStrategy.name} — 盈虧 $${rv.worstStrategy.pnl.toFixed(2)}（勝${rv.worstStrategy.wins} 敗${rv.worstStrategy.losses}）</p></div>`}
 if(rv.lessons&&rv.lessons.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30"><p class="text-[10px] text-gray-500 mb-1">🎓 系統學到了什麼</p><ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">${rv.lessons.map(l=>'<li>'+l+'</li>').join('')}</ul></div>`}
 if(rv.optimization&&rv.optimization.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30"><p class="text-[10px] text-gray-500 mb-1">🔧 優化方向</p><ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">${rv.optimization.map(o=>'<li>'+o+'</li>').join('')}</ul></div>`}
+if(rv.strategiesUnderTest&&rv.strategiesUnderTest.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-blue-700/30"><p class="text-[10px] text-gray-500 mb-1">🧪 測試中策略</p><div class="flex flex-wrap gap-1.5 mt-1">${rv.strategiesUnderTest.map(s=>'<span class="px-1.5 py-0.5 text-[9px] rounded-full bg-blue-900/50 text-blue-300 border border-blue-700/50">'+s+'</span>').join('')}</div></div>`}
+if(rv.recentChanges&&rv.recentChanges.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-cyan-700/30"><p class="text-[10px] text-gray-500 mb-1">📝 最近變更</p><ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">${rv.recentChanges.map(c=>'<li>'+c+'</li>').join('')}</ul></div>`}
+if(rv.nextSteps&&rv.nextSteps.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-green-700/30"><p class="text-[10px] text-gray-500 mb-1">🎯 下一步</p><ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">${rv.nextSteps.map(s=>'<li>'+s+'</li>').join('')}</ul></div>`}
 if(!rhtml)rhtml='<p class="text-xs text-gray-500">需要更多交易數據才能產生復盤</p>';
 rb.innerHTML=rhtml;
+
+// Risk params (dynamic from JSON)
+const rpb=document.getElementById('fx-risk-params');const rp=d.riskParams||{};
+if(rpb){const rpItems=[
+{label:'最大單筆虧損',value:rp.maxSingleLoss||'2% of balance'},
+{label:'最大持倉',value:rp.maxPositions||4},
+{label:'連虧暫停',value:rp.consecutiveLossPause?rp.consecutiveLossPause+'次後暫停':'5次後暫停'},
+{label:'止損方式',value:rp.slMethod||'ATR x 1.2'},
+{label:'最低風報比',value:rp.minRiskReward||'1.5:1'},
+{label:'禁止交易時段',value:rp.sessionRestrictions||'UTC 22-00'},
+{label:'模式',value:rp.mode||'simulation',highlight:true},
+{label:'當前連虧',value:rp.consecutiveLosses||0,warn:rp.consecutiveLosses>=3},
+{label:'倉位縮減',value:rp.sizeReduction||'連虧3次後減半'},
+];rpb.innerHTML=rpItems.map(i=>`<div class="p-2.5 bg-gray-800 rounded-lg border ${i.warn?'border-red-700/50':'border-gray-700'}"><p class="text-[10px] text-gray-500">${i.label}</p><p class="text-xs md:text-sm font-bold ${i.highlight?'text-orange-400':i.warn?'text-red-400':'text-white'}">${i.value}</p></div>`).join('')}
+
+// Alerts
+const alertSec=document.getElementById('fx-alerts-section');const alertBox=document.getElementById('fx-alerts');const alerts=d.alerts||[];
+if(alertSec&&alertBox){if(alerts.length){alertSec.style.display='';alertBox.innerHTML=alerts.map(a=>`<div class="p-2.5 bg-gray-800 rounded-lg border border-red-700/30"><p class="text-xs text-red-300">${a}</p></div>`).join('')}else{alertSec.style.display='none'}}
 
 }catch(e){console.log('err',e)}
 }
