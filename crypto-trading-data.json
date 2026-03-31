@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026/3/31 上午3:45:00",
+  "lastUpdate": "2026/3/31 下午12:00:00",
   "exchange": "MAX (MaiCoin)",
   "status": "connected",
   "account": {
@@ -17,96 +17,96 @@
         "staked": "0"
       }
     ],
-    "totalValueTWD": "1.17",
+    "totalValueTWD": "1.20",
     "totalBalances": 2
   },
   "tickers": [
     {
       "market": "btctwd",
       "name": "BTC/TWD",
-      "last": "2124280.6",
-      "open": "2131035",
-      "high": "2185714.2",
-      "low": "2091379.3",
-      "vol": "23.0863",
-      "change": "-0.32"
+      "last": "2175084.9",
+      "open": "2153292.7",
+      "high": "2195000",
+      "low": "2124280.6",
+      "vol": "17.1856",
+      "change": "1.01"
     },
     {
       "market": "ethtwd",
       "name": "ETH/TWD",
-      "last": "64710.2",
-      "open": "64087.7",
-      "high": "66834.7",
-      "low": "62423.7",
-      "vol": "1052.3892",
-      "change": "0.97"
+      "last": "66408.6",
+      "open": "65267.5",
+      "high": "67069.4",
+      "low": "64548.4",
+      "vol": "1037.8044",
+      "change": "1.75"
     },
     {
       "market": "soltwd",
       "name": "SOL/TWD",
-      "last": "2641.1",
-      "open": "2620",
+      "last": "2683.8",
+      "open": "2675.4",
       "high": "2725.7",
-      "low": "2548.6",
-      "vol": "2244.93",
-      "change": "0.81"
+      "low": "2630.8",
+      "vol": "1936.807",
+      "change": "0.31"
     },
     {
       "market": "dogetwd",
       "name": "DOGE/TWD",
-      "last": "2.9032",
-      "open": "2.9052",
+      "last": "2.9489",
+      "open": "2.9666",
       "high": "3.0119",
-      "low": "2.85",
-      "vol": "2703621.8",
-      "change": "-0.07"
+      "low": "2.9005",
+      "vol": "2310719.3",
+      "change": "-0.60"
     },
     {
       "market": "xrptwd",
       "name": "XRP/TWD",
-      "last": "42.299",
-      "open": "42.3",
+      "last": "42.625",
+      "open": "43.395",
       "high": "43.851",
-      "low": "41.8",
-      "vol": "85972.61",
-      "change": "-0.00"
+      "low": "42.299",
+      "vol": "76429.26",
+      "change": "-1.77"
     },
     {
       "market": "btcusdt",
       "name": "BTC/USDT",
-      "last": "66291.73",
-      "open": "66435.83",
-      "high": "68135.59",
-      "low": "65011.12",
-      "vol": "13.8123",
-      "change": "-0.22"
+      "last": "67666.66",
+      "open": "67161.15",
+      "high": "68383.83",
+      "low": "66265.31",
+      "vol": "11.995",
+      "change": "0.75"
     },
     {
       "market": "ethusdt",
       "name": "ETH/USDT",
-      "last": "2016.79",
-      "open": "1998.17",
-      "high": "2083.57",
-      "low": "1939.68",
-      "vol": "558.8258",
-      "change": "0.93"
+      "last": "2067.4",
+      "open": "2036.17",
+      "high": "2090.38",
+      "low": "2014.28",
+      "vol": "532.1526",
+      "change": "1.53"
     },
     {
       "market": "solusdt",
       "name": "SOL/USDT",
-      "last": "82.08",
-      "open": "81.7",
+      "last": "83.31",
+      "open": "83.07",
       "high": "84.94",
-      "low": "79.23",
-      "vol": "357.294",
-      "change": "0.47"
+      "low": "82.08",
+      "vol": "320.13",
+      "change": "0.29"
     }
   ],
   "openOrders": [],
   "recentTrades": [],
   "marketSentiment": {
     "fearGreed": {
-      "value": "8",
+      "value": "11",
       "label": "Extreme Fear"
     }
   },
@@ -118,7 +118,7 @@
     "currentCapital": 28476.69,
     "available": 5695.69,
     "realizedPnl": -1351.08,
-    "unrealizedPnl": -97.4,
+    "unrealizedPnl": -67.98,
     "returnPct": -4.53,
     "totalTrades": 15,
     "wins": 5,
@@ -130,10 +130,10 @@
         "market": "ethtwd",
         "direction": "BUY",
         "entryPrice": 66657.5,
-        "currentPrice": 66372.5,
+        "currentPrice": 66458.6,
         "sizeTWD": 22781,
-        "pnlPct": -0.43,
-        "pnlTWD": -97.4,
+        "pnlPct": -0.3,
+        "pnlTWD": -67.98,
         "riskRewardRatio": 2.08,
         "strategy": "日線偏多+EMA多頭排列+觸布林上軌+價>VWAP",
         "confidence": 0.69,
@@ -590,7 +590,7 @@
     "consecutiveLosses": 1,
     "pausedUntil": "2026-03-30T16:00:00.448Z",
     "v3StartTime": "2026-03-29T14:22:40.804Z",
-    "lastUpdate": "2026/3/31 上午11:50:13"
+    "lastUpdate": "2026/3/31 下午12:12:12"
   },
   "review": {
     "總覽": "5勝/10敗，勝率 33.3%，累計報酬 -4.53%",
