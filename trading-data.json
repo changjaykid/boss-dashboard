@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-01 05:50:24",
+  "lastUpdate": "2026-04-01 06:00:23",
   "account": {
-    "balance": 30939.19,
+    "balance": 30930.36,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 8776.87,
-    "netEquity": 39716.06,
+    "unrealizedPnl": 7884.78,
+    "netEquity": 38815.14,
     "todayPnl": 0,
     "weekPnl": 0,
     "totalTrades": 100,
@@ -39,9 +39,9 @@
       "entryPrice": 6489.4,
       "stopLevel": 6457.2,
       "profitLevel": 6553.9,
-      "currentBid": 6522.9,
-      "currentAsk": 6525.4,
-      "pnl": 335.0,
+      "currentBid": 6520.7,
+      "currentAsk": 6521.3,
+      "pnl": 313.0,
       "instrument": "US 500",
       "epic": "US500",
       "createdDate": "2026-04-01T00:40:28.184"
@@ -53,9 +53,9 @@
       "entryPrice": 6488.2,
       "stopLevel": 6462.4,
       "profitLevel": 6552.7,
-      "currentBid": 6522.9,
-      "currentAsk": 6525.4,
-      "pnl": 347.0,
+      "currentBid": 6520.7,
+      "currentAsk": 6521.3,
+      "pnl": 325.0,
       "instrument": "US 500",
       "epic": "US500",
       "createdDate": "2026-04-01T00:40:27.821"
@@ -67,9 +67,9 @@
       "entryPrice": 4666.94,
       "stopLevel": 4646.34,
       "profitLevel": 4744.84,
-      "currentBid": 4667.09,
-      "currentAsk": 4667.59,
-      "pnl": 0.15,
+      "currentBid": 4673.06,
+      "currentAsk": 4674.86,
+      "pnl": 6.12,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-01T02:20:25.767"
@@ -81,9 +81,9 @@
       "entryPrice": 46079.7,
       "stopLevel": 45883.2,
       "profitLevel": 46417.9,
-      "currentBid": 46305.0,
-      "currentAsk": 46315.0,
-      "pnl": 2253.0,
+      "currentBid": 46279.0,
+      "currentAsk": 46281.0,
+      "pnl": 1993.0,
       "instrument": "US Wall Street 30",
       "epic": "US30",
       "createdDate": "2026-04-01T00:40:29.294"
@@ -95,9 +95,9 @@
       "entryPrice": 4667.25,
       "stopLevel": 4641.55,
       "profitLevel": 4718.75,
-      "currentBid": 4667.09,
-      "currentAsk": 4667.59,
-      "pnl": -0.16,
+      "currentBid": 4673.06,
+      "currentAsk": 4674.86,
+      "pnl": 5.81,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-01T02:20:24.778"
@@ -109,9 +109,9 @@
       "entryPrice": 4667.21,
       "stopLevel": 4646.61,
       "profitLevel": 4718.71,
-      "currentBid": 4667.09,
-      "currentAsk": 4667.59,
-      "pnl": -0.12,
+      "currentBid": 4673.06,
+      "currentAsk": 4674.86,
+      "pnl": 5.85,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-01T02:20:24.417"
@@ -123,9 +123,9 @@
       "entryPrice": 46101.7,
       "stopLevel": 45905.2,
       "profitLevel": 46593.0,
-      "currentBid": 46305.0,
-      "currentAsk": 46315.0,
-      "pnl": 2033.0,
+      "currentBid": 46279.0,
+      "currentAsk": 46281.0,
+      "pnl": 1773.0,
       "instrument": "US Wall Street 30",
       "epic": "US30",
       "createdDate": "2026-04-01T00:40:26.638"
@@ -137,9 +137,9 @@
       "entryPrice": 46095.2,
       "stopLevel": 45849.5,
       "profitLevel": 46586.5,
-      "currentBid": 46305.0,
-      "currentAsk": 46315.0,
-      "pnl": 2098.0,
+      "currentBid": 46279.0,
+      "currentAsk": 46281.0,
+      "pnl": 1838.0,
       "instrument": "US Wall Street 30",
       "epic": "US30",
       "createdDate": "2026-04-01T00:40:27.046"
@@ -151,9 +151,9 @@
       "entryPrice": 23548.5,
       "stopLevel": 23407.4,
       "profitLevel": 23830.6,
-      "currentBid": 23719.6,
-      "currentAsk": 23723.6,
-      "pnl": 1711.0,
+      "currentBid": 23711.0,
+      "currentAsk": 23712.8,
+      "pnl": 1625.0,
       "instrument": "US Tech 100",
       "epic": "US100",
       "createdDate": "2026-04-01T00:40:28.592"
@@ -695,8 +695,8 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4667.09,
-      "ask": 4667.59
+      "bid": 4669.36,
+      "ask": 4671.16
     }
   },
   "indicators": {
@@ -712,6 +712,6 @@
     }
   },
   "actions": [
-    "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD"
+    "BLOCKED: GOLD BUY \u2014 UTC 22:00-00:00 \u7981\u6b62\u958b\u65b0\u5009"
   ]
 }
