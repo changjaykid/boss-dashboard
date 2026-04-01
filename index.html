@@ -145,325 +145,9 @@
 
             <!-- 股票 -->
             <div id="view-stocks" class="section-view space-y-4 md:space-y-6">
-
-                <!-- 更新時間 -->
-                <div class="flex items-center space-x-2 text-xs">
-                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-green-500"></span></span>
-                    <span class="text-gray-400">更新：<span class="text-gray-200">2026/03/30 08:00</span>（基準日 03/27 盤後＋週末國際盤）</span>
+                <div id="stock-dynamic-content">
+                    <p class="text-xs text-gray-400 text-center py-8">載入中...</p>
                 </div>
-
-                <!-- ⚠️ 美股暴跌警示 -->
-                <section class="bg-red-900/20 border border-red-700/50 p-4 md:p-6 rounded-xl">
-                    <h3 class="text-sm md:text-xl font-medium text-red-300 mb-3">🚨 美股週五暴跌 — 週一開低預警</h3>
-                    <div class="grid grid-cols-3 gap-2 md:gap-4 mb-3">
-                        <div class="stat-card border border-red-700/50 p-3 md:p-5 rounded-xl">
-                            <p class="text-[10px] md:text-xs text-gray-500 uppercase">道瓊工業</p>
-                            <p class="text-lg md:text-2xl font-bold text-red-400 mt-0.5">45,166</p>
-                            <p class="text-[10px] text-red-400">▼ 793（-1.73%）</p>
-                        </div>
-                        <div class="stat-card border border-red-700/50 p-3 md:p-5 rounded-xl">
-                            <p class="text-[10px] md:text-xs text-gray-500 uppercase">S&P 500</p>
-                            <p class="text-lg md:text-2xl font-bold text-red-400 mt-0.5">6,368</p>
-                            <p class="text-[10px] text-red-400">▼ 108（-1.67%）</p>
-                        </div>
-                        <div class="stat-card border border-red-700/50 p-3 md:p-5 rounded-xl">
-                            <p class="text-[10px] md:text-xs text-gray-500 uppercase">那斯達克</p>
-                            <p class="text-lg md:text-2xl font-bold text-red-400 mt-0.5">大跌</p>
-                            <p class="text-[10px] text-red-400">≈ -2% 科技重挫</p>
-                        </div>
-                    </div>
-                    <div class="p-3 bg-gray-800 rounded-lg border border-red-700/30">
-                        <p class="text-[10px] text-red-300">🛡️ <strong>今日策略：防禦為主、佈局為輔。</strong>開低是佈局機會，不是逃命訊號。優先高殖利率防禦股，PCB 不追開盤。</p>
-                    </div>
-                </section>
-
-                <!-- 大盤概況 -->
-                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
-                    <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">📊 大盤概況（03/27 收盤）</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 mb-4">
-                        <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                            <p class="text-[10px] md:text-xs text-gray-500 uppercase">加權指數</p>
-                            <p class="text-lg md:text-2xl font-bold text-red-400 mt-0.5">33,112.59</p>
-                            <p class="text-[10px] text-red-400">▼ 225.03（-0.68%）連三黑</p>
-                        </div>
-                        <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                            <p class="text-[10px] md:text-xs text-gray-500 uppercase">三大法人</p>
-                            <p class="text-lg md:text-2xl font-bold text-red-400 mt-0.5">-383億</p>
-                            <p class="text-[10px] text-red-400">外資 -363 · 投信 -2 · 自營 -18</p>
-                        </div>
-                        <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                            <p class="text-[10px] md:text-xs text-gray-500 uppercase">前次命中率</p>
-                            <p class="text-lg md:text-2xl font-bold text-green-400 mt-0.5">5/10</p>
-                            <p class="text-[10px] text-green-400">含 2 檔漲停 🚀</p>
-                        </div>
-                        <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                            <p class="text-[10px] md:text-xs text-gray-500 uppercase">小型股300</p>
-                            <p class="text-lg md:text-2xl font-bold text-green-400 mt-0.5">+0.48%</p>
-                            <p class="text-[10px] text-green-400">資金轉進中小型</p>
-                        </div>
-                    </div>
-                    <div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
-                        <p class="text-[10px] text-gray-500 mb-1.5">🔥 強勢類股（傳產主導，美股衝擊小）</p>
-                        <div class="flex flex-wrap gap-1.5">
-                            <span class="px-2 py-0.5 text-[10px] rounded-full bg-green-900/50 text-green-300 border border-green-700/50">玻璃陶瓷 +2.81% 🚀</span>
-                            <span class="px-2 py-0.5 text-[10px] rounded-full bg-green-900/50 text-green-300 border border-green-700/50">造紙 +2.07% 🚀</span>
-                            <span class="px-2 py-0.5 text-[10px] rounded-full bg-green-900/50 text-green-300 border border-green-700/50">化學 +1.15%</span>
-                            <span class="px-2 py-0.5 text-[10px] rounded-full bg-green-900/50 text-green-300 border border-green-700/50">水泥窯製 +0.91%</span>
-                            <span class="px-2 py-0.5 text-[10px] rounded-full bg-green-900/50 text-green-300 border border-green-700/50">食品 +0.55%</span>
-                            <span class="px-2 py-0.5 text-[10px] rounded-full bg-green-900/50 text-green-300 border border-green-700/50">電子零組件 +0.53%</span>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 10 檔推薦 -->
-                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-sm md:text-xl font-medium text-green-300">📈 今日 10 檔潛力股</h3>
-                        <span class="px-2 py-0.5 text-[10px] rounded-full bg-yellow-900/50 text-yellow-300 border border-yellow-700/50">💰 ≤50元: 6檔 ｜ 🛡️防禦型</span>
-                    </div>
-                    <div class="grid grid-cols-1 xs:grid-cols-2 gap-2 md:gap-3">
-
-                        <!-- 1. 亞泥 🆕 -->
-                        <div class="p-3 bg-gray-800 rounded-lg border border-blue-700/30">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <div class="flex items-center gap-1.5">
-                                    <span class="text-xs font-bold text-white">亞泥</span>
-                                    <span class="text-[10px] text-gray-400">1102</span>
-                                    <span class="px-1 py-0.5 text-[9px] rounded bg-yellow-900/50 text-yellow-300">💰 &lt;50</span>
-                                    <span class="px-1 py-0.5 text-[9px] rounded bg-blue-900/50 text-blue-300">🆕</span>
-                                </div>
-                                <span class="text-sm font-bold text-gray-200">~34.00</span>
-                            </div>
-                            <p class="text-[10px] text-gray-500 mb-1">水泥 ｜ 殖利率 6.47% · P/B 0.69</p>
-                            <p class="text-[10px] text-gray-300">🛡️高息避風港＋低估值＋水泥類逆勢+0.91%</p>
-                        </div>
-
-                        <!-- 2. 泰山 🆕 -->
-                        <div class="p-3 bg-gray-800 rounded-lg border border-blue-700/30">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <div class="flex items-center gap-1.5">
-                                    <span class="text-xs font-bold text-white">泰山</span>
-                                    <span class="text-[10px] text-gray-400">1218</span>
-                                    <span class="px-1 py-0.5 text-[9px] rounded bg-yellow-900/50 text-yellow-300">💰 &lt;50</span>
-                                    <span class="px-1 py-0.5 text-[9px] rounded bg-blue-900/50 text-blue-300">🆕</span>
-                                </div>
-                                <span class="text-sm font-bold text-gray-200">~18.45</span>
-                            </div>
-                            <p class="text-[10px] text-gray-500 mb-1">食品 ｜ 殖利率 7.32% · P/B 0.71</p>
-                            <p class="text-[10px] text-gray-300">🛡️全市場最高息之一＋食品防禦＋低價親民</p>
-                        </div>
-
-                        <!-- 3. 正隆 -->
-                        <div class="p-3 bg-gray-800 rounded-lg border border-green-700/30">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <div class="flex items-center gap-1.5">
-                                    <span class="text-xs font-bold text-white">正隆</span>
-                                    <span class="text-[10px] text-gray-400">1904</span>
-                                    <span class="px-1 py-0.5 text-[9px] rounded bg-yellow-900/50 text-yellow-300">💰 &lt;50</span>
-                                </div>
-                                <span class="text-sm font-bold text-green-400">20.15</span>
-                            </div>
-                            <p class="text-[10px] text-gray-500 mb-1">造紙 ｜ 類股連兩日暴漲 +6.8%</p>
-                            <p class="text-[10px] text-gray-300">造紙龍頭＋大漲後穩守＋傳產不受美股連動</p>
-                        </div>
-
-                        <!-- 4. 中鋼 -->
-                        <div class="p-3 bg-gray-800 rounded-lg border border-green-700/30">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <div class="flex items-center gap-1.5">
-                                    <span class="text-xs font-bold text-white">中鋼</span>
-                                    <span class="text-[10px] text-gray-400">2002</span>
-                                    <span class="px-1 py-0.5 text-[9px] rounded bg-yellow-900/50 text-yellow-300">💰 &lt;50</span>
-                                </div>
-                                <span class="text-sm font-bold text-red-400">19.60</span>
-                            </div>
-                            <p class="text-[10px] text-gray-500 mb-1">鋼鐵 ｜ 賣壓枯竭中</p>
-                            <p class="text-[10px] text-gray-300">🛡️殖利率防禦＋量縮至2,581萬＋19.50強支撐</p>
-                        </div>
-
-                        <!-- 5. 台聚 -->
-                        <div class="p-3 bg-gray-800 rounded-lg border border-green-700/30">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <div class="flex items-center gap-1.5">
-                                    <span class="text-xs font-bold text-white">台聚</span>
-                                    <span class="text-[10px] text-gray-400">1304</span>
-                                    <span class="px-1 py-0.5 text-[9px] rounded bg-yellow-900/50 text-yellow-300">💰 &lt;50</span>
-                                </div>
-                                <span class="text-sm font-bold text-green-400">16.20</span>
-                            </div>
-                            <p class="text-[10px] text-gray-500 mb-1">化學 ｜ 量能排名全市場#16</p>
-                            <p class="text-[10px] text-gray-300">化學類+1.15%＋8,656萬股爆量＋EVA綠能材料</p>
-                        </div>
-
-                        <!-- 6. 正文 -->
-                        <div class="p-3 bg-gray-800 rounded-lg border border-green-700/30">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <div class="flex items-center gap-1.5">
-                                    <span class="text-xs font-bold text-white">正文</span>
-                                    <span class="text-[10px] text-gray-400">4906</span>
-                                    <span class="px-1 py-0.5 text-[9px] rounded bg-yellow-900/50 text-yellow-300">💰 &lt;50</span>
-                                </div>
-                                <span class="text-sm font-bold text-green-400">37.10</span>
-                            </div>
-                            <p class="text-[10px] text-gray-500 mb-1">通信網路 ｜ 逆勢收紅 +1.37%</p>
-                            <p class="text-[10px] text-gray-300">1.16億股爆量＋Wi-Fi 7＋35元若守住為買點</p>
-                        </div>
-
-                        <!-- 7. 敬鵬 🆕 -->
-                        <div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <div class="flex items-center gap-1.5">
-                                    <span class="text-xs font-bold text-white">敬鵬</span>
-                                    <span class="text-[10px] text-gray-400">2355</span>
-                                    <span class="px-1 py-0.5 text-[9px] rounded bg-blue-900/50 text-blue-300">🆕</span>
-                                </div>
-                                <span class="text-sm font-bold text-green-400">50.50</span>
-                            </div>
-                            <p class="text-[10px] text-gray-500 mb-1">PCB ｜ +2.22% 量能#15</p>
-                            <p class="text-[10px] text-gray-300">PCB新兵＋汽車板長期賽道＋價位遠低於華通</p>
-                        </div>
-
-                        <!-- 8. 台玻 -->
-                        <div class="p-3 bg-gray-800 rounded-lg border border-green-700/30">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <div class="flex items-center gap-1.5">
-                                    <span class="text-xs font-bold text-white">台玻</span>
-                                    <span class="text-[10px] text-gray-400">1802</span>
-                                </div>
-                                <span class="text-sm font-bold text-green-400">54.90</span>
-                            </div>
-                            <p class="text-[10px] text-gray-500 mb-1">玻璃 ｜ +3.00% 類股最強</p>
-                            <p class="text-[10px] text-gray-300">玻璃陶瓷連兩日暴漲＋太陽能玻璃＋5,691萬股</p>
-                        </div>
-
-                        <!-- 9. 燿華 ⚠️等拉回 -->
-                        <div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <div class="flex items-center gap-1.5">
-                                    <span class="text-xs font-bold text-white">燿華</span>
-                                    <span class="text-[10px] text-gray-400">2367</span>
-                                    <span class="px-1 py-0.5 text-[9px] rounded bg-yellow-900/50 text-yellow-300">⚠️ 等拉回</span>
-                                </div>
-                                <span class="text-sm font-bold text-green-400">78.20</span>
-                            </div>
-                            <p class="text-[10px] text-gray-500 mb-1">PCB ｜ 全市場量王 3.41億股</p>
-                            <p class="text-[10px] text-gray-300">法人淨買892萬股＋AI PCB＋⚠️美股暴跌恐跳空</p>
-                        </div>
-
-                        <!-- 10. 華通 ⚠️純觀察 -->
-                        <div class="p-3 bg-gray-800 rounded-lg border border-red-700/30">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <div class="flex items-center gap-1.5">
-                                    <span class="text-xs font-bold text-white">華通</span>
-                                    <span class="text-[10px] text-gray-400">2313</span>
-                                    <span class="px-1 py-0.5 text-[9px] rounded bg-red-900/50 text-red-300">⚠️⚠️ 純觀察</span>
-                                </div>
-                                <span class="text-sm font-bold text-green-400">270.00</span>
-                            </div>
-                            <p class="text-[10px] text-gray-500 mb-1">PCB ｜ 連日漲停＋法人淨買1,221萬股</p>
-                            <p class="text-[10px] text-gray-300">AI PCB龍頭＋⚠️不建議追買，等240-250區間</p>
-                        </div>
-
-                    </div>
-                </section>
-
-                <!-- 復盤 -->
-                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
-                    <h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">🔄 前次推薦預估影響（03/28推薦 → 美股暴跌衝擊）</h3>
-                    <p class="text-[10px] text-gray-400 mb-3">📌 週末無交易，以下為基於美股暴跌的預估衝擊評估</p>
-                    <div class="grid grid-cols-1 xs:grid-cols-2 gap-2 md:gap-3 mb-3">
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-green-700/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-[10px] text-white">正隆 1904</span>
-                                <span class="text-[10px] font-bold text-green-400">⚡ 影響小</span>
-                            </div>
-                            <p class="text-[9px] text-gray-500">造紙非美股連動，防禦力強</p>
-                        </div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-green-700/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-[10px] text-white">中鋼 2002</span>
-                                <span class="text-[10px] font-bold text-green-400">⚡ 影響小</span>
-                            </div>
-                            <p class="text-[9px] text-gray-500">殖利率防禦股，跌幅有限</p>
-                        </div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-green-700/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-[10px] text-white">台聚 1304</span>
-                                <span class="text-[10px] font-bold text-green-400">⚡ 影響小</span>
-                            </div>
-                            <p class="text-[9px] text-gray-500">化學類非電子連動</p>
-                        </div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-green-700/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-[10px] text-white">台玻 1802</span>
-                                <span class="text-[10px] font-bold text-green-400">⚡ 影響小</span>
-                            </div>
-                            <p class="text-[9px] text-gray-500">傳產玻璃類，美股連動低</p>
-                        </div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-red-700/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-[10px] text-white">華通 2313</span>
-                                <span class="text-[10px] font-bold text-red-400">🔴 高風險</span>
-                            </div>
-                            <p class="text-[9px] text-gray-500">連漲停＋美股暴跌 = 跳空開低</p>
-                        </div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-red-700/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-[10px] text-white">燿華 2367</span>
-                                <span class="text-[10px] font-bold text-red-400">🔴 高風險</span>
-                            </div>
-                            <p class="text-[9px] text-gray-500">PCB 過熱＋外盤利空加速修正</p>
-                        </div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-red-700/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-[10px] text-white">定穎 3715</span>
-                                <span class="text-[10px] font-bold text-red-400">🔴 高風險</span>
-                            </div>
-                            <p class="text-[9px] text-gray-500">兩日+20%嚴重過熱</p>
-                        </div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-yellow-700/30">
-                            <div class="flex items-center justify-between">
-                                <span class="text-[10px] text-white">正文 4906</span>
-                                <span class="text-[10px] font-bold text-yellow-400">⚠️ 中性偏空</span>
-                            </div>
-                            <p class="text-[9px] text-gray-500">有科技屬性但非權值股</p>
-                        </div>
-                    </div>
-                    <div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30">
-                        <p class="text-[10px] text-gray-500 mb-1">🔧 本次優化落實</p>
-                        <ul class="text-[10px] text-gray-300 space-y-0.5 list-disc list-inside">
-                            <li>美股暴跌 → 大幅增加高殖利率防禦股比重（新增亞泥、泰山）</li>
-                            <li>PCB 過熱股改為「等拉回」/ 「純觀察」策略</li>
-                            <li>新增三大法人買賣超數據追蹤（華通淨買1,221萬股、燿華淨買892萬股）</li>
-                            <li>新增敬鵬作為低價 PCB 替代標的（50元 vs 華通270元）</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <!-- 操作建議 -->
-                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
-                    <h3 class="text-sm md:text-xl font-medium text-cyan-300 mb-3">🎯 週一操作建議</h3>
-                    <div class="space-y-2">
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-cyan-700/30">
-                            <p class="text-[10px] text-cyan-300 font-bold">1️⃣ 防禦型（亞泥、泰山、中鋼、正隆）優先</p>
-                            <p class="text-[10px] text-gray-400">殖利率保護＋傳產不受美股連動，開低即是佈局點</p>
-                        </div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-cyan-700/30">
-                            <p class="text-[10px] text-cyan-300 font-bold">2️⃣ PCB（燿華、華通）不追開盤</p>
-                            <p class="text-[10px] text-gray-400">等盤中量縮企穩；燿華看74元、華通看240-250</p>
-                        </div>
-                        <div class="p-2.5 bg-gray-800 rounded-lg border border-cyan-700/30">
-                            <p class="text-[10px] text-cyan-300 font-bold">3️⃣ 關注 10:00 後走勢</p>
-                            <p class="text-[10px] text-gray-400">開低走高 → 買盤承接力強，可加碼；持續破底 → 觀望</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 免責 -->
-                <div class="text-[9px] text-gray-600 text-center py-2">
-                    ⚠️ AI 分析參考，非投資建議。所有數據基於 TWSE 盤後公開資訊及國際盤資訊。投資有風險，請自行判斷。
-                </div>
-
             </div>
 
             <!-- 外匯保證金 -->
@@ -490,6 +174,10 @@
                         <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
                     </div>
                     <div id="fx-social-summary"></div>
+                </section>
+                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">📋 綜合分析</h3>
+                    <div id="fx-conclusion"><p class="text-xs text-gray-400 text-center py-3">載入中...</p></div>
                 </section>
             </div>
 
@@ -1006,6 +694,10 @@
                     </div>
                     <div id="crypto-social-summary"></div>
                 </section>
+                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">📋 綜合分析</h3>
+                    <div id="crypto-conclusion"><p class="text-xs text-gray-400 text-center py-3">載入中...</p></div>
+                </section>
             </div>
 
             <!-- 虛擬貨幣自動交易 v4 -->
@@ -1286,12 +978,186 @@ document.getElementById('header-title').textContent=titles[v]?.t||'專案';docum
 document.querySelectorAll('.section-view').forEach(e=>e.classList.remove('active'));
 const tv=document.getElementById('view-'+v);if(tv)tv.classList.add('active');else document.getElementById('view-placeholder').classList.add('active');
 if(tri){clearInterval(tri);tri=null}
+if(v==='stocks'){loadStockData()}
 if(v==='forex'){loadForexNews()}
 if(v==='forex-auto'){loadTradingData();tri=setInterval(loadTradingData,900000)}
 if(v==='community'){loadSocialData()}
 if(v==='crypto'){loadCryptoNews()}
 if(v==='crypto-auto'){loadCryptoData();if(!window._cri)window._cri=setInterval(loadCryptoData,900000)}
 if(v==='ad-business'){loadAdBusinessData()}
+}
+
+// ========== STOCK DATA ==========
+async function loadStockData() {
+  try {
+    const r = await fetch('stock-data.json?t='+Date.now()); if (!r.ok) return;
+    const d = await r.json();
+    const box = document.getElementById('stock-dynamic-content');
+    if (!box) return;
+    let html = '';
+
+    // 更新時間
+    html += `<div class="flex items-center space-x-2 text-xs mb-4">
+      <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-green-500"></span></span>
+      <span class="text-gray-400">更新：<span class="text-gray-200">${d.lastUpdate||'--'}</span></span>
+    </div>`;
+
+    // 警示 (alerts)
+    if (d.alerts?.length) {
+      html += `<section class="bg-red-900/20 border border-red-700/50 p-4 md:p-6 rounded-xl mb-4">
+        <h3 class="text-sm md:text-xl font-medium text-red-300 mb-3">🚨 重要警示</h3>
+        ${d.alerts.map(a => `<p class="text-xs text-red-300 mb-1">• ${typeof a === 'string' ? a : a.message || JSON.stringify(a)}</p>`).join('')}
+      </section>`;
+    }
+
+    // 大盤概況
+    const m = d.market || {};
+    const t = m.taiex || {};
+    const f = m.futures || {};
+    const us = m.usMarket || {};
+    const chgColor = v => v >= 0 ? 'text-green-400' : 'text-red-400';
+    const chgArrow = v => v >= 0 ? '▲' : '▼';
+    html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
+      <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">📊 大盤概況</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 mb-4">
+        <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+          <p class="text-[10px] md:text-xs text-gray-500 uppercase">加權指數</p>
+          <p class="text-lg md:text-2xl font-bold ${chgColor(t.change||0)} mt-0.5">${t.close?.toLocaleString()||'--'}</p>
+          <p class="text-[10px] ${chgColor(t.change||0)}">${chgArrow(t.change||0)} ${Math.abs(t.change||0)}（${t.changePct||0}%）</p>
+          ${t.note?'<p class="text-[10px] text-gray-400 mt-0.5">'+t.note+'</p>':''}
+        </div>
+        <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+          <p class="text-[10px] md:text-xs text-gray-500 uppercase">期貨</p>
+          <p class="text-lg md:text-2xl font-bold ${chgColor(f.change||0)} mt-0.5">${f.close?.toLocaleString()||'--'}</p>
+          <p class="text-[10px] ${chgColor(f.change||0)}">${chgArrow(f.change||0)} ${Math.abs(f.change||0)}</p>
+          ${f.note?'<p class="text-[10px] text-gray-400 mt-0.5">'+f.note+'</p>':''}
+        </div>`;
+    if (us.djia) {
+      html += `<div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+          <p class="text-[10px] md:text-xs text-gray-500 uppercase">道瓊工業</p>
+          <p class="text-lg md:text-2xl font-bold ${chgColor(us.djia.change||0)} mt-0.5">${us.djia.close?.toLocaleString()||'--'}</p>
+          <p class="text-[10px] ${chgColor(us.djia.change||0)}">${chgArrow(us.djia.change||0)} ${Math.abs(us.djia.change||0)}（${us.djia.changePct||0}%）</p>
+        </div>`;
+    }
+    if (us.nasdaq) {
+      html += `<div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+          <p class="text-[10px] md:text-xs text-gray-500 uppercase">那斯達克</p>
+          <p class="text-lg md:text-2xl font-bold ${chgColor(us.nasdaq.change||0)} mt-0.5">${us.nasdaq.close?.toLocaleString()||'--'}</p>
+          <p class="text-[10px] ${chgColor(us.nasdaq.change||0)}">${chgArrow(us.nasdaq.change||0)} ${Math.abs(us.nasdaq.change||0)}（${us.nasdaq.changePct||0}%）</p>
+        </div>`;
+    }
+    html += `</div>`;
+
+    // 類股強弱
+    if (d.sectorStrength?.length) {
+      html += `<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500 mb-1.5">📊 類股強弱</p><div class="flex flex-wrap gap-1.5">`;
+      d.sectorStrength.forEach(s => {
+        const c = (s.change||0) >= 0 ? 'bg-green-900/50 text-green-300 border-green-700/50' : 'bg-red-900/50 text-red-300 border-red-700/50';
+        html += `<span class="px-2 py-0.5 text-[10px] rounded-full ${c} border">${s.sector} ${s.change>0?'+':''}${s.change||0}%</span>`;
+      });
+      html += `</div></div>`;
+    }
+    html += `</section>`;
+
+    // 分析 & 重要事件
+    const analysis = d.analysis || {};
+    if (analysis.preMarket || analysis.keyEvents?.length || analysis.outlook) {
+      html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
+        <h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">📋 盤前分析</h3>`;
+      if (analysis.preMarket) html += `<p class="text-xs text-gray-300 mb-2">${analysis.preMarket}</p>`;
+      if (analysis.keyEvents?.length) {
+        html += `<div class="mb-2"><p class="text-[10px] text-gray-500 mb-1">⚡ 重要事件</p>`;
+        analysis.keyEvents.forEach(e => { html += `<p class="text-xs text-gray-300">• ${typeof e === 'string' ? e : e.event || JSON.stringify(e)}</p>`; });
+        html += `</div>`;
+      }
+      if (analysis.outlook) html += `<div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30"><p class="text-xs text-indigo-300">${analysis.outlook}</p></div>`;
+      html += `</section>`;
+    }
+
+    // 10 檔精選
+    if (d.watchlist?.length) {
+      html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-sm md:text-xl font-medium text-green-300">📈 今日精選 ${d.watchlist.length} 檔</h3>
+          ${d.selfReview?'<span class="px-2 py-0.5 text-[10px] rounded-full bg-yellow-900/50 text-yellow-300 border border-yellow-700/50">命中率 '+(d.selfReview.correctRate||'--')+'</span>':''}
+        </div>
+        <div class="grid grid-cols-1 xs:grid-cols-2 gap-2 md:gap-3">`;
+      d.watchlist.forEach(s => {
+        const priceNum = parseFloat(s.price) || 0;
+        const under50 = priceNum > 0 && priceNum <= 50;
+        html += `<div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
+          <div class="flex items-center justify-between mb-1.5">
+            <div class="flex items-center gap-1.5">
+              <span class="text-xs font-bold text-white">${s.name||''}</span>
+              <span class="text-[10px] text-gray-400">${s.code||''}</span>
+              ${under50?'<span class="px-1 py-0.5 text-[9px] rounded bg-yellow-900/50 text-yellow-300">💰 &lt;50</span>':''}
+              ${s.category?'<span class="px-1 py-0.5 text-[9px] rounded bg-blue-900/50 text-blue-300">'+s.category+'</span>':''}
+            </div>
+            <span class="text-sm font-bold text-gray-200">${s.price||'--'}</span>
+          </div>
+          ${s.technical?'<p class="text-[10px] text-gray-500 mb-1">'+s.technical+'</p>':''}
+          <p class="text-[10px] text-gray-300">${s.reason||''}</p>
+          ${s.target?'<p class="text-[10px] text-green-400 mt-0.5">目標 '+s.target+(s.stopLoss?' · 停損 '+s.stopLoss:'')+'</p>':''}
+        </div>`;
+      });
+      html += `</div></section>`;
+    }
+
+    // 推薦清單 (AI/高股息/ETF)
+    const rec = d.recommendations || {};
+    ['ai','dividend','etf'].forEach(cat => {
+      const items = rec[cat];
+      if (!items?.length) return;
+      const catName = {ai:'🤖 AI 概念股', dividend:'💰 高股息', etf:'📦 ETF'}[cat] || cat;
+      html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
+        <h3 class="text-sm md:text-xl font-medium text-cyan-300 mb-3">${catName}</h3>
+        <div class="grid grid-cols-1 xs:grid-cols-2 gap-2">`;
+      items.forEach(s => {
+        html += `<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-xs font-bold text-white">${s.name||''} <span class="text-[10px] text-gray-400">${s.code||''}</span></span>
+            <span class="text-sm font-bold text-gray-200">${s.price||'--'}</span>
+          </div>
+          <p class="text-[10px] text-gray-300">${s.reason||''}</p>
+        </div>`;
+      });
+      html += `</div></section>`;
+    });
+
+    // 法人動態
+    const inst = d.institutional || {};
+    if (inst.foreign || inst.investment_trust || inst.dealer) {
+      html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
+        <h3 class="text-sm md:text-xl font-medium text-pink-300 mb-3">🏦 法人動態</h3>
+        <div class="grid grid-cols-3 gap-2">`;
+      [{key:'foreign',name:'外資'},{key:'investment_trust',name:'投信'},{key:'dealer',name:'自營'}].forEach(({key,name}) => {
+        const v = inst[key] || {};
+        const amt = v.amount || v.net || 0;
+        html += `<div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+          <p class="text-[10px] text-gray-500">${name}</p>
+          <p class="text-lg font-bold ${amt>=0?'text-green-400':'text-red-400'}">${amt>=0?'+':''}${typeof amt==='number'?amt.toLocaleString():amt}</p>
+          ${v.note?'<p class="text-[10px] text-gray-400">'+v.note+'</p>':''}
+        </div>`;
+      });
+      html += `</div></section>`;
+    }
+
+    // 自我復盤
+    if (d.selfReview) {
+      const sr = d.selfReview;
+      html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
+        <h3 class="text-sm md:text-xl font-medium text-purple-300 mb-3">🔄 自我復盤</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-3">
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl"><p class="text-[10px] text-gray-500">總推薦</p><p class="text-lg font-bold text-white">${sr.totalPicks||'--'}</p></div>
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl"><p class="text-[10px] text-gray-500">命中率</p><p class="text-lg font-bold text-green-400">${sr.correctRate||'--'}</p></div>
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl"><p class="text-[10px] text-gray-500">最佳策略</p><p class="text-xs font-bold text-yellow-300">${sr.bestStrategy||'--'}</p></div>
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl"><p class="text-[10px] text-gray-500">近期準度</p><p class="text-xs font-bold text-cyan-300">${sr.recentAccuracy||'--'}</p></div>
+        </div>
+      </section>`;
+    }
+
+    box.innerHTML = html;
+  } catch(e) { console.log('stock err', e); }
 }
 
 // ========== NEWS ==========
@@ -1301,11 +1167,41 @@ function renderNews(containerId, updateId, items, lastUpdate, mode) {
   if (upd) upd.textContent = lastUpdate || '--';
   if (!box) return;
   if (!items || !items.length) { box.innerHTML = '<p class="text-xs text-gray-400 text-center py-3">尚無資料</p>'; return; }
-  const sentimentColor = s => s === '利多' ? 'text-green-400' : s === '利空' ? 'text-red-400' : 'text-gray-300';
-  const sentimentBg = s => s === '利多' ? 'bg-green-900/50 border-green-700/50' : s === '利空' ? 'bg-red-900/50 border-red-700/50' : 'bg-gray-700/50 border-gray-600/50';
-  const impactLabel = mode === 'social' ? '💡 可參考' : '影響';
-  const affectedLabel = mode === 'social' ? '🔧 ' : '';
-  box.innerHTML = items.map(n => `<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1.5"><span class="text-sm font-bold text-white">${n.title||''}</span><span class="px-1.5 py-0.5 text-xs rounded-full border ${sentimentBg(n.sentiment)} ${sentimentColor(n.sentiment)}">${n.sentiment||'--'}</span></div><p class="text-xs text-gray-300 mb-1">${n.summary||''}</p><p class="text-xs text-yellow-300 mb-1">${impactLabel}：${n.impact||'--'}</p><div class="flex items-center justify-between"><span class="text-[10px] text-indigo-400">${n.source?'['+n.source+'] ':''}${affectedLabel}${n.affected||''}</span>${n.url?'<a href="'+n.url+'" target="_blank" class="text-[10px] text-gray-500 hover:underline">原文 ↗</a>':''}</div></div>`).join('');
+  if (mode === 'social') {
+    // Social discussions format: platform, title, author, summary, whatTheyDid, whatWeCanLearn, url
+    box.innerHTML = items.map(n => `<div class="p-3 bg-gray-800 rounded-lg border border-cyan-700/30">
+      <div class="flex items-center justify-between mb-1.5">
+        <span class="text-sm font-bold text-white">${n.title||''}</span>
+        <span class="px-1.5 py-0.5 text-[10px] rounded-full bg-cyan-900/50 text-cyan-300 border border-cyan-700/50">${n.platform||''}</span>
+      </div>
+      <p class="text-[10px] text-gray-400 mb-1">${n.author||''}</p>
+      <p class="text-xs text-gray-300 mb-1">${n.summary||''}</p>
+      ${n.whatTheyDid?'<p class="text-xs text-yellow-300 mb-1">💡 做法：'+n.whatTheyDid+'</p>':''}
+      ${n.whatWeCanLearn?'<p class="text-xs text-green-300 mb-1">🔧 可學習：'+n.whatWeCanLearn+'</p>':''}
+      <div class="flex items-center justify-end">${n.url?'<a href="'+n.url+'" target="_blank" class="text-[10px] text-gray-500 hover:underline">原文 ↗</a>':''}</div>
+    </div>`).join('');
+  } else {
+    // News format: title, source, summary, impact, sentiment, etc.
+    const sentimentColor = s => s === '利多' ? 'text-green-400' : s === '利空' ? 'text-red-400' : 'text-gray-300';
+    const sentimentBg = s => s === '利多' ? 'bg-green-900/50 border-green-700/50' : s === '利空' ? 'bg-red-900/50 border-red-700/50' : 'bg-gray-700/50 border-gray-600/50';
+    box.innerHTML = items.map(n => {
+      const sentiment = n.sentiment || (n.impact?.direction?.includes('漲') ? '利多' : n.impact?.direction?.includes('跌') ? '利空' : '--');
+      const impactText = typeof n.impact === 'string' ? n.impact : (n.analysis || n.impact?.direction || '--');
+      const affected = typeof n.impact === 'object' ? (n.impact.instruments||[]).join(', ') : (n.affected||'');
+      return `<div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="text-sm font-bold text-white">${n.title||''}</span>
+          <span class="px-1.5 py-0.5 text-xs rounded-full border ${sentimentBg(sentiment)} ${sentimentColor(sentiment)}">${sentiment}</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-1">${n.summary||''}</p>
+        <p class="text-xs text-yellow-300 mb-1">影響：${impactText}</p>
+        <div class="flex items-center justify-between">
+          <span class="text-[10px] text-indigo-400">${n.source?'['+n.source+'] ':''}${affected}</span>
+          ${n.url?'<a href="'+n.url+'" target="_blank" class="text-[10px] text-gray-500 hover:underline">原文 ↗</a>':''}
+        </div>
+      </div>`;
+    }).join('');
+  }
 }
 
 function renderActionSummary(containerId, raw) {
@@ -1328,18 +1224,36 @@ async function loadForexNews() {
   try {
     const r = await fetch('forex-news.json?t='+Date.now()); if (!r.ok) return;
     const d = await r.json();
-    if (d.news) renderNews('fx-news-list', 'fx-news-update', d.news.items, d.news.lastUpdate);
-    if (d.socialNews) { renderNews('fx-social-list', 'fx-social-update', d.socialNews.items, d.socialNews.lastUpdate, 'social'); renderActionSummary('fx-social-summary', d.socialNews.actionSummary); }
-  } catch(e) {}
+    document.getElementById('fx-news-update').textContent = d.lastUpdate || '--';
+    if (Array.isArray(d.news)) renderNews('fx-news-list', 'fx-news-update', d.news, d.lastUpdate);
+    else if (d.news?.items) renderNews('fx-news-list', 'fx-news-update', d.news.items, d.news.lastUpdate || d.lastUpdate);
+    if (Array.isArray(d.socialDiscussions)) renderNews('fx-social-list', 'fx-social-update', d.socialDiscussions, d.lastUpdate, 'social');
+    else if (d.socialNews?.items) renderNews('fx-social-list', 'fx-social-update', d.socialNews.items, d.socialNews.lastUpdate, 'social');
+    if (d.conclusion) renderConclusion('fx-conclusion', d.conclusion);
+  } catch(e) { console.log('forex news err', e); }
 }
 
 async function loadCryptoNews() {
   try {
     const r = await fetch('crypto-news.json?t='+Date.now()); if (!r.ok) return;
     const d = await r.json();
-    if (d.news) renderNews('crypto-news-list', 'crypto-news-update', d.news.items, d.news.lastUpdate);
-    if (d.socialNews) { renderNews('crypto-social-list', 'crypto-social-update', d.socialNews.items, d.socialNews.lastUpdate, 'social'); renderActionSummary('crypto-social-summary', d.socialNews.actionSummary); }
-  } catch(e) {}
+    document.getElementById('crypto-news-update').textContent = d.lastUpdate || '--';
+    if (Array.isArray(d.news)) renderNews('crypto-news-list', 'crypto-news-update', d.news, d.lastUpdate);
+    else if (d.news?.items) renderNews('crypto-news-list', 'crypto-news-update', d.news.items, d.news.lastUpdate || d.lastUpdate);
+    if (Array.isArray(d.socialDiscussions)) renderNews('crypto-social-list', 'crypto-social-update', d.socialDiscussions, d.lastUpdate, 'social');
+    else if (d.socialNews?.items) renderNews('crypto-social-list', 'crypto-social-update', d.socialNews.items, d.socialNews.lastUpdate, 'social');
+    if (d.conclusion) renderConclusion('crypto-conclusion', d.conclusion);
+  } catch(e) { console.log('crypto news err', e); }
+}
+
+function renderConclusion(containerId, conclusion) {
+  const box = document.getElementById(containerId);
+  if (!box) return;
+  let html = '';
+  if (conclusion.marketOutlook) html += '<div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30 mb-2"><p class="text-xs font-bold text-indigo-300 mb-1">📊 市場展望</p><p class="text-xs text-gray-300">'+conclusion.marketOutlook+'</p></div>';
+  if (conclusion.tradingImplications?.length) html += '<div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30 mb-2"><p class="text-xs font-bold text-yellow-300 mb-1">⚡ 交易影響</p>'+conclusion.tradingImplications.map(t=>'<p class="text-xs text-gray-300">• '+t+'</p>').join('')+'</div>';
+  if (conclusion.systemOptimization?.length) html += '<div class="p-3 bg-gray-800 rounded-lg border border-green-700/30"><p class="text-xs font-bold text-green-300 mb-1">🔧 系統優化</p>'+conclusion.systemOptimization.map(t=>'<p class="text-xs text-gray-300">• '+t+'</p>').join('')+'</div>';
+  box.innerHTML = html || '<p class="text-xs text-gray-400">暫無分析</p>';
 }
 
 // ========== AD BUSINESS ==========
