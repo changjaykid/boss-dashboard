@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-01 18:10:19",
+  "lastUpdate": "2026-04-01 18:20:21",
   "account": {
-    "balance": 31026.05,
+    "balance": 31026.06,
     "realizedPnl": 29.83,
-    "unrealizedPnl": 5.68,
-    "netEquity": 31031.73,
+    "unrealizedPnl": 6.96,
+    "netEquity": 31033.02,
     "todayPnl": 146.25,
     "weekPnl": 126.08,
     "totalTrades": 105,
@@ -39,9 +39,9 @@
       "entryPrice": 4712.47,
       "stopLevel": 4694.07,
       "profitLevel": 4758.37,
-      "currentBid": 4718.15,
-      "currentAsk": 4718.65,
-      "pnl": 5.68,
+      "currentBid": 4719.43,
+      "currentAsk": 4719.93,
+      "pnl": 6.96,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-01T16:00:23.124"
@@ -628,52 +628,51 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4718.2,
-      "ask": 4718.7
+      "bid": 4719.56,
+      "ask": 4720.06
     },
     "EURUSDM2026": {
-      "bid": 1.16305,
-      "ask": 1.16314
+      "bid": 1.16325,
+      "ask": 1.16334
     },
     "GBPUSD": {
-      "bid": 1.32992,
-      "ask": 1.33006
+      "bid": 1.33089,
+      "ask": 1.33103
     }
   },
   "indicators": {
     "GOLD": {
       "name": "XAUUSD",
       "regime": "RANGING",
-      "rsi": 54.2,
-      "macd_hist": -2.4829,
-      "atr": 14.7829,
-      "bb_width": 0.0116,
-      "ema9": 4720.6008,
-      "ema21": 4711.3075
+      "rsi": 44.5,
+      "macd_hist": -2.9647,
+      "atr": 13.5879,
+      "bb_width": 0.0101,
+      "ema9": 4720.0733,
+      "ema21": 4711.6918
     },
     "EURUSDM2026": {
       "name": "EUR/USD",
       "regime": "RANGING",
-      "rsi": 53.3,
-      "macd_hist": -0.0001,
-      "atr": 0.0012,
-      "bb_width": 0.0035,
-      "ema9": 1.1628,
-      "ema21": 1.1622
+      "rsi": 52.0,
+      "macd_hist": -0.0002,
+      "atr": 0.0011,
+      "bb_width": 0.0034,
+      "ema9": 1.1629,
+      "ema21": 1.1623
     },
     "GBPUSD": {
       "name": "GBP/USD",
       "regime": "RANGING",
-      "rsi": 56.7,
-      "macd_hist": 0.0,
-      "atr": 0.0015,
-      "bb_width": 0.0038,
-      "ema9": 1.3288,
-      "ema21": 1.3275
+      "rsi": 58.8,
+      "macd_hist": 0.0001,
+      "atr": 0.0014,
+      "bb_width": 0.004,
+      "ema9": 1.3292,
+      "ema21": 1.3279
     }
   },
   "actions": [
-    "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD",
-    "BLOCKED: GOLD SELL \u2014 \u5df2\u6301\u6709 GOLD"
+    "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD"
   ]
 }
