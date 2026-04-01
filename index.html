@@ -969,10 +969,13 @@ async function loadStockData() {
       html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
         <h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">📋 盤前分析</h3>`;
       if (analysis.preMarket) html += `<p class="text-xs text-gray-300 mb-2">${analysis.preMarket}</p>`;
-      if (analysis.keyEvents?.length) {
-        html += `<div class="mb-2"><p class="text-[10px] text-gray-500 mb-1">⚡ 重要事件</p>`;
-        analysis.keyEvents.forEach(e => { html += `<p class="text-xs text-gray-300">• ${typeof e === 'string' ? e : e.event || JSON.stringify(e)}</p>`; });
-        html += `</div>`;
+      if (analysis.keyEvents) {
+        const evts = Array.isArray(analysis.keyEvents) ? analysis.keyEvents : typeof analysis.keyEvents === 'string' ? analysis.keyEvents.split(/\d+\)\s*/).filter(Boolean) : [];
+        if (evts.length) {
+          html += `<div class="mb-2"><p class="text-[10px] text-gray-500 mb-1">⚡ 重要事件</p>`;
+          evts.forEach(e => { html += `<p class="text-xs text-gray-300">• ${(typeof e === 'string' ? e : e.event || JSON.stringify(e)).trim()}</p>`; });
+          html += `</div>`;
+        }
       }
       if (analysis.outlook) html += `<div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30"><p class="text-xs text-indigo-300">${analysis.outlook}</p></div>`;
       html += `</section>`;
