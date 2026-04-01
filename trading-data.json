@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-01 17:20:22",
+  "lastUpdate": "2026-04-01 17:30:20",
   "account": {
-    "balance": 31026.03,
+    "balance": 31026.06,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 4.26,
-    "netEquity": 31030.29,
+    "unrealizedPnl": 7.65,
+    "netEquity": 31033.71,
     "todayPnl": 0,
     "weekPnl": 0,
     "totalTrades": 105,
@@ -39,9 +39,9 @@
       "entryPrice": 4712.47,
       "stopLevel": 4694.07,
       "profitLevel": 4758.37,
-      "currentBid": 4716.73,
-      "currentAsk": 4717.23,
-      "pnl": 4.26,
+      "currentBid": 4720.12,
+      "currentAsk": 4720.62,
+      "pnl": 7.65,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-01T16:00:23.124"
@@ -591,12 +591,12 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4716.58,
-      "ask": 4717.08
+      "bid": 4719.7,
+      "ask": 4720.2
     },
     "EURUSDM2026": {
-      "bid": 1.16255,
-      "ask": 1.16264
+      "bid": 1.16209,
+      "ask": 1.16218
     },
     "GBPUSD": {
       "bid": 1.328,
@@ -607,31 +607,31 @@
     "GOLD": {
       "name": "XAUUSD",
       "regime": "RANGING",
-      "rsi": 62.7,
-      "macd_hist": -1.1335,
-      "atr": 15.7229,
+      "rsi": 63.5,
+      "macd_hist": -0.9895,
+      "atr": 16.1321,
       "bb_width": 0.0158,
-      "ema9": 4720.5555,
-      "ema21": 4709.7024
+      "ema9": 4720.9615,
+      "ema21": 4709.8869
     },
     "EURUSDM2026": {
       "name": "EUR/USD",
       "regime": "RANGING",
-      "rsi": 61.3,
-      "macd_hist": 0.0,
+      "rsi": 58.8,
+      "macd_hist": -0.0,
       "atr": 0.0013,
       "bb_width": 0.0043,
-      "ema9": 1.163,
+      "ema9": 1.1629,
       "ema21": 1.1621
     },
     "GBPUSD": {
       "name": "GBP/USD",
       "regime": "RANGING",
-      "rsi": 60.5,
+      "rsi": 60.9,
       "macd_hist": -0.0001,
       "atr": 0.0016,
       "bb_width": 0.0049,
-      "ema9": 1.3282,
+      "ema9": 1.3283,
       "ema21": 1.327
     }
   },
