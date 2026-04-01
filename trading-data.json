@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-01 14:40:23",
+  "lastUpdate": "2026-04-01 14:50:23",
   "account": {
-    "balance": 31026.38,
+    "balance": 31026.58,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 36.44,
-    "netEquity": 31062.82,
+    "unrealizedPnl": 57.18,
+    "netEquity": 31083.76,
     "todayPnl": 0,
     "weekPnl": 0,
     "totalTrades": 100,
@@ -39,9 +39,9 @@
       "entryPrice": 4666.94,
       "stopLevel": 4646.34,
       "profitLevel": 4744.84,
-      "currentBid": 4703.38,
-      "currentAsk": 4703.88,
-      "pnl": 36.44,
+      "currentBid": 4724.12,
+      "currentAsk": 4724.62,
+      "pnl": 57.18,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-01T02:20:25.767"
@@ -591,39 +591,38 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4703.68,
-      "ask": 4704.18
+      "bid": 4724.13,
+      "ask": 4724.63
     },
     "USDJPYM2026": {
-      "bid": 157.454,
-      "ask": 157.475
+      "bid": 157.452,
+      "ask": 157.473
     }
   },
   "indicators": {
     "GOLD": {
       "name": "XAUUSD",
       "regime": "RANGING",
-      "rsi": 56.7,
-      "macd_hist": 4.7941,
-      "atr": 11.2807,
-      "bb_width": 0.0082,
-      "ema9": 4694.4549,
-      "ema21": 4693.1769
+      "rsi": 67.9,
+      "macd_hist": 6.4679,
+      "atr": 11.9586,
+      "bb_width": 0.0111,
+      "ema9": 4701.7073,
+      "ema21": 4697.1328
     },
     "USDJPYM2026": {
       "name": "USD/JPY",
       "regime": "RANGING",
-      "rsi": 39.0,
-      "macd_hist": -0.0617,
-      "atr": 0.11,
-      "bb_width": 0.0033,
-      "ema9": 157.6774,
-      "ema21": 157.7315
+      "rsi": 37.8,
+      "macd_hist": -0.0699,
+      "atr": 0.1121,
+      "bb_width": 0.0038,
+      "ema9": 157.6275,
+      "ema21": 157.704
     }
   },
   "actions": [
-    "SYNC_CLOSE: US30 BUY (broker closed)",
-    "PNL_RECOVERED: US30 BUY \u2192 $0",
+    "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD",
     "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD",
     "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD"
   ]
