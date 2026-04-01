@@ -123,5 +123,41 @@
       "根據新聞面調整策略權重",
       "關注大型機構動向與監管政策"
     ]
+  },
+  "prices": {
+    "fetchedAt": "2026-04-01 12:12:51",
+    "source": "Yahoo Finance + alternative.me",
+    "BTC_USD": {
+      "price": 68071.55,
+      "change_pct": -0.2
+    },
+    "ETH_USD": {
+      "price": 2100.95,
+      "change_pct": -0.13
+    },
+    "SOL_USD": {
+      "price": 83.34,
+      "change_pct": 0.29
+    },
+    "DOGE_USD": {
+      "price": 0.0923,
+      "change_pct": 0.13
+    },
+    "BTC_TWD": {
+      "price": 2174478,
+      "change_pct": -0.2
+    },
+    "ETH_TWD": {
+      "price": 67113,
+      "change_pct": -0.13
+    },
+    "USD_TWD": {
+      "price": 31.944,
+      "change_pct": 0.02
+    },
+    "fearGreedIndex": {
+      "value": 8,
+      "classification": "Extreme Fear"
+    }
   }
 }

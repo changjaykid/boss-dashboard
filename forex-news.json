@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-01 08:00:00",
+  "lastUpdate": "2026-04-01 12:14:32",
   "updateCycle": "08:00/20:00",
   "news": [
     {
@@ -122,5 +122,101 @@
       "根據新聞面調整策略權重",
       "關注央行政策動向"
     ]
+  },
+  "prices": {
+    "fetchedAt": "2026-04-01 12:14:32",
+    "source": "Yahoo Finance (yfinance)",
+    "instruments": {
+      "XAUUSD": {
+        "key": "XAUUSD",
+        "label": "黃金 XAUUSD",
+        "unit": "USD/oz",
+        "price": 4701.7,
+        "change": -13.8,
+        "changePercent": "-0.29%",
+        "symbol": "GC=F",
+        "fetchedAt": "2026-04-01 12:14:29"
+      },
+      "EURUSD": {
+        "key": "EURUSD",
+        "label": "歐元/美元",
+        "unit": "",
+        "price": 1.1565,
+        "change": 0.0003,
+        "changePercent": "+0.02%",
+        "symbol": "EURUSD=X",
+        "fetchedAt": "2026-04-01 12:14:30"
+      },
+      "GBPUSD": {
+        "key": "GBPUSD",
+        "label": "英鎊/美元",
+        "unit": "",
+        "price": 1.3238,
+        "change": 0.0006,
+        "changePercent": "+0.05%",
+        "symbol": "GBPUSD=X",
+        "fetchedAt": "2026-04-01 12:14:30"
+      },
+      "USDJPY": {
+        "key": "USDJPY",
+        "label": "美元/日圓",
+        "unit": "",
+        "price": 158.86,
+        "change": 0.144,
+        "changePercent": "+0.09%",
+        "symbol": "JPY=X",
+        "fetchedAt": "2026-04-01 12:14:30"
+      },
+      "US30": {
+        "key": "US30",
+        "label": "道瓊工業 US30",
+        "unit": "",
+        "price": 46341.51,
+        "change": 1125.37,
+        "changePercent": "+2.49%",
+        "symbol": "^DJI",
+        "fetchedAt": "2026-04-01 12:14:30"
+      },
+      "SPX500": {
+        "key": "SPX500",
+        "label": "標普500",
+        "unit": "",
+        "price": 6528.52,
+        "change": 184.8,
+        "changePercent": "+2.91%",
+        "symbol": "^GSPC",
+        "fetchedAt": "2026-04-01 12:14:31"
+      },
+      "NAS100": {
+        "key": "NAS100",
+        "label": "那斯達克100期貨",
+        "unit": "",
+        "price": 23981.75,
+        "change": 661.5,
+        "changePercent": "+2.84%",
+        "symbol": "NQ=F",
+        "fetchedAt": "2026-04-01 12:14:31"
+      },
+      "DXY": {
+        "key": "DXY",
+        "label": "美元指數 DXY",
+        "unit": "",
+        "price": 99.84,
+        "change": 0.071,
+        "changePercent": "+0.07%",
+        "symbol": "DX-Y.NYB",
+        "fetchedAt": "2026-04-01 12:14:31"
+      },
+      "US10Y": {
+        "key": "US10Y",
+        "label": "美國10年期公債殖利率",
+        "unit": "%",
+        "price": 4.311,
+        "change": -0.031,
+        "changePercent": "-0.71%",
+        "symbol": "^TNX",
+        "fetchedAt": "2026-04-01 12:14:31"
+      }
+    }
   }
 }
