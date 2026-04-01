@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-02 06:00:23",
+  "lastUpdate": "2026-04-02 06:10:20",
   "account": {
-    "balance": 30966.5,
+    "balance": 30967.37,
     "realizedPnl": -82.95,
-    "unrealizedPnl": -76.0,
-    "netEquity": 30890.5,
+    "unrealizedPnl": 105.0,
+    "netEquity": 31072.37,
     "todayPnl": 33.47,
     "weekPnl": 13.3,
     "totalTrades": 137,
@@ -39,9 +39,9 @@
       "entryPrice": 6579.4,
       "stopLevel": 6566.2,
       "profitLevel": 6601.4,
-      "currentBid": 6577.1,
-      "currentAsk": 6577.7,
-      "pnl": -23.0,
+      "currentBid": 6578.6,
+      "currentAsk": 6579.2,
+      "pnl": -8.0,
       "instrument": "US 500",
       "epic": "US500",
       "createdDate": "2026-04-02T04:20:21.856"
@@ -53,9 +53,9 @@
       "entryPrice": 24031.5,
       "stopLevel": 23979.3,
       "profitLevel": 24162.1,
-      "currentBid": 24008.9,
-      "currentAsk": 24010.7,
-      "pnl": -226.0,
+      "currentBid": 24018.5,
+      "currentAsk": 24020.3,
+      "pnl": -130.0,
       "instrument": "US Tech 100",
       "epic": "US100",
       "createdDate": "2026-04-02T03:20:22.131"
@@ -67,9 +67,9 @@
       "entryPrice": 46620.6,
       "stopLevel": 46716.2,
       "profitLevel": 46429.5,
-      "currentBid": 46593.3,
-      "currentAsk": 46603.3,
-      "pnl": 173.0,
+      "currentBid": 46594.3,
+      "currentAsk": 46596.3,
+      "pnl": 243.0,
       "instrument": "US Wall Street 30",
       "epic": "US30",
       "createdDate": "2026-04-02T02:20:22.832"
@@ -735,8 +735,8 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4758.68,
-      "ask": 4759.18
+      "bid": 4749.45,
+      "ask": 4751.25
     }
   },
   "indicators": {
@@ -745,14 +745,16 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 4758.68,
-      "rsi": 31.3,
-      "macd_hist": -0.5959,
-      "atr": 12.34,
-      "bb_width": 0.0093,
-      "ema9": 4763.4455,
-      "ema21": 4765.0347
+      "bid": 4749.45,
+      "rsi": 32.4,
+      "macd_hist": -0.5753,
+      "atr": 13.2336,
+      "bb_width": 0.0095,
+      "ema9": 4762.3627,
+      "ema21": 4765.173
     }
   },
-  "actions": []
+  "actions": [
+    "BLOCKED: GOLD SELL \u2014 UTC 22:00-00:00 \u7981\u6b62\u958b\u65b0\u5009"
+  ]
 }
