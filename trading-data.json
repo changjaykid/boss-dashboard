@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-04-01 20:10:24",
+  "lastUpdate": "2026-04-01 20:20:21",
   "account": {
-    "balance": 31026.0,
+    "balance": 31025.96,
     "realizedPnl": 29.83,
-    "unrealizedPnl": 0,
-    "netEquity": 31026.0,
+    "unrealizedPnl": -3.91,
+    "netEquity": 31022.05,
     "todayPnl": 146.25,
     "weekPnl": 126.08,
     "totalTrades": 109,
     "closedTrades": 108,
-    "openCount": 0,
+    "openCount": 1,
     "wins": 38,
     "losses": 70,
     "winRate": "35.2%",
@@ -31,7 +31,22 @@
     "US500",
     "US100"
   ],
-  "openPositions": [],
+  "openPositions": [
+    {
+      "dealId": "00000000-4c8c-180f-0460-7d740055311e",
+      "direction": "BUY",
+      "size": 0.01,
+      "entryPrice": 4743.14,
+      "stopLevel": 4729.94,
+      "profitLevel": 4776.14,
+      "currentBid": 4739.23,
+      "currentAsk": 4739.73,
+      "pnl": -3.91,
+      "instrument": "Gold",
+      "epic": "GOLD",
+      "createdDate": "2026-04-01T20:10:21.915"
+    }
+  ],
   "closedTrades": [
     {
       "time": "2026-03-31T16:20:18.592462+00:00",
@@ -617,57 +632,51 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4742.59,
-      "ask": 4743.09
+      "bid": 4739.59,
+      "ask": 4740.09
     },
     "EURUSDM2026": {
-      "bid": 1.1639,
-      "ask": 1.16396
+      "bid": 1.16369,
+      "ask": 1.16378
     },
     "GBPUSD": {
-      "bid": 1.33202,
-      "ask": 1.33216
+      "bid": 1.3318,
+      "ask": 1.33194
     }
   },
   "indicators": {
     "GOLD": {
       "name": "XAUUSD",
       "regime": "RANGING",
-      "rsi": 55.8,
-      "macd_hist": 2.8879,
-      "atr": 11.01,
-      "bb_width": 0.0103,
-      "ema9": 4740.8863,
-      "ema21": 4728.877
+      "rsi": 55.6,
+      "macd_hist": 1.9401,
+      "atr": 11.2393,
+      "bb_width": 0.0104,
+      "ema9": 4740.7073,
+      "ema21": 4730.5378
     },
     "EURUSDM2026": {
       "name": "EUR/USD",
       "regime": "RANGING",
-      "rsi": 43.8,
-      "macd_hist": 0.0001,
-      "atr": 0.0009,
+      "rsi": 51.9,
+      "macd_hist": 0.0,
+      "atr": 0.0008,
       "bb_width": 0.0026,
       "ema9": 1.1637,
-      "ema21": 1.1631
+      "ema21": 1.1632
     },
     "GBPUSD": {
       "name": "GBP/USD",
       "regime": "RANGING",
-      "rsi": 62.0,
+      "rsi": 68.0,
       "macd_hist": 0.0002,
       "atr": 0.0011,
-      "bb_width": 0.0051,
-      "ema9": 1.3312,
-      "ema21": 1.3298
+      "bb_width": 0.0052,
+      "ema9": 1.3313,
+      "ema21": 1.33
     }
   },
   "actions": [
-    "SYNC_CLOSE: GOLD BUY (broker closed)",
-    "SYNC_CLOSE: GOLD BUY (broker closed)",
-    "SYNC_CLOSE: GOLD BUY (broker closed)",
-    "PNL_RECOVERED: GOLD BUY \u2192 $0",
-    "PNL_RECOVERED: GOLD BUY \u2192 $0",
-    "PNL_RECOVERED: GOLD BUY \u2192 $0",
-    "OPENED BUY GOLD [trend_mtf_alignment] Conf:0.75 SL:13.2 TP:33.0"
+    "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD"
   ]
 }
