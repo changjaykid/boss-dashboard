@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-01 12:40:20",
+  "lastUpdate": "2026-04-01 12:50:19",
   "account": {
-    "balance": 30981.74,
+    "balance": 30985.98,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 6701.6,
-    "netEquity": 37683.34,
+    "unrealizedPnl": 7127.65,
+    "netEquity": 38113.63,
     "todayPnl": 0,
     "weekPnl": 0,
     "totalTrades": 100,
@@ -39,9 +39,9 @@
       "entryPrice": 6489.4,
       "stopLevel": 6457.2,
       "profitLevel": 6553.9,
-      "currentBid": 6541.5,
-      "currentAsk": 6542.1,
-      "pnl": 521.0,
+      "currentBid": 6544.6,
+      "currentAsk": 6545.2,
+      "pnl": 552.0,
       "instrument": "US 500",
       "epic": "US500",
       "createdDate": "2026-04-01T00:40:28.184"
@@ -53,9 +53,9 @@
       "entryPrice": 6488.2,
       "stopLevel": 6462.4,
       "profitLevel": 6552.7,
-      "currentBid": 6541.5,
-      "currentAsk": 6542.1,
-      "pnl": 533.0,
+      "currentBid": 6544.6,
+      "currentAsk": 6545.2,
+      "pnl": 564.0,
       "instrument": "US 500",
       "epic": "US500",
       "createdDate": "2026-04-01T00:40:27.821"
@@ -67,9 +67,9 @@
       "entryPrice": 4666.94,
       "stopLevel": 4646.34,
       "profitLevel": 4744.84,
-      "currentBid": 4675.54,
-      "currentAsk": 4676.04,
-      "pnl": 8.6,
+      "currentBid": 4677.59,
+      "currentAsk": 4678.09,
+      "pnl": 10.65,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-01T02:20:25.767"
@@ -81,9 +81,9 @@
       "entryPrice": 46101.7,
       "stopLevel": 45905.2,
       "profitLevel": 46593.0,
-      "currentBid": 46380.4,
-      "currentAsk": 46382.4,
-      "pnl": 2787.0,
+      "currentBid": 46398.5,
+      "currentAsk": 46400.5,
+      "pnl": 2968.0,
       "instrument": "US Wall Street 30",
       "epic": "US30",
       "createdDate": "2026-04-01T00:40:26.638"
@@ -95,9 +95,9 @@
       "entryPrice": 46095.2,
       "stopLevel": 45849.5,
       "profitLevel": 46586.5,
-      "currentBid": 46380.4,
-      "currentAsk": 46382.4,
-      "pnl": 2852.0,
+      "currentBid": 46398.5,
+      "currentAsk": 46400.5,
+      "pnl": 3033.0,
       "instrument": "US Wall Street 30",
       "epic": "US30",
       "createdDate": "2026-04-01T00:40:27.046"
@@ -646,37 +646,35 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4675.38,
-      "ask": 4675.88
+      "bid": 4677.6,
+      "ask": 4678.1
     },
     "USDJPYM2026": {
-      "bid": 157.934,
-      "ask": 157.956
+      "bid": 157.852,
+      "ask": 157.872
     }
   },
   "indicators": {
     "GOLD": {
       "name": "XAUUSD",
       "regime": "RANGING",
-      "rsi": 25.7,
-      "macd_hist": -2.9222,
-      "atr": 11.59,
-      "bb_width": 0.0112,
-      "ema9": 4681.2187,
-      "ema21": 4684.3984
+      "rsi": 27.8,
+      "macd_hist": -2.1993,
+      "atr": 10.7179,
+      "bb_width": 0.0114,
+      "ema9": 4680.7874,
+      "ema21": 4684.4808
     },
     "USDJPYM2026": {
       "name": "USD/JPY",
       "regime": "RANGING",
-      "rsi": 52.4,
-      "macd_hist": 0.023,
-      "atr": 0.099,
-      "bb_width": 0.0027,
-      "ema9": 157.8635,
-      "ema21": 157.815
+      "rsi": 53.8,
+      "macd_hist": 0.017,
+      "atr": 0.0975,
+      "bb_width": 0.0025,
+      "ema9": 157.8552,
+      "ema21": 157.8129
     }
   },
-  "actions": [
-    "BLOCKED: GOLD SELL \u2014 \u5df2\u6301\u6709 GOLD"
-  ]
+  "actions": []
 }
