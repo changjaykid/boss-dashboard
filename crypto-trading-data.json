@@ -1,23 +1,23 @@
 {
-  "lastUpdate": "2026/04/01 08:00:11",
+  "lastUpdate": "2026/04/01 10:40:10",
   "exchange": "MAX (MaiCoin)",
   "status": "connected",
   "account": {
-    "capital": 27700.81,
-    "realizedPnl": -973.25,
-    "unrealizedPnl": 77.84,
-    "netEquity": 27778.65,
-    "todayPnl": 0,
-    "weekPnl": -973.25,
-    "totalTrades": 7,
-    "closedTrades": 7,
+    "capital": 27741.74,
+    "realizedPnl": -932.32,
+    "unrealizedPnl": -194.1,
+    "netEquity": 27547.64,
+    "todayPnl": 40.93,
+    "weekPnl": -932.32,
+    "totalTrades": 8,
+    "closedTrades": 8,
     "openCount": 1,
-    "wins": 3,
+    "wins": 4,
     "losses": 4,
-    "winRate": "42.9%",
-    "avgWin": 68.84,
+    "winRate": "50.0%",
+    "avgWin": 61.86,
     "avgLoss": -294.94,
-    "riskRewardRatio": 0.23,
+    "riskRewardRatio": 0.21,
     "maxConsecutiveWins": 1,
     "maxConsecutiveLosses": 1,
     "maxSingleWin": 107.8,
@@ -28,82 +28,82 @@
     {
       "market": "btctwd",
       "name": "BTC/TWD",
-      "last": "2188309.4",
-      "open": "2141379.3",
+      "last": "2163971.8",
+      "open": "2184805.7",
       "high": "2197368.4",
       "low": "2118273",
-      "vol": "27.4079",
-      "change": "2.19"
+      "vol": "26.224",
+      "change": "-0.95"
     },
     {
       "market": "ethtwd",
       "name": "ETH/TWD",
-      "last": "67536.4",
-      "open": "64932.4",
+      "last": "66699",
+      "open": "66669.8",
       "high": "68000",
       "low": "64579.6",
-      "vol": "1580.4018",
-      "change": "4.01"
+      "vol": "1442.5721",
+      "change": "0.04"
     },
     {
       "market": "soltwd",
       "name": "SOL/TWD",
-      "last": "2665.5",
-      "open": "2640.2",
-      "high": "2712.5",
+      "last": "2641.7",
+      "open": "2699.9",
+      "high": "2700.2",
       "low": "2575",
-      "vol": "3354.036",
-      "change": "0.96"
+      "vol": "3375.751",
+      "change": "-2.16"
     },
     {
       "market": "dogetwd",
       "name": "DOGE/TWD",
-      "last": "2.9579",
-      "open": "2.9113",
-      "high": "2.9758",
+      "last": "2.932",
+      "open": "2.9646",
+      "high": "2.9746",
       "low": "2.8695",
-      "vol": "2557825.2",
-      "change": "1.60"
+      "vol": "2619746.8",
+      "change": "-1.10"
     },
     {
       "market": "xrptwd",
       "name": "XRP/TWD",
-      "last": "42.929",
-      "open": "42.491",
+      "last": "42.674",
+      "open": "43.103",
       "high": "43.25",
       "low": "41.913",
-      "vol": "77326.84",
-      "change": "1.03"
+      "vol": "76788.17",
+      "change": "-1.00"
     },
     {
       "market": "btcusdt",
       "name": "BTC/USDT",
-      "last": "68304.36",
-      "open": "66752.89",
+      "last": "67642.85",
+      "open": "68057.55",
       "high": "68558.44",
       "low": "66000",
-      "vol": "12.5874",
-      "change": "2.32"
+      "vol": "11.9923",
+      "change": "-0.61"
     },
     {
       "market": "ethusdt",
       "name": "ETH/USDT",
-      "last": "2107",
-      "open": "2026",
+      "last": "2087.15",
+      "open": "2081.81",
       "high": "2122.13",
       "low": "2014.07",
-      "vol": "709.9478",
-      "change": "4.00"
+      "vol": "700.0634",
+      "change": "0.26"
     },
     {
       "market": "solusdt",
       "name": "SOL/USDT",
-      "last": "83.1",
-      "open": "82.59",
-      "high": "84.48",
+      "last": "82.45",
+      "open": "84",
+      "high": "84.02",
       "low": "80.2",
-      "vol": "475.593",
-      "change": "0.62"
+      "vol": "421.128",
+      "change": "-1.85"
     }
   ],
   "openOrders": [],
@@ -119,30 +119,30 @@
     "version": 4,
     "status": "RUNNING",
     "initialCapital": 28674.059799071925,
-    "currentCapital": 27700.81,
-    "available": 5539.81,
-    "realizedPnl": -973.25,
-    "unrealizedPnl": 77.84,
-    "returnPct": -3.39,
-    "totalTrades": 7,
-    "wins": 3,
+    "currentCapital": 27741.74,
+    "available": 5548.74,
+    "realizedPnl": -932.32,
+    "unrealizedPnl": -194.1,
+    "returnPct": -3.25,
+    "totalTrades": 8,
+    "wins": 4,
     "losses": 4,
-    "winRate": "42.9%",
+    "winRate": "50.0%",
     "maxDrawdown": 3.54,
     "positions": [
       {
         "market": "ethtwd",
         "direction": "BUY",
-        "entryPrice": 67300,
-        "currentPrice": 67536.4,
-        "sizeTWD": 22161,
-        "pnlPct": 0.35,
-        "pnlTWD": 77.84,
+        "entryPrice": 67424.3,
+        "currentPrice": 66834.6,
+        "sizeTWD": 22193,
+        "pnlPct": -0.87,
+        "pnlTWD": -194.1,
         "riskRewardRatio": 2.08,
         "strategy": "trend_mtf_alignment",
         "confidence": 0.95,
-        "dailyTrend": "up",
-        "openTime": "2026-03-31T21:28:00.869Z"
+        "dailyTrend": "strong_up",
+        "openTime": "2026-04-01T01:08:01.216Z"
       }
     ],
     "closedTrades": [
@@ -285,22 +285,42 @@
         "openTime": "2026-03-31T17:28:00.276Z",
         "closeTime": "2026-03-31T21:28:00.869Z",
         "outcome": "LOSS"
+      },
+      {
+        "market": "ethtwd",
+        "direction": "BUY",
+        "entryPrice": 67300,
+        "exitPrice": 67424.3,
+        "sizeTWD": 22161,
+        "pnlTWD": 40.93,
+        "pnlPct": 0.18,
+        "riskRewardRatio": 2.08,
+        "reason": "TRAILING_STOP",
+        "strategy": "trend_mtf_alignment",
+        "signals": [
+          "trend_mtf_alignment",
+          "AI:趨勢向上且信心高，適合進場。"
+        ],
+        "confidence": 0.95,
+        "openTime": "2026-03-31T21:28:00.869Z",
+        "closeTime": "2026-04-01T01:08:01.216Z",
+        "outcome": "WIN"
       }
     ],
     "strategyStats": {
       "trend_mtf_alignment": {
-        "wins": 3,
+        "wins": 4,
         "losses": 4,
-        "pnl": -973.25,
-        "winRate": "42.9%",
+        "pnl": -932.32,
+        "winRate": "50.0%",
         "riskReward": 0,
         "rank": 1
       }
     },
-    "consecutiveLosses": 1,
+    "consecutiveLosses": 0,
     "pausedUntil": null,
     "v4StartTime": "2026-03-31T11:23:02.673Z",
-    "lastUpdate": "2026/04/01 08:00:11"
+    "lastUpdate": "2026/04/01 10:40:10"
   },
   "instruments": [
     "btctwd",
@@ -314,16 +334,16 @@
     {
       "market": "ethtwd",
       "direction": "BUY",
-      "entryPrice": 67300,
-      "currentPrice": 67536.4,
-      "sizeTWD": 22161,
-      "pnlPct": 0.35,
-      "pnlTWD": 77.84,
+      "entryPrice": 67424.3,
+      "currentPrice": 66834.6,
+      "sizeTWD": 22193,
+      "pnlPct": -0.87,
+      "pnlTWD": -194.1,
       "riskRewardRatio": 2.08,
       "strategy": "trend_mtf_alignment",
       "confidence": 0.95,
-      "dailyTrend": "up",
-      "openTime": "2026-03-31T21:28:00.869Z"
+      "dailyTrend": "strong_up",
+      "openTime": "2026-04-01T01:08:01.216Z"
     }
   ],
   "closedTrades": [
@@ -466,29 +486,49 @@
       "openTime": "2026-03-31T17:28:00.276Z",
       "closeTime": "2026-03-31T21:28:00.869Z",
       "outcome": "LOSS"
+    },
+    {
+      "market": "ethtwd",
+      "direction": "BUY",
+      "entryPrice": 67300,
+      "exitPrice": 67424.3,
+      "sizeTWD": 22161,
+      "pnlTWD": 40.93,
+      "pnlPct": 0.18,
+      "riskRewardRatio": 2.08,
+      "reason": "TRAILING_STOP",
+      "strategy": "trend_mtf_alignment",
+      "signals": [
+        "trend_mtf_alignment",
+        "AI:趨勢向上且信心高，適合進場。"
+      ],
+      "confidence": 0.95,
+      "openTime": "2026-03-31T21:28:00.869Z",
+      "closeTime": "2026-04-01T01:08:01.216Z",
+      "outcome": "WIN"
     }
   ],
   "strategyStats": {
     "trend_mtf_alignment": {
-      "wins": 3,
+      "wins": 4,
       "losses": 4,
-      "pnl": -973.25,
-      "winRate": "42.9%",
+      "pnl": -932.32,
+      "winRate": "50.0%",
       "riskReward": 0,
       "rank": 1
     }
   },
   "review": {
-    "summary": "v4 引擎 | 3勝/4敗 | 勝率 42.9% | 報酬 -3.39% | 15 策略模組化",
+    "summary": "v4 引擎 | 4勝/4敗 | 勝率 50.0% | 報酬 -3.25% | 15 策略模組化",
     "bestStrategy": {
       "name": "trend_mtf_alignment",
-      "pnl": -973.25,
-      "wins": 3,
+      "pnl": -932.32,
+      "wins": 4,
       "losses": 4
     },
     "worstStrategy": null,
     "lessons": [
-      "累計 7 筆交易，勝率 42.9%",
+      "累計 8 筆交易，勝率 50.0%",
       "風報比偏低，需要讓獲利單跑更久"
     ],
     "optimization": [],
