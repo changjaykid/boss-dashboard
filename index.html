@@ -1377,8 +1377,9 @@ rb.innerHTML=rhtml;
 }
 
 // Auto-load overview on page open
-document.addEventListener('DOMContentLoaded',()=>{setTimeout(loadOverview,100)});
+
 </script>
 <script src="dashboard-dynamic.js"></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{setTimeout(()=>{if(typeof loadOverview==='function')loadOverview()},200)})</script>
 </body>
 </html>
