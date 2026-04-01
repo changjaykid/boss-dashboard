@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-01 19:10:19",
+  "lastUpdate": "2026-04-01 19:20:20",
   "account": {
-    "balance": 31026.26,
+    "balance": 31026.31,
     "realizedPnl": 29.83,
-    "unrealizedPnl": 26.82,
-    "netEquity": 31053.08,
+    "unrealizedPnl": 31.74,
+    "netEquity": 31058.05,
     "todayPnl": 146.25,
     "weekPnl": 126.08,
     "totalTrades": 105,
@@ -39,9 +39,9 @@
       "entryPrice": 4712.47,
       "stopLevel": 4694.07,
       "profitLevel": 4758.37,
-      "currentBid": 4739.29,
-      "currentAsk": 4739.79,
-      "pnl": 26.82,
+      "currentBid": 4744.21,
+      "currentAsk": 4744.71,
+      "pnl": 31.74,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-01T16:00:23.124"
@@ -628,48 +628,48 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4739.23,
-      "ask": 4739.73
+      "bid": 4744.18,
+      "ask": 4744.68
     },
     "EURUSDM2026": {
-      "bid": 1.16368,
-      "ask": 1.16377
+      "bid": 1.16392,
+      "ask": 1.16398
     },
     "GBPUSD": {
-      "bid": 1.33098,
-      "ask": 1.33112
+      "bid": 1.33142,
+      "ask": 1.33156
     }
   },
   "indicators": {
     "GOLD": {
       "name": "XAUUSD",
       "regime": "RANGING",
-      "rsi": 54.8,
-      "macd_hist": -0.0316,
-      "atr": 12.455,
-      "bb_width": 0.0073,
-      "ema9": 4728.6008,
-      "ema21": 4717.3324
+      "rsi": 69.1,
+      "macd_hist": 0.9444,
+      "atr": 11.3936,
+      "bb_width": 0.0074,
+      "ema9": 4731.1899,
+      "ema21": 4719.6807
     },
     "EURUSDM2026": {
       "name": "EUR/USD",
       "regime": "RANGING",
-      "rsi": 56.6,
-      "macd_hist": -0.0,
-      "atr": 0.0011,
-      "bb_width": 0.0024,
-      "ema9": 1.1633,
-      "ema21": 1.1626
+      "rsi": 62.4,
+      "macd_hist": 0.0001,
+      "atr": 0.001,
+      "bb_width": 0.0025,
+      "ema9": 1.1635,
+      "ema21": 1.1627
     },
     "GBPUSD": {
       "name": "GBP/USD",
       "regime": "RANGING",
-      "rsi": 62.7,
-      "macd_hist": 0.0002,
-      "atr": 0.0014,
-      "bb_width": 0.0039,
-      "ema9": 1.3301,
-      "ema21": 1.3286
+      "rsi": 72.5,
+      "macd_hist": 0.0003,
+      "atr": 0.0013,
+      "bb_width": 0.0043,
+      "ema9": 1.3304,
+      "ema21": 1.3289
     }
   },
   "actions": [
