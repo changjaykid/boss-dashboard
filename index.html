@@ -113,34 +113,9 @@
 
         <div class="p-3 md:p-8 space-y-4 md:space-y-8 max-w-7xl w-full">
 
-            <!-- 總覽 -->
+            <!-- 總覽 (dynamic) -->
             <div id="view-overview" class="section-view active space-y-4">
-                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
-                    <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">⚡ 最新紀錄</h3>
-                    <div class="space-y-3">
-                        <div class="flex items-start space-x-3 p-2.5 bg-gray-800 rounded-lg border border-green-700/30">
-                            <span class="flex h-2 w-2 bg-green-500 rounded-full mt-1.5 flex-shrink-0"></span>
-                            <div class="min-w-0">
-                                <p class="text-xs md:text-sm font-medium text-gray-200">📈 03/28 股票推薦更新（6檔&lt;50元 · 前次命中5/10含2漲停）</p>
-                                <p class="text-[10px] md:text-xs text-gray-400 mt-0.5">2026/03/27 — 10 檔潛力股（5 檔 ≤50 元）｜加權 33,337 ▼0.30%｜造紙類 +4.75% 最強</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-3 p-2.5 bg-gray-800 rounded-lg border border-gray-700">
-                            <span class="flex h-2 w-2 bg-green-500 rounded-full mt-1.5 flex-shrink-0"></span>
-                            <div class="min-w-0">
-                                <p class="text-xs md:text-sm font-medium text-gray-200">🤖 外匯自動交易系統啟動</p>
-                                <p class="text-[10px] md:text-xs text-gray-400 mt-0.5">XAUUSD 自動監控上線，多策略模式</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-3 p-2.5 bg-gray-800 rounded-lg border border-gray-700">
-                            <span class="flex h-2 w-2 bg-green-500 rounded-full mt-1.5 flex-shrink-0"></span>
-                            <div class="min-w-0">
-                                <p class="text-xs md:text-sm font-medium text-gray-200">主控板已上線</p>
-                                <p class="text-[10px] md:text-xs text-gray-400 mt-0.5">changjaykid.github.io/boss-dashboard</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <div id="overview-content"><p class="text-xs text-gray-400 text-center py-8">載入中...</p></div>
             </div>
 
             <!-- 股票 -->
@@ -385,6 +360,10 @@
 
             <!-- 技能 -->
             <div id="view-skills" class="section-view space-y-4">
+                <div id="skills-dynamic-content"><p class="text-xs text-gray-400 text-center py-8">載入中...</p></div>
+            </div>
+            <!-- skills OLD (hidden) -->
+            <div style="display:none">
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
                     <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">🧠 AI 模型</h3>
                     <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4">
@@ -478,6 +457,8 @@
                 </section>
             </div>
 
+            </div><!-- end skills OLD hidden -->
+
             <!-- 社群專案 -->
             <div id="view-community" class="section-view space-y-4 md:space-y-6">
 
@@ -562,7 +543,7 @@
                         <h4 class="text-xs md:text-sm font-medium text-yellow-300 mb-3">📝 待審核草稿</h4>
                         <div id="ig-drafts" class="space-y-3">
                             <div class="py-4 text-center border border-dashed border-gray-700 rounded-lg">
-                                <p class="text-xs text-gray-400">🚧 準備中 — 需要做圖能力，之後再調整</p>
+                                <p class="text-xs text-gray-400">尚無待審核草稿</p>
                             </div>
                         </div>
                     </div>
@@ -576,11 +557,27 @@
                     </div>
                 </section>
 
-                <!-- IG 內容規劃 -->
+                <!-- IG 系統狀態 -->
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
-                    <h3 class="text-xs md:text-sm font-medium text-gray-300 mb-3">📐 IG 內容規劃</h3>
-                    <div class="py-4 text-center border border-dashed border-gray-700 rounded-lg">
-                        <p class="text-xs text-gray-400">待規劃 — 圖文貼文、Reels、限時動態策略</p>
+                    <h3 class="text-xs md:text-sm font-medium text-gray-300 mb-3">📐 IG 系統狀態</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div class="p-3 bg-gray-800 rounded-lg border border-green-700/30">
+                            <p class="text-xs font-bold text-green-300 mb-1">✅ 已完成</p>
+                            <ul class="text-[10px] text-gray-300 space-y-1 list-disc list-inside">
+                                <li>ig-carousel skill 已建立</li>
+                                <li>Pillow 圖片生成器（1080x1350）</li>
+                                <li>8 套配色主題 + 5 種輪播結構</li>
+                                <li>Google Drive 上傳已串接</li>
+                            </ul>
+                        </div>
+                        <div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30">
+                            <p class="text-xs font-bold text-yellow-300 mb-1">⏳ 待啟動</p>
+                            <ul class="text-[10px] text-gray-300 space-y-1 list-disc list-inside">
+                                <li>設定 ig-morning / ig-evening cron</li>
+                                <li>IG API 串接（自動發佈）</li>
+                                <li>老闆確認啟動時程</li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -818,7 +815,7 @@
 
 <script>
 function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('open')}
-function checkPass(){if(document.getElementById('pass-input').value==='8888'){document.getElementById('auth-overlay').style.display='none';document.getElementById('app-content').style.display='flex'}else{document.getElementById('auth-error').classList.remove('hidden')}}
+function checkPass(){if(document.getElementById('pass-input').value==='8888'){document.getElementById('auth-overlay').style.display='none';document.getElementById('app-content').style.display='flex';setTimeout(loadOverview,200)}else{document.getElementById('auth-error').classList.remove('hidden')}}
 
 const titles={overview:{t:'今日管家回報',s:'隨時待命'},stocks:{t:'股票專案',s:'台股分析'},forex:{t:'外匯保證金',s:'策略分析'},'forex-auto':{t:'🤖 外匯自動交易',s:'多商品 · v4 嚴格確認模式'},crypto:{t:'虛擬貨幣',s:'加密貨幣追蹤'},'crypto-auto':{t:'🤖 虛擬貨幣自動交易',s:'MAX 交易所 · v4 策略模組化'},'ad-business':{t:'🎯 廣告業務',s:'每日潛在客戶蒐集'},community:{t:'社群專案',s:'互動管理'},'community-ig':{t:'社群專案IG',s:'Instagram · @freeeadman'},shorts:{t:'短影音專案',s:'寵物上班去 · 規劃中'},skills:{t:'技能專案',s:'4 模型 · 23 技能'}};
 const trendMap={'STRONG_BULL':'強勢看多 🟢','BULL':'看多 🟢','STRONG_BEAR':'強勢看空 🔴','BEAR':'看空 🔴','NEUTRAL':'盤整 ⚪'};
@@ -978,6 +975,7 @@ document.getElementById('header-title').textContent=titles[v]?.t||'專案';docum
 document.querySelectorAll('.section-view').forEach(e=>e.classList.remove('active'));
 const tv=document.getElementById('view-'+v);if(tv)tv.classList.add('active');else document.getElementById('view-placeholder').classList.add('active');
 if(tri){clearInterval(tri);tri=null}
+if(v==='overview'){loadOverview()}
 if(v==='stocks'){loadStockData()}
 if(v==='forex'){loadForexNews()}
 if(v==='forex-auto'){loadTradingData();tri=setInterval(loadTradingData,900000)}
@@ -985,6 +983,7 @@ if(v==='community'){loadSocialData()}
 if(v==='crypto'){loadCryptoNews()}
 if(v==='crypto-auto'){loadCryptoData();if(!window._cri)window._cri=setInterval(loadCryptoData,900000)}
 if(v==='ad-business'){loadAdBusinessData()}
+if(v==='skills'){loadSkillsData()}
 }
 
 // ========== STOCK DATA ==========
@@ -1376,6 +1375,10 @@ rb.innerHTML=rhtml;
 
 }catch(e){console.log('crypto err',e)}
 }
+
+// Auto-load overview on page open
+document.addEventListener('DOMContentLoaded',()=>{setTimeout(loadOverview,100)});
 </script>
+<script src="dashboard-dynamic.js"></script>
 </body>
 </html>

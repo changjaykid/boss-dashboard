@@ -112,8 +112,15 @@
     }
   ],
   "conclusion": {
-    "marketOutlook": "資料不足，無法產出市場展望。",
-    "tradingImplications": [],
-    "systemOptimization": []
+    "marketOutlook": "基於 5 則新聞分析：多空分歧，建議觀望。",
+    "tradingImplications": [
+      "金價預測：XAU/USD的回升可能延伸至$5,000區域 → 金價上漲",
+      "金價預測：XAU/USD因伊朗衝突擴大而開盤走低至$4,45 → 金價下跌",
+      "金價因美國美元上漲及油價同步���漲而暴跌 → 金價下跌"
+    ],
+    "systemOptimization": [
+      "根據新聞面調整策略權重",
+      "關注央行政策動向"
+    ]
   }
 }
