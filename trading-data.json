@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-01 10:50:21",
+  "lastUpdate": "2026-04-01 11:00:19",
   "account": {
-    "balance": 30977.06,
+    "balance": 30976.85,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 6220.12,
-    "netEquity": 37197.18,
+    "unrealizedPnl": 6262.98,
+    "netEquity": 37239.83,
     "todayPnl": 0,
     "weekPnl": 0,
     "totalTrades": 100,
@@ -39,9 +39,9 @@
       "entryPrice": 6489.4,
       "stopLevel": 6457.2,
       "profitLevel": 6553.9,
-      "currentBid": 6535.8,
-      "currentAsk": 6536.4,
-      "pnl": 464.0,
+      "currentBid": 6535.4,
+      "currentAsk": 6536.0,
+      "pnl": 460.0,
       "instrument": "US 500",
       "epic": "US500",
       "createdDate": "2026-04-01T00:40:28.184"
@@ -53,9 +53,9 @@
       "entryPrice": 6488.2,
       "stopLevel": 6462.4,
       "profitLevel": 6552.7,
-      "currentBid": 6535.8,
-      "currentAsk": 6536.4,
-      "pnl": 476.0,
+      "currentBid": 6535.4,
+      "currentAsk": 6536.0,
+      "pnl": 472.0,
       "instrument": "US 500",
       "epic": "US500",
       "createdDate": "2026-04-01T00:40:27.821"
@@ -67,9 +67,9 @@
       "entryPrice": 4666.94,
       "stopLevel": 4646.34,
       "profitLevel": 4744.84,
-      "currentBid": 4680.06,
-      "currentAsk": 4680.56,
-      "pnl": 13.12,
+      "currentBid": 4684.92,
+      "currentAsk": 4685.42,
+      "pnl": 17.98,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-01T02:20:25.767"
@@ -81,9 +81,9 @@
       "entryPrice": 46101.7,
       "stopLevel": 45905.2,
       "profitLevel": 46593.0,
-      "currentBid": 46361.8,
-      "currentAsk": 46363.8,
-      "pnl": 2601.0,
+      "currentBid": 46364.1,
+      "currentAsk": 46366.1,
+      "pnl": 2624.0,
       "instrument": "US Wall Street 30",
       "epic": "US30",
       "createdDate": "2026-04-01T00:40:26.638"
@@ -95,9 +95,9 @@
       "entryPrice": 46095.2,
       "stopLevel": 45849.5,
       "profitLevel": 46586.5,
-      "currentBid": 46361.8,
-      "currentAsk": 46363.8,
-      "pnl": 2666.0,
+      "currentBid": 46364.1,
+      "currentAsk": 46366.1,
+      "pnl": 2689.0,
       "instrument": "US Wall Street 30",
       "epic": "US30",
       "createdDate": "2026-04-01T00:40:27.046"
@@ -446,7 +446,7 @@
       "riskReward": 0,
       "rank": 4
     },
-    "15M_趨勢跟隨": {
+    "15M_\u8da8\u52e2\u8ddf\u96a8": {
       "wins": 3,
       "losses": 22,
       "pnl": -4.8,
@@ -454,7 +454,7 @@
       "riskReward": 6.02,
       "rank": 19
     },
-    "1H_RSI極端": {
+    "1H_RSI\u6975\u7aef": {
       "wins": 0,
       "losses": 1,
       "pnl": -4.95,
@@ -462,7 +462,7 @@
       "riskReward": 0.0,
       "rank": 20
     },
-    "15M_動量突破": {
+    "15M_\u52d5\u91cf\u7a81\u7834": {
       "wins": 2,
       "losses": 4,
       "pnl": -2.7,
@@ -470,7 +470,7 @@
       "riskReward": 0.55,
       "rank": 18
     },
-    "1H_EMA回彈": {
+    "1H_EMA\u56de\u5f48": {
       "wins": 1,
       "losses": 3,
       "pnl": 4.86,
@@ -478,7 +478,7 @@
       "riskReward": 19.95,
       "rank": 2
     },
-    "15M_RSI反轉": {
+    "15M_RSI\u53cd\u8f49": {
       "wins": 2,
       "losses": 2,
       "pnl": 7.76,
@@ -486,7 +486,7 @@
       "riskReward": 28.71,
       "rank": 1
     },
-    "趨勢對齊": {
+    "\u8da8\u52e2\u5c0d\u9f4a": {
       "wins": 3,
       "losses": 5,
       "pnl": -95.99,
@@ -576,9 +576,9 @@
     }
   },
   "review": {
-    "summary": "14勝/81敗，勝率 14.7%，累計盈虧 $-96.25",
+    "summary": "14\u52dd/81\u6557\uff0c\u52dd\u7387 14.7%\uff0c\u7d2f\u8a08\u76c8\u8667 $-96.25",
     "bestStrategy": {
-      "name": "15M_RSI反轉",
+      "name": "15M_RSI\u53cd\u8f49",
       "wins": 2,
       "losses": 2,
       "pnl": 7.76,
@@ -587,7 +587,7 @@
       "rank": 1
     },
     "worstStrategy": {
-      "name": "趨勢對齊",
+      "name": "\u8da8\u52e2\u5c0d\u9f4a",
       "wins": 3,
       "losses": 5,
       "pnl": -95.99,
@@ -596,15 +596,15 @@
       "rank": 21
     },
     "lessons": [
-      "最佳交易時段 UTC 13:00（PnL $26.93）",
-      "最差交易時段 UTC 15:00（PnL $-90.9）"
+      "\u6700\u4f73\u4ea4\u6613\u6642\u6bb5 UTC 13:00\uff08PnL $26.93\uff09",
+      "\u6700\u5dee\u4ea4\u6613\u6642\u6bb5 UTC 15:00\uff08PnL $-90.9\uff09"
     ],
     "optimization": [
-      "考慮停用 15M_趨勢跟隨（勝率 12%，PnL $-4.8）",
-      "考慮停用 V5_TRENDING_UP（勝率 0%，PnL $0）",
-      "考慮停用 V5_RANGING（勝率 0%，PnL $0）",
-      "考慮停用 breakout_pattern（勝率 0%，PnL $0）",
-      "考慮停用 trend_mtf_alignment（勝率 0%，PnL $0）"
+      "\u8003\u616e\u505c\u7528 15M_\u8da8\u52e2\u8ddf\u96a8\uff08\u52dd\u7387 12%\uff0cPnL $-4.8\uff09",
+      "\u8003\u616e\u505c\u7528 V5_TRENDING_UP\uff08\u52dd\u7387 0%\uff0cPnL $0\uff09",
+      "\u8003\u616e\u505c\u7528 V5_RANGING\uff08\u52dd\u7387 0%\uff0cPnL $0\uff09",
+      "\u8003\u616e\u505c\u7528 breakout_pattern\uff08\u52dd\u7387 0%\uff0cPnL $0\uff09",
+      "\u8003\u616e\u505c\u7528 trend_mtf_alignment\uff08\u52dd\u7387 0%\uff0cPnL $0\uff09"
     ],
     "strategiesUnderTest": [
       "trend_ema_cross",
@@ -627,9 +627,9 @@
       "v6: Correlated instrument limits"
     ],
     "nextSteps": [
-      "累積 20+ 筆交易數據後進行回測",
-      "根據策略排名停用低效策略",
-      "調整 ATR 倍數與 RR 門檻"
+      "\u7d2f\u7a4d 20+ \u7b46\u4ea4\u6613\u6578\u64da\u5f8c\u9032\u884c\u56de\u6e2c",
+      "\u6839\u64da\u7b56\u7565\u6392\u540d\u505c\u7528\u4f4e\u6548\u7b56\u7565",
+      "\u8abf\u6574 ATR \u500d\u6578\u8207 RR \u9580\u6abb"
     ]
   },
   "riskParams": {
@@ -643,69 +643,37 @@
     "consecutiveLosses": 44,
     "sizeReduction": "50% after 3 consecutive losses"
   },
-  "alerts": [
-    "⚠️ 保證金使用率 99.8%，風險偏高！建議減倉或補充資金"
-  ],
+  "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4679.66,
-      "ask": 4680.16
+      "bid": 4684.58,
+      "ask": 4685.08
     },
     "USDJPYM2026": {
-      "bid": 157.735,
-      "ask": 157.757
+      "bid": 157.781,
+      "ask": 157.803
     }
   },
   "indicators": {
     "GOLD": {
       "name": "XAUUSD",
       "regime": "RANGING",
-      "rsi": 48.7,
-      "macd_hist": -5.155,
-      "atr": 16.1636,
-      "bb_width": 0.0117,
-      "ema9": 4690.1529,
-      "ema21": 4687.6912
+      "rsi": 48.3,
+      "macd_hist": -4.7611,
+      "atr": 16.1293,
+      "bb_width": 0.0105,
+      "ema9": 4690.4341,
+      "ema21": 4687.8245
     },
     "USDJPYM2026": {
       "name": "USD/JPY",
       "regime": "RANGING",
-      "rsi": 55.7,
-      "macd_hist": 0.0044,
-      "atr": 0.116,
+      "rsi": 58.4,
+      "macd_hist": 0.0073,
+      "atr": 0.1192,
       "bb_width": 0.0022,
-      "ema9": 157.7743,
-      "ema21": 157.7823
-    },
-    "EURUSDM2026": {
-      "name": "EUR/USD",
-      "trend_1h": "NEUTRAL",
-      "trend_15m": "NEUTRAL",
-      "bid": 0
-    },
-    "GBPUSD": {
-      "name": "GBP/USD",
-      "trend_1h": "NEUTRAL",
-      "trend_15m": "NEUTRAL",
-      "bid": 0
-    },
-    "US30": {
-      "name": "道瓊US30",
-      "trend_1h": "NEUTRAL",
-      "trend_15m": "NEUTRAL",
-      "bid": 0
-    },
-    "US500": {
-      "name": "S&P500",
-      "trend_1h": "NEUTRAL",
-      "trend_15m": "NEUTRAL",
-      "bid": 0
-    },
-    "US100": {
-      "name": "NAS100",
-      "trend_1h": "NEUTRAL",
-      "trend_15m": "NEUTRAL",
-      "bid": 0
+      "ema9": 157.7826,
+      "ema21": 157.7861
     }
   },
   "actions": []
