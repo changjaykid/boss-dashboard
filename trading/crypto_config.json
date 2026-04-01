@@ -14,8 +14,13 @@
     "note": "帳戶幾乎為空，需入金後才能交易"
   },
   "instruments": {
-    "watchlist": ["btctwd", "ethtwd", "btcusdt", "ethusdt", "soltwd", "solusdt"],
-    "note": "待老闆確認要監控和交易哪些幣對"
+    "watchlist": [
+      "btctwd",
+      "ethtwd",
+      "btcusdt",
+      "ethusdt"
+    ],
+    "note": "只做 BTC/ETH，SOL/DOGE 已移除 (2026-04-02)"
   },
   "strategy": {
     "name": "待定",
