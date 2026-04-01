@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-01 16:40:25",
+  "lastUpdate": "2026-04-01 16:50:26",
   "account": {
-    "balance": 31026.25,
+    "balance": 31026.18,
     "realizedPnl": -96.25,
-    "unrealizedPnl": 25.59,
-    "netEquity": 31051.84,
+    "unrealizedPnl": 18.72,
+    "netEquity": 31044.9,
     "todayPnl": 0,
     "weekPnl": 0,
     "totalTrades": 105,
@@ -39,9 +39,9 @@
       "entryPrice": 4712.47,
       "stopLevel": 4694.07,
       "profitLevel": 4758.37,
-      "currentBid": 4738.06,
-      "currentAsk": 4738.56,
-      "pnl": 25.59,
+      "currentBid": 4731.19,
+      "currentAsk": 4731.69,
+      "pnl": 18.72,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-01T16:00:23.124"
@@ -591,19 +591,19 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4738.15,
-      "ask": 4738.65
+      "bid": 4731.18,
+      "ask": 4731.68
     },
     "EURUSDM2026": {
-      "bid": 1.16465,
-      "ask": 1.16471
+      "bid": 1.16418,
+      "ask": 1.16427
     },
     "GBPUSD": {
-      "bid": 1.32988,
-      "ask": 1.33002
+      "bid": 1.3298,
+      "ask": 1.32994
     },
     "USDJPYM2026": {
-      "bid": 157.514,
+      "bid": 157.513,
       "ask": 157.533
     }
   },
@@ -611,46 +611,47 @@
     "GOLD": {
       "name": "XAUUSD",
       "regime": "RANGING",
-      "rsi": 67.4,
-      "macd_hist": 3.0545,
-      "atr": 17.4336,
-      "bb_width": 0.0182,
-      "ema9": 4721.7585,
-      "ema21": 4709.0313
+      "rsi": 65.1,
+      "macd_hist": 1.6608,
+      "atr": 16.9507,
+      "bb_width": 0.0181,
+      "ema9": 4722.6987,
+      "ema21": 4709.7664
     },
     "EURUSDM2026": {
       "name": "EUR/USD",
       "regime": "RANGING",
-      "rsi": 74.9,
+      "rsi": 68.3,
       "macd_hist": 0.0002,
       "atr": 0.0012,
-      "bb_width": 0.0047,
-      "ema9": 1.1629,
-      "ema21": 1.1619
+      "bb_width": 0.0049,
+      "ema9": 1.1632,
+      "ema21": 1.1621
     },
     "GBPUSD": {
       "name": "GBP/USD",
       "regime": "RANGING",
-      "rsi": 72.1,
+      "rsi": 68.6,
       "macd_hist": 0.0,
       "atr": 0.0015,
       "bb_width": 0.0059,
-      "ema9": 1.328,
-      "ema21": 1.3266
+      "ema9": 1.3284,
+      "ema21": 1.3268
     },
     "USDJPYM2026": {
       "name": "USD/JPY",
       "regime": "RANGING",
-      "rsi": 34.7,
-      "macd_hist": 0.0228,
-      "atr": 0.1587,
+      "rsi": 38.9,
+      "macd_hist": 0.0237,
+      "atr": 0.1592,
       "bb_width": 0.0051,
-      "ema9": 157.6134,
-      "ema21": 157.6669
+      "ema9": 157.5907,
+      "ema21": 157.6582
     }
   },
   "actions": [
     "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD",
-    "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD"
+    "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD",
+    "BLOCKED: GOLD SELL \u2014 \u5df2\u6301\u6709 GOLD"
   ]
 }
