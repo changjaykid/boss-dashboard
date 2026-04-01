@@ -1,13 +1,13 @@
 {
-  "lastUpdate": "2026-04-02 04:10:23",
+  "lastUpdate": "2026-04-02 04:20:22",
   "account": {
-    "balance": 30969.57,
+    "balance": 30968.99,
     "realizedPnl": -82.81,
-    "unrealizedPnl": 236.0,
-    "netEquity": 31205.57,
+    "unrealizedPnl": 183.36,
+    "netEquity": 31152.35,
     "todayPnl": 33.61,
     "weekPnl": 13.44,
-    "totalTrades": 136,
+    "totalTrades": 137,
     "closedTrades": 133,
     "openCount": 3,
     "wins": 38,
@@ -39,9 +39,9 @@
       "entryPrice": 24031.5,
       "stopLevel": 23979.3,
       "profitLevel": 24162.1,
-      "currentBid": 24007.4,
-      "currentAsk": 24009.2,
-      "pnl": -241.0,
+      "currentBid": 24019.7,
+      "currentAsk": 24021.5,
+      "pnl": -118.0,
       "instrument": "US Tech 100",
       "epic": "US100",
       "createdDate": "2026-04-02T03:20:22.131"
@@ -53,9 +53,9 @@
       "entryPrice": 46620.6,
       "stopLevel": 46716.2,
       "profitLevel": 46429.5,
-      "currentBid": 46570.8,
-      "currentAsk": 46572.8,
-      "pnl": 478.0,
+      "currentBid": 46588.7,
+      "currentAsk": 46590.7,
+      "pnl": 299.0,
       "instrument": "US Wall Street 30",
       "epic": "US30",
       "createdDate": "2026-04-02T02:20:22.832"
@@ -67,9 +67,9 @@
       "entryPrice": 4768.62,
       "stopLevel": 4754.92,
       "profitLevel": 4802.82,
-      "currentBid": 4767.62,
-      "currentAsk": 4768.12,
-      "pnl": -1.0,
+      "currentBid": 4770.98,
+      "currentAsk": 4771.48,
+      "pnl": 2.36,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-02T04:00:18.822"
@@ -733,32 +733,32 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4767.65,
-      "ask": 4768.15
+      "bid": 4770.66,
+      "ask": 4771.16
     },
     "EURUSDM2026": {
-      "bid": 1.16221,
-      "ask": 1.1623
+      "bid": 1.16202,
+      "ask": 1.16211
     },
     "GBPUSD": {
-      "bid": 1.33026,
-      "ask": 1.3304
+      "bid": 1.33005,
+      "ask": 1.33019
     },
     "USDJPYM2026": {
-      "bid": 157.947,
-      "ask": 157.967
+      "bid": 157.927,
+      "ask": 157.947
     },
     "US30": {
-      "bid": 46576.3,
-      "ask": 46578.3
+      "bid": 46585.7,
+      "ask": 46587.7
     },
     "US500": {
-      "bid": 6576.9,
-      "ask": 6577.5
+      "bid": 6578.9,
+      "ask": 6579.5
     },
     "US100": {
-      "bid": 24008.7,
-      "ask": 24010.5
+      "bid": 24018.7,
+      "ask": 24020.5
     }
   },
   "indicators": {
@@ -767,24 +767,24 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 4767.65,
-      "rsi": 37.8,
-      "macd_hist": -1.9712,
-      "atr": 11.8954,
+      "bid": 4770.66,
+      "rsi": 37.9,
+      "macd_hist": -0.4842,
+      "atr": 11.5907,
       "bb_width": 0.0094,
-      "ema9": 4766.3933,
-      "ema21": 4763.6092
+      "ema9": 4767.4792,
+      "ema21": 4765.017
     },
     "EURUSDM2026": {
       "name": "EUR/USD",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 1.16221,
-      "rsi": 35.4,
-      "macd_hist": -0.0001,
-      "atr": 0.0008,
-      "bb_width": 0.0044,
+      "bid": 1.16202,
+      "rsi": 19.7,
+      "macd_hist": -0.0,
+      "atr": 0.0007,
+      "bb_width": 0.0045,
       "ema9": 1.1623,
       "ema21": 1.1631
     },
@@ -793,12 +793,12 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 1.33026,
-      "rsi": 36.5,
-      "macd_hist": -0.0002,
-      "atr": 0.0009,
-      "bb_width": 0.004,
-      "ema9": 1.3305,
+      "bid": 1.33005,
+      "rsi": 19.4,
+      "macd_hist": -0.0001,
+      "atr": 0.0008,
+      "bb_width": 0.0041,
+      "ema9": 1.3304,
       "ema21": 1.331
     },
     "USDJPYM2026": {
@@ -806,55 +806,58 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 157.947,
-      "rsi": 61.7,
-      "macd_hist": 0.0247,
-      "atr": 0.0938,
+      "bid": 157.927,
+      "rsi": 72.6,
+      "macd_hist": 0.0169,
+      "atr": 0.0843,
       "bb_width": 0.0032,
-      "ema9": 157.912,
-      "ema21": 157.8213
+      "ema9": 157.9156,
+      "ema21": 157.8288
     },
     "US30": {
       "name": "US30",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 46576.3,
-      "rsi": 32.5,
-      "macd_hist": -14.8572,
-      "atr": 71.3071,
-      "bb_width": 0.0071,
-      "ema9": 46619.2834,
-      "ema21": 46639.5239
+      "bid": 46585.7,
+      "rsi": 34.4,
+      "macd_hist": -8.5145,
+      "atr": 70.3,
+      "bb_width": 0.0072,
+      "ema9": 46615.1689,
+      "ema21": 46640.2541
     },
     "US500": {
       "name": "S&P 500",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 6576.9,
-      "rsi": 33.7,
-      "macd_hist": -2.4061,
-      "atr": 11.0429,
-      "bb_width": 0.008,
-      "ema9": 6580.8122,
-      "ema21": 6581.2362
+      "bid": 6578.9,
+      "rsi": 35.9,
+      "macd_hist": -1.0754,
+      "atr": 11.0214,
+      "bb_width": 0.0081,
+      "ema9": 6580.884,
+      "ema21": 6581.9784
     },
     "US100": {
       "name": "NAS100",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 24008.7,
-      "rsi": 33.2,
-      "macd_hist": -11.4921,
-      "atr": 49.3357,
-      "bb_width": 0.01,
-      "ema9": 24029.4238,
-      "ema21": 24028.3654
+      "bid": 24018.7,
+      "rsi": 34.6,
+      "macd_hist": -5.6638,
+      "atr": 49.0214,
+      "bb_width": 0.0101,
+      "ema9": 24028.9872,
+      "ema21": 24031.8739
     }
   },
   "actions": [
+    "BLOCKED: US30 BUY \u2014 \u5df2\u6301\u6709 US30",
+    "OPENED BUY US500 [reversion_pin_bar] Conf:0.77 SL:13.2 TP:22.0",
+    "BLOCKED: US100 BUY \u2014 \u5df2\u6301\u6709 US100",
     "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD"
   ]
 }
