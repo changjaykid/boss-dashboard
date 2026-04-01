@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-02 07:20:20",
+  "lastUpdate": "2026-04-02 07:30:23",
   "account": {
-    "balance": 30968.07,
+    "balance": 30967.89,
     "realizedPnl": -82.95,
-    "unrealizedPnl": 184.0,
-    "netEquity": 31152.07,
+    "unrealizedPnl": 157.0,
+    "netEquity": 31124.89,
     "todayPnl": 33.47,
     "weekPnl": 13.3,
     "totalTrades": 137,
@@ -39,9 +39,9 @@
       "entryPrice": 6579.4,
       "stopLevel": 6566.2,
       "profitLevel": 6601.4,
-      "currentBid": 6575.9,
-      "currentAsk": 6576.5,
-      "pnl": -35.0,
+      "currentBid": 6577.3,
+      "currentAsk": 6577.9,
+      "pnl": -21.0,
       "instrument": "US 500",
       "epic": "US500",
       "createdDate": "2026-04-02T04:20:21.856"
@@ -53,9 +53,9 @@
       "entryPrice": 24031.5,
       "stopLevel": 23979.3,
       "profitLevel": 24162.1,
-      "currentBid": 24017.1,
-      "currentAsk": 24018.9,
-      "pnl": -144.0,
+      "currentBid": 24021.6,
+      "currentAsk": 24023.4,
+      "pnl": -99.0,
       "instrument": "US Tech 100",
       "epic": "US100",
       "createdDate": "2026-04-02T03:20:22.131"
@@ -67,9 +67,9 @@
       "entryPrice": 46620.6,
       "stopLevel": 46716.2,
       "profitLevel": 46429.5,
-      "currentBid": 46582.3,
-      "currentAsk": 46584.3,
-      "pnl": 363.0,
+      "currentBid": 46590.9,
+      "currentAsk": 46592.9,
+      "pnl": 277.0,
       "instrument": "US Wall Street 30",
       "epic": "US30",
       "createdDate": "2026-04-02T02:20:22.832"
@@ -735,8 +735,8 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4796.5,
-      "ask": 4797.0
+      "bid": 4796.98,
+      "ask": 4797.48
     }
   },
   "indicators": {
@@ -745,13 +745,13 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 4796.5,
-      "rsi": 80.8,
-      "macd_hist": 5.0809,
+      "bid": 4796.98,
+      "rsi": 80.5,
+      "macd_hist": 5.0163,
       "atr": 12.9429,
-      "bb_width": 0.0096,
-      "ema9": 4777.9711,
-      "ema21": 4774.4832
+      "bb_width": 0.0095,
+      "ema9": 4777.7891,
+      "ema21": 4774.4005
     }
   },
   "actions": [
