@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-03 03:52",
+  "lastUpdate": "2026-04-03 04:53",
   "status": "RUNNING",
   "mode": "live",
   "capital": 10000,
@@ -17,14 +17,14 @@
   "dailyLimit": { "maxLoss": 1000, "currentLoss": 0, "remaining": 1000 },
   "consecutiveLosses": 0,
   "signals": {
-    "technical": "🟡 15M微多但1H/4H偏空，未對齊",
-    "news": "⚪ 無重大新聞，BTC $67-68K震盪",
+    "technical": "🟡 15M微多(EMA8>21,RSI53)但1H/4H皆偏空，未對齊；量比0.08x極低",
+    "news": "⚪ 無重大突發，BTC~$67-68K震盪，Q2開局溫和反彈",
     "sentiment": "🔴 Fear&Greed=12 極度恐懼",
-    "overall": "⏸️ 觀望 — 時間框架衝突+凌晨低流動性"
+    "overall": "⏸️ 觀望 — 多空不齊+凌晨低量+極度恐懼"
   },
-  "btcPrice": 2156202,
-  "btcChange24h": -1.29,
+  "btcPrice": 2153766,
+  "btcChange24h": -1.53,
   "fearGreedIndex": "12 (Extreme Fear)",
-  "nextAction": "觀望 — 等待1H/4H轉多或15M跟隨轉空後再進場",
+  "nextAction": "觀望 — 等待時間框架對齊+脫離凌晨低流動性時段",
   "alerts": ["凌晨低流動性時段(2-6點)，暫不開倉"]
 }
