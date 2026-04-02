@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-02 19:00:21",
+  "lastUpdate": "2026-04-02 19:10:21",
   "account": {
-    "balance": 30981.14,
+    "balance": 30981.1,
     "realizedPnl": -100.69,
-    "unrealizedPnl": 3.54,
-    "netEquity": 30984.68,
+    "unrealizedPnl": -0.45,
+    "netEquity": 30980.65,
     "todayPnl": -17.74,
     "weekPnl": -4.44,
     "totalTrades": 145,
@@ -39,9 +39,9 @@
       "entryPrice": 4625.49,
       "stopLevel": 4652.49,
       "profitLevel": 4557.89,
-      "currentBid": 4621.45,
-      "currentAsk": 4621.95,
-      "pnl": 3.54,
+      "currentBid": 4625.44,
+      "currentAsk": 4625.94,
+      "pnl": -0.45,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-02T15:20:20.372"
@@ -724,16 +724,16 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4620.08,
-      "ask": 4620.58
+      "bid": 4625.11,
+      "ask": 4625.86
     },
     "EURUSDM2026": {
-      "bid": 1.15471,
-      "ask": 1.15477
+      "bid": 1.15459,
+      "ask": 1.15465
     },
     "GBPUSD": {
-      "bid": 1.31851,
-      "ask": 1.31865
+      "bid": 1.31867,
+      "ask": 1.31881
     }
   },
   "indicators": {
@@ -742,42 +742,43 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 4620.08,
-      "rsi": 34.5,
-      "macd_hist": -0.1672,
-      "atr": 13.8575,
+      "bid": 4625.11,
+      "rsi": 40.6,
+      "macd_hist": 0.2264,
+      "atr": 14.6382,
       "bb_width": 0.0121,
-      "ema9": 4622.6916,
-      "ema21": 4627.3844
+      "ema9": 4623.8016,
+      "ema21": 4627.8889
     },
     "EURUSDM2026": {
       "name": "EUR/USD",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 1.15471,
-      "rsi": 33.1,
+      "bid": 1.15459,
+      "rsi": 36.5,
       "macd_hist": -0.0002,
       "atr": 0.0007,
-      "bb_width": 0.0021,
-      "ema9": 1.1555,
-      "ema21": 1.156
+      "bb_width": 0.0023,
+      "ema9": 1.1554,
+      "ema21": 1.1559
     },
     "GBPUSD": {
       "name": "GBP/USD",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 1.31851,
-      "rsi": 30.3,
+      "bid": 1.31867,
+      "rsi": 36.4,
       "macd_hist": -0.0001,
       "atr": 0.0009,
-      "bb_width": 0.0029,
-      "ema9": 1.3196,
-      "ema21": 1.3206
+      "bb_width": 0.0031,
+      "ema9": 1.3194,
+      "ema21": 1.3204
     }
   },
   "actions": [
-    "BLOCKED: GOLD SELL \u2014 \u5df2\u6301\u6709 GOLD"
+    "BLOCKED: GOLD SELL \u2014 \u5df2\u6301\u6709 GOLD",
+    "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD"
   ]
 }
