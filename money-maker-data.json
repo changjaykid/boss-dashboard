@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-03 05:54",
+  "lastUpdate": "2026-04-03 06:55",
   "status": "RUNNING",
   "mode": "live",
   "capital": 10000,
@@ -17,14 +17,14 @@
   "dailyLimit": { "maxLoss": 1000, "currentLoss": 0, "remaining": 1000 },
   "consecutiveLosses": 0,
   "signals": {
-    "technical": "🟡 15M微多(吞噬+量比1.67x)但1H/4H皆空，MACD柱負值收窄中",
-    "news": "⚪ 無重大突發，BTC~$67-69K震盪，宏觀順風但未突破",
+    "technical": "🟡 15M微多(EMA8>21, RSI 54)但1H/4H皆空，BB擠壓中，MACD柱負值收窄，量極低(0.02x)",
+    "news": "⚪ BTC ~$67-69K震盪，3月首次月線收紅後回穩，無重大突發",
     "sentiment": "🔴 Fear&Greed=12 極度恐懼",
-    "overall": "⏸️ 觀望 — 多空不齊+凌晨低量+極度恐懼"
+    "overall": "⏸️ 觀望 — 多空時框不齊+量能極弱+極度恐懼"
   },
-  "btcPrice": 2150127,
-  "btcChange24h": -1.78,
+  "btcPrice": 2154037,
+  "btcChange24h": -1.36,
   "fearGreedIndex": "12 (Extreme Fear)",
-  "nextAction": "觀望 — 等1H轉多+脫離凌晨低流動性(06:00後重新評估)",
-  "alerts": ["凌晨低流動性時段(2-6點)，暫不開倉", "極度恐懼=12，留意反彈機會但需技術面確認"]
+  "nextAction": "觀望 — 等1H EMA轉多+量能回升，留意BB擠壓突破",
+  "alerts": ["極度恐懼=12，潛在反彈機會但需技術面確認", "BB擠壓中，突破方向待觀察"]
 }
