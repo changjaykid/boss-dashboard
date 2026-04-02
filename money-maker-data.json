@@ -1,0 +1,30 @@
+{
+  "lastUpdate": "2026-04-03 02:20",
+  "status": "STANDBY",
+  "mode": "live",
+  "capital": 10000,
+  "available": 10000,
+  "netEquity": 10000,
+  "todayPnl": 0,
+  "totalPnl": 0,
+  "totalTrades": 0,
+  "wins": 0,
+  "losses": 0,
+  "winRate": "--",
+  "maxDrawdown": 0,
+  "currentPosition": null,
+  "recentTrades": [],
+  "dailyLimit": { "maxLoss": 300, "currentLoss": 0, "remaining": 300 },
+  "consecutiveLosses": 0,
+  "signals": {
+    "technical": "--",
+    "news": "--",
+    "sentiment": "--",
+    "overall": "--"
+  },
+  "btcPrice": 0,
+  "btcChange24h": 0,
+  "fearGreedIndex": "--",
+  "nextAction": "等待老闆入金後啟動",
+  "alerts": ["系統已就緒，等待老闆入金後開始交易"]
+}
