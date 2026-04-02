@@ -1,6 +1,6 @@
 {
-  "lastUpdate": "2026-04-03 02:20",
-  "status": "STANDBY",
+  "lastUpdate": "2026-04-03 03:17",
+  "status": "RUNNING",
   "mode": "live",
   "capital": 10000,
   "available": 10000,
@@ -14,17 +14,17 @@
   "maxDrawdown": 0,
   "currentPosition": null,
   "recentTrades": [],
-  "dailyLimit": { "maxLoss": 300, "currentLoss": 0, "remaining": 300 },
+  "dailyLimit": { "maxLoss": 1000, "currentLoss": 0, "remaining": 1000 },
   "consecutiveLosses": 0,
   "signals": {
-    "technical": "--",
-    "news": "--",
-    "sentiment": "--",
-    "overall": "--"
+    "technical": "15M偏多但1H/4H偏空，方向未對齊",
+    "news": "BTC 3月收漲1.8%結束五連跌，4月開局震盪。Elon Musk近期提及BTC，ETF資金回流跡象",
+    "sentiment": "恐懼貪婪指數 12（極度恐懼）",
+    "overall": "等待 — 15M與1H方向矛盾，不進場"
   },
-  "btcPrice": 0,
-  "btcChange24h": 0,
-  "fearGreedIndex": "--",
-  "nextAction": "等待老闆入金後啟動",
-  "alerts": ["系統已就緒，等待老闆入金後開始交易"]
+  "btcPrice": 2157296,
+  "btcChange24h": -1.14,
+  "fearGreedIndex": "12 (極度恐懼)",
+  "nextAction": "監控中 — 等待多時間框架對齊",
+  "alerts": []
 }
