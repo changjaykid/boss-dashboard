@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-02 12:20:23",
+  "lastUpdate": "2026-04-02 12:30:20",
   "account": {
-    "balance": 30980.82,
+    "balance": 30980.86,
     "realizedPnl": -99.65,
-    "unrealizedPnl": 55.71,
-    "netEquity": 31036.53,
+    "unrealizedPnl": 59.75,
+    "netEquity": 31040.61,
     "todayPnl": -16.7,
     "weekPnl": -3.4,
     "totalTrades": 142,
@@ -39,9 +39,9 @@
       "entryPrice": 4697.24,
       "stopLevel": 4727.44,
       "profitLevel": 4636.74,
-      "currentBid": 4667.51,
-      "currentAsk": 4668.01,
-      "pnl": 29.23,
+      "currentBid": 4665.49,
+      "currentAsk": 4665.99,
+      "pnl": 31.25,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-02T09:30:20.757"
@@ -53,9 +53,9 @@
       "entryPrice": 4694.49,
       "stopLevel": 4718.69,
       "profitLevel": 4625.19,
-      "currentBid": 4667.51,
-      "currentAsk": 4668.01,
-      "pnl": 26.48,
+      "currentBid": 4665.49,
+      "currentAsk": 4665.99,
+      "pnl": 28.5,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-02T09:30:22.933"
@@ -728,12 +728,12 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4667.19,
-      "ask": 4667.69
+      "bid": 4664.9,
+      "ask": 4665.4
     },
     "USDJPYM2026": {
-      "bid": 158.44,
-      "ask": 158.463
+      "bid": 158.456,
+      "ask": 158.478
     }
   },
   "indicators": {
@@ -742,29 +742,27 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 4667.19,
-      "rsi": 14.2,
-      "macd_hist": -0.4748,
-      "atr": 26.6596,
-      "bb_width": 0.0406,
-      "ema9": 4684.3741,
-      "ema21": 4714.1566
+      "bid": 4664.9,
+      "rsi": 14.0,
+      "macd_hist": -0.6116,
+      "atr": 27.0382,
+      "bb_width": 0.0407,
+      "ema9": 4683.9881,
+      "ema21": 4713.9811
     },
     "USDJPYM2026": {
       "name": "USD/JPY",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 158.44,
-      "rsi": 81.2,
-      "macd_hist": -0.0046,
-      "atr": 0.1292,
-      "bb_width": 0.0078,
-      "ema9": 158.3996,
-      "ema21": 158.2036
+      "bid": 158.456,
+      "rsi": 81.0,
+      "macd_hist": -0.0156,
+      "atr": 0.1122,
+      "bb_width": 0.0076,
+      "ema9": 158.4145,
+      "ema21": 158.2176
     }
   },
-  "actions": [
-    "BLOCKED: GOLD SELL \u2014 \u5df2\u6301\u6709 GOLD"
-  ]
+  "actions": []
 }
