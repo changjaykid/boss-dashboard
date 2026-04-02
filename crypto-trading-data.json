@@ -1,116 +1,116 @@
 {
-  "lastUpdate": "2026/04/01 10:40:10",
+  "lastUpdate": "2026/04/02 10:38:06",
   "exchange": "MAX (MaiCoin)",
   "status": "connected",
   "account": {
-    "capital": 27741.74,
-    "realizedPnl": -932.32,
-    "unrealizedPnl": -194.1,
-    "netEquity": 27547.64,
-    "todayPnl": 40.93,
-    "weekPnl": -932.32,
-    "totalTrades": 8,
-    "closedTrades": 8,
+    "capital": 27366.4,
+    "realizedPnl": -1307.66,
+    "unrealizedPnl": 188.47,
+    "netEquity": 27554.87,
+    "todayPnl": -288.98,
+    "weekPnl": -1307.67,
+    "totalTrades": 21,
+    "closedTrades": 21,
     "openCount": 1,
-    "wins": 4,
-    "losses": 4,
-    "winRate": "50.0%",
-    "avgWin": 61.86,
-    "avgLoss": -294.94,
-    "riskRewardRatio": 0.21,
-    "maxConsecutiveWins": 1,
-    "maxConsecutiveLosses": 1,
-    "maxSingleWin": 107.8,
+    "wins": 11,
+    "losses": 10,
+    "winRate": "52.4%",
+    "avgWin": 88.69,
+    "avgLoss": -228.32,
+    "riskRewardRatio": 0.39,
+    "maxConsecutiveWins": 4,
+    "maxConsecutiveLosses": 3,
+    "maxSingleWin": 205.04,
     "maxSingleLoss": -534.1,
-    "maxDrawdown": 3.54
+    "maxDrawdown": 4.66
   },
   "tickers": [
     {
       "market": "btctwd",
       "name": "BTC/TWD",
-      "last": "2163971.8",
-      "open": "2184805.7",
-      "high": "2197368.4",
-      "low": "2118273",
-      "vol": "26.224",
-      "change": "-0.95"
+      "last": "2146075.9",
+      "open": "2163971.8",
+      "high": "2216949.1",
+      "low": "2141881",
+      "vol": "28.7026",
+      "change": "-0.83"
     },
     {
       "market": "ethtwd",
       "name": "ETH/TWD",
-      "last": "66699",
-      "open": "66669.8",
-      "high": "68000",
-      "low": "64579.6",
-      "vol": "1442.5721",
-      "change": "0.04"
+      "last": "66734.1",
+      "open": "66699",
+      "high": "69436.6",
+      "low": "66636.7",
+      "vol": "1242.2127",
+      "change": "0.05"
     },
     {
       "market": "soltwd",
       "name": "SOL/TWD",
-      "last": "2641.7",
-      "open": "2699.9",
-      "high": "2700.2",
-      "low": "2575",
-      "vol": "3375.751",
-      "change": "-2.16"
+      "last": "2521.3",
+      "open": "2641.7",
+      "high": "2774.5",
+      "low": "2515",
+      "vol": "4922.189",
+      "change": "-4.56"
     },
     {
       "market": "dogetwd",
       "name": "DOGE/TWD",
-      "last": "2.932",
-      "open": "2.9646",
-      "high": "2.9746",
-      "low": "2.8695",
-      "vol": "2619746.8",
-      "change": "-1.10"
+      "last": "2.883",
+      "open": "2.932",
+      "high": "3.0222",
+      "low": "2.88",
+      "vol": "1881014.7",
+      "change": "-1.67"
     },
     {
       "market": "xrptwd",
       "name": "XRP/TWD",
-      "last": "42.674",
-      "open": "43.103",
-      "high": "43.25",
-      "low": "41.913",
-      "vol": "76788.17",
-      "change": "-1.00"
+      "last": "42.377",
+      "open": "42.674",
+      "high": "43.833",
+      "low": "42.273",
+      "vol": "51679.42",
+      "change": "-0.70"
     },
     {
       "market": "btcusdt",
       "name": "BTC/USDT",
-      "last": "67642.85",
-      "open": "68057.55",
-      "high": "68558.44",
-      "low": "66000",
-      "vol": "11.9923",
-      "change": "-0.61"
+      "last": "66940.77",
+      "open": "67642.85",
+      "high": "69273.34",
+      "low": "66840.36",
+      "vol": "15.8072",
+      "change": "-1.04"
     },
     {
       "market": "ethusdt",
       "name": "ETH/USDT",
-      "last": "2087.15",
-      "open": "2081.81",
-      "high": "2122.13",
-      "low": "2014.07",
-      "vol": "700.0634",
-      "change": "0.26"
+      "last": "2082.94",
+      "open": "2087.15",
+      "high": "2166.66",
+      "low": "2078.84",
+      "vol": "953.3966",
+      "change": "-0.20"
     },
     {
       "market": "solusdt",
       "name": "SOL/USDT",
-      "last": "82.45",
-      "open": "84",
-      "high": "84.02",
-      "low": "80.2",
-      "vol": "421.128",
-      "change": "-1.85"
+      "last": "78.58",
+      "open": "82.45",
+      "high": "86.55",
+      "low": "78.58",
+      "vol": "757.121",
+      "change": "-4.69"
     }
   ],
   "openOrders": [],
   "recentTrades": [],
   "marketSentiment": {
     "fearGreed": {
-      "value": "8",
+      "value": "12",
       "label": "Extreme Fear"
     }
   },
@@ -119,53 +119,33 @@
     "version": 4,
     "status": "RUNNING",
     "initialCapital": 28674.059799071925,
-    "currentCapital": 27741.74,
-    "available": 5548.74,
-    "realizedPnl": -932.32,
-    "unrealizedPnl": -194.1,
-    "returnPct": -3.25,
-    "totalTrades": 8,
-    "wins": 4,
-    "losses": 4,
-    "winRate": "50.0%",
-    "maxDrawdown": 3.54,
+    "currentCapital": 27366.4,
+    "available": 5473.4,
+    "realizedPnl": -1307.66,
+    "unrealizedPnl": 188.47,
+    "returnPct": -4.56,
+    "totalTrades": 21,
+    "wins": 11,
+    "losses": 10,
+    "winRate": "52.4%",
+    "maxDrawdown": 4.66,
     "positions": [
       {
-        "market": "ethtwd",
-        "direction": "BUY",
-        "entryPrice": 67424.3,
-        "currentPrice": 66834.6,
-        "sizeTWD": 22193,
-        "pnlPct": -0.87,
-        "pnlTWD": -194.1,
+        "market": "btctwd",
+        "direction": "SELL",
+        "entryPrice": 2161829.2,
+        "currentPrice": 2143218.6,
+        "sizeTWD": 21893,
+        "pnlPct": 0.86,
+        "pnlTWD": 188.47,
         "riskRewardRatio": 2.08,
         "strategy": "trend_mtf_alignment",
-        "confidence": 0.95,
-        "dailyTrend": "strong_up",
-        "openTime": "2026-04-01T01:08:01.216Z"
+        "confidence": 0.85,
+        "dailyTrend": "strong_down",
+        "openTime": "2026-04-02T01:58:00.425Z"
       }
     ],
     "closedTrades": [
-      {
-        "market": "soltwd",
-        "direction": "SELL",
-        "entryPrice": 2585.1,
-        "exitPrice": 2621.7,
-        "sizeTWD": 22939,
-        "pnlTWD": -324.77,
-        "pnlPct": -1.42,
-        "riskRewardRatio": 2.08,
-        "reason": "STOP_LOSS",
-        "strategy": "trend_mtf_alignment",
-        "signals": [
-          "trend_mtf_alignment",
-          "AI:強烈的下行趨勢支持賣出信號。"
-        ],
-        "confidence": 0.8,
-        "openTime": "2026-03-31T11:23:02.674Z",
-        "closeTime": "2026-03-31T13:48:00.815Z",
-        "outcome": "LOSS"
-      },
       {
         "market": "ethusdt",
         "direction": "BUY",
@@ -305,68 +285,307 @@
         "openTime": "2026-03-31T21:28:00.869Z",
         "closeTime": "2026-04-01T01:08:01.216Z",
         "outcome": "WIN"
+      },
+      {
+        "market": "ethtwd",
+        "direction": "BUY",
+        "entryPrice": 67424.3,
+        "exitPrice": 67498.8,
+        "sizeTWD": 22193,
+        "pnlTWD": 24.52,
+        "pnlPct": 0.11,
+        "riskRewardRatio": 2.08,
+        "reason": "TIME_EXIT",
+        "strategy": "trend_mtf_alignment",
+        "signals": [
+          "trend_mtf_alignment",
+          "AI:整體趨勢強勁，適合進場，但需注意短期RSI偏高。"
+        ],
+        "confidence": 0.95,
+        "openTime": "2026-04-01T01:08:01.216Z",
+        "closeTime": "2026-04-01T05:08:00.385Z",
+        "outcome": "WIN"
+      },
+      {
+        "market": "btcusdt",
+        "direction": "BUY",
+        "entryPrice": 68201.43,
+        "exitPrice": 68458.18,
+        "sizeTWD": 22213,
+        "pnlTWD": 83.62,
+        "pnlPct": 0.38,
+        "riskRewardRatio": 2.08,
+        "reason": "TRAILING_STOP",
+        "strategy": "trend_mtf_alignment",
+        "signals": [
+          "trend_mtf_alignment",
+          "AI:短期內有上升潛力，但長期趨勢仍然偏弱。"
+        ],
+        "confidence": 0.95,
+        "openTime": "2026-04-01T05:08:00.385Z",
+        "closeTime": "2026-04-01T05:46:00.927Z",
+        "outcome": "WIN"
+      },
+      {
+        "market": "ethtwd",
+        "direction": "BUY",
+        "entryPrice": 68037.7,
+        "exitPrice": 68573,
+        "sizeTWD": 22280,
+        "pnlTWD": 175.29,
+        "pnlPct": 0.79,
+        "riskRewardRatio": 2.08,
+        "reason": "TRAILING_STOP",
+        "strategy": "trend_mtf_alignment",
+        "signals": [
+          "trend_mtf_alignment",
+          "AI:強勁的上漲趨勢，建議小幅調整進場時機。"
+        ],
+        "confidence": 0.95,
+        "openTime": "2026-04-01T05:46:00.927Z",
+        "closeTime": "2026-04-01T07:20:00.800Z",
+        "outcome": "WIN"
+      },
+      {
+        "market": "dogetwd",
+        "direction": "BUY",
+        "entryPrice": 3.0206,
+        "exitPrice": 2.9923,
+        "sizeTWD": 22420,
+        "pnlTWD": -210.05,
+        "pnlPct": -0.94,
+        "riskRewardRatio": 2.08,
+        "reason": "STOP_LOSS",
+        "strategy": "trend_mtf_alignment",
+        "signals": [
+          "trend_mtf_alignment",
+          "AI:市場趨勢強勁，建議持續觀察進場時機。"
+        ],
+        "confidence": 0.95,
+        "openTime": "2026-04-01T07:20:00.800Z",
+        "closeTime": "2026-04-01T07:50:01.031Z",
+        "outcome": "LOSS"
+      },
+      {
+        "market": "soltwd",
+        "direction": "BUY",
+        "entryPrice": 2689.8,
+        "exitPrice": 2665.4,
+        "sizeTWD": 22252,
+        "pnlTWD": -201.85,
+        "pnlPct": -0.91,
+        "riskRewardRatio": 2.08,
+        "reason": "STOP_LOSS",
+        "strategy": "trend_mtf_alignment",
+        "signals": [
+          "trend_mtf_alignment",
+          "AI:短期內有上升潛力，但長期趨勢仍偏弱。"
+        ],
+        "confidence": 0.95,
+        "openTime": "2026-04-01T07:50:01.031Z",
+        "closeTime": "2026-04-01T09:42:00.597Z",
+        "outcome": "LOSS"
+      },
+      {
+        "market": "ethusdt",
+        "direction": "BUY",
+        "entryPrice": 2131.03,
+        "exitPrice": 2123.48,
+        "sizeTWD": 22091,
+        "pnlTWD": -78.27,
+        "pnlPct": -0.35,
+        "riskRewardRatio": 2.08,
+        "reason": "TIME_EXIT",
+        "strategy": "trend_ema_cross",
+        "signals": [
+          "trend_ema_cross",
+          "AI:市場趨勢強勁，適合進場，但需注意短期RSI偏低。"
+        ],
+        "confidence": 0.9,
+        "openTime": "2026-04-01T09:42:00.597Z",
+        "closeTime": "2026-04-01T13:42:00.392Z",
+        "outcome": "LOSS"
+      },
+      {
+        "market": "dogetwd",
+        "direction": "BUY",
+        "entryPrice": 2.9759,
+        "exitPrice": 3.0036,
+        "sizeTWD": 22028,
+        "pnlTWD": 205.04,
+        "pnlPct": 0.93,
+        "riskRewardRatio": 2.08,
+        "reason": "TRAILING_STOP",
+        "strategy": "trend_ema_cross",
+        "signals": [
+          "trend_ema_cross"
+        ],
+        "confidence": 0.7500000000000001,
+        "openTime": "2026-04-01T13:42:00.392Z",
+        "closeTime": "2026-04-01T17:14:00.882Z",
+        "outcome": "WIN"
+      },
+      {
+        "market": "ethusdt",
+        "direction": "BUY",
+        "entryPrice": 2154.54,
+        "exitPrice": 2125.73,
+        "sizeTWD": 22192,
+        "pnlTWD": -296.75,
+        "pnlPct": -1.34,
+        "riskRewardRatio": 2.08,
+        "reason": "STOP_LOSS",
+        "strategy": "trend_mtf_alignment",
+        "signals": [
+          "trend_mtf_alignment"
+        ],
+        "confidence": 0.95,
+        "openTime": "2026-04-01T17:14:00.882Z",
+        "closeTime": "2026-04-01T18:04:01.036Z",
+        "outcome": "LOSS"
+      },
+      {
+        "market": "ethtwd",
+        "direction": "BUY",
+        "entryPrice": 68165.4,
+        "exitPrice": 68318.6,
+        "sizeTWD": 21955,
+        "pnlTWD": 49.34,
+        "pnlPct": 0.22,
+        "riskRewardRatio": 2.08,
+        "reason": "TRAILING_STOP",
+        "strategy": "trend_ema_cross",
+        "signals": [
+          "trend_ema_cross"
+        ],
+        "confidence": 0.75,
+        "openTime": "2026-04-01T18:04:01.036Z",
+        "closeTime": "2026-04-01T20:06:00.447Z",
+        "outcome": "WIN"
+      },
+      {
+        "market": "ethtwd",
+        "direction": "BUY",
+        "entryPrice": 68318.6,
+        "exitPrice": 68824.1,
+        "sizeTWD": 21994,
+        "pnlTWD": 162.74,
+        "pnlPct": 0.74,
+        "riskRewardRatio": 2.08,
+        "reason": "TRAILING_STOP",
+        "strategy": "trend_mtf_alignment",
+        "signals": [
+          "trend_mtf_alignment"
+        ],
+        "confidence": 0.7000000000000001,
+        "openTime": "2026-04-01T20:06:00.447Z",
+        "closeTime": "2026-04-01T22:16:00.394Z",
+        "outcome": "WIN"
+      },
+      {
+        "market": "ethusdt",
+        "direction": "BUY",
+        "entryPrice": 2146.93,
+        "exitPrice": 2144.23,
+        "sizeTWD": 22124,
+        "pnlTWD": -27.82,
+        "pnlPct": -0.13,
+        "riskRewardRatio": 2.08,
+        "reason": "BREAKEVEN_STOP",
+        "strategy": "trend_mtf_alignment",
+        "signals": [
+          "trend_mtf_alignment"
+        ],
+        "confidence": 0.95,
+        "openTime": "2026-04-01T22:16:00.394Z",
+        "closeTime": "2026-04-02T01:02:00.747Z",
+        "outcome": "LOSS"
+      },
+      {
+        "market": "ethusdt",
+        "direction": "BUY",
+        "entryPrice": 2144.23,
+        "exitPrice": 2116.22,
+        "sizeTWD": 22102,
+        "pnlTWD": -288.72,
+        "pnlPct": -1.31,
+        "riskRewardRatio": 2.08,
+        "reason": "STOP_LOSS",
+        "strategy": "trend_mtf_alignment",
+        "signals": [
+          "trend_mtf_alignment"
+        ],
+        "confidence": 0.95,
+        "openTime": "2026-04-02T01:02:00.747Z",
+        "closeTime": "2026-04-02T01:20:00.813Z",
+        "outcome": "LOSS"
+      },
+      {
+        "market": "btctwd",
+        "direction": "SELL",
+        "entryPrice": 2164556.9,
+        "exitPrice": 2161829.2,
+        "sizeTWD": 21871,
+        "pnlTWD": 27.56,
+        "pnlPct": 0.13,
+        "riskRewardRatio": 2.08,
+        "reason": "TRAILING_STOP",
+        "strategy": "trend_mtf_alignment",
+        "signals": [
+          "trend_mtf_alignment"
+        ],
+        "confidence": 0.8999999999999999,
+        "openTime": "2026-04-02T01:20:00.813Z",
+        "closeTime": "2026-04-02T01:58:00.425Z",
+        "outcome": "WIN"
       }
     ],
     "strategyStats": {
+      "trend_ema_cross": {
+        "wins": 2,
+        "losses": 1,
+        "pnl": 176.12,
+        "winRate": "66.7%",
+        "riskReward": 99,
+        "rank": 1
+      },
       "trend_mtf_alignment": {
-        "wins": 4,
-        "losses": 4,
-        "pnl": -932.32,
+        "wins": 9,
+        "losses": 9,
+        "pnl": -1483.78,
         "winRate": "50.0%",
         "riskReward": 0,
-        "rank": 1
+        "rank": 2
       }
     },
     "consecutiveLosses": 0,
     "pausedUntil": null,
     "v4StartTime": "2026-03-31T11:23:02.673Z",
-    "lastUpdate": "2026/04/01 10:40:10"
+    "lastUpdate": "2026/04/02 10:38:06"
   },
   "instruments": [
     "btctwd",
     "ethtwd",
     "btcusdt",
-    "ethusdt",
-    "soltwd",
-    "dogetwd"
+    "ethusdt"
   ],
   "openPositions": [
     {
-      "market": "ethtwd",
-      "direction": "BUY",
-      "entryPrice": 67424.3,
-      "currentPrice": 66834.6,
-      "sizeTWD": 22193,
-      "pnlPct": -0.87,
-      "pnlTWD": -194.1,
+      "market": "btctwd",
+      "direction": "SELL",
+      "entryPrice": 2161829.2,
+      "currentPrice": 2143218.6,
+      "sizeTWD": 21893,
+      "pnlPct": 0.86,
+      "pnlTWD": 188.47,
       "riskRewardRatio": 2.08,
       "strategy": "trend_mtf_alignment",
-      "confidence": 0.95,
-      "dailyTrend": "strong_up",
-      "openTime": "2026-04-01T01:08:01.216Z"
+      "confidence": 0.85,
+      "dailyTrend": "strong_down",
+      "openTime": "2026-04-02T01:58:00.425Z"
     }
   ],
   "closedTrades": [
-    {
-      "market": "soltwd",
-      "direction": "SELL",
-      "entryPrice": 2585.1,
-      "exitPrice": 2621.7,
-      "sizeTWD": 22939,
-      "pnlTWD": -324.77,
-      "pnlPct": -1.42,
-      "riskRewardRatio": 2.08,
-      "reason": "STOP_LOSS",
-      "strategy": "trend_mtf_alignment",
-      "signals": [
-        "trend_mtf_alignment",
-        "AI:強烈的下行趨勢支持賣出信號。"
-      ],
-      "confidence": 0.8,
-      "openTime": "2026-03-31T11:23:02.674Z",
-      "closeTime": "2026-03-31T13:48:00.815Z",
-      "outcome": "LOSS"
-    },
     {
       "market": "ethusdt",
       "direction": "BUY",
@@ -506,34 +725,299 @@
       "openTime": "2026-03-31T21:28:00.869Z",
       "closeTime": "2026-04-01T01:08:01.216Z",
       "outcome": "WIN"
+    },
+    {
+      "market": "ethtwd",
+      "direction": "BUY",
+      "entryPrice": 67424.3,
+      "exitPrice": 67498.8,
+      "sizeTWD": 22193,
+      "pnlTWD": 24.52,
+      "pnlPct": 0.11,
+      "riskRewardRatio": 2.08,
+      "reason": "TIME_EXIT",
+      "strategy": "trend_mtf_alignment",
+      "signals": [
+        "trend_mtf_alignment",
+        "AI:整體趨勢強勁，適合進場，但需注意短期RSI偏高。"
+      ],
+      "confidence": 0.95,
+      "openTime": "2026-04-01T01:08:01.216Z",
+      "closeTime": "2026-04-01T05:08:00.385Z",
+      "outcome": "WIN"
+    },
+    {
+      "market": "btcusdt",
+      "direction": "BUY",
+      "entryPrice": 68201.43,
+      "exitPrice": 68458.18,
+      "sizeTWD": 22213,
+      "pnlTWD": 83.62,
+      "pnlPct": 0.38,
+      "riskRewardRatio": 2.08,
+      "reason": "TRAILING_STOP",
+      "strategy": "trend_mtf_alignment",
+      "signals": [
+        "trend_mtf_alignment",
+        "AI:短期內有上升潛力，但長期趨勢仍然偏弱。"
+      ],
+      "confidence": 0.95,
+      "openTime": "2026-04-01T05:08:00.385Z",
+      "closeTime": "2026-04-01T05:46:00.927Z",
+      "outcome": "WIN"
+    },
+    {
+      "market": "ethtwd",
+      "direction": "BUY",
+      "entryPrice": 68037.7,
+      "exitPrice": 68573,
+      "sizeTWD": 22280,
+      "pnlTWD": 175.29,
+      "pnlPct": 0.79,
+      "riskRewardRatio": 2.08,
+      "reason": "TRAILING_STOP",
+      "strategy": "trend_mtf_alignment",
+      "signals": [
+        "trend_mtf_alignment",
+        "AI:強勁的上漲趨勢，建議小幅調整進場時機。"
+      ],
+      "confidence": 0.95,
+      "openTime": "2026-04-01T05:46:00.927Z",
+      "closeTime": "2026-04-01T07:20:00.800Z",
+      "outcome": "WIN"
+    },
+    {
+      "market": "dogetwd",
+      "direction": "BUY",
+      "entryPrice": 3.0206,
+      "exitPrice": 2.9923,
+      "sizeTWD": 22420,
+      "pnlTWD": -210.05,
+      "pnlPct": -0.94,
+      "riskRewardRatio": 2.08,
+      "reason": "STOP_LOSS",
+      "strategy": "trend_mtf_alignment",
+      "signals": [
+        "trend_mtf_alignment",
+        "AI:市場趨勢強勁，建議持續觀察進場時機。"
+      ],
+      "confidence": 0.95,
+      "openTime": "2026-04-01T07:20:00.800Z",
+      "closeTime": "2026-04-01T07:50:01.031Z",
+      "outcome": "LOSS"
+    },
+    {
+      "market": "soltwd",
+      "direction": "BUY",
+      "entryPrice": 2689.8,
+      "exitPrice": 2665.4,
+      "sizeTWD": 22252,
+      "pnlTWD": -201.85,
+      "pnlPct": -0.91,
+      "riskRewardRatio": 2.08,
+      "reason": "STOP_LOSS",
+      "strategy": "trend_mtf_alignment",
+      "signals": [
+        "trend_mtf_alignment",
+        "AI:短期內有上升潛力，但長期趨勢仍偏弱。"
+      ],
+      "confidence": 0.95,
+      "openTime": "2026-04-01T07:50:01.031Z",
+      "closeTime": "2026-04-01T09:42:00.597Z",
+      "outcome": "LOSS"
+    },
+    {
+      "market": "ethusdt",
+      "direction": "BUY",
+      "entryPrice": 2131.03,
+      "exitPrice": 2123.48,
+      "sizeTWD": 22091,
+      "pnlTWD": -78.27,
+      "pnlPct": -0.35,
+      "riskRewardRatio": 2.08,
+      "reason": "TIME_EXIT",
+      "strategy": "trend_ema_cross",
+      "signals": [
+        "trend_ema_cross",
+        "AI:市場趨勢強勁，適合進場，但需注意短期RSI偏低。"
+      ],
+      "confidence": 0.9,
+      "openTime": "2026-04-01T09:42:00.597Z",
+      "closeTime": "2026-04-01T13:42:00.392Z",
+      "outcome": "LOSS"
+    },
+    {
+      "market": "dogetwd",
+      "direction": "BUY",
+      "entryPrice": 2.9759,
+      "exitPrice": 3.0036,
+      "sizeTWD": 22028,
+      "pnlTWD": 205.04,
+      "pnlPct": 0.93,
+      "riskRewardRatio": 2.08,
+      "reason": "TRAILING_STOP",
+      "strategy": "trend_ema_cross",
+      "signals": [
+        "trend_ema_cross"
+      ],
+      "confidence": 0.7500000000000001,
+      "openTime": "2026-04-01T13:42:00.392Z",
+      "closeTime": "2026-04-01T17:14:00.882Z",
+      "outcome": "WIN"
+    },
+    {
+      "market": "ethusdt",
+      "direction": "BUY",
+      "entryPrice": 2154.54,
+      "exitPrice": 2125.73,
+      "sizeTWD": 22192,
+      "pnlTWD": -296.75,
+      "pnlPct": -1.34,
+      "riskRewardRatio": 2.08,
+      "reason": "STOP_LOSS",
+      "strategy": "trend_mtf_alignment",
+      "signals": [
+        "trend_mtf_alignment"
+      ],
+      "confidence": 0.95,
+      "openTime": "2026-04-01T17:14:00.882Z",
+      "closeTime": "2026-04-01T18:04:01.036Z",
+      "outcome": "LOSS"
+    },
+    {
+      "market": "ethtwd",
+      "direction": "BUY",
+      "entryPrice": 68165.4,
+      "exitPrice": 68318.6,
+      "sizeTWD": 21955,
+      "pnlTWD": 49.34,
+      "pnlPct": 0.22,
+      "riskRewardRatio": 2.08,
+      "reason": "TRAILING_STOP",
+      "strategy": "trend_ema_cross",
+      "signals": [
+        "trend_ema_cross"
+      ],
+      "confidence": 0.75,
+      "openTime": "2026-04-01T18:04:01.036Z",
+      "closeTime": "2026-04-01T20:06:00.447Z",
+      "outcome": "WIN"
+    },
+    {
+      "market": "ethtwd",
+      "direction": "BUY",
+      "entryPrice": 68318.6,
+      "exitPrice": 68824.1,
+      "sizeTWD": 21994,
+      "pnlTWD": 162.74,
+      "pnlPct": 0.74,
+      "riskRewardRatio": 2.08,
+      "reason": "TRAILING_STOP",
+      "strategy": "trend_mtf_alignment",
+      "signals": [
+        "trend_mtf_alignment"
+      ],
+      "confidence": 0.7000000000000001,
+      "openTime": "2026-04-01T20:06:00.447Z",
+      "closeTime": "2026-04-01T22:16:00.394Z",
+      "outcome": "WIN"
+    },
+    {
+      "market": "ethusdt",
+      "direction": "BUY",
+      "entryPrice": 2146.93,
+      "exitPrice": 2144.23,
+      "sizeTWD": 22124,
+      "pnlTWD": -27.82,
+      "pnlPct": -0.13,
+      "riskRewardRatio": 2.08,
+      "reason": "BREAKEVEN_STOP",
+      "strategy": "trend_mtf_alignment",
+      "signals": [
+        "trend_mtf_alignment"
+      ],
+      "confidence": 0.95,
+      "openTime": "2026-04-01T22:16:00.394Z",
+      "closeTime": "2026-04-02T01:02:00.747Z",
+      "outcome": "LOSS"
+    },
+    {
+      "market": "ethusdt",
+      "direction": "BUY",
+      "entryPrice": 2144.23,
+      "exitPrice": 2116.22,
+      "sizeTWD": 22102,
+      "pnlTWD": -288.72,
+      "pnlPct": -1.31,
+      "riskRewardRatio": 2.08,
+      "reason": "STOP_LOSS",
+      "strategy": "trend_mtf_alignment",
+      "signals": [
+        "trend_mtf_alignment"
+      ],
+      "confidence": 0.95,
+      "openTime": "2026-04-02T01:02:00.747Z",
+      "closeTime": "2026-04-02T01:20:00.813Z",
+      "outcome": "LOSS"
+    },
+    {
+      "market": "btctwd",
+      "direction": "SELL",
+      "entryPrice": 2164556.9,
+      "exitPrice": 2161829.2,
+      "sizeTWD": 21871,
+      "pnlTWD": 27.56,
+      "pnlPct": 0.13,
+      "riskRewardRatio": 2.08,
+      "reason": "TRAILING_STOP",
+      "strategy": "trend_mtf_alignment",
+      "signals": [
+        "trend_mtf_alignment"
+      ],
+      "confidence": 0.8999999999999999,
+      "openTime": "2026-04-02T01:20:00.813Z",
+      "closeTime": "2026-04-02T01:58:00.425Z",
+      "outcome": "WIN"
     }
   ],
   "strategyStats": {
+    "trend_ema_cross": {
+      "wins": 2,
+      "losses": 1,
+      "pnl": 176.12,
+      "winRate": "66.7%",
+      "riskReward": 99,
+      "rank": 1
+    },
     "trend_mtf_alignment": {
-      "wins": 4,
-      "losses": 4,
-      "pnl": -932.32,
+      "wins": 9,
+      "losses": 9,
+      "pnl": -1483.78,
       "winRate": "50.0%",
       "riskReward": 0,
-      "rank": 1
+      "rank": 2
     }
   },
   "review": {
-    "summary": "v4 引擎 | 4勝/4敗 | 勝率 50.0% | 報酬 -3.25% | 15 策略模組化",
+    "summary": "v4 引擎 | 11勝/10敗 | 勝率 52.4% | 報酬 -4.56% | 15 策略模組化",
     "bestStrategy": {
-      "name": "trend_mtf_alignment",
-      "pnl": -932.32,
-      "wins": 4,
-      "losses": 4
+      "name": "trend_ema_cross",
+      "pnl": 176.12,
+      "wins": 2,
+      "losses": 1
     },
-    "worstStrategy": null,
+    "worstStrategy": {
+      "name": "trend_mtf_alignment",
+      "pnl": -1483.78,
+      "wins": 9,
+      "losses": 9
+    },
     "lessons": [
-      "累計 8 筆交易，勝率 50.0%",
+      "累計 21 筆交易，勝率 52.4%",
       "風報比偏低，需要讓獲利單跑更久"
     ],
     "optimization": [],
     "strategiesUnderTest": [
-      "trend_ema_cross",
       "trend_momentum_chase",
       "trend_elliott_wave3",
       "trend_flag_breakout",
