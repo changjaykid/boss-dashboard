@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-02 10:20:19",
+  "lastUpdate": "2026-04-02 10:30:19",
   "account": {
-    "balance": 30980.34,
+    "balance": 30980.35,
     "realizedPnl": -99.65,
-    "unrealizedPnl": 7.79,
-    "netEquity": 30988.13,
+    "unrealizedPnl": 11.29,
+    "netEquity": 30991.64,
     "todayPnl": -16.7,
     "weekPnl": -3.4,
     "totalTrades": 142,
@@ -39,9 +39,9 @@
       "entryPrice": 4697.24,
       "stopLevel": 4727.44,
       "profitLevel": 4636.74,
-      "currentBid": 4691.47,
-      "currentAsk": 4691.97,
-      "pnl": 5.27,
+      "currentBid": 4689.72,
+      "currentAsk": 4690.22,
+      "pnl": 7.02,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-02T09:30:20.757"
@@ -53,9 +53,9 @@
       "entryPrice": 4694.49,
       "stopLevel": 4718.69,
       "profitLevel": 4625.19,
-      "currentBid": 4691.47,
-      "currentAsk": 4691.97,
-      "pnl": 2.52,
+      "currentBid": 4689.72,
+      "currentAsk": 4690.22,
+      "pnl": 4.27,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-02T09:30:22.933"
@@ -728,12 +728,12 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4692.27,
-      "ask": 4693.02
+      "bid": 4690.8,
+      "ask": 4691.3
     },
     "USDJPYM2026": {
-      "bid": 158.291,
-      "ask": 158.306
+      "bid": 158.385,
+      "ask": 158.398
     }
   },
   "indicators": {
@@ -742,26 +742,26 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 4692.27,
-      "rsi": 22.7,
-      "macd_hist": -16.3127,
-      "atr": 25.2775,
-      "bb_width": 0.0328,
-      "ema9": 4720.3119,
-      "ema21": 4742.2404
+      "bid": 4690.8,
+      "rsi": 22.0,
+      "macd_hist": -16.4187,
+      "atr": 25.2839,
+      "bb_width": 0.0329,
+      "ema9": 4720.0129,
+      "ema21": 4742.1045
     },
     "USDJPYM2026": {
       "name": "USD/JPY",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 158.291,
-      "rsi": 77.4,
-      "macd_hist": 0.0927,
-      "atr": 0.1321,
-      "bb_width": 0.0059,
-      "ema9": 158.1136,
-      "ema21": 157.9887
+      "bid": 158.385,
+      "rsi": 83.6,
+      "macd_hist": 0.0999,
+      "atr": 0.1351,
+      "bb_width": 0.0067,
+      "ema9": 158.1848,
+      "ema21": 158.0318
     }
   },
   "actions": [
