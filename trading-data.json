@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-02 17:30:22",
+  "lastUpdate": "2026-04-02 17:40:21",
   "account": {
-    "balance": 30981.14,
+    "balance": 30981.13,
     "realizedPnl": -100.69,
-    "unrealizedPnl": 4.63,
-    "netEquity": 30985.77,
+    "unrealizedPnl": 2.52,
+    "netEquity": 30983.65,
     "todayPnl": -17.74,
     "weekPnl": -4.44,
     "totalTrades": 145,
@@ -39,9 +39,9 @@
       "entryPrice": 4625.49,
       "stopLevel": 4652.49,
       "profitLevel": 4557.89,
-      "currentBid": 4620.36,
-      "currentAsk": 4620.86,
-      "pnl": 4.63,
+      "currentBid": 4622.47,
+      "currentAsk": 4622.97,
+      "pnl": 2.52,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-02T15:20:20.372"
@@ -724,16 +724,16 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4620.66,
-      "ask": 4621.16
+      "bid": 4622.52,
+      "ask": 4623.02
     },
     "EURUSDM2026": {
-      "bid": 1.1561,
-      "ask": 1.15616
+      "bid": 1.15648,
+      "ask": 1.15657
     },
     "GBPUSD": {
-      "bid": 1.32017,
-      "ask": 1.32031
+      "bid": 1.3207,
+      "ask": 1.32084
     }
   },
   "indicators": {
@@ -742,23 +742,23 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 4620.66,
-      "rsi": 70.7,
-      "macd_hist": 2.9035,
-      "atr": 16.3579,
+      "bid": 4622.52,
+      "rsi": 71.3,
+      "macd_hist": 3.0276,
+      "atr": 17.045,
       "bb_width": 0.023,
-      "ema9": 4625.1538,
-      "ema21": 4637.4833
+      "ema9": 4625.5038,
+      "ema21": 4637.6424
     },
     "EURUSDM2026": {
       "name": "EUR/USD",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 1.1561,
-      "rsi": 51.1,
+      "bid": 1.15648,
+      "rsi": 60.5,
       "macd_hist": 0.0,
-      "atr": 0.0009,
+      "atr": 0.0008,
       "bb_width": 0.0017,
       "ema9": 1.1563,
       "ema21": 1.1567
@@ -768,13 +768,13 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 1.32017,
-      "rsi": 43.3,
-      "macd_hist": -0.0001,
+      "bid": 1.3207,
+      "rsi": 52.4,
+      "macd_hist": -0.0,
       "atr": 0.0011,
-      "bb_width": 0.0035,
+      "bb_width": 0.0033,
       "ema9": 1.3206,
-      "ema21": 1.3217
+      "ema21": 1.3216
     }
   },
   "actions": [
