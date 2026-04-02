@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-03 03:17",
+  "lastUpdate": "2026-04-03 03:20",
   "status": "RUNNING",
   "mode": "live",
   "capital": 10000,
@@ -17,14 +17,15 @@
   "dailyLimit": { "maxLoss": 1000, "currentLoss": 0, "remaining": 1000 },
   "consecutiveLosses": 0,
   "signals": {
-    "technical": "15M偏多但1H/4H偏空，方向未對齊",
-    "news": "BTC 3月收漲1.8%結束五連跌，4月開局震盪。Elon Musk近期提及BTC，ETF資金回流跡象",
-    "sentiment": "恐懼貪婪指數 12（極度恐懼）",
-    "overall": "等待 — 15M與1H方向矛盾，不進場"
+    "technical": "🟡 15M偏多(EMA8>21, RSI 57.9)但1H/4H皆偏空，方向未對齊。BB擠壓中，量能=0",
+    "news": "⚪ 無重大新聞。BTC ~$67.9K，Q1跌23%，4月開局震盪",
+    "sentiment": "🔴 恐懼貪婪指數 12（極度恐懼）— 潛在反彈信號但需技術確認",
+    "overall": "⏸️ 等待 — 時間框架不對齊 + 凌晨低流動性時段"
   },
   "btcPrice": 2157296,
-  "btcChange24h": -1.14,
+  "btcChange24h": -1.11,
   "fearGreedIndex": "12 (極度恐懼)",
-  "nextAction": "監控中 — 等待多時間框架對齊",
-  "alerts": []
+  "nextAction": "觀望 — 等1H轉多或15M跟隨1H/4H轉空後再動作",
+  "alerts": ["凌晨低流動性時段(03:20)，暫不開倉"]
 }
+
