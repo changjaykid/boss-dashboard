@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-04-02 13:50:23",
+  "lastUpdate": "2026-04-02 14:00:23",
   "account": {
-    "balance": 30981.56,
+    "balance": 30981.53,
     "realizedPnl": -100.19,
-    "unrealizedPnl": 0,
-    "netEquity": 30981.56,
+    "unrealizedPnl": -3.4,
+    "netEquity": 30978.13,
     "todayPnl": -17.24,
     "weekPnl": -3.94,
     "totalTrades": 144,
     "closedTrades": 142,
-    "openCount": 0,
+    "openCount": 2,
     "wins": 38,
     "losses": 104,
     "winRate": "26.8%",
@@ -31,7 +31,36 @@
     "US500",
     "US100"
   ],
-  "openPositions": [],
+  "openPositions": [
+    {
+      "dealId": "00000000-4c8d-5b7c-0460-7d740055311e",
+      "direction": "SELL",
+      "size": 0.01,
+      "entryPrice": 4592.14,
+      "stopLevel": 4614.94,
+      "profitLevel": 4535.04,
+      "currentBid": 4596.14,
+      "currentAsk": 4596.64,
+      "pnl": -4.5,
+      "instrument": "Gold",
+      "epic": "GOLD",
+      "createdDate": "2026-04-02T13:50:20.929"
+    },
+    {
+      "dealId": "00000000-4c8d-5b8a-0460-7d740055311e",
+      "direction": "BUY",
+      "size": 0.01,
+      "entryPrice": 4595.04,
+      "stopLevel": 4572.24,
+      "profitLevel": 4633.14,
+      "currentBid": 4596.14,
+      "currentAsk": 4596.64,
+      "pnl": 1.1,
+      "instrument": "Gold",
+      "epic": "GOLD",
+      "createdDate": "2026-04-02T13:50:22.080"
+    }
+  ],
   "closedTrades": [
     {
       "time": "2026-04-01T14:00:22.418335+00:00",
@@ -701,11 +730,11 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4591.22,
-      "ask": 4591.72
+      "bid": 4592.19,
+      "ask": 4592.69
     },
     "USDJPYM2026": {
-      "bid": 158.487,
+      "bid": 158.49,
       "ask": 158.509
     }
   },
@@ -715,32 +744,30 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 4591.22,
-      "rsi": 20.2,
-      "macd_hist": -3.3779,
-      "atr": 19.0332,
-      "bb_width": 0.0248,
-      "ema9": 4653.0055,
-      "ema21": 4689.3409
+      "bid": 4592.19,
+      "rsi": 22.7,
+      "macd_hist": -5.75,
+      "atr": 16.9054,
+      "bb_width": 0.0249,
+      "ema9": 4641.7572,
+      "ema21": 4681.3287
     },
     "USDJPYM2026": {
       "name": "USD/JPY",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 158.487,
-      "rsi": 59.9,
-      "macd_hist": -0.031,
-      "atr": 0.0747,
-      "bb_width": 0.0042,
-      "ema9": 158.45,
-      "ema21": 158.2855
+      "bid": 158.49,
+      "rsi": 45.0,
+      "macd_hist": -0.0263,
+      "atr": 0.0666,
+      "bb_width": 0.0023,
+      "ema9": 158.4626,
+      "ema21": 158.3063
     }
   },
   "actions": [
-    "SYNC_CLOSE: GOLD SELL PnL=$-0.3 (calculated_from_market)",
-    "SYNC_CLOSE: GOLD SELL PnL=$-0.24 (calculated_from_market)",
-    "OPENED SELL GOLD [trend_mtf_alignment] Conf:0.75 SL:22.8 TP:57.1",
-    "OPENED BUY GOLD [reversion_rsi_divergence] Conf:0.75 SL:22.8 TP:38.1"
+    "BLOCKED: GOLD SELL \u2014 \u5df2\u6301\u6709 GOLD",
+    "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD"
   ]
 }
