@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-02 08:50:19",
+  "lastUpdate": "2026-04-02 09:00:22",
   "account": {
-    "balance": 30959.03,
+    "balance": 30956.48,
     "realizedPnl": -88.17,
-    "unrealizedPnl": -169.52,
-    "netEquity": 30789.51,
+    "unrealizedPnl": -480.19,
+    "netEquity": 30476.29,
     "todayPnl": -5.22,
     "weekPnl": 8.08,
     "totalTrades": 138,
@@ -39,9 +39,9 @@
       "entryPrice": 6579.4,
       "stopLevel": 6566.2,
       "profitLevel": 6601.4,
-      "currentBid": 6583.4,
-      "currentAsk": 6584.0,
-      "pnl": 40.0,
+      "currentBid": 6588.6,
+      "currentAsk": 6589.2,
+      "pnl": 92.0,
       "instrument": "US 500",
       "epic": "US500",
       "createdDate": "2026-04-02T04:20:21.856"
@@ -53,9 +53,9 @@
       "entryPrice": 4781.33,
       "stopLevel": 4766.53,
       "profitLevel": 4818.23,
-      "currentBid": 4787.81,
-      "currentAsk": 4788.31,
-      "pnl": 6.48,
+      "currentBid": 4782.14,
+      "currentAsk": 4782.89,
+      "pnl": 0.81,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-02T08:00:21.190"
@@ -67,9 +67,9 @@
       "entryPrice": 46620.6,
       "stopLevel": 46716.2,
       "profitLevel": 46429.5,
-      "currentBid": 46640.2,
-      "currentAsk": 46642.2,
-      "pnl": -216.0,
+      "currentBid": 46675.9,
+      "currentAsk": 46677.9,
+      "pnl": -573.0,
       "instrument": "US Wall Street 30",
       "epic": "US30",
       "createdDate": "2026-04-02T02:20:22.832"
@@ -736,12 +736,12 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4787.93,
-      "ask": 4788.43
+      "bid": 4780.23,
+      "ask": 4780.98
     },
     "USDJPYM2026": {
-      "bid": 157.711,
-      "ask": 157.732
+      "bid": 157.739,
+      "ask": 157.761
     }
   },
   "indicators": {
@@ -750,26 +750,26 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 4787.93,
-      "rsi": 69.8,
-      "macd_hist": 1.6842,
-      "atr": 12.9982,
-      "bb_width": 0.0106,
-      "ema9": 4785.7962,
-      "ema21": 4780.4209
+      "bid": 4780.23,
+      "rsi": 68.6,
+      "macd_hist": 0.4202,
+      "atr": 12.3743,
+      "bb_width": 0.0101,
+      "ema9": 4785.0214,
+      "ema21": 4780.0875
     },
     "USDJPYM2026": {
       "name": "USD/JPY",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 157.711,
-      "rsi": 45.3,
-      "macd_hist": 0.0099,
-      "atr": 0.0962,
+      "bid": 157.739,
+      "rsi": 47.2,
+      "macd_hist": 0.0118,
+      "atr": 0.0989,
       "bb_width": 0.0022,
-      "ema9": 157.7562,
-      "ema21": 157.794
+      "ema9": 157.7616,
+      "ema21": 157.7964
     }
   },
   "actions": [
