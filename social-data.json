@@ -7,8 +7,16 @@
       "pillar_name": "乾貨炸彈",
       "created": "2026-04-02 18:00",
       "content": "Meta 近期在 IAB NewFronts 丟出一堆新功能，我整理完覺得有三個對廣告主影響最大，直接講重點。\n\n（完整公告：https://www.facebook.com/business/news/from-commerce-to-culture-at-newfronts）\n\n第一，Reels 趨勢廣告。\n\n以前你的廣告跟什麼內容放在一起，基本上是隨機的。現在 Meta 在測試一種新版位：把你的廣告插在當下最熱門的 Reels 內容旁邊。\n\n邏輯很簡單，人在看有趣的東西時注意力最集中，這時候插入的廣告，停留時間跟記憶度都比一般版位高。等於你的廣告不再只是買曝光，而是買「注意力品質」。\n\n第二，Creator Marketplace 升級。\n\n找創作者合作最痛的點是什麼？不是沒人選，是選不準。粉絲數高不代表適合你的品牌，互動率好不代表能帶轉換。\n\nMeta 現在讓你用更細的條件篩選創作者：受眾輪廓、內容類型、過往合作表現。而且創作者的內容可以直接轉成 Partnership Ads 投放，不用另外做素材。\n\n對預算有限的品牌來說，這代表你可以用更低的成本測試創作者合作，因為素材製作這一關被省掉了。\n\n第三，AI 素材工具全面開放。\n\n以前要測五種不同的廣告文案，你得自己寫五版。現在 Meta 的 AI 可以幫你自動生成多版文案、調整圖片背景、甚至把橫式素材自動改成直式。\n\n聽起來很方便，但我要提醒一件事：AI 生成的素材品質參差不齊，你不能丟進去就不管了。正確的用法是讓 AI 幫你快速產出初稿，然後人工篩選最好的版本再投放。\n\n把 AI 當助手，不是當主管。\n\n這三個功能背後的趨勢是一樣的：Meta 希望廣告主把錢花在「對的內容、對的創作者、對的時機」上，而不是繼續用老方法亂槍打鳥。\n\n如果你還在用一張圖、一段文案、打全部受眾的方式投廣告，是時候調整了。",
-      "status": "pending",
-      "suggestedTime": "18:00"
+      "status": "failed",
+      "suggestedTime": "18:00",
+      "error": {
+        "error": {
+          "message": "Param text must be at most 500 characters long.",
+          "type": "THApiException",
+          "code": 100,
+          "fbtrace_id": "AUEeO0zs8o2DN7zRFf7Sam1"
+        }
+      }
     }
   ],
   "published": [
@@ -226,5 +234,5 @@
       "description": "業界趣事、熱門事件評論(輕鬆但有觀點)"
     }
   ],
-  "lastUpdate": "2026/04/02 下午07:24:38"
+  "lastUpdate": "2026/4/2 下午7:28:06"
 }
