@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-04 00:43",
+  "lastUpdate": "2026-04-04 00:51",
   "status": "RUNNING",
   "mode": "背水一戰模式",
   "exchange": "Binance Futures",
@@ -44,6 +44,13 @@
     "trend4h": "bearish",
     "buyScore": "1.5",
     "sellScore": "0",
+    "session": "TRANSITION",
+    "momentum": {
+      "direction": "neutral",
+      "score": 0,
+      "mom5": 0.302,
+      "acceleration": 0.235
+    },
     "activeSignals": [
       "TREND_PULLBACK_LONG",
       "EMA_BULL_ALIGN"
