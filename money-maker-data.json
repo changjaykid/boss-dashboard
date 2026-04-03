@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-03 09:58",
+  "lastUpdate": "2026-04-03 11:02",
   "status": "RUNNING",
   "mode": "live",
   "capital": 10000,
@@ -17,14 +17,14 @@
   "dailyLimit": { "maxLoss": 1000, "currentLoss": 0, "remaining": 1000 },
   "consecutiveLosses": 0,
   "signals": {
-    "technical": "🔴 三框全空(15M strong_down/1H down/4H down)，MACD柱持續惡化(-1161)，RSI 37.6，BB擠壓中(0.61%)，15M pin_bar_bullish但量比僅0.44x無確認",
-    "news": "⚪ BTC 24H跌0.86%，無即時重大新聞（搜尋受限）",
-    "sentiment": "🔴 Fear&Greed=9 極度恐懼",
-    "overall": "⏸️ 觀望 — 三框全空+量能極低，BUY/SELL條件均不足"
+    "technical": "🔴 三框全空(15M strong_down/1H down/4H down)，EMA8<21全時框，RSI 42.0，MACD負收斂中(hist -1174→改善中)，BB擠壓中，量比0.006x幾乎無量",
+    "news": "🟡 市場整體跌2.4%，Q1累跌23%，無突發重大利空/利多",
+    "sentiment": "🟡 F&G=9 極度恐懼（逆向做多信號但技術面未配合）",
+    "overall": "⏸️ 觀望 — 三維度未對齊，量能極低，不做"
   },
-  "btcPrice": 2143038,
-  "btcChange24h": -0.86,
+  "btcPrice": 2140898.7,
+  "btcChange24h": -0.15,
   "fearGreedIndex": "9 (Extreme Fear)",
-  "nextAction": "觀望 — 等量能回升+1H EMA轉多才考慮做多；SELL也缺量確認暫不做",
-  "alerts": ["F&G=9極度恐懼，歷史低位，留意反彈但需技術確認", "三框全空但量比僅0.44x，市場無方向性動能", "15M pin_bar_bullish底部信號，需後續放量K線確認"]
+  "nextAction": "觀望 — 無量+全空，等15M出現反轉K線+放量才考慮逆向做多；SELL缺量確認不做",
+  "alerts": ["F&G=9歷史低位，極度恐懼區間，留意超跌反彈但需技術確認", "三框全空+量比0.006x=死水市場，等待動能回歸"]
 }
