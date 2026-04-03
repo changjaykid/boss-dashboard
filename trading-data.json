@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-03 18:10:20",
+  "lastUpdate": "2026-04-03 18:20:21",
   "account": {
-    "balance": 30963.54,
+    "balance": 30963.59,
     "realizedPnl": -282.0,
-    "unrealizedPnl": -278.45,
-    "netEquity": 30685.09,
+    "unrealizedPnl": -279.45,
+    "netEquity": 30684.14,
     "todayPnl": -1.14,
     "weekPnl": -185.75,
     "totalTrades": 183,
@@ -39,9 +39,9 @@
       "entryPrice": 23997.2,
       "stopLevel": 23863.7,
       "profitLevel": 24264.1,
-      "currentBid": 23966.1,
-      "currentAsk": 23967.9,
-      "pnl": -311.0,
+      "currentBid": 23961.4,
+      "currentAsk": 23963.2,
+      "pnl": -358.0,
       "instrument": "US Tech 100",
       "epic": "US100",
       "createdDate": "2026-04-02T22:40:32.051"
@@ -53,9 +53,9 @@
       "entryPrice": 23999.2,
       "stopLevel": 23865.7,
       "profitLevel": 24266.1,
-      "currentBid": 23966.1,
-      "currentAsk": 23967.9,
-      "pnl": -331.0,
+      "currentBid": 23961.4,
+      "currentAsk": 23963.2,
+      "pnl": -378.0,
       "instrument": "US Tech 100",
       "epic": "US100",
       "createdDate": "2026-04-02T22:40:36.515"
@@ -67,9 +67,9 @@
       "entryPrice": 46433.4,
       "stopLevel": 46624.1,
       "profitLevel": 46115.5,
-      "currentBid": 46398.8,
-      "currentAsk": 46400.8,
-      "pnl": 326.0,
+      "currentBid": 46389.5,
+      "currentAsk": 46391.5,
+      "pnl": 419.0,
       "instrument": "US Wall Street 30",
       "epic": "US30",
       "createdDate": "2026-04-03T01:20:22.828"
@@ -795,12 +795,12 @@
       "ask": 4676.58
     },
     "EURUSDM2026": {
-      "bid": 1.15787,
-      "ask": 1.15796
+      "bid": 1.15779,
+      "ask": 1.15791
     },
     "GBPUSD": {
-      "bid": 1.3234,
-      "ask": 1.32354
+      "bid": 1.32319,
+      "ask": 1.32333
     }
   },
   "indicators": {
@@ -822,11 +822,11 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 1.15787,
-      "rsi": 63.1,
+      "bid": 1.15779,
+      "rsi": 59.9,
       "macd_hist": -0.0,
       "atr": 0.0003,
-      "bb_width": 0.0013,
+      "bb_width": 0.001,
       "ema9": 1.1578,
       "ema21": 1.1576
     },
@@ -835,12 +835,12 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 1.3234,
-      "rsi": 49.8,
+      "bid": 1.32319,
+      "rsi": 47.5,
       "macd_hist": -0.0001,
       "atr": 0.0004,
-      "bb_width": 0.0011,
-      "ema9": 1.3236,
+      "bb_width": 0.0008,
+      "ema9": 1.3235,
       "ema21": 1.3234
     }
   },
