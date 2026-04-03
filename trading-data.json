@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-03 20:40:23",
+  "lastUpdate": "2026-04-03 20:50:24",
   "account": {
-    "balance": 30939.21,
+    "balance": 30938.49,
     "realizedPnl": -301.07,
-    "unrealizedPnl": -594.45,
-    "netEquity": 30344.76,
+    "unrealizedPnl": -684.45,
+    "netEquity": 30254.04,
     "todayPnl": -20.21,
     "weekPnl": -204.82,
     "totalTrades": 183,
@@ -39,9 +39,9 @@
       "entryPrice": 23997.2,
       "stopLevel": 23863.7,
       "profitLevel": 24264.1,
-      "currentBid": 23966.6,
-      "currentAsk": 23968.4,
-      "pnl": -306.0,
+      "currentBid": 23962.1,
+      "currentAsk": 23963.9,
+      "pnl": -351.0,
       "instrument": "US Tech 100",
       "epic": "US100",
       "createdDate": "2026-04-02T22:40:32.051"
@@ -53,9 +53,9 @@
       "entryPrice": 23999.2,
       "stopLevel": 23865.7,
       "profitLevel": 24266.1,
-      "currentBid": 23966.6,
-      "currentAsk": 23968.4,
-      "pnl": -326.0,
+      "currentBid": 23962.1,
+      "currentAsk": 23963.9,
+      "pnl": -371.0,
       "instrument": "US Tech 100",
       "epic": "US100",
       "createdDate": "2026-04-02T22:40:36.515"
@@ -781,12 +781,12 @@
       "ask": 4676.58
     },
     "EURUSDM2026": {
-      "bid": 1.15646,
-      "ask": 1.15655
+      "bid": 1.15657,
+      "ask": 1.15668
     },
     "GBPUSD": {
-      "bid": 1.32144,
-      "ask": 1.32158
+      "bid": 1.32158,
+      "ask": 1.32172
     }
   },
   "indicators": {
@@ -808,12 +808,12 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 1.15646,
-      "rsi": 26.6,
-      "macd_hist": -0.0001,
+      "bid": 1.15657,
+      "rsi": 24.3,
+      "macd_hist": -0.0002,
       "atr": 0.0005,
-      "bb_width": 0.001,
-      "ema9": 1.1576,
+      "bb_width": 0.0013,
+      "ema9": 1.1574,
       "ema21": 1.1576
     },
     "GBPUSD": {
@@ -821,13 +821,13 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 1.32144,
-      "rsi": 22.7,
-      "macd_hist": -0.0001,
+      "bid": 1.32158,
+      "rsi": 17.1,
+      "macd_hist": -0.0002,
       "atr": 0.0006,
-      "bb_width": 0.0015,
-      "ema9": 1.3231,
-      "ema21": 1.3233
+      "bb_width": 0.0017,
+      "ema9": 1.3228,
+      "ema21": 1.3232
     }
   },
   "actions": [
