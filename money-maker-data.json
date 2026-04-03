@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-03 07:56",
+  "lastUpdate": "2026-04-03 08:57",
   "status": "RUNNING",
   "mode": "live",
   "capital": 10000,
@@ -17,14 +17,14 @@
   "dailyLimit": { "maxLoss": 1000, "currentLoss": 0, "remaining": 1000 },
   "consecutiveLosses": 0,
   "signals": {
-    "technical": "🟡 15M微多(EMA8>21, RSI 51)但1H/4H皆空，BB擠壓(width 0.46%)，MACD柱負值擴大，量比0.97x不足",
-    "news": "⚪ BTC ~$67-68K震盪，4月方向未明，ETF流入信號混合，無重大突發",
-    "sentiment": "🔴 Fear&Greed=12 極度恐懼",
-    "overall": "⏸️ 觀望 — 多空時框不齊+量能不足+極度恐懼"
+    "technical": "🔴 三框全空(15M strong_down/1H down/4H down)，MACD柱惡化(-771)，RSI 43.3，但15M出現hammer+pin_bar_bullish，BB擠壓中(0.48%)，量比2.1x",
+    "news": "⚪ BTC 24H跌2.47%，搜尋受限無即時重大新聞",
+    "sentiment": "🔴 Fear&Greed=9 極度恐懼",
+    "overall": "⏸️ 觀望 — 三框全空+1H EMA空頭排列，BUY條件不足；底部型態+極度恐懼待確認"
   },
-  "btcPrice": 2152155,
-  "btcChange24h": -1.44,
-  "fearGreedIndex": "12 (Extreme Fear)",
-  "nextAction": "觀望 — 等1H EMA轉多+量能確認，BB擠壓蓄勢中",
-  "alerts": ["極度恐懼=12，潛在反彈機會但需技術面確認", "BB擠壓中(width 0.46%)，突破方向待觀察", "價格在VWAP上方，但1H/4H趨勢仍空"]
+  "btcPrice": 2147581,
+  "btcChange24h": -2.47,
+  "fearGreedIndex": "9 (Extreme Fear)",
+  "nextAction": "觀望 — 等1H EMA8上穿EMA21確認轉多，15M底部型態需1H配合才進場",
+  "alerts": ["F&G=9極度恐懼，歷史低位，潛在反彈機會但需技術確認", "15M出現hammer+pin_bar_bullish底部信號，關注後續K線", "三框全空，嚴守不逆大趨勢鐵律"]
 }
