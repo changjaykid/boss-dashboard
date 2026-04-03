@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-03 20:10:19",
+  "lastUpdate": "2026-04-03 20:20:21",
   "account": {
-    "balance": 30962.25,
+    "balance": 30960.66,
     "realizedPnl": -282.0,
-    "unrealizedPnl": -415.45,
-    "netEquity": 30546.8,
+    "unrealizedPnl": -573.45,
+    "netEquity": 30387.21,
     "todayPnl": -1.14,
     "weekPnl": -185.75,
     "totalTrades": 183,
@@ -39,9 +39,9 @@
       "entryPrice": 23997.2,
       "stopLevel": 23863.7,
       "profitLevel": 24264.1,
-      "currentBid": 23984.7,
-      "currentAsk": 23986.5,
-      "pnl": -125.0,
+      "currentBid": 23966.0,
+      "currentAsk": 23967.8,
+      "pnl": -312.0,
       "instrument": "US Tech 100",
       "epic": "US100",
       "createdDate": "2026-04-02T22:40:32.051"
@@ -53,9 +53,9 @@
       "entryPrice": 23999.2,
       "stopLevel": 23865.7,
       "profitLevel": 24266.1,
-      "currentBid": 23984.7,
-      "currentAsk": 23986.5,
-      "pnl": -145.0,
+      "currentBid": 23966.0,
+      "currentAsk": 23967.8,
+      "pnl": -332.0,
       "instrument": "US Tech 100",
       "epic": "US100",
       "createdDate": "2026-04-02T22:40:36.515"
@@ -67,9 +67,9 @@
       "entryPrice": 46433.4,
       "stopLevel": 46624.1,
       "profitLevel": 46115.5,
-      "currentBid": 46449.7,
-      "currentAsk": 46451.7,
-      "pnl": -183.0,
+      "currentBid": 46428.1,
+      "currentAsk": 46430.1,
+      "pnl": 33.0,
       "instrument": "US Wall Street 30",
       "epic": "US30",
       "createdDate": "2026-04-03T01:20:22.828"
@@ -799,8 +799,8 @@
       "ask": 1.15781
     },
     "GBPUSD": {
-      "bid": 1.32326,
-      "ask": 1.3234
+      "bid": 1.32325,
+      "ask": 1.32339
     }
   },
   "indicators": {
@@ -823,7 +823,7 @@
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
       "bid": 1.15772,
-      "rsi": 44.9,
+      "rsi": 48.8,
       "macd_hist": -0.0,
       "atr": 0.0003,
       "bb_width": 0.0004,
@@ -835,8 +835,8 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 1.32326,
-      "rsi": 37.7,
+      "bid": 1.32325,
+      "rsi": 38.8,
       "macd_hist": -0.0,
       "atr": 0.0004,
       "bb_width": 0.0008,
