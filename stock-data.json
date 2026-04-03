@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-03 08:00:05",
+  "lastUpdate": "2026-04-04 01:08:41",
   "market": {
     "taiex": {
-      "close": 33174.82,
-      "change": 1451.83,
-      "changePct": 4.58,
+      "close": 32572.43,
+      "change": -602.39,
+      "changePct": -1.82,
       "volume": 6466,
       "note": "Yahoo Finance 即時數據"
     },
@@ -36,8 +36,8 @@
       "note": "Yahoo Finance 即時數據"
     },
     "oil": {
-      "wti": 112.06,
-      "brent": 109.05,
+      "wti": 111.54,
+      "brent": 109.03,
       "note": "WTI 112.06、Brent 109.05，中東局勢仍緊繃但停火談判持續，油價高檔震盪"
     }
   },
@@ -218,31 +218,31 @@
         "code": "0050",
         "name": "元大台灣50",
         "reason": "台股大盤核心配置，跌深反彈首選，長期年化報酬穩健",
-        "price": NaN
+        "price": 73.95
       },
       {
         "code": "00878",
         "name": "國泰永續高股息",
         "reason": "ESG+高息雙主題，季配息穩定，適合存股族",
-        "price": NaN
+        "price": 22.03
       },
       {
         "code": "00919",
         "name": "群益台灣精選高息",
         "reason": "殖利率8%+，月配息，4/1外資買超6.6萬張成寵兒",
-        "price": NaN
+        "price": 22.3
       },
       {
         "code": "00891",
         "name": "中信關鍵半導體",
         "reason": "聚焦半導體產業鏈，跌深反彈彈性大，AI趨勢受惠",
-        "price": NaN
+        "price": 23.56
       },
       {
         "code": "00757",
         "name": "統一FANG+",
         "reason": "追蹤美國科技巨頭，美股連續反彈直接受惠",
-        "price": NaN
+        "price": 104.15
       }
     ]
   },
