@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-03 14:05",
+  "lastUpdate": "2026-04-03 14:09",
   "status": "RUNNING",
   "mode": "live",
   "capital": 10000,
   "available": 10000,
-  "netEquity": 10000,
+  "netEquity": 10001,
   "todayPnl": 0,
   "totalPnl": 0,
   "totalTrades": 0,
@@ -14,17 +14,21 @@
   "maxDrawdown": 0,
   "currentPosition": null,
   "recentTrades": [],
-  "dailyLimit": { "maxLoss": 1000, "currentLoss": 0, "remaining": 1000 },
+  "dailyLimit": {
+    "maxLoss": 1000,
+    "currentLoss": 0,
+    "remaining": 1000
+  },
   "consecutiveLosses": 0,
   "signals": {
-    "technical": "🟡 全空頭但動能衰減(MACD hist下滑357、BB擠壓、pin_bar_bearish)",
-    "news": "🟡 市場弱勢 BTC ~$67K、加密總市值跌2.4%",
-    "sentiment": "🟢 恐貪9極度恐懼→逆向做多機會醞釀中",
-    "overall": "🟡 HOLD — 做空缺量能(0.02x)、做多缺1H轉向"
+    "technical": "🔴 buy=0.5 sell=3.0 trend=SELL rsi=49.5",
+    "news": "🟢 新聞偏多(利多2/利空0)",
+    "sentiment": "🟢 極度恐懼(FGI=9)→逆向做多機會",
+    "overall": "🟡 HOLD — BB擠壓中(等突破), 量能不足0.03x"
   },
-  "btcPrice": 2142993,
-  "btcChange24h": 0.18,
-  "fearGreedIndex": "9 (Extreme Fear)",
-  "nextAction": "等待量能回歸+1H EMA交叉確認方向",
+  "btcPrice": 2144630,
+  "btcChange24h": 0.29,
+  "fearGreedIndex": "9",
+  "nextAction": "BB擠壓中(等突破)",
   "alerts": []
 }
