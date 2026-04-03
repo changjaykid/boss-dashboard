@@ -1,115 +1,124 @@
 {
-  "lastUpdate": "2026-04-03 08:00:00",
+  "lastUpdate": "2026-04-03 20:00:01",
   "updateCycle": "08:00/20:00",
   "news": [
     {
-      "title": "比特幣（BTC）最新鏈上數據顯示什麼？看漲還是看跌？",
+      "title": "比特幣（BTC）面臨關鍵考驗，選擇權數據顯示可能跌至 52,000 美元",
       "source": "MEXC",
-      "time": "2026-04-01 22:41 UTC",
-      "summary": "這篇文章分析了比特幣的最新鏈上數據，探討市場情緒是看漲還是看跌。隨著市場波動，投資者對比特幣的未來走勢充滿疑慮。",
-      "analysis": "此新聞可能會影響比特幣的交易情緒，若數據顯示看跌，可能導致BTC承壓，進而影響BTC/TWD和BTC/USDT的交易策略。",
+      "time": "2026-04-03 08:41 UTC",
+      "summary": "比特幣的選擇權數據顯示，市場可能面臨下行壓力，預測價格可能跌至52,000美元。這對投資者來說是一個警示信號。",
+      "analysis": "這則新聞可能會對BTC造成負面影響，投資者可能會選擇減少持倉，導致價格進一步下跌。對於ETH和SOL等其他幣種也可能產生連鎖反應。",
       "impact": {
         "coins": [
-          "BTC"
+          "BTC",
+          "ETH",
+          "SOL"
         ],
         "direction": "BTC 承壓",
         "severity": "high"
       }
     },
     {
-      "title": "比特幣（BTC）和股市上漲，伊朗暗示衝突降級",
-      "source": "MEXC",
-      "time": "2026-04-01 08:35 UTC",
-      "summary": "比特幣和股市因伊朗暗示衝突降級而上漲，市場情緒有所改善，投資者信心回升。",
-      "analysis": "這則新聞對比特幣有利，可能促使BTC價格上漲，對BTC/TWD和BTC/USDT的交易策略形成支撐。",
+      "title": "Crypto Today: Bitcoin, Ethereum, XRP 技術面惡化，因戰爭驅動的風險規避情緒",
+      "source": "TMGM",
+      "time": "2026-04-02 12:38 UTC",
+      "summary": "由於戰爭引發的風險規避情緒，比特幣、以太坊和XRP的技術面出現惡化，市場情緒變得更加謹慎。",
+      "analysis": "這將對BTC和ETH造成壓力，可能導致短期內價格下滑。投資者需密切關注市場情緒變化，以調整交易策略。",
       "impact": {
         "coins": [
-          "BTC"
+          "BTC",
+          "ETH"
+        ],
+        "direction": "BTC 承壓，ETH 承壓",
+        "severity": "high"
+      }
+    },
+    {
+      "title": "比特幣（BTC）最新鏈上數據顯示什麼？看漲還是看跌？",
+      "source": "MEXC",
+      "time": "2026-04-01 22:41 UTC",
+      "summary": "最新的鏈上數據分析顯示，比特幣市場的情緒和趨勢仍在變化，投資者對未來走勢持不同看法。",
+      "analysis": "這可能導致BTC的價格波動加劇，投資者需謹慎操作。對於ETH和SOL等其他幣種，可能會受到BTC波動的影響。",
+      "impact": {
+        "coins": [
+          "BTC",
+          "ETH",
+          "SOL"
+        ],
+        "direction": "BTC 波動",
+        "severity": "medium"
+      }
+    },
+    {
+      "title": "黃金被高估，資金將輪動至比特幣：BTC暴跌80%的理論會實現嗎？",
+      "source": "Bitget",
+      "time": "2025-12-16 08:00 UTC",
+      "summary": "隨著黃金被認為被高估，市場資金可能會轉向比特幣，這引發了對BTC未來走勢的討論。",
+      "analysis": "如果資金真的流入BTC，可能會對其價格形成支撐，對ETH和SOL也可能帶來正面影響。",
+      "impact": {
+        "coins": [
+          "BTC",
+          "ETH",
+          "SOL"
         ],
         "direction": "BTC 利多",
-        "severity": "high"
+        "severity": "medium"
       }
     },
     {
       "title": "三大穩定幣訊號暗示加密貨幣市場復甦",
       "source": "MEXC",
       "time": "2026-04-01 22:36 UTC",
-      "summary": "穩定幣的市場表現顯示出加密貨幣市場可能正在復甦，投資者開始重新進入市場。",
-      "analysis": "穩定幣的復甦可能會帶動主要幣種的交易活躍度，特別是BTC和ETH，對BTC/TWD和ETH/TWD的交易策略有正面影響。",
+      "summary": "穩定幣的市場動向顯示出加密貨幣市場可能正在復甦，這對投資者來說是個好消息。",
+      "analysis": "這可能會提振BTC和ETH的市場信心，促使價格回升，對SOL和DOGE等其他幣種也可能有正面影響。",
       "impact": {
         "coins": [
           "BTC",
-          "ETH"
+          "ETH",
+          "SOL",
+          "DOGE"
         ],
-        "direction": "BTC、ETH 利多",
+        "direction": "BTC 利多，ETH 利多",
         "severity": "medium"
-      }
-    },
-    {
-      "title": "比特幣‘絕對底部’即將來臨？分析師表示BTC的最終洗盤即將到來",
-      "source": "TradingView",
-      "time": "2026-03-30 07:00 UTC",
-      "summary": "分析師預測比特幣即將迎來最終的價格洗盤，可能會出現絕對底部，投資者需謹慎觀察市場動向。",
-      "analysis": "若預測成真，可能會導致BTC價格劇烈波動，影響BTC/TWD和BTC/USDT的交易策略，投資者需做好風險管理。",
-      "impact": {
-        "coins": [
-          "BTC"
-        ],
-        "direction": "BTC 承壓",
-        "severity": "medium"
-      }
-    },
-    {
-      "title": "以太坊價格預測：以太坊目標2150美元突破，隨著技術回升",
-      "source": "MEXC",
-      "time": "2026-03-30 16:05 UTC",
-      "summary": "以太坊的技術回升顯示出2150美元的突破潛力，市場對ETH的信心有所增強。",
-      "analysis": "若以太坊成功突破2150美元，將對ETH/TWD和ETH/USDT的交易策略形成利好，吸引更多投資者進場。",
-      "impact": {
-        "coins": [
-          "ETH"
-        ],
-        "direction": "ETH 利多",
-        "severity": "high"
       }
     }
   ],
   "socialDiscussions": [
     {
       "platform": "Reddit",
-      "title": "90天實時交易與800筆交易 - 誰更理性，AI代理還是Polymarket？",
-      "author": "u/No_Syrup_4068",
-      "summary": "這位用戶分享了他在90天內進行的800筆交易，並比較了AI交易代理和Polymarket的表現。他使用了自動化交易策略，並分析了不同市場情況下的表現。",
-      "whatTheyDid": "他使用Python編寫了交易機器人，並透過API連接到交易所，根據市場波動自動調整策略。",
-      "whatWeCanLearn": "我們可以學習如何設計一個自動化交易系統，並根據市場狀況調整交易策略。",
-      "url": "https://reddit.com/r/algotrading/comments/1sactqj/90_days_live_trading_800_trades_who_is_more/"
+      "title": "對於有成功實時部署算法交易的算法交易者：你們花了多久時間來設置這個？是什麼讓你們有信心在真實賬戶上部署？",
+      "author": "u/imeowfortallwomen",
+      "summary": "這位用戶分享了他們成功部署算法交易的經驗，強調了在實時環境中運行算法的挑戰和信心建立的過程。具體提到使用 Python 和回測工具來驗證策略的有效性。",
+      "whatTheyDid": "使用 Python 開發交易算法，並進行回測以確保策略的穩定性，最終在真實賬戶中部署。",
+      "whatWeCanLearn": "我們可以學習到回測的重要性，並在部署之前確保算法在歷史數據上表現良好。",
+      "url": "https://reddit.com/r/algotrading/comments/1sb4e9g/for_the_algotraders_who_have_live_deployment_of/"
     },
     {
       "platform": "Reddit",
-      "title": "許多DCA策略最近在子版塊中出現。這是我的策略",
-      "author": "u/TheresNoSecondBest",
-      "summary": "這位用戶分享了他的定期定額（DCA）投資策略，強調在市場低迷時持續投資以降低平均成本。他使用了簡單的數學模型來計算最佳投資時機。",
-      "whatTheyDid": "他定���在每月的第一個星期一進行BTC購買，並根據市場趨勢調整投資金額。",
-      "whatWeCanLearn": "我們可以考慮在自動交易系統中加入DCA策略，以平滑投資成本。",
-      "url": "https://reddit.com/r/Bitcoin/comments/1sah1xz/so_many_dca_strategies_in_the_sub_recently_heres/"
+      "title": "我如何避免我的止損過擬合",
+      "author": "u/RationalBeliever",
+      "summary": "這位用戶分享了避免止損過擬合的策略，強調使用多種市場條件進行測試，以確保止損策略的穩健性。具體提到使用不同的市場波動性來調整止損點。",
+      "whatTheyDid": "通過在不同的市場環境中測試止損策略，確保其不會因為過去的數據而過擬合。",
+      "whatWeCanLearn": "我們可以參考在多種市場條件下測試止損策略，以提高其適應性和穩健性。",
+      "url": "https://reddit.com/r/algotrading/comments/1sb1eb5/how_i_avoid_overfitting_on_my_stop_losses/"
     },
     {
       "platform": "Reddit",
-      "title": "量子電腦可能比我們想像的更早破解當今的加密技術",
-      "author": "u/gurugabrielpradipaka",
-      "summary": "這位用戶討論了量子計算對加密貨幣市場的潛在影響，並建議加密貨幣交易者應該考慮量子安全的交易策略。",
-      "whatTheyDid": "他提出了使用量子安全算法來保護交易資料的建議，並強調了未來可能需要的技術更新。",
-      "whatWeCanLearn": "我們可以考慮在設計交易系統時，提前規劃量子安全的措施，以應對未來的挑戰。",
-      "url": "https://reddit.com/r/CryptoCurrency/comments/1sag5ix/quantum_computers_might_crack_todays_encryption/"
+      "title": "每週比特幣購買 - 我這樣做對嗎？",
+      "author": "u/No-Jello8126",
+      "summary": "這位用戶分享了他每週定期購買比特幣的策略，使用固定金額進行DCA（定期定額投資），並討論了這種方法的優缺點。",
+      "whatTheyDid": "每週固定購買一定金額的比特幣，無論市場價格如何，來降低平均購買成本。",
+      "whatWeCanLearn": "我們可以考慮使用DCA策略來減少市場波動對投資的影響，並保持長期投資的心態。",
+      "url": "https://reddit.com/r/Bitcoin/comments/1sazgzd/weekly_bitcoin_buys_am_i_doing_this_right/"
     },
     {
       "platform": "Reddit",
-      "title": "神秘交易者在特朗普9 PM伊朗演講前購買5300萬美元",
-      "author": "u/Abdeliq",
-      "summary": "這位用戶報導了一位神秘交易者在重大新聞前進行的大額交易，並分析了這種行為對市場的影響。",
-      "whatTheyDid": "他使用了新聞事件驅動的交易策略，並在重大新聞發布前進行了大量BTC購買。",
-      "whatWeCanLearn": "我���可以考慮在自動交易系統中加入新聞事件分析，以捕捉市場波動。",
-      "url": "https://reddit.com/r/CryptoCurrency/comments/1sa22ez/mysterious_trader_buys_53_million_ahead_of_trumps/"
+      "title": "如何正確追蹤加密貨幣收入？",
+      "author": "u/Ancient-Candy-1573",
+      "summary": "這位用戶提供了追蹤加密貨幣收入的具體方法，建議使用專業的追蹤工具和表格來記錄交易和收益，並定期進行審核。",
+      "whatTheyDid": "使用 Excel 或專業的加密貨幣追蹤工具來記錄每筆交易的詳細信息，包括買入和賣出價格、時間和收益。",
+      "whatWeCanLearn": "我們可以建立一個系統來追蹤交易和收益，以便更好地管理投資和稅務報告。",
+      "url": "https://reddit.com/r/Bitcoin/comments/1sb7tqq/how_to_track_crypto_income_properly/"
     }
   ],
   "conclusion": {
