@@ -1,14 +1,14 @@
 {
-  "lastUpdate": "2026-04-03 23:50",
-  "status": "STANDBY",
+  "lastUpdate": "2026-04-03 23:55",
+  "status": "RUNNING",
   "mode": "背水一戰模式",
   "exchange": "Binance Futures",
   "account": {
     "initialCapital": 265,
-    "balance": 265.86,
-    "available": 265.86,
+    "balance": 265.85693906,
+    "available": 265.85693906,
     "unrealizedPnl": 0,
-    "netEquity": 265.86,
+    "netEquity": 265.85693906,
     "todayPnl": 0,
     "totalPnl": 0,
     "leverage": 5,
@@ -42,15 +42,18 @@
   "signals": {
     "marketState": "CONSOLIDATING",
     "trend4h": "bearish",
-    "buyScore": "0",
-    "sellScore": "0",
-    "activeSignals": []
+    "buyScore": "0.5",
+    "sellScore": "2.0",
+    "activeSignals": [
+      "EMA_BULL_ALIGN",
+      "TREND_PULLBACK_SHORT"
+    ]
   },
   "strategyWeights": {
-    "BREAKOUT": 1.0,
-    "TREND_FOLLOW": 1.0,
+    "BREAKOUT": 1,
+    "TREND_FOLLOW": 1,
     "REVERSAL": 0.8,
-    "MOMENTUM": 1.0,
+    "MOMENTUM": 1,
     "FUNDING_ARB": 0.7,
     "NEWS_EVENT": 0.5
   },
@@ -60,5 +63,5 @@
     "consecutiveLosses": "0 / 3",
     "paused": false
   },
-  "alerts": ["⏳ 等待老闆指令啟動"]
+  "alerts": []
 }
