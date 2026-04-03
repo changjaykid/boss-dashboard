@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-03 21:20:20",
+  "lastUpdate": "2026-04-03 21:30:23",
   "account": {
     "balance": 30930.29,
     "realizedPnl": -301.07,
@@ -837,16 +837,16 @@
       "ask": 4676.58
     },
     "EURUSDM2026": {
-      "bid": 1.15706,
-      "ask": 1.15715
+      "bid": 1.15652,
+      "ask": 1.15669
     },
     "GBPUSD": {
-      "bid": 1.32163,
-      "ask": 1.32177
+      "bid": 1.32119,
+      "ask": 1.32133
     },
     "USDJPYM2026": {
-      "bid": 158.665,
-      "ask": 158.687
+      "bid": 158.66,
+      "ask": 158.688
     },
     "US30": {
       "bid": 46398.3,
@@ -880,25 +880,25 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 1.15706,
-      "rsi": 38.8,
-      "macd_hist": -0.0001,
-      "atr": 0.0005,
-      "bb_width": 0.0014,
-      "ema9": 1.1573,
-      "ema21": 1.1575
+      "bid": 1.15652,
+      "rsi": 26.4,
+      "macd_hist": -0.0002,
+      "atr": 0.0006,
+      "bb_width": 0.0016,
+      "ema9": 1.1572,
+      "ema21": 1.1574
     },
     "GBPUSD": {
       "name": "GBP/USD",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 1.32163,
-      "rsi": 27.6,
+      "bid": 1.32119,
+      "rsi": 25.2,
       "macd_hist": -0.0003,
       "atr": 0.0007,
-      "bb_width": 0.0023,
-      "ema9": 1.3224,
+      "bb_width": 0.0025,
+      "ema9": 1.3223,
       "ema21": 1.3229
     },
     "USDJPYM2026": {
@@ -906,13 +906,13 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 158.665,
-      "rsi": 40.9,
-      "macd_hist": 0.0001,
-      "atr": 0.0569,
+      "bid": 158.66,
+      "rsi": 40.6,
+      "macd_hist": -0.0004,
+      "atr": 0.0573,
       "bb_width": 0.0005,
-      "ema9": 158.6912,
-      "ema21": 158.7
+      "ema9": 158.6876,
+      "ema21": 158.6981
     },
     "US30": {
       "name": "US30",
