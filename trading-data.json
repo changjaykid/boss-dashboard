@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-03 12:40:19",
+  "lastUpdate": "2026-04-03 12:50:20",
   "account": {
-    "balance": 30964.89,
+    "balance": 30964.64,
     "realizedPnl": -280.86,
-    "unrealizedPnl": 39.55,
-    "netEquity": 31004.44,
+    "unrealizedPnl": 22.55,
+    "netEquity": 30987.19,
     "todayPnl": 0,
     "weekPnl": -184.61,
     "totalTrades": 183,
@@ -39,9 +39,9 @@
       "entryPrice": 23997.2,
       "stopLevel": 23863.7,
       "profitLevel": 24264.1,
-      "currentBid": 23998.3,
-      "currentAsk": 24000.1,
-      "pnl": 11.0,
+      "currentBid": 23996.2,
+      "currentAsk": 23998.0,
+      "pnl": -10.0,
       "instrument": "US Tech 100",
       "epic": "US100",
       "createdDate": "2026-04-02T22:40:32.051"
@@ -53,9 +53,9 @@
       "entryPrice": 23999.2,
       "stopLevel": 23865.7,
       "profitLevel": 24266.1,
-      "currentBid": 23998.3,
-      "currentAsk": 24000.1,
-      "pnl": -9.0,
+      "currentBid": 23996.2,
+      "currentAsk": 23998.0,
+      "pnl": -30.0,
       "instrument": "US Tech 100",
       "epic": "US100",
       "createdDate": "2026-04-02T22:40:36.515"
@@ -67,9 +67,9 @@
       "entryPrice": 6582.3,
       "stopLevel": 6593.7,
       "profitLevel": 6563.3,
-      "currentBid": 6571.4,
-      "currentAsk": 6572.0,
-      "pnl": 103.0,
+      "currentBid": 6571.2,
+      "currentAsk": 6571.8,
+      "pnl": 105.0,
       "instrument": "US 500",
       "epic": "US500",
       "createdDate": "2026-04-03T04:50:25.841"
@@ -81,9 +81,9 @@
       "entryPrice": 46433.4,
       "stopLevel": 46624.1,
       "profitLevel": 46115.5,
-      "currentBid": 46441.7,
-      "currentAsk": 46443.7,
-      "pnl": -103.0,
+      "currentBid": 46439.4,
+      "currentAsk": 46441.4,
+      "pnl": -80.0,
       "instrument": "US Wall Street 30",
       "epic": "US30",
       "createdDate": "2026-04-03T01:20:22.828"
@@ -809,8 +809,8 @@
       "ask": 4676.58
     },
     "USDJPYM2026": {
-      "bid": 158.66,
-      "ask": 158.681
+      "bid": 158.651,
+      "ask": 158.673
     }
   },
   "indicators": {
@@ -832,13 +832,13 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 158.66,
-      "rsi": 44.0,
-      "macd_hist": -0.0181,
-      "atr": 0.0464,
-      "bb_width": 0.0016,
-      "ema9": 158.7072,
-      "ema21": 158.6988
+      "bid": 158.651,
+      "rsi": 39.2,
+      "macd_hist": -0.0209,
+      "atr": 0.0443,
+      "bb_width": 0.0015,
+      "ema9": 158.6973,
+      "ema21": 158.6926
     }
   },
   "actions": [
