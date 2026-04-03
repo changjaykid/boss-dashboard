@@ -1,18 +1,18 @@
 {
-  "lastUpdate": "2026/4/3 下午6:00:00",
+  "lastUpdate": "2026/4/3 下午7:00:00",
   "exchange": "MAX (MaiCoin)",
   "status": "connected",
   "account": {
     "balances": [
       {
         "currency": "TWD",
-        "available": "10000",
+        "available": "9784.7",
         "locked": "0",
         "staked": "0"
       },
       {
         "currency": "BTC",
-        "available": "5.5e-7",
+        "available": "0.00010039",
         "locked": "0",
         "staked": "0"
       },
@@ -23,93 +23,111 @@
         "staked": "0"
       }
     ],
-    "totalValueTWD": "10001.18",
+    "totalValueTWD": "10000.80",
     "totalBalances": 3
   },
   "tickers": [
     {
       "market": "btctwd",
       "name": "BTC/TWD",
-      "last": "2152822.2",
-      "open": "2137286.4",
+      "last": "2152622.2",
+      "open": "2137427.4",
       "high": "2168095.2",
       "low": "2114477.4",
-      "vol": "22.6797",
-      "change": "0.73"
+      "vol": "23.4957",
+      "change": "0.71"
     },
     {
       "market": "ethtwd",
       "name": "ETH/TWD",
-      "last": "66363",
-      "open": "65730.5",
+      "last": "66300.2",
+      "open": "65517",
       "high": "66757.5",
       "low": "64941.8",
-      "vol": "603.9522",
-      "change": "0.96"
+      "vol": "609.29",
+      "change": "1.20"
     },
     {
       "market": "soltwd",
       "name": "SOL/TWD",
-      "last": "2574.8",
-      "open": "2552.8",
+      "last": "2579.5",
+      "open": "2536.7",
       "high": "2580",
       "low": "2471.6",
-      "vol": "2219.493",
-      "change": "0.86"
+      "vol": "2089.231",
+      "change": "1.69"
     },
     {
       "market": "dogetwd",
       "name": "DOGE/TWD",
-      "last": "2.94",
-      "open": "2.9119",
-      "high": "2.9454",
+      "last": "2.945",
+      "open": "2.8894",
+      "high": "2.9493",
       "low": "2.87",
-      "vol": "869656.6",
-      "change": "0.97"
+      "vol": "950649",
+      "change": "1.92"
     },
     {
       "market": "xrptwd",
       "name": "XRP/TWD",
-      "last": "42.147",
-      "open": "42.071",
+      "last": "42.396",
+      "open": "42.198",
       "high": "42.666",
       "low": "41.256",
-      "vol": "67944.9",
-      "change": "0.18"
+      "vol": "67350.09",
+      "change": "0.47"
     },
     {
       "market": "btcusdt",
       "name": "BTC/USDT",
-      "last": "66841.03",
-      "open": "66429.67",
+      "last": "66721.83",
+      "open": "66452.41",
       "high": "67413.89",
       "low": "65755.1",
-      "vol": "7.2671",
-      "change": "0.62"
+      "vol": "7.1545",
+      "change": "0.41"
     },
     {
       "market": "ethusdt",
       "name": "ETH/USDT",
-      "last": "2058.43",
-      "open": "2045.1",
+      "last": "2059.84",
+      "open": "2037.71",
       "high": "2075.63",
       "low": "2019",
-      "vol": "472.1161",
-      "change": "0.65"
+      "vol": "460.652",
+      "change": "1.09"
     },
     {
       "market": "solusdt",
       "name": "SOL/USDT",
       "last": "80.1",
-      "open": "79.23",
+      "open": "78.94",
       "high": "80.16",
       "low": "76.83",
-      "vol": "713.185",
-      "change": "1.10"
+      "vol": "712.813",
+      "change": "1.47"
     }
   ],
   "openOrders": [],
-  "recentTrades": [],
+  "recentTrades": [
+    {
+      "id": 148484635,
+      "orderId": 19321230600,
+      "walletType": "spot",
+      "price": "2152686.7",
+      "volume": "0.0001",
+      "funds": "215.3",
+      "market": "btctwd",
+      "marketName": "BTC/TWD",
+      "side": "bid",
+      "fee": "1.6e-7",
+      "feeCurrency": "btc",
+      "feeDiscounted": false,
+      "liquidity": "taker",
+      "createdAt": "2026-04-03T10:53:40.292Z",
+      "selfTradeBidFee": null
+    }
+  ],
   "marketSentiment": {
     "fearGreed": {
       "value": "9",

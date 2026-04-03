@@ -1,9 +1,9 @@
 {
-  "lastUpdate": "2026-04-03 18:10",
+  "lastUpdate": "2026-04-03 19:11",
   "status": "RUNNING",
   "mode": "live",
   "capital": 10000,
-  "available": 10000,
+  "available": 9785,
   "netEquity": 10001,
   "todayPnl": 0,
   "totalPnl": 0,
@@ -21,14 +21,14 @@
   },
   "consecutiveLosses": 0,
   "signals": {
-    "technical": "🔴 15M/1H↑ 4H↓ RSI50 MACD轉弱 量0.03x",
-    "news": "⚪ 無即時新聞(搜尋暫不可用)",
-    "sentiment": "🟢 極度恐懼(FGI=9)→逆向做多機會",
-    "overall": "🟡 HOLD — 4H下行+無量+MACD惡化，等對齊"
+    "technical": "🔴 15M/1H↑ 4H↓ RSI52.7 MACD柱改善但負 量比0.08x",
+    "news": "⚪ 無重大新聞",
+    "sentiment": "🟢 FGI=9極度恐懼→逆向做多潛力",
+    "overall": "🟡 HOLD — BB擠壓中(width=0.77%), 4H未轉向, 無量確認"
   },
-  "btcPrice": 2151277.8,
-  "btcChange24h": 0.77,
+  "btcPrice": 2152809.2,
+  "btcChange24h": 0.92,
   "fearGreedIndex": "9",
-  "nextAction": "等4H趨勢轉向+量能回升",
+  "nextAction": "等BB突破+4H轉向+量能放大",
   "alerts": []
 }
