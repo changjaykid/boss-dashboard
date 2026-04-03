@@ -1,0 +1,66 @@
+{
+  "lastUpdate": "2026-04-03 19:55",
+  "status": "PLANNING",
+  "mode": "等待 API 串接",
+  "exchange": "Binance",
+  "account": {
+    "balance": 0,
+    "netEquity": 0,
+    "unrealizedPnl": 0,
+    "todayPnl": 0,
+    "totalPnl": 0,
+    "leverage": "--",
+    "marginUsage": "--",
+    "totalTrades": 0,
+    "winRate": "--",
+    "wins": 0,
+    "losses": 0,
+    "maxDrawdown": 0
+  },
+  "positions": [],
+  "closedTrades": [],
+  "strategy": {
+    "name": "多空雙向趨勢跟隨 + 動量突破",
+    "description": "結合趨勢跟隨和動量突破，多空雙向操作，利用合約槓桿放大收益",
+    "instruments": ["BTCUSDT", "ETHUSDT", "SOLUSDT"],
+    "timeframes": ["15m", "1h", "4h"],
+    "entryRules": [
+      "多時框架趨勢對齊（4H定方向、1H確認、15M找進場點）",
+      "EMA(9/21/55) 排列 + RSI 動量確認",
+      "布林通道突破 + 量能放大",
+      "關鍵支撐/阻力位反轉信號"
+    ],
+    "exitRules": [
+      "固定停損：1-2% 帳戶資金",
+      "追蹤停利：盈利 0.5% 啟動，逐步收緊",
+      "目標價到達主動平倉",
+      "反向信號出現立即平倉"
+    ],
+    "riskManagement": [
+      "單筆最大虧損：帳戶 2%",
+      "最大同時持倉：3 個",
+      "槓桿上限：5-10x（根據波動率動態調整）",
+      "日虧上限：帳戶 5%",
+      "連虧 3 次暫停 1 小時冷靜"
+    ],
+    "advantages": [
+      "多空雙向：下跌也能賺錢，不再浪費一半行情",
+      "槓桿放大：小資金大操作，資金效率高",
+      "USDT 計價：不受台幣匯率影響",
+      "流動性好：Binance 深度夠，滑點小"
+    ]
+  },
+  "planStatus": {
+    "apiSetup": "⏳ 等待老闆提供 API Key",
+    "engineDev": "📋 規劃中",
+    "backtesting": "📋 待 API 串接後進行",
+    "liveTrading": "📋 待測試通過後上線"
+  },
+  "signals": {
+    "technical": "⚪ 尚未啟動",
+    "news": "⚪ 尚未啟動",
+    "sentiment": "⚪ 尚未啟動",
+    "overall": "⚪ 等待 API 串接"
+  },
+  "alerts": []
+}

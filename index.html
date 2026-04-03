@@ -90,6 +90,7 @@
             <a href="#" onclick="switchTab('crypto',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🪙</span><span>虛擬貨幣</span></a>
             <a href="#" onclick="switchTab('crypto-auto',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🤖</span><span>虛擬貨幣自動交易</span></a>
             <a href="#" onclick="switchTab('money-maker',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>💰</span><span>虛擬貨幣賺錢機</span></a>
+            <a href="#" onclick="switchTab('crypto-futures',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>📈</span><span>虛擬貨幣合約交易</span></a>
             <div class="pt-3 pb-1"><p class="text-[10px] font-semibold text-gray-500 uppercase px-3">營運管理</p></div>
             <a href="#" onclick="switchTab('ad-business',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🎯</span><span>廣告業務</span></a>
             <a href="#" onclick="switchTab('community',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🌐</span><span>社群專案</span></a>
@@ -839,6 +840,153 @@
                 </section>
             </div>
 
+            <!-- 虛擬貨幣合約交易 -->
+            <div id="view-crypto-futures" class="section-view space-y-4 md:space-y-6">
+                <div class="flex items-center space-x-2 text-xs">
+                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-blue-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-blue-500"></span></span>
+                    <span class="text-gray-400">狀態：<span id="cf-status" class="text-blue-300">規劃中</span></span>
+                    <span class="text-[10px] text-gray-500 ml-2">更新：<span id="cf-last-update">--</span></span>
+                </div>
+
+                <!-- 帳戶總覽 -->
+                <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">淨值</p>
+                        <p class="text-lg md:text-2xl font-bold text-white mt-0.5" id="cf-net-equity">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">未實現盈虧</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="cf-unrealized">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">今日盈虧</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="cf-today-pnl">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">最大回撤</p>
+                        <p class="text-lg md:text-2xl font-bold text-red-400 mt-0.5" id="cf-max-dd">0%</p>
+                    </div>
+                </div>
+
+                <!-- 交易統計 -->
+                <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-3">
+                    <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700 text-center">
+                        <p class="text-[9px] text-gray-500">總交易</p>
+                        <p class="text-sm md:text-lg font-bold text-white" id="cf-total-trades">0</p>
+                    </div>
+                    <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700 text-center">
+                        <p class="text-[9px] text-gray-500">勝率</p>
+                        <p class="text-sm md:text-lg font-bold text-yellow-400" id="cf-winrate">--</p>
+                    </div>
+                    <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700 text-center">
+                        <p class="text-[9px] text-gray-500">勝 / 敗</p>
+                        <p class="text-sm md:text-lg font-bold"><span class="text-green-400" id="cf-wins">0</span> / <span class="text-red-400" id="cf-losses">0</span></p>
+                    </div>
+                    <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700 text-center">
+                        <p class="text-[9px] text-gray-500">槓桿</p>
+                        <p class="text-sm md:text-lg font-bold text-orange-400" id="cf-leverage">--</p>
+                    </div>
+                </div>
+
+                <!-- 三維信號 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-blue-300 mb-3">🚦 三維信號</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+                            <p class="text-[10px] text-gray-500">技術面</p>
+                            <p class="text-xs font-bold text-gray-300" id="cf-sig-tech">⚪ 尚未啟動</p>
+                        </div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+                            <p class="text-[10px] text-gray-500">新聞面</p>
+                            <p class="text-xs font-bold text-gray-300" id="cf-sig-news">⚪ 尚未啟動</p>
+                        </div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+                            <p class="text-[10px] text-gray-500">情緒面</p>
+                            <p class="text-xs font-bold text-gray-300" id="cf-sig-sentiment">⚪ 尚未啟動</p>
+                        </div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-indigo-700/50">
+                            <p class="text-[10px] text-gray-500">綜合判斷</p>
+                            <p class="text-xs font-bold text-indigo-300" id="cf-sig-overall">⚪ 等待 API 串接</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 交易策略 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">📐 交易策略</h3>
+                    <div id="cf-strategy-info" class="space-y-3">
+                        <div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
+                            <p class="text-[10px] text-gray-500 mb-1">策略名稱</p>
+                            <p class="text-xs font-bold text-white" id="cf-strategy-name">載入中...</p>
+                            <p class="text-[10px] text-gray-400 mt-1" id="cf-strategy-desc"></p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            <div class="p-3 bg-gray-800 rounded-lg border border-green-700/30">
+                                <p class="text-[10px] text-gray-500 mb-1">📥 進場規則</p>
+                                <div id="cf-entry-rules" class="text-xs text-gray-300 space-y-1"></div>
+                            </div>
+                            <div class="p-3 bg-gray-800 rounded-lg border border-red-700/30">
+                                <p class="text-[10px] text-gray-500 mb-1">📤 出場規則</p>
+                                <div id="cf-exit-rules" class="text-xs text-gray-300 space-y-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 風控規則 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-orange-300 mb-3">🛡️ 風控規則</h3>
+                    <div id="cf-risk-rules" class="grid grid-cols-2 md:grid-cols-3 gap-2"></div>
+                </section>
+
+                <!-- 合約優勢 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-green-300 mb-3">💪 合約 vs 現貨優勢</h3>
+                    <div id="cf-advantages" class="grid grid-cols-1 md:grid-cols-2 gap-2"></div>
+                </section>
+
+                <!-- 建置進度 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">🚀 建置進度</h3>
+                    <div id="cf-plan-status" class="grid grid-cols-2 md:grid-cols-4 gap-2"></div>
+                </section>
+
+                <!-- 當前持倉 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-blue-300 mb-3">📍 當前持倉</h3>
+                    <div id="cf-positions">
+                        <div class="py-4 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">⏳ 尚未啟動，等待 API 串接</p></div>
+                    </div>
+                </section>
+
+                <!-- 最近交易 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">📋 最近交易</h3>
+                    <div id="cf-trades">
+                        <p class="text-xs text-gray-400 text-center py-3">尚無交易紀錄</p>
+                    </div>
+                </section>
+
+                <!-- 交易標的 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">🎯 交易標的</h3>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-yellow-700/30 text-center">
+                            <p class="text-xs font-bold text-yellow-400">BTCUSDT</p>
+                            <p class="text-[10px] text-gray-400">主力</p>
+                        </div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-blue-700/30 text-center">
+                            <p class="text-xs font-bold text-blue-400">ETHUSDT</p>
+                            <p class="text-[10px] text-gray-400">主力</p>
+                        </div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-purple-700/30 text-center">
+                            <p class="text-xs font-bold text-purple-400">SOLUSDT</p>
+                            <p class="text-[10px] text-gray-400">輔助</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
             <!-- Placeholder -->
             <div id="view-placeholder" class="section-view">
                 <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
@@ -854,7 +1002,7 @@
 function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('open')}
 function checkPass(){if(document.getElementById('pass-input').value==='8888'){document.getElementById('auth-overlay').style.display='none';document.getElementById('app-content').style.display='flex';setTimeout(loadOverview,200)}else{document.getElementById('auth-error').classList.remove('hidden')}}
 
-const titles={overview:{t:'今日管家回報',s:'隨時待命'},stocks:{t:'股票專案',s:'台股分析'},forex:{t:'外匯保證金',s:'策略分析'},'forex-auto':{t:'🤖 外匯自動交易',s:'多商品 · v4 嚴格確認模式'},crypto:{t:'虛擬貨幣',s:'加密貨幣追蹤'},'crypto-auto':{t:'🤖 虛擬貨幣自動交易',s:'MAX 交易所 · v4 策略模組化'},'money-maker':{t:'💰 虛擬貨幣賺錢機',s:'BTC/TWD · 真金白銀 · 背水一戰'},'ad-business':{t:'🎯 廣告業務',s:'每日潛在客戶蒐集'},community:{t:'社群專案',s:'互動管理'},'community-ig':{t:'社群專案IG',s:'Instagram · @freeeadman'},shorts:{t:'短影音專案',s:'寵物上班去 · 規劃中'},skills:{t:'技能專案',s:'4 模型 · 23 技能'}};
+const titles={overview:{t:'今日管家回報',s:'隨時待命'},stocks:{t:'股票專案',s:'台股分析'},forex:{t:'外匯保證金',s:'策略分析'},'forex-auto':{t:'🤖 外匯自動交易',s:'多商品 · v4 嚴格確認模式'},crypto:{t:'虛擬貨幣',s:'加密貨幣追蹤'},'crypto-auto':{t:'🤖 虛擬貨幣自動交易',s:'MAX 交易所 · v4 策略模組化'},'money-maker':{t:'💰 虛擬貨幣賺錢機',s:'BTC/TWD · 真金白銀 · 背水一戰'},'crypto-futures':{t:'📈 虛擬貨幣合約交易',s:'Binance · 多空雙向 · 槓桿交易'},'ad-business':{t:'🎯 廣告業務',s:'每日潛在客戶蒐集'},community:{t:'社群專案',s:'互動管理'},'community-ig':{t:'社群專案IG',s:'Instagram · @freeeadman'},shorts:{t:'短影音專案',s:'寵物上班去 · 規劃中'},skills:{t:'技能專案',s:'4 模型 · 23 技能'}};
 const trendMap={'STRONG_BULL':'強勢看多 🟢','BULL':'看多 🟢','STRONG_BEAR':'強勢看空 🔴','BEAR':'看空 🔴','NEUTRAL':'盤整 ⚪'};
 function trendCN(t){return trendMap[t]||t||'--'}
 function trendColor(t){if(!t)return'text-gray-300';if(t.includes('BULL'))return'text-green-400';if(t.includes('BEAR'))return'text-red-400';return'text-gray-300'}
@@ -1020,6 +1168,7 @@ if(v==='community'){loadSocialData()}
 if(v==='crypto'){loadCryptoNews()}
 if(v==='crypto-auto'){loadCryptoData();if(!window._cri)window._cri=setInterval(loadCryptoData,900000)}
 if(v==='money-maker'){loadMoneyMakerData();if(!window._mmi)window._mmi=setInterval(loadMoneyMakerData,180000)}
+if(v==='crypto-futures'){loadCryptoFuturesData()}
 if(v==='ad-business'){loadAdBusinessData()}
 if(v==='skills'){loadSkillsData()}
 }
@@ -1455,6 +1604,63 @@ return'<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div cla
 const alertSec=document.getElementById('mm-alerts-section');const alerts=d.alerts||[];
 if(alertSec){if(alerts.length){alertSec.style.display='';document.getElementById('mm-alerts').innerHTML=alerts.map(a=>'<div class="p-2.5 bg-gray-800 rounded-lg border border-red-700/30"><p class="text-xs text-red-300">'+a+'</p></div>').join('')}else{alertSec.style.display='none'}}
 }catch(e){console.log('money maker err',e)}
+}
+
+// ========== CRYPTO FUTURES ==========
+async function loadCryptoFuturesData(){
+try{
+const r=await fetch('crypto-futures-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
+const stEl=document.getElementById('cf-status');if(stEl){const sm={'PLANNING':'規劃中','TESTING':'測試中','RUNNING':'運行中','PAUSED':'暫停'};stEl.textContent=sm[d.status]||d.status;stEl.className=d.status==='RUNNING'?'text-green-300':d.status==='TESTING'?'text-yellow-300':'text-blue-300'}
+document.getElementById('cf-last-update').textContent=d.lastUpdate||'--';
+const a=d.account||{};
+const neEl=document.getElementById('cf-net-equity');if(neEl)neEl.textContent=a.netEquity?'$'+a.netEquity.toLocaleString():'--';
+const urEl=document.getElementById('cf-unrealized');if(urEl){const v=a.unrealizedPnl||0;if(v===0&&!a.netEquity){urEl.textContent='--'}else{urEl.textContent=(v>=0?'+':'')+'$'+v.toFixed(2);urEl.className='text-lg md:text-2xl font-bold mt-0.5 '+(v>=0?'text-green-400':'text-red-400')}}
+const tdEl=document.getElementById('cf-today-pnl');if(tdEl){const v=a.todayPnl||0;if(v===0&&!a.netEquity){tdEl.textContent='--'}else{tdEl.textContent=(v>=0?'+':'')+'$'+v.toFixed(2);tdEl.className='text-lg md:text-2xl font-bold mt-0.5 '+(v>=0?'text-green-400':'text-red-400')}}
+document.getElementById('cf-max-dd').textContent=(a.maxDrawdown||0).toFixed(1)+'%';
+document.getElementById('cf-total-trades').textContent=a.totalTrades||0;
+document.getElementById('cf-winrate').textContent=a.winRate||'--';
+document.getElementById('cf-wins').textContent=a.wins||0;
+document.getElementById('cf-losses').textContent=a.losses||0;
+document.getElementById('cf-leverage').textContent=a.leverage||'--';
+
+// Signals
+const sig=d.signals||{};
+document.getElementById('cf-sig-tech').textContent=sig.technical||'⚪ 尚未啟動';
+document.getElementById('cf-sig-news').textContent=sig.news||'⚪ 尚未啟動';
+document.getElementById('cf-sig-sentiment').textContent=sig.sentiment||'⚪ 尚未啟動';
+document.getElementById('cf-sig-overall').textContent=sig.overall||'⚪ 等待 API';
+
+// Strategy
+const s=d.strategy||{};
+document.getElementById('cf-strategy-name').textContent=s.name||'--';
+document.getElementById('cf-strategy-desc').textContent=s.description||'';
+const erBox=document.getElementById('cf-entry-rules');if(erBox&&s.entryRules)erBox.innerHTML=s.entryRules.map(r=>'<p>• '+r+'</p>').join('');
+const exBox=document.getElementById('cf-exit-rules');if(exBox&&s.exitRules)exBox.innerHTML=s.exitRules.map(r=>'<p>• '+r+'</p>').join('');
+
+// Risk rules
+const rrBox=document.getElementById('cf-risk-rules');if(rrBox&&s.riskManagement)rrBox.innerHTML=s.riskManagement.map(r=>'<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs text-gray-300">'+r+'</p></div>').join('');
+
+// Advantages
+const advBox=document.getElementById('cf-advantages');if(advBox&&s.advantages)advBox.innerHTML=s.advantages.map(a=>'<div class="p-2.5 bg-gray-800 rounded-lg border border-green-700/30"><p class="text-xs text-green-300">✅ '+a+'</p></div>').join('');
+
+// Plan status
+const psBox=document.getElementById('cf-plan-status');const ps=d.planStatus||{};
+if(psBox){const items=[{k:'apiSetup',l:'API 串接'},{k:'engineDev',l:'引擎開發'},{k:'backtesting',l:'回測驗證'},{k:'liveTrading',l:'上線交易'}];
+psBox.innerHTML=items.map(i=>'<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">'+i.l+'</p><p class="text-xs font-bold text-white">'+(ps[i.k]||'📋 待規劃')+'</p></div>').join('')}
+
+// Positions
+const pb=document.getElementById('cf-positions');const pos=d.positions||[];
+if(!pos.length){pb.innerHTML='<div class="py-4 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">'+(d.status==='PLANNING'?'⏳ 尚未啟動，等待 API 串接':'🔍 無持倉')+'</p></div>'}
+else{pb.innerHTML=pos.map(p=>{const pc=(p.pnl||0)>=0?'text-green-400':'text-red-400';const dc=p.side==='LONG'?'badge-buy':'badge-sell';
+return'<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-2"><span class="px-1.5 py-0.5 text-[10px] rounded-full '+dc+'">'+(p.side||'')+'</span><span class="text-xs font-bold text-white">'+(p.symbol||'')+' @ '+(p.entryPrice||0)+'</span><span class="text-[10px] text-orange-400">'+(p.leverage||'')+'x</span></div><span class="text-sm font-bold '+pc+'">'+((p.pnl||0)>=0?'+':'')+'$'+(p.pnl||0).toFixed(2)+'</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>倉位:$'+(p.size||0)+'</span><span>SL:'+(p.stopLoss||'--')+'</span><span>TP:'+(p.takeProfit||'--')+'</span></div></div>'}).join('')}
+
+// Trades
+const tb=document.getElementById('cf-trades');const trades=d.closedTrades||[];
+if(!trades.length){tb.innerHTML='<p class="text-xs text-gray-400 text-center py-3">尚無交易紀錄</p>'}
+else{tb.innerHTML=trades.slice().reverse().slice(0,15).map(t=>{const dc=t.side==='LONG'?'badge-buy':'badge-sell';const oc=(t.pnl||0)>=0?'badge-win':'badge-loss';const pc=(t.pnl||0)>=0?'text-green-400':'text-red-400';
+return'<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 text-[10px] rounded-full '+dc+'">'+(t.side||'')+'</span><span class="px-1.5 py-0.5 text-[10px] rounded-full '+oc+'">'+((t.pnl||0)>=0?'WIN':'LOSS')+'</span><span class="text-[10px] text-white">'+(t.symbol||'')+'</span></div><span class="text-xs font-bold '+pc+'">'+((t.pnl||0)>=0?'+':'')+'$'+(t.pnl||0).toFixed(2)+'</span></div></div>'}).join('')}
+
+}catch(e){console.log('crypto futures err',e)}
 }
 
 // Auto-load overview on page open
