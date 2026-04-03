@@ -1253,7 +1253,7 @@ async function loadStockData() {
       html += `</section>`;
     }
 
-    // 10 檔精選
+    // 精選 16 檔
     if (d.watchlist?.length) {
       html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
         <div class="flex items-center justify-between mb-4">
@@ -1264,46 +1264,71 @@ async function loadStockData() {
       d.watchlist.forEach(s => {
         const priceNum = parseFloat(s.price) || 0;
         const under50 = priceNum > 0 && priceNum <= 50;
+        const fcDays = s.foreignConsecutiveDays;
+        const fcBadge = fcDays ? (fcDays > 0
+          ? `<span class="px-1 py-0.5 text-[9px] rounded bg-green-900/50 text-green-300">外資連買${fcDays}天</span>`
+          : `<span class="px-1 py-0.5 text-[9px] rounded bg-red-900/50 text-red-300">外資連賣${Math.abs(fcDays)}天</span>`) : '';
         html += `<div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
           <div class="flex items-center justify-between mb-1.5">
-            <div class="flex items-center gap-1.5">
+            <div class="flex items-center gap-1.5 flex-wrap">
               <span class="text-xs font-bold text-white">${s.name||''}</span>
               <span class="text-[10px] text-gray-400">${s.code||''}</span>
               ${under50?'<span class="px-1 py-0.5 text-[9px] rounded bg-yellow-900/50 text-yellow-300">💰 &lt;50</span>':''}
               ${s.category?'<span class="px-1 py-0.5 text-[9px] rounded bg-blue-900/50 text-blue-300">'+s.category+'</span>':''}
+              ${fcBadge}
             </div>
             <span class="text-sm font-bold text-gray-200">${s.price||'--'}</span>
           </div>
+          <div class="flex flex-wrap gap-2 mb-1.5 text-[10px]">
+            ${s.pe?'<span class="text-amber-400" title="'+(s.peExplain||'')+'">本益比 '+s.pe+'</span>':''}
+            ${s.pb?'<span class="text-cyan-400" title="'+(s.pbExplain||'')+'">本淨比 '+s.pb+'</span>':''}
+            ${s.dividendYield?'<span class="text-pink-400">殖利率 '+s.dividendYield+'%</span>':''}
+            ${s.lastDividendPerShare?'<span class="text-gray-400">配 $'+s.lastDividendPerShare+'</span>':''}
+          </div>
+          ${s.peExplain||s.pbExplain?'<p class="text-[10px] text-amber-300/70 mb-1">'+(s.peExplain?'💡 '+s.peExplain:'')+(s.pbExplain?' · '+s.pbExplain:'')+'</p>':''}
           ${s.technical?'<p class="text-[10px] text-gray-500 mb-1">'+s.technical+'</p>':''}
           <p class="text-[10px] text-gray-300">${s.reason||''}</p>
+          ${s.buyReason?'<p class="text-[10px] text-green-300 mt-0.5">💡 為什麼值得買：'+s.buyReason+'</p>':''}
           ${s.target?'<p class="text-[10px] text-green-400 mt-0.5">目標 '+s.target+(s.stopLoss?' · 停損 '+s.stopLoss:'')+'</p>':''}
+          ${s.upcomingExDividend?'<p class="text-[10px] text-pink-300 mt-0.5">📅 除息：'+s.upcomingExDividend+'</p>':''}
         </div>`;
       });
       html += `</div></section>`;
     }
 
-    // 推薦清單 (AI/高股息/ETF)
+    // 推薦清單 (AI/高股息/ETF) - 各 8 檔
     const rec = d.recommendations || {};
     ['ai','dividend','etf'].forEach(cat => {
       const items = rec[cat];
       if (!items?.length) return;
       const catName = {ai:'🤖 AI 概念股', dividend:'💰 高股息', etf:'📦 ETF'}[cat] || cat;
       html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
-        <h3 class="text-sm md:text-xl font-medium text-cyan-300 mb-3">${catName}</h3>
+        <h3 class="text-sm md:text-xl font-medium text-cyan-300 mb-3">${catName}（${items.length} 檔）</h3>
         <div class="grid grid-cols-1 xs:grid-cols-2 gap-2">`;
       items.forEach(s => {
+        const isEtf = cat === 'etf';
         html += `<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
           <div class="flex items-center justify-between mb-1">
             <span class="text-xs font-bold text-white">${s.name||''} <span class="text-[10px] text-gray-400">${s.code||''}</span></span>
             <span class="text-sm font-bold text-gray-200">${s.price||'--'}</span>
           </div>
+          <div class="flex flex-wrap gap-2 mb-1 text-[10px]">
+            ${s.pe?'<span class="text-amber-400">PE '+s.pe+'</span>':''}
+            ${s.pb?'<span class="text-cyan-400">PB '+s.pb+'</span>':''}
+            ${s.dividendYield?'<span class="text-pink-400">殖利率 '+s.dividendYield+'%</span>':''}
+            ${s.lastDividendPerShare?'<span class="text-gray-400">配 $'+s.lastDividendPerShare+(s.exDividendDate?' ('+s.exDividendDate+')':'')+'</span>':''}
+            ${isEtf && s.premiumDiscount !== undefined ? '<span class="'+(s.premiumDiscount>1?'text-red-400':'text-green-400')+'">'+(s.premiumDiscount>=0?'溢價':'折價')+' '+Math.abs(s.premiumDiscount)+'%</span>':''}
+          </div>
+          ${isEtf && s.topHoldings?'<p class="text-[10px] text-indigo-300 mb-1">📊 '+s.topHoldings+'</p>':''}
+          ${isEtf && s.premiumExplain?'<p class="text-[10px] text-amber-300/70 mb-1">💡 '+s.premiumExplain+'</p>':''}
           <p class="text-[10px] text-gray-300">${s.reason||''}</p>
+          ${s.buyReason?'<p class="text-[10px] text-green-300 mt-0.5">💡 '+s.buyReason+'</p>':''}
         </div>`;
       });
       html += `</div></section>`;
     });
 
-    // 法人動態
+    // 法人動態 + 融資融券
     const inst = d.institutional || {};
     if (inst.foreign || inst.investment_trust || inst.dealer) {
       html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
@@ -1318,7 +1343,27 @@ async function loadStockData() {
           ${v.note?'<p class="text-[10px] text-gray-400">'+v.note+'</p>':''}
         </div>`;
       });
-      html += `</div></section>`;
+      html += `</div>`;
+      // 融資融券
+      const mg = d.margin || {};
+      if (mg.marginBalance || mg.shortBalance || mg.marginRatio) {
+        html += `<div class="grid grid-cols-3 gap-2 mt-3">
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+            <p class="text-[10px] text-gray-500">融資餘額(億)</p>
+            <p class="text-lg font-bold text-yellow-400">${mg.marginBalance||'--'}</p>
+          </div>
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+            <p class="text-[10px] text-gray-500">融券餘額(張)</p>
+            <p class="text-lg font-bold text-orange-400">${mg.shortBalance?.toLocaleString()||'--'}</p>
+          </div>
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+            <p class="text-[10px] text-gray-500">券資比</p>
+            <p class="text-lg font-bold text-cyan-400">${mg.marginRatio||'--'}%</p>
+          </div>
+        </div>`;
+        if (mg.marginExplain) html += `<p class="text-[10px] text-amber-300/70 mt-2 px-1">💡 ${mg.marginExplain}</p>`;
+      }
+      html += `</section>`;
     }
 
     // 自我復盤
