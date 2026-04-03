@@ -1,8 +1,8 @@
 {
-  "lastUpdate": "2026-04-03 19:11",
+  "lastUpdate": "2026-04-03 19:30",
   "status": "RUNNING",
   "mode": "live",
-  "capital": 10000,
+  "capital": 9785,
   "available": 9785,
   "netEquity": 10001,
   "todayPnl": 0,
@@ -21,14 +21,15 @@
   },
   "consecutiveLosses": 0,
   "signals": {
-    "technical": "🔴 15M/1H↑ 4H↓ RSI52.7 MACD柱改善但負 量比0.08x",
-    "news": "⚪ 無重大新聞",
-    "sentiment": "🟢 FGI=9極度恐懼→逆向做多潛力",
-    "overall": "🟡 HOLD — BB擠壓中(width=0.77%), 4H未轉向, 無量確認"
+    "technical": "🔴 buy=0.5 sell=0.0 trend=BUY rsi=56.9",
+    "news": "🟢 新聞偏多(利多2/利空0)",
+    "sentiment": "🟢 極度恐懼(FGI=9)→逆向做多機會",
+    "overall": "🟡 HOLD — BB擠壓中(等突破), 量能不足0.02x"
   },
-  "btcPrice": 2152809.2,
-  "btcChange24h": 0.92,
+  "btcPrice": 2155794.7,
+  "btcChange24h": 0.86,
   "fearGreedIndex": "9",
-  "nextAction": "等BB突破+4H轉向+量能放大",
-  "alerts": []
+  "nextAction": "BB擠壓中(等突破)",
+  "alerts": [],
+  "note": "測試單已成交 0.0001 BTC (NT$215)，因金額太小無法賣回，等引擎正式信號再操作"
 }
