@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-03 11:02",
+  "lastUpdate": "2026-04-03 12:03",
   "status": "RUNNING",
   "mode": "live",
   "capital": 10000,
@@ -17,14 +17,14 @@
   "dailyLimit": { "maxLoss": 1000, "currentLoss": 0, "remaining": 1000 },
   "consecutiveLosses": 0,
   "signals": {
-    "technical": "🔴 三框全空(15M strong_down/1H down/4H down)，EMA8<21全時框，RSI 42.0，MACD負收斂中(hist -1174→改善中)，BB擠壓中，量比0.006x幾乎無量",
-    "news": "🟡 市場整體跌2.4%，Q1累跌23%，無突發重大利空/利多",
-    "sentiment": "🟡 F&G=9 極度恐懼（逆向做多信號但技術面未配合）",
-    "overall": "⏸️ 觀望 — 三維度未對齊，量能極低，不做"
+    "technical": "🔴 空（15M/1H/4H全空，但動能衰減）",
+    "news": "🔴 偏空（市場跌2.4%，整體謹慎）",
+    "sentiment": "🟡 極度恐懼(9)→逆向做多信號",
+    "overall": "⚪ 觀望（三維度未對齊）"
   },
-  "btcPrice": 2140898.7,
-  "btcChange24h": -0.15,
-  "fearGreedIndex": "9 (Extreme Fear)",
-  "nextAction": "觀望 — 無量+全空，等15M出現反轉K線+放量才考慮逆向做多；SELL缺量確認不做",
-  "alerts": ["F&G=9歷史低位，極度恐懼區間，留意超跌反彈但需技術確認", "三框全空+量比0.006x=死水市場，等待動能回歸"]
+  "btcPrice": 2142982.3,
+  "btcChange24h": 0.09,
+  "fearGreedIndex": "9 — Extreme Fear",
+  "nextAction": "觀望等待：技術面空方動能衰減中，等MACD金叉或1H轉多再進場",
+  "alerts": ["恐貪指數9極度恐懼，關注反彈機會"]
 }
