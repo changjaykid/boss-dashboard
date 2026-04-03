@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-03 13:04",
+  "lastUpdate": "2026-04-03 14:05",
   "status": "RUNNING",
   "mode": "live",
   "capital": 10000,
@@ -17,14 +17,14 @@
   "dailyLimit": { "maxLoss": 1000, "currentLoss": 0, "remaining": 1000 },
   "consecutiveLosses": 0,
   "signals": {
-    "technical": "🟡 空頭衰減(MACD收斂+BB擠壓+連3陽)",
-    "news": "🟡 市場整體弱勢，BTC持穩$67K附近",
-    "sentiment": "🟢 恐貪9極度恐懼→逆向做多機會醞釀",
-    "overall": "🟡 HOLD — 三維度未對齊，等待1H轉多"
+    "technical": "🟡 全空頭但動能衰減(MACD hist下滑357、BB擠壓、pin_bar_bearish)",
+    "news": "🟡 市場弱勢 BTC ~$67K、加密總市值跌2.4%",
+    "sentiment": "🟢 恐貪9極度恐懼→逆向做多機會醞釀中",
+    "overall": "🟡 HOLD — 做空缺量能(0.02x)、做多缺1H轉向"
   },
-  "btcPrice": 2144630,
-  "btcChange24h": 0.45,
+  "btcPrice": 2142993,
+  "btcChange24h": 0.18,
   "fearGreedIndex": "9 (Extreme Fear)",
-  "nextAction": "等待1H EMA交叉確認反轉",
+  "nextAction": "等待量能回歸+1H EMA交叉確認方向",
   "alerts": []
 }
