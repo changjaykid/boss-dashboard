@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-03 08:57",
+  "lastUpdate": "2026-04-03 09:58",
   "status": "RUNNING",
   "mode": "live",
   "capital": 10000,
@@ -17,14 +17,14 @@
   "dailyLimit": { "maxLoss": 1000, "currentLoss": 0, "remaining": 1000 },
   "consecutiveLosses": 0,
   "signals": {
-    "technical": "🔴 三框全空(15M strong_down/1H down/4H down)，MACD柱惡化(-771)，RSI 43.3，但15M出現hammer+pin_bar_bullish，BB擠壓中(0.48%)，量比2.1x",
-    "news": "⚪ BTC 24H跌2.47%，搜尋受限無即時重大新聞",
+    "technical": "🔴 三框全空(15M strong_down/1H down/4H down)，MACD柱持續惡化(-1161)，RSI 37.6，BB擠壓中(0.61%)，15M pin_bar_bullish但量比僅0.44x無確認",
+    "news": "⚪ BTC 24H跌0.86%，無即時重大新聞（搜尋受限）",
     "sentiment": "🔴 Fear&Greed=9 極度恐懼",
-    "overall": "⏸️ 觀望 — 三框全空+1H EMA空頭排列，BUY條件不足；底部型態+極度恐懼待確認"
+    "overall": "⏸️ 觀望 — 三框全空+量能極低，BUY/SELL條件均不足"
   },
-  "btcPrice": 2147581,
-  "btcChange24h": -2.47,
+  "btcPrice": 2143038,
+  "btcChange24h": -0.86,
   "fearGreedIndex": "9 (Extreme Fear)",
-  "nextAction": "觀望 — 等1H EMA8上穿EMA21確認轉多，15M底部型態需1H配合才進場",
-  "alerts": ["F&G=9極度恐懼，歷史低位，潛在反彈機會但需技術確認", "15M出現hammer+pin_bar_bullish底部信號，關注後續K線", "三框全空，嚴守不逆大趨勢鐵律"]
+  "nextAction": "觀望 — 等量能回升+1H EMA轉多才考慮做多；SELL也缺量確認暫不做",
+  "alerts": ["F&G=9極度恐懼，歷史低位，留意反彈但需技術確認", "三框全空但量比僅0.44x，市場無方向性動能", "15M pin_bar_bullish底部信號，需後續放量K線確認"]
 }
