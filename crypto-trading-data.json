@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026/4/3 上午10:30:00",
+  "lastUpdate": "2026/4/3 上午11:00:00",
   "exchange": "MAX (MaiCoin)",
   "status": "connected",
   "account": {
@@ -30,82 +30,82 @@
     {
       "market": "btctwd",
       "name": "BTC/TWD",
-      "last": "2138555",
-      "open": "2146075.9",
+      "last": "2140898.7",
+      "open": "2146942.6",
       "high": "2168095.2",
       "low": "2114477.4",
-      "vol": "24.8156",
-      "change": "-0.35"
+      "vol": "24.5425",
+      "change": "-0.28"
     },
     {
       "market": "ethtwd",
       "name": "ETH/TWD",
-      "last": "65935.7",
-      "open": "66734.1",
-      "high": "66837.5",
+      "last": "66069.5",
+      "open": "66498.2",
+      "high": "66718.3",
       "low": "64941.8",
-      "vol": "689.5113",
-      "change": "-1.20"
+      "vol": "673.656",
+      "change": "-0.64"
     },
     {
       "market": "soltwd",
       "name": "SOL/TWD",
-      "last": "2553.9",
-      "open": "2521.3",
+      "last": "2553.1",
+      "open": "2527.4",
       "high": "2567",
       "low": "2471.6",
-      "vol": "2380.189",
-      "change": "1.29"
+      "vol": "2338.877",
+      "change": "1.02"
     },
     {
       "market": "dogetwd",
       "name": "DOGE/TWD",
-      "last": "2.9161",
+      "last": "2.8981",
       "open": "2.883",
       "high": "2.932",
       "low": "2.87",
-      "vol": "1715755.3",
-      "change": "1.15"
+      "vol": "1677520.2",
+      "change": "0.52"
     },
     {
       "market": "xrptwd",
       "name": "XRP/TWD",
-      "last": "42.116",
-      "open": "42.377",
+      "last": "42.017",
+      "open": "42.421",
       "high": "42.563",
       "low": "41.256",
-      "vol": "75887.91",
-      "change": "-0.62"
+      "vol": "75015.02",
+      "change": "-0.95"
     },
     {
       "market": "btcusdt",
       "name": "BTC/USDT",
-      "last": "66474.82",
-      "open": "66940.77",
+      "last": "66522.35",
+      "open": "66945.18",
       "high": "67413.89",
       "low": "65755.1",
-      "vol": "7.2758",
-      "change": "-0.70"
+      "vol": "7.003",
+      "change": "-0.63"
     },
     {
       "market": "ethusdt",
       "name": "ETH/USDT",
-      "last": "2049.68",
-      "open": "2082.94",
-      "high": "2088.15",
+      "last": "2053.46",
+      "open": "2073.1",
+      "high": "2075.63",
       "low": "2019",
-      "vol": "599.2799",
-      "change": "-1.60"
+      "vol": "616.9988",
+      "change": "-0.95"
     },
     {
       "market": "solusdt",
       "name": "SOL/USDT",
-      "last": "79.52",
-      "open": "78.58",
+      "last": "78.94",
+      "open": "78.51",
       "high": "79.8",
       "low": "76.83",
-      "vol": "715.973",
-      "change": "1.20"
+      "vol": "688.183",
+      "change": "0.55"
     }
   ],
   "openOrders": [],
