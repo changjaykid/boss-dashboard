@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-03 17:09:17",
+  "lastUpdate": "2026-04-03 18:10",
   "status": "RUNNING",
   "mode": "live",
   "capital": 10000,
@@ -21,14 +21,14 @@
   },
   "consecutiveLosses": 0,
   "signals": {
-    "technical": "🔴 buy=0.5 sell=0.0 trend=BUY rsi=54.0",
-    "news": "🟢 新聞偏多(利多2/利空0)",
+    "technical": "🔴 15M/1H↑ 4H↓ RSI50 MACD轉弱 量0.03x",
+    "news": "⚪ 無即時新聞(搜尋暫不可用)",
     "sentiment": "🟢 極度恐懼(FGI=9)→逆向做多機會",
-    "overall": "🟡 HOLD — BB擠壓中(等突破), 量能不足0.10x"
+    "overall": "🟡 HOLD — 4H下行+無量+MACD惡化，等對齊"
   },
-  "btcPrice": 2153587.1,
-  "btcChange24h": 0.89,
+  "btcPrice": 2151277.8,
+  "btcChange24h": 0.77,
   "fearGreedIndex": "9",
-  "nextAction": "BB擠壓中(等突破)",
+  "nextAction": "等4H趨勢轉向+量能回升",
   "alerts": []
 }
