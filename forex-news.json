@@ -1,99 +1,99 @@
 {
-  "lastUpdate": "2026-04-02 20:00:00",
+  "lastUpdate": "2026-04-03 08:00:00",
   "updateCycle": "08:00/20:00",
   "prices": {
-    "fetchedAt": "2026-04-02 20:00:05",
+    "fetchedAt": "2026-04-03 08:00:04",
     "source": "Yahoo Finance (yfinance)",
     "instruments": {
       "XAUUSD": {
         "key": "XAUUSD",
         "label": "黃金 XAUUSD",
         "unit": "USD/oz",
-        "price": 4631.9,
-        "change": -75.2,
-        "changePercent": "-1.60%",
+        "price": 4702.7,
+        "change": -4.4,
+        "changePercent": "-0.09%",
         "symbol": "GC=F",
-        "fetchedAt": "2026-04-02 20:00:01"
+        "fetchedAt": "2026-04-03 08:00:02"
       },
       "EURUSD": {
         "key": "EURUSD",
         "label": "歐元/美元",
         "unit": "",
-        "price": 1.1522,
-        "change": -0.0072,
-        "changePercent": "-0.62%",
+        "price": 1.1545,
+        "change": 0.0004,
+        "changePercent": "+0.03%",
         "symbol": "EURUSD=X",
-        "fetchedAt": "2026-04-02 20:00:02"
+        "fetchedAt": "2026-04-03 08:00:03"
       },
       "GBPUSD": {
         "key": "GBPUSD",
         "label": "英鎊/美元",
         "unit": "",
-        "price": 1.3203,
-        "change": -0.0102,
-        "changePercent": "-0.76%",
+        "price": 1.323,
+        "change": 0.0003,
+        "changePercent": "+0.02%",
         "symbol": "GBPUSD=X",
-        "fetchedAt": "2026-04-02 20:00:03"
+        "fetchedAt": "2026-04-03 08:00:03"
       },
       "USDJPY": {
         "key": "USDJPY",
         "label": "美元/日圓",
         "unit": "",
-        "price": 159.69,
-        "change": 1.08,
-        "changePercent": "+0.68%",
+        "price": 159.49,
+        "change": -0.077,
+        "changePercent": "-0.05%",
         "symbol": "JPY=X",
-        "fetchedAt": "2026-04-02 20:00:03"
+        "fetchedAt": "2026-04-03 08:00:03"
       },
       "US30": {
         "key": "US30",
         "label": "道瓊工業 US30",
         "unit": "",
-        "price": 46565.74,
-        "change": 224.23,
-        "changePercent": "+0.48%",
+        "price": 46504.67,
+        "change": -61.07,
+        "changePercent": "-0.13%",
         "symbol": "^DJI",
-        "fetchedAt": "2026-04-02 20:00:03"
+        "fetchedAt": "2026-04-03 08:00:03"
       },
       "SPX500": {
         "key": "SPX500",
         "label": "標普500",
         "unit": "",
-        "price": 6575.32,
-        "change": 46.8,
-        "changePercent": "+0.72%",
+        "price": 6582.69,
+        "change": 7.37,
+        "changePercent": "+0.11%",
         "symbol": "^GSPC",
-        "fetchedAt": "2026-04-02 20:00:04"
+        "fetchedAt": "2026-04-03 08:00:03"
       },
       "NAS100": {
         "key": "NAS100",
         "label": "那斯達克100期貨",
         "unit": "",
-        "price": 23716,
-        "change": -105.5,
-        "changePercent": "-0.44%",
+        "price": 24210.75,
+        "change": 389.25,
+        "changePercent": "+1.63%",
         "symbol": "NQ=F",
-        "fetchedAt": "2026-04-02 20:00:04"
+        "fetchedAt": "2026-04-03 08:00:04"
       },
       "DXY": {
         "key": "DXY",
         "label": "美元指數 DXY",
         "unit": "",
-        "price": 100.22,
-        "change": 0.214,
-        "changePercent": "+0.21%",
+        "price": 99.99,
+        "change": -0.016,
+        "changePercent": "-0.02%",
         "symbol": "DX-Y.NYB",
-        "fetchedAt": "2026-04-02 20:00:04"
+        "fetchedAt": "2026-04-03 08:00:04"
       },
       "US10Y": {
         "key": "US10Y",
         "label": "美國10年期公債殖利率",
         "unit": "%",
-        "price": 4.319,
-        "change": 0.008,
-        "changePercent": "+0.19%",
+        "price": 4.313,
+        "change": -0.006,
+        "changePercent": "-0.14%",
         "symbol": "^TNX",
-        "fetchedAt": "2026-04-02 20:00:04"
+        "fetchedAt": "2026-04-03 08:00:04"
       }
     }
   },
@@ -102,70 +102,72 @@
       "title": "金價強勢反彈至4700美元關口！但三月仍錄得大幅回調",
       "source": "TradingKey",
       "time": "2026-04-01 02:05 UTC",
-      "summary": "金價在近期強勢反彈至4700美元，但三月份的交易中仍出現了顯著的回調，顯示市場情緒波動。投資者對金價的未來走勢持謹慎態度。",
-      "analysis": "這則新聞顯示金價的波動性，可能影響到XAUUSD的交易策略，特別是在市場情緒不穩定的情況下，投資者需謹慎操作。",
+      "summary": "金價在近期強勢反彈至4700美元，但整個三月仍出現了顯著的回調。市場對金價未來走勢的看法分歧。",
+      "analysis": "這則新聞顯示金價的波動性，可能會影響XAUUSD的交易策略。投資者需密切關注金價的支撐和阻力位。",
       "impact": {
         "instruments": [
           "GOLD"
         ],
-        "direction": "金價反彈 → 投資者需注意回調風險",
+        "direction": "金價反彈 → 可能吸引買盤",
         "severity": "high"
       }
     },
     {
-      "title": "金價在美國國債收益率下降的情況下上漲，同時中東緊張局勢升級",
+      "title": "金價預測：XAU/USD在伊朗衝突擴大擔憂下開盤走低至4450美元",
       "source": "TMGM",
-      "time": "2026-03-30 13:44 UTC",
-      "summary": "金價因美國國債收益率的下降而上漲，儘管中東的緊張局勢持續升級，市場對金價的需求依然強勁。",
-      "analysis": "這表明在不確定的地緣政治環境下，金價作為避險資產的需求可能會增加，對XAUUSD的交易將帶來利多影響。",
+      "time": "2026-03-30 05:29 UTC",
+      "summary": "由於對伊朗衝突擴大的擔憂，金價XAU/USD在開盤時下滑至4450美元。市場情緒受到影響。",
+      "analysis": "這則新聞指出地緣政治風險對金價的直接影響，可能導致XAUUSD短期內的波動加劇，投資者需謹慎操作。",
       "impact": {
         "instruments": [
           "GOLD"
         ],
-        "direction": "國債收益率下降 → 金價上漲",
+        "direction": "地緣政治風險上升 → 金價走低",
         "severity": "high"
-      }
-    },
-    {
-      "title": "金價因戰爭恐懼減輕而反彈至4650美元",
-      "source": "TMGM",
-      "time": "2026-04-01 05:31 UTC",
-      "summary": "隨著對戰爭恐懼的減輕，金價反彈至4650美元，顯示市場需求回升。",
-      "analysis": "這一反彈可能促使投資者重新進入金市，對XAUUSD的交易策略可能會偏向於看漲。",
-      "impact": {
-        "instruments": [
-          "GOLD"
-        ],
-        "direction": "戰爭恐懼減輕 → 金價回升",
-        "severity": "medium"
       }
     },
     {
       "title": "美元走弱，股市因伊朗和平希望而上漲",
       "source": "TMGM",
       "time": "2026-04-01 06:01 UTC",
-      "summary": "隨著市場對伊朗和平的希望上升，美元走弱，股市出現上漲，顯示出市場情緒的改善。",
-      "analysis": "這可能會對美元相關的交易品種如EURUSD和GBPUSD產生影響，投資者應關注美元的走勢變化。",
+      "summary": "隨著美元走弱，市場因對伊朗和平的希望而出現股市上漲。這顯示出市場對未來經濟的樂觀情緒。",
+      "analysis": "美元的走弱將對EUR/USD和GBP/USD產生利多影響，同時可能促進股市的進一步上漲。",
       "impact": {
         "instruments": [
           "EURUSD",
-          "GBPUSD"
+          "GBPUSD",
+          "US30",
+          "SPX500"
         ],
-        "direction": "美元走弱 → 歐元和英鎊上漲",
+        "direction": "美元走弱 → 股市走高",
+        "severity": "high"
+      }
+    },
+    {
+      "title": "金價在中東緊張局勢升級的同時上漲，因美國國債收益率下降",
+      "source": "TMGM",
+      "time": "2026-03-30 13:44 UTC",
+      "summary": "金價因美國國債收益率的下降而上漲，儘管中東的緊張局勢仍在升級。這表明市場對避險資產的需求增加。",
+      "analysis": "金價的上漲可能會吸引更多的投資者進入XAUUSD市場，特別是在不確定性增加的情況下。",
+      "impact": {
+        "instruments": [
+          "GOLD"
+        ],
+        "direction": "收益率下降 → 金價利多",
         "severity": "medium"
       }
     },
     {
-      "title": "英鎊因特朗普的全國演說而走弱",
+      "title": "美元/日��從干預紅線回落，日本警告日圓疲弱",
       "source": "TMGM",
-      "time": "2026-04-02 05:13 UTC",
-      "summary": "英鎊在特朗普的全國演說後走弱，市場對未來的政策不確定性增加。",
-      "analysis": "這一情況可能會影響GBPUSD的交易策略，投資者需密切關注英鎊的走勢及相關政策變化。",
+      "time": "2026-03-30 16:19 UTC",
+      "summary": "美元/日圓在接近干預紅線後回落，日本政府對日圓的疲弱表達了擔憂，市場對日圓的未來走勢感到不安。",
+      "analysis": "這則新聞可能會影響USD/JPY的交易策略，投資者需留意日本央行的政策動向及其對日圓的影響。",
       "impact": {
         "instruments": [
-          "GBPUSD"
+          "USDJPY"
         ],
-        "direction": "英鎊走弱 → 投資者需謹慎",
+        "direction": "日圓疲弱 → 美元走強",
         "severity": "medium"
       }
     }
@@ -173,39 +175,30 @@
   "socialDiscussions": [
     {
       "platform": "Reddit",
-      "title": "我花了三個月建造一個算法。花了一週實盤交易才意識到我在交易我的回測，而不是市場。",
-      "author": "u/Thiru_7223",
-      "summary": "這位作者分享了他在開發自動交易算法過程中的經驗，使用的語言和平台未明確提及。最終發現自己的算法並未如預期運作，因為他在實盤中交易的是回測結果而非實際市場數據。",
-      "whatTheyDid": "他花了三個月時間開發了一個交易算法，並在實盤中進行測試，但發現交易的結果與回測不符。",
-      "whatWeCanLearn": "我們需要確保在實盤交易中使用真實市場數據，而非僅依賴回測結果。",
-      "url": "https://reddit.com/r/algotrading/comments/1s9hp40/spent_3_months_building_an_algo_took_1_week_live/"
+      "title": "我在外匯交易中獲利的原因...",
+      "author": "u/Klutzy-Tower-8234",
+      "summary": "作者分享了他成功獲利的關鍵因素，強調了交易心態和紀律的重要性。他使用了多種技術指標來輔助決策，並且進行了大量的回測以驗證策略的有效性。",
+      "whatTheyDid": "他使用了多種技術指標，並進行了回測來驗證策略，最終找到適合自己的交易方法。",
+      "whatWeCanLearn": "我們可以學習到在開發自動交易系統時，必須進行充分的回測，並保持良好的交易心態。",
+      "url": "https://reddit.com/r/Trading/comments/1sahup3/what_finally_made_me_profitable/"
     },
     {
       "platform": "Reddit",
-      "title": "如何在這個波動性高的市場中進行交易？",
-      "author": "u/harry_jones2001",
-      "summary": "這位作者探討了在高波動市場中進行交易的策略，雖然具體策略未詳述，但他強調了適應市場變化的重要性。",
-      "whatTheyDid": "他分享了在高波動市場中調整交易策略的經驗，可能涉及風險管理和資金配置等方面。",
-      "whatWeCanLearn": "我們應該根據市場的波動性調整交易策略，並考慮風險管理措施。",
-      "url": "https://reddit.com/r/Forex/comments/1saf1l0/how_are_you_trading_this_highvolatility_market/"
+      "title": "90天的實盤交易與800筆交易 - AI代理與Polymarket誰更理性？",
+      "author": "u/No_Syrup_4068",
+      "summary": "作者進行了90天的實盤交易，並比較了AI交易代理和Polymarket的表現。他使用了自動化交易系統來執行策略，並記錄了交易結果。",
+      "whatTheyDid": "他使用自動化交易系統進行了800筆交易，並��比了不同策略的表現。",
+      "whatWeCanLearn": "我們可以參考他的交易記錄和比較方法，來評估不同策略的有效性。",
+      "url": "https://reddit.com/r/algotrading/comments/1sactqj/90_days_live_trading_800_trades_who_is_more/"
     },
     {
       "platform": "Reddit",
-      "title": "4年外匯交易經驗，我仍然無法突破 – 需要建議",
-      "author": "u/shinypsyduckkk",
-      "summary": "這位作者分享了他在外匯交易中遇到的挑戰，並尋求社群的建議，指出他在交易策略上遇到瓶頸。",
-      "whatTheyDid": "他在外匯市場上進行了四年的交易，但仍然無法達到預期的成果，尋求其他交易者的建議。",
-      "whatWeCanLearn": "我們可以從他的經驗中學習，尋求外部建議並不斷調整自己的交易策略以突破瓶頸。",
-      "url": "https://reddit.com/r/Forex/comments/1sa9xik/4_years_into_forex_and_i_still_cant_break_through/"
-    },
-    {
-      "platform": "Reddit",
-      "title": "你們在交易中最長時間才理解的事情是什麼？",
-      "author": "u/SmartTrader_4906",
-      "summary": "這位作者詢問其他交易者在交易中學習過程中的困難，並分享了他們的經驗和教訓，強調了持續學習的重要性。",
-      "whatTheyDid": "他鼓勵其他交易者分享他們在交易中遇到的挑戰和學習曲線，��能涉及心理因素和市場行為的理解。",
-      "whatWeCanLearn": "我們應該重視心理因素和市場行為的學習，並從他人的經驗中獲取啟發。",
-      "url": "https://reddit.com/r/Trading/comments/1sa9npu/whats_something_in_trading_that_took_you_way_too/"
+      "title": "如何平衡結構化方法與現實世界的不確定性？",
+      "author": "u/abbybutterflly",
+      "summary": "作者探討了在交易中如何應對不確定性，並提出了一些結構化的方法來提高交易的成功率。他強調了風險管理的重要性。",
+      "whatTheyDid": "他使用了結構化的交易計劃，並結合風險管理策略來應對市場的不確定性。",
+      "whatWeCanLearn": "我們可以學習到在設計自動交易系統時，應該加入風險管理的考量，以提高系統的穩定性。",
+      "url": "https://reddit.com/r/algotrading/comments/1sagepy/how_do_traders_balance_structured_methods_with/"
     }
   ],
   "conclusion": {
