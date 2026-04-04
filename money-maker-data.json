@@ -1,55 +1,35 @@
 {
-  "lastUpdate": "2026-04-04 15:45",
+  "lastUpdate": "2026-04-04 16:30",
   "status": "RUNNING",
-  "mode": "live",
+  "mode": "低買高賣囤幣",
   "capital": 10000,
-  "available": 15,
-  "netEquity": 9956,
-  "todayPnl": -17,
-  "totalPnl": -17,
-  "totalTrades": 1,
-  "wins": 0,
-  "losses": 1,
-  "winRate": "0%",
-  "maxDrawdown": 17,
-  "currentPosition": null,
-  "recentTrades": [
-    {
-      "id": 1775280963243,
-      "side": "BUY",
-      "entryPrice": 2154540,
-      "exitPrice": 2154037.6,
-      "amount": 0.00424986,
-      "twd": 9170,
-      "pnl": -17,
-      "pnlPct": -0.023,
-      "entryTime": "2025-04-03T06:14:01.000Z",
-      "exitTime": "2026-04-04T05:36:03.243Z",
-      "holdMinutes": 527002,
-      "reason": "state_sync_fix: 7 accumulated buys untracked due to JSON parse bug",
-      "closeReason": "持倉超1.5小時且利潤<0.1%，資金效率平倉",
-      "scores": {
-        "technical": "0",
-        "news": "neutral",
-        "sentiment": "neutral"
-      }
-    }
-  ],
-  "dailyLimit": {
-    "maxLoss": 1000,
-    "currentLoss": 17,
-    "remaining": 983
+  "holdings": {
+    "btc": 0.00461255,
+    "avgCost": 2164526,
+    "currentPrice": 2157286,
+    "marketValue": 9951,
+    "costBasis": 9984,
+    "unrealizedPnl": -33,
+    "unrealizedPnlPct": "-0.33%"
   },
-  "consecutiveLosses": 1,
+  "cashTwd": 15,
+  "totalEquity": 9966,
+  "totalPnl": -34,
+  "totalPnlPct": "-0.34%",
+  "completedTrades": 1,
+  "completedPnl": -17,
+  "buyOrders": 11,
+  "sellOrders": 1,
   "signals": {
-    "technical": "🔴 buy=1.5 sell=0.0 trend=BUY rsi=57.2",
-    "news": "🟡 新聞中性(利多0/利空0)",
-    "sentiment": "🟢 極度恐懼(FGI=9)→逆向做多機會",
-    "overall": "🟡 HOLD — BB擠壓中(等突破), 量比0.4x"
+    "technical": "🔴 BB擠壓中，等突破方向",
+    "news": "🟡 新聞中性",
+    "sentiment": "🟢 極度恐懼(FGI=9)→逆向看多",
+    "overall": "🟡 HOLD — 量能極低，等待突破信號"
   },
-  "btcPrice": 2155097.1,
-  "btcChange24h": -0.22,
-  "fearGreedIndex": "9",
-  "nextAction": "BB擠壓中(等突破)",
+  "btcPrice": 2157286,
+  "btcChange24h": -0.2,
+  "fearGreedIndex": 9,
+  "nextAction": "持有等漲，BB突破向上時分批賣出獲利",
+  "strategy": "分批低買囤幣 → 漲時分批高賣",
   "alerts": []
 }

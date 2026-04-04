@@ -720,24 +720,24 @@
                 <!-- 帳戶總覽 -->
                 <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
                     <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">淨值</p>
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">總資產</p>
                         <p class="text-lg md:text-2xl font-bold text-white mt-0.5" id="mm-net-equity">NT$10,000</p>
                     </div>
                     <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">今日盈虧</p>
-                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="mm-today-pnl">--</p>
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">未實現損益</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="mm-unrealized-pnl">--</p>
                     </div>
                     <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">累計盈虧</p>
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">累計損益</p>
                         <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="mm-total-pnl">--</p>
                     </div>
                     <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
-                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">最大回撤</p>
-                        <p class="text-lg md:text-2xl font-bold text-red-400 mt-0.5" id="mm-max-dd">0%</p>
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">模式</p>
+                        <p class="text-lg md:text-2xl font-bold text-yellow-400 mt-0.5" id="mm-mode">囤幣</p>
                     </div>
                 </div>
 
-                <!-- BTC 即時 + 交易統計 -->
+                <!-- BTC 即時 + 持倉統計 -->
                 <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-3">
                     <div class="stat-card border border-yellow-700/30 p-3 md:p-5 rounded-xl">
                         <p class="text-[10px] md:text-xs text-gray-500 uppercase">₿ BTC/TWD</p>
@@ -745,16 +745,16 @@
                         <p id="mm-btc-change" class="text-xs text-gray-400">--</p>
                     </div>
                     <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700 text-center">
-                        <p class="text-[9px] text-gray-500">總交易</p>
-                        <p class="text-sm md:text-lg font-bold text-white" id="mm-total-trades">0</p>
+                        <p class="text-[9px] text-gray-500">持有 BTC</p>
+                        <p class="text-sm md:text-lg font-bold text-yellow-400" id="mm-btc-held">0</p>
                     </div>
                     <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700 text-center">
-                        <p class="text-[9px] text-gray-500">勝率</p>
-                        <p class="text-sm md:text-lg font-bold text-yellow-400" id="mm-winrate">--</p>
+                        <p class="text-[9px] text-gray-500">均價成本</p>
+                        <p class="text-sm md:text-lg font-bold text-white" id="mm-avg-cost">--</p>
                     </div>
                     <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700 text-center">
-                        <p class="text-[9px] text-gray-500">勝 / 敗</p>
-                        <p class="text-sm md:text-lg font-bold"><span class="text-green-400" id="mm-wins">0</span> / <span class="text-red-400" id="mm-losses">0</span></p>
+                        <p class="text-[9px] text-gray-500">買入 / 賣出</p>
+                        <p class="text-sm md:text-lg font-bold"><span class="text-green-400" id="mm-buys">0</span> / <span class="text-red-400" id="mm-sells">0</span></p>
                     </div>
                 </div>
 
@@ -804,11 +804,11 @@
                     </div>
                 </section>
 
-                <!-- 當前持倉 -->
+                <!-- 持有部位 -->
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
-                    <h3 class="text-sm md:text-xl font-medium text-blue-300 mb-3">📍 當前持倉</h3>
-                    <div id="mm-position">
-                        <div class="py-4 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">🔍 無持倉 · 等待最佳進場點</p></div>
+                    <h3 class="text-sm md:text-xl font-medium text-blue-300 mb-3">₿ 持有部位</h3>
+                    <div id="mm-holdings">
+                        <div class="py-4 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">無持有</p></div>
                     </div>
                 </section>
 
@@ -1607,16 +1607,17 @@ try{
 const r=await fetch('money-maker-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
 const stEl=document.getElementById('mm-status');if(stEl){stEl.textContent=d.status==='RUNNING'?'運行中':'待命';stEl.className=d.status==='RUNNING'?'text-green-300':'text-yellow-300'}
 const luEl=document.getElementById('mm-last-update');if(luEl)luEl.textContent=d.lastUpdate||'--';
-const neEl=document.getElementById('mm-net-equity');if(neEl)neEl.textContent='NT$'+(d.netEquity||d.capital||10000).toLocaleString();
-const tdEl=document.getElementById('mm-today-pnl');if(tdEl){const v=d.todayPnl||0;tdEl.textContent=(v>=0?'+':'')+'NT$'+v.toFixed(0);tdEl.className='text-lg md:text-2xl font-bold mt-0.5 '+(v>=0?'text-green-400':'text-red-400')}
+const neEl=document.getElementById('mm-net-equity');if(neEl)neEl.textContent='NT$'+(d.totalEquity||d.netEquity||d.capital||10000).toLocaleString();
+const h=d.holdings||{};
+const upEl=document.getElementById('mm-unrealized-pnl');if(upEl){const v=h.unrealizedPnl||0;upEl.textContent=(v>=0?'+':'')+'NT$'+v.toFixed(0);upEl.className='text-lg md:text-2xl font-bold mt-0.5 '+(v>=0?'text-green-400':'text-red-400')}
 const tpEl=document.getElementById('mm-total-pnl');if(tpEl){const v=d.totalPnl||0;tpEl.textContent=(v>=0?'+':'')+'NT$'+v.toFixed(0);tpEl.className='text-lg md:text-2xl font-bold mt-0.5 '+(v>=0?'text-green-400':'text-red-400')}
-const ddEl=document.getElementById('mm-max-dd');if(ddEl)ddEl.textContent=(d.maxDrawdown||0).toFixed(1)+'%';
+const mdEl=document.getElementById('mm-mode');if(mdEl)mdEl.textContent=d.mode||'囤幣';
 const bpEl=document.getElementById('mm-btc-price');if(bpEl)bpEl.textContent='NT$'+(d.btcPrice||0).toLocaleString();
 const bcEl=document.getElementById('mm-btc-change');if(bcEl){const v=d.btcChange24h||0;bcEl.textContent=(v>=0?'▲':'▼')+Math.abs(v).toFixed(2)+'%';bcEl.className='text-xs '+(v>=0?'text-green-400':'text-red-400')}
-document.getElementById('mm-total-trades').textContent=d.totalTrades||0;
-document.getElementById('mm-winrate').textContent=d.winRate||'--';
-document.getElementById('mm-wins').textContent=d.wins||0;
-document.getElementById('mm-losses').textContent=d.losses||0;
+const bhEl=document.getElementById('mm-btc-held');if(bhEl)bhEl.textContent=(h.btc||0).toFixed(8);
+const acEl=document.getElementById('mm-avg-cost');if(acEl)acEl.textContent='NT$'+(h.avgCost||0).toLocaleString();
+document.getElementById('mm-buys').textContent=d.buyOrders||0;
+document.getElementById('mm-sells').textContent=d.sellOrders||0;
 const sig=d.signals||{};
 const sigMap=v=>{if(!v||v==='--')return'⚪';if(v.includes('多')||v.includes('BUY')||v==='bullish')return'🟢';if(v.includes('空')||v.includes('SELL')||v==='bearish')return'🔴';return'🟡'};
 const s1=document.getElementById('mm-sig-tech');if(s1)s1.textContent=sigMap(sig.technical)+' '+(sig.technical||'等待');
@@ -1627,15 +1628,15 @@ const dlEl=document.getElementById('mm-daily-remaining');if(dlEl){const dl=d.dai
 document.getElementById('mm-consec-losses').textContent=d.consecutiveLosses||0;
 document.getElementById('mm-fear-greed').textContent=d.fearGreedIndex||'--';
 document.getElementById('mm-next-action').textContent=d.nextAction||'等待信號';
-const pb=document.getElementById('mm-position');const pos=d.currentPosition;
-if(!pos){pb.innerHTML='<div class="py-4 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">🔍 無持倉 · 等待最佳進場點</p></div>'}
-else{const pc=(pos.pnlTWD||0)>=0?'text-green-400':'text-red-400';const dc=pos.direction==='BUY'?'badge-buy':'badge-sell';
-pb.innerHTML='<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-2"><span class="px-1.5 py-0.5 text-[10px] rounded-full '+dc+'">'+pos.direction+'</span><span class="text-xs font-bold text-white">BTC/TWD @ '+(pos.entryPrice||0).toLocaleString()+'</span></div><span class="text-sm font-bold '+pc+'">'+((pos.pnlTWD||0)>=0?'+':'')+'NT$'+(pos.pnlTWD||0).toFixed(0)+'</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>倉位:NT$'+(pos.sizeTWD||0)+'</span><span>停損:'+(pos.stopLoss||0).toLocaleString()+'</span><span>現價:'+(pos.currentPrice||0).toLocaleString()+'</span></div><p class="text-[9px] text-indigo-400 mt-1">'+(pos.reason||'')+'</p></div>'}
+const hb=document.getElementById('mm-holdings');
+if(!h.btc||h.btc<=0){hb.innerHTML='<div class="py-4 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">無持有 BTC</p></div>'}
+else{const pc=(h.unrealizedPnl||0)>=0?'text-green-400':'text-red-400';
+hb.innerHTML='<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-2"><div class="flex items-center gap-2"><span class="px-2 py-0.5 text-[10px] rounded-full bg-yellow-900/50 text-yellow-300 border border-yellow-700/50">HODL</span><span class="text-sm font-bold text-white">'+h.btc.toFixed(8)+' BTC</span></div><span class="text-sm font-bold '+pc+'">'+((h.unrealizedPnl||0)>=0?'+':'')+'NT$'+(h.unrealizedPnl||0).toFixed(0)+' ('+((h.unrealizedPnlPct)||'0%')+')</span></div><div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-[10px] text-gray-400"><span>均價成本: NT$'+(h.avgCost||0).toLocaleString()+'</span><span>現價: NT$'+(h.currentPrice||0).toLocaleString()+'</span><span>市值: NT$'+(h.marketValue||0).toLocaleString()+'</span><span>成本: NT$'+(h.costBasis||0).toLocaleString()+'</span></div></div>'}
 const tb=document.getElementById('mm-trades');const trades=d.recentTrades||[];
-if(!trades.length){tb.innerHTML='<p class="text-xs text-gray-400 text-center py-3">尚無交易紀錄</p>'}
-else{tb.innerHTML=trades.slice().reverse().map(t=>{const dc=t.direction==='BUY'?'badge-buy':'badge-sell';const oc=t.outcome==='WIN'?'badge-win':'badge-loss';const pc=(t.pnlTWD||0)>=0?'text-green-400':'text-red-400';
-const tm=t.closeTime?new Date(t.closeTime).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}):'';
-return'<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 text-[10px] rounded-full '+dc+'">'+t.direction+'</span><span class="px-1.5 py-0.5 text-[10px] rounded-full '+oc+'">'+t.outcome+'</span></div><span class="text-xs font-bold '+pc+'">'+((t.pnlTWD||0)>=0?'+':'')+'NT$'+(t.pnlTWD||0).toFixed(0)+'</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>'+(t.entryPrice||0).toLocaleString()+'→'+(t.exitPrice||0).toLocaleString()+'</span><span>'+(t.reason||'')+'</span><span>'+tm+'</span></div><p class="text-[9px] text-indigo-400 mt-0.5">'+(t.signals||'')+'</p></div>'}).join('')}
+if(!trades.length){tb.innerHTML='<p class="text-xs text-gray-400 text-center py-3">尚無完成的交易</p>'}
+else{tb.innerHTML=trades.slice().reverse().map(t=>{const pc=(t.pnl||0)>=0?'text-green-400':'text-red-400';
+const tm=t.exitTime?new Date(t.exitTime).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}):'';
+return'<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-blue-900/50 text-blue-300 border border-blue-700/50">完成</span><span class="text-xs text-gray-300">'+((t.amount||0)*1e8).toFixed(0)+' sats</span></div><span class="text-xs font-bold '+pc+'">'+((t.pnl||0)>=0?'+':'')+'NT$'+(t.pnl||0)+'</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>買:'+(t.entryPrice||0).toLocaleString()+'→賣:'+(t.exitPrice||0).toLocaleString()+'</span><span>'+tm+'</span></div></div>'}).join('')}
 const alertSec=document.getElementById('mm-alerts-section');const alerts=d.alerts||[];
 if(alertSec){if(alerts.length){alertSec.style.display='';document.getElementById('mm-alerts').innerHTML=alerts.map(a=>'<div class="p-2.5 bg-gray-800 rounded-lg border border-red-700/30"><p class="text-xs text-red-300">'+a+'</p></div>').join('')}else{alertSec.style.display='none'}}
 }catch(e){console.log('money maker err',e)}
