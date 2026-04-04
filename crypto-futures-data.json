@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-04 20:30",
+  "lastUpdate": "2026-04-04 20:33",
   "status": "RUNNING",
   "mode": "背水一戰模式",
   "exchange": "Binance Futures",
@@ -7,8 +7,8 @@
     "initialCapital": 466,
     "balance": 465.70372926,
     "available": 382.36056406,
-    "unrealizedPnl": -1.392,
-    "netEquity": 464.31172926,
+    "unrealizedPnl": -1.43987254,
+    "netEquity": 464.26385672,
     "todayPnl": 0,
     "totalPnl": 0,
     "leverage": 4,
@@ -24,8 +24,8 @@
     "side": "SHORT",
     "size": 0.005,
     "entryPrice": 66796.7,
-    "markPrice": 67075.1,
-    "pnl": -1.392,
+    "markPrice": 67084.67450833,
+    "pnl": -1.43987254,
     "leverage": 4,
     "liquidationPrice": 83132.80183267,
     "trailingStop": null
@@ -58,8 +58,8 @@
     "momentum": {
       "direction": "neutral",
       "score": 0,
-      "mom5": -0.089,
-      "acceleration": -0.008
+      "mom5": -0.012,
+      "acceleration": 0.077
     },
     "activeSignals": [
       "TREND_PULLBACK_LONG",
