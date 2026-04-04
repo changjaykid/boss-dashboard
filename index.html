@@ -130,9 +130,9 @@
             <!-- 外匯保證金 -->
             <div id="view-forex" class="section-view space-y-4">
                 <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
-                    <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">💱 即時匯率</h3>
-                    <div id="fx-prices-grid" class="grid grid-cols-2 md:grid-cols-4 gap-2">
-                        <p class="text-xs text-gray-400 text-center py-3 col-span-full">載入中...</p>
+                    <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">💱 交易影響分析</h3>
+                    <div id="fx-trading-impact" class="space-y-2">
+                        <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
                     </div>
                 </section>
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
@@ -466,26 +466,51 @@
                     </div>
                 </section>
 
+                <!-- IG 產出紀錄 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-xs md:text-sm font-medium text-pink-300 mb-3">📁 最近產出</h3>
+                    <div id="ig-output-list" class="space-y-2">
+                        <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
+                    </div>
+                    <div class="mt-3 p-3 bg-gray-800 rounded-lg border border-indigo-700/30">
+                        <p class="text-[10px] text-gray-500 mb-1">📎 Google Drive 素材庫</p>
+                        <a href="https://drive.google.com/drive/folders/1RCam8Dgpk5x-oMlfLHXQmMhKKv5z4KB2" target="_blank" class="text-xs text-indigo-400 hover:underline">打開 IG 素材資料夾 ↗</a>
+                    </div>
+                </section>
+
                 <!-- IG 系統狀態 -->
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
-                    <h3 class="text-xs md:text-sm font-medium text-gray-300 mb-3">📐 IG 系統狀態</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        <div class="p-3 bg-gray-800 rounded-lg border border-green-700/30">
-                            <p class="text-xs font-bold text-green-300 mb-1">✅ 已完成</p>
-                            <ul class="text-[10px] text-gray-300 space-y-1 list-disc list-inside">
-                                <li>ig-carousel skill 已建立</li>
-                                <li>Pillow 圖片生成器（1080x1350）</li>
-                                <li>8 套配色主題 + 5 種輪播結構</li>
-                                <li>Google Drive 上傳已串接</li>
-                            </ul>
+                    <h3 class="text-xs md:text-sm font-medium text-gray-300 mb-3">📐 系統狀態</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                        <div class="stat-card border border-green-700/30 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500">圖片生成</p>
+                            <p class="text-xs font-bold text-green-400">✅ Pillow</p>
                         </div>
-                        <div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30">
-                            <p class="text-xs font-bold text-yellow-300 mb-1">⏳ 待啟動</p>
-                            <ul class="text-[10px] text-gray-300 space-y-1 list-disc list-inside">
-                                <li>設定 ig-morning / ig-evening cron</li>
-                                <li>IG API 串接（自動發佈）</li>
-                                <li>老闆確認啟動時程</li>
-                            </ul>
+                        <div class="stat-card border border-green-700/30 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500">雲端上傳</p>
+                            <p class="text-xs font-bold text-green-400">✅ Google Drive</p>
+                        </div>
+                        <div class="stat-card border border-green-700/30 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500">Cron 排程</p>
+                            <p class="text-xs font-bold text-green-400">✅ 11:00 / 18:00</p>
+                        </div>
+                        <div class="stat-card border border-yellow-700/30 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500">自動發佈</p>
+                            <p class="text-xs font-bold text-yellow-400">⏳ 待串 API</p>
+                        </div>
+                    </div>
+                    <div class="mt-3 grid grid-cols-3 gap-2">
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl text-center">
+                            <p class="text-[10px] text-gray-500">配色主題</p>
+                            <p class="text-lg font-bold text-white">8 套</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl text-center">
+                            <p class="text-[10px] text-gray-500">視覺風格</p>
+                            <p class="text-lg font-bold text-white">3 種</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl text-center">
+                            <p class="text-[10px] text-gray-500">背景圖庫</p>
+                            <p class="text-lg font-bold text-white">10 張</p>
                         </div>
                     </div>
                 </section>
@@ -1164,6 +1189,7 @@ if(v==='stocks'){loadStockData()}
 if(v==='forex'){loadForexNews()}
 if(v==='forex-auto'){loadTradingData();tri=setInterval(loadTradingData,900000)}
 if(v==='community'){loadSocialData()}
+if(v==='community-ig'){loadIGData()}
 if(v==='crypto'){loadCryptoNews()}
 if(v==='crypto-auto'){loadCryptoData();if(!window._cri)window._cri=setInterval(loadCryptoData,900000)}
 if(v==='money-maker'){loadMoneyMakerData();if(!window._mmi)window._mmi=setInterval(loadMoneyMakerData,180000)}
@@ -1459,21 +1485,22 @@ async function loadForexNews() {
     const d = await r.json();
     document.getElementById('fx-news-update').textContent = d.lastUpdate || '--';
 
-    // Render prices grid
-    const pg = document.getElementById('fx-prices-grid');
-    const prices = d.prices || d.marketPrices || {};
-    const pKeys = Object.keys(prices);
-    if(pg && pKeys.length){
-      const pC=n=>n>=0?'text-green-400':'text-red-400';
-      pg.innerHTML = pKeys.map(k=>{
-        const p=prices[k]; if(!p||typeof p!=='object') return '';
-        const price=p.price||p.last||0; const chg=p.changePct||p.change||0;
-        return `<div class="stat-card border border-gray-700/50 p-3 rounded-xl">
-          <p class="text-[10px] text-gray-500">${p.name||k}</p>
-          <p class="text-lg font-bold text-white">${typeof price==='number'?price.toLocaleString(undefined,{maximumFractionDigits:4}):price}</p>
-          <p class="text-[10px] ${pC(chg)}">${chg>=0?'▲':'▼'} ${Math.abs(chg).toFixed(2)}%</p>
-        </div>`;
-      }).join('');
+    // Render trading impact from conclusion
+    const tiBox = document.getElementById('fx-trading-impact');
+    const conc = d.conclusion || {};
+    if(tiBox){
+      let tiHtml = '';
+      if(conc.tradingImplications?.length){
+        tiHtml += conc.tradingImplications.map(t=>`<div class="p-2.5 bg-gray-800 rounded-lg border border-yellow-700/30"><p class="text-xs text-yellow-300">⚡ ${t}</p></div>`).join('');
+      }
+      if(conc.systemOptimization?.length){
+        tiHtml += conc.systemOptimization.map(t=>`<div class="p-2.5 bg-gray-800 rounded-lg border border-green-700/30"><p class="text-xs text-green-300">🔧 ${t}</p></div>`).join('');
+      }
+      if(conc.marketOutlook){
+        tiHtml += `<div class="p-2.5 bg-gray-800 rounded-lg border border-indigo-700/30"><p class="text-xs text-indigo-300">📊 ${conc.marketOutlook}</p></div>`;
+      }
+      if(!tiHtml) tiHtml = '<p class="text-xs text-gray-400 text-center py-3">等待下一次新聞分析更新</p>';
+      tiBox.innerHTML = tiHtml;
     }
 
     if (Array.isArray(d.news)) renderNews('fx-news-list', 'fx-news-update', d.news, d.lastUpdate);
@@ -1519,8 +1546,10 @@ function renderConclusion(containerId, conclusion) {
   if (!box) return;
   let html = '';
   if (conclusion.marketOutlook) html += '<div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30 mb-2"><p class="text-xs font-bold text-indigo-300 mb-1">📊 市場展望</p><p class="text-xs text-gray-300">'+conclusion.marketOutlook+'</p></div>';
-  if (conclusion.tradingImplications?.length) html += '<div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30 mb-2"><p class="text-xs font-bold text-yellow-300 mb-1">⚡ 交易影響</p>'+conclusion.tradingImplications.map(t=>'<p class="text-xs text-gray-300">• '+t+'</p>').join('')+'</div>';
-  if (conclusion.systemOptimization?.length) html += '<div class="p-3 bg-gray-800 rounded-lg border border-green-700/30"><p class="text-xs font-bold text-green-300 mb-1">🔧 系統優化</p>'+conclusion.systemOptimization.map(t=>'<p class="text-xs text-gray-300">• '+t+'</p>').join('')+'</div>';
+  if (conclusion.tradingImplications?.length) html += '<div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30 mb-2"><p class="text-xs font-bold text-yellow-300 mb-1">⚡ 對我們交易系統的影響</p>'+conclusion.tradingImplications.map(t=>'<p class="text-xs text-gray-300">• '+t+'</p>').join('')+'</div>';
+  if (conclusion.suggestedActions?.length) html += '<div class="p-3 bg-gray-800 rounded-lg border border-orange-700/30 mb-2"><p class="text-xs font-bold text-orange-300 mb-1">🎯 建議操作方向</p>'+conclusion.suggestedActions.map(t=>'<p class="text-xs text-gray-300">• '+t+'</p>').join('')+'</div>';
+  if (conclusion.keyTimeline?.length) html += '<div class="p-3 bg-gray-800 rounded-lg border border-cyan-700/30 mb-2"><p class="text-xs font-bold text-cyan-300 mb-1">📅 關鍵事件時間軸</p>'+conclusion.keyTimeline.map(t=>'<p class="text-xs text-gray-300">• '+t+'</p>').join('')+'</div>';
+  if (conclusion.systemOptimization?.length) html += '<div class="p-3 bg-gray-800 rounded-lg border border-green-700/30"><p class="text-xs font-bold text-green-300 mb-1">🔧 系統優化建議</p>'+conclusion.systemOptimization.map(t=>'<p class="text-xs text-gray-300">• '+t+'</p>').join('')+'</div>';
   box.innerHTML = html || '<p class="text-xs text-gray-400">暫無分析</p>';
 }
 
@@ -1758,6 +1787,35 @@ else{tb.innerHTML=trades.map(t=>{const sc=t.side==='LONG'?'bg-green-600':'bg-red
 return'<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700 mb-1"><div class="flex items-center justify-between"><div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 text-[10px] rounded-full text-white '+sc+'">'+(t.side||'')+'</span><span class="px-1.5 py-0.5 text-[10px] rounded-full text-white '+wc+'">'+wl+'</span><span class="text-[10px] text-gray-400">'+(t.strategy||'')+'</span><span class="text-[10px] text-gray-500">'+(t.time?t.time.slice(5,16):'')+'</span></div><span class="text-xs font-bold '+pc+'">'+(t.pnl>=0?'+':'')+'$'+t.pnl.toFixed(2)+'</span></div></div>'}).join('')}
 
 }catch(e){console.log('crypto futures err',e)}
+}
+
+// ========== IG DATA ==========
+async function loadIGData(){
+try{
+const r=await fetch('ig-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
+document.getElementById('ig-published').textContent=d.totalPosts||0;
+document.getElementById('ig-update').textContent=d.lastUpdate||'--';
+const box=document.getElementById('ig-output-list');
+if(!box)return;
+const posts=d.posts||[];
+if(!posts.length){box.innerHTML='<p class="text-xs text-gray-400 text-center py-3">尚無產出</p>';return}
+box.innerHTML=posts.map(p=>{
+const bgLabel={'photo':'📸 照片背景','solid':'🎨 純色'}[p.bgMode]||'🎨 '+p.bgMode;
+return`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-white">${p.title||p.id}</span>
+<span class="px-1.5 py-0.5 text-[10px] rounded-full bg-pink-900/50 text-pink-300 border border-pink-700/50">${p.slides} 張</span>
+<span class="px-1.5 py-0.5 text-[10px] rounded-full bg-gray-700 text-gray-300">${bgLabel}</span>
+</div>
+<span class="text-[10px] text-gray-400">${p.created}</span>
+</div>
+${p.caption?'<p class="text-[10px] text-gray-300 line-clamp-2 mt-1">'+p.caption+'</p>':''}
+<div class="flex items-center gap-2 mt-1">
+${p.uploaded?'<span class="text-[10px] text-green-400">✅ 已上傳 Drive</span>':'<span class="text-[10px] text-yellow-400">⏳ 待上傳</span>'}
+</div>
+</div>`}).join('');
+}catch(e){console.log('ig data err',e)}
 }
 
 // Auto-load overview on page open

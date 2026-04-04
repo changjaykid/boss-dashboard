@@ -80,79 +80,45 @@ h+=`<section class="bg-gradient-to-r from-indigo-900/30 to-purple-900/30 border 
 </div>
 </section>`;
 
-// ===== 2. 持倉速覽 =====
-const allPositions = [];
-(tr.openPositions||[]).forEach(p => allPositions.push({
-  system:'💱 外匯', name:p.instrumentName||p.instrument||'', dir:p.direction, pnl:p.pnl||0, prefix:'$',
-  detail: p.size+' 手 @ '+p.entryPrice
-}));
-if(mm.currentPosition&&mm.currentPosition.side){
-  allPositions.push({system:'💰 賺錢機', name:'BTC/TWD', dir:mm.currentPosition.side, 
-    pnl:mm.holdings?.unrealizedPnl||0, prefix:'NT$',
-    detail:(mm.currentPosition.amount||0).toFixed(8)+' BTC @ '+(mm.currentPosition.entryPrice||0).toLocaleString()
-  });
-}
-if(cf.position){
-  allPositions.push({system:'📈 合約', name:cf.position.symbol||'BTCUSDT', dir:cf.position.side,
-    pnl:cf.position.pnl||0, prefix:'$',
-    detail: cf.position.size+' BTC @ '+cf.position.entryPrice+' ('+cf.position.leverage+'x)'
-  });
-}
+// ===== 2. 市場快照（分區顯示）=====
+const fxPrices = fxn.prices?.instruments || fxn.prices || {};
 
-if(allPositions.length){
 h+=`<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
-<h3 class="text-sm md:text-xl font-medium text-blue-300 mb-3">📍 所有持倉 (${allPositions.length})</h3>
-<div class="space-y-2">`;
-allPositions.forEach(p=>{
-  const dc=p.dir==='BUY'||p.dir==='LONG'?'badge-buy':'badge-sell';
-  const pc=p.pnl>=0?'text-green-400':'text-red-400';
-  h+=`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700 flex items-center justify-between">
-    <div class="flex items-center gap-2">
-      <span class="text-[10px] text-gray-500">${p.system}</span>
-      <span class="px-1.5 py-0.5 text-[10px] rounded-full ${dc}">${p.dir}</span>
-      <span class="text-xs font-bold text-white">${p.name}</span>
-      <span class="text-[10px] text-gray-400">${p.detail}</span>
-    </div>
-    <span class="text-sm font-bold ${pc}">${p.pnl>=0?'+':''}${p.prefix}${Math.abs(p.pnl).toFixed(2)}</span>
-  </div>`;
-});
-h+=`</div></section>`;
-} else {
-h+=`<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
-<h3 class="text-sm md:text-xl font-medium text-blue-300 mb-3">📍 持倉</h3>
-<p class="text-xs text-gray-400 text-center py-3">目前無任何持倉</p>
-</section>`;
-}
-
-// ===== 3. 市場快照 =====
-h+=`<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
-<h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">📊 市場快照</h3>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-2">`;
+<h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">📊 市場快照</h3>`;
 
 // 台股
-h+=`<div class="stat-card border border-gray-700/50 p-3 rounded-xl">
-  <p class="text-[10px] text-gray-500">🇹🇼 加權指數</p>
-  <p class="text-lg font-bold ${pC(tx.change||0)}">${tx.close?.toLocaleString()||'--'}</p>
-  <p class="text-[10px] ${pC(tx.change||0)}">${(tx.change||0)>=0?'▲':'▼'} ${Math.abs(tx.change||0)} (${tx.changePct||0}%)</p>
-</div>`;
+h+=`<p class="text-[10px] text-gray-500 uppercase mb-2 mt-2">🇹🇼 台股</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-4">
+  <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+    <p class="text-[10px] text-gray-500">加權指數</p>
+    <p class="text-lg font-bold ${pC(tx.change||0)}">${tx.close?.toLocaleString()||'--'}</p>
+    <p class="text-[10px] ${pC(tx.change||0)}">${(tx.change||0)>=0?'▲':'▼'} ${Math.abs(tx.change||0)} (${tx.changePct||0}%)</p>
+  </div>`;
+const usm=st.market?.usMarket||{};
+if(usm.djia){h+=`<div class="stat-card border border-gray-700/50 p-3 rounded-xl"><p class="text-[10px] text-gray-500">道瓊</p><p class="text-lg font-bold ${pC(usm.djia.change||0)}">${usm.djia.close?.toLocaleString()||'--'}</p><p class="text-[10px] ${pC(usm.djia.change||0)}">${(usm.djia.change||0)>=0?'▲':'▼'} ${usm.djia.changePct||0}%</p></div>`}
+if(usm.nasdaq){h+=`<div class="stat-card border border-gray-700/50 p-3 rounded-xl"><p class="text-[10px] text-gray-500">那斯達克</p><p class="text-lg font-bold ${pC(usm.nasdaq.change||0)}">${usm.nasdaq.close?.toLocaleString()||'--'}</p><p class="text-[10px] ${pC(usm.nasdaq.change||0)}">${(usm.nasdaq.change||0)>=0?'▲':'▼'} ${usm.nasdaq.changePct||0}%</p></div>`}
+h+=`</div>`;
 
-// 從 forex-news 取價格
-const fxPrices = fxn.prices || fxn.marketPrices || {};
-const xauusd = fxPrices.XAUUSD || fxPrices.xauusd || {};
-const eurusd = fxPrices.EURUSD || fxPrices['EUR/USD'] || {};
-const usdjpy = fxPrices.USDJPY || fxPrices['USD/JPY'] || {};
-if(xauusd.price||xauusd.last){h+=`<div class="stat-card border border-gray-700/50 p-3 rounded-xl"><p class="text-[10px] text-gray-500">🥇 黃金</p><p class="text-lg font-bold text-yellow-400">$${(xauusd.price||xauusd.last||0).toLocaleString()}</p><p class="text-[10px] ${pC(xauusd.change||0)}">${(xauusd.change||0)>=0?'▲':'▼'} ${Math.abs(xauusd.changePct||xauusd.change||0)}%</p></div>`}
+// 外匯
+const xau=fxPrices.XAUUSD||{};const eur=fxPrices.EURUSD||{};const jpy=fxPrices.USDJPY||{};const gbp=fxPrices.GBPUSD||{};
+h+=`<p class="text-[10px] text-gray-500 uppercase mb-2">💱 外匯</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-4">`;
+[{k:xau,n:'黃金',p:'$'},{k:eur,n:'EUR/USD',p:''},{k:gbp,n:'GBP/USD',p:''},{k:jpy,n:'USD/JPY',p:''}].forEach(({k,n,p})=>{
+  const pr=k.price||k.last||0;const cp=parseFloat(k.changePercent||k.changePct||k.change||0);
+  if(pr)h+=`<div class="stat-card border border-gray-700/50 p-3 rounded-xl"><p class="text-[10px] text-gray-500">${n}</p><p class="text-lg font-bold text-white">${p}${pr.toLocaleString(undefined,{maximumFractionDigits:4})}</p><p class="text-[10px] ${pC(cp)}">${cp>=0?'▲':'▼'} ${Math.abs(cp).toFixed(2)}%</p></div>`;
+});
+h+=`</div>`;
 
-// BTC
+// 虛擬貨幣
 const btcPrice = mm.btcPrice || 0;
 const btcChg = mm.btcChange24h || 0;
-if(btcPrice){h+=`<div class="stat-card border border-gray-700/50 p-3 rounded-xl"><p class="text-[10px] text-gray-500">₿ BTC/TWD</p><p class="text-lg font-bold text-yellow-400">NT$${btcPrice.toLocaleString()}</p><p class="text-[10px] ${pC(btcChg)}">${btcChg>=0?'▲':'▼'} ${Math.abs(btcChg).toFixed(2)}%</p></div>`}
-
-// 恐懼貪婪指數
 const fgi = mm.fearGreedIndex || cf.riskStatus?.fearGreed || crn.prices?.fearGreed?.value || '';
-if(fgi){h+=`<div class="stat-card border border-gray-700/50 p-3 rounded-xl"><p class="text-[10px] text-gray-500">😱 恐懼貪婪</p><p class="text-lg font-bold text-orange-400">${fgi}</p></div>`}
-
-h+=`</div></section>`;
+h+=`<p class="text-[10px] text-gray-500 uppercase mb-2">₿ 虛擬貨幣</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-2">`;
+if(btcPrice){h+=`<div class="stat-card border border-gray-700/50 p-3 rounded-xl"><p class="text-[10px] text-gray-500">BTC/TWD</p><p class="text-lg font-bold text-yellow-400">NT$${btcPrice.toLocaleString()}</p><p class="text-[10px] ${pC(btcChg)}">${btcChg>=0?'▲':'▼'} ${Math.abs(btcChg).toFixed(2)}%</p></div>`}
+if(fgi){h+=`<div class="stat-card border border-gray-700/50 p-3 rounded-xl"><p class="text-[10px] text-gray-500">恐懼貪婪指數</p><p class="text-lg font-bold text-orange-400">${fgi}</p></div>`}
+h+=`</div>
+</section>`;
 
 // ===== 4. 社群專案狀態 =====
 h+=`<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
@@ -233,15 +199,17 @@ h+=`</div></section>`;
 h+=`<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
 <h3 class="text-sm md:text-xl font-medium text-gray-400 mb-3">🕐 系統健康</h3>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-2">`;
+// 判斷是否在 2 小時內更新過（交易類），24 小時內（新聞/分析類）
+const isRecent=(ts,hours=2)=>{if(!ts)return false;try{const d=new Date(ts);const diff=Date.now()-d.getTime();return diff<hours*3600000}catch(e){return false}};
 const systems = [
-  {name:'外匯交易',t:tr.lastUpdate,running:fxPos>=0},
-  {name:'合約交易',t:cf.lastUpdate,running:cfStatus==='RUNNING'||cfStatus==='STANDBY'},
-  {name:'賺錢機',t:mm.lastUpdate,running:mmStatus==='RUNNING'||mmStatus==='PAUSED'},
+  {name:'外匯交易',t:tr.lastUpdate,running:!!tr.lastUpdate},
+  {name:'合約交易',t:cf.lastUpdate,running:!!cf.lastUpdate},
+  {name:'賺錢機',t:mm.lastUpdate,running:!!mm.lastUpdate},
   {name:'台股分析',t:st.lastUpdate,running:!!st.lastUpdate},
   {name:'Threads',t:so.lastUpdate,running:so.apiStatus==='connected'},
   {name:'外匯新聞',t:fxn.lastUpdate,running:!!fxn.lastUpdate},
   {name:'幣圈新聞',t:crn.lastUpdate,running:!!crn.lastUpdate},
-  {name:'IG 輪播',t:'每日自動產出',running:true},
+  {name:'IG 輪播',t:'Cron 每日 11:00/18:00',running:true},
 ];
 systems.forEach(s=>{
   h+=`<div class="p-2 bg-gray-800 rounded-lg border border-gray-700">
