@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-04 01:08:41",
+  "lastUpdate": "2026-04-04 08:00:05",
   "market": {
     "taiex": {
       "close": 32572.43,
@@ -50,7 +50,12 @@
       "technical": "站穩季線1800之上但量能萎縮，RSI 55偏中性，5MA/10MA金叉確立，短線支撐1780、壓力1860前高",
       "target": "1950-2000",
       "stopLoss": "1780",
-      "category": "AI概念"
+      "category": "AI概念",
+      "pe": 27.32,
+      "pb": 8.66,
+      "dividendYield": 133.0,
+      "lastDividendPerShare": 6.0,
+      "exDividendDate": "2026-06-11"
     },
     {
       "code": "2454",
@@ -60,7 +65,12 @@
       "technical": "卡季線壓力1480附近，量能不足為隱憂，RSI 45中性偏弱，須突破1500才確立多方",
       "target": "1550-1600",
       "stopLoss": "1400",
-      "category": "AI概念"
+      "category": "AI概念",
+      "pe": 22.17,
+      "pb": 5.84,
+      "dividendYield": 365.0,
+      "lastDividendPerShare": 24.5,
+      "exDividendDate": "2026-07-07"
     },
     {
       "code": "3661",
@@ -70,7 +80,12 @@
       "technical": "站穩季線之上，短線拉回測試2700整數關卡支撐，量能稍縮但多方格局未破",
       "target": "2900-3000",
       "stopLoss": "2550",
-      "category": "AI概念"
+      "category": "AI概念",
+      "pe": 40.0,
+      "pb": 5.39,
+      "dividendYield": 136.0,
+      "lastDividendPerShare": 36.74,
+      "exDividendDate": "2025-09-02"
     },
     {
       "code": "2317",
@@ -80,7 +95,12 @@
       "technical": "月線附近整理，均線糾結中，短線支撐190、壓力200整數關卡",
       "target": "210-220",
       "stopLoss": "185",
-      "category": "AI概念"
+      "category": "AI概念",
+      "pe": 14.41,
+      "pb": 1.52,
+      "dividendYield": 301.0,
+      "lastDividendPerShare": 5.8,
+      "exDividendDate": "2025-07-02"
     },
     {
       "code": "2382",
@@ -90,7 +110,12 @@
       "technical": "季線附近整理，5MA/10MA金叉確立，短線支撐280、壓力295",
       "target": "310-330",
       "stopLoss": "270",
-      "category": "AI概念"
+      "category": "AI概念",
+      "pe": 15.04,
+      "pb": 4.5,
+      "dividendYield": 457.0,
+      "lastDividendPerShare": 13.0,
+      "exDividendDate": "2025-06-30"
     },
     {
       "code": "1605",
@@ -100,7 +125,12 @@
       "technical": "月線附近盤整，均線糾結待突破，量能偏低，支撐29、壓力32",
       "target": "34-36",
       "stopLoss": "28",
-      "category": "50元以下"
+      "category": "50元以下",
+      "pe": 40.13,
+      "pb": 0.8,
+      "dividendYield": 166.0,
+      "lastDividendPerShare": 0.5,
+      "exDividendDate": "2025-06-04"
     },
     {
       "code": "6547",
@@ -110,7 +140,9 @@
       "technical": "站穩月線，量增價漲趨勢，RSI中性，支撐56、壓力62",
       "target": "65-70",
       "stopLoss": "53",
-      "category": "50元以下"
+      "category": "50元以下",
+      "pe": 40.27,
+      "pb": 5.56
     },
     {
       "code": "2548",
@@ -120,7 +152,12 @@
       "technical": "站穩月線之上，底部型態成形，均線轉多，支撐118、壓力128",
       "target": "135-140",
       "stopLoss": "115",
-      "category": "營建"
+      "category": "營建",
+      "pe": 13.9,
+      "pb": 1.74,
+      "dividendYield": 451.0,
+      "lastDividendPerShare": 5.5,
+      "exDividendDate": "2025-07-25"
     },
     {
       "code": "3703",
@@ -130,7 +167,12 @@
       "technical": "底部盤整，量能偏低，等待突破訊號，支撐21.5、壓力23.5",
       "target": "25-27",
       "stopLoss": "20",
-      "category": "50元以下"
+      "category": "50元以下",
+      "pe": 12.36,
+      "pb": 0.66,
+      "dividendYield": 472.0,
+      "lastDividendPerShare": 1.05,
+      "exDividendDate": "2025-07-18"
     },
     {
       "code": "2408",
@@ -140,7 +182,11 @@
       "technical": "跌破5MA回測200整數關，反彈格局受挑戰，RSI轉弱需留意195支撐",
       "target": "230-240",
       "stopLoss": "195",
-      "category": "記憶體"
+      "category": "記憶體",
+      "pe": 95.02,
+      "pb": 3.65,
+      "lastDividendPerShare": 2.13,
+      "exDividendDate": "2023-06-28"
     }
   ],
   "recommendations": {
@@ -149,31 +195,56 @@
         "code": "2330",
         "name": "台積電",
         "reason": "全球AI晶片代工龍頭，2奈米量產在即，CoWoS產能擴充，張錫喊上看2500元",
-        "price": 1810.0
+        "price": 1810.0,
+        "pe": 27.32,
+        "pb": 8.66,
+        "dividendYield": 133.0,
+        "lastDividendPerShare": 6.0,
+        "exDividendDate": "2026-06-11"
       },
       {
         "code": "3661",
         "name": "世芯-KY",
         "reason": "ASIC設計領導者，客製化AI晶片需求爆發，4/1大漲+245元動能強勁",
-        "price": 2705.0
+        "price": 2705.0,
+        "pe": 40.0,
+        "pb": 5.39,
+        "dividendYield": 136.0,
+        "lastDividendPerShare": 36.74,
+        "exDividendDate": "2025-09-02"
       },
       {
         "code": "2382",
         "name": "廣達",
         "reason": "AI伺服器ODM龍頭，液冷散熱技術領先，雲端大廠主力供應商",
-        "price": 284.5
+        "price": 284.5,
+        "pe": 15.04,
+        "pb": 4.5,
+        "dividendYield": 457.0,
+        "lastDividendPerShare": 13.0,
+        "exDividendDate": "2025-06-30"
       },
       {
         "code": "6669",
         "name": "緯穎",
         "reason": "雲端伺服器直供模式，受惠AI基礎設施擴建，毛利率提升",
-        "price": 3410.0
+        "price": 3410.0,
+        "pe": 12.84,
+        "pb": 5.08,
+        "dividendYield": 217.0,
+        "lastDividendPerShare": 74.0,
+        "exDividendDate": "2025-06-24"
       },
       {
         "code": "3529",
         "name": "力旺",
         "reason": "嵌入式記憶體IP龍頭，AI邊緣運算晶片授權金持續成長",
-        "price": 2630.0
+        "price": 2630.0,
+        "pe": 103.1,
+        "pb": 51.13,
+        "dividendYield": 84.0,
+        "lastDividendPerShare": 22.0,
+        "exDividendDate": "2025-06-26"
       }
     ],
     "dividend": [
@@ -182,35 +253,60 @@
         "name": "國泰金",
         "yield": "5.8%",
         "reason": "壽險獲利回升，股利政策穩健，金融股防禦性佳，外資回補標的",
-        "price": 71.8
+        "price": 71.8,
+        "pe": 10.17,
+        "pb": 1.15,
+        "dividendYield": 487.0,
+        "lastDividendPerShare": 3.5,
+        "exDividendDate": "2025-06-30"
       },
       {
         "code": "5880",
         "name": "合庫金",
         "yield": "6.2%",
         "reason": "官股金控穩定配息，放款成長帶動獲利，殖利率誘人",
-        "price": 23.65
+        "price": 23.65,
+        "pe": 17.39,
+        "pb": 1.33,
+        "dividendYield": 296.0,
+        "lastDividendPerShare": 0.7,
+        "exDividendDate": "2025-08-13"
       },
       {
         "code": "2887",
         "name": "台新金",
         "yield": "5.5%",
         "reason": "消金業務穩健，財管手續費成長，配息率高",
-        "price": 24.35
+        "price": 24.35,
+        "pe": 12.75,
+        "pb": 1.29,
+        "dividendYield": 370.0,
+        "lastDividendPerShare": 0.9,
+        "exDividendDate": "2025-08-12"
       },
       {
         "code": "9933",
         "name": "中鼎",
         "yield": "5.6%",
         "reason": "工程服務龍頭，在手訂單充沛，穩定配息超過20年",
-        "price": 35.65
+        "price": 35.65,
+        "pe": 20.73,
+        "pb": 1.57,
+        "dividendYield": 281.0,
+        "lastDividendPerShare": 1.0,
+        "exDividendDate": "2025-08-15"
       },
       {
         "code": "1476",
         "name": "儒鴻",
         "yield": "5.3%",
         "reason": "機能布料龍頭，品牌客戶回補庫存，獲利回升帶動配息",
-        "price": 322.5
+        "price": 322.5,
+        "pe": 16.05,
+        "pb": 2.99,
+        "dividendYield": 527.0,
+        "lastDividendPerShare": 17.0,
+        "exDividendDate": "2025-07-10"
       }
     ],
     "etf": [
@@ -218,31 +314,40 @@
         "code": "0050",
         "name": "元大台灣50",
         "reason": "台股大盤核心配置，跌深反彈首選，長期年化報酬穩健",
-        "price": 73.95
+        "price": 73.95,
+        "pe": 25.4,
+        "dividendYield": 168.0
       },
       {
         "code": "00878",
         "name": "國泰永續高股息",
         "reason": "ESG+高息雙主題，季配息穩定，適合存股族",
-        "price": 22.03
+        "price": 22.03,
+        "pe": 16.2,
+        "dividendYield": 709.0
       },
       {
         "code": "00919",
         "name": "群益台灣精選高息",
         "reason": "殖利率8%+，月配息，4/1外資買超6.6萬張成寵兒",
-        "price": 22.3
+        "price": 22.3,
+        "pe": 11.65,
+        "dividendYield": 1019.0
       },
       {
         "code": "00891",
         "name": "中信關鍵半導體",
         "reason": "聚焦半導體產業鏈，跌深反彈彈性大，AI趨勢受惠",
-        "price": 23.56
+        "price": 23.56,
+        "pe": 28.67,
+        "dividendYield": 858.0
       },
       {
         "code": "00757",
         "name": "統一FANG+",
         "reason": "追蹤美國科技巨頭，美股連續反彈直接受惠",
-        "price": 104.15
+        "price": 104.15,
+        "pe": 34.06
       }
     ]
   },
@@ -305,12 +410,12 @@
   ],
   "alerts": [],
   "selfReview": {
-    "totalPicks": 45,
+    "totalPicks": 70,
     "hitTarget": 2,
     "hitStop": 6,
-    "openPositions": 37,
+    "openPositions": 62,
     "correctRate": "2/8 (25%)",
-    "lastUpdate": "2026-04-03 08:00"
+    "lastUpdate": "2026-04-04 08:00"
   },
   "dataSource": "Yahoo Finance (yfinance)"
 }

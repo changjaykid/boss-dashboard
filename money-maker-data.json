@@ -1,33 +1,54 @@
 {
-  "lastUpdate": "2026-04-04 00:51",
+  "lastUpdate": "2026-04-04 15:45",
   "status": "RUNNING",
   "mode": "live",
   "capital": 10000,
-  "available": 2820,
-  "netEquity": 10002,
-  "todayPnl": 0,
-  "totalPnl": 0,
-  "totalTrades": 0,
+  "available": 15,
+  "netEquity": 9956,
+  "todayPnl": -17,
+  "totalPnl": -17,
+  "totalTrades": 1,
   "wins": 0,
-  "losses": 0,
-  "winRate": "--",
-  "maxDrawdown": 0,
+  "losses": 1,
+  "winRate": "0%",
+  "maxDrawdown": 17,
   "currentPosition": null,
-  "recentTrades": [],
+  "recentTrades": [
+    {
+      "id": 1775280963243,
+      "side": "BUY",
+      "entryPrice": 2154540,
+      "exitPrice": 2154037.6,
+      "amount": 0.00424986,
+      "twd": 9170,
+      "pnl": -17,
+      "pnlPct": -0.023,
+      "entryTime": "2025-04-03T06:14:01.000Z",
+      "exitTime": "2026-04-04T05:36:03.243Z",
+      "holdMinutes": 527002,
+      "reason": "state_sync_fix: 7 accumulated buys untracked due to JSON parse bug",
+      "closeReason": "持倉超1.5小時且利潤<0.1%，資金效率平倉",
+      "scores": {
+        "technical": "0",
+        "news": "neutral",
+        "sentiment": "neutral"
+      }
+    }
+  ],
   "dailyLimit": {
     "maxLoss": 1000,
-    "currentLoss": 0,
-    "remaining": 1000
+    "currentLoss": 17,
+    "remaining": 983
   },
-  "consecutiveLosses": 0,
+  "consecutiveLosses": 1,
   "signals": {
-    "technical": "🔴 buy=1.0 sell=0.0 trend=BUY rsi=58.8",
-    "news": "🟡 新聞中性(利多0/利空1)",
+    "technical": "🔴 buy=1.5 sell=0.0 trend=BUY rsi=57.2",
+    "news": "🟡 新聞中性(利多0/利空0)",
     "sentiment": "🟢 極度恐懼(FGI=9)→逆向做多機會",
-    "overall": "🟡 HOLD — BB擠壓中(等突破), 量能不足0.06x"
+    "overall": "🟡 HOLD — BB擠壓中(等突破), 量比0.4x"
   },
-  "btcPrice": 2158764.2,
-  "btcChange24h": -0.07,
+  "btcPrice": 2155097.1,
+  "btcChange24h": -0.22,
   "fearGreedIndex": "9",
   "nextAction": "BB擠壓中(等突破)",
   "alerts": []
