@@ -1,28 +1,128 @@
 {
-  "lastUpdate": "2026-04-04 20:33",
-  "status": "PAUSED",
+  "lastUpdate": "2026-04-05 01:18",
+  "status": "RUNNING",
   "mode": "live",
   "capital": 10000,
-  "available": 8958,
-  "netEquity": 9951,
-  "todayPnl": -60,
-  "totalPnl": -60,
-  "totalTrades": 3,
-  "wins": 0,
-  "losses": 3,
-  "winRate": "0%",
-  "maxDrawdown": 60,
+  "available": 7940,
+  "netEquity": 9928,
+  "todayPnl": -70,
+  "totalPnl": -70,
+  "totalTrades": 8,
+  "wins": 3,
+  "losses": 5,
+  "winRate": "38%",
+  "maxDrawdown": 70,
   "currentPosition": {
     "side": "BUY",
-    "entryPrice": 2159391.1,
-    "stopLoss": 2157911,
-    "takeProfit": 2161611,
-    "amount": 0.00046309350816533417,
-    "twd": 1000,
-    "entryTime": "2026-04-04 20:09:02",
-    "reason": "RSI高檔回落65.7, 突破BB中軌+量確認, BB擠壓中(等突破)"
+    "entryPrice": 2168133.9,
+    "stopLoss": 2165144.7,
+    "takeProfit": 2172618,
+    "amount": 0.0009224522526030335,
+    "twd": 2000,
+    "entryTime": "2026-04-05 01:15:01",
+    "reason": "BB擠壓中(等突破), 看多K線:hammer, 看多K線:pin_bar_bullish"
   },
   "recentTrades": [
+    {
+      "id": 1775322001583,
+      "side": "BUY",
+      "entryPrice": 2172812.3,
+      "exitPrice": 2168131.9,
+      "amount": 0.0009204660706311356,
+      "twd": 2000,
+      "pnl": -8,
+      "pnlPct": -0.215,
+      "entryTime": "2026-04-04T16:45:02.110Z",
+      "exitTime": "2026-04-04T17:00:01.583Z",
+      "holdMinutes": 15,
+      "reason": "RSI高檔回落69.1, BB擠壓突破上軌！, 看多K線:hammer",
+      "closeReason": "停損觸發 @ 2169912.1",
+      "scores": {
+        "technical": "0.94",
+        "news": "NEUTRAL",
+        "sentiment": "NEUTRAL"
+      }
+    },
+    {
+      "id": 1775321101581,
+      "side": "BUY",
+      "entryPrice": 2168354.4,
+      "exitPrice": 2172472.5,
+      "amount": 0.000922358448415997,
+      "twd": 2000,
+      "pnl": 1,
+      "pnlPct": 0.19,
+      "entryTime": "2026-04-04T15:15:02.686Z",
+      "exitTime": "2026-04-04T16:45:01.581Z",
+      "holdMinutes": 90,
+      "reason": "RSI高檔回落67.1, MACD柱翻正, 突破BB中軌+量確認",
+      "closeReason": "🎯 到達目標價 2172469，停利出場",
+      "scores": {
+        "technical": "1.00",
+        "news": "NEUTRAL",
+        "sentiment": "NEUTRAL"
+      }
+    },
+    {
+      "id": 1775315702156,
+      "side": "BUY",
+      "entryPrice": 2165000,
+      "exitPrice": 2168354.4,
+      "amount": 0.0009237875288683603,
+      "twd": 2000,
+      "pnl": 0,
+      "pnlPct": 0.155,
+      "entryTime": "2026-04-04T15:09:02.105Z",
+      "exitTime": "2026-04-04T15:15:02.156Z",
+      "holdMinutes": 6,
+      "reason": "MACD柱翻正, 突破BB中軌+量確認, BB擠壓中(等突破)",
+      "closeReason": "🎯 到達目標價 2168236，停利出場",
+      "scores": {
+        "technical": "0.63",
+        "news": "NEUTRAL",
+        "sentiment": "NEUTRAL"
+      }
+    },
+    {
+      "id": 1775312461739,
+      "side": "BUY",
+      "entryPrice": 2164348.9,
+      "exitPrice": 2162285.8,
+      "amount": 0.0004620327157049402,
+      "twd": 1000,
+      "pnl": -3,
+      "pnlPct": -0.095,
+      "entryTime": "2026-04-04T13:39:02.956Z",
+      "exitTime": "2026-04-04T14:21:01.739Z",
+      "holdMinutes": 42,
+      "reason": "RSI高檔回落68.3, BB擠壓中(等突破), 量比1.0x",
+      "closeReason": "停損觸發 @ 2162578.9",
+      "scores": {
+        "technical": "0.31",
+        "news": "NEUTRAL",
+        "sentiment": "NEUTRAL"
+      }
+    },
+    {
+      "id": 1775309942282,
+      "side": "BUY",
+      "entryPrice": 2159391.1,
+      "exitPrice": 2163827.5,
+      "amount": 0.00046309350816533417,
+      "twd": 1000,
+      "pnl": 0,
+      "pnlPct": 0.205,
+      "entryTime": "2026-04-04T12:09:02.607Z",
+      "exitTime": "2026-04-04T13:39:02.282Z",
+      "holdMinutes": 90,
+      "reason": "RSI高檔回落65.7, 突破BB中軌+量確認, BB擠壓中(等突破)",
+      "closeReason": "🎯 到達目標價 2161611，停利出場",
+      "scores": {
+        "technical": "0.38",
+        "news": "NEUTRAL",
+        "sentiment": "BULLISH"
+      }
+    },
     {
       "id": 1775304542055,
       "side": "BUY",
@@ -74,21 +174,19 @@
   ],
   "dailyLimit": {
     "maxLoss": 1000,
-    "currentLoss": 60,
-    "remaining": 940
+    "currentLoss": 70,
+    "remaining": 930
   },
-  "consecutiveLosses": 3,
+  "consecutiveLosses": 1,
   "signals": {
-    "technical": "🔴 PAUSED",
-    "news": "🟡 暫停中",
-    "sentiment": "🟡 暫停中",
-    "overall": "🟡 HOLD — 暫停中"
+    "technical": "🔴 buy=2.0 sell=0.0 trend=BUY rsi=59.1",
+    "news": "🟡 新聞中性(利多0/利空0)",
+    "sentiment": "🟡 無FGI資料",
+    "overall": "🟡 HOLD — BB擠壓中(等突破), 量能不足0.02x"
   },
-  "btcPrice": 2159048.8,
-  "btcChange24h": 0.04,
+  "btcPrice": 2169022.4,
+  "btcChange24h": 0.82,
   "fearGreedIndex": "--",
-  "nextAction": "暫停中",
-  "alerts": [
-    "⛔ 暫停中，2026-04-04 21:09:02 後恢復"
-  ]
+  "nextAction": "BB擠壓中(等突破)",
+  "alerts": []
 }

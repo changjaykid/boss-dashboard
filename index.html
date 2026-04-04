@@ -85,9 +85,9 @@
             </a>
             <div class="pt-3 pb-1"><p class="text-[10px] font-semibold text-gray-500 uppercase px-3">金融交易</p></div>
             <a href="#" onclick="switchTab('stocks',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>📈</span><span>股票專案</span></a>
-            <a href="#" onclick="switchTab('forex',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>💱</span><span>外匯保證金</span></a>
+            <a href="#" onclick="switchTab('forex',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>💱</span><span>外匯保證金新聞</span></a>
             <a href="#" onclick="switchTab('forex-auto',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🤖</span><span>外匯自動交易</span></a>
-            <a href="#" onclick="switchTab('crypto',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🪙</span><span>虛擬貨幣</span></a>
+            <a href="#" onclick="switchTab('crypto',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🪙</span><span>虛擬貨幣新聞</span></a>
             <a href="#" onclick="switchTab('crypto-auto',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🤖</span><span>虛擬貨幣自動交易</span></a>
             <a href="#" onclick="switchTab('money-maker',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>💰</span><span>虛擬貨幣賺錢機</span></a>
             <a href="#" onclick="switchTab('crypto-futures',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>📈</span><span>虛擬貨幣合約交易</span></a>
@@ -130,8 +130,10 @@
             <!-- 外匯保證金 -->
             <div id="view-forex" class="section-view space-y-4">
                 <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
-                    <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">💱 外匯保證金</h3>
-                    <div class="py-4 text-center"><p class="text-xs text-gray-400">請查看「外匯自動交易」頁面</p></div>
+                    <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">💱 即時匯率</h3>
+                    <div id="fx-prices-grid" class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                        <p class="text-xs text-gray-400 text-center py-3 col-span-full">載入中...</p>
+                    </div>
                 </section>
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
                     <div class="flex items-center justify-between mb-3">
@@ -578,6 +580,13 @@
 
             <!-- 虛擬貨幣 -->
             <div id="view-crypto" class="section-view space-y-4 md:space-y-6">
+                <!-- 即時幣價 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">₿ 即時幣價</h3>
+                    <div id="crypto-prices-grid" class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                        <p class="text-xs text-gray-400 text-center py-3 col-span-full">載入中...</p>
+                    </div>
+                </section>
                 <!-- 虛擬貨幣新聞 -->
                 <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
                     <div class="flex items-center justify-between mb-3">
@@ -992,7 +1001,7 @@
 function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('open')}
 function checkPass(){if(document.getElementById('pass-input').value==='8888'){document.getElementById('auth-overlay').style.display='none';document.getElementById('app-content').style.display='flex';setTimeout(loadOverview,200)}else{document.getElementById('auth-error').classList.remove('hidden')}}
 
-const titles={overview:{t:'今日管家回報',s:'隨時待命'},stocks:{t:'股票專案',s:'台股分析'},forex:{t:'外匯保證金',s:'策略分析'},'forex-auto':{t:'🤖 外匯自動交易',s:'多商品 · v4 嚴格確認模式'},crypto:{t:'虛擬貨幣',s:'加密貨幣追蹤'},'crypto-auto':{t:'🤖 虛擬貨幣自動交易',s:'MAX 交易所 · v4 策略模組化'},'money-maker':{t:'💰 虛擬貨幣賺錢機',s:'BTC/TWD · 真金白銀 · 背水一戰'},'crypto-futures':{t:'📈 虛擬貨幣合約交易',s:'Binance · 多空雙向 · 槓桿交易'},'ad-business':{t:'🎯 廣告業務',s:'每日潛在客戶蒐集'},community:{t:'社群專案',s:'互動管理'},'community-ig':{t:'社群專案IG',s:'Instagram · @freeeadman'},shorts:{t:'短影音專案',s:'寵物上班去 · 規劃中'},skills:{t:'技能專案',s:'4 模型 · 23 技能'}};
+const titles={overview:{t:'📊 總覽',s:'所有專案一覽無遺'},stocks:{t:'股票專案',s:'台股分析'},forex:{t:'外匯保證金新聞',s:'市場新聞 · 交易影響分析'},'forex-auto':{t:'🤖 外匯自動交易',s:'多商品 · v4 嚴格確認模式'},crypto:{t:'虛擬貨幣新聞',s:'市場新聞 · 交易影響分析'},'crypto-auto':{t:'🤖 虛擬貨幣自動交易',s:'MAX 交易所 · v4 策略模組化'},'money-maker':{t:'💰 虛擬貨幣賺錢機',s:'BTC/TWD · 真金白銀 · 背水一戰'},'crypto-futures':{t:'📈 虛擬貨幣合約交易',s:'Binance · 多空雙向 · 槓桿交易'},'ad-business':{t:'🎯 廣告業務',s:'每日潛在客戶蒐集'},community:{t:'社群專案',s:'互動管理'},'community-ig':{t:'社群專案IG',s:'Instagram · @freeeadman'},shorts:{t:'短影音專案',s:'寵物上班去 · 規劃中'},skills:{t:'技能專案',s:'4 模型 · 23 技能'}};
 const trendMap={'STRONG_BULL':'強勢看多 🟢','BULL':'看多 🟢','STRONG_BEAR':'強勢看空 🔴','BEAR':'看空 🔴','NEUTRAL':'盤整 ⚪'};
 function trendCN(t){return trendMap[t]||t||'--'}
 function trendColor(t){if(!t)return'text-gray-300';if(t.includes('BULL'))return'text-green-400';if(t.includes('BEAR'))return'text-red-400';return'text-gray-300'}
@@ -1449,6 +1458,24 @@ async function loadForexNews() {
     const r = await fetch('forex-news.json?t='+Date.now()); if (!r.ok) return;
     const d = await r.json();
     document.getElementById('fx-news-update').textContent = d.lastUpdate || '--';
+
+    // Render prices grid
+    const pg = document.getElementById('fx-prices-grid');
+    const prices = d.prices || d.marketPrices || {};
+    const pKeys = Object.keys(prices);
+    if(pg && pKeys.length){
+      const pC=n=>n>=0?'text-green-400':'text-red-400';
+      pg.innerHTML = pKeys.map(k=>{
+        const p=prices[k]; if(!p||typeof p!=='object') return '';
+        const price=p.price||p.last||0; const chg=p.changePct||p.change||0;
+        return `<div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+          <p class="text-[10px] text-gray-500">${p.name||k}</p>
+          <p class="text-lg font-bold text-white">${typeof price==='number'?price.toLocaleString(undefined,{maximumFractionDigits:4}):price}</p>
+          <p class="text-[10px] ${pC(chg)}">${chg>=0?'▲':'▼'} ${Math.abs(chg).toFixed(2)}%</p>
+        </div>`;
+      }).join('');
+    }
+
     if (Array.isArray(d.news)) renderNews('fx-news-list', 'fx-news-update', d.news, d.lastUpdate);
     else if (d.news?.items) renderNews('fx-news-list', 'fx-news-update', d.news.items, d.news.lastUpdate || d.lastUpdate);
     if (Array.isArray(d.socialDiscussions)) renderNews('fx-social-list', 'fx-social-update', d.socialDiscussions, d.lastUpdate, 'social');
@@ -1462,6 +1489,23 @@ async function loadCryptoNews() {
     const r = await fetch('crypto-news.json?t='+Date.now()); if (!r.ok) return;
     const d = await r.json();
     document.getElementById('crypto-news-update').textContent = d.lastUpdate || '--';
+
+    // Render crypto prices if available
+    const cpBox = document.getElementById('crypto-prices-grid');
+    const prices = d.prices || d.marketPrices || {};
+    const pKeys = Object.keys(prices).filter(k=>typeof prices[k]==='object'&&prices[k]!==null&&(prices[k].price||prices[k].last));
+    if(cpBox && pKeys.length){
+      const pC=n=>n>=0?'text-green-400':'text-red-400';
+      cpBox.innerHTML = pKeys.map(k=>{
+        const p=prices[k]; const price=p.price||p.last||0; const chg=p.changePct||p.change||0;
+        return `<div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+          <p class="text-[10px] text-gray-500">${p.name||k}</p>
+          <p class="text-lg font-bold text-white">$${typeof price==='number'?price.toLocaleString(undefined,{maximumFractionDigits:2}):price}</p>
+          <p class="text-[10px] ${pC(chg)}">${chg>=0?'▲':'▼'} ${Math.abs(chg).toFixed(2)}%</p>
+        </div>`;
+      }).join('');
+    }
+
     if (Array.isArray(d.news)) renderNews('crypto-news-list', 'crypto-news-update', d.news, d.lastUpdate);
     else if (d.news?.items) renderNews('crypto-news-list', 'crypto-news-update', d.news.items, d.news.lastUpdate || d.lastUpdate);
     if (Array.isArray(d.socialDiscussions)) renderNews('crypto-social-list', 'crypto-social-update', d.socialDiscussions, d.lastUpdate, 'social');
