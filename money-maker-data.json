@@ -1,35 +1,94 @@
 {
-  "lastUpdate": "2026-04-04 16:30",
-  "status": "RUNNING",
-  "mode": "低買高賣囤幣",
+  "lastUpdate": "2026-04-04 20:30",
+  "status": "PAUSED",
+  "mode": "live",
   "capital": 10000,
-  "holdings": {
-    "btc": 0.00461255,
-    "avgCost": 2164526,
-    "currentPrice": 2157286,
-    "marketValue": 9951,
-    "costBasis": 9984,
-    "unrealizedPnl": -33,
-    "unrealizedPnlPct": "-0.33%"
+  "available": 8958,
+  "netEquity": 9951,
+  "todayPnl": -60,
+  "totalPnl": -60,
+  "totalTrades": 3,
+  "wins": 0,
+  "losses": 3,
+  "winRate": "0%",
+  "maxDrawdown": 60,
+  "currentPosition": {
+    "side": "BUY",
+    "entryPrice": 2159391.1,
+    "stopLoss": 2157911,
+    "takeProfit": 2161611,
+    "amount": 0.00046309350816533417,
+    "twd": 1000,
+    "entryTime": "2026-04-04 20:09:02",
+    "reason": "RSI高檔回落65.7, 突破BB中軌+量確認, BB擠壓中(等突破)"
   },
-  "cashTwd": 15,
-  "totalEquity": 9966,
-  "totalPnl": -34,
-  "totalPnlPct": "-0.34%",
-  "completedTrades": 1,
-  "completedPnl": -17,
-  "buyOrders": 11,
-  "sellOrders": 1,
+  "recentTrades": [
+    {
+      "id": 1775304542055,
+      "side": "BUY",
+      "entryPrice": 2161189,
+      "exitPrice": 2159048.8,
+      "amount": 0.00045965,
+      "twd": 1000,
+      "pnl": -3,
+      "pnlPct": -0.099,
+      "entryTime": "2026-04-04T12:03:42.599Z",
+      "exitTime": "2026-04-04T12:09:02.055Z",
+      "holdMinutes": 5,
+      "closeReason": "停損觸發 @ 2159639"
+    },
+    {
+      "id": 1775302562768,
+      "side": "BUY",
+      "entryPrice": 2164646,
+      "exitPrice": 2159369.6,
+      "amount": 0.00461255,
+      "twd": 9985,
+      "pnl": -40,
+      "pnlPct": -0.244,
+      "entryTime": "2026-04-02T16:00:00.000Z",
+      "exitTime": "2026-04-04T11:36:02.768Z",
+      "holdMinutes": 2616,
+      "closeReason": "持倉超3小時強制平倉"
+    },
+    {
+      "id": 1775280963243,
+      "side": "BUY",
+      "entryPrice": 2154540,
+      "exitPrice": 2154037.6,
+      "amount": 0.00424986,
+      "twd": 9170,
+      "pnl": -17,
+      "pnlPct": -0.023,
+      "entryTime": "2025-04-03T06:14:01.000Z",
+      "exitTime": "2026-04-04T05:36:03.243Z",
+      "holdMinutes": 527002,
+      "reason": "state_sync_fix: 7 accumulated buys untracked due to JSON parse bug",
+      "closeReason": "持倉超1.5小時且利潤<0.1%，資金效率平倉",
+      "scores": {
+        "technical": "0",
+        "news": "neutral",
+        "sentiment": "neutral"
+      }
+    }
+  ],
+  "dailyLimit": {
+    "maxLoss": 1000,
+    "currentLoss": 60,
+    "remaining": 940
+  },
+  "consecutiveLosses": 3,
   "signals": {
-    "technical": "🔴 BB擠壓中，等突破方向",
-    "news": "🟡 新聞中性",
-    "sentiment": "🟢 極度恐懼(FGI=9)→逆向看多",
-    "overall": "🟡 HOLD — 量能極低，等待突破信號"
+    "technical": "🔴 PAUSED",
+    "news": "🟡 暫停中",
+    "sentiment": "🟡 暫停中",
+    "overall": "🟡 HOLD — 暫停中"
   },
-  "btcPrice": 2157286,
-  "btcChange24h": -0.2,
-  "fearGreedIndex": 9,
-  "nextAction": "持有等漲，BB突破向上時分批賣出獲利",
-  "strategy": "分批低買囤幣 → 漲時分批高賣",
-  "alerts": []
+  "btcPrice": 2159048.8,
+  "btcChange24h": 0.04,
+  "fearGreedIndex": "--",
+  "nextAction": "暫停中",
+  "alerts": [
+    "⛔ 暫停中，2026-04-04 21:09:02 後恢復"
+  ]
 }
