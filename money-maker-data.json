@@ -1,18 +1,42 @@
 {
-  "lastUpdate": "2026-04-05 14:30",
+  "lastUpdate": "2026-04-05 15:57",
   "status": "RUNNING",
-  "mode": "live",
+  "mode": "分批低買高賣 v2",
   "capital": 10000,
-  "available": 9912,
-  "netEquity": 9912,
-  "todayPnl": -3,
+  "available": 9315,
+  "netEquity": 9911,
+  "todayPnl": 0,
   "totalPnl": -82,
   "totalTrades": 11,
   "wins": 3,
   "losses": 8,
   "winRate": "27%",
   "maxDrawdown": 82,
-  "currentPosition": null,
+  "holdings": {
+    "btc": 0.00027712,
+    "btcValue": 596,
+    "avgEntry": 2150127,
+    "batches": 1,
+    "totalInvested": 600,
+    "unrealizedPnl": -4,
+    "stopLoss": 2143487
+  },
+  "signals": {
+    "action": "BUY_ZONE",
+    "buyScore": "3.0",
+    "sellScore": "1.0",
+    "rsi15": "40",
+    "trend": "DOWN",
+    "marketState": "SQUEEZE",
+    "fgi": "--",
+    "reasons": [
+      "RSI偏低40",
+      "接近BB下軌",
+      "MACD柱縮短(底部收斂)"
+    ]
+  },
+  "btcPrice": 2150126.5,
+  "btcChange24h": -0.29,
   "recentTrades": [
     {
       "id": 1775354581902,
@@ -204,20 +228,8 @@
     }
   ],
   "dailyLimit": {
-    "maxLoss": 1000,
-    "currentLoss": 3,
-    "remaining": 997
+    "maxLoss": 800,
+    "currentLoss": 0
   },
-  "consecutiveLosses": 4,
-  "signals": {
-    "technical": "🟡 buy=2.0 sell=4.0 trend=SELL rsi=29.4",
-    "news": "🟡 新聞中性(利多0/利空1)",
-    "sentiment": "🟡 無FGI資料",
-    "overall": "🔴 SELL — RSI超賣29.4, 跌破BB中軌+量確認"
-  },
-  "btcPrice": 2148490.9,
-  "btcChange24h": -0.31,
-  "fearGreedIndex": "--",
-  "nextAction": "準備SELL",
   "alerts": []
 }
