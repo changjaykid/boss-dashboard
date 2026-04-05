@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-06 06:20:27",
+  "lastUpdate": "2026-04-06 06:30:25",
   "account": {
     "balance": 30944.39,
     "realizedPnl": -341.09,
@@ -706,8 +706,8 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4636.69,
-      "ask": 4637.19
+      "bid": 4636.0,
+      "ask": 4636.5
     }
   },
   "indicators": {
@@ -716,17 +716,16 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 4636.69,
-      "rsi": 44.6,
-      "macd_hist": -3.329,
-      "atr": 14.8011,
+      "bid": 4636.0,
+      "rsi": 44.7,
+      "macd_hist": -3.313,
+      "atr": 14.8796,
       "bb_width": 0.0103,
-      "ema9": 4656.5559,
-      "ema21": 4660.8428
+      "ema9": 4656.6009,
+      "ema21": 4660.8632
     }
   },
   "actions": [
-    "BLOCKED: GOLD SELL \u2014 UTC 22:00-00:00 \u7981\u6b62\u958b\u65b0\u5009",
     "BLOCKED: GOLD SELL \u2014 UTC 22:00-00:00 \u7981\u6b62\u958b\u65b0\u5009",
     "BLOCKED: GOLD SELL \u2014 UTC 22:00-00:00 \u7981\u6b62\u958b\u65b0\u5009"
   ]
