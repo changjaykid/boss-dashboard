@@ -1,8 +1,8 @@
 {
-  "lastUpdate": "2026-04-05 02:38:34",
+  "lastUpdate": "2026-04-05 08:00:01",
   "updateCycle": "08:00/20:00",
   "prices": {
-    "fetchedAt": "2026-04-05 02:38:38",
+    "fetchedAt": "2026-04-05 08:00:05",
     "source": "Yahoo Finance (yfinance)",
     "instruments": {
       "XAUUSD": {
@@ -13,7 +13,7 @@
         "change": -55.6,
         "changePercent": "-1.18%",
         "symbol": "GC=F",
-        "fetchedAt": "2026-04-05 02:38:35"
+        "fetchedAt": "2026-04-05 08:00:02"
       },
       "EURUSD": {
         "key": "EURUSD",
@@ -23,7 +23,7 @@
         "change": -0.0021,
         "changePercent": "-0.18%",
         "symbol": "EURUSD=X",
-        "fetchedAt": "2026-04-05 02:38:36"
+        "fetchedAt": "2026-04-05 08:00:03"
       },
       "GBPUSD": {
         "key": "GBPUSD",
@@ -33,7 +33,7 @@
         "change": -0.0032,
         "changePercent": "-0.24%",
         "symbol": "GBPUSD=X",
-        "fetchedAt": "2026-04-05 02:38:36"
+        "fetchedAt": "2026-04-05 08:00:03"
       },
       "USDJPY": {
         "key": "USDJPY",
@@ -43,7 +43,7 @@
         "change": 0.099,
         "changePercent": "+0.06%",
         "symbol": "JPY=X",
-        "fetchedAt": "2026-04-05 02:38:36"
+        "fetchedAt": "2026-04-05 08:00:04"
       },
       "US30": {
         "key": "US30",
@@ -53,7 +53,7 @@
         "change": -61.07,
         "changePercent": "-0.13%",
         "symbol": "^DJI",
-        "fetchedAt": "2026-04-05 02:38:37"
+        "fetchedAt": "2026-04-05 08:00:04"
       },
       "SPX500": {
         "key": "SPX500",
@@ -63,7 +63,7 @@
         "change": 7.37,
         "changePercent": "+0.11%",
         "symbol": "^GSPC",
-        "fetchedAt": "2026-04-05 02:38:37"
+        "fetchedAt": "2026-04-05 08:00:04"
       },
       "NAS100": {
         "key": "NAS100",
@@ -73,7 +73,7 @@
         "change": 308.25,
         "changePercent": "+1.29%",
         "symbol": "NQ=F",
-        "fetchedAt": "2026-04-05 02:38:37"
+        "fetchedAt": "2026-04-05 08:00:04"
       },
       "DXY": {
         "key": "DXY",
@@ -83,7 +83,7 @@
         "change": 0.182,
         "changePercent": "+0.18%",
         "symbol": "DX-Y.NYB",
-        "fetchedAt": "2026-04-05 02:38:37"
+        "fetchedAt": "2026-04-05 08:00:05"
       },
       "US10Y": {
         "key": "US10Y",
@@ -93,62 +93,60 @@
         "change": -0.006,
         "changePercent": "-0.14%",
         "symbol": "^TNX",
-        "fetchedAt": "2026-04-05 02:38:38"
+        "fetchedAt": "2026-04-05 08:00:05"
       }
     }
   },
   "news": [
     {
-      "title": "金價強勢反彈至4700美元關口！但三月仍錄得大幅回調",
-      "source": "TradingKey",
-      "time": "2026-04-01 02:05 UTC",
-      "summary": "金價在三月經歷了大幅回調後，近期強勢反彈至4700美元的關口。這顯示出市場對金價的需求依然強勁，但也反映出市場的波動性。",
-      "analysis": "這則新聞對金價的影響顯著，可能會吸引更多投資者進場，推動XAU/USD的價格上升。若金價持續走高，可能會影響到其他避險資產的表現。",
+      "title": "金價預測：XAU/USD多頭仍受制於4600美元下方",
+      "source": "TMGM",
+      "time": "2026-03-31 19:06 UTC",
+      "summary": "這則新聞指出金價在4600美元下方受到壓制，顯示出市場對金價的看法仍然謹慎。投資者在尋找突破的信號。",
+      "analysis": "金價的走勢將直接影響到XAUUSD的交易策略，若突破4600美元，可能會引發進一步的買盤。反之，若持續受制，則可能導致回調。",
       "impact": {
         "instruments": [
           "GOLD"
         ],
-        "direction": "金價走強 → 吸引更多投資者",
+        "direction": "金價受壓 → 投資者需謹慎操作",
         "severity": "high"
       }
     },
     {
-      "title": "金價因美國美元走軟而上漲，交易者期待特朗普對伊朗戰爭的演講",
-      "source": "TMGM",
-      "time": "2026-04-02 01:26 UTC",
-      "summary": "隨著美國美元走軟，金價上漲，市場期待特朗普對伊朗戰爭的演講可能帶來的影響。這一動態讓投資者重新評估風險。",
-      "analysis": "美元走弱通常會利好金價，這可能會進一步推高XAU/USD的價格，並影響其他避險資產的需求。",
-      "impact": {
-        "instruments": [
-          "GOLD",
-          "USDJPY"
-        ],
-        "direction": "美元走弱 → 金價利多",
-        "severity": "high"
-      }
-    },
-    {
-      "title": "金價因美國國債收益率下降而上漲，同時中東緊張局勢升級",
+      "title": "金價因美國國債收益率下滑而上漲，同時中東緊張局勢升級",
       "source": "TMGM",
       "time": "2026-03-30 13:44 UTC",
-      "summary": "金價因美國國債收益率的下降而上漲，儘管中東的緊張局勢仍在升級。這表明市場對金價的避險需求仍然強勁。",
-      "analysis": "收益率下降通常會使金價上升，這可能會利好XAU/USD，並對其他資產如美股造成一定的壓力。",
+      "summary": "隨著美國國債收益率的下滑，金價出現上漲，市場對中東緊張局勢的擔憂持續影響投資者情緒。",
+      "analysis": "這一消息可能會使金價進一步上漲，對於XAUUSD的交易者來說，需關注收益率變化及地緣政治風險的影響。",
+      "impact": {
+        "instruments": [
+          "GOLD"
+        ],
+        "direction": "金價上漲 → 投資者可考慮進場",
+        "severity": "high"
+      }
+    },
+    {
+      "title": "金價因美國國債收益率下滑而上漲，交易者期待特朗普對伊朗戰爭的發言",
+      "source": "TMGM",
+      "time": "2026-04-02 01:26 UTC",
+      "summary": "金價因美國國債收益率的下降而上漲，市場對特朗普即將發表的演講充滿期待，可能會影響市場情緒。",
+      "analysis": "特朗普的演講可能會引發市場波動，對金價和美元的影響尤為明顯，交易者需密切關注演講內容。",
       "impact": {
         "instruments": [
           "GOLD",
-          "US30",
-          "SPX500"
+          "USD"
         ],
-        "direction": "收益率下降 → 金價利多",
+        "direction": "金價上漲 → 美元走弱",
         "severity": "medium"
       }
     },
     {
-      "title": "GBP/USD因特朗普的威脅而下滑，美元走強",
+      "title": "英鎊/美元因特朗普威脅而下滑，美元走強",
       "source": "TMGM",
       "time": "2026-04-02 22:49 UTC",
-      "summary": "在特朗普的威脅影響下，GBP/USD出現下滑，美元則因市場情緒轉變而走強。這一變化反映出市場對政治風險的敏感性。",
-      "analysis": "美元走強將對GBP/USD造成壓力，可能會導致該貨幣對進一步下滑，影響外匯市場的整體走勢。",
+      "summary": "英鎊/美元因特朗普的威脅而出現下滑，顯示出美元的強勢回升，市場對美國經濟的信心有所增強。",
+      "analysis": "美元的強勢將對GBP/USD交易者造成壓力，可能導致英鎊進一步貶值，需調整交易策略以應對市場變化。",
       "impact": {
         "instruments": [
           "GBPUSD"
@@ -158,17 +156,17 @@
       }
     },
     {
-      "title": "外匯今日：美國美元走弱，股市因伊朗和平希望而上漲",
+      "title": "外匯今日：美元走弱，股市因伊朗和平希望而上漲",
       "source": "TMGM",
       "time": "2026-04-01 06:01 UTC",
-      "summary": "在市場對伊朗和平的希望上升的背景下，美國美元走弱，股市出現上漲。這一情況可能會影響投資者的風險偏好。",
-      "analysis": "美元走弱可能會促使資金流入股市，特別是US30和SPX500，並可能進一步推高這些指數的價格。",
+      "summary": "美元走弱的同時，股市因對伊朗和平的希望而上漲，顯示出市場情緒的改善。",
+      "analysis": "這一消息對於股市（如US30、SPX500）是利好，投資者可考慮增持相關資產，並觀察美元的走勢對其他貨幣對的影響。",
       "impact": {
         "instruments": [
           "US30",
           "SPX500"
         ],
-        "direction": "美元走弱 → 股市走強",
+        "direction": "美元走弱 → 股市利多",
         "severity": "medium"
       }
     }
@@ -176,39 +174,39 @@
   "socialDiscussions": [
     {
       "platform": "Reddit",
-      "title": "對於已成功部署算法交易者：你們花了多長時間設置？是什麼讓你們有信心在實盤上部署？",
-      "author": "u/imeowfortallwomen",
-      "summary": "討論者分享了他們成功部署算法交易的經驗，強調了測試和優化的重要性。他們通常使用 Python 和多種技術指標來開發和測試策略，並在模擬賬戶中進行測試以獲得信心。",
-      "whatTheyDid": "使用 Python 開發算法，並在模擬賬戶中進行回測，確保策略的有效性。",
-      "whatWeCanLearn": "在實盤交易前，應該充分測試和優化算法，並使用模擬賬戶來獲得信心。",
-      "url": "https://reddit.com/r/algotrading/comments/1sb4e9g/for_the_algotraders_who_have_live_deployment_of/"
-    },
-    {
-      "platform": "Reddit",
-      "title": "如何開始算法交易或學習如何進行？",
-      "author": "u/M4TR1X_8",
-      "summary": "這位用戶詢問如何開始算法交易，社群成員建議從學習 Python 和基本的交易策略開始，並使用現成的交易平台如 MetaTrader 進行實踐。",
-      "whatTheyDid": "建議學習 Python，並使用 MetaTrader 進行策略開發和測試。",
-      "whatWeCanLearn": "學習 Python 和使用交易平台是開始算法交易的有效途徑。",
-      "url": "https://reddit.com/r/algotrading/comments/1sb9qjz/how_would_you_guys_recommend_i_begin_algo_trading/"
-    },
-    {
-      "platform": "Reddit",
-      "title": "我追蹤了自己做的每一筆報復交易 30 天 - 數據顯示了什麼",
+      "title": "我追蹤了我做的每一筆報復交易 30 天 - 數據顯示了什麼",
       "author": "u/Super-was",
-      "summary": "這位用戶分享了他對報復交易的數據分析，強調了情緒管理在交易中的重要性。他使用了簡單的統計分析來評估交易結果，並提出了改進建議。",
-      "whatTheyDid": "記錄並分析了每一筆報復交易的結果，並發現情緒對交易決策的影響。",
-      "whatWeCanLearn": "透過數據分析來了解自己的交易行為，並改善情緒管理策略。",
+      "summary": "這位用戶記錄了自己在 30 天內的報復交易，並分析了這些交易的結果。他發現這些交易的成功率低，且往往會導致更大的損失。",
+      "whatTheyDid": "他詳細記錄了每一筆報復交易的進出場時間、理由和結果，並進行數據分析以找出模式。",
+      "whatWeCanLearn": "我們可以學習到記錄交易過程和結果的重要性，以便未來改進交易策略。",
       "url": "https://reddit.com/r/Forex/comments/1sbsqyd/i_tracked_every_revenge_trade_i_made_for_30_days/"
     },
     {
       "platform": "Reddit",
-      "title": "我將每筆交易的風險降低到 0.5%，結果改變了很多。其他人有試過嗎？",
+      "title": "為了那些已經成功部署算法交易的朋友：你們花了多久時間設置這個？",
+      "author": "u/imeowfortallwomen",
+      "summary": "這位用戶詢問成功的算法交易者，他們在部署算法到實盤交易的過程中所需的時間和信心來源。許多回覆提到測試和優化的重要性。",
+      "whatTheyDid": "用戶們分享了他��使用 Python 和各種技術指標（如 MA 和 RSI）來優化交易策略的經驗，並在模擬賬戶中進行測試。",
+      "whatWeCanLearn": "在實盤交易前，進行充分的模擬測試和優化是成功的關鍵。",
+      "url": "https://reddit.com/r/algotrading/comments/1sb4e9g/for_the_algotraders_who_have_live_deployment_of/"
+    },
+    {
+      "platform": "Reddit",
+      "title": "我將每筆交易的風險降低到 0.5% - 結果有了很大變化。其他人有試過嗎？",
       "author": "u/harry_jones2001",
-      "summary": "這位用戶分享了降低每筆交易風險至 0.5% 的經驗，並指出這樣做後的交易結果顯著改善。他強調了風險管理的重要性。",
-      "whatTheyDid": "將每筆交易的風險設定為 0.5%，並觀察到交易結果的改善。",
-      "whatWeCanLearn": "降低每筆交易的風險可以有效改善整體交易表現，風險管理至關重要。",
+      "summary": "這位用戶分享了將每筆交易的風險控制在 0.5% 的經驗，並表示這樣的風險管理策略顯著改善了他的交易結果。",
+      "whatTheyDid": "他在每筆交易中設定了 0.5% 的風險，並使用了止損和止盈策略來控制損失和鎖定利潤。",
+      "whatWeCanLearn": "採用嚴格的風險管理策略可以有效減少損失並提高整體交易表現。",
       "url": "https://reddit.com/r/Trading/comments/1scgwk7/reduced_my_risk_to_05_per_trade_results_changed_a/"
+    },
+    {
+      "platform": "Reddit",
+      "title": "交易課程 — 真正的優勢還是只是炒作？",
+      "author": "u/New-Supermarket3066",
+      "summary": "這位用戶討論了交易課程的有效性，並詢問其他用戶的看法，許多回應提供了不同的見解和經驗。",
+      "whatTheyDid": "用戶們分享了自己參加過的課程內容，包括技術分析、風險管理和心理交易等方面的��習。",
+      "whatWeCanLearn": "選擇合適的交易課程可以幫助我們掌握必要的技能，但實踐和經驗同樣重要。",
+      "url": "https://reddit.com/r/Trading/comments/1scez87/trading_course_real_edge_or_just_hype/"
     }
   ],
   "conclusion": {
