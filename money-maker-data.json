@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-05 14:24",
+  "lastUpdate": "2026-04-05 14:30",
   "status": "RUNNING",
   "mode": "live",
   "capital": 10000,
@@ -210,13 +210,13 @@
   },
   "consecutiveLosses": 4,
   "signals": {
-    "technical": "🟡 buy=1.0 sell=3.0 trend=SELL rsi=30.1",
+    "technical": "🟡 buy=2.0 sell=4.0 trend=SELL rsi=29.4",
     "news": "🟡 新聞中性(利多0/利空1)",
     "sentiment": "🟡 無FGI資料",
-    "overall": "🔴 SELL — RSI低檔回升30.1, BB擠壓跌破下軌！"
+    "overall": "🔴 SELL — RSI超賣29.4, 跌破BB中軌+量確認"
   },
-  "btcPrice": 2148743.9,
-  "btcChange24h": -0.3,
+  "btcPrice": 2148490.9,
+  "btcChange24h": -0.31,
   "fearGreedIndex": "--",
   "nextAction": "準備SELL",
   "alerts": []
