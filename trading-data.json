@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-06 05:00:32",
+  "lastUpdate": "2026-04-06 05:10:24",
   "account": {
     "balance": 30926.9,
     "realizedPnl": -301.07,
@@ -20,7 +20,7 @@
     "maxConsecutiveLosses": 78,
     "maxSingleWin": 49.23,
     "maxSingleLoss": -55.65,
-    "marginUsagePercent": "100.1%"
+    "marginUsagePercent": "100.0%"
   },
   "instruments": [
     "GOLD",
@@ -89,20 +89,6 @@
       "createdDate": "2026-04-03T21:00:23.887"
     },
     {
-      "dealId": "00000000-4c8f-1307-0460-7d740055311e",
-      "direction": "SELL",
-      "size": 0.1,
-      "entryPrice": 46367.2,
-      "stopLevel": 46425.6,
-      "profitLevel": 46250.3,
-      "currentBid": 46398.3,
-      "currentAsk": 46400.3,
-      "pnl": -331.0,
-      "instrument": "US Wall Street 30",
-      "epic": "US30",
-      "createdDate": "2026-04-03T21:00:27.036"
-    },
-    {
       "dealId": "00000000-4c8f-1315-0460-7d740055311e",
       "direction": "SELL",
       "size": 0.1,
@@ -157,6 +143,20 @@
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-02T22:20:25.486"
+    },
+    {
+      "dealId": "00000000-4c8f-1307-0460-7d740055311e",
+      "direction": "SELL",
+      "size": 0.1,
+      "entryPrice": 46367.2,
+      "stopLevel": 46425.6,
+      "profitLevel": 46250.3,
+      "currentBid": 46398.3,
+      "currentAsk": 46400.3,
+      "pnl": -331.0,
+      "instrument": "US Wall Street 30",
+      "epic": "US30",
+      "createdDate": "2026-04-03T21:00:27.036"
     }
   ],
   "closedTrades": [
