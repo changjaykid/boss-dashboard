@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-05 15:57",
+  "lastUpdate": "2026-04-05 18:39",
   "status": "RUNNING",
   "mode": "分批低買高賣 v2",
   "capital": 10000,
-  "available": 9315,
-  "netEquity": 9911,
+  "available": 8320,
+  "netEquity": 9913,
   "todayPnl": 0,
   "totalPnl": -82,
   "totalTrades": 11,
@@ -13,30 +13,29 @@
   "winRate": "27%",
   "maxDrawdown": 82,
   "holdings": {
-    "btc": 0.00027712,
-    "btcValue": 596,
-    "avgEntry": 2150127,
-    "batches": 1,
-    "totalInvested": 600,
-    "unrealizedPnl": -4,
-    "stopLoss": 2143487
+    "btc": 0.00073763,
+    "btcValue": 1594,
+    "avgEntry": 2154504,
+    "batches": 2,
+    "totalInvested": 1600,
+    "unrealizedPnl": -6,
+    "stopLoss": 2148605
   },
   "signals": {
-    "action": "BUY_ZONE",
-    "buyScore": "3.0",
-    "sellScore": "1.0",
-    "rsi15": "40",
+    "action": "SELL_ZONE",
+    "buyScore": "0.0",
+    "sellScore": "3.0",
+    "rsi15": "60",
     "trend": "DOWN",
     "marketState": "SQUEEZE",
     "fgi": "--",
     "reasons": [
-      "RSI偏低40",
-      "接近BB下軌",
-      "MACD柱縮短(底部收斂)"
+      "突破BB上軌",
+      "1H趨勢向下"
     ]
   },
-  "btcPrice": 2150126.5,
-  "btcChange24h": -0.29,
+  "btcPrice": 2160454.5,
+  "btcChange24h": 0.21,
   "recentTrades": [
     {
       "id": 1775354581902,
