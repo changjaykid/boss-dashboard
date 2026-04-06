@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-06 12:48",
+  "lastUpdate": "2026-04-06 12:54",
   "status": "RUNNING",
   "mode": "v3 精簡雙策略",
   "exchange": "Binance Futures",
@@ -7,8 +7,8 @@
     "initialCapital": 464,
     "balance": 464.00637588,
     "available": 374.61673008,
-    "unrealizedPnl": 0.51236323,
-    "netEquity": 464.51873911,
+    "unrealizedPnl": 0.4901,
+    "netEquity": 464.49647588,
     "todayPnl": 0,
     "totalPnl": 0,
     "leverage": 10,
@@ -23,8 +23,8 @@
     "side": "LONG",
     "size": 0.013,
     "entryPrice": 69106.8,
-    "markPrice": 69146.21255622,
-    "pnl": 0.51236323,
+    "markPrice": 69144.5,
+    "pnl": 0.4901,
     "leverage": 10,
     "trailingStop": null
   },
@@ -56,7 +56,7 @@
       "1H EMA 多排"
     ],
     "buyScore": 20,
-    "sellScore": 4
+    "sellScore": 0
   },
   "recentTrades": [],
   "riskStatus": {
