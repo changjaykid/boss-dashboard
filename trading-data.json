@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-06 11:50:17",
+  "lastUpdate": "2026-04-06 12:00:19",
   "account": {
-    "balance": 30944.1,
+    "balance": 30944.16,
     "realizedPnl": -341.32,
-    "unrealizedPnl": -6.38,
-    "netEquity": 30937.72,
+    "unrealizedPnl": -0.08,
+    "netEquity": 30944.08,
     "todayPnl": -0.23,
     "weekPnl": -0.23,
     "totalTrades": 189,
@@ -39,9 +39,9 @@
       "entryPrice": 4640.4,
       "stopLevel": 4604.8,
       "profitLevel": 4711.6,
-      "currentBid": 4634.02,
-      "currentAsk": 4634.52,
-      "pnl": -6.38,
+      "currentBid": 4640.32,
+      "currentAsk": 4640.82,
+      "pnl": -0.08,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-06T09:10:21.563"
@@ -721,12 +721,12 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4633.95,
-      "ask": 4634.45
+      "bid": 4641.16,
+      "ask": 4641.66
     },
     "USDJPYM2026": {
-      "bid": 158.736,
-      "ask": 158.756
+      "bid": 158.734,
+      "ask": 158.755
     }
   },
   "indicators": {
@@ -735,29 +735,27 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 4633.95,
-      "rsi": 62.5,
-      "macd_hist": 0.9864,
-      "atr": 15.9875,
-      "bb_width": 0.0127,
-      "ema9": 4636.3502,
-      "ema21": 4638.8872
+      "bid": 4641.16,
+      "rsi": 64.2,
+      "macd_hist": 1.398,
+      "atr": 16.5243,
+      "bb_width": 0.0128,
+      "ema9": 4637.5112,
+      "ema21": 4639.4149
     },
     "USDJPYM2026": {
       "name": "USD/JPY",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 158.736,
-      "rsi": 36.2,
-      "macd_hist": -0.0072,
-      "atr": 0.0679,
+      "bid": 158.734,
+      "rsi": 35.4,
+      "macd_hist": -0.0077,
+      "atr": 0.068,
       "bb_width": 0.0021,
-      "ema9": 158.729,
-      "ema21": 158.7601
+      "ema9": 158.7278,
+      "ema21": 158.7595
     }
   },
-  "actions": [
-    "BLOCKED: GOLD SELL \u2014 \u5df2\u6301\u6709 GOLD"
-  ]
+  "actions": []
 }
