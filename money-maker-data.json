@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-06 12:54",
+  "lastUpdate": "2026-04-06 13:09",
   "status": "RUNNING",
   "mode": "分批低買高賣 v2",
   "capital": 10000,
@@ -36,8 +36,8 @@
       "接近BB上軌"
     ]
   },
-  "btcPrice": 2219325.2,
-  "btcChange24h": 2.74,
+  "btcPrice": 2219325.1,
+  "btcChange24h": 2.73,
   "recentTrades": [
     {
       "time": "2026-04-05T22:48:01.767Z",
