@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-06 12:40:17",
+  "lastUpdate": "2026-04-06 12:50:19",
   "account": {
-    "balance": 30944.24,
+    "balance": 30944.28,
     "realizedPnl": -341.32,
-    "unrealizedPnl": 8.08,
-    "netEquity": 30952.32,
+    "unrealizedPnl": 11.73,
+    "netEquity": 30956.01,
     "todayPnl": -0.23,
     "weekPnl": -0.23,
     "totalTrades": 189,
@@ -39,9 +39,9 @@
       "entryPrice": 4640.4,
       "stopLevel": 4604.8,
       "profitLevel": 4711.6,
-      "currentBid": 4648.48,
-      "currentAsk": 4648.98,
-      "pnl": 8.08,
+      "currentBid": 4652.13,
+      "currentAsk": 4652.63,
+      "pnl": 11.73,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-06T09:10:21.563"
@@ -721,12 +721,12 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4648.7,
-      "ask": 4649.2
+      "bid": 4651.98,
+      "ask": 4652.73
     },
     "USDJPYM2026": {
-      "bid": 158.681,
-      "ask": 158.694
+      "bid": 158.666,
+      "ask": 158.687
     }
   },
   "indicators": {
@@ -735,27 +735,29 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 4648.7,
-      "rsi": 53.3,
-      "macd_hist": 0.4707,
-      "atr": 14.5996,
-      "bb_width": 0.012,
-      "ema9": 4641.9948,
-      "ema21": 4639.0541
+      "bid": 4651.98,
+      "rsi": 55.2,
+      "macd_hist": 0.866,
+      "atr": 13.3539,
+      "bb_width": 0.0115,
+      "ema9": 4644.1129,
+      "ema21": 4639.3249
     },
     "USDJPYM2026": {
       "name": "USD/JPY",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 158.681,
-      "rsi": 39.5,
-      "macd_hist": 0.0023,
-      "atr": 0.0574,
-      "bb_width": 0.0019,
-      "ema9": 158.715,
-      "ema21": 158.7534
+      "bid": 158.666,
+      "rsi": 37.1,
+      "macd_hist": 0.0032,
+      "atr": 0.0549,
+      "bb_width": 0.0018,
+      "ema9": 158.7055,
+      "ema21": 158.7508
     }
   },
-  "actions": []
+  "actions": [
+    "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD"
+  ]
 }
