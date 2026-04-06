@@ -1,13 +1,13 @@
 {
-  "lastUpdate": "2026-04-06 08:00:01",
+  "lastUpdate": "2026-04-06 20:00:00",
   "updateCycle": "08:00/20:00",
   "news": [
     {
-      "title": "通膨與中東衝突夾擊！比特幣(BTC-USD)陷6.6萬美元震盪，4月走勢面臨考驗",
-      "source": "CMoney投資網誌",
-      "time": "2026-04-03 22:30 UTC",
-      "summary": "比特幣目前在6.6萬美元附近震盪，受到通膨和中東衝突的影響，市場情緒不穩定。專家預測4月的走勢將面臨重大考驗。",
-      "analysis": "這則新聞顯示出比特幣的價格波動性加大，可能會對BTC/TWD和BTC/USDT的交易造成影響，投資者需謹慎操作。",
+      "title": "比特幣拋售潮開始，礦工於 2026 年第一季售出超過 15,000 BTC",
+      "source": "MEXC",
+      "time": "2026-04-03 09:57 UTC",
+      "summary": "報導指出，礦工在2026年第一季拋售了超過15,000個比特幣，顯示市場情緒可能轉向悲觀。這一拋售潮可能會對比特幣的價格造成壓力。",
+      "analysis": "這則新聞對BTC的影響較大，因為礦工的拋售行為通常會導致市場供應增加，進一步壓低價格。投資者需密切關注BTC的走勢。",
       "impact": {
         "coins": [
           "BTC"
@@ -17,11 +17,11 @@
       }
     },
     {
-      "title": "比特幣（BTC）面臨關鍵考驗，選擇權數據顯示可能跌至 52,000 美元",
-      "source": "MEXC",
-      "time": "2026-04-03 08:41 UTC",
-      "summary": "根據選擇權數據，比特幣可能會面臨下跌至52,000美元的風險，市場情緒持續低迷。",
-      "analysis": "這可能會對BTC的交易造成負面影響，特別是在BTC/TWD和BTC/USDT的市場中，投資者需注意風險。",
+      "title": "通膨與中東衝突夾擊！比特幣(BTC-USD)陷6.6萬美元震盪，4月走勢面臨考驗",
+      "source": "cmnews.com.tw",
+      "time": "2026-04-03 22:30 UTC",
+      "summary": "比特幣在6.6萬美元附近震盪，受到通膨和中東衝突的影響，市場情緒不穩定，未來走勢充滿挑戰。",
+      "analysis": "這則新聞顯示BTC面臨的外部挑戰，可能導致價格波動加劇，對BTC的交易策略需保持謹慎，可能出現短期內的承壓情況。",
       "impact": {
         "coins": [
           "BTC"
@@ -32,16 +32,31 @@
     },
     {
       "title": "Bitcoin ETFs Break Four-Month Negative Streak With $1.32B Inflows While ETH, XRP Funds Bleed",
-      "source": "tw.tradingview.com",
+      "source": "TradingView",
       "time": "2026-04-02 08:00 UTC",
-      "summary": "比特幣ETF在四個月的負面趨勢後，迎來了13.2億美元的資金流入，而以太坊和XRP的資金卻在流出。",
-      "analysis": "這對BTC的交易是利多消息，可能會促進BTC/TWD和BTC/USDT的上漲，反之ETH和XRP可能會面臨更大的賣壓。",
+      "summary": "比特幣ETF在經歷四個月的負面趨勢後，迎來了13.2億美元的資金流入，顯示出市場對比特幣的信心回升。",
+      "analysis": "這對BTC是一個利多消息，資金流入可能會推高BTC的價格，對於ETH和XRP則顯示出相對的弱勢，可能會影響這些幣種的市場情緒。",
       "impact": {
         "coins": [
           "BTC",
-          "ETH"
+          "ETH",
+          "XRP"
         ],
-        "direction": "BTC 利多，ETH 承壓",
+        "direction": "BTC 利多，ETH 承壓，XRP 承壓",
+        "severity": "medium"
+      }
+    },
+    {
+      "title": "Bitcoin shorts risk $2.5 billion liquidation at $72K: Are bears in danger?",
+      "source": "TradingView",
+      "time": "2026-04-04 11:58 UTC",
+      "summary": "報導指出，若比特幣價格跌至72,000美元，將可能引發25億美元的空頭平倉，這對市場情緒造成影響。",
+      "analysis": "這則新聞暗示BTC的價格支撐位在72,000美元，若突破此價位，可能引發大規模的平倉行為，進一步推高價格，對BTC的交易策略需謹慎觀察。",
+      "impact": {
+        "coins": [
+          "BTC"
+        ],
+        "direction": "BTC 利多",
         "severity": "medium"
       }
     },
@@ -49,59 +64,45 @@
       "title": "今日加密貨幣價格預測，4月4日：XRP、Ethereum (ETH)、BNB",
       "source": "MEXC",
       "time": "2026-04-04 10:16 UTC",
-      "summary": "市場對於XRP、以太坊和BNB的價格預測顯示出不穩定的趨勢，投資者需保持警惕。",
-      "analysis": "這將影響ETH/TWD和ETH/USDT的交易，可能導致價格波動，投資者需謹慎操作。",
+      "summary": "報導提供了對XRP、以太坊和BNB的價格預測，顯示出市場對這些幣種的關注和預期。",
+      "analysis": "這則新聞對ETH和XRP的影響較大，若預測顯示出下行風險，可能會影響投資者的信心，進而影響這些幣種的交易策略。",
       "impact": {
         "coins": [
-          "ETH"
+          "ETH",
+          "XRP"
         ],
-        "direction": "ETH 承壓",
+        "direction": "ETH 承壓，XRP 承壓",
         "severity": "medium"
-      }
-    },
-    {
-      "title": "Crypto Today: Bitcoin, Ethereum, XRP technicals deteriorate amid war-driven risk-off sentiment",
-      "source": "TMGM",
-      "time": "2026-04-02 12:38 UTC",
-      "summary": "由於戰爭驅動的風險厭惡情緒，比特幣、以太坊和XRP的技術指標惡化，市場情緒低迷。",
-      "analysis": "這對BTC和ETH的交易造成壓力，可能導致BTC/TWD和ETH/TWD的價格下滑，投資者需謹慎觀察市場動向。",
-      "impact": {
-        "coins": [
-          "BTC",
-          "ETH"
-        ],
-        "direction": "BTC 承壓，ETH 承壓",
-        "severity": "high"
       }
     }
   ],
   "socialDiscussions": [
     {
       "platform": "Reddit",
-      "title": "我在我的加密機器人上測試了我上次帖子中的每個建議，有些有效，有些完全失敗",
+      "title": "建立一個簡單的外匯自動交易系統 – 7天實測結果",
+      "author": "u/AlphaOneYoutube",
+      "summary": "這位用戶分享了他使用某種程式語言建立的外匯自動交易系統，並提供了為期7天的實測結果。透過不同的策略和參數調整，他觀察到系統的表現和風險管理的效果。",
+      "whatTheyDid": "使用 Python 開發了一個外匯自動交易系統，測試了多種策略並記錄了每個策略的表現，特別關注風險控制。",
+      "whatWeCanLearn": "我們可以參考他的策略測試方法，並在我們的加密貨幣交易系統中進行類似的實測來優化策略。",
+      "url": "https://reddit.com/r/algotrading/comments/1sd19hf/built_a_simple_forex_ea_7_day_live_test_results/"
+    },
+    {
+      "platform": "Reddit",
+      "title": "跟進：測試我上次貼文中所有建議的加密貨幣機器人，有些成功有些完全失敗",
       "author": "u/e-GODeath",
-      "summary": "這位用戶分享了他對加密交易機器人的測試結果，使用了多種策略來優化交易決策。他詳細記錄了每個策略的表現，包括成功率和失敗原因。",
-      "whatTheyDid": "他使用 Python 編寫了交易機器人，並測試了不同的技術指標，如移動平均線和布林帶，來判斷進出場時機。",
-      "whatWeCanLearn": "我們可以參考他的測試方法，進行多種策略的實驗，並記錄每個策略的效果以便優化。",
+      "summary": "這位用戶分享了他對加密貨幣交易機器人的測試結果，並分析了不同建議的有效性。他詳細記���了每個機器人的表現，並指出了成功和失敗的原因。",
+      "whatTheyDid": "測試了多個加密貨幣交易機器人，並根據實際交易結果分析了每個機器人的優缺點，特別關注了參數設置的影響。",
+      "whatWeCanLearn": "我們可以學習如何系統性地測試和評估不同的交易機器人，並根據結果調整我們的交易策略。",
       "url": "https://reddit.com/r/algotrading/comments/1sd9hlj/followup_tested_every_suggestion_from_my_last/"
     },
     {
       "platform": "Reddit",
-      "title": "為什麼機器學習策略通常在高波動期間失效？",
-      "author": "u/SonRocky",
-      "summary": "這篇討論探討了機器學習交易策略在市場高波動時期的表現，指出模型過度擬合歷史數據，導致在不穩定市場中失敗。",
-      "whatTheyDid": "他分析了多個機器學習模型的表現，並提出了改進建議，例如使用更穩健的特徵選擇和模型正則化。",
-      "whatWeCanLearn": "我們可以考慮在設計交易模型時，加入對市場波動性的考量，以提高模型的穩定性。",
-      "url": "https://reddit.com/r/algotrading/comments/1scmm9t/why_do_ml_strategies_usually_break_during_high/"
-    },
-    {
-      "platform": "Reddit",
-      "title": "建立了一個簡單的外匯EA - 7天實時測試結果（尋求反饋）",
-      "author": "u/AlphaOneYoutube",
-      "summary": "這位用戶分享了他建立的外匯自動交易系統的實時測試結果，並提供了詳細的策略和參數設定。",
-      "whatTheyDid": "他使用 MetaTrader 4 平台編寫了 EA，設定了基於移動平均的進出場策略，並在7天內進行了實時交易。",
-      "whatWeCanLearn": "我們可以借鑒他的策略設計，並考慮在加密貨幣交易中使用類似的自動化交易系統。",
-      "url": "https://reddit.com/r/algotrading/comments/1sd19hf/built_a_simple_forex_ea_7_day_live_test_results/"
+      "title": "花了幾周改善我的算法的勝率。實時交易顯示真正的問題是頭寸大小。",
+      "author": "u/Thiru_7223",
+      "summary": "這位用戶專注於改善其交易算法的勝率，並發現實際問題在於頭寸大小的管理。他分享了如何調整頭寸大小以提高整體交易表現。",
+      "whatTheyDid": "在實時交易中調整了頭寸大小，並根據市場波動性和風險承受能力來設置每次交易的資金分配。",
+      "whatWeCanLearn": "我們可以參考他的頭寸管理策略，將其應用到我們的自動交易系統中，以提高風險控制和收益潛力。",
+      "url": "https://reddit.com/r/algotrading/comments/1sdv0jw/spent_weeks_improving_my_algos_win_rate_live/"
     }
   ],
   "conclusion": {

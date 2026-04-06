@@ -1,49 +1,49 @@
 {
-  "lastUpdate": "2026-04-06 08:00:01",
+  "lastUpdate": "2026-04-06 20:00:00",
   "updateCycle": "08:00/20:00",
   "prices": {
-    "fetchedAt": "2026-04-06 08:00:05",
+    "fetchedAt": "2026-04-06 20:00:05",
     "source": "Yahoo Finance (yfinance)",
     "instruments": {
       "XAUUSD": {
         "key": "XAUUSD",
         "label": "黃金 XAUUSD",
         "unit": "USD/oz",
-        "price": 4638.9,
-        "change": -63.8,
-        "changePercent": "-1.36%",
+        "price": 4709,
+        "change": 42.7,
+        "changePercent": "+0.92%",
         "symbol": "GC=F",
-        "fetchedAt": "2026-04-06 08:00:02"
+        "fetchedAt": "2026-04-06 20:00:02"
       },
       "EURUSD": {
         "key": "EURUSD",
         "label": "歐元/美元",
         "unit": "",
-        "price": 1.1513,
-        "change": -0.0009,
-        "changePercent": "-0.08%",
+        "price": 1.1549,
+        "change": 0.0027,
+        "changePercent": "+0.23%",
         "symbol": "EURUSD=X",
-        "fetchedAt": "2026-04-06 08:00:03"
+        "fetchedAt": "2026-04-06 20:00:03"
       },
       "GBPUSD": {
         "key": "GBPUSD",
         "label": "英鎊/美元",
         "unit": "",
-        "price": 1.3186,
-        "change": -0.0008,
-        "changePercent": "-0.06%",
+        "price": 1.3237,
+        "change": 0.0043,
+        "changePercent": "+0.33%",
         "symbol": "GBPUSD=X",
-        "fetchedAt": "2026-04-06 08:00:03"
+        "fetchedAt": "2026-04-06 20:00:03"
       },
       "USDJPY": {
         "key": "USDJPY",
         "label": "美元/日圓",
         "unit": "",
-        "price": 159.77,
-        "change": 0.141,
-        "changePercent": "+0.09%",
+        "price": 159.55,
+        "change": -0.079,
+        "changePercent": "-0.05%",
         "symbol": "JPY=X",
-        "fetchedAt": "2026-04-06 08:00:04"
+        "fetchedAt": "2026-04-06 20:00:04"
       },
       "US30": {
         "key": "US30",
@@ -53,7 +53,7 @@
         "change": -61.07,
         "changePercent": "-0.13%",
         "symbol": "^DJI",
-        "fetchedAt": "2026-04-06 08:00:04"
+        "fetchedAt": "2026-04-06 20:00:04"
       },
       "SPX500": {
         "key": "SPX500",
@@ -63,27 +63,27 @@
         "change": 7.37,
         "changePercent": "+0.11%",
         "symbol": "^GSPC",
-        "fetchedAt": "2026-04-06 08:00:04"
+        "fetchedAt": "2026-04-06 20:00:04"
       },
       "NAS100": {
         "key": "NAS100",
         "label": "那斯達克100期貨",
         "unit": "",
-        "price": 24070.75,
-        "change": -97.25,
-        "changePercent": "-0.40%",
+        "price": 24304,
+        "change": 91.75,
+        "changePercent": "+0.38%",
         "symbol": "NQ=F",
-        "fetchedAt": "2026-04-06 08:00:04"
+        "fetchedAt": "2026-04-06 20:00:04"
       },
       "DXY": {
         "key": "DXY",
         "label": "美元指數 DXY",
         "unit": "",
-        "price": 100.25,
-        "change": 0.221,
-        "changePercent": "+0.22%",
+        "price": 99.94,
+        "change": -0.088,
+        "changePercent": "-0.09%",
         "symbol": "DX-Y.NYB",
-        "fetchedAt": "2026-04-06 08:00:05"
+        "fetchedAt": "2026-04-06 20:00:05"
       },
       "US10Y": {
         "key": "US10Y",
@@ -93,59 +93,45 @@
         "change": -0.006,
         "changePercent": "-0.14%",
         "symbol": "^TNX",
-        "fetchedAt": "2026-04-06 08:00:05"
+        "fetchedAt": "2026-04-06 20:00:05"
       }
     }
   },
   "news": [
     {
-      "title": "金價預測：XAU/USD多頭仍受限於4600美元以下",
-      "source": "TMGM",
+      "title": "金價預測：XAU/USD多頭仍受限於4600美元下方",
+      "source": "tmgm.com",
       "time": "2026-03-31 19:06 UTC",
-      "summary": "金價在4600美元以下受到壓制，市場對未來的金價走勢持謹慎態度。投資者正在關注影響金價的各種因素，包括美元走勢和地緣政治風險。",
-      "analysis": "此新聞顯示金價面臨阻力，可能影響XAUUSD的短期走勢。若金價無法突破4600美元，可能會導致回調，影響投資者情緒。",
+      "summary": "這篇文章分析了金價的走勢，指出多頭在4600美元附近受到壓制，市場情緒對金價的影響仍然存在。投資者需密切關注市場動態以調整策略。",
+      "analysis": "這對XAUUSD的交易者來說是重要的指標，因為如果金價無法突破4600美元，可能會導致進一步的回調，影響多頭的信心。",
       "impact": {
         "instruments": [
-          "GOLD"
+          "XAUUSD"
         ],
-        "direction": "金價受壓 → 投資者需謹慎操作",
+        "direction": "金價受限 → 可能回調",
         "severity": "high"
       }
     },
     {
-      "title": "金價因美元走弱而上漲，交易者等待特朗普對伊朗戰爭的演講",
-      "source": "TMGM",
-      "time": "2026-04-02 01:26 UTC",
-      "summary": "金價因美元走軟而上漲，市場期待特朗普的演講可能會影響地緣政治局勢。這使得金價在不確定性中獲得支撐。",
-      "analysis": "美元走弱通常會推高金價，這對XAUUSD有利。若特朗普的演講引發市場波動，可能進一步影響金價走勢。",
+      "title": "金價因美國國債收益率下降而上升，同時中東緊張局勢升級",
+      "source": "tmgm.com",
+      "time": "2026-03-30 13:44 UTC",
+      "summary": "隨著美國國債收益率的放緩，金價上升，然而中東的緊張局勢仍在加劇，這可能對市場造成影響。",
+      "analysis": "對於XAUUSD來說，收益率下降通常會推高金價，而中東的緊張局勢則可能進一步刺激避險需求，這對金價形成支撐。",
       "impact": {
         "instruments": [
-          "GOLD"
+          "XAUUSD"
         ],
-        "direction": "��元走弱 → 金價利多",
+        "direction": "收���率下降 → 金價上升",
         "severity": "high"
       }
     },
     {
-      "title": "金價因戰爭恐懼減輕而反彈至4650美元",
-      "source": "TMGM",
-      "time": "2026-04-01 05:31 UTC",
-      "summary": "隨著市場對戰爭的恐懼減輕，金價反彈至4650美元附近，顯示出需求的回升。投資者對未來的金價走勢持樂觀態度。",
-      "analysis": "這一反彈可能會吸引更多投資者進場，對XAUUSD形成支撐。若市場情緒持續改善，金價可能會進一步上漲。",
-      "impact": {
-        "instruments": [
-          "GOLD"
-        ],
-        "direction": "戰爭恐懼減輕 → 金價回升",
-        "severity": "high"
-      }
-    },
-    {
-      "title": "英鎊/美元因特朗普威脅而下滑，美元走強",
-      "source": "TMGM",
-      "time": "2026-04-02 22:49 UTC",
-      "summary": "英鎊/美元因特朗普的威脅而下滑，美元走強，市場對未來的貨幣政策持謹慎態度。這可能影響英鎊的走勢。",
-      "analysis": "美元走強可能會對GBP/USD造成壓力，投資者需注意英鎊的波動。這可能會影響到其他與美元相關的貨幣對。",
+      "title": "英鎊/美元因非農就業數據強勁而下滑，市場預期美聯儲將維持利率",
+      "source": "tmgm.com",
+      "time": "2026-04-03 17:23 UTC",
+      "summary": "文章指出，由於非農就業數據的強勁表現，英鎊/美元出現下滑，市場對美聯儲利率政策的預期發生變化。",
+      "analysis": "這對GBP/USD交易者來說是重要的信號，強勁的非農數據可能促使美元走強，進一步壓制英鎊的表現。",
       "impact": {
         "instruments": [
           "GBPUSD"
@@ -155,58 +141,61 @@
       }
     },
     {
-      "title": "美元指數因中東緊張局勢而增強，CPI數據即將公布",
-      "source": "TMGM",
-      "time": "2026-03-10 07:00 UTC",
-      "summary": "美元指數因中東緊張局勢而增強，市場對即將公布的CPI數據充滿期待。這可能影響美元的走勢及其他貨幣對。",
-      "analysis": "美元指數的增強可能會對GOLD和其他美元計價的資產造成壓力。投資者需密切關注CPI數據的影響。",
+      "title": "美元/日元從干預紅線回落，日本警告日元走弱",
+      "source": "tmgm.com",
+      "time": "2026-03-30 16:19 UTC",
+      "summary": "日本政府對日元走弱發出警告，美元/日元回落至干預紅線以下，市場對日元的未來走勢感到不安。",
+      "analysis": "這對USD/JPY的交易者來說是重要的，日元的走弱可能會導致美元/日元的波動性增加，投資者需謹慎操作。",
       "impact": {
         "instruments": [
-          "GOLD",
-          "EURUSD",
-          "GBPUSD"
+          "USDJPY"
         ],
-        "direction": "美元走強 → 金價承壓",
+        "direction": "日元走弱 → ���元/日元波動性增加",
         "severity": "medium"
+      }
+    },
+    {
+      "title": "金價因戰爭恐懼緩解而反彈至4650美元",
+      "source": "tmgm.com",
+      "time": "2026-04-01 05:31 UTC",
+      "summary": "隨著市場對戰爭的恐懼減少，金價反彈至4650美元附近，顯示出避險需求的減少。",
+      "analysis": "這對XAUUSD交易者來說是個重要的信號，金價的反彈可能吸引更多的多頭進場，進一步推高金價。",
+      "impact": {
+        "instruments": [
+          "XAUUSD"
+        ],
+        "direction": "戰爭恐懼減少 → 金價上升",
+        "severity": "high"
       }
     }
   ],
   "socialDiscussions": [
     {
       "platform": "Reddit",
-      "title": "建立了一個簡單的外匯EA – 7天實測結果（尋求反饋）",
+      "title": "建立一個簡單的外匯EA – 7天實時測試結果",
       "author": "u/AlphaOneYoutube",
-      "summary": "這位用戶分享了一個簡單的外匯自動交易系統，使用了MetaTrader平台，並進行了為期7天的實測。結果顯示該EA在不同市場條件下的表現，並尋求社群的反饋。",
-      "whatTheyDid": "使用MetaTrader 4建立了一個外匯EA，設定了基本的進出場條件，並在真實市場中運行了7天。",
-      "whatWeCanLearn": "可以參考他的EA設計思路，並在我們的系統中進行類似的實測來評估效果。",
+      "summary": "這位用戶分享了他建立的外匯自動交易系統（EA），並提供了7天的實時測試結果。他使用了特定的交易策略，並記錄了每一天的表現來評估系統的有效性。",
+      "whatTheyDid": "他使用了MetaTrader 4平台，編寫了基於移動平均線的交易策略，並進行了7天的實時測試。",
+      "whatWeCanLearn": "我們可以參考他的測試方法，進行自己的EA實時測試，並記錄結果以便於後續優化。",
       "url": "https://reddit.com/r/algotrading/comments/1sd19hf/built_a_simple_forex_ea_7_day_live_test_results/"
     },
     {
       "platform": "Reddit",
-      "title": "為初學者提供的最簡單策略",
-      "author": "u/Leather-Glove8202",
-      "summary": "這位用戶分享了一個適合初學者的簡單交易策略，主要使用移動平均線來判斷進出場時機。該策略易於理解且實施，適合剛入門的交易者。",
-      "whatTheyDid": "使用簡單的移動平均線交叉策略，當短期MA���穿長期MA時買入，反之則賣出，並在日線圖上進行交易。",
-      "whatWeCanLearn": "可以將移動平均線作為我們交易系統中的一個基本指標，簡化入場和出場決策。",
-      "url": "https://reddit.com/r/Trading/comments/1sd5akm/easiest_strategy_for_a_beginner/"
+      "title": "花了幾週改善我的算法的勝率。實時交易顯示真正的問題是頭寸大小。",
+      "author": "u/Thiru_7223",
+      "summary": "這位用戶專注於提升其交易算法的勝率，最終發現問題出在頭寸大小的設定上。他分享了如何調整頭寸以提高整體表現。",
+      "whatTheyDid": "他分析了過去的交易數據，���根據風險管理原則調整了每次交易的頭寸大小，以適應市場波動。",
+      "whatWeCanLearn": "我們可以學習到頭寸管理的重要性，並在設計交易策略時考慮風險控制。",
+      "url": "https://reddit.com/r/algotrading/comments/1sdv0jw/spent_weeks_improving_my_algos_win_rate_live/"
     },
     {
       "platform": "Reddit",
-      "title": "為什麼機器學習策略通常在高波動期間失效？",
-      "author": "u/SonRocky",
-      "summary": "這位用戶探討了機器學習交易策略在市場高波動時期失效的原因，並提出了改進建議。強調了市場環境變化對模型表現的影響。",
-      "whatTheyDid": "分析了多個機器學習模型在不同市場條件下的表現，並提出在高波動時期需要調整模型參數以適應市場變化。",
-      "whatWeCanLearn": "在我們的AI自動交易系統中，應考慮市場波動性，並根據市場狀況調整模型參數。",
-      "url": "https://reddit.com/r/algotrading/comments/1scmm9t/why_do_ml_strategies_usually_break_during_high/"
-    },
-    {
-      "platform": "Reddit",
-      "title": "我的長短倉分配在300多筆交易後的結果 — 我以為我有偏見，但結果顯示我只是稍微擅長做空",
-      "author": "u/Local-Amphibian9197",
-      "summary": "這位用戶分享了他在300多筆交易後的長短倉分配，並分析了自己的交易結果，發現自己在做空時的表現更佳。",
-      "whatTheyDid": "記錄了每筆交���的進出場時機，並對長短倉的表現進行了詳細的統計分析，發現做空的成功率較高。",
-      "whatWeCanLearn": "可以參考他的交易記錄分析方法，並在我們的系統中加入長短倉的表現評估。",
-      "url": "https://reddit.com/r/Forex/comments/1sd5fsa/my_long_vs_short_split_after_300_trades_thought_i/"
+      "title": "我失去了17%的賬戶資金....我意識到我一直在與特朗普和伊朗的事件對著幹交易。",
+      "author": "u/Upset-Bend-8646",
+      "summary": "這位用戶分享了他在交易中遭遇的損失，並反思了市場事件對交易決策的影響。他強調了市場情緒的重要性。",
+      "whatTheyDid": "他在交易中未能考慮到地緣政治事件的影響，導致了不必要的損失。",
+      "whatWeCanLearn": "我們應該在交易策略中納入市場情緒和重大事件的考量，以避免類似的損失。",
+      "url": "https://reddit.com/r/Trading/comments/1sdqcoq/i_lost_17_of_my_account_last_month_i_realised_i/"
     }
   ],
   "conclusion": {
