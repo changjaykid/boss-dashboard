@@ -1,42 +1,80 @@
 {
-  "lastUpdate": "2026-04-05 18:39",
+  "lastUpdate": "2026-04-06 12:39",
   "status": "RUNNING",
   "mode": "分批低買高賣 v2",
   "capital": 10000,
-  "available": 8320,
-  "netEquity": 9913,
+  "available": 6665,
+  "netEquity": 9939,
   "todayPnl": 0,
   "totalPnl": -82,
-  "totalTrades": 11,
-  "wins": 3,
-  "losses": 8,
-  "winRate": "27%",
-  "maxDrawdown": 82,
+  "totalTrades": 15,
+  "wins": 6,
+  "losses": 9,
+  "winRate": "40%",
+  "maxDrawdown": 97,
   "holdings": {
-    "btc": 0.00073763,
-    "btcValue": 1594,
-    "avgEntry": 2154504,
-    "batches": 2,
-    "totalInvested": 1600,
-    "unrealizedPnl": -6,
-    "stopLoss": 2148605
+    "btc": 0.00147447,
+    "btcValue": 3275,
+    "avgEntry": null,
+    "batches": 0,
+    "totalInvested": 0,
+    "unrealizedPnl": 0,
+    "stopLoss": null
   },
   "signals": {
-    "action": "SELL_ZONE",
-    "buyScore": "0.0",
-    "sellScore": "3.0",
-    "rsi15": "60",
-    "trend": "DOWN",
+    "action": "WAIT",
+    "buyScore": "2.0",
+    "sellScore": "2.0",
+    "rsi15": "64",
+    "trend": "UP",
     "marketState": "SQUEEZE",
     "fgi": "--",
     "reasons": [
-      "突破BB上軌",
-      "1H趨勢向下"
+      "MACD柱縮短(底部收斂)",
+      "1H趨勢向上",
+      "RSI偏高64",
+      "接近BB上軌"
     ]
   },
-  "btcPrice": 2160454.5,
-  "btcChange24h": 0.21,
+  "btcPrice": 2221012.6,
+  "btcChange24h": 2.74,
   "recentTrades": [
+    {
+      "time": "2026-04-05T22:48:01.767Z",
+      "type": "SELL_PARTIAL",
+      "exitPrice": 2190536.6,
+      "pnl": 7,
+      "reason": "RSI超買73, 突破BB上軌",
+      "avgEntry": "N/A",
+      "totalPnl": -82
+    },
+    {
+      "time": "2026-04-05T20:57:01.715Z",
+      "type": "SELL_PARTIAL",
+      "exitPrice": 2176648.8,
+      "pnl": 4,
+      "reason": "RSI偏高66, 突破BB上軌",
+      "avgEntry": "2165336",
+      "totalPnl": -89
+    },
+    {
+      "time": "2026-04-05T15:27:02.362Z",
+      "type": "SELL_PARTIAL",
+      "exitPrice": 2168571.4,
+      "pnl": 4,
+      "reason": "RSI偏高68, 突破BB上軌",
+      "avgEntry": "2154177",
+      "totalPnl": -93
+    },
+    {
+      "time": "2026-04-05T12:36:01.524Z",
+      "type": "SELL_ALL",
+      "exitPrice": 2148387.9,
+      "pnl": -15,
+      "reason": "停損觸發 @ 2148605",
+      "avgEntry": "2154504",
+      "totalPnl": -97
+    },
     {
       "id": 1775354581902,
       "side": "BUY",
@@ -156,74 +194,6 @@
         "news": "NEUTRAL",
         "sentiment": "NEUTRAL"
       }
-    },
-    {
-      "id": 1775312461739,
-      "side": "BUY",
-      "entryPrice": 2164348.9,
-      "exitPrice": 2162285.8,
-      "amount": 0.0004620327157049402,
-      "twd": 1000,
-      "pnl": -3,
-      "pnlPct": -0.095,
-      "entryTime": "2026-04-04T13:39:02.956Z",
-      "exitTime": "2026-04-04T14:21:01.739Z",
-      "holdMinutes": 42,
-      "reason": "RSI高檔回落68.3, BB擠壓中(等突破), 量比1.0x",
-      "closeReason": "停損觸發 @ 2162578.9",
-      "scores": {
-        "technical": "0.31",
-        "news": "NEUTRAL",
-        "sentiment": "NEUTRAL"
-      }
-    },
-    {
-      "id": 1775309942282,
-      "side": "BUY",
-      "entryPrice": 2159391.1,
-      "exitPrice": 2163827.5,
-      "amount": 0.00046309350816533417,
-      "twd": 1000,
-      "pnl": 0,
-      "pnlPct": 0.205,
-      "entryTime": "2026-04-04T12:09:02.607Z",
-      "exitTime": "2026-04-04T13:39:02.282Z",
-      "holdMinutes": 90,
-      "reason": "RSI高檔回落65.7, 突破BB中軌+量確認, BB擠壓中(等突破)",
-      "closeReason": "🎯 到達目標價 2161611，停利出場",
-      "scores": {
-        "technical": "0.38",
-        "news": "NEUTRAL",
-        "sentiment": "BULLISH"
-      }
-    },
-    {
-      "id": 1775304542055,
-      "side": "BUY",
-      "entryPrice": 2161189,
-      "exitPrice": 2159048.8,
-      "amount": 0.00045965,
-      "twd": 1000,
-      "pnl": -3,
-      "pnlPct": -0.099,
-      "entryTime": "2026-04-04T12:03:42.599Z",
-      "exitTime": "2026-04-04T12:09:02.055Z",
-      "holdMinutes": 5,
-      "closeReason": "停損觸發 @ 2159639"
-    },
-    {
-      "id": 1775302562768,
-      "side": "BUY",
-      "entryPrice": 2164646,
-      "exitPrice": 2159369.6,
-      "amount": 0.00461255,
-      "twd": 9985,
-      "pnl": -40,
-      "pnlPct": -0.244,
-      "entryTime": "2026-04-02T16:00:00.000Z",
-      "exitTime": "2026-04-04T11:36:02.768Z",
-      "holdMinutes": 2616,
-      "closeReason": "持倉超3小時強制平倉"
     }
   ],
   "dailyLimit": {

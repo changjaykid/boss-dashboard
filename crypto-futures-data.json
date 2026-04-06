@@ -1,18 +1,17 @@
 {
-  "lastUpdate": "2026-04-05 18:39",
+  "lastUpdate": "2026-04-06 12:39",
   "status": "RUNNING",
-  "mode": "背水一戰模式",
+  "mode": "v3 精簡雙策略",
   "exchange": "Binance Futures",
   "account": {
-    "initialCapital": 466,
-    "balance": 465.73011533,
-    "available": 382.36056406,
-    "unrealizedPnl": -1.44817335,
-    "netEquity": 464.28194198,
+    "initialCapital": 464,
+    "balance": 464.00637588,
+    "available": 374.61673008,
+    "unrealizedPnl": 0.8112,
+    "netEquity": 464.81757588,
     "todayPnl": 0,
     "totalPnl": 0,
-    "leverage": 4,
-    "marginType": "ISOLATED",
+    "leverage": 10,
     "totalTrades": 0,
     "winRate": "--",
     "wins": 0,
@@ -21,13 +20,12 @@
   },
   "position": {
     "symbol": "BTCUSDT",
-    "side": "SHORT",
-    "size": 0.005,
-    "entryPrice": 66796.7,
-    "markPrice": 67086.33467016,
-    "pnl": -1.44817335,
-    "leverage": 4,
-    "liquidationPrice": 83138.05802191,
+    "side": "LONG",
+    "size": 0.013,
+    "entryPrice": 69106.8,
+    "markPrice": 69169.2,
+    "pnl": 0.8112,
+    "leverage": 10,
     "trailingStop": null
   },
   "todayStats": {
@@ -35,9 +33,7 @@
     "wins": 0,
     "losses": 0,
     "pnl": 0,
-    "bestTrade": 0,
-    "worstTrade": 0,
-    "consecutiveLosses": 0
+    "remaining": 3
   },
   "totalStats": {
     "trades": 0,
@@ -50,35 +46,23 @@
     "peakBalance": 466
   },
   "signals": {
-    "marketState": "CONSOLIDATING",
-    "trend4h": "bearish",
-    "buyScore": "1.0",
-    "sellScore": "2.0",
+    "score": 20,
+    "direction": "LONG",
+    "strategy": "TREND_FOLLOW",
+    "marketState": "TRENDING_UP",
+    "trend4h": "UP",
     "session": "TRANSITION",
-    "momentum": {
-      "direction": "neutral",
-      "score": 0,
-      "mom5": 0.166,
-      "acceleration": 0.068
-    },
-    "activeSignals": [
-      "BB_BREAKOUT_UP",
-      "TREND_PULLBACK_SHORT"
-    ]
-  },
-  "strategyWeights": {
-    "BREAKOUT": 1,
-    "TREND_FOLLOW": 1,
-    "REVERSAL": 0.8,
-    "MOMENTUM": 1,
-    "FUNDING_ARB": 0.7,
-    "NEWS_EVENT": 0.5
+    "reasons": [
+      "1H EMA 多排"
+    ],
+    "buyScore": 20,
+    "sellScore": 0
   },
   "recentTrades": [],
   "riskStatus": {
-    "dailyLossUsed": "$0.00 / $23.30",
+    "dailyLossUsed": "$0.00 / $23.20",
+    "dailyTradesUsed": "0 / 3",
     "consecutiveLosses": "0 / 3",
     "paused": false
-  },
-  "alerts": []
+  }
 }
