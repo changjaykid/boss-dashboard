@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-07 10:10:24",
+  "lastUpdate": "2026-04-07 10:20:21",
   "account": {
-    "balance": 31021.77,
+    "balance": 31021.75,
     "realizedPnl": -439.36,
-    "unrealizedPnl": -8.74,
-    "netEquity": 31013.03,
+    "unrealizedPnl": -9.7,
+    "netEquity": 31012.05,
     "todayPnl": -11.51,
     "weekPnl": -98.27,
     "totalTrades": 210,
@@ -39,9 +39,9 @@
       "entryPrice": 4640.4,
       "stopLevel": 4604.8,
       "profitLevel": 4711.6,
-      "currentBid": 4631.66,
-      "currentAsk": 4632.16,
-      "pnl": -8.74,
+      "currentBid": 4630.7,
+      "currentAsk": 4631.2,
+      "pnl": -9.7,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-06T09:10:21.563"
@@ -721,12 +721,12 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4631.95,
-      "ask": 4632.45
+      "bid": 4630.7,
+      "ask": 4631.2
     },
     "USDJPYM2026": {
-      "bid": 159.024,
-      "ask": 159.043
+      "bid": 159.011,
+      "ask": 159.031
     }
   },
   "indicators": {
@@ -735,33 +735,30 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 4631.95,
-      "rsi": 33.2,
-      "macd_hist": -4.0627,
-      "atr": 13.4986,
-      "bb_width": 0.0085,
-      "ema9": 4643.8344,
-      "ema21": 4649.7824
+      "bid": 4630.7,
+      "rsi": 33.4,
+      "macd_hist": -4.3807,
+      "atr": 13.8846,
+      "bb_width": 0.0098,
+      "ema9": 4640.5182,
+      "ema21": 4647.7102
     },
     "USDJPYM2026": {
       "name": "USD/JPY",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 159.024,
-      "rsi": 87.6,
-      "macd_hist": 0.0258,
-      "atr": 0.0531,
-      "bb_width": 0.0022,
-      "ema9": 158.9595,
-      "ema21": 158.9034
+      "bid": 159.011,
+      "rsi": 81.7,
+      "macd_hist": 0.0226,
+      "atr": 0.0539,
+      "bb_width": 0.0023,
+      "ema9": 158.9729,
+      "ema21": 158.9138
     }
   },
   "actions": [
-    "SYNC_CLOSE: US500 BUY PnL=$-1.79 (calculated_from_market)",
     "BLOCKED: GOLD SELL \u2014 \u5df2\u6301\u6709 GOLD",
-    "BLOCKED: GOLD SELL \u2014 \u5df2\u6301\u6709 GOLD",
-    "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD",
     "BLOCKED: GOLD SELL \u2014 \u5df2\u6301\u6709 GOLD"
   ]
 }
