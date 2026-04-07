@@ -1,13 +1,13 @@
 {
-  "lastUpdate": "2026-04-08 05:18",
+  "lastUpdate": "2026-04-08 05:48",
   "status": "RUNNING",
   "mode": "batch_swing_v6",
   "capital": 10000,
   "totalEquity": 7584,
   "netEquity": 7584,
   "totalPnl": 35,
-  "btcPrice": 2238456,
-  "btcChange24h": 0.07,
+  "btcPrice": 2238762,
+  "btcChange24h": 0.4,
   "holdings": {
     "btc": 0.00012493,
     "avgCost": 2204751,
@@ -38,9 +38,9 @@
     {
       "market": "ethtwd",
       "held": 0.00392871,
-      "value": 269,
+      "value": 270,
       "avgEntry": 67384,
-      "pnl": -1265
+      "pnl": -1264
     }
   ],
   "marketStats": {
