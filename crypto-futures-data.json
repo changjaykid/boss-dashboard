@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-07 22:50",
+  "lastUpdate": "2026-04-07 23:30",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
@@ -20,18 +20,18 @@
     "maxDrawdown": 1.2
   },
   "position": {
-    "symbol": "AVAXUSDT",
-    "side": "SHORT",
-    "size": 25,
-    "entryPrice": 8.578,
-    "markPrice": 8.578,
+    "symbol": "ETHUSDT",
+    "side": "LONG",
+    "size": 0.098,
+    "entryPrice": 2079.35,
+    "markPrice": 2079.35,
     "pnl": 0,
     "leverage": 10,
-    "trailingStop": 8.647897839009287
+    "trailingStop": 2063.0965037067785
   },
   "signals": {
-    "score": 35,
-    "direction": "SHORT",
+    "score": 57,
+    "direction": "LONG",
     "marketState": "TRENDING_DOWN",
     "buyScore": 0,
     "sellScore": 0,
