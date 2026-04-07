@@ -1,17 +1,17 @@
 {
-  "lastUpdate": "2026-04-08 04:21",
+  "lastUpdate": "2026-04-08 05:09",
   "status": "RUNNING",
   "mode": "batch_swing_v6",
   "capital": 10000,
-  "totalEquity": 7579,
-  "netEquity": 7579,
+  "totalEquity": 7584,
+  "netEquity": 7584,
   "totalPnl": 35,
-  "btcPrice": 2220901,
-  "btcChange24h": -0.88,
+  "btcPrice": 2240000,
+  "btcChange24h": 0.1,
   "holdings": {
     "btc": 0.00012493,
     "avgCost": 2204751,
-    "unrealizedPnl": -2421
+    "unrealizedPnl": -2416
   },
   "buyOrders": 10,
   "sellOrders": 10,
@@ -31,16 +31,16 @@
     {
       "market": "btctwd",
       "held": 0.00012493,
-      "value": 277,
+      "value": 280,
       "avgEntry": 2204751,
-      "pnl": -1154
+      "pnl": -1151
     },
     {
       "market": "ethtwd",
       "held": 0.00392871,
-      "value": 266,
+      "value": 269,
       "avgEntry": 67384,
-      "pnl": -1268
+      "pnl": -1265
     }
   ],
   "marketStats": {
