@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-07 23:41",
+  "lastUpdate": "2026-04-08 00:10",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
@@ -9,7 +9,7 @@
     "available": 460.73,
     "unrealizedPnl": 0,
     "netEquity": 460.73,
-    "todayPnl": -5.3,
+    "todayPnl": 0,
     "totalPnl": -3.27,
     "leverage": 10,
     "marginType": "ISOLATED",
@@ -30,7 +30,7 @@
     "trailingStop": 2063.0965037067785
   },
   "signals": {
-    "score": 46,
+    "score": 29,
     "direction": "LONG",
     "marketState": "TRENDING_DOWN",
     "buyScore": 0,
@@ -179,8 +179,8 @@
     "NEWS_EVENT": 0.5
   },
   "riskStatus": {
-    "dailyLossUsed": "$5.30 / $23.20",
-    "dailyTradesUsed": "11 / 10",
+    "dailyLossUsed": "$0.00 / $23.20",
+    "dailyTradesUsed": "0 / 10",
     "consecutiveLosses": "0",
     "paused": false
   }
