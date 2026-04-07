@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-07 14:50:22",
+  "lastUpdate": "2026-04-07 15:00:22",
   "account": {
-    "balance": 31021.95,
+    "balance": 31021.99,
     "realizedPnl": -439.36,
-    "unrealizedPnl": 9.98,
-    "netEquity": 31031.93,
+    "unrealizedPnl": 13.47,
+    "netEquity": 31035.46,
     "todayPnl": -11.51,
     "weekPnl": -98.27,
     "totalTrades": 210,
@@ -39,9 +39,9 @@
       "entryPrice": 4640.4,
       "stopLevel": 4604.8,
       "profitLevel": 4711.6,
-      "currentBid": 4650.38,
-      "currentAsk": 4650.88,
-      "pnl": 9.98,
+      "currentBid": 4653.87,
+      "currentAsk": 4654.37,
+      "pnl": 13.47,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-06T09:10:21.563"
@@ -721,12 +721,20 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4650.47,
-      "ask": 4650.97
+      "bid": 4653.78,
+      "ask": 4654.28
+    },
+    "EURUSDM2026": {
+      "bid": 1.15788,
+      "ask": 1.15797
+    },
+    "GBPUSD": {
+      "bid": 1.32449,
+      "ask": 1.32463
     },
     "USDJPYM2026": {
-      "bid": 158.92,
-      "ask": 158.939
+      "bid": 158.929,
+      "ask": 158.942
     }
   },
   "indicators": {
@@ -735,26 +743,52 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 4650.47,
-      "rsi": 54.5,
-      "macd_hist": -0.4586,
-      "atr": 10.7446,
-      "bb_width": 0.0078,
-      "ema9": 4647.0716,
-      "ema21": 4647.057
+      "bid": 4653.78,
+      "rsi": 56.3,
+      "macd_hist": -0.2083,
+      "atr": 11.0168,
+      "bb_width": 0.0079,
+      "ema9": 4647.7776,
+      "ema21": 4647.3779
+    },
+    "EURUSDM2026": {
+      "name": "EUR/USD",
+      "regime": "RANGING",
+      "trend_1h": "RANGING",
+      "trend_15m": "RANGING",
+      "bid": 1.15788,
+      "rsi": 71.9,
+      "macd_hist": 0.0001,
+      "atr": 0.0004,
+      "bb_width": 0.0015,
+      "ema9": 1.1574,
+      "ema21": 1.1572
+    },
+    "GBPUSD": {
+      "name": "GBP/USD",
+      "regime": "RANGING",
+      "trend_1h": "RANGING",
+      "trend_15m": "RANGING",
+      "bid": 1.32449,
+      "rsi": 79.6,
+      "macd_hist": 0.0003,
+      "atr": 0.0006,
+      "bb_width": 0.0027,
+      "ema9": 1.3237,
+      "ema21": 1.3232
     },
     "USDJPYM2026": {
       "name": "USD/JPY",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 158.92,
-      "rsi": 40.4,
-      "macd_hist": -0.001,
-      "atr": 0.0463,
-      "bb_width": 0.0012,
-      "ema9": 158.9138,
-      "ema21": 158.9248
+      "bid": 158.929,
+      "rsi": 45.6,
+      "macd_hist": 0.0019,
+      "atr": 0.0454,
+      "bb_width": 0.0011,
+      "ema9": 158.916,
+      "ema21": 158.9287
     }
   },
   "actions": []
