@@ -1,69 +1,172 @@
 {
-  "lastUpdate": "2026-04-07 10:10:22",
+  "lastUpdate": "2026-04-07 18:28",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
-  "positions": [
+  "account": {
+    "initialCapital": 464,
+    "balance": 462.06,
+    "available": 462.06,
+    "unrealizedPnl": 0,
+    "netEquity": 462.06,
+    "todayPnl": -3.97,
+    "totalPnl": -1.94,
+    "leverage": 10,
+    "marginType": "ISOLATED",
+    "totalTrades": 10,
+    "winRate": "40.0%",
+    "wins": 4,
+    "losses": 6,
+    "maxDrawdown": 0.6
+  },
+  "position": {
+    "symbol": "BTCUSDT",
+    "side": "SHORT",
+    "size": 25,
+    "entryPrice": 8.652,
+    "markPrice": 8.652,
+    "pnl": 0,
+    "leverage": 10,
+    "trailingStop": 8.716340713399095
+  },
+  "signals": {
+    "score": 50,
+    "direction": "SHORT",
+    "marketState": "TRENDING_DOWN",
+    "buyScore": 0,
+    "sellScore": 0,
+    "activeSignals": []
+  },
+  "recentTrades": [
     {
-      "symbol": "BTCUSDT",
-      "side": null,
-      "size": 0,
-      "entryPrice": 0,
-      "pnl": 0
-    },
-    {
-      "symbol": "ETHUSDT",
-      "side": null,
-      "size": 0,
-      "entryPrice": 0,
-      "pnl": 0
-    },
-    {
+      "time": "2026-04-07T10:27:51.217Z",
       "symbol": "AVAXUSDT",
       "side": "SHORT",
-      "size": 25,
       "entryPrice": 8.693,
-      "pnl": 0
+      "pnl": -0.15,
+      "strategy": "TREND_FOLLOW",
+      "reasons": [
+        "1H EMA 空排",
+        "RSI回彈52"
+      ]
     },
     {
-      "symbol": "DOTUSDT",
+      "time": "2026-04-07T10:10:07.149Z",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entryPrice": 2130.47,
+      "pnl": -1.29,
+      "strategy": "SESSION_BREAKOUT",
+      "reasons": [
+        "MACD柱增",
+        "量能放大",
+        "動量+1.04%",
+        "RSI突破BB上軌",
+        "亞盤突破↑(28)"
+      ]
+    },
+    {
+      "time": "2026-04-07T10:10:05.915Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 69183.9,
+      "pnl": -0.68,
+      "strategy": "SESSION_BREAKOUT",
+      "reasons": [
+        "MACD柱增",
+        "量能放大",
+        "動量+0.67%",
+        "RSI突破BB上軌",
+        "亞盤突破↑(870)"
+      ]
+    },
+    {
+      "time": "2026-04-07T05:50:13.932Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 68603.1,
+      "pnl": 0.16,
+      "strategy": "UNKNOWN",
+      "reasons": []
+    },
+    {
+      "time": "2026-04-07T01:00:13.824Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 68452,
+      "pnl": 2.7,
+      "strategy": "TREND_FOLLOW",
+      "reasons": [
+        "1H EMA 多排",
+        "RSI超賣24",
+        "量能放大"
+      ]
+    },
+    {
+      "time": "2026-04-06T23:10:09.277Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 68763.9,
+      "pnl": -4.72,
+      "strategy": "MOMENTUM",
+      "reasons": [
+        "1H EMA 多排",
+        "RSI超賣29",
+        "量能放大"
+      ]
+    },
+    {
+      "time": "2026-04-06T21:35:00.000Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 69331.7,
+      "exit": 69570.5,
+      "pnl": 2.55,
+      "strategy": "MOMENTUM",
+      "size": 0.013,
+      "reason": "Trailing SL triggered at 69570.5"
+    },
+    {
+      "time": "2026-04-06T12:57:01.858Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 69181.7,
+      "pnl": 1.7,
+      "strategy": "UNKNOWN",
+      "reasons": []
+    },
+    {
+      "time": "2026-04-06T07:30:58.000Z",
+      "strategy": "MANUAL_CLOSE",
+      "pnl": -1.1,
+      "side": "LONG",
+      "entry": 69106.8,
+      "exit": 69022.5,
+      "size": 0.013,
+      "reason": "Engine closePosition 400 bug - manually closed"
+    },
+    {
+      "time": "2026-04-05T11:15:14.644Z",
+      "strategy": "RECOVERED",
+      "pnl": -1.107,
       "side": "SHORT",
-      "size": 186,
-      "entryPrice": 1.234,
-      "pnl": 0
+      "entry": 66796.7,
+      "exit": 67018.1,
+      "size": 0.005
     }
   ],
-  "marketStats": {
-    "BTCUSDT": {
-      "trades": 8,
-      "wins": 4,
-      "losses": 4,
-      "pnl": -0.5
-    },
-    "ETHUSDT": {
-      "trades": 1,
-      "wins": 0,
-      "losses": 1,
-      "pnl": -1.29
-    },
-    "AVAXUSDT": {
-      "trades": 0,
-      "wins": 0,
-      "losses": 0,
-      "pnl": 0
-    },
-    "DOTUSDT": {
-      "trades": 0,
-      "wins": 0,
-      "losses": 0,
-      "pnl": 0
-    }
+  "strategyWeights": {
+    "BREAKOUT": 1,
+    "TREND_FOLLOW": 1,
+    "REVERSAL": 0.8,
+    "MOMENTUM": 1,
+    "FUNDING_ARB": 0.7,
+    "NEWS_EVENT": 0.5
   },
-  "totalStats": {
-    "trades": 9,
-    "wins": 4,
-    "losses": 5,
-    "pnl": -1.79,
-    "winRate": 0.44
+  "riskStatus": {
+    "dailyLossUsed": "$3.97 / $23.20",
+    "dailyTradesUsed": "6 / 10",
+    "consecutiveLosses": "0",
+    "paused": false
   }
 }
