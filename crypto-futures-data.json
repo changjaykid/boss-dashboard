@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-07 22:31",
+  "lastUpdate": "2026-04-07 22:50",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
@@ -20,17 +20,17 @@
     "maxDrawdown": 1.2
   },
   "position": {
-    "symbol": "DOTUSDT",
+    "symbol": "AVAXUSDT",
     "side": "SHORT",
-    "size": 186.10000000000002,
-    "entryPrice": 1.218,
-    "markPrice": 1.218,
+    "size": 25,
+    "entryPrice": 8.578,
+    "markPrice": 8.578,
     "pnl": 0,
     "leverage": 10,
-    "trailingStop": 1.2279193950158516
+    "trailingStop": 8.647897839009287
   },
   "signals": {
-    "score": 48,
+    "score": 35,
     "direction": "SHORT",
     "marketState": "TRENDING_DOWN",
     "buyScore": 0,
