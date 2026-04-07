@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-07 12:00:20",
+  "lastUpdate": "2026-04-07 12:10:18",
   "account": {
-    "balance": 31021.95,
+    "balance": 31021.93,
     "realizedPnl": -439.36,
-    "unrealizedPnl": 9.79,
-    "netEquity": 31031.74,
+    "unrealizedPnl": 8.07,
+    "netEquity": 31030.0,
     "todayPnl": -11.51,
     "weekPnl": -98.27,
     "totalTrades": 210,
@@ -39,9 +39,9 @@
       "entryPrice": 4640.4,
       "stopLevel": 4604.8,
       "profitLevel": 4711.6,
-      "currentBid": 4650.19,
-      "currentAsk": 4650.69,
-      "pnl": 9.79,
+      "currentBid": 4648.47,
+      "currentAsk": 4648.97,
+      "pnl": 8.07,
       "instrument": "Gold",
       "epic": "GOLD",
       "createdDate": "2026-04-06T09:10:21.563"
@@ -721,12 +721,12 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4650.1,
-      "ask": 4650.6
+      "bid": 4648.43,
+      "ask": 4648.93
     },
     "USDJPYM2026": {
-      "bid": 158.95,
-      "ask": 158.971
+      "bid": 158.945,
+      "ask": 158.964
     }
   },
   "indicators": {
@@ -735,29 +735,27 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 4650.1,
-      "rsi": 45.0,
-      "macd_hist": 1.8446,
-      "atr": 15.0764,
-      "bb_width": 0.0087,
-      "ema9": 4645.5807,
-      "ema21": 4648.2418
+      "bid": 4648.43,
+      "rsi": 44.2,
+      "macd_hist": 2.238,
+      "atr": 15.0789,
+      "bb_width": 0.0084,
+      "ema9": 4646.3921,
+      "ema21": 4648.9779
     },
     "USDJPYM2026": {
       "name": "USD/JPY",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 158.95,
-      "rsi": 64.3,
-      "macd_hist": -0.0115,
-      "atr": 0.0493,
-      "bb_width": 0.0018,
-      "ema9": 158.9785,
-      "ema21": 158.9338
+      "bid": 158.945,
+      "rsi": 57.6,
+      "macd_hist": -0.0135,
+      "atr": 0.0492,
+      "bb_width": 0.0017,
+      "ema9": 158.9754,
+      "ema21": 158.9332
     }
   },
-  "actions": [
-    "BLOCKED: GOLD SELL \u2014 \u5df2\u6301\u6709 GOLD"
-  ]
+  "actions": []
 }
