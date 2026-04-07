@@ -1,30 +1,30 @@
 {
-  "lastUpdate": "2026-04-06 13:13",
+  "lastUpdate": "2026-04-07 11:33",
   "status": "RUNNING",
   "mode": "v3 精簡雙策略",
   "exchange": "Binance Futures",
   "account": {
     "initialCapital": 464,
-    "balance": 464.00637588,
-    "available": 374.61673008,
-    "unrealizedPnl": 0.26415523,
-    "netEquity": 464.27053111,
+    "balance": 459.45742892,
+    "available": 370.71880171,
+    "unrealizedPnl": 1.38614355,
+    "netEquity": 460.84357246999997,
     "todayPnl": 0,
-    "totalPnl": -1.107,
+    "totalPnl": -0.87248342,
     "leverage": 10,
-    "totalTrades": 1,
-    "winRate": "0.0%",
-    "wins": 0,
-    "losses": 1,
-    "maxDrawdown": 0.24
+    "totalTrades": 4,
+    "winRate": "25.0%",
+    "wins": 1,
+    "losses": 3,
+    "maxDrawdown": 0.48
   },
   "position": {
     "symbol": "BTCUSDT",
     "side": "LONG",
     "size": 0.013,
-    "entryPrice": 69106.8,
-    "markPrice": 69127.11963333,
-    "pnl": 0.26415523,
+    "entryPrice": 68603.1,
+    "markPrice": 68709.72642754,
+    "pnl": 1.38614355,
     "leverage": 10,
     "trailingStop": null
   },
@@ -36,29 +36,58 @@
     "remaining": 3
   },
   "totalStats": {
-    "trades": 1,
-    "wins": 0,
-    "losses": 1,
-    "pnl": -1.107,
-    "winRate": 0,
+    "trades": 4,
+    "wins": 1,
+    "losses": 3,
+    "pnl": -0.87248342,
+    "winRate": 0.25,
     "avgRR": 0,
-    "maxDrawdown": 0.24,
+    "maxDrawdown": 0.48,
     "peakBalance": 464
   },
   "signals": {
-    "score": 20,
+    "score": 17,
     "direction": "LONG",
     "strategy": "TREND_FOLLOW",
-    "marketState": "TRENDING_UP",
+    "marketState": "TRENDING_DOWN",
     "trend4h": "UP",
-    "session": "TRANSITION",
+    "session": "ASIA_PEAK",
     "reasons": [
-      "1H EMA 多排"
+      "RSI回踩44",
+      "MACD柱增"
     ],
-    "buyScore": 20,
+    "buyScore": 17,
     "sellScore": 0
   },
   "recentTrades": [
+    {
+      "time": "2026-04-06T17:15:01.611Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 69337.4,
+      "pnl": -0.36,
+      "strategy": "UNKNOWN",
+      "reasons": []
+    },
+    {
+      "time": "2026-04-06T12:57:01.858Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 69181.7,
+      "pnl": 1.7,
+      "strategy": "UNKNOWN",
+      "reasons": []
+    },
+    {
+      "time": "2026-04-06T07:30:58.000Z",
+      "strategy": "MANUAL_CLOSE",
+      "pnl": -1.1,
+      "side": "LONG",
+      "entry": 69106.8,
+      "exit": 69022.5,
+      "size": 0.013,
+      "reason": "Engine closePosition 400 bug - manually closed"
+    },
     {
       "time": "2026-04-05T11:15:14.644Z",
       "strategy": "RECOVERED",
