@@ -6,8 +6,8 @@
   "totalEquity": 10059,
   "netEquity": 10059,
   "totalPnl": 59,
-  "btcPrice": 2310055,
-  "btcChange24h": 4.95,
+  "btcPrice": 2310254,
+  "btcChange24h": 4.96,
   "holdings": {
     "btc": 0,
     "avgCost": 0,
@@ -107,14 +107,14 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2310055,
+      "price": 2310254,
       "rsi": "74.3",
-      "bbPos": "144%"
+      "bbPos": "145%"
     },
     "ETH": {
-      "price": 71953,
-      "rsi": "59.8",
-      "bbPos": "102%"
+      "price": 71922,
+      "rsi": "60.1",
+      "bbPos": "97%"
     },
     "SOL": {
       "price": 2689,
@@ -124,7 +124,7 @@
     "DOGE": {
       "price": 3,
       "rsi": "58.7",
-      "bbPos": "86%"
+      "bbPos": "68%"
     }
   },
   "twdCash": 8096
