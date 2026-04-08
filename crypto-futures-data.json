@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-08 07:14",
+  "lastUpdate": "2026-4-8 下午3:38:18",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
@@ -7,20 +7,19 @@
     "initialCapital": 464,
     "balance": 448.86,
     "available": 426.58,
-    "unrealizedPnl": -0.11,
-    "netEquity": 448.76,
-    "todayPnl": -2.91,
-    "totalPnl": -15.14,
-    "totalRealizedPnl": -6.51
+    "unrealizedPnl": -0.42,
+    "netEquity": 448.44,
+    "totalPnl": -15.14
   },
   "position": {
     "symbol": "SOLUSDT",
     "side": "LONG",
     "size": 2.65,
     "entryPrice": 84.48,
-    "markPrice": 84.44,
-    "pnl": -0.11,
-    "leverage": 10
+    "markPrice": 84.32,
+    "pnl": -0.42,
+    "leverage": 10,
+    "trailingStop": 83.85485577891846
   },
   "signals": {
     "score": 40,
@@ -32,184 +31,144 @@
   },
   "recentTrades": [
     {
-      "time": "2026-04-08T05:00:21.772Z",
-      "symbol": "SOLUSDT",
-      "side": "BUY",
-      "price": 84.48,
-      "qty": 2.65,
-      "realizedPnl": 0,
-      "commission": 0.1119
-    },
-    {
-      "time": "2026-04-07T19:17:22.089Z",
+      "time": "2026-04-07T19:17:22.000Z",
       "symbol": "DOTUSDT",
-      "side": "BUY",
-      "price": 1.223,
-      "qty": 9.2,
-      "realizedPnl": -0.0276,
-      "commission": 0.0056
+      "side": "SHORT",
+      "pnl": -0.11,
+      "strategy": "1143952014"
     },
     {
-      "time": "2026-04-07T19:17:22.089Z",
+      "time": "2026-04-07T19:17:22.000Z",
       "symbol": "DOTUSDT",
-      "side": "BUY",
-      "price": 1.223,
-      "qty": 4.1,
-      "realizedPnl": -0.0123,
-      "commission": 0.0025
+      "side": "SHORT",
+      "pnl": -0.32,
+      "strategy": "1143952013"
     },
     {
-      "time": "2026-04-07T19:17:22.089Z",
+      "time": "2026-04-07T19:17:22.000Z",
       "symbol": "DOTUSDT",
-      "side": "BUY",
-      "price": 1.223,
-      "qty": 8.8,
-      "realizedPnl": -0.0264,
-      "commission": 0.0054
+      "side": "SHORT",
+      "pnl": -0.03,
+      "strategy": "1143952012"
     },
     {
-      "time": "2026-04-07T19:17:22.089Z",
+      "time": "2026-04-07T19:17:22.000Z",
       "symbol": "DOTUSDT",
-      "side": "BUY",
-      "price": 1.223,
-      "qty": 105,
-      "realizedPnl": -0.315,
-      "commission": 0.0642
+      "side": "SHORT",
+      "pnl": -0.01,
+      "strategy": "1143952011"
     },
     {
-      "time": "2026-04-07T19:17:22.089Z",
+      "time": "2026-04-07T19:17:22.000Z",
       "symbol": "DOTUSDT",
-      "side": "BUY",
-      "price": 1.223,
-      "qty": 35.2,
-      "realizedPnl": -0.1056,
-      "commission": 0.0215
+      "side": "SHORT",
+      "pnl": -0.03,
+      "strategy": "1143952010"
     },
     {
-      "time": "2026-04-07T19:17:02.280Z",
+      "time": "2026-04-07T19:17:02.000Z",
       "symbol": "AVAXUSDT",
-      "side": "BUY",
-      "price": 8.681,
-      "qty": 23,
-      "realizedPnl": -1.334,
-      "commission": 0.0998
+      "side": "SHORT",
+      "pnl": -1.33,
+      "strategy": "1357610681"
     },
     {
-      "time": "2026-04-07T18:53:13.061Z",
+      "time": "2026-04-07T18:53:13.000Z",
       "symbol": "BTCUSDT",
-      "side": "SELL",
-      "price": 68348.6,
-      "qty": 0.002,
-      "realizedPnl": -0.0206,
-      "commission": 0.0683
+      "side": "SHORT",
+      "pnl": -0.02,
+      "strategy": "7534690057"
     },
     {
-      "time": "2026-04-07T18:45:24.070Z",
+      "time": "2026-04-07T18:45:24.000Z",
       "symbol": "ETHUSDT",
-      "side": "SELL",
-      "price": 2088.82,
-      "qty": 0.098,
-      "realizedPnl": 0.8526,
-      "commission": 0.1024
+      "side": "LONG",
+      "pnl": 0.85,
+      "strategy": "7934030034"
     },
     {
-      "time": "2026-04-07T18:20:08.304Z",
+      "time": "2026-04-07T18:15:10.000Z",
       "symbol": "AVAXUSDT",
-      "side": "SELL",
-      "price": 8.623,
-      "qty": 8,
-      "realizedPnl": 0,
-      "commission": 0.0345
+      "side": "SHORT",
+      "pnl": -0.05,
+      "strategy": "1357590806"
     },
     {
-      "time": "2026-04-07T18:20:08.304Z",
+      "time": "2026-04-07T17:36:38.000Z",
       "symbol": "AVAXUSDT",
-      "side": "SELL",
-      "price": 8.623,
-      "qty": 2,
-      "realizedPnl": 0,
-      "commission": 0.0086
+      "side": "SHORT",
+      "pnl": -1.88,
+      "strategy": "1357575048"
     },
     {
-      "time": "2026-04-07T18:20:08.304Z",
+      "time": "2026-04-07T14:23:50.000Z",
       "symbol": "AVAXUSDT",
-      "side": "SELL",
-      "price": 8.623,
-      "qty": 13,
-      "realizedPnl": 0,
-      "commission": 0.056
+      "side": "LONG",
+      "pnl": 1.94,
+      "strategy": "1357503981"
     },
     {
-      "time": "2026-04-07T18:15:10.065Z",
-      "symbol": "AVAXUSDT",
-      "side": "BUY",
-      "price": 8.641,
-      "qty": 24,
-      "realizedPnl": -0.048,
-      "commission": 0.1037
-    },
-    {
-      "time": "2026-04-07T17:40:10.669Z",
+      "time": "2026-04-07T14:21:43.000Z",
       "symbol": "DOTUSDT",
-      "side": "SELL",
-      "price": 1.22,
-      "qty": 162.3,
-      "realizedPnl": 0,
-      "commission": 0.099
+      "side": "LONG",
+      "pnl": 0.3,
+      "strategy": "1143915447"
     },
     {
-      "time": "2026-04-07T17:40:09.344Z",
-      "symbol": "AVAXUSDT",
-      "side": "SELL",
-      "price": 8.639,
-      "qty": 24,
-      "realizedPnl": 0,
-      "commission": 0.1037
-    },
-    {
-      "time": "2026-04-07T17:36:38.083Z",
-      "symbol": "AVAXUSDT",
-      "side": "BUY",
-      "price": 8.653,
-      "qty": 25,
-      "realizedPnl": -1.875,
-      "commission": 0.1082
-    },
-    {
-      "time": "2026-04-07T17:30:40.243Z",
+      "time": "2026-04-07T14:21:43.000Z",
       "symbol": "DOTUSDT",
-      "side": "BUY",
-      "price": 1.217,
-      "qty": 186.1,
-      "realizedPnl": 0,
-      "commission": 0.1132
+      "side": "LONG",
+      "pnl": 0.16,
+      "strategy": "1143915446"
     },
     {
-      "time": "2026-04-07T16:30:05.752Z",
-      "symbol": "BTCUSDT",
-      "side": "BUY",
-      "price": 68358.9,
-      "qty": 0.002,
-      "realizedPnl": 0,
-      "commission": 0.0684
+      "time": "2026-04-07T14:21:43.000Z",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "pnl": 0.43,
+      "strategy": "1143915445"
     },
     {
-      "time": "2026-04-07T15:30:08.143Z",
-      "symbol": "ETHUSDT",
-      "side": "BUY",
-      "price": 2080.12,
-      "qty": 0.098,
-      "realizedPnl": 0,
-      "commission": 0.1019
-    },
-    {
-      "time": "2026-04-07T14:40:19.632Z",
+      "time": "2026-04-07T13:09:01.000Z",
       "symbol": "AVAXUSDT",
-      "side": "SELL",
-      "price": 8.578,
-      "qty": 3,
-      "realizedPnl": 0,
-      "commission": 0.0129
+      "side": "SHORT",
+      "pnl": -5.76,
+      "strategy": "1357465871"
+    },
+    {
+      "time": "2026-04-07T12:14:54.000Z",
+      "symbol": "AVAXUSDT",
+      "side": "LONG",
+      "pnl": 1.2,
+      "strategy": "1357437690"
+    },
+    {
+      "time": "2026-04-07T12:14:54.000Z",
+      "symbol": "AVAXUSDT",
+      "side": "LONG",
+      "pnl": 0.06,
+      "strategy": "1357437689"
+    },
+    {
+      "time": "2026-04-07T12:14:54.000Z",
+      "symbol": "AVAXUSDT",
+      "side": "LONG",
+      "pnl": 0.06,
+      "strategy": "1357437688"
+    },
+    {
+      "time": "2026-04-07T12:14:54.000Z",
+      "symbol": "AVAXUSDT",
+      "side": "LONG",
+      "pnl": 0.11,
+      "strategy": "1357437687"
+    },
+    {
+      "time": "2026-04-07T12:00:26.000Z",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "pnl": 0.19,
+      "strategy": "1143884314"
     }
   ],
   "strategyWeights": {
