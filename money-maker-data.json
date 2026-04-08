@@ -1,47 +1,17 @@
 {
-  "lastUpdate": "2026-04-08 15:36",
+  "lastUpdate": "2026-04-08 15:42",
   "status": "RUNNING",
   "mode": "batch_swing_v6",
   "capital": 10000,
-  "totalEquity": 10035,
-  "netEquity": 10035,
-  "totalPnl": 35,
-  "btcPrice": 2280585,
-  "btcChange24h": 3.48,
+  "totalEquity": 6380,
+  "netEquity": 6380,
+  "totalPnl": 77,
+  "btcPrice": 2280600,
+  "btcChange24h": 3.54,
   "holdings": {
     "btc": 0.00012493,
     "avgCost": 2204751,
-    "currentPrice": 2282890,
-    "marketValue": 285,
-    "costBasis": 275,
-    "unrealizedPnl": 24,
-    "unrealizedPnlPct": "+0.24%",
-    "positions": [
-      {
-        "coin": "BTC",
-        "held": 0.00012493,
-        "value": 285,
-        "pnl": 10
-      },
-      {
-        "coin": "ETH",
-        "held": 0.00392871,
-        "value": 281,
-        "pnl": 16
-      },
-      {
-        "coin": "SOL",
-        "held": 0.7246288,
-        "value": 1944,
-        "pnl": -2
-      },
-      {
-        "coin": "DOGE",
-        "held": 140.1024,
-        "value": 421,
-        "pnl": 0
-      }
-    ]
+    "unrealizedPnl": -3620
   },
   "buyOrders": 12,
   "sellOrders": 12,
@@ -75,9 +45,9 @@
     {
       "market": "soltwd",
       "held": 0.72996927,
-      "value": 1970,
+      "value": 1963,
       "avgEntry": 2685,
-      "pnl": 10
+      "pnl": 3
     },
     {
       "market": "dogetwd",
@@ -108,140 +78,5 @@
       "wins": 2,
       "pnl": 42
     }
-  },
-  "recentTrades": [
-    {
-      "time": 1775628679121,
-      "market": "soltwd",
-      "coin": "SOL",
-      "side": "BUY",
-      "price": 2679.8,
-      "twd": 360,
-      "amount": 0.134123442047914,
-      "entryPrice": 2679.8,
-      "reason": "強買入(3.0)"
-    },
-    {
-      "time": 1775628364871,
-      "market": "soltwd",
-      "coin": "SOL",
-      "side": "BUY",
-      "price": 2679.4,
-      "twd": 600,
-      "amount": 0.22357244159140105,
-      "entryPrice": 2679.4,
-      "reason": "強買入(3.0)"
-    },
-    {
-      "time": 1775628004722,
-      "market": "soltwd",
-      "coin": "SOL",
-      "side": "BUY",
-      "price": 2681.9,
-      "twd": 1000,
-      "amount": 0.3722733882695104,
-      "entryPrice": 2681.9,
-      "reason": "強買入(3.0)"
-    },
-    {
-      "time": 1775542863224,
-      "market": "ethtwd",
-      "coin": "ETH",
-      "side": "BUY",
-      "price": 67285.7,
-      "twd": 595,
-      "amount": 0.00882874072797043,
-      "entryPrice": 67285.7,
-      "reason": "強買入(4.5)"
-    },
-    {
-      "time": 1775527742910,
-      "market": "ethtwd",
-      "coin": "ETH",
-      "side": "BUY",
-      "price": 67242.9,
-      "twd": 339,
-      "amount": 0.005033358168669108,
-      "entryPrice": 67242.9,
-      "reason": "佈局買入(2.0)"
-    },
-    {
-      "time": 1775527205178,
-      "market": "dogetwd",
-      "coin": "DOGE",
-      "side": "BUY",
-      "price": 2.9083,
-      "twd": 285,
-      "amount": 97.83859986933946,
-      "entryPrice": 2.9083,
-      "reason": "佈局買入(2.0)"
-    },
-    {
-      "time": 1775526845659,
-      "market": "dogetwd",
-      "coin": "DOGE",
-      "side": "BUY",
-      "price": 2.9032,
-      "twd": 760,
-      "amount": 261.36125654450257,
-      "entryPrice": 2.9032,
-      "reason": "強買入(3.0)"
-    },
-    {
-      "time": 1775526843124,
-      "market": "ethtwd",
-      "coin": "ETH",
-      "side": "BUY",
-      "price": 67285.7,
-      "twd": 600,
-      "amount": 0.008902931826524805,
-      "entryPrice": 67285.7,
-      "reason": "佈局買入(2.0)"
-    },
-    {
-      "time": 1775524502674,
-      "market": "btctwd",
-      "coin": "BTC",
-      "side": "BUY",
-      "price": 2198107.6,
-      "twd": 356,
-      "amount": 0.0001616983627189133,
-      "entryPrice": 2198107.6,
-      "reason": "佈局買入(2.0)"
-    },
-    {
-      "time": 1775524142281,
-      "market": "btctwd",
-      "coin": "BTC",
-      "side": "BUY",
-      "price": 2200000,
-      "twd": 475,
-      "amount": 0.00021556363636363634,
-      "entryPrice": 2200000,
-      "reason": "佈局買入(2.0)"
-    },
-    {
-      "time": 1775523782851,
-      "market": "btctwd",
-      "coin": "BTC",
-      "side": "BUY",
-      "price": 2204047.6,
-      "twd": 600,
-      "amount": 0.00027179086331892286,
-      "entryPrice": 2204047.6,
-      "reason": "佈局買入(2.0)"
-    },
-    {
-      "time": 1775520366346,
-      "market": "dogetwd",
-      "coin": "DOGE",
-      "side": "BUY",
-      "price": 2.9125,
-      "twd": 600,
-      "amount": 205.67896995708153,
-      "entryPrice": 2.9125,
-      "reason": "佈局買入(2.0)"
-    }
-  ],
-  "twdCash": 7105
+  }
 }
