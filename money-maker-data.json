@@ -1,20 +1,20 @@
 {
-  "lastUpdate": "2026-04-08 12:00",
+  "lastUpdate": "2026-04-08 12:03",
   "status": "RUNNING",
   "mode": "batch_swing_v6",
   "capital": 10000,
-  "totalEquity": 7599,
-  "netEquity": 7599,
-  "totalPnl": 35,
-  "btcPrice": 2272718,
-  "btcChange24h": 3.01,
+  "totalEquity": 6798,
+  "netEquity": 6798,
+  "totalPnl": 62,
+  "btcPrice": 2273710,
+  "btcChange24h": 3.05,
   "holdings": {
     "btc": 0.00012493,
     "avgCost": 2204751,
-    "unrealizedPnl": -2401
+    "unrealizedPnl": -3202
   },
-  "buyOrders": 10,
-  "sellOrders": 10,
+  "buyOrders": 11,
+  "sellOrders": 11,
   "consecutiveLosses": 0,
   "fearGreedIndex": "--",
   "nextAction": "持倉監控中",
@@ -41,6 +41,13 @@
       "value": 280,
       "avgEntry": 67384,
       "pnl": -1254
+    },
+    {
+      "market": "dogetwd",
+      "held": 280.1024,
+      "value": 844,
+      "avgEntry": 3,
+      "pnl": -801
     }
   ],
   "marketStats": {
@@ -59,10 +66,10 @@
       "wins": 3,
       "pnl": 11
     },
-    "avaxtwd": {
-      "trades": 0,
-      "wins": 0,
-      "pnl": 0
+    "dogetwd": {
+      "trades": 1,
+      "wins": 1,
+      "pnl": 27
     }
   }
 }
