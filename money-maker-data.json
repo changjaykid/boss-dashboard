@@ -1,17 +1,17 @@
 {
-  "lastUpdate": "2026-04-08 18:45",
+  "lastUpdate": "2026-04-08 19:00",
   "status": "RUNNING",
   "mode": "batch_swing_v6",
   "capital": 10000,
-  "totalEquity": 10056,
-  "netEquity": 10056,
-  "totalPnl": 56,
-  "btcPrice": 2276312,
-  "btcChange24h": 3.61,
+  "totalEquity": 10053,
+  "netEquity": 10053,
+  "totalPnl": 53,
+  "btcPrice": 2273163,
+  "btcChange24h": 3.86,
   "holdings": {
     "btc": 0.00012493,
     "avgCost": 2204751,
-    "unrealizedPnl": -3619,
+    "unrealizedPnl": -3622,
     "positions": [
       {
         "coin": "BTC",
@@ -22,20 +22,20 @@
       {
         "coin": "ETH",
         "held": 0.00392871,
-        "value": 281,
-        "pnl": -1253
+        "value": 280,
+        "pnl": -1254
       },
       {
         "coin": "SOL",
         "held": 0.72996927,
-        "value": 1964,
-        "pnl": 4
+        "value": 1963,
+        "pnl": 3
       },
       {
         "coin": "DOGE",
         "held": 140.1024,
-        "value": 422,
-        "pnl": -1223
+        "value": 421,
+        "pnl": -1224
       }
     ]
   },
@@ -64,23 +64,23 @@
     {
       "market": "ethtwd",
       "held": 0.00392871,
-      "value": 281,
+      "value": 280,
       "avgEntry": 67384,
-      "pnl": -1253
+      "pnl": -1254
     },
     {
       "market": "soltwd",
       "held": 0.72996927,
-      "value": 1964,
+      "value": 1963,
       "avgEntry": 2685,
-      "pnl": 4
+      "pnl": 3
     },
     {
       "market": "dogetwd",
       "held": 140.1024,
-      "value": 422,
+      "value": 421,
       "avgEntry": 3,
-      "pnl": -1223
+      "pnl": -1224
     }
   ],
   "marketStats": {
