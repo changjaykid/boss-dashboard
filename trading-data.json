@@ -1,13 +1,13 @@
 {
-  "lastUpdate": "2026-04-08 14:27:44",
+  "lastUpdate": "2026-04-08 16:50:03",
   "account": {
-    "balance": 31022.56,
+    "balance": 31021.98,
     "realizedPnl": -354.68,
     "unrealizedPnl": 0,
-    "netEquity": 31022.56,
+    "netEquity": 31021.98,
     "todayPnl": -10.3,
     "weekPnl": -13.59,
-    "totalTrades": 197,
+    "totalTrades": 199,
     "closedTrades": 193,
     "openCount": 0,
     "wins": 38,
@@ -667,18 +667,22 @@
       "\u8003\u616e\u505c\u7528 breakout_outside_bar\uff08\u52dd\u7387 0%\uff0cPnL $-29.53\uff09"
     ],
     "strategiesUnderTest": [
+      "breakout_range",
+      "reversion_bollinger",
       "trend_ema_cross",
-      "trend_mtf_alignment",
       "trend_elliott_wave3",
       "trend_flag_breakout",
-      "reversion_sr",
-      "reversion_rsi_divergence",
-      "reversion_bollinger",
+      "trend_mtf_alignment",
       "reversion_pin_bar",
       "breakout_pattern",
+      "breakout_outside_bar",
       "breakout_bollinger_squeeze",
-      "breakout_range",
-      "breakout_outside_bar"
+      "reversion_rsi_divergence",
+      "reversion_sr",
+      "asian_range_breakout",
+      "session_momentum",
+      "multi_indicator_consensus",
+      "atr_breakout"
     ],
     "recentChanges": [
       "v6: 12 modular strategies",
@@ -706,12 +710,20 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4831.96,
-      "ask": 4832.46
+      "bid": 4794.17,
+      "ask": 4794.67
+    },
+    "EURUSDM2026": {
+      "bid": 1.17144,
+      "ask": 1.17153
+    },
+    "GBPUSD": {
+      "bid": 1.34205,
+      "ask": 1.34219
     },
     "USDJPYM2026": {
-      "bid": 157.273,
-      "ask": 157.293
+      "bid": 157.514,
+      "ask": 157.532
     }
   },
   "indicators": {
@@ -720,36 +732,56 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 4831.96,
-      "rsi": 77.8,
-      "macd_hist": 5.0877,
-      "atr": 10.5818,
-      "bb_width": 0.0087,
-      "ema9": 4819.3615,
-      "ema21": 4815.3578
+      "bid": 4794.17,
+      "rsi": 39.1,
+      "macd_hist": -4.8144,
+      "atr": 14.1646,
+      "bb_width": 0.0101,
+      "ema9": 4807.7242,
+      "ema21": 4809.0987
+    },
+    "EURUSDM2026": {
+      "name": "EUR/USD",
+      "regime": "RANGING",
+      "trend_1h": "RANGING",
+      "trend_15m": "RANGING",
+      "bid": 1.17144,
+      "rsi": 46.9,
+      "macd_hist": -0.0003,
+      "atr": 0.0013,
+      "bb_width": 0.0029,
+      "ema9": 1.172,
+      "ema21": 1.1718
+    },
+    "GBPUSD": {
+      "name": "GBP/USD",
+      "regime": "RANGING",
+      "trend_1h": "RANGING",
+      "trend_15m": "RANGING",
+      "bid": 1.34205,
+      "rsi": 48.1,
+      "macd_hist": -0.0003,
+      "atr": 0.0015,
+      "bb_width": 0.0026,
+      "ema9": 1.3422,
+      "ema21": 1.3418
     },
     "USDJPYM2026": {
       "name": "USD/JPY",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 157.273,
-      "rsi": 28.8,
-      "macd_hist": -0.0156,
-      "atr": 0.1033,
-      "bb_width": 0.002,
-      "ema9": 157.451,
-      "ema21": 157.551
+      "bid": 157.514,
+      "rsi": 51.4,
+      "macd_hist": 0.034,
+      "atr": 0.1354,
+      "bb_width": 0.0027,
+      "ema9": 157.4476,
+      "ema21": 157.4656
     }
   },
   "actions": [
-    "SYNC_CLOSE: GOLD BUY PnL=$-0.36 (calculated_from_market)",
-    "SYNC_CLOSE: US30 SELL PnL=$-5.36 (calculated_from_market)",
-    "SYNC_CLOSE: US100 SELL PnL=$-3.71 (calculated_from_market)",
-    "SYNC_CLOSE: US500 BUY PnL=$-0.87 (calculated_from_market)",
-    "OPENED BUY GOLD [trend_mtf_alignment] Conf:0.75 SL:12.7 TP:31.7",
-    "OPENED BUY GOLD [breakout_pattern] Conf:0.75 SL:15.9 TP:31.7",
-    "OPENED BUY GOLD [breakout_bollinger_squeeze] Conf:0.70 SL:15.9 TP:31.7",
-    "OPENED BUY GOLD [breakout_range] Conf:0.68 SL:12.7 TP:30.0"
+    "OPENED SELL GOLD [session_momentum] Conf:0.68 SL:14.2 TP:35.4",
+    "OPENED SELL GOLD [multi_indicator_consensus] Conf:0.65 SL:17.0 TP:35.4"
   ]
 }

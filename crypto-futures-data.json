@@ -1,25 +1,33 @@
 {
-  "lastUpdate": "2026-4-8 下午3:47:12",
+  "lastUpdate": "2026-04-08 16:43",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
   "account": {
     "initialCapital": 464,
-    "balance": 448.86,
+    "balance": 448.84,
     "available": 426.58,
-    "unrealizedPnl": -0.36,
-    "netEquity": 448.5,
-    "totalPnl": -15.14
+    "unrealizedPnl": 0,
+    "netEquity": 448.84,
+    "todayPnl": 0.83,
+    "totalPnl": -15.16,
+    "leverage": 10,
+    "marginType": "ISOLATED",
+    "totalTrades": 11,
+    "winRate": "45.5%",
+    "wins": 5,
+    "losses": 6,
+    "maxDrawdown": 0.6
   },
   "position": {
     "symbol": "SOLUSDT",
     "side": "LONG",
     "size": 2.65,
     "entryPrice": 84.48,
-    "markPrice": 84.34,
-    "pnl": -0.36,
+    "markPrice": 84.47,
+    "pnl": -0.03,
     "leverage": 10,
-    "trailingStop": 83.85485577891846
+    "trailingStop": null
   },
   "signals": {},
   "recentTrades": [
