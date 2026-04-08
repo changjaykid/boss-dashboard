@@ -117,7 +117,7 @@
 
             <!-- 總覽 (dynamic) -->
             <div id="view-overview" class="section-view active space-y-4">
-                <div id="overview-content"></div>
+                <div id="overview-content"><p class="text-xs text-gray-400 text-center py-8">載入中...</p></div>
             </div>
 
             <!-- 股票 -->
@@ -1205,64 +1205,217 @@ async function loadStockData() {
     const d = await r.json();
     const box = document.getElementById('stock-dynamic-content');
     if (!box) return;
-
     let html = '';
 
-    // ================= 昨日覆盤 =================
-    if (d.selfReview) {
-      const sr = d.selfReview;
-      html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-6">
-        <h3 class="text-lg md:text-2xl font-bold text-purple-300 mb-4">🔄 昨日覆盤</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
-          <div class="stat-card border border-gray-700/50 p-4 rounded-xl"><p class="text-xs text-gray-500">總推薦</p><p class="text-xl font-bold text-white mt-1">${sr.totalPicks||'--'}</p></div>
-          <div class="stat-card border border-gray-700/50 p-4 rounded-xl"><p class="text-xs text-gray-500">達標</p><p class="text-xl font-bold text-green-400 mt-1">${sr.hitTarget||'--'}</p></div>
-          <div class="stat-card border border-gray-700/50 p-4 rounded-xl"><p class="text-xs text-gray-500">停損</p><p class="text-xl font-bold text-red-400 mt-1">${sr.hitStop||'--'}</p></div>
-          <div class="stat-card border border-gray-700/50 p-4 rounded-xl"><p class="text-xs text-gray-500">勝率</p><p class="text-xl font-bold text-yellow-300 mt-1">${sr.correctRate||'--'}</p></div>
-        </div>
-        ${sr.note ? `<div class="p-3 bg-indigo-900/30 border border-indigo-700/50 rounded-lg"><p class="text-sm text-indigo-200">💡 專家檢討：${sr.note}</p></div>` : ''}
+    // 更新時間
+    html += `<div class="flex items-center space-x-2 text-xs mb-4">
+      <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-green-500"></span></span>
+      <span class="text-gray-400">更新：<span class="text-gray-200">${d.lastUpdate||'--'}</span></span>
+    </div>`;
+
+    // 警示 (alerts)
+    if (d.alerts?.length) {
+      html += `<section class="bg-red-900/20 border border-red-700/50 p-4 md:p-6 rounded-xl mb-4">
+        <h3 class="text-sm md:text-xl font-medium text-red-300 mb-3">🚨 重要警示</h3>
+        ${d.alerts.map(a => `<p class="text-xs text-red-300 mb-1">• ${typeof a === 'string' ? a : a.message || JSON.stringify(a)}</p>`).join('')}
       </section>`;
     }
 
-    // ================= 盤前分析 =================
-    if (d.analysis) {
-      html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-6">
-        <h3 class="text-lg md:text-2xl font-bold text-indigo-300 mb-4">📊 盤前分析</h3>
-        <div class="space-y-3">
-          ${d.analysis.preMarket ? `<p class="text-sm text-gray-300 leading-relaxed">${d.analysis.preMarket}</p>` : ''}
-          ${d.analysis.outlook ? `<div class="mt-3 p-3 border border-indigo-500/30 rounded bg-indigo-900/20"><p class="text-sm text-indigo-300 font-bold mb-1">操作策略</p><p class="text-sm text-gray-300">${d.analysis.outlook}</p></div>` : ''}
+    // 大盤概況
+    const m = d.market || {};
+    const t = m.taiex || {};
+    const f = m.futures || {};
+    const us = m.usMarket || {};
+    const chgColor = v => v >= 0 ? 'text-green-400' : 'text-red-400';
+    const chgArrow = v => v >= 0 ? '▲' : '▼';
+    html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
+      <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">📊 大盤概況</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 mb-4">
+        <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+          <p class="text-[10px] md:text-xs text-gray-500 uppercase">加權指數</p>
+          <p class="text-lg md:text-2xl font-bold ${chgColor(t.change||0)} mt-0.5">${t.close?.toLocaleString()||'--'}</p>
+          <p class="text-[10px] ${chgColor(t.change||0)}">${chgArrow(t.change||0)} ${Math.abs(t.change||0)}（${t.changePct||0}%）</p>
+          ${t.note?'<p class="text-[10px] text-gray-400 mt-0.5">'+t.note+'</p>':''}
         </div>
-      </section>`;
+        <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+          <p class="text-[10px] md:text-xs text-gray-500 uppercase">期貨</p>
+          <p class="text-lg md:text-2xl font-bold ${chgColor(f.change||0)} mt-0.5">${f.close?.toLocaleString()||'--'}</p>
+          <p class="text-[10px] ${chgColor(f.change||0)}">${chgArrow(f.change||0)} ${Math.abs(f.change||0)}</p>
+          ${f.note?'<p class="text-[10px] text-gray-400 mt-0.5">'+f.note+'</p>':''}
+        </div>`;
+    if (us.djia) {
+      html += `<div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+          <p class="text-[10px] md:text-xs text-gray-500 uppercase">道瓊工業</p>
+          <p class="text-lg md:text-2xl font-bold ${chgColor(us.djia.change||0)} mt-0.5">${us.djia.close?.toLocaleString()||'--'}</p>
+          <p class="text-[10px] ${chgColor(us.djia.change||0)}">${chgArrow(us.djia.change||0)} ${Math.abs(us.djia.change||0)}（${us.djia.changePct||0}%）</p>
+        </div>`;
+    }
+    if (us.nasdaq) {
+      html += `<div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+          <p class="text-[10px] md:text-xs text-gray-500 uppercase">那斯達克</p>
+          <p class="text-lg md:text-2xl font-bold ${chgColor(us.nasdaq.change||0)} mt-0.5">${us.nasdaq.close?.toLocaleString()||'--'}</p>
+          <p class="text-[10px] ${chgColor(us.nasdaq.change||0)}">${chgArrow(us.nasdaq.change||0)} ${Math.abs(us.nasdaq.change||0)}（${us.nasdaq.changePct||0}%）</p>
+        </div>`;
+    }
+    html += `</div>`;
+
+    // 類股強弱
+    if (d.sectorStrength?.length) {
+      html += `<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500 mb-1.5">📊 類股強弱</p><div class="flex flex-wrap gap-1.5">`;
+      d.sectorStrength.forEach(s => {
+        const c = (s.change||0) >= 0 ? 'bg-green-900/50 text-green-300 border-green-700/50' : 'bg-red-900/50 text-red-300 border-red-700/50';
+        html += `<span class="px-2 py-0.5 text-[10px] rounded-full ${c} border">${s.sector} ${s.change>0?'+':''}${s.change||0}%</span>`;
+      });
+      html += `</div></div>`;
+    }
+    html += `</section>`;
+
+    // 分析 & 重要事件
+    const analysis = d.analysis || {};
+    if (analysis.preMarket || analysis.keyEvents?.length || analysis.outlook) {
+      html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
+        <h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">📋 盤前分析</h3>`;
+      if (analysis.preMarket) html += `<p class="text-xs text-gray-300 mb-2">${analysis.preMarket}</p>`;
+      if (analysis.keyEvents) {
+        const evts = Array.isArray(analysis.keyEvents) ? analysis.keyEvents : typeof analysis.keyEvents === 'string' ? analysis.keyEvents.split(/\d+\)\s*/).filter(Boolean) : [];
+        if (evts.length) {
+          html += `<div class="mb-2"><p class="text-[10px] text-gray-500 mb-1">⚡ 重要事件</p>`;
+          evts.forEach(e => { html += `<p class="text-xs text-gray-300">• ${(typeof e === 'string' ? e : e.event || JSON.stringify(e)).trim()}</p>`; });
+          html += `</div>`;
+        }
+      }
+      if (analysis.outlook) html += `<div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30"><p class="text-xs text-indigo-300">${analysis.outlook}</p></div>`;
+      html += `</section>`;
     }
 
-    // ================= 今日推薦 =================
+    // 精選 16 檔
+    if (d.watchlist?.length) {
+      html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-sm md:text-xl font-medium text-green-300">📈 今日精選 ${d.watchlist.length} 檔</h3>
+          ${d.selfReview?'<span class="px-2 py-0.5 text-[10px] rounded-full bg-yellow-900/50 text-yellow-300 border border-yellow-700/50">命中率 '+(d.selfReview.correctRate||'--')+'</span>':''}
+        </div>
+        <div class="grid grid-cols-1 xs:grid-cols-2 gap-2 md:gap-3">`;
+      d.watchlist.forEach(s => {
+        const priceNum = parseFloat(s.price) || 0;
+        const under50 = priceNum > 0 && priceNum <= 50;
+        const fcDays = s.foreignConsecutiveDays;
+        const fcBadge = fcDays ? (fcDays > 0
+          ? `<span class="px-1 py-0.5 text-[9px] rounded bg-green-900/50 text-green-300">外資連買${fcDays}天</span>`
+          : `<span class="px-1 py-0.5 text-[9px] rounded bg-red-900/50 text-red-300">外資連賣${Math.abs(fcDays)}天</span>`) : '';
+        html += `<div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
+          <div class="flex items-center justify-between mb-1.5">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="text-xs font-bold text-white">${s.name||''}</span>
+              <span class="text-[10px] text-gray-400">${s.code||''}</span>
+              ${under50?'<span class="px-1 py-0.5 text-[9px] rounded bg-yellow-900/50 text-yellow-300">💰 &lt;50</span>':''}
+              ${s.category?'<span class="px-1 py-0.5 text-[9px] rounded bg-blue-900/50 text-blue-300">'+s.category+'</span>':''}
+              ${fcBadge}
+            </div>
+            <span class="text-sm font-bold text-gray-200">${s.price||'--'}</span>
+          </div>
+          <div class="flex flex-wrap gap-2 mb-1.5 text-[10px]">
+            ${s.pe?'<span class="text-amber-400" title="'+(s.peExplain||'')+'">本益比 '+s.pe+'</span>':''}
+            ${s.pb?'<span class="text-cyan-400" title="'+(s.pbExplain||'')+'">本淨比 '+s.pb+'</span>':''}
+            ${s.dividendYield?'<span class="text-pink-400">殖利率 '+s.dividendYield+'%</span>':''}
+            ${s.lastDividendPerShare?'<span class="text-gray-400">配 $'+s.lastDividendPerShare+'</span>':''}
+          </div>
+          ${s.peExplain||s.pbExplain?'<p class="text-[10px] text-amber-300/70 mb-1">'+(s.peExplain?'💡 '+s.peExplain:'')+(s.pbExplain?' · '+s.pbExplain:'')+'</p>':''}
+          ${s.technical?'<p class="text-[10px] text-gray-500 mb-1">'+s.technical+'</p>':''}
+          <p class="text-[10px] text-gray-300">${s.reason||''}</p>
+          ${s.buyReason?'<p class="text-[10px] text-green-300 mt-0.5">💡 為什麼值得買：'+s.buyReason+'</p>':''}
+          ${s.target?'<p class="text-[10px] text-green-400 mt-0.5">目標 '+s.target+(s.stopLoss?' · 停損 '+s.stopLoss:'')+'</p>':''}
+          ${s.upcomingExDividend?'<p class="text-[10px] text-pink-300 mt-0.5">📅 除息：'+s.upcomingExDividend+'</p>':''}
+        </div>`;
+      });
+      html += `</div></section>`;
+    }
+
+    // 推薦清單 (AI/高股息/ETF) - 各 8 檔
     const rec = d.recommendations || {};
-    html += `<h3 class="text-lg md:text-2xl font-bold text-yellow-300 mb-4 mt-8">🎯 今日推薦</h3>`;
-    
     ['ai','dividend','etf'].forEach(cat => {
       const items = rec[cat];
       if (!items?.length) return;
       const catName = {ai:'🤖 AI 概念股', dividend:'💰 高股息', etf:'📦 ETF'}[cat] || cat;
       html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
-        <h4 class="text-md md:text-lg font-medium text-cyan-300 mb-3">${catName}</h4>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">`;
+        <h3 class="text-sm md:text-xl font-medium text-cyan-300 mb-3">${catName}（${items.length} 檔）</h3>
+        <div class="grid grid-cols-1 xs:grid-cols-2 gap-2">`;
       items.forEach(s => {
-        html += `<div class="p-3 bg-gray-800 rounded-lg border border-gray-700 hover:border-indigo-500 transition-colors">
-          <div class="flex items-center justify-between mb-2">
-            <span class="text-sm font-bold text-white">${s.name||''} <span class="text-xs text-gray-400">${s.code||''}</span></span>
-            <span class="text-base font-bold text-yellow-400">${s.price||'--'}</span>
+        const isEtf = cat === 'etf';
+        html += `<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-xs font-bold text-white">${s.name||''} <span class="text-[10px] text-gray-400">${s.code||''}</span></span>
+            <span class="text-sm font-bold text-gray-200">${s.price||'--'}</span>
           </div>
-          <div class="flex flex-wrap gap-2 mb-2 text-[10px]">
-            ${s.pe?'<span class="px-1.5 py-0.5 rounded bg-gray-700 text-amber-400">PE '+s.pe+'</span>':''}
-            ${s.dividendYield?'<span class="px-1.5 py-0.5 rounded bg-gray-700 text-pink-400">殖利率 '+s.dividendYield+'%</span>':''}
+          <div class="flex flex-wrap gap-2 mb-1 text-[10px]">
+            ${s.pe?'<span class="text-amber-400">PE '+s.pe+'</span>':''}
+            ${s.pb?'<span class="text-cyan-400">PB '+s.pb+'</span>':''}
+            ${s.dividendYield?'<span class="text-pink-400">殖利率 '+s.dividendYield+'%</span>':''}
+            ${s.lastDividendPerShare?'<span class="text-gray-400">配 $'+s.lastDividendPerShare+(s.exDividendDate?' ('+s.exDividendDate+')':'')+'</span>':''}
+            ${isEtf && s.premiumDiscount !== undefined ? '<span class="'+(s.premiumDiscount>1?'text-red-400':'text-green-400')+'">'+(s.premiumDiscount>=0?'溢價':'折價')+' '+Math.abs(s.premiumDiscount)+'%</span>':''}
           </div>
-          <p class="text-xs text-gray-300 mb-1.5">${s.reason||''}</p>
-          ${s.buyReason?`<div class="mt-2 pt-2 border-t border-gray-700"><p class="text-xs text-green-300">💡 買進理由：${s.buyReason}</p></div>`:''}
+          ${isEtf && s.topHoldings?'<p class="text-[10px] text-indigo-300 mb-1">📊 '+s.topHoldings+'</p>':''}
+          ${isEtf && s.premiumExplain?'<p class="text-[10px] text-amber-300/70 mb-1">💡 '+s.premiumExplain+'</p>':''}
+          <p class="text-[10px] text-gray-300">${s.reason||''}</p>
+          ${s.buyReason?'<p class="text-[10px] text-green-300 mt-0.5">💡 '+s.buyReason+'</p>':''}
         </div>`;
       });
       html += `</div></section>`;
     });
 
-    box.innerHTML = html || '<p class="text-gray-400">尚無股票數據</p>';
+    // 法人動態 + 融資融券
+    const inst = d.institutional || {};
+    if (inst.foreign || inst.investment_trust || inst.dealer) {
+      html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
+        <h3 class="text-sm md:text-xl font-medium text-pink-300 mb-3">🏦 法人動態</h3>
+        <div class="grid grid-cols-3 gap-2">`;
+      [{key:'foreign',name:'外資'},{key:'investment_trust',name:'投信'},{key:'dealer',name:'自營'}].forEach(({key,name}) => {
+        const v = inst[key] || {};
+        const amt = v.amount || v.net || 0;
+        html += `<div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+          <p class="text-[10px] text-gray-500">${name}</p>
+          <p class="text-lg font-bold ${amt>=0?'text-green-400':'text-red-400'}">${amt>=0?'+':''}${typeof amt==='number'?amt.toLocaleString():amt}</p>
+          ${v.note?'<p class="text-[10px] text-gray-400">'+v.note+'</p>':''}
+        </div>`;
+      });
+      html += `</div>`;
+      // 融資融券
+      const mg = d.margin || {};
+      if (mg.marginBalance || mg.shortBalance || mg.marginRatio) {
+        html += `<div class="grid grid-cols-3 gap-2 mt-3">
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+            <p class="text-[10px] text-gray-500">融資餘額(億)</p>
+            <p class="text-lg font-bold text-yellow-400">${mg.marginBalance||'--'}</p>
+          </div>
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+            <p class="text-[10px] text-gray-500">融券餘額(張)</p>
+            <p class="text-lg font-bold text-orange-400">${mg.shortBalance?.toLocaleString()||'--'}</p>
+          </div>
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+            <p class="text-[10px] text-gray-500">券資比</p>
+            <p class="text-lg font-bold text-cyan-400">${mg.marginRatio||'--'}%</p>
+          </div>
+        </div>`;
+        if (mg.marginExplain) html += `<p class="text-[10px] text-amber-300/70 mt-2 px-1">💡 ${mg.marginExplain}</p>`;
+      }
+      html += `</section>`;
+    }
+
+    // 自我復盤
+    if (d.selfReview) {
+      const sr = d.selfReview;
+      html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
+        <h3 class="text-sm md:text-xl font-medium text-purple-300 mb-3">🔄 自我復盤</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-3">
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl"><p class="text-[10px] text-gray-500">總推薦</p><p class="text-lg font-bold text-white">${sr.totalPicks||'--'}</p></div>
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl"><p class="text-[10px] text-gray-500">命中率</p><p class="text-lg font-bold text-green-400">${sr.correctRate||'--'}</p></div>
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl"><p class="text-[10px] text-gray-500">最佳策略</p><p class="text-xs font-bold text-yellow-300">${sr.bestStrategy||'--'}</p></div>
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl"><p class="text-[10px] text-gray-500">近期準度</p><p class="text-xs font-bold text-cyan-300">${sr.recentAccuracy||'--'}</p></div>
+        </div>
+      </section>`;
+    }
+
+    box.innerHTML = html;
   } catch(e) { console.log('stock err', e); }
 }
 
