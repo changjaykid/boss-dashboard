@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-08 22:33",
+  "lastUpdate": "2026-04-08 22:46",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
@@ -21,57 +21,54 @@
   },
   "position": null,
   "signals": {
-    "score": 55,
+    "score": 69,
     "direction": "LONG",
     "marketState": "TRENDING_UP",
     "trend4h": "UP",
-    "buyScore": 55,
-    "sellScore": 6,
+    "buyScore": 69,
+    "sellScore": 4,
     "reasons": [
       "1H EMA 多排",
-      "量能放大",
+      "StochRSI金叉(K=2)",
+      "近多頭清算牆71376",
       "支撐區回踩做多"
     ],
-    "rsi15": 37,
-    "strategy": "TREND_FOLLOW"
+    "rsi15": 39,
+    "strategy": "STOCH_RSI_CROSS"
   },
   "perSymbolSignals": {
     "BTCUSDT": {
-      "score": 55,
+      "score": 69,
       "direction": "LONG",
       "marketState": "TRENDING_UP",
       "trend4h": "UP",
-      "buyScore": 55,
-      "sellScore": 6,
+      "buyScore": 69,
+      "sellScore": 4,
+      "reasons": [
+        "1H EMA 多排",
+        "StochRSI金叉(K=2)",
+        "近多頭清算牆71376",
+        "支撐區回踩做多"
+      ],
+      "price": 71140.2,
+      "rsi15": 39,
+      "time": "2026-04-08T14:46:40.186Z"
+    },
+    "ETHUSDT": {
+      "score": 46,
+      "direction": "LONG",
+      "marketState": "TRENDING_UP",
+      "trend4h": "UP",
+      "buyScore": 46,
+      "sellScore": 22,
       "reasons": [
         "1H EMA 多排",
         "量能放大",
-        "支撐區回踩做多"
+        "StochRSI金叉(K=1)"
       ],
-      "price": 71083.7,
-      "rsi15": 37,
-      "time": "2026-04-08T14:33:07.432Z"
-    },
-    "ETHUSDT": {
-      "score": 16,
-      "direction": null,
-      "marketState": "TRENDING_UP",
-      "trend4h": "UP",
-      "buyScore": 32.199999999999996,
-      "sellScore": 28.52,
-      "reasons": [
-        "🟢1H EMA 多排",
-        "🟢量能放大",
-        "🔴MACD柱增",
-        "🔴量能放大",
-        "🔴動量-1.20%",
-        "🔴RSI跌破BB下軌",
-        "🔴亞盤突破↓(27)",
-        "🔴MACD看空背離"
-      ],
-      "price": 2207.93,
+      "price": 2207.25,
       "rsi15": 30,
-      "time": "2026-04-08T14:33:08.692Z"
+      "time": "2026-04-08T14:46:41.414Z"
     }
   },
   "recentTrades": [
