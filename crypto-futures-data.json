@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-08 12:20",
+  "lastUpdate": "2026-04-08 13:00",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
@@ -19,8 +19,24 @@
     "losses": 6,
     "maxDrawdown": 0.6
   },
-  "position": null,
-  "signals": {},
+  "position": {
+    "symbol": "SOLUSDT",
+    "side": "LONG",
+    "size": 2.65,
+    "entryPrice": 84.5,
+    "markPrice": 84.5,
+    "pnl": 0,
+    "leverage": 10,
+    "trailingStop": 83.85485577891846
+  },
+  "signals": {
+    "score": 50,
+    "direction": "LONG",
+    "marketState": "TRENDING_UP",
+    "buyScore": 0,
+    "sellScore": 0,
+    "activeSignals": []
+  },
   "recentTrades": [
     {
       "time": "2026-04-07T19:00:07.179Z",
