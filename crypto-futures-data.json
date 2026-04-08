@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-08 16:43",
+  "lastUpdate": "2026-04-08 17:05",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
@@ -24,8 +24,8 @@
     "side": "LONG",
     "size": 2.65,
     "entryPrice": 84.48,
-    "markPrice": 84.47,
-    "pnl": -0.03,
+    "markPrice": 84.86,
+    "pnl": 1,
     "leverage": 10,
     "trailingStop": null
   },
