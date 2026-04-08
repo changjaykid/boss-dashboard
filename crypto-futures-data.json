@@ -1,16 +1,16 @@
 {
-  "lastUpdate": "2026-04-08 21:17",
+  "lastUpdate": "2026-04-08 21:32",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
   "account": {
     "initialCapital": 464,
-    "balance": 448.84,
-    "available": 426.58,
+    "balance": 448.47,
+    "available": 351.49,
     "unrealizedPnl": 0,
-    "netEquity": 448.84,
+    "netEquity": 448.47,
     "todayPnl": 0.83,
-    "totalPnl": -15.16,
+    "totalPnl": -15.53,
     "leverage": 10,
     "marginType": "ISOLATED",
     "totalTrades": 11,
@@ -25,42 +25,60 @@
     "size": 2.65,
     "entryPrice": 84.48,
     "markPrice": 84.55,
-    "pnl": 0.19,
+    "pnl": 0.18,
     "leverage": 10,
-    "trailingStop": null
+    "trailingStop": 71770.13122658481
   },
   "signals": {
-    "score": 12,
-    "direction": null,
+    "score": 60,
+    "direction": "LONG",
     "marketState": "TRENDING_UP",
     "trend4h": "UP",
-    "buyScore": 23.114999999999995,
-    "sellScore": 19.779999999999998,
-    "reasons": [],
-    "strategy": null
+    "buyScore": 60,
+    "sellScore": 4,
+    "reasons": [
+      "1H EMA 多排",
+      "量能放大",
+      "亞盤突破↑(900)",
+      "MACD看多背離"
+    ],
+    "rsi15": 60,
+    "strategy": "SESSION_BREAKOUT"
   },
   "perSymbolSignals": {
     "BTCUSDT": {
-      "score": 12,
-      "direction": null,
+      "score": 60,
+      "direction": "LONG",
       "marketState": "TRENDING_UP",
       "trend4h": "UP",
-      "buyScore": 23.114999999999995,
-      "sellScore": 19.779999999999998,
-      "reasons": [],
-      "price": 72629.8,
-      "time": "2026-04-08T13:17:42.891Z"
+      "buyScore": 60,
+      "sellScore": 4,
+      "reasons": [
+        "1H EMA 多排",
+        "量能放大",
+        "亞盤突破↑(900)",
+        "MACD看多背離"
+      ],
+      "price": 72179.8,
+      "rsi15": 60,
+      "time": "2026-04-08T13:32:28.763Z"
     },
     "ETHUSDT": {
-      "score": 8,
-      "direction": null,
+      "score": 55,
+      "direction": "LONG",
       "marketState": "TRENDING_UP",
       "trend4h": "UP",
-      "buyScore": 16.215,
-      "sellScore": 12.88,
-      "reasons": [],
-      "price": 2261.19,
-      "time": "2026-04-08T13:17:44.084Z"
+      "buyScore": 55,
+      "sellScore": 18,
+      "reasons": [
+        "1H EMA 多排",
+        "RSI回踩54",
+        "量能放大",
+        "MACD看多背離"
+      ],
+      "price": 2252.92,
+      "rsi15": 54,
+      "time": "2026-04-08T13:32:30.067Z"
     }
   },
   "recentTrades": [

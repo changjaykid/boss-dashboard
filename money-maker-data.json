@@ -1,28 +1,28 @@
 {
-  "lastUpdate": "2026-04-08 21:18",
+  "lastUpdate": "2026-04-08 21:30",
   "status": "RUNNING",
   "mode": "batch_swing_v6",
   "capital": 10000,
-  "totalEquity": 10059,
-  "netEquity": 10059,
-  "totalPnl": 59,
-  "btcPrice": 2314773,
-  "btcChange24h": 5.21,
+  "totalEquity": 10049,
+  "netEquity": 10049,
+  "totalPnl": 49,
+  "btcPrice": 2305150,
+  "btcChange24h": 4.88,
   "holdings": {
     "btc": 0,
     "avgCost": 0,
-    "unrealizedPnl": 3,
+    "unrealizedPnl": -981,
     "positions": [
       {
         "coin": "SOL",
-        "held": 0.72996927,
-        "value": 1963,
-        "pnl": 3
+        "held": 0.3626288,
+        "value": 979,
+        "pnl": -981
       }
     ]
   },
-  "buyOrders": 15,
-  "sellOrders": 15,
+  "buyOrders": 16,
+  "sellOrders": 16,
   "consecutiveLosses": 0,
   "fearGreedIndex": "--",
   "nextAction": "持倉監控中",
@@ -38,10 +38,10 @@
   "positions": [
     {
       "market": "soltwd",
-      "held": 0.72996927,
-      "value": 1963,
+      "held": 0.3626288,
+      "value": 979,
       "avgEntry": 2685,
-      "pnl": 3
+      "pnl": -981
     }
   ],
   "marketStats": {
@@ -56,9 +56,9 @@
       "pnl": 27
     },
     "soltwd": {
-      "trades": 3,
-      "wins": 3,
-      "pnl": 11
+      "trades": 4,
+      "wins": 4,
+      "pnl": 14
     },
     "dogetwd": {
       "trades": 3,
@@ -107,25 +107,25 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2314773,
-      "rsi": "76.3",
-      "bbPos": "125%"
+      "price": 2305150,
+      "rsi": "68.4",
+      "bbPos": "111%"
     },
     "ETH": {
-      "price": 71960,
-      "rsi": "60.2",
-      "bbPos": "98%"
+      "price": 72023,
+      "rsi": "59.0",
+      "bbPos": "108%"
     },
     "SOL": {
-      "price": 2689,
-      "rsi": "49.9",
-      "bbPos": "47%"
+      "price": 2701,
+      "rsi": "54.5",
+      "bbPos": "100%"
     },
     "DOGE": {
       "price": 3,
-      "rsi": "53.9",
-      "bbPos": "66%"
+      "rsi": "56.1",
+      "bbPos": "74%"
     }
   },
-  "twdCash": 8096
+  "twdCash": 9070
 }
