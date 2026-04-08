@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "status": "RUNNING",
+  "mode": "grid_dca",
+  "positions": [
+    {
+      "entryPrice": 2150126.5,
+      "amount": 0.00027905334872157524,
+      "twd": 600,
+      "time": 1775375856697,
+      "batch": 1,
+      "reason": "RSI偏低40, 接近BB下軌"
+    }
+  ],
+  "totalInvested": 600,
+  "avgEntryPrice": 2150126.5,
+  "totalBtc": 0.00027905334872157524,
+  "gridBuyZone": null,
+  "gridSellZone": null,
+  "stopLoss": 2143487,
+  "dailyPnl": 0,
+  "dailyDate": "2026-04-05",
+  "totalPnl": -82,
+  "totalTrades": 11,
+  "wins": 3,
+  "losses": 8,
+  "maxDrawdown": 82,
+  "peakEquity": 10000,
+  "pauseUntil": null,
+  "lastDecision": {
+    "time": "2026-04-05T07:57:36.697Z",
+    "action": "BUY_ZONE",
+    "reasons": "RSI偏低40, 接近BB下軌, MACD柱縮短(底部收斂)",
+    "price": 2150126.5
+  },
+  "tradeLog": []
+}
