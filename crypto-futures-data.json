@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-08 22:46",
+  "lastUpdate": "2026-04-08 23:00",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
@@ -21,54 +21,56 @@
   },
   "position": null,
   "signals": {
-    "score": 69,
-    "direction": "LONG",
+    "score": 12,
+    "direction": null,
     "marketState": "TRENDING_UP",
     "trend4h": "UP",
-    "buyScore": 69,
-    "sellScore": 4,
+    "buyScore": 23,
+    "sellScore": 17.94,
     "reasons": [
-      "1H EMA 多排",
-      "StochRSI金叉(K=2)",
-      "近多頭清算牆71376",
-      "支撐區回踩做多"
+      "🟢1H EMA 多排",
+      "🔴MACD柱增",
+      "🔴動量-0.78%",
+      "🔴亞盤突破↓(900)",
+      "🔴MACD看空背離"
     ],
-    "rsi15": 39,
-    "strategy": "STOCH_RSI_CROSS"
+    "rsi15": 34,
+    "strategy": null
   },
   "perSymbolSignals": {
     "BTCUSDT": {
-      "score": 69,
-      "direction": "LONG",
+      "score": 12,
+      "direction": null,
       "marketState": "TRENDING_UP",
       "trend4h": "UP",
-      "buyScore": 69,
-      "sellScore": 4,
+      "buyScore": 23,
+      "sellScore": 17.94,
       "reasons": [
-        "1H EMA 多排",
-        "StochRSI金叉(K=2)",
-        "近多頭清算牆71376",
-        "支撐區回踩做多"
+        "🟢1H EMA 多排",
+        "🔴MACD柱增",
+        "🔴動量-0.78%",
+        "🔴亞盤突破↓(900)",
+        "🔴MACD看空背離"
       ],
-      "price": 71140.2,
-      "rsi15": 39,
-      "time": "2026-04-08T14:46:40.186Z"
+      "price": 70867.2,
+      "rsi15": 34,
+      "time": "2026-04-08T15:00:18.099Z"
     },
     "ETHUSDT": {
-      "score": 46,
+      "score": 49,
       "direction": "LONG",
       "marketState": "TRENDING_UP",
       "trend4h": "UP",
-      "buyScore": 46,
-      "sellScore": 22,
+      "buyScore": 49,
+      "sellScore": 29,
       "reasons": [
         "1H EMA 多排",
-        "量能放大",
-        "StochRSI金叉(K=1)"
+        "RSI超賣25",
+        "量能放大"
       ],
-      "price": 2207.25,
-      "rsi15": 30,
-      "time": "2026-04-08T14:46:41.414Z"
+      "price": 2192.87,
+      "rsi15": 25,
+      "time": "2026-04-08T15:00:19.352Z"
     }
   },
   "recentTrades": [
