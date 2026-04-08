@@ -1,17 +1,17 @@
 {
-  "lastUpdate": "2026-04-08 20:45",
+  "lastUpdate": "2026-04-08 21:00",
   "status": "RUNNING",
   "mode": "batch_swing_v6",
   "capital": 10000,
-  "totalEquity": 10057,
-  "netEquity": 10057,
-  "totalPnl": 57,
-  "btcPrice": 2286255,
-  "btcChange24h": 4.31,
+  "totalEquity": 10060,
+  "netEquity": 10060,
+  "totalPnl": 60,
+  "btcPrice": 2290937,
+  "btcChange24h": 4.4,
   "holdings": {
     "btc": 0.00012493,
     "avgCost": 2204751,
-    "unrealizedPnl": -3618,
+    "unrealizedPnl": -3614,
     "positions": [
       {
         "coin": "BTC",
@@ -28,14 +28,14 @@
       {
         "coin": "SOL",
         "held": 0.72996927,
-        "value": 1964,
-        "pnl": 4
+        "value": 1966,
+        "pnl": 6
       },
       {
         "coin": "DOGE",
         "held": 140.1024,
-        "value": 420,
-        "pnl": -1225
+        "value": 421,
+        "pnl": -1224
       }
     ]
   },
@@ -71,16 +71,16 @@
     {
       "market": "soltwd",
       "held": 0.72996927,
-      "value": 1964,
+      "value": 1966,
       "avgEntry": 2685,
-      "pnl": 4
+      "pnl": 6
     },
     {
       "market": "dogetwd",
       "held": 140.1024,
-      "value": 420,
+      "value": 421,
       "avgEntry": 3,
-      "pnl": -1225
+      "pnl": -1224
     }
   ],
   "marketStats": {
