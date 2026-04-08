@@ -1,31 +1,31 @@
 {
-  "lastUpdate": "2026-04-09 02:30",
+  "lastUpdate": "2026-04-09 02:46",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
   "account": {
     "initialCapital": 464,
-    "balance": 441.73,
-    "available": 379.57,
+    "balance": 442.6,
+    "available": 375,
     "unrealizedPnl": 0,
-    "netEquity": 441.73,
-    "todayPnl": 0,
-    "totalPnl": -22.27,
+    "netEquity": 442.6,
+    "todayPnl": 1.17,
+    "totalPnl": -21.4,
     "leverage": 10,
     "marginType": "ISOLATED",
-    "totalTrades": 13,
-    "winRate": "38.5%",
-    "wins": 5,
+    "totalTrades": 14,
+    "winRate": "42.9%",
+    "wins": 6,
     "losses": 8,
     "maxDrawdown": 0.6
   },
   "position": {
     "symbol": "ETHUSDT",
     "side": "LONG",
-    "size": 0.123,
-    "entryPrice": 2197.45,
-    "markPrice": 2213.81,
-    "pnl": 2.01,
+    "size": 0.147,
+    "entryPrice": 2208.33,
+    "markPrice": 2208.33,
+    "pnl": 0,
     "leverage": 10,
     "trailingStop": 70942
   },
@@ -46,26 +46,34 @@
       "buyScore": 0,
       "sellScore": 0,
       "reasons": [],
-      "price": 71420.1,
-      "time": "2026-04-08T18:30:44.517Z"
+      "price": 71282.6,
+      "time": "2026-04-08T18:46:04.473Z"
     },
     "ETHUSDT": {
-      "score": 30,
+      "score": 50,
       "direction": "LONG",
       "marketState": "TRENDING_UP",
       "trend4h": "UP",
-      "buyScore": 30,
+      "buyScore": 50,
       "sellScore": 4,
       "reasons": [
         "1H EMA 多排",
-        "RSI回踩42"
+        "RSI回踩40",
+        "支撐區回踩做多"
       ],
-      "price": 2213.47,
-      "rsi15": 42,
-      "time": "2026-04-08T18:30:45.755Z"
+      "price": 2208.33,
+      "rsi15": 40,
+      "time": "2026-04-08T18:46:05.726Z"
     }
   },
   "recentTrades": [
+    {
+      "time": "2026-04-08T18:43:37.000Z",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "pnl": 1.17,
+      "strategy": ""
+    },
     {
       "time": "2026-04-08T14:05:28.000Z",
       "symbol": "SOLUSDT",
@@ -198,13 +206,6 @@
       "side": "LONG",
       "pnl": 0.43,
       "strategy": ""
-    },
-    {
-      "time": "2026-04-07T13:09:01.000Z",
-      "symbol": "AVAXUSDT",
-      "side": "SHORT",
-      "pnl": -5.76,
-      "strategy": ""
     }
   ],
   "strategyWeights": {
@@ -217,7 +218,7 @@
   },
   "riskStatus": {
     "dailyLossUsed": "$0.00 / $23.20",
-    "dailyTradesUsed": "0 / 10",
+    "dailyTradesUsed": "1 / 10",
     "consecutiveLosses": "0",
     "paused": false
   }
