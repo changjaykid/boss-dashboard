@@ -1,46 +1,28 @@
 {
-  "lastUpdate": "2026-04-08 21:00",
+  "lastUpdate": "2026-04-08 21:15",
   "status": "RUNNING",
   "mode": "batch_swing_v6",
   "capital": 10000,
-  "totalEquity": 10060,
-  "netEquity": 10060,
-  "totalPnl": 60,
-  "btcPrice": 2290937,
-  "btcChange24h": 4.4,
+  "totalEquity": 10059,
+  "netEquity": 10059,
+  "totalPnl": 59,
+  "btcPrice": 2310055,
+  "btcChange24h": 4.95,
   "holdings": {
-    "btc": 0.00012493,
-    "avgCost": 2204751,
-    "unrealizedPnl": -3614,
+    "btc": 0,
+    "avgCost": 0,
+    "unrealizedPnl": 3,
     "positions": [
-      {
-        "coin": "BTC",
-        "held": 0.00012493,
-        "value": 286,
-        "pnl": -1145
-      },
-      {
-        "coin": "ETH",
-        "held": 0.00392871,
-        "value": 282,
-        "pnl": -1252
-      },
       {
         "coin": "SOL",
         "held": 0.72996927,
-        "value": 1966,
-        "pnl": 6
-      },
-      {
-        "coin": "DOGE",
-        "held": 140.1024,
-        "value": 421,
-        "pnl": -1224
+        "value": 1963,
+        "pnl": 3
       }
     ]
   },
-  "buyOrders": 12,
-  "sellOrders": 12,
+  "buyOrders": 15,
+  "sellOrders": 15,
   "consecutiveLosses": 0,
   "fearGreedIndex": "--",
   "nextAction": "持倉監控中",
@@ -55,44 +37,23 @@
   },
   "positions": [
     {
-      "market": "btctwd",
-      "held": 0.00012493,
-      "value": 286,
-      "avgEntry": 2204751,
-      "pnl": -1145
-    },
-    {
-      "market": "ethtwd",
-      "held": 0.00392871,
-      "value": 282,
-      "avgEntry": 67384,
-      "pnl": -1252
-    },
-    {
       "market": "soltwd",
       "held": 0.72996927,
-      "value": 1966,
+      "value": 1963,
       "avgEntry": 2685,
-      "pnl": 6
-    },
-    {
-      "market": "dogetwd",
-      "held": 140.1024,
-      "value": 421,
-      "avgEntry": 3,
-      "pnl": -1224
+      "pnl": 3
     }
   ],
   "marketStats": {
     "btctwd": {
-      "trades": 4,
-      "wins": 4,
-      "pnl": 15
+      "trades": 5,
+      "wins": 5,
+      "pnl": 28
     },
     "ethtwd": {
-      "trades": 3,
-      "wins": 3,
-      "pnl": 9
+      "trades": 4,
+      "wins": 4,
+      "pnl": 27
     },
     "soltwd": {
       "trades": 3,
@@ -100,9 +61,9 @@
       "pnl": 11
     },
     "dogetwd": {
-      "trades": 2,
-      "wins": 2,
-      "pnl": 42
+      "trades": 3,
+      "wins": 3,
+      "pnl": 57
     }
   },
   "recentTrades": [
@@ -135,97 +96,36 @@
       "twd": 1000,
       "pnl": 0,
       "reason": "強買入(3.0)"
-    },
-    {
-      "exitTime": 1775542863224,
-      "coin": "ETH",
-      "side": "BUY",
-      "amount": 0.00882874072797043,
-      "entryPrice": 67286,
-      "twd": 595,
-      "pnl": 0,
-      "reason": "強買入(4.5)"
-    },
-    {
-      "exitTime": 1775527742910,
-      "coin": "ETH",
-      "side": "BUY",
-      "amount": 0.005033358168669108,
-      "entryPrice": 67243,
-      "twd": 339,
-      "pnl": 0,
-      "reason": "佈局買入(2.0)"
-    },
-    {
-      "exitTime": 1775527205178,
-      "coin": "DOGE",
-      "side": "BUY",
-      "amount": 97.83859986933946,
-      "entryPrice": 3,
-      "twd": 285,
-      "pnl": 0,
-      "reason": "佈局買入(2.0)"
-    },
-    {
-      "exitTime": 1775526845659,
-      "coin": "DOGE",
-      "side": "BUY",
-      "amount": 261.36125654450257,
-      "entryPrice": 3,
-      "twd": 760,
-      "pnl": 0,
-      "reason": "強買入(3.0)"
-    },
-    {
-      "exitTime": 1775526843124,
-      "coin": "ETH",
-      "side": "BUY",
-      "amount": 0.008902931826524805,
-      "entryPrice": 67286,
-      "twd": 600,
-      "pnl": 0,
-      "reason": "佈局買入(2.0)"
-    },
-    {
-      "exitTime": 1775524502674,
-      "coin": "BTC",
-      "side": "BUY",
-      "amount": 0.0001616983627189133,
-      "entryPrice": 2198108,
-      "twd": 356,
-      "pnl": 0,
-      "reason": "佈局買入(2.0)"
-    },
-    {
-      "exitTime": 1775524142281,
-      "coin": "BTC",
-      "side": "BUY",
-      "amount": 0.00021556363636363634,
-      "entryPrice": 2200000,
-      "twd": 475,
-      "pnl": 0,
-      "reason": "佈局買入(2.0)"
-    },
-    {
-      "exitTime": 1775523782851,
-      "coin": "BTC",
-      "side": "BUY",
-      "amount": 0.00027179086331892286,
-      "entryPrice": 2204048,
-      "twd": 600,
-      "pnl": 0,
-      "reason": "佈局買入(2.0)"
-    },
-    {
-      "exitTime": 1775520366346,
-      "coin": "DOGE",
-      "side": "BUY",
-      "amount": 205.67896995708153,
-      "entryPrice": 3,
-      "twd": 600,
-      "pnl": 0,
-      "reason": "佈局買入(2.0)"
     }
   ],
-  "twdCash": 7105
+  "riskStatus": {
+    "dailyLossLimit": 500,
+    "consecLossPause": 4,
+    "currentConsecLosses": 0,
+    "totalWinRate": "100.0%",
+    "avgPnlPerTrade": 8
+  },
+  "marketSignals": {
+    "BTC": {
+      "price": 2310055,
+      "rsi": "74.3",
+      "bbPos": "144%"
+    },
+    "ETH": {
+      "price": 71953,
+      "rsi": "59.8",
+      "bbPos": "102%"
+    },
+    "SOL": {
+      "price": 2689,
+      "rsi": "49.9",
+      "bbPos": "46%"
+    },
+    "DOGE": {
+      "price": 3,
+      "rsi": "58.7",
+      "bbPos": "86%"
+    }
+  },
+  "twdCash": 8096
 }
