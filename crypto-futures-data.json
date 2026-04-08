@@ -1,33 +1,26 @@
 {
-  "lastUpdate": "2026-04-08 15:10",
+  "lastUpdate": "2026-04-08 07:14",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
   "account": {
     "initialCapital": 464,
-    "balance": 463.05,
-    "available": 463.05,
-    "unrealizedPnl": 0,
-    "netEquity": 463.05,
-    "todayPnl": 0.83,
-    "totalPnl": -0.95,
-    "leverage": 10,
-    "marginType": "ISOLATED",
-    "totalTrades": 11,
-    "winRate": "45.5%",
-    "wins": 5,
-    "losses": 6,
-    "maxDrawdown": 0.6
+    "balance": 448.86,
+    "available": 426.58,
+    "unrealizedPnl": -0.11,
+    "netEquity": 448.76,
+    "todayPnl": -2.91,
+    "totalPnl": -15.14,
+    "totalRealizedPnl": -6.51
   },
   "position": {
     "symbol": "SOLUSDT",
     "side": "LONG",
     "size": 2.65,
-    "entryPrice": 84.5,
-    "markPrice": 84.5,
-    "pnl": 0,
-    "leverage": 10,
-    "trailingStop": 83.85485577891846
+    "entryPrice": 84.48,
+    "markPrice": 84.44,
+    "pnl": -0.11,
+    "leverage": 10
   },
   "signals": {
     "score": 40,
@@ -39,127 +32,184 @@
   },
   "recentTrades": [
     {
-      "time": "2026-04-07T19:00:07.179Z",
-      "symbol": "BTCUSDT",
-      "side": "LONG",
-      "entryPrice": 68358,
-      "pnl": -0.02,
-      "strategy": "RSI_BB_ADAPTIVE",
-      "reasons": [
-        "RSI回踩52",
-        "MACD柱增",
-        "多頭吞噬",
-        "RSI突破BB上軌",
-        "MACD看多背離"
-      ]
+      "time": "2026-04-08T05:00:21.772Z",
+      "symbol": "SOLUSDT",
+      "side": "BUY",
+      "price": 84.48,
+      "qty": 2.65,
+      "realizedPnl": 0,
+      "commission": 0.1119
     },
     {
-      "time": "2026-04-07T18:50:07.651Z",
+      "time": "2026-04-07T19:17:22.089Z",
+      "symbol": "DOTUSDT",
+      "side": "BUY",
+      "price": 1.223,
+      "qty": 9.2,
+      "realizedPnl": -0.0276,
+      "commission": 0.0056
+    },
+    {
+      "time": "2026-04-07T19:17:22.089Z",
+      "symbol": "DOTUSDT",
+      "side": "BUY",
+      "price": 1.223,
+      "qty": 4.1,
+      "realizedPnl": -0.0123,
+      "commission": 0.0025
+    },
+    {
+      "time": "2026-04-07T19:17:22.089Z",
+      "symbol": "DOTUSDT",
+      "side": "BUY",
+      "price": 1.223,
+      "qty": 8.8,
+      "realizedPnl": -0.0264,
+      "commission": 0.0054
+    },
+    {
+      "time": "2026-04-07T19:17:22.089Z",
+      "symbol": "DOTUSDT",
+      "side": "BUY",
+      "price": 1.223,
+      "qty": 105,
+      "realizedPnl": -0.315,
+      "commission": 0.0642
+    },
+    {
+      "time": "2026-04-07T19:17:22.089Z",
+      "symbol": "DOTUSDT",
+      "side": "BUY",
+      "price": 1.223,
+      "qty": 35.2,
+      "realizedPnl": -0.1056,
+      "commission": 0.0215
+    },
+    {
+      "time": "2026-04-07T19:17:02.280Z",
+      "symbol": "AVAXUSDT",
+      "side": "BUY",
+      "price": 8.681,
+      "qty": 23,
+      "realizedPnl": -1.334,
+      "commission": 0.0998
+    },
+    {
+      "time": "2026-04-07T18:53:13.061Z",
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "price": 68348.6,
+      "qty": 0.002,
+      "realizedPnl": -0.0206,
+      "commission": 0.0683
+    },
+    {
+      "time": "2026-04-07T18:45:24.070Z",
       "symbol": "ETHUSDT",
-      "side": "LONG",
-      "entryPrice": 2079.35,
-      "pnl": 0.85,
-      "strategy": "RSI_BB_ADAPTIVE",
-      "reasons": [
-        "RSI回踩45",
-        "RSI突破BB上軌",
-        "MACD看多背離"
-      ]
+      "side": "SELL",
+      "price": 2088.82,
+      "qty": 0.098,
+      "realizedPnl": 0.8526,
+      "commission": 0.1024
     },
     {
-      "time": "2026-04-07T10:10:07.149Z",
+      "time": "2026-04-07T18:20:08.304Z",
+      "symbol": "AVAXUSDT",
+      "side": "SELL",
+      "price": 8.623,
+      "qty": 8,
+      "realizedPnl": 0,
+      "commission": 0.0345
+    },
+    {
+      "time": "2026-04-07T18:20:08.304Z",
+      "symbol": "AVAXUSDT",
+      "side": "SELL",
+      "price": 8.623,
+      "qty": 2,
+      "realizedPnl": 0,
+      "commission": 0.0086
+    },
+    {
+      "time": "2026-04-07T18:20:08.304Z",
+      "symbol": "AVAXUSDT",
+      "side": "SELL",
+      "price": 8.623,
+      "qty": 13,
+      "realizedPnl": 0,
+      "commission": 0.056
+    },
+    {
+      "time": "2026-04-07T18:15:10.065Z",
+      "symbol": "AVAXUSDT",
+      "side": "BUY",
+      "price": 8.641,
+      "qty": 24,
+      "realizedPnl": -0.048,
+      "commission": 0.1037
+    },
+    {
+      "time": "2026-04-07T17:40:10.669Z",
+      "symbol": "DOTUSDT",
+      "side": "SELL",
+      "price": 1.22,
+      "qty": 162.3,
+      "realizedPnl": 0,
+      "commission": 0.099
+    },
+    {
+      "time": "2026-04-07T17:40:09.344Z",
+      "symbol": "AVAXUSDT",
+      "side": "SELL",
+      "price": 8.639,
+      "qty": 24,
+      "realizedPnl": 0,
+      "commission": 0.1037
+    },
+    {
+      "time": "2026-04-07T17:36:38.083Z",
+      "symbol": "AVAXUSDT",
+      "side": "BUY",
+      "price": 8.653,
+      "qty": 25,
+      "realizedPnl": -1.875,
+      "commission": 0.1082
+    },
+    {
+      "time": "2026-04-07T17:30:40.243Z",
+      "symbol": "DOTUSDT",
+      "side": "BUY",
+      "price": 1.217,
+      "qty": 186.1,
+      "realizedPnl": 0,
+      "commission": 0.1132
+    },
+    {
+      "time": "2026-04-07T16:30:05.752Z",
+      "symbol": "BTCUSDT",
+      "side": "BUY",
+      "price": 68358.9,
+      "qty": 0.002,
+      "realizedPnl": 0,
+      "commission": 0.0684
+    },
+    {
+      "time": "2026-04-07T15:30:08.143Z",
       "symbol": "ETHUSDT",
-      "side": "LONG",
-      "entryPrice": 2130.47,
-      "pnl": -1.29,
-      "strategy": "SESSION_BREAKOUT",
-      "reasons": [
-        "MACD柱增",
-        "量能放大",
-        "動量+1.04%",
-        "RSI突破BB上軌",
-        "亞盤突破↑(28)"
-      ]
+      "side": "BUY",
+      "price": 2080.12,
+      "qty": 0.098,
+      "realizedPnl": 0,
+      "commission": 0.1019
     },
     {
-      "time": "2026-04-07T10:10:05.915Z",
-      "symbol": "BTCUSDT",
-      "side": "LONG",
-      "entryPrice": 69183.9,
-      "pnl": -0.68,
-      "strategy": "SESSION_BREAKOUT",
-      "reasons": [
-        "MACD柱增",
-        "量能放大",
-        "動量+0.67%",
-        "RSI突破BB上軌",
-        "亞盤突破↑(870)"
-      ]
-    },
-    {
-      "time": "2026-04-07T05:50:13.932Z",
-      "symbol": "BTCUSDT",
-      "side": "LONG",
-      "entryPrice": 68603.1,
-      "pnl": 0.16,
-      "strategy": "UNKNOWN",
-      "reasons": []
-    },
-    {
-      "time": "2026-04-07T01:00:13.824Z",
-      "symbol": "BTCUSDT",
-      "side": "LONG",
-      "entryPrice": 68452,
-      "pnl": 2.7,
-      "strategy": "TREND_FOLLOW",
-      "reasons": [
-        "1H EMA 多排",
-        "RSI超賣24",
-        "量能放大"
-      ]
-    },
-    {
-      "time": "2026-04-06T23:10:09.277Z",
-      "symbol": "BTCUSDT",
-      "side": "LONG",
-      "entryPrice": 68763.9,
-      "pnl": -4.72,
-      "strategy": "MOMENTUM",
-      "reasons": [
-        "1H EMA 多排",
-        "RSI超賣29",
-        "量能放大"
-      ]
-    },
-    {
-      "time": "2026-04-06T21:35:00.000Z",
-      "symbol": "BTCUSDT",
-      "side": "LONG",
-      "entryPrice": 69331.7,
-      "exit": 69570.5,
-      "pnl": 2.55,
-      "strategy": "MOMENTUM",
-      "size": 0.013,
-      "reason": "Trailing SL triggered at 69570.5"
-    },
-    {
-      "time": "2026-04-06T12:57:01.858Z",
-      "symbol": "BTCUSDT",
-      "side": "LONG",
-      "entryPrice": 69181.7,
-      "pnl": 1.7,
-      "strategy": "UNKNOWN",
-      "reasons": []
-    },
-    {
-      "time": "2026-04-06T07:30:58.000Z",
-      "strategy": "MANUAL_CLOSE",
-      "pnl": -1.1,
-      "side": "LONG",
-      "entry": 69106.8,
-      "exit": 69022.5,
-      "size": 0.013,
-      "reason": "Engine closePosition 400 bug - manually closed"
+      "time": "2026-04-07T14:40:19.632Z",
+      "symbol": "AVAXUSDT",
+      "side": "SELL",
+      "price": 8.578,
+      "qty": 3,
+      "realizedPnl": 0,
+      "commission": 0.0129
     }
   ],
   "strategyWeights": {
