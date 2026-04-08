@@ -1,13 +1,13 @@
 {
-  "lastUpdate": "2026-04-08 17:33",
+  "lastUpdate": "2026-04-08 17:45",
   "status": "RUNNING",
   "mode": "batch_swing_v6",
   "capital": 10000,
-  "totalEquity": 10058,
-  "netEquity": 10058,
-  "totalPnl": 58,
-  "btcPrice": 2280136,
-  "btcChange24h": 2.85,
+  "totalEquity": 10060,
+  "netEquity": 10060,
+  "totalPnl": 60,
+  "btcPrice": 2277966,
+  "btcChange24h": 2.7,
   "holdings": {
     "btc": 0.00012493,
     "avgCost": 2204751,
@@ -28,8 +28,8 @@
       {
         "coin": "SOL",
         "held": 0.72996927,
-        "value": 1966,
-        "pnl": 6
+        "value": 1968,
+        "pnl": 8
       },
       {
         "coin": "DOGE",
@@ -71,9 +71,9 @@
     {
       "market": "soltwd",
       "held": 0.72996927,
-      "value": 1966,
+      "value": 1968,
       "avgEntry": 2685,
-      "pnl": 6
+      "pnl": 8
     },
     {
       "market": "dogetwd",
