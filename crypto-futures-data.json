@@ -1,16 +1,16 @@
 {
-  "lastUpdate": "2026-04-08 22:03",
+  "lastUpdate": "2026-04-08 22:18",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
   "account": {
     "initialCapital": 464,
-    "balance": 443.91,
-    "available": 421.64,
+    "balance": 442.07,
+    "available": 442.07,
     "unrealizedPnl": 0,
-    "netEquity": 443.91,
+    "netEquity": 442.07,
     "todayPnl": -3.35,
-    "totalPnl": -20.09,
+    "totalPnl": -21.93,
     "leverage": 10,
     "marginType": "ISOLATED",
     "totalTrades": 13,
@@ -19,47 +19,40 @@
     "losses": 8,
     "maxDrawdown": 0.6
   },
-  "position": {
-    "symbol": "SOLUSDT",
-    "side": "LONG",
-    "size": 2.65,
-    "entryPrice": 84.48,
-    "markPrice": 84.02,
-    "pnl": -1.22,
-    "leverage": 10,
-    "trailingStop": null
-  },
+  "position": null,
   "signals": {
-    "score": 44,
+    "score": 67,
     "direction": "LONG",
     "marketState": "TRENDING_UP",
     "trend4h": "UP",
-    "buyScore": 44,
-    "sellScore": 20,
+    "buyScore": 67,
+    "sellScore": 5,
     "reasons": [
       "1H EMA 多排",
-      "RSI回踩48",
-      "量能放大"
+      "RSI回踩47",
+      "量能放大",
+      "支撐區回踩做多"
     ],
-    "rsi15": 48,
+    "rsi15": 47,
     "strategy": "TREND_FOLLOW"
   },
   "perSymbolSignals": {
     "BTCUSDT": {
-      "score": 44,
+      "score": 67,
       "direction": "LONG",
       "marketState": "TRENDING_UP",
       "trend4h": "UP",
-      "buyScore": 44,
-      "sellScore": 20,
+      "buyScore": 67,
+      "sellScore": 5,
       "reasons": [
         "1H EMA 多排",
-        "RSI回踩48",
-        "量能放大"
+        "RSI回踩47",
+        "量能放大",
+        "支撐區回踩做多"
       ],
-      "price": 71664.5,
-      "rsi15": 48,
-      "time": "2026-04-08T14:02:58.823Z"
+      "price": 71569.7,
+      "rsi15": 47,
+      "time": "2026-04-08T14:18:13.155Z"
     },
     "ETHUSDT": {
       "score": 44,
@@ -70,15 +63,22 @@
       "sellScore": 15,
       "reasons": [
         "1H EMA 多排",
-        "RSI回踩45",
+        "RSI回踩40",
         "量能放大"
       ],
-      "price": 2238.04,
-      "rsi15": 45,
-      "time": "2026-04-08T14:03:00.052Z"
+      "price": 2230.84,
+      "rsi15": 40,
+      "time": "2026-04-08T14:18:14.355Z"
     }
   },
   "recentTrades": [
+    {
+      "time": "2026-04-08T14:05:28.000Z",
+      "symbol": "SOLUSDT",
+      "side": "SHORT",
+      "pnl": -1.72,
+      "strategy": ""
+    },
     {
       "time": "2026-04-08T13:40:01.000Z",
       "symbol": "BTCUSDT",
@@ -210,13 +210,6 @@
       "symbol": "AVAXUSDT",
       "side": "SHORT",
       "pnl": -5.76,
-      "strategy": ""
-    },
-    {
-      "time": "2026-04-07T12:14:54.000Z",
-      "symbol": "AVAXUSDT",
-      "side": "LONG",
-      "pnl": 1.2,
       "strategy": ""
     }
   ],
