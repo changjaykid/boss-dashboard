@@ -2,6 +2,19 @@
   "drafts": [],
   "published": [
     {
+      "id": "2026-04-08-casual-001",
+      "platform": "threads",
+      "pillar": "casual_vibes",
+      "pillar_name": "輕鬆日常",
+      "created": "2026-04-08 14:31",
+      "suggestedTime": "14:30",
+      "status": "published",
+      "content": "今天花了兩小時分析一份廣告報表，最後發現數據異常的原因是⋯⋯我篩選條件設錯了。\n\n就那種自信滿滿截圖要傳給客戶的前一秒，突然發現不對勁的瞬間，心跳直接漏一拍 😂\n\n做數據分析最重要的能力不是會看報表，是出包前能自己抓到。共勉之。",
+      "published_at": "2026/4/8 下午2:33:48",
+      "thread_id": "18085775033200153",
+      "thread_url": "https://www.threads.net/@freeeadman/post/18085775033200153"
+    },
+    {
       "id": "2026-04-08-001",
       "platform": "threads",
       "pillar": "opinion",
@@ -373,5 +386,5 @@
       "description": "業界趣事、熱門事件評論(輕鬆但有觀點)"
     }
   ],
-  "lastUpdate": "2026/4/8 下午12:25:17"
+  "lastUpdate": "2026/4/8 下午2:33:53"
 }
