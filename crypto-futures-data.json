@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-08 14:30",
+  "lastUpdate": "2026-04-08 14:53",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
@@ -30,7 +30,7 @@
     "trailingStop": 83.85485577891846
   },
   "signals": {
-    "score": 50,
+    "score": 40,
     "direction": "LONG",
     "marketState": "TRENDING_UP",
     "buyScore": 0,
