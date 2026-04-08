@@ -1,13 +1,13 @@
 {
-  "lastUpdate": "2026-04-08 21:51",
+  "lastUpdate": "2026-04-08 22:03",
   "status": "RUNNING",
   "mode": "batch_swing_v6",
   "capital": 10000,
   "totalEquity": 10046,
   "netEquity": 10046,
   "totalPnl": 46,
-  "btcPrice": 2290000,
-  "btcChange24h": 4.44,
+  "btcPrice": 2284132,
+  "btcChange24h": 4.36,
   "holdings": {
     "btc": 0,
     "avgCost": 0,
@@ -16,14 +16,14 @@
       {
         "coin": "ETH",
         "held": 0.01402009,
-        "value": 1001,
-        "pnl": 1
+        "value": 1000,
+        "pnl": 0
       },
       {
         "coin": "SOL",
         "held": 0.3626288,
-        "value": 970,
-        "pnl": -990
+        "value": 971,
+        "pnl": -989
       }
     ]
   },
@@ -45,16 +45,16 @@
     {
       "market": "ethtwd",
       "held": 0.01402009,
-      "value": 1001,
+      "value": 1000,
       "avgEntry": 71326,
-      "pnl": 1
+      "pnl": 0
     },
     {
       "market": "soltwd",
       "held": 0.3626288,
-      "value": 970,
+      "value": 971,
       "avgEntry": 2685,
-      "pnl": -990
+      "pnl": -989
     }
   ],
   "marketStats": {
@@ -130,19 +130,19 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2290000,
-      "rsi": "53.5",
-      "bbPos": "67%"
+      "price": 2284132,
+      "rsi": "50.1",
+      "bbPos": "52%"
     },
     "ETH": {
-      "price": 71411,
-      "rsi": "47.7",
-      "bbPos": "30%"
+      "price": 71309,
+      "rsi": "45.9",
+      "bbPos": "24%"
     },
     "SOL": {
-      "price": 2674,
-      "rsi": "40.7",
-      "bbPos": "0%"
+      "price": 2678,
+      "rsi": "44.4",
+      "bbPos": "19%"
     },
     "DOGE": {
       "price": 3,

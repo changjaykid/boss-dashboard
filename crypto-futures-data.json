@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-08 21:49",
+  "lastUpdate": "2026-04-08 22:03",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
@@ -24,56 +24,28 @@
     "side": "LONG",
     "size": 2.65,
     "entryPrice": 84.48,
-    "markPrice": 84.36,
-    "pnl": -0.33,
+    "markPrice": 84.02,
+    "pnl": -1.22,
     "leverage": 10,
     "trailingStop": null
   },
   "signals": {
-    "score": 11,
-    "direction": null,
+    "score": 44,
+    "direction": "LONG",
     "marketState": "TRENDING_UP",
     "trend4h": "UP",
-    "buyScore": 16.56,
-    "sellScore": 22.080000000000002,
+    "buyScore": 44,
+    "sellScore": 20,
     "reasons": [
-      "🟢1H EMA 多排",
-      "🟢RSI回踩52",
-      "🟢量能放大",
-      "🟢MACD看多背離",
-      "🟢⚠️壓力區不追多",
-      "🔴RSI回彈52",
-      "🔴量能放大",
-      "🔴動量-0.97%",
-      "🔴壓力區回踩做空"
+      "1H EMA 多排",
+      "RSI回踩48",
+      "量能放大"
     ],
-    "rsi15": 52,
-    "strategy": null
+    "rsi15": 48,
+    "strategy": "TREND_FOLLOW"
   },
   "perSymbolSignals": {
     "BTCUSDT": {
-      "score": 11,
-      "direction": null,
-      "marketState": "TRENDING_UP",
-      "trend4h": "UP",
-      "buyScore": 16.56,
-      "sellScore": 22.080000000000002,
-      "reasons": [
-        "🟢1H EMA 多排",
-        "🟢RSI回踩52",
-        "🟢量能放大",
-        "🟢MACD看多背離",
-        "🟢⚠️壓力區不追多",
-        "🔴RSI回彈52",
-        "🔴量能放大",
-        "🔴動量-0.97%",
-        "🔴壓力區回踩做空"
-      ],
-      "price": 71887.4,
-      "rsi15": 52,
-      "time": "2026-04-08T13:49:17.416Z"
-    },
-    "ETHUSDT": {
       "score": 44,
       "direction": "LONG",
       "marketState": "TRENDING_UP",
@@ -85,9 +57,25 @@
         "RSI回踩48",
         "量能放大"
       ],
-      "price": 2243,
+      "price": 71664.5,
       "rsi15": 48,
-      "time": "2026-04-08T13:49:18.717Z"
+      "time": "2026-04-08T14:02:58.823Z"
+    },
+    "ETHUSDT": {
+      "score": 44,
+      "direction": "LONG",
+      "marketState": "TRENDING_UP",
+      "trend4h": "UP",
+      "buyScore": 44,
+      "sellScore": 15,
+      "reasons": [
+        "1H EMA 多排",
+        "RSI回踩45",
+        "量能放大"
+      ],
+      "price": 2238.04,
+      "rsi15": 45,
+      "time": "2026-04-08T14:03:00.052Z"
     }
   },
   "recentTrades": [
