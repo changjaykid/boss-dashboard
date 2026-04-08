@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-08 22:26",
+  "lastUpdate": "2026-04-08 22:31",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
@@ -29,11 +29,11 @@
     "sellScore": 3,
     "reasons": [
       "1H EMA 多排",
-      "RSI回踩44",
+      "RSI回踩40",
       "量能放大",
       "支撐區回踩做多"
     ],
-    "rsi15": 44,
+    "rsi15": 40,
     "strategy": "TREND_FOLLOW"
   },
   "perSymbolSignals": {
@@ -46,28 +46,34 @@
       "sellScore": 3,
       "reasons": [
         "1H EMA 多排",
-        "RSI回踩44",
+        "RSI回踩40",
         "量能放大",
         "支撐區回踩做多"
       ],
-      "price": 71472,
-      "rsi15": 44,
-      "time": "2026-04-08T14:26:05.099Z"
+      "price": 71271,
+      "rsi15": 40,
+      "time": "2026-04-08T14:31:47.667Z"
     },
     "ETHUSDT": {
-      "score": 32,
-      "direction": "LONG",
+      "score": 16,
+      "direction": null,
       "marketState": "TRENDING_UP",
       "trend4h": "UP",
-      "buyScore": 32,
-      "sellScore": 17,
+      "buyScore": 32.199999999999996,
+      "sellScore": 28.52,
       "reasons": [
-        "1H EMA 多排",
-        "量能放大"
+        "🟢1H EMA 多排",
+        "🟢量能放大",
+        "🔴MACD柱增",
+        "🔴量能放大",
+        "🔴動量-0.85%",
+        "🔴RSI跌破BB下軌",
+        "🔴亞盤突破↓(27)",
+        "🔴MACD看空背離"
       ],
-      "price": 2226.99,
-      "rsi15": 38,
-      "time": "2026-04-08T14:26:06.299Z"
+      "price": 2215.8,
+      "rsi15": 33,
+      "time": "2026-04-08T14:31:48.864Z"
     }
   },
   "recentTrades": [
