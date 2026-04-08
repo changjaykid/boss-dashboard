@@ -1574,7 +1574,7 @@ box.innerHTML=leads.map(x=>`<div class="p-3 bg-gray-800 rounded-lg border border
 // ========== CRYPTO AUTO TRADING v4 ==========
 async function loadCryptoData(){
 try{
-const r=await fetch('crypto-trading-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
+const r=await fetch('crypto-mock-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
 const sim=d.simulation||{};const acct=d.account||{};
 
 // 狀態 & 更新時間
