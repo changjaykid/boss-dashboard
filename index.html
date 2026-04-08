@@ -88,9 +88,9 @@
             <a href="#" onclick="switchTab('forex',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>💱</span><span>外匯新聞</span></a>
             <a href="#" onclick="switchTab('forex-auto',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🤖</span><span>外匯自動交易</span></a>
             <a href="#" onclick="switchTab('crypto',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🪙</span><span>虛擬貨幣新聞</span></a>
-            <a href="#" onclick="switchTab('crypto-auto',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🤖</span><span>虛擬貨幣模擬倉</span></a>
-            <a href="#" onclick="switchTab('money-maker',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>💰</span><span>虛擬貨幣MAX</span></a>
-            <a href="#" onclick="switchTab('crypto-futures',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>📈</span><span>虛擬貨幣幣安</span></a>
+            <a href="#" onclick="switchTab('crypto-mock',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🤖</span><span>虛擬貨幣模擬倉</span></a>
+            <a href="#" onclick="switchTab('crypto-max',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>💰</span><span>虛擬貨幣MAX</span></a>
+            <a href="#" onclick="switchTab('crypto-binance',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>📈</span><span>虛擬貨幣幣安</span></a>
             <div class="pt-3 pb-1"><p class="text-[10px] font-semibold text-gray-500 uppercase px-3">營運管理</p></div>
             <a href="#" onclick="switchTab('ad-business',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🎯</span><span>廣告業務</span></a>
             <a href="#" onclick="switchTab('community',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🌐</span><span>threads</span></a>
@@ -639,7 +639,7 @@
             </div>
 
             <!-- 虛擬貨幣模擬倉 v4 -->
-            <div id="view-crypto-auto" class="section-view space-y-4 md:space-y-6">
+            <div id="view-crypto-mock" class="section-view space-y-4 md:space-y-6">
                 <div class="flex items-center space-x-2 text-xs">
                     <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-green-500"></span></span>
                     <span class="text-gray-400">狀態：<span class="text-green-300" id="ca-status">v4 運行中</span></span>
@@ -744,7 +744,7 @@
             </div>
 
             <!-- 虛擬貨幣MAX -->
-            <div id="view-money-maker" class="section-view space-y-4 md:space-y-6">
+            <div id="view-crypto-max" class="section-view space-y-4 md:space-y-6">
                 <div class="flex items-center space-x-2 text-xs">
                     <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-yellow-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-yellow-500"></span></span>
                     <span class="text-gray-400">狀態：<span id="mm-status" class="text-yellow-300">待命</span></span>
@@ -875,7 +875,7 @@
             </div>
 
             <!-- 虛擬貨幣幣安 -->
-            <div id="view-crypto-futures" class="section-view space-y-4 md:space-y-6">
+            <div id="view-crypto-binance" class="section-view space-y-4 md:space-y-6">
                 <div class="flex items-center space-x-2 text-xs">
                     <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-blue-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-blue-500"></span></span>
                     <span class="text-gray-400">狀態：<span id="cf-status" class="text-blue-300">載入中</span></span>
@@ -1026,7 +1026,7 @@
 function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('open')}
 function checkPass(){if(document.getElementById('pass-input').value==='8888'){document.getElementById('auth-overlay').style.display='none';document.getElementById('app-content').style.display='flex';setTimeout(loadOverview,200)}else{document.getElementById('auth-error').classList.remove('hidden')}}
 
-const titles={overview:{t:'📊 總覽',s:'所有專案一覽無遺'},stocks:{t:'股票專家',s:'台股分析'},forex:{t:'外匯新聞',s:'市場新聞 · 交易影響分析'},'forex-auto':{t:'🤖 外匯自動交易',s:'多商品 · v4 嚴格確認模式'},crypto:{t:'虛擬貨幣新聞',s:'市場新聞 · 交易影響分析'},'crypto-auto':{t:'🤖 虛擬貨幣模擬倉',s:'MAX 交易所 · v4 策略模組化'},'money-maker':{t:'💰 虛擬貨幣MAX',s:'BTC/TWD · 真金白銀 · 背水一戰'},'crypto-futures':{t:'📈 虛擬貨幣幣安',s:'Binance · 多空雙向 · 槓桿交易'},'ad-business':{t:'🎯 廣告業務',s:'每日潛在客戶蒐集'},community:{t:'threads',s:'互動管理'},'community-ig':{t:'threadsIG',s:'Instagram · @freeeadman'},shorts:{t:'短影音專案',s:'寵物上班去 · 規劃中'},skills:{t:'技能專案',s:'4 模型 · 23 技能'}};
+const titles={overview:{t:'📊 總覽',s:'所有專案一覽無遺'},stocks:{t:'股票專家',s:'台股分析'},forex:{t:'外匯新聞',s:'市場新聞 · 交易影響分析'},'forex-auto':{t:'🤖 外匯自動交易',s:'多商品 · v4 嚴格確認模式'},crypto:{t:'虛擬貨幣新聞',s:'市場新聞 · 交易影響分析'},'crypto-mock':{t:'🤖 虛擬貨幣模擬倉',s:'MAX 交易所 · v4 策略模組化'},'crypto-max':{t:'💰 虛擬貨幣MAX',s:'BTC/TWD · 真金白銀 · 背水一戰'},'crypto-binance':{t:'📈 虛擬貨幣幣安',s:'Binance · 多空雙向 · 槓桿交易'},'ad-business':{t:'🎯 廣告業務',s:'每日潛在客戶蒐集'},community:{t:'threads',s:'互動管理'},'community-ig':{t:'threadsIG',s:'Instagram · @freeeadman'},shorts:{t:'短影音專案',s:'寵物上班去 · 規劃中'},skills:{t:'技能專案',s:'4 模型 · 23 技能'}};
 const trendMap={'STRONG_BULL':'強勢看多 🟢','BULL':'看多 🟢','STRONG_BEAR':'強勢看空 🔴','BEAR':'看空 🔴','NEUTRAL':'盤整 ⚪'};
 function trendCN(t){return trendMap[t]||t||'--'}
 function trendColor(t){if(!t)return'text-gray-300';if(t.includes('BULL'))return'text-green-400';if(t.includes('BEAR'))return'text-red-400';return'text-gray-300'}
@@ -1191,9 +1191,9 @@ if(v==='forex-auto'){loadTradingData();tri=setInterval(loadTradingData,900000)}
 if(v==='community'){loadSocialData()}
 if(v==='community-ig'){loadIGData()}
 if(v==='crypto'){loadCryptoNews()}
-if(v==='crypto-auto'){loadCryptoData();if(!window._cri)window._cri=setInterval(loadCryptoData,900000)}
-if(v==='money-maker'){loadMoneyMakerData();if(!window._mmi)window._mmi=setInterval(loadMoneyMakerData,180000)}
-if(v==='crypto-futures'){loadCryptoFuturesData()}
+if(v==='crypto-mock'){loadCryptoData();if(!window._cri)window._cri=setInterval(loadCryptoData,900000)}
+if(v==='crypto-max'){loadMoneyMakerData();if(!window._mmi)window._mmi=setInterval(loadMoneyMakerData,180000)}
+if(v==='crypto-binance'){loadCryptoFuturesData()}
 if(v==='ad-business'){loadAdBusinessData()}
 if(v==='skills'){loadSkillsData()}
 }
@@ -1677,7 +1677,7 @@ rb.innerHTML=rhtml;
 // ========== MONEY MAKER ==========
 async function loadMoneyMakerData(){
 try{
-const r=await fetch('money-maker-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
+const r=await fetch('crypto-max-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
 const stEl=document.getElementById('mm-status');if(stEl){stEl.textContent=d.status==='RUNNING'?'運行中':'待命';stEl.className=d.status==='RUNNING'?'text-green-300':'text-yellow-300'}
 const luEl=document.getElementById('mm-last-update');if(luEl)luEl.textContent=d.lastUpdate||'--';
 const neEl=document.getElementById('mm-net-equity');if(neEl)neEl.textContent='NT$'+(d.totalEquity||d.netEquity||d.capital||10000).toLocaleString();
@@ -1718,7 +1718,7 @@ if(alertSec){if(alerts.length){alertSec.style.display='';document.getElementById
 // ========== CRYPTO FUTURES ==========
 async function loadCryptoFuturesData(){
 try{
-const r=await fetch('crypto-futures-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
+const r=await fetch('crypto-binance-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
 
 // Status
 const stEl=document.getElementById('cf-status');
