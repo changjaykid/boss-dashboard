@@ -1,41 +1,41 @@
 {
-  "lastUpdate": "2026-04-09 09:00",
+  "lastUpdate": "2026-04-09 09:15",
   "status": "RUNNING",
   "mode": "batch_swing_v6",
   "capital": 10000,
-  "totalEquity": 7426,
-  "netEquity": 7426,
-  "totalPnl": -2574,
-  "btcPrice": 2252773,
-  "btcChange24h": -1.42,
+  "totalEquity": 7397,
+  "netEquity": 7397,
+  "totalPnl": -2603,
+  "btcPrice": 2249170,
+  "btcChange24h": -1.57,
   "holdings": {
     "btc": 0.00086059,
     "avgCost": 2277506,
-    "unrealizedPnl": -1082,
+    "unrealizedPnl": -23,
     "positions": [
       {
         "coin": "BTC",
         "held": 0.00086059,
-        "value": 1939,
-        "pnl": -21
+        "value": 1936,
+        "pnl": -24
       },
       {
         "coin": "ETH",
-        "held": 0.02751578,
-        "value": 1912,
-        "pnl": -48
+        "held": 0.01445406,
+        "value": 999,
+        "pnl": -1
       },
       {
         "coin": "SOL",
-        "held": 0.3626288,
-        "value": 948,
-        "pnl": -1012
+        "held": 0.38321882,
+        "value": 1002,
+        "pnl": 2
       }
     ]
   },
-  "buyOrders": 13,
-  "sellOrders": 13,
-  "consecutiveLosses": 0,
+  "buyOrders": 15,
+  "sellOrders": 15,
+  "consecutiveLosses": 1,
   "fearGreedIndex": "--",
   "nextAction": "持倉監控中",
   "signals": {
@@ -51,23 +51,23 @@
     {
       "market": "btctwd",
       "held": 0.00086059,
-      "value": 1939,
+      "value": 1936,
       "avgEntry": 2277506,
-      "pnl": -21
+      "pnl": -24
     },
     {
       "market": "ethtwd",
-      "held": 0.02751578,
-      "value": 1912,
-      "avgEntry": 71232,
-      "pnl": -48
+      "held": 0.01445406,
+      "value": 999,
+      "avgEntry": 69185,
+      "pnl": -1
     },
     {
       "market": "soltwd",
-      "held": 0.3626288,
-      "value": 948,
-      "avgEntry": 2685,
-      "pnl": -1012
+      "held": 0.38321882,
+      "value": 1002,
+      "avgEntry": 2609,
+      "pnl": 2
     }
   ],
   "marketStats": {
@@ -77,14 +77,14 @@
       "pnl": 28
     },
     "ethtwd": {
-      "trades": 4,
+      "trades": 5,
       "wins": 4,
-      "pnl": 27
+      "pnl": -39
     },
     "soltwd": {
-      "trades": 4,
+      "trades": 5,
       "wins": 4,
-      "pnl": 14
+      "pnl": -17
     },
     "avaxtwd": {
       "trades": 0,
@@ -93,6 +93,26 @@
     }
   },
   "recentTrades": [
+    {
+      "exitTime": 1775697124955,
+      "coin": "SOL",
+      "side": "BUY",
+      "amount": 0.3832188231681572,
+      "entryPrice": 2605,
+      "twd": 1000,
+      "pnl": 0,
+      "reason": "強買入(7.0)"
+    },
+    {
+      "exitTime": 1775697123264,
+      "coin": "ETH",
+      "side": "BUY",
+      "amount": 0.014454063757709123,
+      "entryPrice": 69074,
+      "twd": 1000,
+      "pnl": 0,
+      "reason": "強買入(7.0)"
+    },
     {
       "exitTime": 1775659142282,
       "coin": "BTC",
@@ -122,96 +142,36 @@
       "twd": 1000,
       "pnl": 0,
       "reason": "強買入(4.3)"
-    },
-    {
-      "exitTime": 1775657704122,
-      "coin": "ETH",
-      "side": "BUY",
-      "amount": 0.0050546708987684805,
-      "entryPrice": 71107,
-      "twd": 360,
-      "pnl": 0,
-      "reason": "強買入(3.0)"
-    },
-    {
-      "exitTime": 1775657343534,
-      "coin": "ETH",
-      "side": "BUY",
-      "amount": 0.008441023169695508,
-      "entryPrice": 70968,
-      "twd": 600,
-      "pnl": 0,
-      "reason": "強買入(4.5)"
-    },
-    {
-      "exitTime": 1775655723414,
-      "coin": "ETH",
-      "side": "BUY",
-      "amount": 0.014020089282579784,
-      "entryPrice": 71212,
-      "twd": 1000,
-      "pnl": 0,
-      "reason": "強買入(3.0)"
-    },
-    {
-      "exitTime": 1775628679121,
-      "coin": "SOL",
-      "side": "BUY",
-      "amount": 0.134123442047914,
-      "entryPrice": 2680,
-      "twd": 360,
-      "pnl": 0,
-      "reason": "強買入(3.0)"
-    },
-    {
-      "exitTime": 1775628364871,
-      "coin": "SOL",
-      "side": "BUY",
-      "amount": 0.22357244159140105,
-      "entryPrice": 2679,
-      "twd": 600,
-      "pnl": 0,
-      "reason": "強買入(3.0)"
-    },
-    {
-      "exitTime": 1775628004722,
-      "coin": "SOL",
-      "side": "BUY",
-      "amount": 0.3722733882695104,
-      "entryPrice": 2682,
-      "twd": 1000,
-      "pnl": 0,
-      "reason": "強買入(3.0)"
     }
   ],
   "riskStatus": {
     "dailyLossLimit": 500,
     "consecLossPause": 4,
-    "currentConsecLosses": 0,
-    "totalWinRate": "100.0%",
-    "avgPnlPerTrade": 5
+    "currentConsecLosses": 1,
+    "totalWinRate": "86.7%",
+    "avgPnlPerTrade": -2
   },
   "marketSignals": {
     "BTC": {
-      "price": 2252773,
-      "rsi": "33.8",
-      "bbPos": "8%"
+      "price": 2249170,
+      "rsi": "31.1",
+      "bbPos": "5%"
     },
     "ETH": {
-      "price": 69476,
-      "rsi": "36.3",
-      "bbPos": "19%"
+      "price": 69094,
+      "rsi": "30.6",
+      "bbPos": "3%"
     },
     "SOL": {
-      "price": 2614,
-      "rsi": "34.4",
-      "bbPos": "9%"
+      "price": 2615,
+      "rsi": "32.6",
+      "bbPos": "18%"
     },
     "AVAX": {
       "price": 309,
       "rsi": "57.4",
-      "bbPos": "68%"
+      "bbPos": "69%"
     }
   },
-  "twdCash": 2627
+  "twdCash": 3460
 }

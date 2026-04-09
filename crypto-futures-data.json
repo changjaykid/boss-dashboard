@@ -1,16 +1,16 @@
 {
-  "lastUpdate": "2026-04-09 09:00",
+  "lastUpdate": "2026-04-09 09:15",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
   "account": {
     "initialCapital": 464,
-    "balance": 437.86,
-    "available": 402.47,
+    "balance": 437.68,
+    "available": 367.1,
     "unrealizedPnl": 0,
-    "netEquity": 437.86,
+    "netEquity": 437.68,
     "todayPnl": -3.05,
-    "totalPnl": -26.14,
+    "totalPnl": -26.32,
     "leverage": 10,
     "marginType": "ISOLATED",
     "totalTrades": 16,
@@ -20,58 +20,61 @@
     "maxDrawdown": 1.2
   },
   "position": {
-    "symbol": "BTCUSDT",
+    "symbol": "ETHUSDT",
     "side": "LONG",
-    "size": 0.005,
-    "entryPrice": 71132.8,
-    "markPrice": 70820.1,
-    "pnl": -1.56,
+    "size": 0.163,
+    "entryPrice": 2170.02,
+    "markPrice": 2170.26,
+    "pnl": 0.04,
     "leverage": 10,
     "trailingStop": 70279.20640000001
   },
   "signals": {
-    "score": 37,
+    "score": 46,
     "direction": "LONG",
     "marketState": "TRENDING_DOWN",
     "trend4h": "UP",
-    "buyScore": 37,
-    "sellScore": 0,
+    "buyScore": 46,
+    "sellScore": 3,
     "reasons": [
-      "StochRSI金叉(K=4)",
+      "量能放大",
+      "StochRSI金叉(K=0)",
       "支撐區回踩做多"
     ],
-    "rsi15": 37,
+    "rsi15": 32,
     "strategy": "STOCH_RSI_CROSS"
   },
   "perSymbolSignals": {
     "BTCUSDT": {
-      "score": 37,
+      "score": 46,
       "direction": "LONG",
       "marketState": "TRENDING_DOWN",
       "trend4h": "UP",
-      "buyScore": 37,
-      "sellScore": 0,
+      "buyScore": 46,
+      "sellScore": 3,
       "reasons": [
-        "StochRSI金叉(K=4)",
+        "量能放大",
+        "StochRSI金叉(K=0)",
         "支撐區回踩做多"
       ],
-      "price": 70828.2,
-      "rsi15": 37,
-      "time": "2026-04-09T01:00:10.716Z"
+      "price": 70634.8,
+      "rsi15": 32,
+      "time": "2026-04-09T01:15:12.432Z"
     },
     "ETHUSDT": {
-      "score": 23,
+      "score": 40,
       "direction": "LONG",
       "marketState": "TRENDING_DOWN",
       "trend4h": "UP",
-      "buyScore": 23,
-      "sellScore": 0,
+      "buyScore": 40,
+      "sellScore": 2,
       "reasons": [
+        "RSI超賣30",
         "支撐區回踩做多"
       ],
-      "price": 2183.03,
-      "rsi15": 36,
-      "time": "2026-04-09T01:00:12.020Z"
+      "price": 2170.31,
+      "rsi15": 30,
+      "time": "2026-04-09T01:15:13.695Z"
     }
   },
   "recentTrades": [
