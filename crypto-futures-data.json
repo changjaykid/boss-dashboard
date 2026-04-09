@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-09 11:45",
+  "lastUpdate": "2026-04-09 12:00",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
@@ -24,15 +24,15 @@
     "side": "LONG",
     "size": 0.163,
     "entryPrice": 2170.02,
-    "markPrice": 2177.57,
-    "pnl": 1.23,
+    "markPrice": 2180.91,
+    "pnl": 1.78,
     "leverage": 10,
     "trailingStop": 70279.20640000001
   },
   "signals": {
     "score": 0,
     "direction": null,
-    "marketState": "RANGING",
+    "marketState": "CONSOLIDATING",
     "buyScore": 0,
     "sellScore": 0,
     "reasons": [],
@@ -42,29 +42,29 @@
     "BTCUSDT": {
       "score": 0,
       "direction": null,
-      "marketState": "RANGING",
+      "marketState": "CONSOLIDATING",
       "buyScore": 0,
       "sellScore": 0,
       "reasons": [],
-      "price": 70881.6,
-      "time": "2026-04-09T03:45:10.787Z"
+      "price": 70968.1,
+      "time": "2026-04-09T04:00:20.160Z"
     },
     "ETHUSDT": {
-      "score": 43,
+      "score": 45,
       "direction": "LONG",
       "marketState": "TRENDING_DOWN",
       "trend4h": "UP",
-      "buyScore": 43,
+      "buyScore": 45,
       "sellScore": 0,
       "reasons": [
-        "RSI回踩41",
+        "RSI回踩44",
         "MACD柱增",
-        "多頭吞噬",
-        "MACD看多背離"
+        "MACD看多背離",
+        "支撐區回踩做多"
       ],
-      "price": 2177.52,
-      "rsi15": 41,
-      "time": "2026-04-09T03:45:12.047Z"
+      "price": 2180.92,
+      "rsi15": 44,
+      "time": "2026-04-09T04:00:21.417Z"
     }
   },
   "recentTrades": [
