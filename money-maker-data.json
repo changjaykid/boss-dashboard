@@ -1,35 +1,35 @@
 {
-  "lastUpdate": "2026-04-09 16:15",
+  "lastUpdate": "2026-04-09 16:30",
   "status": "RUNNING",
   "mode": "batch_swing_v6",
   "capital": 10000,
-  "totalEquity": 7425,
-  "netEquity": 7425,
-  "totalPnl": -2575,
-  "btcPrice": 2257468,
-  "btcChange24h": -1.04,
+  "totalEquity": 7435,
+  "netEquity": 7435,
+  "totalPnl": -2565,
+  "btcPrice": 2260756,
+  "btcChange24h": -0.87,
   "holdings": {
     "btc": 0.00086059,
     "avgCost": 2277506,
-    "unrealizedPnl": -7,
+    "unrealizedPnl": 3,
     "positions": [
       {
         "coin": "BTC",
         "held": 0.00086059,
-        "value": 1943,
-        "pnl": -17
+        "value": 1946,
+        "pnl": -14
       },
       {
         "coin": "ETH",
         "held": 0.02833124,
-        "value": 1965,
-        "pnl": 5
+        "value": 1968,
+        "pnl": 8
       },
       {
         "coin": "SOL",
         "held": 0.75043762,
-        "value": 1965,
-        "pnl": 5
+        "value": 1969,
+        "pnl": 9
       }
     ]
   },
@@ -51,23 +51,23 @@
     {
       "market": "btctwd",
       "held": 0.00086059,
-      "value": 1943,
+      "value": 1946,
       "avgEntry": 2277506,
-      "pnl": -17
+      "pnl": -14
     },
     {
       "market": "ethtwd",
       "held": 0.02833124,
-      "value": 1965,
+      "value": 1968,
       "avgEntry": 69182,
-      "pnl": 5
+      "pnl": 8
     },
     {
       "market": "soltwd",
       "held": 0.75043762,
-      "value": 1965,
+      "value": 1969,
       "avgEntry": 2612,
-      "pnl": 5
+      "pnl": 9
     }
   ],
   "marketStats": {
@@ -193,24 +193,24 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2257468,
-      "rsi": "44.9",
-      "bbPos": "25%"
+      "price": 2260756,
+      "rsi": "49.9",
+      "bbPos": "57%"
     },
     "ETH": {
-      "price": 69362,
-      "rsi": "43.7",
-      "bbPos": "19%"
+      "price": 69455,
+      "rsi": "47.6",
+      "bbPos": "46%"
     },
     "SOL": {
-      "price": 2618,
-      "rsi": "48.3",
-      "bbPos": "55%"
+      "price": 2624,
+      "rsi": "53.2",
+      "bbPos": "78%"
     },
     "LINK": {
       "price": 279,
       "rsi": "43.9",
-      "bbPos": "58%"
+      "bbPos": "60%"
     }
   },
   "twdCash": 1552
