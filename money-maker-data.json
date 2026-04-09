@@ -1,41 +1,41 @@
 {
-  "lastUpdate": "2026-04-09 21:00",
+  "lastUpdate": "2026-04-09 21:15",
   "status": "RUNNING",
   "mode": "batch_swing_v6",
   "capital": 10000,
-  "totalEquity": 9345,
-  "netEquity": 9345,
-  "totalPnl": -655,
-  "btcPrice": 2269620,
-  "btcChange24h": -0.93,
+  "totalEquity": 9337,
+  "netEquity": 9337,
+  "totalPnl": -663,
+  "btcPrice": 2264438,
+  "btcChange24h": -1.97,
   "holdings": {
     "btc": 0.00086059,
     "avgCost": 2277506,
-    "unrealizedPnl": -59,
+    "unrealizedPnl": -68,
     "positions": [
       {
         "coin": "BTC",
         "held": 0.00086059,
-        "value": 1953,
-        "pnl": -7
+        "value": 1949,
+        "pnl": -11
       },
       {
         "coin": "ETH",
         "held": 0.02352781,
-        "value": 1636,
-        "pnl": -9
+        "value": 1632,
+        "pnl": -13
       },
       {
         "coin": "SOL",
         "held": 0.75043762,
-        "value": 1965,
-        "pnl": 5
+        "value": 1966,
+        "pnl": 6
       },
       {
         "coin": "DOGE",
         "held": 655.95078302,
-        "value": 1911,
-        "pnl": -49
+        "value": 1910,
+        "pnl": -50
       }
     ]
   },
@@ -57,30 +57,30 @@
     {
       "market": "btctwd",
       "held": 0.00086059,
-      "value": 1953,
+      "value": 1949,
       "avgEntry": 2277506,
-      "pnl": -7
+      "pnl": -11
     },
     {
       "market": "ethtwd",
       "held": 0.02352781,
-      "value": 1636,
+      "value": 1632,
       "avgEntry": 69917,
-      "pnl": -9
+      "pnl": -13
     },
     {
       "market": "soltwd",
       "held": 0.75043762,
-      "value": 1965,
+      "value": 1966,
       "avgEntry": 2612,
-      "pnl": 5
+      "pnl": 6
     },
     {
       "market": "dogetwd",
       "held": 655.95078302,
-      "value": 1911,
+      "value": 1910,
       "avgEntry": 3,
-      "pnl": -49
+      "pnl": -50
     }
   ],
   "marketStats": {
@@ -236,24 +236,24 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2269620,
-      "rsi": "53.7",
-      "bbPos": "56%"
+      "price": 2264438,
+      "rsi": "47.1",
+      "bbPos": "22%"
     },
     "ETH": {
-      "price": 69531,
-      "rsi": "47.8",
-      "bbPos": "44%"
+      "price": 69351,
+      "rsi": "42.7",
+      "bbPos": "16%"
     },
     "SOL": {
-      "price": 2619,
-      "rsi": "47.7",
-      "bbPos": "33%"
+      "price": 2620,
+      "rsi": "48.9",
+      "bbPos": "39%"
     },
     "DOGE": {
       "price": 3,
-      "rsi": "43.9",
-      "bbPos": "30%"
+      "rsi": "42.6",
+      "bbPos": "23%"
     }
   },
   "twdCash": 1880
