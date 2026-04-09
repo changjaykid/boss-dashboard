@@ -1,35 +1,35 @@
 {
-  "lastUpdate": "2026-04-09 12:33",
+  "lastUpdate": "2026-04-09 12:45",
   "status": "RUNNING",
   "mode": "batch_swing_v6",
   "capital": 10000,
-  "totalEquity": 7416,
-  "netEquity": 7416,
-  "totalPnl": -2584,
-  "btcPrice": 2257653,
-  "btcChange24h": -0.98,
+  "totalEquity": 7427,
+  "netEquity": 7427,
+  "totalPnl": -2573,
+  "btcPrice": 2259149,
+  "btcChange24h": -0.99,
   "holdings": {
     "btc": 0.00086059,
     "avgCost": 2277506,
-    "unrealizedPnl": -16,
+    "unrealizedPnl": -5,
     "positions": [
       {
         "coin": "BTC",
         "held": 0.00086059,
-        "value": 1943,
-        "pnl": -17
+        "value": 1944,
+        "pnl": -16
       },
       {
         "coin": "ETH",
         "held": 0.02833124,
-        "value": 1966,
-        "pnl": 6
+        "value": 1968,
+        "pnl": 8
       },
       {
         "coin": "SOL",
         "held": 0.75043762,
-        "value": 1955,
-        "pnl": -5
+        "value": 1963,
+        "pnl": 3
       }
     ]
   },
@@ -51,23 +51,23 @@
     {
       "market": "btctwd",
       "held": 0.00086059,
-      "value": 1943,
+      "value": 1944,
       "avgEntry": 2277506,
-      "pnl": -17
+      "pnl": -16
     },
     {
       "market": "ethtwd",
       "held": 0.02833124,
-      "value": 1966,
+      "value": 1968,
       "avgEntry": 69182,
-      "pnl": 6
+      "pnl": 8
     },
     {
       "market": "soltwd",
       "held": 0.75043762,
-      "value": 1955,
+      "value": 1963,
       "avgEntry": 2612,
-      "pnl": -5
+      "pnl": 3
     }
   ],
   "marketStats": {
@@ -193,19 +193,19 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2257653,
-      "rsi": "45.3",
-      "bbPos": "49%"
+      "price": 2259149,
+      "rsi": "48.1",
+      "bbPos": "58%"
     },
     "ETH": {
-      "price": 69379,
-      "rsi": "42.9",
-      "bbPos": "43%"
+      "price": 69474,
+      "rsi": "46.0",
+      "bbPos": "58%"
     },
     "SOL": {
-      "price": 2606,
-      "rsi": "36.6",
-      "bbPos": "8%"
+      "price": 2616,
+      "rsi": "44.7",
+      "bbPos": "41%"
     },
     "LINK": {
       "price": 279,
