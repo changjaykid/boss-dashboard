@@ -7,9 +7,17 @@
       "pillar_name": "品牌策略",
       "created": "2026-04-09 11:00",
       "suggestedTime": "11:00",
-      "status": "pending",
+      "status": "failed",
       "content": "很多品牌在做社群時，最常問的問題是：「我們要發什麼內容才能漲粉？」\n\n但我通常會請他們先退後一步問另一個問題：「為什麼有人要追蹤你？」\n\n現在的 Threads 已經不是那個隨便發廢文就能爆紅的紅利期了。用戶的注意力變得很貴，他們的追蹤清單也變得很擠。\n\n我看過很多品牌每天努力發精美的懶人包、專業的產業分析，但追蹤數就是不動。為什麼？因為那些內容雖然「有用」，但沒有「靈魂」。\n\n有用（Helpful）是基本功，但有趣（Interesting）或有感（Relatable）才是讓人按下追蹤的關鍵。\n\n我上週跟一個客戶溝通，他們是做 B2B 軟體的。我建議他們不要只發功能更新，而是去分享「軟體工程師在凌晨三點修 bug 的真實對話」。\n\n結果那篇貼文的分享數，比他們過去一個月所有文章加起來還多。因為那群受眾在裡面看到了自己，產生了連結。\n\n行銷的本質不是去堆疊價值，而是去建立連結。\n\n如果你發現你的內容沒人看，試著把「我想教你什麼」的心態，換成「我想跟你聊什麼」。\n\n內容只是載體，關係才是資產。\n\n當你不再只想著「漲粉」，而是想著「交朋友」的時候，粉絲自然會來。",
-      "image_url": "MEDIA:/Users/kid/.openclaw/media/tool-image-generation/image-1---ec35e3f6-b5cf-413f-9aa9-621e6234e676.png"
+      "image_url": "MEDIA:/Users/kid/.openclaw/media/tool-image-generation/image-1---ec35e3f6-b5cf-413f-9aa9-621e6234e676.png",
+      "error": {
+        "error": {
+          "message": "Param image_url is not a valid URI.",
+          "type": "THApiException",
+          "code": 100,
+          "fbtrace_id": "AdezzmbkFYosWwcFAUUjAb0"
+        }
+      }
     }
   ],
   "published": [
@@ -399,5 +407,5 @@
       "description": "業界趣事、熱門事件評論(輕鬆但有觀點)"
     }
   ],
-  "lastUpdate": "2026/4/9 上午11:34:10"
+  "lastUpdate": "2026/4/9 上午11:34:29"
 }
