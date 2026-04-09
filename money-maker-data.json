@@ -1,17 +1,17 @@
 {
-  "lastUpdate": "2026-04-09 09:15",
+  "lastUpdate": "2026-04-09 09:30",
   "status": "RUNNING",
   "mode": "batch_swing_v6",
   "capital": 10000,
-  "totalEquity": 7397,
-  "netEquity": 7397,
-  "totalPnl": -2603,
-  "btcPrice": 2249170,
-  "btcChange24h": -1.57,
+  "totalEquity": 7403,
+  "netEquity": 7403,
+  "totalPnl": -2597,
+  "btcPrice": 2249514,
+  "btcChange24h": -1.22,
   "holdings": {
     "btc": 0.00086059,
     "avgCost": 2277506,
-    "unrealizedPnl": -23,
+    "unrealizedPnl": -21,
     "positions": [
       {
         "coin": "BTC",
@@ -21,15 +21,15 @@
       },
       {
         "coin": "ETH",
-        "held": 0.01445406,
-        "value": 999,
+        "held": 0.02833124,
+        "value": 1959,
         "pnl": -1
       },
       {
         "coin": "SOL",
         "held": 0.38321882,
-        "value": 1002,
-        "pnl": 2
+        "value": 1003,
+        "pnl": 3
       }
     ]
   },
@@ -57,17 +57,17 @@
     },
     {
       "market": "ethtwd",
-      "held": 0.01445406,
-      "value": 999,
-      "avgEntry": 69185,
+      "held": 0.02833124,
+      "value": 1959,
+      "avgEntry": 69182,
       "pnl": -1
     },
     {
       "market": "soltwd",
       "held": 0.38321882,
-      "value": 1002,
+      "value": 1003,
       "avgEntry": 2609,
-      "pnl": 2
+      "pnl": 3
     }
   ],
   "marketStats": {
@@ -93,6 +93,26 @@
     }
   },
   "recentTrades": [
+    {
+      "exitTime": 1775697843362,
+      "coin": "ETH",
+      "side": "BUY",
+      "amount": 0.0052072398111378815,
+      "entryPrice": 69024,
+      "twd": 360,
+      "pnl": 0,
+      "reason": "強買入(4.0)"
+    },
+    {
+      "exitTime": 1775697483708,
+      "coin": "ETH",
+      "side": "BUY",
+      "amount": 0.008669940472313764,
+      "entryPrice": 69094,
+      "twd": 600,
+      "pnl": 0,
+      "reason": "強買入(3.0)"
+    },
     {
       "exitTime": 1775697124955,
       "coin": "SOL",
@@ -153,25 +173,25 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2249170,
-      "rsi": "31.1",
-      "bbPos": "5%"
+      "price": 2249514,
+      "rsi": "31.7",
+      "bbPos": "11%"
     },
     "ETH": {
-      "price": 69094,
-      "rsi": "30.6",
-      "bbPos": "3%"
+      "price": 69161,
+      "rsi": "32.6",
+      "bbPos": "12%"
     },
     "SOL": {
-      "price": 2615,
-      "rsi": "32.6",
-      "bbPos": "18%"
+      "price": 2618,
+      "rsi": "39.5",
+      "bbPos": "25%"
     },
     "AVAX": {
       "price": 309,
       "rsi": "57.4",
-      "bbPos": "69%"
+      "bbPos": "67%"
     }
   },
-  "twdCash": 3460
+  "twdCash": 2505
 }
