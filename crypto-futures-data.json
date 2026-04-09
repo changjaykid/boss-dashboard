@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-09 08:45",
+  "lastUpdate": "2026-04-09 09:00",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
@@ -24,54 +24,54 @@
     "side": "LONG",
     "size": 0.005,
     "entryPrice": 71132.8,
-    "markPrice": 70780.98,
-    "pnl": -1.76,
+    "markPrice": 70820.1,
+    "pnl": -1.56,
     "leverage": 10,
     "trailingStop": 70279.20640000001
   },
   "signals": {
-    "score": 40,
+    "score": 37,
     "direction": "LONG",
-    "marketState": "TRENDING_UP",
+    "marketState": "TRENDING_DOWN",
     "trend4h": "UP",
-    "buyScore": 40,
-    "sellScore": 2,
+    "buyScore": 37,
+    "sellScore": 0,
     "reasons": [
-      "1H EMA 多排",
+      "StochRSI金叉(K=4)",
       "支撐區回踩做多"
     ],
-    "rsi15": 35,
-    "strategy": "TREND_FOLLOW"
+    "rsi15": 37,
+    "strategy": "STOCH_RSI_CROSS"
   },
   "perSymbolSignals": {
     "BTCUSDT": {
-      "score": 40,
-      "direction": "LONG",
-      "marketState": "TRENDING_UP",
-      "trend4h": "UP",
-      "buyScore": 40,
-      "sellScore": 2,
-      "reasons": [
-        "1H EMA 多排",
-        "支撐區回踩做多"
-      ],
-      "price": 70780,
-      "rsi15": 35,
-      "time": "2026-04-09T00:45:10.856Z"
-    },
-    "ETHUSDT": {
-      "score": 20,
+      "score": 37,
       "direction": "LONG",
       "marketState": "TRENDING_DOWN",
       "trend4h": "UP",
-      "buyScore": 20,
-      "sellScore": 1,
+      "buyScore": 37,
+      "sellScore": 0,
+      "reasons": [
+        "StochRSI金叉(K=4)",
+        "支撐區回踩做多"
+      ],
+      "price": 70828.2,
+      "rsi15": 37,
+      "time": "2026-04-09T01:00:10.716Z"
+    },
+    "ETHUSDT": {
+      "score": 23,
+      "direction": "LONG",
+      "marketState": "TRENDING_DOWN",
+      "trend4h": "UP",
+      "buyScore": 23,
+      "sellScore": 0,
       "reasons": [
         "支撐區回踩做多"
       ],
-      "price": 2182.21,
-      "rsi15": 35,
-      "time": "2026-04-09T00:45:12.126Z"
+      "price": 2183.03,
+      "rsi15": 36,
+      "time": "2026-04-09T01:00:12.020Z"
     }
   },
   "recentTrades": [
