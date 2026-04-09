@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-10 05:00",
+  "lastUpdate": "2026-04-10 05:30",
   "status": "RUNNING",
   "mode": "v8 賺大虧小",
   "exchange": "Binance Futures",
@@ -24,59 +24,58 @@
     "side": "LONG",
     "size": 0.135,
     "entryPrice": 2207.61,
-    "markPrice": 2212.36,
-    "pnl": 0.64,
+    "markPrice": 2207.26,
+    "pnl": -0.05,
     "leverage": 5,
     "trailingStop": 71251.5855
   },
   "signals": {
-    "score": 3,
+    "score": 5,
     "direction": "LONG",
-    "marketState": "RANGING",
+    "marketState": "TRENDING_UP",
     "trend4h": "UP",
-    "buyScore": 3,
+    "buyScore": 5,
     "sellScore": 0,
     "reasons": [
-      "4H多頭(1.38%)",
-      "4H MACD加速↑",
+      "4H多頭(1.34%)",
       "1H EMA多排",
       "⚠️壓力區不追多"
     ],
-    "rsi15": 64,
+    "rsi15": 55,
     "strategy": "TREND_FOLLOW"
   },
   "perSymbolSignals": {
     "BTCUSDT": {
-      "score": 3,
-      "direction": "LONG",
-      "marketState": "RANGING",
-      "trend4h": "UP",
-      "buyScore": 3,
-      "sellScore": 0,
-      "reasons": [
-        "4H多頭(1.38%)",
-        "4H MACD加速↑",
-        "1H EMA多排",
-        "⚠️壓力區不追多"
-      ],
-      "price": 72383.4,
-      "rsi15": 64,
-      "time": "2026-04-09T21:00:09.252Z"
-    },
-    "ETHUSDT": {
-      "score": 16,
+      "score": 5,
       "direction": "LONG",
       "marketState": "TRENDING_UP",
       "trend4h": "UP",
-      "buyScore": 16,
+      "buyScore": 5,
+      "sellScore": 0,
+      "reasons": [
+        "4H多頭(1.34%)",
+        "1H EMA多排",
+        "⚠️壓力區不追多"
+      ],
+      "price": 72125.8,
+      "rsi15": 55,
+      "time": "2026-04-09T21:30:09.235Z"
+    },
+    "ETHUSDT": {
+      "score": 21,
+      "direction": "LONG",
+      "marketState": "TRENDING_UP",
+      "trend4h": "UP",
+      "buyScore": 21,
       "sellScore": 2,
       "reasons": [
-        "4H多頭(1.17%)",
-        "1H EMA多排"
+        "4H多頭(1.15%)",
+        "1H EMA多排",
+        "1H RSI回踩54"
       ],
-      "price": 2212.36,
-      "rsi15": 54,
-      "time": "2026-04-09T21:00:10.517Z"
+      "price": 2207.12,
+      "rsi15": 50,
+      "time": "2026-04-09T21:30:10.539Z"
     }
   },
   "recentTrades": [
