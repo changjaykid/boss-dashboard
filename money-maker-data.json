@@ -1,47 +1,47 @@
 {
-  "lastUpdate": "2026-04-09 23:12",
+  "lastUpdate": "2026-04-09 23:33",
   "status": "RUNNING",
   "mode": "batch_swing_v6",
   "capital": 10000,
-  "totalEquity": 9324,
-  "netEquity": 9324,
-  "totalPnl": -676,
-  "btcPrice": 2258384,
-  "btcChange24h": -0.16,
+  "totalEquity": 9373,
+  "netEquity": 9373,
+  "totalPnl": -627,
+  "btcPrice": 2282759,
+  "btcChange24h": 0.63,
   "holdings": {
     "btc": 0.00086059,
     "avgCost": 2277506,
-    "unrealizedPnl": -82,
+    "unrealizedPnl": -1008,
     "positions": [
       {
         "coin": "BTC",
         "held": 0.00086059,
-        "value": 1944,
-        "pnl": -16
+        "value": 1965,
+        "pnl": 5
       },
       {
         "coin": "ETH",
         "held": 0.02352781,
-        "value": 1627,
-        "pnl": -18
+        "value": 1646,
+        "pnl": 1
       },
       {
         "coin": "SOL",
-        "held": 0.75043762,
-        "value": 1960,
-        "pnl": 0
+        "held": 0.3724368,
+        "value": 982,
+        "pnl": -978
       },
       {
         "coin": "DOGE",
         "held": 655.95078302,
-        "value": 1913,
-        "pnl": -47
+        "value": 1924,
+        "pnl": -36
       }
     ]
   },
-  "buyOrders": 21,
-  "sellOrders": 21,
-  "consecutiveLosses": 1,
+  "buyOrders": 22,
+  "sellOrders": 22,
+  "consecutiveLosses": 0,
   "fearGreedIndex": "--",
   "nextAction": "持倉監控中",
   "signals": {
@@ -57,30 +57,30 @@
     {
       "market": "btctwd",
       "held": 0.00086059,
-      "value": 1944,
+      "value": 1965,
       "avgEntry": 2277506,
-      "pnl": -16
+      "pnl": 5
     },
     {
       "market": "ethtwd",
       "held": 0.02352781,
-      "value": 1627,
+      "value": 1646,
       "avgEntry": 69917,
-      "pnl": -18
+      "pnl": 1
     },
     {
       "market": "soltwd",
-      "held": 0.75043762,
-      "value": 1960,
+      "held": 0.3724368,
+      "value": 982,
       "avgEntry": 2612,
-      "pnl": 0
+      "pnl": -978
     },
     {
       "market": "dogetwd",
       "held": 655.95078302,
-      "value": 1913,
+      "value": 1924,
       "avgEntry": 3,
-      "pnl": -47
+      "pnl": -36
     }
   ],
   "marketStats": {
@@ -95,9 +95,9 @@
       "pnl": -26
     },
     "soltwd": {
-      "trades": 5,
-      "wins": 4,
-      "pnl": -17
+      "trades": 6,
+      "wins": 5,
+      "pnl": -10
     },
     "dogetwd": {
       "trades": 3,
@@ -230,31 +230,31 @@
   "riskStatus": {
     "dailyLossLimit": 500,
     "consecLossPause": 4,
-    "currentConsecLosses": 1,
-    "totalWinRate": "90.5%",
+    "currentConsecLosses": 0,
+    "totalWinRate": "90.9%",
     "avgPnlPerTrade": 2
   },
   "marketSignals": {
     "BTC": {
-      "price": 2258384,
-      "rsi": "46.1",
-      "bbPos": "31%"
+      "price": 2282759,
+      "rsi": "65.7",
+      "bbPos": "109%"
     },
     "ETH": {
-      "price": 69170,
-      "rsi": "44.6",
-      "bbPos": "31%"
+      "price": 69966,
+      "rsi": "62.5",
+      "bbPos": "106%"
     },
     "SOL": {
-      "price": 2611,
-      "rsi": "47.3",
-      "bbPos": "36%"
+      "price": 2636,
+      "rsi": "59.3",
+      "bbPos": "99%"
     },
     "DOGE": {
       "price": 3,
-      "rsi": "51.2",
-      "bbPos": "55%"
+      "rsi": "60.8",
+      "bbPos": "107%"
     }
   },
-  "twdCash": 1880
+  "twdCash": 2856
 }
