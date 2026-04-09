@@ -1,16 +1,16 @@
 {
-  "lastUpdate": "2026-04-10 02:00",
+  "lastUpdate": "2026-04-10 02:30",
   "status": "RUNNING",
   "mode": "v8 賺大虧小",
   "exchange": "Binance Futures",
   "account": {
     "initialCapital": 464,
-    "balance": 436.83,
-    "available": 295.39,
+    "balance": 436.68,
+    "available": 235.79,
     "unrealizedPnl": 0,
-    "netEquity": 436.83,
+    "netEquity": 436.68,
     "todayPnl": 0,
-    "totalPnl": -27.17,
+    "totalPnl": -27.32,
     "leverage": 5,
     "marginType": "ISOLATED",
     "totalTrades": 18,
@@ -20,64 +20,62 @@
     "maxDrawdown": 1.3
   },
   "position": {
-    "symbol": "BTCUSDT",
+    "symbol": "ETHUSDT",
     "side": "LONG",
-    "size": 0.01,
-    "entryPrice": 70890.2,
-    "markPrice": 72310.6,
-    "pnl": 14.2,
+    "size": 0.135,
+    "entryPrice": 2207.61,
+    "markPrice": 2207.91,
+    "pnl": 0.04,
     "leverage": 5,
     "trailingStop": 71251.5855
   },
   "signals": {
-    "score": 17,
+    "score": 6,
     "direction": "LONG",
-    "marketState": "TRENDING_UP",
+    "marketState": "RANGING",
     "trend4h": "UP",
-    "buyScore": 17,
-    "sellScore": 0,
+    "buyScore": 6,
+    "sellScore": 2,
     "reasons": [
-      "4H多頭(1.36%)",
-      "4H MACD加速↑",
+      "4H多頭(1.28%)",
       "1H EMA多排",
       "⚠️壓力區不追多"
     ],
-    "rsi15": 68,
+    "rsi15": 55,
     "strategy": "TREND_FOLLOW"
   },
   "perSymbolSignals": {
     "BTCUSDT": {
-      "score": 17,
+      "score": 6,
       "direction": "LONG",
-      "marketState": "TRENDING_UP",
+      "marketState": "RANGING",
       "trend4h": "UP",
-      "buyScore": 17,
-      "sellScore": 0,
+      "buyScore": 6,
+      "sellScore": 2,
       "reasons": [
-        "4H多頭(1.36%)",
-        "4H MACD加速↑",
+        "4H多頭(1.28%)",
         "1H EMA多排",
         "⚠️壓力區不追多"
       ],
-      "price": 72308.7,
-      "rsi15": 68,
-      "time": "2026-04-09T18:00:09.407Z"
+      "price": 71867.2,
+      "rsi15": 55,
+      "time": "2026-04-09T18:30:11.853Z"
     },
     "ETHUSDT": {
-      "score": 12,
+      "score": 52,
       "direction": "LONG",
       "marketState": "TRENDING_UP",
       "trend4h": "UP",
-      "buyScore": 12,
-      "sellScore": 0,
+      "buyScore": 52,
+      "sellScore": 5,
       "reasons": [
-        "4H多頭(1.25%)",
+        "4H多頭(1.16%)",
         "1H EMA多排",
-        "⚠️壓力區不追多"
+        "1H RSI回踩55"
       ],
-      "price": 2221.89,
-      "rsi15": 65,
-      "time": "2026-04-09T18:00:10.735Z"
+      "price": 2208.09,
+      "rsi15": 55,
+      "time": "2026-04-09T18:30:13.189Z"
     }
   },
   "recentTrades": [
