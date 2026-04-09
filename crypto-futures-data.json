@@ -1,84 +1,92 @@
 {
-  "lastUpdate": "2026-04-09 21:31",
+  "lastUpdate": "2026-04-09 21:39",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
   "account": {
     "initialCapital": 464,
-    "balance": 437.58,
-    "available": 402.38,
+    "balance": 436.82,
+    "available": 295.39,
     "unrealizedPnl": 0,
-    "netEquity": 437.58,
-    "todayPnl": -2.95,
-    "totalPnl": -26.42,
-    "leverage": 10,
+    "netEquity": 436.82,
+    "todayPnl": -3.19,
+    "totalPnl": -27.18,
+    "leverage": 5,
     "marginType": "ISOLATED",
-    "totalTrades": 17,
-    "winRate": "41.2%",
+    "totalTrades": 18,
+    "winRate": "38.9%",
     "wins": 7,
-    "losses": 10,
-    "maxDrawdown": 1.2
+    "losses": 11,
+    "maxDrawdown": 1.3
   },
   "position": {
-    "symbol": "ETHUSDT",
+    "symbol": "BTCUSDT",
     "side": "LONG",
-    "size": 0.163,
-    "entryPrice": 2170.02,
-    "markPrice": 2178.61,
-    "pnl": 1.4,
-    "leverage": 10,
-    "trailingStop": 2170.31
+    "size": 0.01,
+    "entryPrice": 70890.2,
+    "markPrice": 70894.16,
+    "pnl": 0.04,
+    "leverage": 5,
+    "trailingStop": 70257.74716086384
   },
   "signals": {
-    "score": 10,
+    "score": 80,
     "direction": "LONG",
-    "marketState": "RANGING",
+    "marketState": "SQUEEZE",
     "trend4h": "UP",
-    "buyScore": 10,
-    "sellScore": 2,
+    "buyScore": 80,
+    "sellScore": 4,
     "reasons": [
-      "RSI回踩44",
-      "近多頭清算牆2173"
+      "4H多頭(1.05%)",
+      "1H EMA多排",
+      "1H RSI回踩47",
+      "支撐區回踩做多"
     ],
-    "rsi15": 44,
-    "strategy": "TREND_FOLLOW"
+    "rsi15": 40,
+    "strategy": "PULLBACK"
   },
   "perSymbolSignals": {
     "BTCUSDT": {
-      "score": 10,
+      "score": 80,
       "direction": "LONG",
       "marketState": "SQUEEZE",
       "trend4h": "UP",
-      "buyScore": 10,
-      "sellScore": 2,
+      "buyScore": 80,
+      "sellScore": 4,
       "reasons": [
-        "1H EMA 多排",
-        "RSI回踩49",
-        "近多頭清算牆71462",
-        "支撐區回踩做多",
-        "⚠️壓力區不追多"
+        "4H多頭(1.05%)",
+        "1H EMA多排",
+        "1H RSI回踩47",
+        "支撐區回踩做多"
       ],
-      "price": 71112.6,
-      "rsi15": 49,
-      "time": "2026-04-09T13:31:17.157Z"
+      "price": 70897.1,
+      "rsi15": 40,
+      "time": "2026-04-09T13:39:51.807Z"
     },
     "ETHUSDT": {
-      "score": 10,
+      "score": 48,
       "direction": "LONG",
-      "marketState": "RANGING",
+      "marketState": "TRENDING_DOWN",
       "trend4h": "UP",
-      "buyScore": 10,
+      "buyScore": 48,
       "sellScore": 2,
       "reasons": [
-        "RSI回踩44",
-        "近多頭清算牆2173"
+        "4H多頭(0.90%)",
+        "支撐區回踩做多"
       ],
-      "price": 2178.39,
-      "rsi15": 44,
-      "time": "2026-04-09T13:31:18.409Z"
+      "price": 2167.67,
+      "rsi15": 34,
+      "time": "2026-04-09T13:39:53.173Z"
     }
   },
   "recentTrades": [
+    {
+      "time": "2026-04-09T13:33:09.000Z",
+      "symbol": "ETHUSDT",
+      "side": "SHORT",
+      "pnl": -0.24,
+      "strategy": ""
+    },
     {
       "time": "2026-04-09T11:15:12.000Z",
       "symbol": "BTCUSDT",
@@ -211,13 +219,6 @@
       "side": "SHORT",
       "pnl": -1.88,
       "strategy": ""
-    },
-    {
-      "time": "2026-04-07T14:23:50.000Z",
-      "symbol": "AVAXUSDT",
-      "side": "LONG",
-      "pnl": 1.94,
-      "strategy": ""
     }
   ],
   "strategyWeights": {
@@ -229,8 +230,8 @@
     "NEWS_EVENT": 0.5
   },
   "riskStatus": {
-    "dailyLossUsed": "$2.95 / $23.20",
-    "dailyTradesUsed": "4 / 10",
+    "dailyLossUsed": "$3.19 / $18.56",
+    "dailyTradesUsed": "5 / 3",
     "consecutiveLosses": "0",
     "paused": false
   }
