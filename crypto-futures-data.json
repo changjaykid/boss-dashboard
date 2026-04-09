@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-09 19:45",
+  "lastUpdate": "2026-04-09 20:00",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
@@ -24,8 +24,8 @@
     "side": "LONG",
     "size": 0.163,
     "entryPrice": 2170.02,
-    "markPrice": 2179.93,
-    "pnl": 1.62,
+    "markPrice": 2179.13,
+    "pnl": 1.48,
     "leverage": 10,
     "trailingStop": 2170.31
   },
@@ -42,12 +42,12 @@
     "BTCUSDT": {
       "score": 0,
       "direction": null,
-      "marketState": "CONSOLIDATING",
+      "marketState": "SQUEEZE",
       "buyScore": 0,
       "sellScore": 0,
       "reasons": [],
-      "price": 71127.1,
-      "time": "2026-04-09T11:45:14.575Z"
+      "price": 71128.9,
+      "time": "2026-04-09T12:00:20.084Z"
     },
     "ETHUSDT": {
       "score": 0,
@@ -56,8 +56,8 @@
       "buyScore": 0,
       "sellScore": 0,
       "reasons": [],
-      "price": 2179.83,
-      "time": "2026-04-09T11:45:15.851Z"
+      "price": 2179.02,
+      "time": "2026-04-09T12:00:21.350Z"
     }
   },
   "recentTrades": [
