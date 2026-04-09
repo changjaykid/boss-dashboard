@@ -1,16 +1,16 @@
 {
-  "lastUpdate": "2026-04-09 15:45",
+  "lastUpdate": "2026-04-09 16:00",
   "status": "RUNNING",
   "mode": "v3 多幣種",
   "exchange": "Binance Futures",
   "account": {
     "initialCapital": 464,
-    "balance": 437.68,
+    "balance": 437.67,
     "available": 367.1,
     "unrealizedPnl": 0,
-    "netEquity": 437.68,
+    "netEquity": 437.67,
     "todayPnl": -3.05,
-    "totalPnl": -26.32,
+    "totalPnl": -26.33,
     "leverage": 10,
     "marginType": "ISOLATED",
     "totalTrades": 16,
@@ -24,8 +24,8 @@
     "side": "LONG",
     "size": 0.163,
     "entryPrice": 2170.02,
-    "markPrice": 2180.79,
-    "pnl": 1.76,
+    "markPrice": 2180.03,
+    "pnl": 1.63,
     "leverage": 10,
     "trailingStop": 70279.20640000001
   },
@@ -46,23 +46,24 @@
       "buyScore": 0,
       "sellScore": 0,
       "reasons": [],
-      "price": 70971,
-      "time": "2026-04-09T07:45:10.949Z"
+      "price": 70944.9,
+      "time": "2026-04-09T08:00:11.905Z"
     },
     "ETHUSDT": {
-      "score": 30,
+      "score": 38,
       "direction": "LONG",
       "marketState": "TRENDING_DOWN",
       "trend4h": "UP",
-      "buyScore": 30,
-      "sellScore": 3,
+      "buyScore": 38,
+      "sellScore": 2,
       "reasons": [
         "RSI回踩48",
+        "近多頭清算牆2177",
         "支撐區回踩做多"
       ],
-      "price": 2180.78,
+      "price": 2180.25,
       "rsi15": 48,
-      "time": "2026-04-09T07:45:12.203Z"
+      "time": "2026-04-09T08:00:13.177Z"
     }
   },
   "recentTrades": [
