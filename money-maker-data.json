@@ -1,46 +1,40 @@
 {
-  "lastUpdate": "2026-04-09 23:33",
+  "lastUpdate": "2026-04-09 23:39",
   "status": "RUNNING",
   "mode": "batch_swing_v6",
   "capital": 10000,
-  "totalEquity": 9373,
-  "netEquity": 9373,
-  "totalPnl": -627,
-  "btcPrice": 2282759,
-  "btcChange24h": 0.63,
+  "totalEquity": 9386,
+  "netEquity": 9386,
+  "totalPnl": -614,
+  "btcPrice": 2287848,
+  "btcChange24h": 0.75,
   "holdings": {
     "btc": 0.00086059,
     "avgCost": 2277506,
-    "unrealizedPnl": -1008,
+    "unrealizedPnl": -1250,
     "positions": [
       {
         "coin": "BTC",
         "held": 0.00086059,
-        "value": 1965,
-        "pnl": 5
+        "value": 1969,
+        "pnl": 9
       },
       {
         "coin": "ETH",
-        "held": 0.02352781,
-        "value": 1646,
-        "pnl": 1
-      },
-      {
-        "coin": "SOL",
-        "held": 0.3724368,
-        "value": 982,
-        "pnl": -978
+        "held": 0.00585013,
+        "value": 411,
+        "pnl": -1234
       },
       {
         "coin": "DOGE",
         "held": 655.95078302,
-        "value": 1924,
-        "pnl": -36
+        "value": 1934,
+        "pnl": -26
       }
     ]
   },
-  "buyOrders": 22,
-  "sellOrders": 22,
+  "buyOrders": 26,
+  "sellOrders": 26,
   "consecutiveLosses": 0,
   "fearGreedIndex": "--",
   "nextAction": "持倉監控中",
@@ -57,30 +51,23 @@
     {
       "market": "btctwd",
       "held": 0.00086059,
-      "value": 1965,
+      "value": 1969,
       "avgEntry": 2277506,
-      "pnl": 5
+      "pnl": 9
     },
     {
       "market": "ethtwd",
-      "held": 0.02352781,
-      "value": 1646,
+      "held": 0.00585013,
+      "value": 411,
       "avgEntry": 69917,
-      "pnl": 1
-    },
-    {
-      "market": "soltwd",
-      "held": 0.3724368,
-      "value": 982,
-      "avgEntry": 2612,
-      "pnl": -978
+      "pnl": -1234
     },
     {
       "market": "dogetwd",
       "held": 655.95078302,
-      "value": 1924,
+      "value": 1934,
       "avgEntry": 3,
-      "pnl": -36
+      "pnl": -26
     }
   ],
   "marketStats": {
@@ -90,14 +77,14 @@
       "pnl": 28
     },
     "ethtwd": {
-      "trades": 8,
-      "wins": 7,
-      "pnl": -26
+      "trades": 10,
+      "wins": 9,
+      "pnl": -21
     },
     "soltwd": {
-      "trades": 6,
-      "wins": 5,
-      "pnl": -10
+      "trades": 8,
+      "wins": 7,
+      "pnl": 2
     },
     "dogetwd": {
       "trades": 3,
@@ -135,36 +122,6 @@
       "twd": 600,
       "pnl": 0,
       "reason": "佈局買入(2.0)"
-    },
-    {
-      "exitTime": 1775704864245,
-      "coin": "SOL",
-      "side": "BUY",
-      "amount": 0.1377103448275862,
-      "entryPrice": 2610,
-      "twd": 360,
-      "pnl": 0,
-      "reason": "強買入(3.5)"
-    },
-    {
-      "exitTime": 1775704505065,
-      "coin": "SOL",
-      "side": "BUY",
-      "amount": 0.22950844795218572,
-      "entryPrice": 2610,
-      "twd": 600,
-      "pnl": 0,
-      "reason": "強買入(5.0)"
-    },
-    {
-      "exitTime": 1775697124955,
-      "coin": "SOL",
-      "side": "BUY",
-      "amount": 0.3832188231681572,
-      "entryPrice": 2605,
-      "twd": 1000,
-      "pnl": 0,
-      "reason": "強買入(7.0)"
     },
     {
       "exitTime": 1775659145501,
@@ -231,30 +188,30 @@
     "dailyLossLimit": 500,
     "consecLossPause": 4,
     "currentConsecLosses": 0,
-    "totalWinRate": "90.9%",
-    "avgPnlPerTrade": 2
+    "totalWinRate": "92.3%",
+    "avgPnlPerTrade": 3
   },
   "marketSignals": {
     "BTC": {
-      "price": 2282759,
-      "rsi": "65.7",
-      "bbPos": "109%"
+      "price": 2287848,
+      "rsi": "68.3",
+      "bbPos": "119%"
     },
     "ETH": {
-      "price": 69966,
-      "rsi": "62.5",
-      "bbPos": "106%"
+      "price": 70332,
+      "rsi": "68.5",
+      "bbPos": "124%"
     },
     "SOL": {
-      "price": 2636,
-      "rsi": "59.3",
-      "bbPos": "99%"
+      "price": 2649,
+      "rsi": "63.9",
+      "bbPos": "120%"
     },
     "DOGE": {
       "price": 3,
-      "rsi": "60.8",
-      "bbPos": "107%"
+      "rsi": "67.9",
+      "bbPos": "130%"
     }
   },
-  "twdCash": 2856
+  "twdCash": 5072
 }
