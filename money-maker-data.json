@@ -1,35 +1,35 @@
 {
-  "lastUpdate": "2026-04-09 08:30",
+  "lastUpdate": "2026-04-09 08:45",
   "status": "RUNNING",
   "mode": "batch_swing_v6",
   "capital": 10000,
-  "totalEquity": 7438,
-  "netEquity": 7438,
-  "totalPnl": -2562,
-  "btcPrice": 2258322,
-  "btcChange24h": -1.53,
+  "totalEquity": 7424,
+  "netEquity": 7424,
+  "totalPnl": -2576,
+  "btcPrice": 2253000,
+  "btcChange24h": -1.61,
   "holdings": {
     "btc": 0.00086059,
     "avgCost": 2277506,
-    "unrealizedPnl": -1068,
+    "unrealizedPnl": -1083,
     "positions": [
       {
         "coin": "BTC",
         "held": 0.00086059,
-        "value": 1943,
-        "pnl": -17
+        "value": 1939,
+        "pnl": -21
       },
       {
         "coin": "ETH",
         "held": 0.02751578,
-        "value": 1914,
-        "pnl": -46
+        "value": 1910,
+        "pnl": -50
       },
       {
         "coin": "SOL",
         "held": 0.3626288,
-        "value": 954,
-        "pnl": -1006
+        "value": 948,
+        "pnl": -1012
       }
     ]
   },
@@ -51,23 +51,23 @@
     {
       "market": "btctwd",
       "held": 0.00086059,
-      "value": 1943,
+      "value": 1939,
       "avgEntry": 2277506,
-      "pnl": -17
+      "pnl": -21
     },
     {
       "market": "ethtwd",
       "held": 0.02751578,
-      "value": 1914,
+      "value": 1910,
       "avgEntry": 71232,
-      "pnl": -46
+      "pnl": -50
     },
     {
       "market": "soltwd",
       "held": 0.3626288,
-      "value": 954,
+      "value": 948,
       "avgEntry": 2685,
-      "pnl": -1006
+      "pnl": -1012
     }
   ],
   "marketStats": {
@@ -193,24 +193,24 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2258322,
-      "rsi": "38.1",
-      "bbPos": "14%"
+      "price": 2253000,
+      "rsi": "33.9",
+      "bbPos": "3%"
     },
     "ETH": {
-      "price": 69559,
-      "rsi": "36.8",
-      "bbPos": "16%"
+      "price": 69415,
+      "rsi": "34.5",
+      "bbPos": "12%"
     },
     "SOL": {
-      "price": 2632,
-      "rsi": "43.0",
-      "bbPos": "33%"
+      "price": 2614,
+      "rsi": "34.4",
+      "bbPos": "3%"
     },
     "AVAX": {
-      "price": 310,
-      "rsi": "58.2",
-      "bbPos": "71%"
+      "price": 309,
+      "rsi": "57.4",
+      "bbPos": "68%"
     }
   },
   "twdCash": 2627
