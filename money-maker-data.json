@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-09 11:30",
+  "lastUpdate": "2026-04-09 11:33",
   "status": "RUNNING",
   "mode": "batch_swing_v6",
   "capital": 10000,
@@ -7,7 +7,7 @@
   "netEquity": 7427,
   "totalPnl": -2573,
   "btcPrice": 2258009,
-  "btcChange24h": -0.87,
+  "btcChange24h": -0.78,
   "holdings": {
     "btc": 0.00086059,
     "avgCost": 2277506,
@@ -195,22 +195,22 @@
     "BTC": {
       "price": 2258009,
       "rsi": "44.7",
-      "bbPos": "46%"
+      "bbPos": "48%"
     },
     "ETH": {
       "price": 69379,
       "rsi": "41.9",
-      "bbPos": "36%"
+      "bbPos": "38%"
     },
     "SOL": {
       "price": 2620,
       "rsi": "45.3",
-      "bbPos": "46%"
+      "bbPos": "48%"
     },
     "AVAX": {
       "price": 309,
       "rsi": "57.4",
-      "bbPos": "55%"
+      "bbPos": "32%"
     }
   },
   "twdCash": 1552
