@@ -1,23 +1,23 @@
 {
-  "lastUpdate": "2026-04-11 02:00",
+  "lastUpdate": "2026-04-11 02:10",
   "status": "RUNNING",
   "mode": "v7_concentrated_swing",
   "capital": 10000,
-  "totalEquity": 9448,
-  "netEquity": 9448,
-  "totalPnl": -552,
-  "btcPrice": 2329027,
-  "btcChange24h": 1.26,
+  "totalEquity": 9444,
+  "netEquity": 9444,
+  "totalPnl": -556,
+  "btcPrice": 2324443,
+  "btcChange24h": 1.51,
   "holdings": {
     "btc": 0.00086059,
     "avgCost": 2277506,
-    "unrealizedPnl": 79,
+    "unrealizedPnl": 75,
     "positions": [
       {
         "coin": "BTC",
         "held": 0.00086059,
-        "value": 2004,
-        "pnl": 44
+        "value": 2000,
+        "pnl": 40
       },
       {
         "coin": "SOL",
@@ -45,9 +45,9 @@
     {
       "market": "btctwd",
       "held": 0.00086059,
-      "value": 2004,
+      "value": 2000,
       "avgEntry": 2277506,
-      "pnl": 44
+      "pnl": 40
     },
     {
       "market": "soltwd",
@@ -55,22 +55,30 @@
       "value": 1994,
       "avgEntry": 2649,
       "pnl": 34
-    },
+    }
+  ],
+  "legacyPositions": [
     {
-      "market": "ethtwd(legacy)",
+      "market": "ethtwd",
+      "coin": "ETH",
       "held": 0.02761786,
       "value": 1940,
       "avgEntry": 0,
-      "pnl": 0
+      "pnl": 0,
+      "note": "legacy"
     },
     {
-      "market": "dogetwd(legacy)",
+      "market": "dogetwd",
+      "coin": "DOGE",
       "held": 649.9608,
       "value": 1926,
       "avgEntry": 0,
-      "pnl": 0
+      "pnl": 0,
+      "note": "legacy"
     }
   ],
+  "strategyEquity": 5578,
+  "legacyEquity": 3866,
   "marketStats": {
     "btctwd": {
       "trades": 5,
@@ -92,13 +100,13 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2329027,
-      "rsi": "65.0",
+      "price": 2324443,
+      "rsi": "62.1",
       "bbPos": "--"
     },
     "SOL": {
       "price": 2696,
-      "rsi": "58.0",
+      "rsi": "57.7",
       "bbPos": "--"
     }
   },
