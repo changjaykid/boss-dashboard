@@ -1,5 +1,6 @@
 {
-  "drafts": [
+  "drafts": [],
+  "published": [
     {
       "id": "2026-04-10-001",
       "platform": "threads",
@@ -7,20 +8,13 @@
       "pillar_name": "觀點輸出",
       "created": "2026-04-10 11:00",
       "suggestedTime": "11:00",
-      "status": "failed",
+      "status": "published",
       "content": "很多人覺得行銷就是在比誰的預算多、誰的流量大。\n\n但這陣子我看下來，真正能活過三年的品牌，比的其實是「誰更懂用戶的痛苦」。\n\n流量可以買，但信任沒辦法買。\n\n我之前跟一個做生活家電的客戶聊天。他們想推一台高價位的除濕機，廣告打了半個月，ROI 只有 1.2。他們覺得是產品不夠吸睛，想找網紅拍那種美美的形象片。\n\n我看了他們的廣告留言區，發現好多人都在問同一個問題：「這台運轉聲音到底大不大？怕吵到小孩睡覺。」\n\n官網規格寫著「40分貝」，但消費者沒概念。40分貝是多響？能睡覺嗎？\n\n後來我建議他們做一件事：不要拍美照，直接讓老闆在房間裡，旁邊放一個正在睡覺的小北鼻，然後現場測分貝計給你看。\n\n那一則貼文的轉換率，是之前形象片的五倍。\n\n行銷的本質，不是去創造一個「完美的形象」，而是去回應一個「真實的疑慮」。\n\n與其花時間去想怎麼讓廣告看起來「高大上」，不如先問自己：\n\n「我的客人現在在擔心什麼？我能不能用最簡單的方式，把那個擔心解掉？」\n\n看懂數據背後的恐懼，才是行銷人最值錢的本事。",
-      "image_url": "MEDIA:/Users/kid/.openclaw/media/tool-image-generation/image-1---b3b4c5c7-27d3-4f20-a4c0-f919e93d8bdc.png",
-      "error": {
-        "error": {
-          "message": "Param image_url is not a valid URI.",
-          "type": "THApiException",
-          "code": 100,
-          "fbtrace_id": "A05ZTogJxReACdEPR4t7jJd"
-        }
-      }
-    }
-  ],
-  "published": [
+      "image_url": "",
+      "published_at": "2026/4/10 下午5:48:31",
+      "thread_id": "18137031460516167",
+      "thread_url": "https://www.threads.net/@freeeadman/post/18137031460516167"
+    },
     {
       "id": "2026-04-09-002",
       "platform": "threads",
@@ -434,5 +428,5 @@
       "description": "業界趣事、熱門事件評論(輕鬆但有觀點)"
     }
   ],
-  "lastUpdate": "2026/4/10 下午5:48:08"
+  "lastUpdate": "2026/4/10 下午5:48:36"
 }
