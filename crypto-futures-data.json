@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-10 10:30",
+  "lastUpdate": "2026-04-10 11:02",
   "status": "RUNNING",
   "mode": "v8 賺大虧小",
   "exchange": "Binance Futures",
@@ -24,60 +24,61 @@
     "side": "LONG",
     "size": 0.01,
     "entryPrice": 70890.2,
-    "markPrice": 72152.2,
-    "pnl": 12.62,
+    "markPrice": 71913.51,
+    "pnl": 10.23,
     "leverage": 5,
     "trailingStop": 71251.5855
   },
   "signals": {
-    "score": 14,
+    "score": 19,
     "direction": "LONG",
     "marketState": "TRENDING_UP",
     "trend4h": "UP",
-    "buyScore": 14,
+    "buyScore": 19,
     "sellScore": 0,
     "reasons": [
-      "4H多頭(1.28%)",
+      "4H多頭(1.23%)",
       "1H EMA多排",
+      "1H RSI回踩54",
       "⚠️壓力區不追多"
     ],
-    "rsi15": 54,
-    "strategy": "TREND_FOLLOW"
+    "rsi15": 47,
+    "strategy": "PULLBACK"
   },
   "perSymbolSignals": {
     "BTCUSDT": {
-      "score": 14,
+      "score": 19,
       "direction": "LONG",
       "marketState": "TRENDING_UP",
       "trend4h": "UP",
-      "buyScore": 14,
+      "buyScore": 19,
       "sellScore": 0,
       "reasons": [
-        "4H多頭(1.28%)",
+        "4H多頭(1.23%)",
         "1H EMA多排",
+        "1H RSI回踩54",
         "⚠️壓力區不追多"
       ],
-      "price": 72144,
-      "rsi15": 54,
-      "time": "2026-04-10T02:30:09.090Z"
+      "price": 71920.8,
+      "rsi15": 47,
+      "time": "2026-04-10T03:02:31.965Z"
     },
     "ETHUSDT": {
-      "score": 24,
+      "score": 19,
       "direction": "LONG",
-      "marketState": "TRENDING_UP",
+      "marketState": "TRENDING_DOWN",
       "trend4h": "UP",
-      "buyScore": 24,
+      "buyScore": 19,
       "sellScore": 2,
       "reasons": [
-        "4H多頭(0.93%)",
-        "1H EMA多排",
-        "1H RSI回踩49",
+        "4H多頭(0.89%)",
+        "1H RSI回踩47",
         "支撐區回踩做多",
         "⚠️壓力區不追多"
       ],
-      "price": 2195.34,
-      "rsi15": 48,
-      "time": "2026-04-10T02:30:10.341Z"
+      "price": 2189.12,
+      "rsi15": 43,
+      "time": "2026-04-10T03:02:33.208Z"
     }
   },
   "recentTrades": [
