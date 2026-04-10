@@ -1,17 +1,17 @@
 {
-  "lastUpdate": "2026-04-11 02:10",
+  "lastUpdate": "2026-04-11 02:20",
   "status": "RUNNING",
   "mode": "v7_concentrated_swing",
   "capital": 10000,
-  "totalEquity": 9444,
-  "netEquity": 9444,
-  "totalPnl": -556,
-  "btcPrice": 2324443,
-  "btcChange24h": 1.51,
+  "totalEquity": 9451,
+  "netEquity": 9451,
+  "totalPnl": -549,
+  "btcPrice": 2324520,
+  "btcChange24h": 1.62,
   "holdings": {
     "btc": 0.00086059,
     "avgCost": 2277506,
-    "unrealizedPnl": 75,
+    "unrealizedPnl": 81,
     "positions": [
       {
         "coin": "BTC",
@@ -22,8 +22,8 @@
       {
         "coin": "SOL",
         "held": 0.73978611,
-        "value": 1994,
-        "pnl": 34
+        "value": 2001,
+        "pnl": 41
       }
     ]
   },
@@ -52,33 +52,11 @@
     {
       "market": "soltwd",
       "held": 0.73978611,
-      "value": 1994,
+      "value": 2001,
       "avgEntry": 2649,
-      "pnl": 34
+      "pnl": 41
     }
   ],
-  "legacyPositions": [
-    {
-      "market": "ethtwd",
-      "coin": "ETH",
-      "held": 0.02761786,
-      "value": 1940,
-      "avgEntry": 0,
-      "pnl": 0,
-      "note": "legacy"
-    },
-    {
-      "market": "dogetwd",
-      "coin": "DOGE",
-      "held": 649.9608,
-      "value": 1926,
-      "avgEntry": 0,
-      "pnl": 0,
-      "note": "legacy"
-    }
-  ],
-  "strategyEquity": 5578,
-  "legacyEquity": 3866,
   "marketStats": {
     "btctwd": {
       "trades": 5,
@@ -100,13 +78,13 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2324443,
+      "price": 2324520,
       "rsi": "62.1",
       "bbPos": "--"
     },
     "SOL": {
-      "price": 2696,
-      "rsi": "57.7",
+      "price": 2705,
+      "rsi": "59.6",
       "bbPos": "--"
     }
   },
@@ -172,5 +150,27 @@
       "reason": "強買入(4.3)"
     }
   ],
-  "twdCash": 1584
+  "twdCash": 1584,
+  "legacyPositions": [
+    {
+      "market": "ethtwd",
+      "coin": "ETH",
+      "held": 0.02761786,
+      "value": 1940,
+      "avgEntry": 0,
+      "pnl": 0,
+      "note": "legacy"
+    },
+    {
+      "market": "dogetwd",
+      "coin": "DOGE",
+      "held": 649.9608,
+      "value": 1926,
+      "avgEntry": 0,
+      "pnl": 0,
+      "note": "legacy"
+    }
+  ],
+  "strategyEquity": 5585,
+  "legacyEquity": 3866
 }
