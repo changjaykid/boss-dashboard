@@ -1,16 +1,16 @@
 {
-  "lastUpdate": "2026-04-10 11:02",
+  "lastUpdate": "2026-04-10 11:30",
   "status": "RUNNING",
   "mode": "v8 賺大虧小",
   "exchange": "Binance Futures",
   "account": {
     "initialCapital": 464,
-    "balance": 435.17,
-    "available": 293.73,
+    "balance": 435.01,
+    "available": 233.05,
     "unrealizedPnl": 0,
-    "netEquity": 435.17,
+    "netEquity": 435.01,
     "todayPnl": -1.42,
-    "totalPnl": -28.83,
+    "totalPnl": -28.99,
     "leverage": 5,
     "marginType": "ISOLATED",
     "totalTrades": 19,
@@ -20,65 +20,66 @@
     "maxDrawdown": 1.6
   },
   "position": {
-    "symbol": "BTCUSDT",
+    "symbol": "ETHUSDT",
     "side": "LONG",
-    "size": 0.01,
-    "entryPrice": 70890.2,
-    "markPrice": 71913.51,
-    "pnl": 10.23,
+    "size": 0.139,
+    "entryPrice": 2182.55,
+    "markPrice": 2182.55,
+    "pnl": 0,
     "leverage": 5,
     "trailingStop": 71251.5855
   },
   "signals": {
-    "score": 19,
+    "score": 24,
     "direction": "LONG",
     "marketState": "TRENDING_UP",
     "trend4h": "UP",
-    "buyScore": 19,
+    "buyScore": 24,
     "sellScore": 0,
     "reasons": [
-      "4H多頭(1.23%)",
+      "4H多頭(1.21%)",
       "1H EMA多排",
-      "1H RSI回踩54",
+      "1H RSI回踩52",
+      "支撐區回踩做多",
       "⚠️壓力區不追多"
     ],
-    "rsi15": 47,
+    "rsi15": 43,
     "strategy": "PULLBACK"
   },
   "perSymbolSignals": {
     "BTCUSDT": {
-      "score": 19,
+      "score": 24,
       "direction": "LONG",
       "marketState": "TRENDING_UP",
       "trend4h": "UP",
-      "buyScore": 19,
+      "buyScore": 24,
       "sellScore": 0,
       "reasons": [
-        "4H多頭(1.23%)",
+        "4H多頭(1.21%)",
         "1H EMA多排",
-        "1H RSI回踩54",
-        "⚠️壓力區不追多"
-      ],
-      "price": 71920.8,
-      "rsi15": 47,
-      "time": "2026-04-10T03:02:31.965Z"
-    },
-    "ETHUSDT": {
-      "score": 19,
-      "direction": "LONG",
-      "marketState": "TRENDING_DOWN",
-      "trend4h": "UP",
-      "buyScore": 19,
-      "sellScore": 2,
-      "reasons": [
-        "4H多頭(0.89%)",
-        "1H RSI回踩47",
+        "1H RSI回踩52",
         "支撐區回踩做多",
         "⚠️壓力區不追多"
       ],
-      "price": 2189.12,
+      "price": 71776.1,
       "rsi15": 43,
-      "time": "2026-04-10T03:02:33.208Z"
+      "time": "2026-04-10T03:30:09.848Z"
+    },
+    "ETHUSDT": {
+      "score": 62,
+      "direction": "LONG",
+      "marketState": "TRENDING_DOWN",
+      "trend4h": "UP",
+      "buyScore": 62,
+      "sellScore": 2,
+      "reasons": [
+        "4H多頭(0.85%)",
+        "1H RSI回踩44",
+        "支撐區回踩做多"
+      ],
+      "price": 2181.91,
+      "rsi15": 38,
+      "time": "2026-04-10T03:30:11.125Z"
     }
   },
   "recentTrades": [
