@@ -1,68 +1,74 @@
 {
-  "lastUpdate": "2026-04-11 14:00",
+  "lastUpdate": "2026-04-11 14:30",
   "status": "RUNNING",
   "mode": "v8 賺大虧小",
   "exchange": "Binance Futures",
   "account": {
     "initialCapital": 464,
-    "balance": 434.77878382,
-    "available": 293.29050836,
-    "unrealizedPnl": 17.72226891,
-    "netEquity": 452.50105273,
-    "todayPnl": 0,
-    "totalPnl": -2.5026788999999994,
+    "balance": 451.22292932,
+    "available": 451.22292932,
+    "unrealizedPnl": 0,
+    "netEquity": 451.22292932,
+    "todayPnl": 16.807,
+    "totalPnl": 14.3043211,
     "leverage": 5,
-    "totalTrades": 12,
-    "winRate": "41.7%",
-    "wins": 5,
+    "totalTrades": 13,
+    "winRate": "46.2%",
+    "wins": 6,
     "losses": 7,
     "maxDrawdown": 0.599746184212585
   },
-  "position": {
-    "symbol": "BTCUSDT",
-    "side": "LONG",
-    "size": 0.01,
-    "entryPrice": 70890.2,
-    "markPrice": 72662.4268913,
-    "pnl": 17.72226891,
-    "leverage": 10,
-    "trailingStop": 72578.385
-  },
+  "position": null,
   "todayStats": {
-    "trades": 0,
-    "wins": 0,
+    "trades": 1,
+    "wins": 1,
     "losses": 0,
-    "pnl": 0,
-    "remaining": 10
+    "pnl": 16.807,
+    "remaining": 9
   },
   "totalStats": {
-    "trades": 12,
-    "wins": 5,
+    "trades": 13,
+    "wins": 6,
     "losses": 7,
-    "pnl": -2.5026788999999994,
-    "winRate": 0.4166666666666667,
+    "pnl": 14.3043211,
+    "winRate": 0.46153846153846156,
     "avgRR": 0,
     "maxDrawdown": 0.599746184212585,
-    "peakBalance": 464.17969189
+    "peakBalance": 478.3043211
   },
   "signals": {
-    "score": 10,
+    "score": 23,
     "direction": "LONG",
     "strategy": "PULLBACK",
-    "marketState": "RANGING",
+    "marketState": "TRENDING_UP",
     "trend4h": "UP",
     "session": "TRANSITION",
     "reasons": [
       "4H多頭(1.22%)",
       "1H EMA多排",
       "1H RSI回踩52",
+      "1H看多Pin Bar",
       "支撐區回踩做多",
       "⚠️壓力區不追多"
     ],
-    "buyScore": 10,
-    "sellScore": 2
+    "buyScore": 23,
+    "sellScore": 3
   },
   "recentTrades": [
+    {
+      "time": "2026-04-11T06:30:13.600Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 70897.1,
+      "pnl": 16.81,
+      "strategy": "PULLBACK",
+      "reasons": [
+        "4H多頭(1.05%)",
+        "1H EMA多排",
+        "1H RSI回踩47",
+        "支撐區回踩做多"
+      ]
+    },
     {
       "time": "2026-04-09T11:15:12.334Z",
       "symbol": "BTCUSDT",
@@ -179,20 +185,11 @@
       "strategy": "MOMENTUM",
       "size": 0.013,
       "reason": "Trailing SL triggered at 69570.5"
-    },
-    {
-      "time": "2026-04-06T12:57:01.858Z",
-      "symbol": "BTCUSDT",
-      "side": "LONG",
-      "entryPrice": 69181.7,
-      "pnl": 1.7,
-      "strategy": "UNKNOWN",
-      "reasons": []
     }
   ],
   "riskStatus": {
     "dailyLossUsed": "$0.00 / $18.56",
-    "dailyTradesUsed": "0 / 10",
+    "dailyTradesUsed": "1 / 10",
     "consecutiveLosses": "0 / 2",
     "paused": false
   }
