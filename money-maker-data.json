@@ -1,17 +1,17 @@
 {
-  "lastUpdate": "2026-04-12 03:30",
+  "lastUpdate": "2026-04-12 03:35",
   "status": "RUNNING",
   "mode": "v7_concentrated_swing",
   "capital": 10000,
-  "totalEquity": 12113,
-  "netEquity": 12113,
-  "totalPnl": 2113,
-  "btcPrice": 2343727,
-  "btcChange24h": 0.73,
+  "totalEquity": 12099,
+  "netEquity": 12099,
+  "totalPnl": 2099,
+  "btcPrice": 2343777,
+  "btcChange24h": 0.81,
   "holdings": {
     "btc": 0.00086059,
     "avgCost": 2277506,
-    "unrealizedPnl": 117,
+    "unrealizedPnl": -896,
     "positions": [
       {
         "coin": "BTC",
@@ -21,14 +21,14 @@
       },
       {
         "coin": "SOL",
-        "held": 0.73978611,
-        "value": 2020,
-        "pnl": 60
+        "held": 0.3672624,
+        "value": 1007,
+        "pnl": -953
       }
     ]
   },
-  "buyOrders": 13,
-  "sellOrders": 13,
+  "buyOrders": 14,
+  "sellOrders": 14,
   "consecutiveLosses": 0,
   "fearGreedIndex": "--",
   "nextAction": "持倉監控中",
@@ -51,10 +51,10 @@
     },
     {
       "market": "soltwd",
-      "held": 0.73978611,
-      "value": 2020,
+      "held": 0.3672624,
+      "value": 1007,
       "avgEntry": 2649,
-      "pnl": 60
+      "pnl": -953
     }
   ],
   "marketStats": {
@@ -64,27 +64,27 @@
       "pnl": 28
     },
     "soltwd": {
-      "trades": 8,
-      "wins": 7,
-      "pnl": 2
+      "trades": 9,
+      "wins": 8,
+      "pnl": 35
     }
   },
   "riskStatus": {
     "dailyLossLimit": 800,
     "consecLossPause": 3,
     "currentConsecLosses": 0,
-    "totalWinRate": "92.3%",
-    "avgPnlPerTrade": 2
+    "totalWinRate": "92.9%",
+    "avgPnlPerTrade": 5
   },
   "marketSignals": {
     "BTC": {
-      "price": 2343727,
-      "rsi": "68.8",
+      "price": 2343777,
+      "rsi": "69.6",
       "bbPos": "--"
     },
     "SOL": {
-      "price": 2730,
-      "rsi": "64.7",
+      "price": 2742,
+      "rsi": "67.6",
       "bbPos": "--"
     }
   },
@@ -150,8 +150,8 @@
       "reason": "強買入(4.3)"
     }
   ],
-  "twdCash": 8076,
+  "twdCash": 9075,
   "legacyPositions": [],
-  "strategyEquity": 12113,
+  "strategyEquity": 12099,
   "legacyEquity": 0
 }
