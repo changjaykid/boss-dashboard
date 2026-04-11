@@ -1,110 +1,79 @@
 {
-  "lastUpdate": "2026-04-08 14:15:00",
+  "lastUpdate": "2026-04-11 11:50:41",
   "updateCycle": "08:00/20:00",
   "news": [
     {
-      "title": "傳美伊停火45天！比特幣(BTC)狂飆逼近7萬美元，以太幣同步轉強",
-      "source": "CMoney投資網誌",
-      "time": "2026-04-06 12:51 UTC",
-      "summary": "由於美伊停火的消息，比特幣價格迅速上漲，接近70,000美元，以太幣也隨之上漲。這一消息可能會刺激市場的投資情緒。",
-      "analysis": "這則新聞對比特幣和以太幣的價格有正面影響，可能吸引更多投資者進場，進一步推高價格。",
-      "impact": {
-        "coins": [
-          "BTC",
-          "ETH"
-        ],
-        "direction": "BTC 利多，ETH 利多",
-        "severity": "high"
-      }
-    },
-    {
-      "title": "比特幣拋售潮開始，礦工於 2026 年第一季售出超過 15,000 BTC",
+      "title": "價值 22 億美元的加密貨幣選擇權到期,BTC 走勢改善且ETH 訊號增強| MEXC 新聞 - MEXC",
       "source": "MEXC",
-      "time": "2026-04-03 09:57 UTC",
-      "summary": "報導指出，礦工在2026年第一季拋售了超過15,000個比特幣，這可能會對市場造成壓力。",
-      "analysis": "這一拋售潮可能會導致比特幣價格承壓，對BTC的短期��勢形成負面影響，可能引發投資者的擔憂。",
+      "time": "Fri, 10 Apr 2026 21:19:37 GMT",
+      "summary": "價值 22 億美元的加密貨幣選擇權到期,BTC 走勢改善且ETH 訊號增強| MEXC 新聞 - MEXC",
+      "analysis": "（自動分析暫時不可用，請查看原文）",
       "impact": {
         "coins": [
           "BTC"
         ],
-        "direction": "BTC 承壓",
-        "severity": "high"
-      }
-    },
-    {
-      "title": "Bitcoin shorts risk $2.5 billion liquidation at $72K: Are bears in danger?",
-      "source": "TradingView",
-      "time": "2026-04-04 11:58 UTC",
-      "summary": "如果比特幣價格突破72,000美元，將有25億美元的空頭頭寸面臨清算，這可能會引發價格的劇烈波動。",
-      "analysis": "這則新聞顯示出市場的高風險，若比特幣價格上漲，將可能引發強勁的買盤，對BTC有利。",
-      "impact": {
-        "coins": [
-          "BTC"
-        ],
-        "direction": "BTC 利多",
+        "direction": "待分析",
         "severity": "medium"
       }
     },
     {
-      "title": "CoinDesk 20 Performance Update: Bitcoin (BTC) Trades Flat While Altcoins Rise",
-      "source": "富途牛牛",
-      "time": "2026-04-03 13:18 UTC",
-      "summary": "比特幣的交易表現平穩，而其他替代幣則出現上漲，顯示出市場對於多樣化投資的需求。",
-      "analysis": "這可能意味著投資者對比特幣的興趣減少，而轉向其他幣種，對BTC的需求可能會受到影響。",
-      "impact": {
-        "coins": [
-          "BTC",
-          "SOL",
-          "DOGE"
-        ],
-        "direction": "BTC 承壓，其他幣種利多",
-        "severity": "medium"
-      }
-    },
-    {
-      "title": "Bitcoin 'done' with 85% crashes, says Cathie Wood amid new $34K target",
+      "title": "Bitcoin fades three-week highs as BTC price shrugs off Iran war ceasefire - TradingView",
       "source": "TradingView",
-      "time": "2026-04-03 11:28 UTC",
-      "summary": "Cathie Wood表示比特幣已經結束85%的崩盤，並設定新的價格目標為34,000美元，這引發市場關注。",
-      "analysis": "這一言論可能會提升市場對比特幣的信心，對BTC的長期走勢形成支持。",
+      "time": "Wed, 08 Apr 2026 14:44:17 GMT",
+      "summary": "Bitcoin fades three-week highs as BTC price shrugs off Iran war ceasefire - TradingView",
+      "analysis": "（自動分析暫時不可用，請查看原文）",
       "impact": {
         "coins": [
           "BTC"
         ],
-        "direction": "BTC 利多",
+        "direction": "待分析",
+        "severity": "medium"
+      }
+    },
+    {
+      "title": "Bitcoin Golden Cross Trend Enters Flow State: Why The Next 2-3 Weeks Are Important - TradingView",
+      "source": "TradingView",
+      "time": "Thu, 09 Apr 2026 04:08:25 GMT",
+      "summary": "Bitcoin Golden Cross Trend Enters Flow State: Why The Next 2-3 Weeks Are Important - TradingView",
+      "analysis": "（自動分析暫時不可用，請查看原文）",
+      "impact": {
+        "coins": [
+          "BTC"
+        ],
+        "direction": "待分析",
+        "severity": "medium"
+      }
+    },
+    {
+      "title": "Bitcoin Price Forecast: BTC eyes breakout as US-Iran ceasefire boosts risk sentiment - TMGM",
+      "source": "TMGM",
+      "time": "Wed, 08 Apr 2026 11:56:41 GMT",
+      "summary": "Bitcoin Price Forecast: BTC eyes breakout as US-Iran ceasefire boosts risk sentiment - TMGM",
+      "analysis": "（自動分析暫時不可用，請查看原文）",
+      "impact": {
+        "coins": [
+          "BTC"
+        ],
+        "direction": "待分析",
+        "severity": "medium"
+      }
+    },
+    {
+      "title": "比特幣價格崩跌至 1 萬美元?Peter Schiff 嘲諷 MicroStrategy 的 BTC 策略 - MEXC",
+      "source": "MEXC",
+      "time": "Thu, 09 Apr 2026 00:06:51 GMT",
+      "summary": "比特幣價格崩跌至 1 萬美元?Peter Schiff 嘲諷 MicroStrategy 的 BTC 策略 - MEXC",
+      "analysis": "（自動分析暫時不可用，請查看原文）",
+      "impact": {
+        "coins": [
+          "BTC"
+        ],
+        "direction": "待分析",
         "severity": "medium"
       }
     }
   ],
-  "socialDiscussions": [
-    {
-      "platform": "Reddit",
-      "title": "我花了幾週改善我的算法的勝率。實時交易顯示真正的問題是頭寸大小。",
-      "author": "u/Thiru_7223",
-      "summary": "這位用戶專注於提高其交易算法的勝率，並發現頭寸大小是影響交易表現的關鍵因素。他建議在設計自動交易系統時，應考慮如何合理配置每次交易的資金比例。",
-      "whatTheyDid": "他分析了自己的交易結果，調整了每次交易的資金配置，並測試了不同的頭寸大小以找到最佳效果。",
-      "whatWeCanLearn": "我們可以學習如何優化頭寸大小，以提高自動交易系統的整體表現。",
-      "url": "https://reddit.com/r/algotrading/comments/1sdv0jw/spent_weeks_improving_my_algos_win_rate_live/"
-    },
-    {
-      "platform": "Reddit",
-      "title": "關鍵分析：SEBI的算法框架是否真的幫助零售投資者，還是只是創造了一個新的門檻市場？",
-      "author": "u/TheOldSoul15",
-      "summary": "這篇文章探討了算法交易框架對零售投資者的影響，指出許多零售交易者在使用這些系統時面臨��挑戰，並提供了對於如何設計更友好的交易系統的見解。",
-      "whatTheyDid": "作者分析了現有的算法交易系統，並提出了改進建議，強調用戶友好性和透明度的重要性。",
-      "whatWeCanLearn": "我們可以在設計自動交易系統時，考慮用戶友好性，並提供清晰的操作指導，以吸引更多的使用者。",
-      "url": "https://reddit.com/r/algotrading/comments/1sdp51g/critical_analysis_sebis_algo_framework_does_it/"
-    },
-    {
-      "platform": "Reddit",
-      "title": "Algorand在谷歌標記比特幣和以太坊的量子風險後跳升50%。",
-      "author": "u/kirtash93",
-      "summary": "這位用戶提到Algorand因為其量子抗性而受到市場的青睞，這提示我們在選擇交易對象時，應考慮其技術特性和市場情緒的影響。",
-      "whatTheyDid": "用戶關注了市場動態，並根據技術特性選擇了Algorand進行投資，從而獲得了顯著的回報。",
-      "whatWeCanLearn": "我們可以在自動交易系統中加入市場情緒分析，並根據技術特性選擇交易標的，以提高獲利機會。",
-      "url": "https://reddit.com/r/CryptoCurrency/comments/1sdbxm7/algorand_just_jumped_50_after_a_google_flags/"
-    }
-  ],
+  "socialDiscussions": [],
   "conclusion": {
     "marketOutlook": "資料不足，無法產出市場展望。",
     "tradingImplications": [],
