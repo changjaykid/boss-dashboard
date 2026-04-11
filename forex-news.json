@@ -1,170 +1,180 @@
 {
-  "lastUpdate": "2026-04-08 14:15:00",
+  "lastUpdate": "2026-04-11 11:52:00",
   "updateCycle": "08:00/20:00",
   "prices": {
-    "fetchedAt": "2026-04-07 08:00:05",
+    "fetchedAt": "2026-04-11 11:52:49",
     "source": "Yahoo Finance (yfinance)",
     "instruments": {
       "XAUUSD": {
         "key": "XAUUSD",
         "label": "黃金 XAUUSD",
         "unit": "USD/oz",
-        "price": 4682.5,
-        "change": 16.2,
-        "changePercent": "+0.35%",
+        "price": 4771.0,
+        "change": -18.1,
+        "changePercent": "-0.38%",
         "symbol": "GC=F",
-        "fetchedAt": "2026-04-07 08:00:02"
+        "fetchedAt": "2026-04-11 11:52:46"
       },
       "EURUSD": {
         "key": "EURUSD",
         "label": "歐元/美元",
         "unit": "",
-        "price": 1.1545,
-        "change": -0.0007,
-        "changePercent": "-0.06%",
+        "price": 1.1729,
+        "change": 0.0032,
+        "changePercent": "+0.27%",
         "symbol": "EURUSD=X",
-        "fetchedAt": "2026-04-07 08:00:03"
+        "fetchedAt": "2026-04-11 11:52:47"
       },
       "GBPUSD": {
         "key": "GBPUSD",
         "label": "英鎊/美元",
         "unit": "",
-        "price": 1.3234,
-        "change": -0.0002,
-        "changePercent": "-0.01%",
+        "price": 1.3461,
+        "change": 0.0034,
+        "changePercent": "+0.26%",
         "symbol": "GBPUSD=X",
-        "fetchedAt": "2026-04-07 08:00:03"
+        "fetchedAt": "2026-04-11 11:52:47"
       },
       "USDJPY": {
         "key": "USDJPY",
         "label": "美元/日圓",
         "unit": "",
-        "price": 159.73,
-        "change": 0.068,
-        "changePercent": "+0.04%",
+        "price": 159.24,
+        "change": 0.169,
+        "changePercent": "+0.11%",
         "symbol": "JPY=X",
-        "fetchedAt": "2026-04-07 08:00:03"
+        "fetchedAt": "2026-04-11 11:52:47"
       },
       "US30": {
         "key": "US30",
         "label": "道瓊工業 US30",
         "unit": "",
-        "price": 46669.88,
-        "change": 165.21,
-        "changePercent": "+0.36%",
+        "price": 47916.57,
+        "change": -269.23,
+        "changePercent": "-0.56%",
         "symbol": "^DJI",
-        "fetchedAt": "2026-04-07 08:00:04"
+        "fetchedAt": "2026-04-11 11:52:47"
       },
       "SPX500": {
         "key": "SPX500",
         "label": "標普500",
         "unit": "",
-        "price": 6611.83,
-        "change": 29.14,
-        "changePercent": "+0.44%",
+        "price": 6816.89,
+        "change": -7.77,
+        "changePercent": "-0.11%",
         "symbol": "^GSPC",
-        "fetchedAt": "2026-04-07 08:00:04"
+        "fetchedAt": "2026-04-11 11:52:48"
       },
       "NAS100": {
         "key": "NAS100",
         "label": "那斯達克100期貨",
         "unit": "",
-        "price": 24313.75,
-        "change": 101.5,
-        "changePercent": "+0.42%",
+        "price": 25333.0,
+        "change": 41.5,
+        "changePercent": "+0.16%",
         "symbol": "NQ=F",
-        "fetchedAt": "2026-04-07 08:00:04"
+        "fetchedAt": "2026-04-11 11:52:48"
       },
       "DXY": {
         "key": "DXY",
         "label": "美元指數 DXY",
         "unit": "",
-        "price": 100,
-        "change": -0.025,
-        "changePercent": "-0.02%",
+        "price": 98.7,
+        "change": -0.165,
+        "changePercent": "-0.17%",
         "symbol": "DX-Y.NYB",
-        "fetchedAt": "2026-04-07 08:00:04"
+        "fetchedAt": "2026-04-11 11:52:48"
       },
       "US10Y": {
         "key": "US10Y",
         "label": "美國10年期公債殖利率",
         "unit": "%",
-        "price": 4.335,
-        "change": 0.022,
-        "changePercent": "+0.51%",
+        "price": 4.317,
+        "change": 0.024,
+        "changePercent": "+0.56%",
         "symbol": "^TNX",
-        "fetchedAt": "2026-04-07 08:00:05"
+        "fetchedAt": "2026-04-11 11:52:48"
       }
     }
   },
   "news": [
     {
-      "title": "金價因美伊停火談判提振市場情緒而小幅上漲",
-      "source": "TMGM",
-      "time": "2026-04-06 12:44 UTC",
-      "summary": "隨著美伊停火談判的進展，市場情緒有所改善，金價小幅上漲。投資者對於未來的局勢持樂觀態度，這促使金價出現反彈。",
-      "analysis": "這則新聞顯示出地緣政治的影響力，可能會使金價短期內上漲，對於XAUUSD交易者來說，這是一個進場的好時機。",
+      "title": "美伊停火後黃金攀升至近三週高點，隨後在 $4,900 關鍵阻力位受阻回落",
+      "source": "Reuters / MarketPulse",
+      "time": "2026-04-08 19:04 UTC",
+      "summary": "美伊雙方達成停火協議後，避險情緒短暫推升金價至近三週高點。但隨後在 $4,900/oz 關鍵阻力位遇阻，出現看空訊號。目前金價回落至 $4,771 附近整理。",
+      "analysis": "停火協議降低地緣政治風險溢價，短線金價承壓。但美元持續走弱（DXY 跌至 98.7）仍為金價提供支撐。$4,900 為重要阻力，若無法突破則可能回測 $4,650-4,700 支撐帶。",
       "impact": {
         "instruments": [
-          "XAUUSD"
+          "GOLD"
         ],
-        "direction": "市場情緒改善 → 金價利多",
+        "direction": "停火降低避險需求 → 金價短線偏空，但美元弱勢仍提供底部支撐",
         "severity": "high"
       }
     },
     {
-      "title": "金價在升息預期和美元走強的影響下維持負面偏見",
-      "source": "TMGM",
-      "time": "2026-04-06 06:43 UTC",
-      "summary": "隨著市場對升息的預期上升以及美元走強，金價持續受到壓力，顯示出負面偏見。",
-      "analysis": "這可能會導致XAUUSD的進一步下跌，對於持有多頭頭寸的交易者來說，需謹慎應對市場變化。",
+      "title": "美元指數跌破 100 關口，因經濟數據疲弱及地緣政治不確定性",
+      "source": "TradingView / India Tribune",
+      "time": "2026-04-10 14:33 UTC",
+      "summary": "美國經濟數據遜於預期，加上伊朗局勢持續動盪，美元指數（DXY）本週跌破 100 心理關口至 98.7，抹去 2026 年全部漲幅，跌幅超過 1%。",
+      "analysis": "DXY 跌破 100 為重要技術面訊號，直接利多 EUR/USD、GBP/USD，利空 USD/JPY。非美貨幣全線走強，EUR/USD 升至 1.1729，GBP/USD 升至 1.3461。美元弱勢短期內可能持續。",
       "impact": {
         "instruments": [
-          "XAUUSD"
+          "GOLD",
+          "EURUSD",
+          "GBPUSD",
+          "USDJPY",
+          "DXY"
         ],
-        "direction": "美元走強 → 金價利空",
+        "direction": "美元走弱 → 非美貨幣利多、金價利多、USD/JPY 利空",
         "severity": "high"
       }
     },
     {
-      "title": "金價回落至兩週高點，因美元和收益率反彈",
-      "source": "TMGM",
-      "time": "2026-04-02 12:48 UTC",
-      "summary": "金價在達到兩週高點後回落，主要受到美元和收益率上升的影響，市場情緒變得謹慎。",
-      "analysis": "這將對XAUUSD造成壓力，投資者可能會考慮減少持倉，因為市場對於美元的強勢預期可能會持續。",
+      "title": "道瓊收跌 0.56% 進入修正區間，但那斯達克與標普逆勢上漲",
+      "source": "Economic Times / CNN",
+      "time": "2026-04-10 15:07 UTC",
+      "summary": "美股出現明顯分化：道瓊下跌 269 點（-0.56%）進入修正區間，但科技股推動那斯達克 100 上漲 0.16%，標普 500 僅微跌 0.11%。市場錄得連續四週下跌。",
+      "analysis": "道瓊弱勢主要受傳統產業與油價（逼近 $100/桶）影響，而科技股因 AI 熱潮支撐那斯達克。US30 空頭勢力較強，NAS100 相對抗跌。需關注下週是否持續分化。",
       "impact": {
         "instruments": [
-          "XAUUSD"
+          "US30",
+          "SPX500",
+          "NAS100"
         ],
-        "direction": "美元和收益率上升 → 金價利空",
-        "severity": "medium"
+        "direction": "道瓊偏空、那斯達克偏多、標普中性",
+        "severity": "high"
       }
     },
     {
-      "title": "GBP/USD因特朗普威脅而滑向1.3200",
-      "source": "TMGM",
-      "time": "2026-04-02 22:49 UTC",
-      "summary": "在特朗普的威脅言論影響下，英鎊兌美元匯率滑向1.3200，顯示出市場對於美元的避險需求。",
-      "analysis": "這對GBP/USD交易者來說是一個警示，因為美元的強勢可能會持續影響英鎊的走勢，建議密切關注市場情緒。",
+      "title": "市場聚焦美伊後續談判，油價逼近 $100 引發通膨憂慮",
+      "source": "Financial Mirror / Sunday Guardian",
+      "time": "2026-04-10 20:32 UTC",
+      "summary": "儘管美伊達成初步停火，但市場對後續談判前景存疑。國際油價持續攀升逼近 $100/桶，引發市場對通膨再起的擔憂。投資者在股市與避險資產間搖擺不定。",
+      "analysis": "油價高企將推升通膨預期，對聯準會降息預期構成壓力。若油價突破 $100 可能引發大規模避險，利多黃金、利空美股指數。外匯市場波動加劇。",
       "impact": {
         "instruments": [
-          "GBPUSD"
+          "GOLD",
+          "US30",
+          "SPX500",
+          "NAS100",
+          "USDJPY"
         ],
-        "direction": "美元走強 → 英鎊利空",
-        "severity": "medium"
+        "direction": "油價攀升 → 通膨憂慮升溫 → 股市利空、金價利多",
+        "severity": "high"
       }
     },
     {
-      "title": "美元兌加元因美伊新聞而小幅下滑",
-      "source": "TMGM",
-      "time": "2026-04-06 17:16 UTC",
-      "summary": "隨著美伊新聞的發展，美元兌加元小幅下滑，市場對於未來的走勢持謹慎態度。",
-      "analysis": "這可能會影響USD/CAD的走勢，交易者需注意市場情緒的變化，可能會出現短期的波動。",
+      "title": "金價本週累計上漲 2%，伊朗停火題材持續發酵",
+      "source": "Mint",
+      "time": "2026-04-11 02:10 UTC",
+      "summary": "受美伊停火消息與美元走弱雙重提振，黃金本週錄得 2% 漲幅。分析師指出，地緣政治不確定性與央行購金需求持續支撐金價，短期回調視為買入機會。",
+      "analysis": "金價週漲 2% 顯示買盤強勁。中期趨勢仍偏多，央行購金與去美元化為長期利多因素。但 $4,900 阻力需要更強催化劑才能突破。",
       "impact": {
         "instruments": [
-          "USDCAD"
+          "GOLD"
         ],
-        "direction": "市場情緒謹慎 → 美元利空",
+        "direction": "停火 + 美元弱 → 金價中期偏多",
         "severity": "medium"
       }
     }
@@ -172,37 +182,63 @@
   "socialDiscussions": [
     {
       "platform": "Reddit",
-      "title": "我做了更多的錢，什麼都不做，而不是每天交易。花了我五年才弄明白這一點。",
+      "title": "我做了更多的錢什麼都不做，比每天交易賺更多。花了五年才想通",
       "author": "u/metriclan",
-      "summary": "作者分享了他在外匯交易中的經驗，發現長期持有而非頻繁交易能獲得更好的收益。他建議避免過度交易，專注於長期策略。",
-      "whatTheyDid": "他選擇了長期持有的策略，並且在過去五年中減少了頻繁的交易。",
-      "whatWeCanLearn": "我們可以考慮採用長期持有的策略，減少不必要的交易次數，以提高整體收益。",
+      "summary": "交易者分享實戰經驗：高頻交易五年虧損後轉為低頻長線策略，收益反而提升。核心發現是過度交易造成的手續費和情緒決策拖累了績效。",
+      "whatTheyDid": "從每天多筆交易轉為每週 1-2 筆，使用日線級別的趨勢跟蹤策略，持倉時間延長至數天到數週。",
+      "whatWeCanLearn": "我們的自動交易系統可以考慮降低開倉頻率，在高波動期間增加持倉時間，而非頻繁進出。加入交易頻率上限限制可能有助於整體表現。",
       "url": "https://reddit.com/r/Trading/comments/1se1lsl/i_made_more_money_doing_nothing_than_trading/"
     },
     {
       "platform": "Reddit",
-      "title": "我花了幾週提升我的算法勝率。實盤交易顯示真正的問題是頭寸大小。",
+      "title": "花了數週提升勝率，實盤卻顯示真正問題在頭寸大小",
       "author": "u/Thiru_7223",
-      "summary": "作者在提升算法勝率的過程中發現，頭寸大小是影響交易結果的關鍵因素。他強調了風險管理的重要性。",
-      "whatTheyDid": "他專注於調整算法的頭寸大小，並進行了實盤交易來驗證效果。",
-      "whatWeCanLearn": "我們應該重視風險管理，特別是頭寸大小的設定，以提高交易的穩定性。",
+      "summary": "算法交易者發現勝率提升不等於獲利提升。他使用 Python + Backtrader 回測，發現 Kelly Criterion 配合動態頭寸調整才是獲利關鍵。固定頭寸 vs 動態頭寸差距達 40%。",
+      "whatTheyDid": "用 Python Backtrader 對比固定 1% 風險 vs Kelly Criterion 動態頭寸。結果動態頭寸在相同勝率下收益高 40%。",
+      "whatWeCanLearn": "建議我們的系統加入 Kelly Criterion 或類似的動態頭寸管理，根據策略近期勝率自動調整每筆交易的風險比例。",
       "url": "https://reddit.com/r/algotrading/comments/1sdv0jw/spent_weeks_improving_my_algos_win_rate_live/"
     },
     {
       "platform": "Reddit",
-      "title": "有誰在長期運行自動外匯系統？",
+      "title": "有誰真的在長期運行自動外匯系統？分享你的經驗",
       "author": "u/AlphaOneYoutube",
-      "summary": "作者詢問社群中是否有成功運行自動外匯系統的經驗，並希望獲得具體的建議和策略分享。",
-      "whatTheyDid": "他在尋找其他交易者的經驗，特別是關於自動化交易系統的運行和維護。",
-      "whatWeCanLearn": "我們可以參考其他交易者的成功案例，並尋求具體的策略和經驗來優化我們的自動交易系統。",
+      "summary": "社群討論中多位交易者分享經驗：成功的自動化系統需要每週維護與參數微調，純放著跑超過 3 個月不調整的系統普遍開始虧損。建議加入市場狀態檢測自動切換策略。",
+      "whatTheyDid": "多位回覆者使用 MT4/MT5 EA 或 Python 系統，每週檢查績效並根據市場狀態（趨勢/震盪）切換參數集。有人使用 ATR 判斷市場狀態。",
+      "whatWeCanLearn": "加入市場狀態偵測模組（如 ATR + ADX 組合），在趨勢市與震盪市自動切換策略參數，避免單一參數集在所有市況下運行。",
       "url": "https://reddit.com/r/algotrading/comments/1sdw4wh/anyone_here_actually_running_automated_forex/"
     }
   ],
   "conclusion": {
-    "marketOutlook": "資料不足，無法產出市場展望。",
-    "tradingImplications": [],
-    "suggestedActions": [],
-    "keyTimeline": [],
-    "systemOptimization": []
+    "marketOutlook": "本週市場由三大主題主導：(1) 美伊停火後的地緣政治不確定性持續，油價逼近 $100/桶；(2) 美元指數跌破 100 關口至 98.7，創下 2026 年新低；(3) 美股出現道瓊與科技股的明顯分化。短期展望：美元弱勢可能持續，金價在 $4,650-4,900 區間震盪，美股分化格局預計延續至美伊談判結果明朗化。",
+    "tradingImplications": [
+      "XAUUSD：金價在 $4,900 遇阻回落至 $4,771，但週漲 2% 顯示買盤強勁。美元走弱與地緣政治不確定性為金價提供雙重支撐，中期偏多",
+      "EUR/USD：受美元走弱推動升至 1.1729（+0.27%），DXY 跌破 100 為強烈利多訊號，可維持偏多策略",
+      "GBP/USD：同步受益美元弱勢升至 1.3461（+0.26%），技術面突破前高，偏多",
+      "USD/JPY：美元弱勢 vs 日圓避險需求，目前 159.24，若美伊談判破裂可能快速走弱",
+      "US30：道瓊進入修正區間，受油價與傳統產業拖累，偏空操作",
+      "NAS100：科技股 AI 熱潮支撐，相對抗跌，可維持中性偏多",
+      "SPX500：介於道瓊與那斯達克之間，觀望為主"
+    ],
+    "suggestedActions": [
+      "XAUUSD：做多為主，支撐 $4,650-4,700，阻力 $4,900。回調至 $4,700 附近可加倉",
+      "EUR/USD：偏多操作，支撐 1.1650，目標 1.1800-1.1850",
+      "GBP/USD：偏多操作，支撐 1.3380，目標 1.3550",
+      "USD/JPY：偏空觀察，若跌破 158.80 可做空，目標 157.50",
+      "US30：偏空操作，阻力 48200，支撐 47500。反彈至阻力附近可做空",
+      "NAS100：中性偏多，支撐 25000，若站穩 25500 可輕倉做多"
+    ],
+    "keyTimeline": [
+      "4/11（今日）：週末前可能出現獲利了結，注意金價與美股回調風險",
+      "4/14-15：美伊後續談判窗口，結果將決定油價與避險資產方向",
+      "4/16：美國 3 月零售銷售數據，將影響聯準會政策預期",
+      "4/17：歐洲央行（ECB）官員講話，關注對歐元政策走向暗示",
+      "4/18：美國密歇根大學消費者信心指數初值"
+    ],
+    "systemOptimization": [
+      "在當前高波動環境下（油價、地緣政治），建議加大止損距離 15-20%，避免假突破掃單",
+      "加入市場狀態偵測（ATR + ADX），趨勢市用趨勢跟蹤策略，震盪市用均值回歸策略",
+      "考慮加入動態頭寸管理（Kelly Criterion），根據近期策略勝率自動調整風險比例",
+      "美伊談判窗口期（4/14-15）前後自動降低倉位至正常的 50%，避免黑天鵝事件"
+    ]
   }
 }
