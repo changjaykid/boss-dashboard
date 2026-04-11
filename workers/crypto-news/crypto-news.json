@@ -1,7 +1,21 @@
 {
-  "lastUpdate": "2026-04-11 20:01:25",
+  "lastUpdate": "2026-04-12 06:06:46",
   "updateCycle": "08:00/20:00",
   "news": [
+    {
+      "title": "【即時新聞】比特幣(BTC)領跌加密貨幣市場！缺乏實質需求支撐，這 2 檔人氣迷因幣恐再面臨50% 暴跌 - CMoney投資網誌",
+      "source": "CMoney投資網誌",
+      "time": "Sat, 11 Apr 2026 19:36:30 GMT",
+      "summary": "【即時新聞】比特幣(BTC)領跌加密貨幣市場！缺乏實質需求支撐，這 2 檔人氣迷因幣恐再面臨50% 暴跌 - CMoney投資網誌",
+      "analysis": "（自動分析暫時不可用，請查看原文）",
+      "impact": {
+        "coins": [
+          "BTC"
+        ],
+        "direction": "待分析",
+        "severity": "medium"
+      }
+    },
     {
       "title": "Bitcoin fades three-week highs as BTC price shrugs off Iran war ceasefire - TradingView",
       "source": "TradingView",
@@ -49,20 +63,6 @@
       "source": "TMGM",
       "time": "Wed, 08 Apr 2026 11:56:41 GMT",
       "summary": "Bitcoin Price Forecast: BTC eyes breakout as US-Iran ceasefire boosts risk sentiment - TMGM",
-      "analysis": "（自動分析暫時不可用，請查看原文）",
-      "impact": {
-        "coins": [
-          "BTC"
-        ],
-        "direction": "待分析",
-        "severity": "medium"
-      }
-    },
-    {
-      "title": "為什麼即使比特幣上漲，你的山寨幣卻在虧損| MEXC 新聞 - MEXC",
-      "source": "MEXC",
-      "time": "Fri, 10 Apr 2026 15:14:21 GMT",
-      "summary": "為什麼即使比特幣上漲，你的山寨幣卻在虧損| MEXC 新聞 - MEXC",
       "analysis": "（自動分析暫時不可用，請查看原文）",
       "impact": {
         "coins": [
