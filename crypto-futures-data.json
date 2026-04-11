@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-04-11 23:31",
+  "lastUpdate": "2026-04-12 00:31",
   "status": "RUNNING",
   "mode": "v8 賺大虧小",
   "exchange": "Binance Futures",
   "account": {
     "initialCapital": 464,
-    "balance": 450.78604112,
+    "balance": 450.84506809,
     "available": 276.46764932,
-    "unrealizedPnl": -0.47558269,
-    "netEquity": 450.31045843,
-    "todayPnl": 16.807,
+    "unrealizedPnl": 0.42644391,
+    "netEquity": 451.271512,
+    "todayPnl": 0,
     "totalPnl": 14.3043211,
     "leverage": 5,
     "totalTrades": 13,
@@ -23,17 +23,17 @@
     "side": "LONG",
     "size": 0.012,
     "entryPrice": 72814.7,
-    "markPrice": 72775.0681087,
-    "pnl": -0.47558269,
+    "markPrice": 72850.23699275,
+    "pnl": 0.42644391,
     "leverage": 5,
     "trailingStop": 72301.64924198652
   },
   "todayStats": {
-    "trades": 1,
-    "wins": 1,
+    "trades": 0,
+    "wins": 0,
     "losses": 0,
-    "pnl": 16.807,
-    "remaining": 9
+    "pnl": 0,
+    "remaining": 10
   },
   "totalStats": {
     "trades": 13,
@@ -46,20 +46,19 @@
     "peakBalance": 478.3043211
   },
   "signals": {
-    "score": 24,
+    "score": 20,
     "direction": "LONG",
     "strategy": "PULLBACK",
     "marketState": "SQUEEZE",
     "trend4h": "UP",
     "session": "US_OPEN",
     "reasons": [
-      "4H多頭(1.10%)",
+      "4H多頭(1.05%)",
       "1H EMA多排",
-      "1H RSI回踩53",
       "支撐區回踩做多",
       "⚠️壓力區不追多"
     ],
-    "buyScore": 24,
+    "buyScore": 20,
     "sellScore": 2
   },
   "recentTrades": [
@@ -197,7 +196,7 @@
   ],
   "riskStatus": {
     "dailyLossUsed": "$0.00 / $18.56",
-    "dailyTradesUsed": "1 / 10",
+    "dailyTradesUsed": "0 / 10",
     "consecutiveLosses": "0 / 2",
     "paused": false
   }
