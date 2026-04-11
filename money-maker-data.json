@@ -1,29 +1,29 @@
 {
-  "lastUpdate": "2026-04-12 07:05",
+  "lastUpdate": "2026-04-12 07:10",
   "status": "RUNNING",
   "mode": "v7_concentrated_swing",
   "capital": 10000,
-  "totalEquity": 12067,
-  "netEquity": 12067,
-  "totalPnl": 2067,
-  "btcPrice": 2324900,
-  "btcChange24h": 0.38,
+  "totalEquity": 12059,
+  "netEquity": 12059,
+  "totalPnl": 2059,
+  "btcPrice": 2319551,
+  "btcChange24h": 0.05,
   "holdings": {
     "btc": 0.00086059,
     "avgCost": 2277506,
-    "unrealizedPnl": -928,
+    "unrealizedPnl": -936,
     "positions": [
       {
         "coin": "BTC",
         "held": 0.00086059,
-        "value": 2001,
-        "pnl": 41
+        "value": 1996,
+        "pnl": 36
       },
       {
         "coin": "SOL",
         "held": 0.3672624,
-        "value": 991,
-        "pnl": -969
+        "value": 988,
+        "pnl": -972
       }
     ]
   },
@@ -45,16 +45,16 @@
     {
       "market": "btctwd",
       "held": 0.00086059,
-      "value": 2001,
+      "value": 1996,
       "avgEntry": 2277506,
-      "pnl": 41
+      "pnl": 36
     },
     {
       "market": "soltwd",
       "held": 0.3672624,
-      "value": 991,
+      "value": 988,
       "avgEntry": 2649,
-      "pnl": -969
+      "pnl": -972
     }
   ],
   "marketStats": {
@@ -78,13 +78,13 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2324900,
-      "rsi": "51.7",
+      "price": 2319551,
+      "rsi": "48.8",
       "bbPos": "--"
     },
     "SOL": {
-      "price": 2699,
-      "rsi": "50.4",
+      "price": 2690,
+      "rsi": "47.2",
       "bbPos": "--"
     }
   },
@@ -152,6 +152,6 @@
   ],
   "twdCash": 9075,
   "legacyPositions": [],
-  "strategyEquity": 12067,
+  "strategyEquity": 12059,
   "legacyEquity": 0
 }
