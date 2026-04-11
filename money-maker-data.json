@@ -1,13 +1,13 @@
 {
-  "lastUpdate": "2026-04-11 18:00",
+  "lastUpdate": "2026-04-11 18:05",
   "status": "RUNNING",
   "mode": "v7_concentrated_swing",
   "capital": 10000,
-  "totalEquity": 10763,
-  "netEquity": 10763,
-  "totalPnl": 763,
+  "totalEquity": 11412,
+  "netEquity": 11412,
+  "totalPnl": 1412,
   "btcPrice": 2322010,
-  "btcChange24h": 1.52,
+  "btcChange24h": 1.54,
   "holdings": {
     "btc": 0.00086059,
     "avgCost": 2277506,
@@ -79,12 +79,12 @@
   "marketSignals": {
     "BTC": {
       "price": 2322010,
-      "rsi": "57.9",
+      "rsi": "57.4",
       "bbPos": "--"
     },
     "SOL": {
-      "price": 2693,
-      "rsi": "53.9",
+      "price": 2692,
+      "rsi": "53.8",
       "bbPos": "--"
     }
   },
@@ -150,8 +150,8 @@
       "reason": "強買入(4.3)"
     }
   ],
-  "twdCash": 6773,
+  "twdCash": 7422,
   "legacyPositions": [],
-  "strategyEquity": 10763,
+  "strategyEquity": 11412,
   "legacyEquity": 0
 }
