@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-11 15:31",
+  "lastUpdate": "2026-04-11 16:31",
   "status": "RUNNING",
   "mode": "v8 賺大虧小",
   "exchange": "Binance Futures",
@@ -37,20 +37,21 @@
     "peakBalance": 478.3043211
   },
   "signals": {
-    "score": 34,
+    "score": 20,
     "direction": "LONG",
     "strategy": "PULLBACK",
-    "marketState": "RANGING",
+    "marketState": "SQUEEZE",
     "trend4h": "UP",
     "session": "TRANSITION",
     "reasons": [
-      "4H多頭(1.23%)",
+      "4H多頭(1.15%)",
       "1H EMA多排",
-      "1H RSI回踩54",
-      "支撐區回踩做多"
+      "1H RSI回踩53",
+      "支撐區回踩做多",
+      "⚠️壓力區不追多"
     ],
-    "buyScore": 34,
-    "sellScore": 0
+    "buyScore": 20,
+    "sellScore": 3
   },
   "recentTrades": [
     {
