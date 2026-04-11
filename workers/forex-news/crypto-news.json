@@ -1,12 +1,12 @@
 {
-  "lastUpdate": "2026-04-11 11:52:52",
+  "lastUpdate": "2026-04-12 06:04:12",
   "updateCycle": "08:00/20:00",
   "news": [
     {
-      "title": "價值 22 億美元的加密貨幣選擇權到期,BTC 走勢改善且ETH 訊號增強| MEXC 新聞 - MEXC",
-      "source": "MEXC",
-      "time": "Fri, 10 Apr 2026 21:19:37 GMT",
-      "summary": "價值 22 億美元的加密貨幣選擇權到期,BTC 走勢改善且ETH 訊號增強| MEXC 新聞 - MEXC",
+      "title": "【即時新聞】比特幣(BTC)領跌加密貨幣市場！缺乏實質需求支撐，這 2 檔人氣迷因幣恐再面臨50% 暴跌 - CMoney投資網誌",
+      "source": "CMoney投資網誌",
+      "time": "Sat, 11 Apr 2026 19:36:30 GMT",
+      "summary": "【即時新聞】比特幣(BTC)領跌加密貨幣市場！缺乏實質需求支撐，這 2 檔人氣迷因幣恐再面臨50% 暴跌 - CMoney投資網誌",
       "analysis": "（自動分析暫時不可用，請查看原文）",
       "impact": {
         "coins": [
@@ -21,6 +21,20 @@
       "source": "TradingView",
       "time": "Wed, 08 Apr 2026 14:44:17 GMT",
       "summary": "Bitcoin fades three-week highs as BTC price shrugs off Iran war ceasefire - TradingView",
+      "analysis": "（自動分析暫時不可用，請查看原文）",
+      "impact": {
+        "coins": [
+          "BTC"
+        ],
+        "direction": "待分析",
+        "severity": "medium"
+      }
+    },
+    {
+      "title": "價值 22 億美元的加密貨幣選擇權到期,BTC 走勢改善且ETH 訊號增強| MEXC 新聞 - MEXC",
+      "source": "MEXC",
+      "time": "Fri, 10 Apr 2026 21:19:37 GMT",
+      "summary": "價值 22 億美元的加密貨幣選擇權到期,BTC 走勢改善且ETH 訊號增強| MEXC 新聞 - MEXC",
       "analysis": "（自動分析暫時不可用，請查看原文）",
       "impact": {
         "coins": [
@@ -49,20 +63,6 @@
       "source": "TMGM",
       "time": "Wed, 08 Apr 2026 11:56:41 GMT",
       "summary": "Bitcoin Price Forecast: BTC eyes breakout as US-Iran ceasefire boosts risk sentiment - TMGM",
-      "analysis": "（自動分析暫時不可用，請查看原文）",
-      "impact": {
-        "coins": [
-          "BTC"
-        ],
-        "direction": "待分析",
-        "severity": "medium"
-      }
-    },
-    {
-      "title": "比特幣價格崩跌至 1 萬美元?Peter Schiff 嘲諷 MicroStrategy 的 BTC 策略 - MEXC",
-      "source": "MEXC",
-      "time": "Thu, 09 Apr 2026 00:06:51 GMT",
-      "summary": "比特幣價格崩跌至 1 萬美元?Peter Schiff 嘲諷 MicroStrategy 的 BTC 策略 - MEXC",
       "analysis": "（自動分析暫時不可用，請查看原文）",
       "impact": {
         "coins": [
