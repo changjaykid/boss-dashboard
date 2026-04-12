@@ -765,5 +765,12 @@
     "orderId": 19429211590,
     "status": "success",
     "timestamp": "2026-04-12T02:10:18.021Z"
+  },
+  {
+    "action": "market_sell",
+    "amount": 0.00196262,
+    "orderId": 19431949402,
+    "status": "success",
+    "timestamp": "2026-04-12T08:08:00.576Z"
   }
 ]

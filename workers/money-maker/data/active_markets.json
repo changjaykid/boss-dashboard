@@ -1,60 +1,60 @@
 {
-  "lastScan": "2026-04-11T22:00:01.562Z",
+  "lastScan": "2026-04-12T10:00:02.207Z",
   "fixedMarkets": [
     "btctwd",
     "ethtwd"
   ],
   "dynamicMarkets": [
-    "arbtwd",
-    "soltwd"
+    "soltwd",
+    "dogetwd"
   ],
   "allMarkets": [
     "btctwd",
     "ethtwd",
-    "arbtwd",
-    "soltwd"
+    "soltwd",
+    "dogetwd"
   ],
   "scores": [
     {
-      "market": "arbtwd",
-      "last": 3.643,
-      "turnover": 135118.5057,
-      "volatility": "11.40",
-      "change": "1.19",
-      "score": "4.85"
-    },
-    {
       "market": "soltwd",
-      "last": 2716.9,
-      "turnover": 4534193.6565000005,
-      "volatility": "2.68",
-      "change": "0.23",
-      "score": "2.93"
-    },
-    {
-      "market": "avaxtwd",
-      "last": 290.02,
-      "turnover": 2833.4954,
-      "volatility": "4.52",
-      "change": "0.00",
-      "score": "1.81"
+      "last": 2620,
+      "turnover": 6665466.02,
+      "volatility": "5.01",
+      "change": "-2.70",
+      "score": "5.21"
     },
     {
       "market": "dogetwd",
-      "last": 2.9922,
-      "turnover": 1486465.116,
-      "volatility": "2.59",
-      "change": "-0.09",
-      "score": "1.65"
+      "last": 2.9057,
+      "turnover": 7908799.63825,
+      "volatility": "4.00",
+      "change": "-1.89",
+      "score": "5.14"
+    },
+    {
+      "market": "arbtwd",
+      "last": 3.532,
+      "turnover": 24899.540399999998,
+      "volatility": "10.42",
+      "change": "-3.21",
+      "score": "4.82"
+    },
+    {
+      "market": "dottwd",
+      "last": 38.89,
+      "turnover": 335262.91199999995,
+      "volatility": "7.88",
+      "change": "-4.45",
+      "score": "4.17"
     },
     {
       "market": "xrptwd",
-      "last": 43.259,
-      "turnover": 1701998.96701,
-      "volatility": "2.35",
-      "change": "0.07",
-      "score": "1.63"
+      "last": 42.272,
+      "turnover": 3782154.0432,
+      "volatility": "3.43",
+      "change": "-1.69",
+      "score": "3.22"
     }
   ],
-  "nextScan": "2026-04-12T04:00:01.562Z"
+  "nextScan": "2026-04-12T16:00:02.207Z"
 }

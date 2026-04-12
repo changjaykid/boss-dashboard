@@ -2,36 +2,21 @@
   "version": 5,
   "status": "RUNNING",
   "mode": "batch_swing_v5",
-  "buyBatches": [
-    {
-      "price": 2322489.6,
-      "twd": 2476,
-      "btc": 0.0010643915908170266,
-      "time": 1775952603474,
-      "reason": "強買入(7.0)"
-    },
-    {
-      "price": 2281772.1,
-      "twd": 2075,
-      "btc": 0.0009079259054837246,
-      "time": 1775959818160,
-      "reason": "強買入(7.5) +加碼(跌1.8%)"
-    }
-  ],
+  "buyBatches": [],
   "sellBatches": [],
-  "avgBuyPrice": 2307437.8281061677,
-  "totalBtcHeld": 0.0019723174963007513,
-  "totalTwdInvested": 4551,
-  "dailyPnl": 0,
+  "avgBuyPrice": 0,
+  "totalBtcHeld": 0,
+  "totalTwdInvested": 0,
+  "dailyPnl": -80,
   "dailyDate": "2026-04-12",
-  "totalPnl": 23,
-  "totalTrades": 3,
+  "totalPnl": -57,
+  "totalTrades": 4,
   "wins": 3,
-  "losses": 0,
-  "consecutiveLosses": 0,
-  "maxDrawdown": 0,
+  "losses": 1,
+  "consecutiveLosses": 1,
+  "maxDrawdown": 80,
   "peakEquity": 10023,
   "pauseUntil": null,
   "lastBuyTime": 1775959818160,
-  "lastSellTime": 1775934060889
+  "lastSellTime": 1775973683000
 }

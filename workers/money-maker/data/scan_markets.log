@@ -43,3 +43,33 @@
 
 🎯 本輪幣種: btctwd, ethtwd, arbtwd, soltwd
 ✅ 已更新 /Users/kid/.openclaw/workspace/workers/money-maker/data/active_markets.json
+[2026-04-12T04:00:00.921Z] 🔍 掃描 TWD 市場動能...
+
+📊 候選幣種動能排名:
+  ✅ 1. dogetwd: score=5.23 | turnover=NT$7.9M | vol=4.00% | chg=-2.44%
+  ✅ 2. soltwd: score=5.08 | turnover=NT$6.6M | vol=5.01% | chg=-2.23%
+     3. arbtwd: score=4.68 | turnover=NT$0.0M | vol=8.85% | chg=-5.62%
+     4. xrptwd: score=3.54 | turnover=NT$4.7M | vol=3.43% | chg=-1.43%
+     5. dottwd: score=3.10 | turnover=NT$0.1M | vol=5.81% | chg=-3.79%
+     6. linktwd: score=3.02 | turnover=NT$0.3M | vol=5.73% | chg=-3.07%
+     7. bnbtwd: score=2.30 | turnover=NT$0.9M | vol=3.91% | chg=-1.96%
+     8. avaxtwd: score=2.11 | turnover=NT$0.0M | vol=5.03% | chg=-0.48%
+     9. ltctwd: score=1.32 | turnover=NT$0.1M | vol=2.65% | chg=-1.11%
+
+🎯 本輪幣種: btctwd, ethtwd, dogetwd, soltwd
+✅ 已更新 /Users/kid/.openclaw/workspace/workers/money-maker/data/active_markets.json
+[2026-04-12T10:00:01.112Z] 🔍 掃描 TWD 市場動能...
+
+📊 候選幣種動能排名:
+  ✅ 1. soltwd: score=5.21 | turnover=NT$6.7M | vol=5.01% | chg=-2.70%
+  ✅ 2. dogetwd: score=5.14 | turnover=NT$7.9M | vol=4.00% | chg=-1.89%
+     3. arbtwd: score=4.82 | turnover=NT$0.0M | vol=10.42% | chg=-3.21%
+     4. dottwd: score=4.17 | turnover=NT$0.3M | vol=7.88% | chg=-4.45%
+     5. xrptwd: score=3.22 | turnover=NT$3.8M | vol=3.43% | chg=-1.69%
+     6. linktwd: score=2.85 | turnover=NT$0.2M | vol=5.73% | chg=-2.31%
+     7. bnbtwd: score=2.41 | turnover=NT$0.8M | vol=3.91% | chg=-2.54%
+     8. avaxtwd: score=2.09 | turnover=NT$0.0M | vol=5.03% | chg=-0.36%
+     9. ltctwd: score=1.69 | turnover=NT$0.1M | vol=3.25% | chg=-1.68%
+
+🎯 本輪幣種: btctwd, ethtwd, soltwd, dogetwd
+✅ 已更新 /Users/kid/.openclaw/workspace/workers/money-maker/data/active_markets.json

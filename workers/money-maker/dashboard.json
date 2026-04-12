@@ -1,29 +1,29 @@
 {
-  "lastUpdate": "2026-04-12 11:00",
+  "lastUpdate": "2026-04-12 18:02",
   "status": "RUNNING",
   "mode": "v7_concentrated_swing",
   "capital": 10000,
-  "totalEquity": 7481,
-  "netEquity": 7481,
-  "totalPnl": -2519,
-  "btcPrice": 2285197,
-  "btcChange24h": -1.6,
+  "totalEquity": 11943,
+  "netEquity": 11943,
+  "totalPnl": 1943,
+  "btcPrice": 2278345,
+  "btcChange24h": -1.88,
   "holdings": {
     "btc": 0.00086059,
     "avgCost": 2277506,
-    "unrealizedPnl": -986,
+    "unrealizedPnl": -997,
     "positions": [
       {
         "coin": "BTC",
         "held": 0.00086059,
-        "value": 1967,
-        "pnl": 7
+        "value": 1961,
+        "pnl": 1
       },
       {
         "coin": "SOL",
         "held": 0.3672624,
-        "value": 967,
-        "pnl": -993
+        "value": 962,
+        "pnl": -998
       }
     ]
   },
@@ -45,16 +45,16 @@
     {
       "market": "btctwd",
       "held": 0.00086059,
-      "value": 1967,
+      "value": 1961,
       "avgEntry": 2277506,
-      "pnl": 7
+      "pnl": 1
     },
     {
       "market": "soltwd",
       "held": 0.3672624,
-      "value": 967,
+      "value": 962,
       "avgEntry": 2649,
-      "pnl": -993
+      "pnl": -998
     }
   ],
   "marketStats": {
@@ -78,13 +78,13 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2285197,
-      "rsi": "33.3",
+      "price": 2278345,
+      "rsi": "34.9",
       "bbPos": "--"
     },
     "SOL": {
-      "price": 2634,
-      "rsi": "35.3",
+      "price": 2620,
+      "rsi": "35.7",
       "bbPos": "--"
     }
   },
@@ -150,8 +150,27 @@
       "reason": "強買入(4.3)"
     }
   ],
-  "twdCash": 4547,
-  "legacyPositions": [],
-  "strategyEquity": 7481,
-  "legacyEquity": 0
+  "twdCash": 9018,
+  "legacyPositions": [
+    {
+      "market": "ethtwd",
+      "coin": "ETH",
+      "held": 8.6e-7,
+      "value": 0,
+      "avgEntry": 0,
+      "pnl": 0,
+      "note": "legacy"
+    },
+    {
+      "market": "dogetwd",
+      "coin": "DOGE",
+      "held": 0.9608,
+      "value": 3,
+      "avgEntry": 0,
+      "pnl": 0,
+      "note": "legacy"
+    }
+  ],
+  "strategyEquity": 11941,
+  "legacyEquity": 3
 }

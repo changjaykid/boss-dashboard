@@ -96,15 +96,44 @@ gog drive upload "$BACKUP_FILE" --parent "$DRIVE_FOLDER_ID" --account "$ACCOUNT"
 # --- Cleanup old backups on Drive (keep last 7) ---
 echo ""
 echo "🧹 Cleaning up old backups (keep last 7)..."
+# 使用 Python 處理 JSON 並列出需要刪除的 ID
 OLD_BACKUPS=$(gog drive ls --parent "$DRIVE_FOLDER_ID" --account "$ACCOUNT" --json 2>/dev/null | python3 -c "
 import sys, json
 try:
     data = json.load(sys.stdin)
-    files = [f for f in data if f.get('name','').startswith('openclaw-backup-')]
-    files.sort(key=lambda x: x.get('name',''), reverse=True)
-    for f in files[7:]:
-        print(f['id'])
-except:
+    # 支援 files 鍵名或直接是陣列
+    files_list = data.get('files', data) if isinstance(data, dict) else data
+    
+    # 過濾出備份檔案
+    backups = [f for f in files_list if f.get('name', '').startswith('openclaw-backup-')]
+    
+    # 按名稱降序排列（最新的在前）
+    backups.sort(key=lambda x: x.get('name', ''), reverse=True)
+    
+    # 找出重複日期的檔案（保留最新的一個）
+    seen_dates = set()
+    to_delete = []
+    to_keep = []
+    
+    for f in backups:
+        name = f.get('name', '')
+        # 提取日期部分 openclaw-backup-YYYYMMDD.zip
+        date_part = name.split('-')[-1].split('.')[0] if '-' in name else name
+        
+        if date_part in seen_dates:
+            to_delete.append(f['id'])
+        else:
+            seen_dates.add(date_part)
+            to_keep.append(f)
+            
+    # 在不重複日期的檔案中，保留最新的 7 個，其餘刪除
+    if len(to_keep) > 7:
+        for f in to_keep[7:]:
+            to_delete.append(f['id'])
+            
+    for fid in to_delete:
+        print(fid)
+except Exception as e:
     pass
 " 2>/dev/null || true)
 
