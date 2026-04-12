@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-12 22:32",
+  "lastUpdate": "2026-04-12 22:41",
   "status": "RUNNING",
   "mode": "v8 賺大虧小",
   "exchange": "Binance Futures",
@@ -37,17 +37,19 @@
     "peakBalance": 480.7433211
   },
   "signals": {
-    "score": 22,
-    "direction": "LONG",
-    "strategy": "EXTREME_RSI",
+    "score": 11,
+    "direction": null,
+    "strategy": null,
     "marketState": "TRENDING_DOWN",
     "trend4h": "UP",
-    "session": "US_OPEN",
     "reasons": [
-      "1H RSI超賣29"
+      "🟢1H RSI超賣25",
+      "🔴4H MACD加速↓",
+      "🔴1H EMA空排",
+      "🔴1H看空Pin Bar"
     ],
     "buyScore": 22,
-    "sellScore": 11
+    "sellScore": 14
   },
   "recentTrades": [
     {
