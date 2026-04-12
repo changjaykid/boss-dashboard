@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-12 19:48",
+  "lastUpdate": "2026-04-12 19:50",
   "status": "RUNNING",
   "mode": "v7_concentrated_swing",
   "capital": 10000,
@@ -7,7 +7,7 @@
   "netEquity": 9979,
   "totalPnl": -21,
   "btcPrice": 2275314,
-  "btcChange24h": -1.93,
+  "btcChange24h": -1.97,
   "holdings": {
     "btc": 0.00046393,
     "avgCost": 2281929,
