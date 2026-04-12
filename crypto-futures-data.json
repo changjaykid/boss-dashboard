@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-12 12:31",
+  "lastUpdate": "2026-04-12 13:01",
   "status": "RUNNING",
   "mode": "v8 賺大虧小",
   "exchange": "Binance Futures",
@@ -7,8 +7,8 @@
     "initialCapital": 464,
     "balance": 452.0859802,
     "available": 309.2974362,
-    "unrealizedPnl": -0.62368072,
-    "netEquity": 451.46229948,
+    "unrealizedPnl": -1.786,
+    "netEquity": 450.2999802,
     "todayPnl": 2.022,
     "totalPnl": 16.326321099999998,
     "leverage": 5,
@@ -23,8 +23,8 @@
     "side": "LONG",
     "size": 0.01,
     "entryPrice": 71571.2,
-    "markPrice": 71508.83192754,
-    "pnl": -0.62368072,
+    "markPrice": 71392.6,
+    "pnl": -1.786,
     "leverage": 5,
     "trailingStop": 70895.95915447759
   },
@@ -53,7 +53,7 @@
     "trend4h": "UP",
     "session": "TRANSITION",
     "reasons": [
-      "4H多頭(0.51%)",
+      "4H多頭(0.49%)",
       "支撐區回踩做多"
     ],
     "buyScore": 40,
