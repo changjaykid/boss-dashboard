@@ -1,10 +1,10 @@
 {
-  "lastUpdate": "2026-04-12 18:27",
+  "lastUpdate": "2026/4/12 下午6:28:06",
   "status": "RUNNING",
   "mode": "v7_concentrated_swing",
   "capital": 10000,
-  "totalEquity": 9982,
-  "netEquity": 9982,
+  "totalEquity": 9983,
+  "netEquity": 9983,
   "totalPnl": -18,
   "btcPrice": 2281584,
   "btcChange24h": -1.6,
