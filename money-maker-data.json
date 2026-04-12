@@ -1,70 +1,157 @@
 {
-  "lastUpdate": "2026-04-12 16:08",
+  "lastUpdate": "2026-04-12 16:10",
   "status": "RUNNING",
-  "mode": "batch_swing_v5",
+  "mode": "v7_concentrated_swing",
   "capital": 10000,
-  "totalEquity": 9018,
-  "netEquity": 9018,
-  "totalPnl": -982,
-  "btcPrice": 2281778,
-  "btcChange24h": -1.41,
+  "totalEquity": 11945,
+  "netEquity": 11945,
+  "totalPnl": 1945,
+  "btcPrice": 2281613,
+  "btcChange24h": -1.47,
   "holdings": {
-    "btc": 0,
-    "avgCost": 0,
-    "unrealizedPnl": 0,
-    "positions": []
+    "btc": 0.00086059,
+    "avgCost": 2277506,
+    "unrealizedPnl": -994,
+    "positions": [
+      {
+        "coin": "BTC",
+        "held": 0.00086059,
+        "value": 1964,
+        "pnl": 4
+      },
+      {
+        "coin": "SOL",
+        "held": 0.3672624,
+        "value": 963,
+        "pnl": -997
+      }
+    ]
   },
   "buyOrders": 14,
-  "sellOrders": 15,
-  "consecutiveLosses": 1,
+  "sellOrders": 14,
+  "consecutiveLosses": 0,
   "fearGreedIndex": "--",
-  "nextAction": "空倉觀望中，等待下一個進場信號",
+  "nextAction": "持倉監控中",
   "signals": {
-    "technical": "偏空",
+    "technical": "--",
     "news": "--",
     "sentiment": "--",
-    "overall": "觀望"
+    "overall": "運行中"
   },
   "dailyLimit": {
-    "remaining": 720
+    "remaining": 800
   },
-  "positions": [],
+  "positions": [
+    {
+      "market": "btctwd",
+      "held": 0.00086059,
+      "value": 1964,
+      "avgEntry": 2277506,
+      "pnl": 4
+    },
+    {
+      "market": "soltwd",
+      "held": 0.3672624,
+      "value": 963,
+      "avgEntry": 2649,
+      "pnl": -997
+    }
+  ],
   "marketStats": {
     "btctwd": {
-      "trades": 6,
+      "trades": 5,
       "wins": 5,
-      "pnl": -52
+      "pnl": 28
+    },
+    "soltwd": {
+      "trades": 9,
+      "wins": 8,
+      "pnl": 35
     }
   },
   "riskStatus": {
     "dailyLossLimit": 800,
     "consecLossPause": 3,
-    "currentConsecLosses": 1,
-    "totalWinRate": "83.3%",
-    "avgPnlPerTrade": -9
+    "currentConsecLosses": 0,
+    "totalWinRate": "92.9%",
+    "avgPnlPerTrade": 5
   },
   "marketSignals": {
     "BTC": {
-      "price": 2281778,
-      "rsi": "37",
+      "price": 2281613,
+      "rsi": "36.4",
+      "bbPos": "--"
+    },
+    "SOL": {
+      "price": 2621,
+      "rsi": "35.8",
       "bbPos": "--"
     }
   },
   "recentTrades": [
     {
-      "exitTime": 1775973683000,
+      "exitTime": 1775753105065,
+      "coin": "SOL",
+      "side": "BUY",
+      "amount": 0.136052691346809,
+      "entryPrice": 2642,
+      "twd": 360,
+      "pnl": 0,
+      "reason": "強買入(9.5)"
+    },
+    {
+      "exitTime": 1775752744987,
+      "coin": "SOL",
+      "side": "BUY",
+      "amount": 0.22618085708891825,
+      "entryPrice": 2649,
+      "twd": 600,
+      "pnl": 0,
+      "reason": "強買入(9.5)"
+    },
+    {
+      "exitTime": 1775749325008,
+      "coin": "SOL",
+      "side": "BUY",
+      "amount": 0.3775525639086371,
+      "entryPrice": 2644,
+      "twd": 1000,
+      "pnl": 0,
+      "reason": "強買入(3.0)"
+    },
+    {
+      "exitTime": 1775659142282,
       "coin": "BTC",
-      "side": "SELL",
-      "amount": 0.00196262,
-      "entryPrice": 2307438,
-      "exitPrice": 2281778,
-      "twd": 4471,
-      "pnl": -80,
-      "reason": "持倉超時(>4hr)強制平倉"
+      "side": "BUY",
+      "amount": 0.0001584683648779249,
+      "entryPrice": 2268112,
+      "twd": 360,
+      "pnl": 0,
+      "reason": "強買入(7.5)"
+    },
+    {
+      "exitTime": 1775658782192,
+      "coin": "BTC",
+      "side": "BUY",
+      "amount": 0.00026422684975997105,
+      "entryPrice": 2267143,
+      "twd": 600,
+      "pnl": 0,
+      "reason": "強買入(7.5)"
+    },
+    {
+      "exitTime": 1775658354788,
+      "coin": "BTC",
+      "side": "BUY",
+      "amount": 0.0004378953130201487,
+      "entryPrice": 2279997,
+      "twd": 1000,
+      "pnl": 0,
+      "reason": "強買入(4.3)"
     }
   ],
   "twdCash": 9018,
   "legacyPositions": [],
-  "strategyEquity": 9018,
+  "strategyEquity": 11945,
   "legacyEquity": 0
 }
