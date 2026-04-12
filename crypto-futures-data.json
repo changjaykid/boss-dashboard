@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-13 02:01",
+  "lastUpdate": "2026-04-13 03:00",
   "status": "RUNNING",
   "mode": "v8 賺大虧小",
   "exchange": "Binance Futures",
@@ -7,8 +7,8 @@
     "initialCapital": 464,
     "balance": 444.72417526,
     "available": 275.00321806,
-    "unrealizedPnl": -2.16910065,
-    "netEquity": 442.55507460999996,
+    "unrealizedPnl": -2.49349313,
+    "netEquity": 442.23068213,
     "todayPnl": 0,
     "totalPnl": 10.5753211,
     "leverage": 12,
@@ -23,8 +23,8 @@
     "side": "SHORT",
     "size": 0.012,
     "entryPrice": 70893.8,
-    "markPrice": 71074.55838831,
-    "pnl": -2.16910065,
+    "markPrice": 71101.59109445,
+    "pnl": -2.49349313,
     "leverage": 12,
     "trailingStop": 71376.3791770912
   },
@@ -46,20 +46,24 @@
     "peakBalance": 480.7433211
   },
   "signals": {
-    "score": 9,
-    "direction": "SHORT",
-    "strategy": "TREND_PULLBACK",
+    "score": 1,
+    "direction": null,
+    "strategy": null,
     "marketState": "TRENDING_DOWN",
     "trend4h": "DOWN",
-    "session": "TRANSITION",
     "reasons": [
-      "⚠️4H趨勢過弱(0.11%)",
-      "4H MACD加速↓",
-      "1H EMA空排",
-      "⚠️支撐區不追空"
+      "🟢⚠️4H趨勢過弱(0.11%)",
+      "🟢1H MACD金叉",
+      "🟢1H多頭吞噬",
+      "🟢⚠️壓力區不追多",
+      "🔴⚠️4H趨勢過弱(0.11%)",
+      "🔴4H MACD加速↓",
+      "🔴1H EMA空排",
+      "🔴⚠️壓力有到但沒確認",
+      "🔴⚠️支撐區不追空"
     ],
-    "buyScore": 0,
-    "sellScore": 9
+    "buyScore": 1,
+    "sellScore": 1
   },
   "recentTrades": [
     {
