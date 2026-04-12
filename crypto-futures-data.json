@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-12 23:41",
+  "lastUpdate": "2026-04-13 00:06",
   "status": "RUNNING",
   "mode": "v8 賺大虧小",
   "exchange": "Binance Futures",
@@ -9,7 +9,7 @@
     "available": 445.14953806,
     "unrealizedPnl": 0,
     "netEquity": 445.14953806,
-    "todayPnl": -3.7290000000000005,
+    "todayPnl": 0,
     "totalPnl": 10.5753211,
     "leverage": 5,
     "totalTrades": 16,
@@ -20,11 +20,11 @@
   },
   "position": null,
   "todayStats": {
-    "trades": 3,
-    "wins": 2,
-    "losses": 1,
-    "pnl": -3.7290000000000005,
-    "remaining": 7
+    "trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0,
+    "remaining": 10
   },
   "totalStats": {
     "trades": 16,
@@ -37,17 +37,18 @@
     "peakBalance": 480.7433211
   },
   "signals": {
-    "score": 22,
-    "direction": "LONG",
-    "strategy": "EXTREME_RSI",
+    "score": 36,
+    "direction": "SHORT",
+    "strategy": "TREND_FOLLOW",
     "marketState": "TRENDING_DOWN",
-    "trend4h": "UP",
+    "trend4h": "DOWN",
     "session": "US_OPEN",
     "reasons": [
-      "1H RSI超賣26"
+      "4H MACD加速↓",
+      "1H EMA空排"
     ],
-    "buyScore": 22,
-    "sellScore": 11
+    "buyScore": 6,
+    "sellScore": 36
   },
   "recentTrades": [
     {
@@ -185,9 +186,9 @@
     }
   ],
   "riskStatus": {
-    "dailyLossUsed": "$3.73 / $18.56",
-    "dailyTradesUsed": "3 / 10",
-    "consecutiveLosses": "1 / 2",
+    "dailyLossUsed": "$0.00 / $18.56",
+    "dailyTradesUsed": "0 / 10",
+    "consecutiveLosses": "0 / 2",
     "paused": false
   }
 }
