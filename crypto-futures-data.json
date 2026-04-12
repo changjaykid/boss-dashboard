@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-12 21:51",
+  "lastUpdate": "2026-04-12 22:11",
   "status": "RUNNING",
   "mode": "v8 賺大虧小",
   "exchange": "Binance Futures",
@@ -44,7 +44,7 @@
     "trend4h": "UP",
     "session": "US_OPEN",
     "reasons": [
-      "1H RSI超賣26"
+      "1H RSI超賣29"
     ],
     "buyScore": 22,
     "sellScore": 11
