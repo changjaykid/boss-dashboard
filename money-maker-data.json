@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-12 20:39",
+  "lastUpdate": "2026-04-12 20:40",
   "status": "RUNNING",
   "mode": "v7_concentrated_swing",
   "capital": 10000,
@@ -79,7 +79,7 @@
   "marketSignals": {
     "BTC": {
       "price": 2275696,
-      "rsi": "32.0",
+      "rsi": "33.4",
       "bbPos": "--"
     },
     "SOL": {
