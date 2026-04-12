@@ -1,102 +1,139 @@
 {
-  "lastUpdate": "2026-04-12 06:15:00",
+  "lastUpdate": "2026-04-12 20:05:00",
   "updateCycle": "08:00/20:00",
   "news": [
     {
-      "title": "SEC 新主席 Paul Atkins 承諾 2026 年優先推動加密貨幣監管紅利",
-      "source": "BlockTempo",
-      "time": "2026-04-12 05:00",
-      "summary": "SEC 新主席 Paul Atkins 表示 2026 年將加密貨幣列為優先事項，市場預期監管環境將從打壓轉向扶持。",
-      "analysis": "監管放寬是長線利多，有助於吸引更多機構資金進入。BTC 歷史高位突破的可能性增加。",
+      "title": "美伊談判破裂，BTC/ETH 全線下挫約 2%",
+      "source": "CoinDesk",
+      "time": "2026-04-12 02:05 UTC",
+      "summary": "美國副總統 Vance 宣布在巴基斯坦的美伊和談未達成延長停火協議，核問題為主要分歧。消息公布後 BTC 從約 $73,000 跌至 $71,400，ETH 跌至 $2,200，跌幅 1.5%-2%。",
+      "analysis": "地緣政治風險再度升溫，中東衝突持續是最大短線利空。市場恐慌情緒可能推動進一步拋售，但若談判重啟則可能快速反彈。這是事件驅動型下跌，非結構性利空。",
       "impact": {
-        "coins": ["BTC", "ETH", "SOL"],
-        "direction": "強烈利多，監管環境透明化將推動整體市值成長",
+        "coins": ["BTC", "ETH", "SOL", "DOGE"],
+        "direction": "短線利空，地緣風險壓制風險資產",
         "severity": "high"
       }
     },
     {
-      "title": "Jack Dorsey 旗下 Block 宣布「比特幣水龍頭」重啟活動",
+      "title": "摩根士丹利發行自家比特幣 ETF (MSBT)，成為首家發行 BTC ETF 的美國銀行",
       "source": "BlockTempo",
-      "time": "2026-04-11 23:00",
-      "summary": "Block 公司的比特幣團隊將發放總值約 100 萬美元的 BTC，向 2010 年的原始水龍頭致敬。",
-      "analysis": "此舉象徵意義大於實際賣壓，展現了比特幣核心支持者的回歸與推廣，有助於社群熱度提升。",
+      "time": "2026-04-12 08:00",
+      "summary": "摩根士丹利的 MSBT 以 0.14% 最低費率上市，首日即流入 3,400 萬美元（430 枚 BTC）。背後有 16,000 名財富顧問與 6.2 兆美元客戶資產的分銷網路，將觸及尚未買過 BTC 的傳統投資人。",
+      "analysis": "這是傳統金融 (TradFi) 全面擁抱比特幣的里程碑事件。長線極度利多——當銀行開始「主動推銷」BTC 給高淨值客戶，新增資金規模將遠超現有資產管理公司的 ETF。",
       "impact": {
         "coins": ["BTC"],
-        "direction": "情緒利多，提升 BTC 品牌認知度與社群活躍度",
-        "severity": "low"
+        "direction": "長線強烈利多，機構資金管道大幅拓寬",
+        "severity": "high"
       }
     },
     {
-      "title": "Bitfinex 報告：比特幣月線終結半年連跌，衍生品市場信心仍脆弱",
-      "source": "Bitfinex",
-      "time": "2026-04-11 12:00",
-      "summary": "雖然 3 月月線收正，且 ETF 資金恢復淨流入，但資金費率罕見走負，顯示散戶情緒依然保守。",
-      "analysis": "這呈現出「現貨強、期貨弱」的背離現象。通常這種情緒壓抑是上漲的養分（燃料），若空頭爆倉可能引發擠壓上漲。",
+      "title": "鏈上數據顯示 BTC 賣方耗竭跡象：已實現虧損持續下降",
+      "source": "CoinDesk / CheckonChain",
+      "time": "2026-04-11 18:00 UTC",
+      "summary": "CheckonChain 及 Glassnode 數據顯示，BTC 已實現虧損從高峰每日 20 億美元降至約 4 億美元，已實現利潤/虧損比升至 1.4（一月以來最高）。現貨市場正從積極拋售轉向淨買入。",
+      "analysis": "賣方耗竭是底部確認的經典信號。2 月 $60,000 低點以來已整理超過兩個月，伴隨賣壓遞減，若無新利空衝擊，BTC 大概率在 $70,000-$72,000 區間築底後再衝。",
       "impact": {
         "coins": ["BTC"],
-        "direction": "中性偏利多（空頭擠壓潛力大）",
+        "direction": "中長線利多，賣壓消退利於多方蓄力",
+        "severity": "high"
+      }
+    },
+    {
+      "title": "SpaceX 持有 8,285 BTC（$6.03 億），即使 xAI 併購致虧損 50 億美元仍未拋售",
+      "source": "CoinDesk / Arkham",
+      "time": "2026-04-11 19:30 UTC",
+      "summary": "Arkham Intelligence 數據顯示 SpaceX 在 Coinbase Prime 託管 8,285 BTC。儘管 2025 年因收購 xAI 虧損近 50 億美元，最近四個月未進行任何外部轉帳，僅有錢包間內部調撥。",
+      "analysis": "巨鯨未動倉是穩定信號。Musk 旗下企業即使面臨巨額虧損也不動 BTC，顯示機構級持有者視 BTC 為長期資產而非流動性來源。",
+      "impact": {
+        "coins": ["BTC"],
+        "direction": "中性偏利多，巨鯨不拋售穩定市場信心",
         "severity": "medium"
       }
     },
     {
-      "title": "22 億美元加密選擇權到期，市場賣壓緩解",
-      "source": "MEXC News",
-      "time": "2026-04-11 05:00",
-      "summary": "大額選擇權結算完成，BTC 走勢改善且 ETH 訊號增強，技術面出現黃金交叉跡象。",
-      "analysis": "結算後的賣壓真空期通常是波段起點，配合目前 BTC 7.3 萬美元的強勢表現，看漲機率高。",
+      "title": "Ray Dalio 警告已進入「第三次世界大戰早期」，戰爭推動穩定幣在大宗商品結算中採用激增",
+      "source": "BlockTempo / CoinDesk",
+      "time": "2026-04-12 12:00",
+      "summary": "橋水基金創辦人 Dalio 發萬字長文指出全球兩大陣營已成形，台海衝突風險達 40%。同時 CoinDesk 報導因伊朗戰爭銀行退縮，大宗商品交易商被迫改用穩定幣結算，實質推動了加密貨幣的真實採用。",
+      "analysis": "雙面影響：地緣緊張壓制風險資產價格（BTC 短線承壓），但同時加速穩定幣與加密貨幣的實際使用場景，長期利好整個生態。對 BTC 而言，短空長多的典型格局。",
       "impact": {
         "coins": ["BTC", "ETH"],
-        "direction": "短線看漲，賣壓已被市場吸收",
-        "severity": "medium"
-      }
-    },
-    {
-      "title": "Solana 網路升級進展順利，DOGE 受名人效應再次活躍",
-      "source": "Web Search (綜合)",
-      "time": "2026-04-12 04:00",
-      "summary": "SOL 網路性能優化獲得開發者青睞；DOGE 在社群平台討論熱度回升，與特定名人推特互動有關。",
-      "analysis": "山寨幣在 BTC 站穩後有補漲動能，特別是 SOL 和 DOGE 這類具備高波動基因的幣種。",
-      "impact": {
-        "coins": ["SOL", "DOGE"],
-        "direction": "看漲，風險情緒升溫帶動山寨幣補漲",
-        "severity": "medium"
+        "direction": "短線偏空（地緣風險）、長線利多（加速採用）",
+        "severity": "high"
       }
     }
   ],
   "socialDiscussions": [
     {
       "platform": "X",
-      "title": "利用資金費率 (Funding Rate) + RSI 做反向交易策略分享",
-      "author": "@CryptoTraderAI",
-      "summary": "分享在極端負費率時配合 RSI 超賣區間進行左側接多，勝率顯著。",
-      "whatTheyDid": "監測永續合約資金費率，當費率 < -0.01% 且 RSI < 30 時進場。",
-      "whatWeCanLearn": "資金費率是衡量市場過熱或過冷的好指標，可整合至合約交易腳本作為過濾器。",
-      "url": "https://x.com/search?q=crypto+trading+bot"
+      "title": "地緣事件型交易策略：戰爭消息發布後 BTC 反彈窗口統計",
+      "author": "@CryptoGeoPol",
+      "summary": "統計顯示美伊相關消息導致 BTC 急跌後，平均 6-12 小時內回彈 50-70%跌幅，建議在急跌 2% 後分批接多。",
+      "whatTheyDid": "建立地緣事件數據庫，追蹤每次中東消息對 BTC 的衝擊與恢復時間，作為反向交易信號。",
+      "whatWeCanLearn": "美伊談判破裂導致的下跌屬事件型衝擊非趨勢反轉。賺錢機與合約員工可考慮在急跌後等待 6-12 小時回穩再進場。",
+      "url": "https://x.com/search?q=crypto+iran+war+trading"
     },
     {
       "platform": "Reddit",
-      "title": "2026 年 AI 交易機器人的新常態：情緒分析過濾器",
-      "author": "u/AlgoHedge",
-      "summary": "Reddit r/algotrading 討論如何將大型語言模型 (LLM) 的新聞情緒即時接入交易信號。",
-      "whatTheyDid": "使用 API 抓取新聞並分級 (High/Medium/Low Impact)，當 Impact 為 High 且方向一致時才執行趨勢策略。",
-      "whatWeCanLearn": "強化我們目前的 crypto-news 輸出，讓賺錢機更直接地根據 impact 權重調整倉位。",
+      "title": "r/algotrading：如何在高波動地緣環境下保護 AI 交易機器人",
+      "author": "u/QuantWarfare",
+      "summary": "討論在地緣政治高風險期間降低交易頻率、加寬止損、以及使用波動率過濾器（ATR > 閾值時暫停交易）的方法。",
+      "whatTheyDid": "設置 ATR 過濾器：當 1H ATR 超過 14 日均值 2 倍時自動暫停策略，避免在劇烈波動中被連續止損。",
+      "whatWeCanLearn": "在目前地緣風險期，合約員工應考慮增加波動率過濾機制，避免在消息面劇震時被雙向打臉。",
       "url": "https://reddit.com/r/algotrading"
     }
   ],
   "conclusion": {
-    "marketOutlook": "比特幣 (BTC) 已成功站上 7.3 萬美元，技術面出現黃金交叉且月線收正，基本面受 SEC 監管紅利與 ETF 資金流入支撐。市場呈現「現貨強於衍生品」的健康態勢，短線即便有震盪，整體趨勢仍偏多。",
+    "marketOutlook": "⚠️ 短線偏空、中長線偏多。BTC 報 $71,407（-2.26%），ETH $2,202（-3.63%），SOL $82.23（-3.2%），DOGE $0.0913（-1.92%）。美伊談判破裂是今日主要利空，全線跌幅約 2-3.6%。但鏈上數據顯示賣方耗竭、SpaceX 等巨鯨持倉不動、摩根士丹利 BTC ETF 開閘引入傳統資金——基本面未惡化，屬於事件驅動型回調。",
     "tradingImplications": [
-      "BTC/ETH：具備極強的突破動能，目前 73,488 USD 是關鍵支撐，若站穩有望挑戰 8 萬美元大關。合約交易應以回調接多為主。",
-      "SOL/DOGE：SOL 升級利多與 DOGE 社群熱度回升，顯示山寨幣季節可能由這兩者領漲，建議動能策略可適度加權。",
-      "具體操作：鑑於衍生品市場空頭情緒濃厚，需警惕「空頭擠壓 (Short Squeeze)」引發的爆拉行情，止損位不宜過窄。"
+      "BTC：$70,000 為關鍵支撐，若失守可能測試 $68,000。但賣方耗竭數據支撐底部，急跌至 $70,000 附近可考慮分批接多，止損 $68,500。",
+      "ETH：跌幅 -3.63% 較 BTC 深，$2,100 是關鍵防線。$1.6B Ether Machine SPAC 交易崩盤增加短線壓力，暫不追多，等企穩。",
+      "SOL/DOGE：山寨幣在地緣風險下跌幅更深，短線避開。等 BTC 止跌企穩後再考慮山寨幣佈局。",
+      "穩定幣採用激增是長線利多但不影響短線操作。"
     ],
     "suggestedActions": [
-      "合約員工：將策略權重轉向看多，優先佈局 BTC 突破單，留意空頭擠壓行情。",
-      "賺錢機員工：保持持倉，BTC 動能強勁，可考慮增加 BTC/SOL 動能幣種配置。"
+      "合約員工：⚠️ 短線轉為謹慎偏空。美伊談判破裂後市場處於不確定狀態，建議：(1) 降低倉位至 50%，(2) BTC 空單在 $72,500 附近設置，止損 $73,200，(3) 若 BTC 跌至 $70,000 附近出現止跌量能則反手接多，(4) 加入 ATR 波動率過濾器避免消息面雙向止損。",
+      "賺錢機員工：⚠️ 減少交易頻率。建議：(1) 暫時觀望為主，不主動加倉，(2) BTC 若跌至 $70,000 以下可小量接，(3) SOL/DOGE 暫不操作等地緣風險緩和，(4) 已有持倉不必恐慌拋售——賣方耗竭數據表明大底已近。"
     ],
     "systemOptimization": [
-      "合約員工建議：整合資金費率監控。當 BTC 費率顯著轉負而價格未跌時，優先執行多單。",
-      "賺錢機建議：建議強化 Impact 分級過濾器，High Impact 且方向一致時加大交易槓桿或位。"
+      "合約員工建議：增加「地緣事件過濾器」——當重大地緣消息（如美伊談判結果）發布後 2 小時內暫停開新倉，避免在情緒劇烈波動期被反覆止損。",
+      "賺錢機建議：建議加入 ATR 閾值判斷（1H ATR > 14日均值×2 時暫停交易），同時監控「已實現虧損」指標——當日虧損低於 $5 億且利潤/虧損比 > 1.2 時視為底部確認信號，可加大多單權重。"
     ]
+  },
+  "prices": {
+    "fetchedAt": "2026-04-12 20:04:27",
+    "source": "Yahoo Finance + alternative.me",
+    "BTC_USD": {
+      "price": 71407.77,
+      "change_pct": -2.26
+    },
+    "ETH_USD": {
+      "price": 2202.45,
+      "change_pct": -3.63
+    },
+    "SOL_USD": {
+      "price": 82.23,
+      "change_pct": -3.2
+    },
+    "DOGE_USD": {
+      "price": 0.0913,
+      "change_pct": -1.92
+    },
+    "BTC_TWD": {
+      "price": 2265483,
+      "change_pct": -2.26
+    },
+    "ETH_TWD": {
+      "price": 69875,
+      "change_pct": -3.63
+    },
+    "USD_TWD": {
+      "price": 31.726,
+      "change_pct": 0.0
+    },
+    "fearGreedIndex": {
+      "value": "N/A",
+      "classification": "N/A"
+    }
   }
 }
