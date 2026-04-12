@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-12 23:50:33",
+  "lastUpdate": "2026-04-13 00:08:36",
   "account": {
     "balance": 0.0,
     "realizedPnl": -406.29,
@@ -850,12 +850,5 @@
       "ema21": 25129.9991
     }
   },
-  "actions": [
-    "SYNC_CLOSE: US100 SELL PnL=$-6.34 (calculated_from_market)",
-    "SYNC_CLOSE: GOLD SELL PnL=$-0.2 (calculated_from_market)",
-    "SYNC_CLOSE: GOLD SELL PnL=$-0.2 (calculated_from_market)",
-    "SYNC_CLOSE: GOLD SELL PnL=$-0.17 (calculated_from_market)",
-    "SYNC_CLOSE: US30 SELL PnL=$-12.59 (calculated_from_market)",
-    "SYNC_CLOSE: US500 SELL PnL=$-1.56 (calculated_from_market)"
-  ]
+  "actions": []
 }
