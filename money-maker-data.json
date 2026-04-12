@@ -1,24 +1,18 @@
 {
-  "lastUpdate": "2026/4/12 下午6:24:04",
+  "lastUpdate": "2026-04-12 18:24",
   "status": "RUNNING",
   "mode": "v7_concentrated_swing",
   "capital": 10000,
-  "totalEquity": 9983,
-  "netEquity": 9983,
-  "totalPnl": 1946,
-  "btcPrice": 2281850,
-  "btcChange24h": -1.59,
+  "totalEquity": 9982,
+  "netEquity": 9982,
+  "totalPnl": -18,
+  "btcPrice": 2281584,
+  "btcChange24h": -1.6,
   "holdings": {
-    "btc": 0.00086059,
-    "avgCost": 2277506,
-    "unrealizedPnl": -994,
+    "btc": 0,
+    "avgCost": 0,
+    "unrealizedPnl": -2958,
     "positions": [
-      {
-        "coin": "BTC",
-        "held": 0.00086059,
-        "value": 1964,
-        "pnl": 4
-      },
       {
         "coin": "SOL",
         "held": 0.3672624,
@@ -42,13 +36,6 @@
     "remaining": 800
   },
   "positions": [
-    {
-      "market": "btctwd",
-      "held": 0.00086059,
-      "value": 1964,
-      "avgEntry": 2277506,
-      "pnl": 4
-    },
     {
       "market": "soltwd",
       "held": 0.3672624,
@@ -78,8 +65,8 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2281850,
-      "rsi": "37.8",
+      "price": 2281584,
+      "rsi": "37.6",
       "bbPos": "--"
     },
     "SOL": {
@@ -118,36 +105,6 @@
       "twd": 1000,
       "pnl": 0,
       "reason": "強買入(3.0)"
-    },
-    {
-      "exitTime": 1775659142282,
-      "coin": "BTC",
-      "side": "BUY",
-      "amount": 0.0001584683648779249,
-      "entryPrice": 2268112,
-      "twd": 360,
-      "pnl": 0,
-      "reason": "強買入(7.5)"
-    },
-    {
-      "exitTime": 1775658782192,
-      "coin": "BTC",
-      "side": "BUY",
-      "amount": 0.00026422684975997105,
-      "entryPrice": 2267143,
-      "twd": 600,
-      "pnl": 0,
-      "reason": "強買入(7.5)"
-    },
-    {
-      "exitTime": 1775658354788,
-      "coin": "BTC",
-      "side": "BUY",
-      "amount": 0.0004378953130201487,
-      "entryPrice": 2279997,
-      "twd": 1000,
-      "pnl": 0,
-      "reason": "強買入(4.3)"
     }
   ],
   "twdCash": 9018,
@@ -171,6 +128,6 @@
       "note": "legacy"
     }
   ],
-  "strategyEquity": 11944,
+  "strategyEquity": 9980,
   "legacyEquity": 3
 }
