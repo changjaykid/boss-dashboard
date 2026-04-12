@@ -1,30 +1,39 @@
 {
-  "lastUpdate": "2026-04-13 01:00",
+  "lastUpdate": "2026-04-13 02:01",
   "status": "RUNNING",
   "mode": "v8 賺大虧小",
   "exchange": "Binance Futures",
   "account": {
     "initialCapital": 464,
-    "balance": 445.14953806,
-    "available": 445.14953806,
-    "unrealizedPnl": 0,
-    "netEquity": 445.14953806,
+    "balance": 444.72417526,
+    "available": 275.00321806,
+    "unrealizedPnl": -2.16910065,
+    "netEquity": 442.55507460999996,
     "todayPnl": 0,
     "totalPnl": 10.5753211,
-    "leverage": 5,
+    "leverage": 12,
     "totalTrades": 16,
     "winRate": "50.0%",
     "wins": 8,
     "losses": 8,
     "maxDrawdown": 1.2830131442880708
   },
-  "position": null,
+  "position": {
+    "symbol": "BTCUSDT",
+    "side": "SHORT",
+    "size": 0.012,
+    "entryPrice": 70893.8,
+    "markPrice": 71074.55838831,
+    "pnl": -2.16910065,
+    "leverage": 12,
+    "trailingStop": 71376.3791770912
+  },
   "todayStats": {
     "trades": 0,
     "wins": 0,
     "losses": 0,
     "pnl": 0,
-    "remaining": 10
+    "remaining": 3
   },
   "totalStats": {
     "trades": 16,
@@ -37,18 +46,20 @@
     "peakBalance": 480.7433211
   },
   "signals": {
-    "score": 30,
+    "score": 9,
     "direction": "SHORT",
-    "strategy": "TREND_FOLLOW",
+    "strategy": "TREND_PULLBACK",
     "marketState": "TRENDING_DOWN",
     "trend4h": "DOWN",
     "session": "TRANSITION",
     "reasons": [
+      "⚠️4H趨勢過弱(0.11%)",
       "4H MACD加速↓",
-      "1H EMA空排"
+      "1H EMA空排",
+      "⚠️支撐區不追空"
     ],
     "buyScore": 0,
-    "sellScore": 30
+    "sellScore": 9
   },
   "recentTrades": [
     {
@@ -186,8 +197,8 @@
     }
   ],
   "riskStatus": {
-    "dailyLossUsed": "$0.00 / $18.56",
-    "dailyTradesUsed": "0 / 10",
+    "dailyLossUsed": "$0.00 / $13.92",
+    "dailyTradesUsed": "0 / 3",
     "consecutiveLosses": "0 / 2",
     "paused": false
   }
