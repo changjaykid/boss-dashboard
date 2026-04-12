@@ -1,17 +1,17 @@
 {
-  "lastUpdate": "2026-04-12 16:40",
+  "lastUpdate": "2026-04-12 16:45",
   "status": "RUNNING",
   "mode": "v7_concentrated_swing",
   "capital": 10000,
   "totalEquity": 11948,
   "netEquity": 11948,
   "totalPnl": 1948,
-  "btcPrice": 2286065,
-  "btcChange24h": -1.23,
+  "btcPrice": 2285409,
+  "btcChange24h": -1.34,
   "holdings": {
     "btc": 0.00086059,
     "avgCost": 2277506,
-    "unrealizedPnl": -990,
+    "unrealizedPnl": -991,
     "positions": [
       {
         "coin": "BTC",
@@ -78,8 +78,8 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2286065,
-      "rsi": "37.4",
+      "price": 2285409,
+      "rsi": "38.8",
       "bbPos": "--"
     },
     "SOL": {
