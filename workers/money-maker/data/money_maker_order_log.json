@@ -1,0 +1,1261 @@
+[
+  {
+    "action": "market_buy",
+    "totalTwd": null,
+    "status": "failed",
+    "error": "[\n  {\n    \"code\": \"invalid_type\",\n    \"expected\": \"string\",\n    \"received\": \"undefined\",\n    \"path\": [\n      \"volume\"\n    ],\n    \"message\": \"Required\"\n  }\n]",
+    "timestamp": "2026-04-03T10:12:01.066Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": null,
+    "status": "failed",
+    "error": "[\n  {\n    \"code\": \"invalid_type\",\n    \"expected\": \"string\",\n    \"received\": \"undefined\",\n    \"path\": [\n      \"volume\"\n    ],\n    \"message\": \"Required\"\n  }\n]",
+    "timestamp": "2026-04-03T10:42:01.810Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": null,
+    "status": "failed",
+    "error": "[\n  {\n    \"code\": \"invalid_type\",\n    \"expected\": \"string\",\n    \"received\": \"undefined\",\n    \"path\": [\n      \"volume\"\n    ],\n    \"message\": \"Required\"\n  }\n]",
+    "timestamp": "2026-04-03T10:45:01.475Z"
+  },
+  {
+    "action": "market_sell",
+    "amount": 0.0001,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2016,\"message\":\"Order volume too small, the total amount of your order should be larger than 250.0 TWD\"}}",
+    "timestamp": "2026-04-03T10:53:43.539Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": null,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 500, {\"success\":false,\"error\":{\"code\":5999,\"message\":\"internal server error\"}}",
+    "timestamp": "2026-04-03T14:30:02.339Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": null,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 500, {\"success\":false,\"error\":{\"code\":5999,\"message\":\"internal server error\"}}",
+    "timestamp": "2026-04-03T14:54:02.514Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "volume": 0.00092299,
+    "askPrice": 2156020.6,
+    "orderId": 19323351081,
+    "status": "success",
+    "timestamp": "2026-04-03T14:57:01.678Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "volume": 0.00092333,
+    "askPrice": 2155234.6,
+    "orderId": 19323375486,
+    "status": "success",
+    "timestamp": "2026-04-03T15:00:01.985Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "volume": 0.00092421,
+    "askPrice": 2153178.9,
+    "orderId": 19323836710,
+    "status": "success",
+    "timestamp": "2026-04-03T15:57:01.302Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "volume": 0.0004612,
+    "askPrice": 2157414.9,
+    "orderId": 19324145381,
+    "status": "success",
+    "timestamp": "2026-04-03T16:36:01.829Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "volume": 0.00046193,
+    "askPrice": 2153991.9,
+    "orderId": 19326242802,
+    "status": "success",
+    "timestamp": "2026-04-03T21:15:02.747Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 1825.0, amount: 1990.0)\"}}",
+    "timestamp": "2026-04-04T00:00:04.209Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 1825.0, amount: 1990.0)\"}}",
+    "timestamp": "2026-04-04T02:21:01.544Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 1825.0, amount: 1990.0)\"}}",
+    "timestamp": "2026-04-04T02:24:01.723Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "volume": 0.00046247,
+    "askPrice": 2151481.4,
+    "orderId": 19329335142,
+    "status": "success",
+    "timestamp": "2026-04-04T04:24:01.351Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 830.0, amount: 995.0)\"}}",
+    "timestamp": "2026-04-04T05:27:01.932Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 830.0, amount: 995.0)\"}}",
+    "timestamp": "2026-04-04T05:30:03.343Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 830.0, amount: 1990.0)\"}}",
+    "timestamp": "2026-04-04T05:33:01.440Z"
+  },
+  {
+    "action": "market_sell",
+    "amount": 0.00424986,
+    "orderId": 19329839681,
+    "status": "success",
+    "timestamp": "2026-04-04T05:36:03.235Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "volume": 0.00092392,
+    "askPrice": 2153855.5,
+    "orderId": 19329839838,
+    "status": "success",
+    "timestamp": "2026-04-04T05:36:03.701Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "volume": 0.00092401,
+    "askPrice": 2153636.6,
+    "orderId": 19329860625,
+    "status": "success",
+    "timestamp": "2026-04-04T05:39:01.851Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "volume": 0.00092413,
+    "askPrice": 2153367.7,
+    "orderId": 19329881207,
+    "status": "success",
+    "timestamp": "2026-04-04T05:42:01.965Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "volume": 0.00092396,
+    "askPrice": 2153763.6,
+    "orderId": 19329922942,
+    "status": "success",
+    "timestamp": "2026-04-04T05:48:02.464Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "volume": 0.00092393,
+    "askPrice": 2153833,
+    "orderId": 19329943428,
+    "status": "success",
+    "timestamp": "2026-04-04T05:51:01.644Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 15.45984, amount: 1990.0)\"}}",
+    "timestamp": "2026-04-04T05:54:03.086Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 15.45984, amount: 1990.0)\"}}",
+    "timestamp": "2026-04-04T05:57:01.516Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 15.45984, amount: 1990.0)\"}}",
+    "timestamp": "2026-04-04T06:00:02.249Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 15.45984, amount: 1990.0)\"}}",
+    "timestamp": "2026-04-04T06:12:03.136Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 15.45984, amount: 1990.0)\"}}",
+    "timestamp": "2026-04-04T06:15:01.336Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 15.45984, amount: 1990.0)\"}}",
+    "timestamp": "2026-04-04T06:51:01.555Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 15.45984, amount: 1990.0)\"}}",
+    "timestamp": "2026-04-04T06:54:02.242Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 15.45984, amount: 1990.0)\"}}",
+    "timestamp": "2026-04-04T06:57:01.440Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 15.45984, amount: 1990.2)\"}}",
+    "timestamp": "2026-04-04T07:00:01.701Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 15.45984, amount: 995.0)\"}}",
+    "timestamp": "2026-04-04T07:27:02.353Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 15.45984, amount: 995.0)\"}}",
+    "timestamp": "2026-04-04T07:30:01.586Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 15.45984, amount: 995.0)\"}}",
+    "timestamp": "2026-04-04T08:09:01.819Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 15.45984, amount: 995.0)\"}}",
+    "timestamp": "2026-04-04T10:42:02.115Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 15.45984, amount: 995.0)\"}}",
+    "timestamp": "2026-04-04T10:45:02.480Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 15.45984, amount: 1990.1)\"}}",
+    "timestamp": "2026-04-04T10:54:01.927Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 15.45984, amount: 1990.1)\"}}",
+    "timestamp": "2026-04-04T10:57:02.115Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 15.45984, amount: 1990.0)\"}}",
+    "timestamp": "2026-04-04T11:00:02.232Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "status": "failed",
+    "error": "Request failed: HTTP error! status: 400, {\"success\":false,\"error\":{\"code\":2018,\"message\":\"Cannot lock funds (balance: 15.45984, amount: 1990.0)\"}}",
+    "timestamp": "2026-04-04T11:03:02.056Z"
+  },
+  {
+    "action": "market_sell",
+    "amount": 0.00461255,
+    "orderId": 19332380737,
+    "status": "success",
+    "timestamp": "2026-04-04T11:36:02.757Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "volume": 0.00046039,
+    "askPrice": 2161188.6,
+    "orderId": 19332553418,
+    "status": "success",
+    "timestamp": "2026-04-04T12:00:02.167Z"
+  },
+  {
+    "action": "market_sell",
+    "amount": 0.00045965,
+    "orderId": 19332623222,
+    "status": "success",
+    "timestamp": "2026-04-04T12:09:02.048Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "volume": 0.00046077,
+    "askPrice": 2159391.1,
+    "orderId": 19332623336,
+    "status": "success",
+    "timestamp": "2026-04-04T12:09:02.529Z"
+  },
+  {
+    "action": "market_sell",
+    "amount": 0.00046003,
+    "orderId": 19333274864,
+    "status": "success",
+    "timestamp": "2026-04-04T13:39:02.273Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "volume": 0.00045972,
+    "askPrice": 2164348.9,
+    "orderId": 19333274929,
+    "status": "success",
+    "timestamp": "2026-04-04T13:39:02.882Z"
+  },
+  {
+    "action": "market_sell",
+    "amount": 0.00045898,
+    "orderId": 19333572462,
+    "status": "success",
+    "timestamp": "2026-04-04T14:21:01.731Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "volume": 0.00091916,
+    "askPrice": 2165000,
+    "orderId": 19333942929,
+    "status": "success",
+    "timestamp": "2026-04-04T15:09:02.025Z"
+  },
+  {
+    "action": "market_sell",
+    "amount": 0.00091768,
+    "orderId": 19333997154,
+    "status": "success",
+    "timestamp": "2026-04-04T15:15:02.148Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "volume": 0.00091774,
+    "askPrice": 2168354.4,
+    "orderId": 19333997236,
+    "status": "success",
+    "timestamp": "2026-04-04T15:15:02.611Z"
+  },
+  {
+    "action": "market_sell",
+    "amount": 0.00091627,
+    "orderId": 19334725272,
+    "status": "success",
+    "timestamp": "2026-04-04T16:45:01.572Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "volume": 0.00091586,
+    "askPrice": 2172812.3,
+    "orderId": 19334725354,
+    "status": "success",
+    "timestamp": "2026-04-04T16:45:02.037Z"
+  },
+  {
+    "action": "market_sell",
+    "amount": 0.00091439,
+    "orderId": 19334854395,
+    "status": "success",
+    "timestamp": "2026-04-04T17:00:01.576Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 2000,
+    "volume": 0.00091783,
+    "askPrice": 2168133.9,
+    "orderId": 19334976548,
+    "status": "success",
+    "timestamp": "2026-04-04T17:15:01.249Z"
+  },
+  {
+    "action": "market_sell",
+    "amount": 0.00091635,
+    "orderId": 19335692450,
+    "status": "success",
+    "timestamp": "2026-04-04T18:48:02.915Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "volume": 0.00045861,
+    "askPrice": 2169587.8,
+    "orderId": 19337178411,
+    "status": "success",
+    "timestamp": "2026-04-04T21:54:03.302Z"
+  },
+  {
+    "action": "market_sell",
+    "amount": 0.00045787,
+    "orderId": 19337229964,
+    "status": "success",
+    "timestamp": "2026-04-04T22:00:03.208Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "volume": 0.00046063,
+    "askPrice": 2160062.7,
+    "orderId": 19339022231,
+    "status": "success",
+    "timestamp": "2026-04-05T01:51:01.745Z"
+  },
+  {
+    "action": "market_sell",
+    "amount": 0.00045989,
+    "orderId": 19339118729,
+    "status": "success",
+    "timestamp": "2026-04-05T02:03:01.894Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 600,
+    "volume": 0.00027757,
+    "askPrice": 2150773.4,
+    "orderId": 19341873270,
+    "status": "success",
+    "timestamp": "2026-04-05T07:57:36.623Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "volume": 0.00046125,
+    "askPrice": 2157139.7,
+    "orderId": 19342690472,
+    "status": "success",
+    "timestamp": "2026-04-05T09:45:02.453Z"
+  },
+  {
+    "action": "market_sell",
+    "amount": 0.00073763,
+    "orderId": 19344040604,
+    "status": "success",
+    "timestamp": "2026-04-05T12:36:01.516Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 600,
+    "volume": 0.00027771,
+    "askPrice": 2149682.9,
+    "orderId": 19344069619,
+    "status": "success",
+    "timestamp": "2026-04-05T12:39:02.179Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "volume": 0.00046164,
+    "askPrice": 2155335.1,
+    "orderId": 19345358746,
+    "status": "success",
+    "timestamp": "2026-04-05T15:12:01.614Z"
+  },
+  {
+    "action": "market_sell",
+    "amount": 0.00029526,
+    "orderId": 19345490427,
+    "status": "success",
+    "timestamp": "2026-04-05T15:27:02.352Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "volume": 0.00045936,
+    "askPrice": 2166019.1,
+    "orderId": 19346565515,
+    "status": "success",
+    "timestamp": "2026-04-05T17:27:02.124Z"
+  },
+  {
+    "action": "market_sell",
+    "amount": 0.0003606,
+    "orderId": 19348260719,
+    "status": "success",
+    "timestamp": "2026-04-05T20:57:01.706Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 600,
+    "volume": 0.00027504,
+    "askPrice": 2170560,
+    "orderId": 19349083071,
+    "status": "success",
+    "timestamp": "2026-04-05T22:30:04.302Z"
+  },
+  {
+    "action": "market_sell",
+    "amount": 0.0003262,
+    "orderId": 19349272578,
+    "status": "success",
+    "timestamp": "2026-04-05T22:48:01.759Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "volume": 0.00044799,
+    "askPrice": 2221012.6,
+    "orderId": 19352241033,
+    "status": "success",
+    "timestamp": "2026-04-06T03:27:02.165Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 600,
+    "volume": 0.0002694,
+    "askPrice": 2216009.1,
+    "orderId": 19352631141,
+    "status": "success",
+    "timestamp": "2026-04-06T04:12:02.399Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 600,
+    "volume": 0.00026937,
+    "askPrice": 2216271.2,
+    "orderId": 19352793491,
+    "status": "success",
+    "timestamp": "2026-04-06T04:33:02.736Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 600,
+    "volume": 0.00027008,
+    "askPrice": 2210451.9,
+    "orderId": 19353744608,
+    "status": "success",
+    "timestamp": "2026-04-06T06:30:02.404Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "volume": 0.00044883,
+    "askPrice": 2216869.1,
+    "orderId": 19353936089,
+    "status": "success",
+    "timestamp": "2026-04-06T06:51:02.209Z"
+  },
+  {
+    "action": "market_sell",
+    "amount": 0.00131533,
+    "orderId": 19355204382,
+    "status": "success",
+    "timestamp": "2026-04-06T09:18:02.332Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 1000,
+    "volume": 0.00044495,
+    "askPrice": 2236167.6,
+    "orderId": 19356336826,
+    "status": "success",
+    "timestamp": "2026-04-06T11:21:02.723Z"
+  },
+  {
+    "action": "market_buy",
+    "totalTwd": 600,
+    "volume": 0.00026811,
+    "askPrice": 2226630.5,
+    "orderId": 19357313747,
+    "status": "success",
+    "timestamp": "2026-04-06T13:18:01.821Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "soltwd",
+    "totalTwd": 1000,
+    "volume": 0.3868,
+    "askPrice": 2572,
+    "orderId": 19363381945,
+    "status": "success",
+    "timestamp": "2026-04-07T00:06:04.566Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "dogetwd",
+    "totalTwd": 600,
+    "volume": 204,
+    "askPrice": 2.9129,
+    "orderId": 19363382579,
+    "status": "success",
+    "timestamp": "2026-04-07T00:06:06.270Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "soltwd",
+    "totalTwd": 600,
+    "volume": 0.2324,
+    "askPrice": 2568.2,
+    "orderId": 19363449398,
+    "status": "success",
+    "timestamp": "2026-04-07T00:12:03.448Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "soltwd",
+    "totalTwd": 360,
+    "volume": 0.1394,
+    "askPrice": 2568.4,
+    "orderId": 19363510483,
+    "status": "success",
+    "timestamp": "2026-04-07T00:18:04.246Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "btctwd",
+    "totalTwd": 600,
+    "volume": 0.00027073,
+    "askPrice": 2205078.9,
+    "orderId": 19363946314,
+    "status": "success",
+    "timestamp": "2026-04-07T01:03:02.768Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "btctwd",
+    "totalTwd": 475,
+    "volume": 0.00021482,
+    "askPrice": 2200016.9,
+    "orderId": 19364007078,
+    "status": "success",
+    "timestamp": "2026-04-07T01:09:02.204Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "btctwd",
+    "totalTwd": 356,
+    "volume": 0.00016104,
+    "askPrice": 2199502.5,
+    "orderId": 19364064832,
+    "status": "success",
+    "timestamp": "2026-04-07T01:15:02.600Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "ethtwd",
+    "totalTwd": 600,
+    "volume": 0.00886157,
+    "askPrice": 67369.5,
+    "orderId": 19364450018,
+    "status": "success",
+    "timestamp": "2026-04-07T01:54:03.052Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "dogetwd",
+    "totalTwd": 760,
+    "volume": 260,
+    "askPrice": 2.9083,
+    "orderId": 19364450417,
+    "status": "success",
+    "timestamp": "2026-04-07T01:54:05.575Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "dogetwd",
+    "totalTwd": 285,
+    "volume": 97,
+    "askPrice": 2.9066,
+    "orderId": 19364507053,
+    "status": "success",
+    "timestamp": "2026-04-07T02:00:05.100Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "ethtwd",
+    "totalTwd": 339,
+    "volume": 0.00501365,
+    "askPrice": 67277.2,
+    "orderId": 19364594761,
+    "status": "success",
+    "timestamp": "2026-04-07T02:09:02.839Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "ethtwd",
+    "amount": 0.006925895,
+    "orderId": 19365999411,
+    "status": "success",
+    "timestamp": "2026-04-07T04:51:02.986Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "ethtwd",
+    "totalTwd": 595,
+    "volume": 0.00879826,
+    "askPrice": 67288.8,
+    "orderId": 19366747182,
+    "status": "success",
+    "timestamp": "2026-04-07T06:21:03.151Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "ethtwd",
+    "amount": 0.007855355,
+    "orderId": 19368148034,
+    "status": "success",
+    "timestamp": "2026-04-07T09:06:02.842Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "ethtwd",
+    "amount": 0.003927855,
+    "orderId": 19368176997,
+    "status": "success",
+    "timestamp": "2026-04-07T09:09:03.059Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "btctwd",
+    "amount": 0.00099941,
+    "orderId": 19368210279,
+    "status": "success",
+    "timestamp": "2026-04-07T09:12:01.636Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "btctwd",
+    "amount": 0.000499705,
+    "orderId": 19368269120,
+    "status": "success",
+    "timestamp": "2026-04-07T09:18:01.860Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "btctwd",
+    "amount": 0.000249855,
+    "orderId": 19368401761,
+    "status": "success",
+    "timestamp": "2026-04-07T09:33:01.821Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "btctwd",
+    "amount": 0.00012493,
+    "orderId": 19368427537,
+    "status": "success",
+    "timestamp": "2026-04-07T09:36:01.830Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "soltwd",
+    "amount": 0.3778944,
+    "orderId": 19368427975,
+    "status": "success",
+    "timestamp": "2026-04-07T09:36:05.544Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "soltwd",
+    "amount": 0.1893944,
+    "orderId": 19373943165,
+    "status": "success",
+    "timestamp": "2026-04-07T19:18:04.507Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "soltwd",
+    "amount": 0.1897888,
+    "orderId": 19373986410,
+    "status": "success",
+    "timestamp": "2026-04-07T19:21:04.840Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "dogetwd",
+    "amount": 280.0512,
+    "orderId": 19379707354,
+    "status": "success",
+    "timestamp": "2026-04-08T04:03:05.980Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "dogetwd",
+    "amount": 140.0512,
+    "orderId": 19379737089,
+    "status": "success",
+    "timestamp": "2026-04-08T04:06:05.233Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "soltwd",
+    "totalTwd": 1000,
+    "volume": 0.3702,
+    "askPrice": 2687.3,
+    "orderId": 19380716640,
+    "status": "success",
+    "timestamp": "2026-04-08T06:00:04.642Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "soltwd",
+    "totalTwd": 600,
+    "volume": 0.2222,
+    "askPrice": 2686,
+    "orderId": 19380772229,
+    "status": "success",
+    "timestamp": "2026-04-08T06:06:04.798Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "soltwd",
+    "totalTwd": 360,
+    "volume": 0.1333,
+    "askPrice": 2686.1,
+    "orderId": 19380817464,
+    "status": "success",
+    "timestamp": "2026-04-08T06:11:19.046Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "btctwd",
+    "amount": 0.00012493,
+    "orderId": 19384572957,
+    "status": "success",
+    "timestamp": "2026-04-08T13:15:01.918Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "ethtwd",
+    "amount": 0.00392871,
+    "orderId": 19384573477,
+    "status": "success",
+    "timestamp": "2026-04-08T13:15:03.673Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "dogetwd",
+    "amount": 140.1024,
+    "orderId": 19384574123,
+    "status": "success",
+    "timestamp": "2026-04-08T13:15:06.532Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "soltwd",
+    "amount": 0.3623144,
+    "orderId": 19384728377,
+    "status": "success",
+    "timestamp": "2026-04-08T13:30:04.840Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "ethtwd",
+    "totalTwd": 1000,
+    "volume": 0.01395511,
+    "askPrice": 71300,
+    "orderId": 19384896164,
+    "status": "success",
+    "timestamp": "2026-04-08T13:42:03.333Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "ethtwd",
+    "totalTwd": 600,
+    "volume": 0.00841013,
+    "askPrice": 70985.8,
+    "orderId": 19385241929,
+    "status": "success",
+    "timestamp": "2026-04-08T14:09:03.447Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "ethtwd",
+    "totalTwd": 360,
+    "volume": 0.00503737,
+    "askPrice": 71108.5,
+    "orderId": 19385315012,
+    "status": "success",
+    "timestamp": "2026-04-08T14:15:04.050Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "btctwd",
+    "totalTwd": 1000,
+    "volume": 0.0004367,
+    "askPrice": 2278412.6,
+    "orderId": 19385439393,
+    "status": "success",
+    "timestamp": "2026-04-08T14:25:54.683Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "dogetwd",
+    "totalTwd": 1000,
+    "volume": 331,
+    "askPrice": 2.9975,
+    "orderId": 19385440250,
+    "status": "success",
+    "timestamp": "2026-04-08T14:25:58.398Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "btctwd",
+    "totalTwd": 600,
+    "volume": 0.00026331,
+    "askPrice": 2267212.2,
+    "orderId": 19385524963,
+    "status": "success",
+    "timestamp": "2026-04-08T14:33:01.558Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "btctwd",
+    "totalTwd": 600,
+    "volume": 0.00026332,
+    "askPrice": 2267139.1,
+    "orderId": 19385525088,
+    "status": "success",
+    "timestamp": "2026-04-08T14:33:02.118Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "dogetwd",
+    "totalTwd": 600,
+    "volume": 200,
+    "askPrice": 2.9772,
+    "orderId": 19385525756,
+    "status": "success",
+    "timestamp": "2026-04-08T14:33:05.389Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "btctwd",
+    "totalTwd": 360,
+    "volume": 0.0001579,
+    "askPrice": 2268415.2,
+    "orderId": 19385609865,
+    "status": "success",
+    "timestamp": "2026-04-08T14:39:02.209Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "dogetwd",
+    "totalTwd": 360,
+    "volume": 120,
+    "askPrice": 2.985,
+    "orderId": 19385610462,
+    "status": "success",
+    "timestamp": "2026-04-08T14:39:05.427Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "ethtwd",
+    "amount": 0.02735886,
+    "orderId": 19391742398,
+    "status": "success",
+    "timestamp": "2026-04-09T01:09:03.127Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "soltwd",
+    "amount": 0.3626288,
+    "orderId": 19391742976,
+    "status": "success",
+    "timestamp": "2026-04-09T01:09:04.701Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "ethtwd",
+    "totalTwd": 1000,
+    "volume": 0.01441525,
+    "askPrice": 69024.1,
+    "orderId": 19391777755,
+    "status": "success",
+    "timestamp": "2026-04-09T01:12:03.187Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "soltwd",
+    "totalTwd": 1000,
+    "volume": 0.3813,
+    "askPrice": 2609.3,
+    "orderId": 19391778051,
+    "status": "success",
+    "timestamp": "2026-04-09T01:12:04.883Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "ethtwd",
+    "totalTwd": 600,
+    "volume": 0.00864335,
+    "askPrice": 69070.4,
+    "orderId": 19391840758,
+    "status": "success",
+    "timestamp": "2026-04-09T01:18:03.635Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "ethtwd",
+    "totalTwd": 360,
+    "volume": 0.00519111,
+    "askPrice": 69002.5,
+    "orderId": 19391902700,
+    "status": "success",
+    "timestamp": "2026-04-09T01:24:03.288Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "soltwd",
+    "totalTwd": 600,
+    "volume": 0.228,
+    "askPrice": 2617.6,
+    "orderId": 19392888771,
+    "status": "success",
+    "timestamp": "2026-04-09T03:15:04.993Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "soltwd",
+    "totalTwd": 360,
+    "volume": 0.1367,
+    "askPrice": 2619.9,
+    "orderId": 19392939010,
+    "status": "success",
+    "timestamp": "2026-04-09T03:21:04.171Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "ethtwd",
+    "amount": 0.014102325,
+    "orderId": 19395991354,
+    "status": "success",
+    "timestamp": "2026-04-09T10:03:03.402Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "ethtwd",
+    "amount": 0.007051325,
+    "orderId": 19396012907,
+    "status": "success",
+    "timestamp": "2026-04-09T10:06:02.562Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "ethtwd",
+    "amount": 0.00705165,
+    "orderId": 19396177876,
+    "status": "success",
+    "timestamp": "2026-04-09T10:30:03.569Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "ethtwd",
+    "totalTwd": 600,
+    "volume": 0.00855168,
+    "askPrice": 69810.8,
+    "orderId": 19396198633,
+    "status": "success",
+    "timestamp": "2026-04-09T10:33:03.603Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "ethtwd",
+    "totalTwd": 475,
+    "volume": 0.00677162,
+    "askPrice": 69794.9,
+    "orderId": 19396240641,
+    "status": "success",
+    "timestamp": "2026-04-09T10:39:03.867Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "ethtwd",
+    "totalTwd": 570,
+    "volume": 0.00811418,
+    "askPrice": 69896.1,
+    "orderId": 19396279881,
+    "status": "success",
+    "timestamp": "2026-04-09T10:45:03.681Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "soltwd",
+    "amount": 0.3722184,
+    "orderId": 19398746713,
+    "status": "success",
+    "timestamp": "2026-04-09T15:33:04.125Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "ethtwd",
+    "amount": 0.011699565,
+    "orderId": 19398795001,
+    "status": "success",
+    "timestamp": "2026-04-09T15:36:03.239Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "soltwd",
+    "amount": 0.1862184,
+    "orderId": 19398795521,
+    "status": "success",
+    "timestamp": "2026-04-09T15:36:04.834Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "ethtwd",
+    "amount": 0.005850065,
+    "orderId": 19398841582,
+    "status": "success",
+    "timestamp": "2026-04-09T15:39:03.463Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "soltwd",
+    "amount": 0.1864368,
+    "orderId": 19398842048,
+    "status": "success",
+    "timestamp": "2026-04-09T15:39:05.192Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "ethtwd",
+    "amount": 0.00585013,
+    "orderId": 19398877915,
+    "status": "success",
+    "timestamp": "2026-04-09T15:42:03.208Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "soltwd",
+    "totalTwd": 1000,
+    "volume": 0.375,
+    "askPrice": 2652.7,
+    "orderId": 19398878368,
+    "status": "success",
+    "timestamp": "2026-04-09T15:42:04.932Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "ethtwd",
+    "totalTwd": 1000,
+    "volume": 0.01412449,
+    "askPrice": 70445,
+    "orderId": 19398913300,
+    "status": "success",
+    "timestamp": "2026-04-09T15:45:03.323Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "ethtwd",
+    "totalTwd": 600,
+    "volume": 0.00846802,
+    "askPrice": 70500.5,
+    "orderId": 19398989077,
+    "status": "success",
+    "timestamp": "2026-04-09T15:51:03.508Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "ethtwd",
+    "totalTwd": 360,
+    "volume": 0.00507096,
+    "askPrice": 70637.4,
+    "orderId": 19399086345,
+    "status": "success",
+    "timestamp": "2026-04-09T16:00:04.750Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "soltwd",
+    "totalTwd": 600,
+    "volume": 0.225,
+    "askPrice": 2652.7,
+    "orderId": 19399489564,
+    "status": "success",
+    "timestamp": "2026-04-09T16:39:04.914Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "soltwd",
+    "totalTwd": 360,
+    "volume": 0.1348,
+    "askPrice": 2655.4,
+    "orderId": 19399551241,
+    "status": "success",
+    "timestamp": "2026-04-09T16:45:04.990Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "ethtwd",
+    "amount": 0.02761786,
+    "orderId": 19419080194,
+    "status": "success",
+    "timestamp": "2026-04-11T05:09:36.860Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "dogetwd",
+    "amount": 649,
+    "orderId": 19419082492,
+    "status": "success",
+    "timestamp": "2026-04-11T05:09:56.280Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "soltwd",
+    "amount": 0.3666312,
+    "orderId": 19425713207,
+    "status": "success",
+    "timestamp": "2026-04-11T19:35:13.313Z"
+  }
+]

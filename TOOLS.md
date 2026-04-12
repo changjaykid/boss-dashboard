@@ -38,3 +38,12 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.
+
+### 主控板部署
+- **Repo**: changjaykid/boss-dashboard (branch: main)
+- **部署方式**: GitHub Pages（自動，push 到 main 就會重建）
+- **線上網址**: https://changjaykid.github.io/boss-dashboard/
+- **本地檔案**: boss-dashboard/index.html
+- **同步副本**: boss-dashboard-cloudflare/index.html（需手動同步）
+- **密碼**: 8888
+- **注意**: 修改後要 git push origin main，不是 master

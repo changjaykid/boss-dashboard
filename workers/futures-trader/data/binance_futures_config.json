@@ -1,0 +1,13 @@
+{
+  "apiKey": "RqVTfGn0ibgmvXRMbJNkHlaJVmMuh2HiqgoR5g4O5I6IyAfVEJclKkduKY02Gc1Q",
+  "secretKey": "JyPdQ6oYEm8HJKQbYgRppOHJBMyhaOhDuP6gnYFv6LEMw3hLYyqR4WxFnpS4MlhP",
+  "baseUrl": "https://fapi.binance.com",
+  "testnet": false,
+  "leverage": 10,
+  "marginType": "ISOLATED",
+  "defaultSymbol": "BTCUSDT",
+  "maxPositionPct": 0.3,
+  "maxLossPerTradePct": 0.02,
+  "dailyLossLimit": 23.3,
+  "consecutiveLossPause": 3
+}

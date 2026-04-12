@@ -1,0 +1,204 @@
+{
+  "lastUpdate": "2026-04-12 08:06:00",
+  "updateCycle": "08:00/20:00",
+  "prices": {
+    "fetchedAt": "2026-04-11 11:52:49",
+    "source": "Yahoo Finance (yfinance)",
+    "instruments": {
+      "XAUUSD": {
+        "key": "XAUUSD",
+        "label": "黃金 XAUUSD",
+        "unit": "USD/oz",
+        "price": 4771.0,
+        "change": -18.1,
+        "changePercent": "-0.38%",
+        "symbol": "GC=F",
+        "fetchedAt": "2026-04-11 11:52:46"
+      },
+      "EURUSD": {
+        "key": "EURUSD",
+        "label": "歐元/美元",
+        "unit": "",
+        "price": 1.1729,
+        "change": 0.0032,
+        "changePercent": "+0.27%",
+        "symbol": "EURUSD=X",
+        "fetchedAt": "2026-04-11 11:52:47"
+      },
+      "GBPUSD": {
+        "key": "GBPUSD",
+        "label": "英鎊/美元",
+        "unit": "",
+        "price": 1.3461,
+        "change": 0.0034,
+        "changePercent": "+0.26%",
+        "symbol": "GBPUSD=X",
+        "fetchedAt": "2026-04-11 11:52:47"
+      },
+      "USDJPY": {
+        "key": "USDJPY",
+        "label": "美元/日圓",
+        "unit": "",
+        "price": 159.24,
+        "change": 0.169,
+        "changePercent": "+0.11%",
+        "symbol": "JPY=X",
+        "fetchedAt": "2026-04-11 11:52:47"
+      },
+      "US30": {
+        "key": "US30",
+        "label": "道瓊工業 US30",
+        "unit": "",
+        "price": 47916.57,
+        "change": -269.23,
+        "changePercent": "-0.56%",
+        "symbol": "^DJI",
+        "fetchedAt": "2026-04-11 11:52:47"
+      },
+      "SPX500": {
+        "key": "SPX500",
+        "label": "標普500",
+        "unit": "",
+        "price": 6816.89,
+        "change": -7.77,
+        "changePercent": "-0.11%",
+        "symbol": "^GSPC",
+        "fetchedAt": "2026-04-11 11:52:48"
+      },
+      "NAS100": {
+        "key": "NAS100",
+        "label": "那斯達克100期貨",
+        "unit": "",
+        "price": 25333.0,
+        "change": 41.5,
+        "changePercent": "+0.16%",
+        "symbol": "NQ=F",
+        "fetchedAt": "2026-04-11 11:52:48"
+      },
+      "DXY": {
+        "key": "DXY",
+        "label": "美元指數 DXY",
+        "unit": "",
+        "price": 98.7,
+        "change": -0.165,
+        "changePercent": "-0.17%",
+        "symbol": "DX-Y.NYB",
+        "fetchedAt": "2026-04-11 11:52:48"
+      },
+      "US10Y": {
+        "key": "US10Y",
+        "label": "美國10年期公債殖利率",
+        "unit": "%",
+        "price": 4.317,
+        "change": 0.024,
+        "changePercent": "+0.56%",
+        "symbol": "^TNX",
+        "fetchedAt": "2026-04-11 11:52:48"
+      }
+    }
+  },
+  "news": [
+    {
+      "title": "美軍艦艇進入荷姆茲海峽，川普稱正在進行排雷行動",
+      "source": "ForexLive / Reuters",
+      "time": "2026-04-11 21:11 GMT",
+      "summary": "伊朗以水中有地雷為由拒絕開放荷姆茲海峽，但數艘美國海軍艦艇已強行通過。川普表示排雷進程已經開始，地緣政治緊張局勢再度升溫。",
+      "analysis": "美伊在關鍵水道的軍事對峙增加黑天鵝風險。儘管市場短線反映停火預期導致油價下跌，但若荷姆茲海峽爆發衝突，油價將報復性反彈，避險資產黃金將再度獲支撐。",
+      "impact": {
+        "instruments": ["GOLD", "USDJPY", "US30", "NAS100"],
+        "direction": "軍事對峙升溫 → 避險情緒升溫 → 金價利多、USD/JPY 利多、美股利空",
+        "severity": "high"
+      }
+    },
+    {
+      "title": "以色列預計將於凌晨 4 點宣佈停火，油價應聲大跌 14%",
+      "source": "InvestingLive / DailyFX",
+      "time": "2026-04-10 21:11 GMT",
+      "summary": "消息指出以色列將於貝魯特時間凌晨 4 點宣佈停火。原油期貨結算價報 96.57 美元，本週跌幅高達 14.29%。",
+      "analysis": "中東緊張局勢緩解直接打壓能源價格。通膨壓力下降為聯準會提供降息空間。這對美股（特別是那斯達克）是重大利多，但對避險資產如黃金則構成回調壓力。",
+      "impact": {
+        "instruments": ["GOLD", "NAS100", "US30"],
+        "direction": "停火預期 → 避險消退 → 金價短線利空、股市利多",
+        "severity": "high"
+      }
+    },
+    {
+      "title": "美國 4 月密大消費者信心指數遠低於預期，歐元兌美元創近期新高",
+      "source": "ForexLive",
+      "time": "2026-04-10 14:33 GMT",
+      "summary": "密歇根大學初步報告顯示 4 月消費者信心指數僅為 47.6，遠低於預期的 52.0。數據公佈後，EUR/USD 隨即飆升至近期高位。",
+      "analysis": "美國內需疲軟跡象明顯，市場強化聯準會降息預期，導致美元指數（DXY）走弱。EUR/USD 已突破阻力位，技術面看多。",
+      "impact": {
+        "instruments": ["EURUSD", "DXY", "GBPUSD"],
+        "direction": "數據疲軟 → 美元走弱 → EUR/USD 利多、GBP/USD 利多",
+        "severity": "medium"
+      }
+    },
+    {
+      "title": "英鎊兌美元受阻於 1.347-1.349 關鍵擺動區間頂部",
+      "source": "ForexLive Technical Analysis",
+      "time": "2026-04-10 19:46 GMT",
+      "summary": "GBP/USD 盤中測試 1.34708-1.34888 的關鍵阻力帶，該區域在過去六週多次成功壓制漲勢。目前買盤依然堅挺，正等待突破機會。",
+      "analysis": "1.3488 是英鎊多頭的最後防線。若能有效站上，將引發空頭踩踏，開啟通往 1.3600 的空間。反之，若再度受阻則可能回撤至 1.3350。",
+      "impact": {
+        "instruments": ["GBPUSD"],
+        "direction": "關鍵阻力位測試 → 突破則大漲，受阻則回調",
+        "severity": "high"
+      }
+    },
+    {
+      "title": "聯準會理事戴利：若油價回落，降息將重新回到議程",
+      "source": "ForexLive",
+      "time": "2026-04-10 16:30 GMT",
+      "summary": "Fed 理事 Daly 表示，油價的下跌路徑對通膨至關重要。只要能源價格不再推升通膨，降息並非不可能。聯準會官員立場開始微調。",
+      "analysis": "官方言論開始釋放鴿派訊號，這與油價近期大跌 14% 相呼應。若降息預期升溫，美債殖利率將下跌，直接利多 NAS100 與黃金。",
+      "impact": {
+        "instruments": ["US10Y", "NAS100", "GOLD"],
+        "direction": "鴿派微調 → 殖利率下跌 → 科技股利多、金價利多",
+        "severity": "medium"
+      }
+    }
+  ],
+  "socialDiscussions": [
+    {
+      "platform": "ForexLive Comments",
+      "title": "市場對荷姆茲海峽的「地雷挑戰」存疑",
+      "author": "ForexLive Community",
+      "summary": "許多交易者認為伊朗聲稱海峽有地雷只是拖延戰術，目的是在伊斯蘭堡談判中獲得籌碼。市場正在測試美軍的護航決心。",
+      "whatTheyDid": "部分交易者在美軍艦艇通過的消息傳出後，獲利了結原油空單，轉向觀察地緣政治風險溢價的重回。",
+      "whatWeCanLearn": "地緣政治消息具有極大隨機性。建議在談判期間（4/11-12）降低 US30 與 GOLD 的隔夜倉位，避免突發軍事行動導致跳空。",
+      "url": "https://investinglive.com/news/"
+    },
+    {
+      "platform": "DailyForex Analysis",
+      "title": "為什麼勝率 60% 的 EA 在本週依然虧損？",
+      "author": "Adam Lemon",
+      "summary": "分析指出，本週外匯市場受消息驅動極其嚴重，技術分析的勝率因突發新聞（停火、排雷）而失效。止損過窄的算法被頻繁「掃單」。",
+      "whatTheyDid": "建議將止損距離參考 ATR 的倍數從 1.5x 增加到 2.5x，並在重大談判消息宣佈前後暫停交易 1 小時。",
+      "whatWeCanLearn": "我們的自動交易系統在高波動新聞週（如本週）應自動啟用「寬幅止損」模式，或者調低交易頻率上限，以應對假突破。",
+      "url": "https://www.dailyforex.com/"
+    }
+  ],
+  "conclusion": {
+    "marketOutlook": "本週末市場處於極度敏感狀態：一方面是以色列宣佈停火帶來的避險消退（油價暴跌 14%），另一方面是美軍艦艇強行進入荷姆茲海峽引發的衝突隱憂。美元指數（DXY）因美國經濟數據（密大信心指數）疲軟而受壓。展望未來 24 小時，伊斯蘭堡談判的具體成果將決定市場是徹底轉向「Risk-on」（股市漲、金跌）還是重回「Risk-off」（股市跌、金漲）。",
+    "tradingImplications": [
+      "XAUUSD：處於停火預期（利空）與排雷衝突風險（利多）的夾縫中。$4,700-$4,750 具備支撐，但在談判結果明確前，難以突破 $4,850",
+      "EUR/USD：美元弱勢格局確立，1.1700 已從阻力轉為支撐。只要美國數據持續疲軟，目標看 1.1850",
+      "GBP/USD：正測試 1.3488 關鍵阻力。一旦突破，技術面將轉入大級別多頭市，建議密切關注",
+      "USD/JPY：160.00 阻力強勁，美元走弱與日圓避險需求（受排雷行動刺激）可能推動匯率向 158.50 回撤",
+      "NAS100/US30：油價大跌緩解通膨壓力，對美股特別是科技股是重大利多。NASDAQ 收復 100 日線，趨勢轉強"
+    ],
+    "suggestedActions": [
+      "XAUUSD：區間操作，參考 4,720-4,820。談判期間不建議重倉持午夜。",
+      "EUR/USD：逢低做多，支撐 1.1705，止損 1.1680。",
+      "GBP/USD：站穩 1.3490 後追多，首個目標 1.3580。",
+      "US30/NAS100：科技股相對強勢，NAS100 若回測 25200 企穩可做多。",
+      "USD/JPY：159.80 附近佈局空單，止損 160.20，目標 158.80。"
+    ],
+    "systemOptimization": [
+      "強烈建議加入「新聞事件暫停機制」：在伊斯蘭堡談判成果公佈前後 30 分鐘自動停止開倉。",
+      "調整止損策略：將目前的固定止損改為 2.5x ATR 動態止損，以應對當前頻繁的新聞掃單波幅。",
+      "策略權重調整：因通膨壓力（油價跌）緩解，可適度增加 NAS100 的做多權重，同時降低 GOLD 的避險多頭權重。"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "status": "RUNNING",
+  "position": {
+    "side": "LONG",
+    "entryPrice": 70890.2,
+    "size": 0.01,
+    "openTime": "2026-04-10T18:47:02.510Z",
+    "strategy": "UNKNOWN",
+    "reasons": []
+  },
+  "trailingStop": null,
+  "dailyStats": {
+    "date": "2026-04-10",
+    "trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0,
+    "bestTrade": 0,
+    "worstTrade": 0,
+    "consecutiveLosses": 0,
+    "pauseUntil": null
+  },
+  "totalStats": {
+    "trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0,
+    "winRate": 0,
+    "maxDrawdown": 0,
+    "peakBalance": 464
+  },
+  "tradeHistory": [],
+  "lastAnalysis": {
+    "time": "2026-04-10T18:47:53.106Z",
+    "price": 72910.4,
+    "marketState": "TRENDING_UP",
+    "score": 26,
+    "direction": "LONG"
+  },
+  "lastTradeTime": null,
+  "startTime": "2026-04-10T18:47:02.126Z",
+  "initialCapital": 464
+}

@@ -1,0 +1,60 @@
+{
+  "lastScan": "2026-04-11T22:00:01.562Z",
+  "fixedMarkets": [
+    "btctwd",
+    "ethtwd"
+  ],
+  "dynamicMarkets": [
+    "arbtwd",
+    "soltwd"
+  ],
+  "allMarkets": [
+    "btctwd",
+    "ethtwd",
+    "arbtwd",
+    "soltwd"
+  ],
+  "scores": [
+    {
+      "market": "arbtwd",
+      "last": 3.643,
+      "turnover": 135118.5057,
+      "volatility": "11.40",
+      "change": "1.19",
+      "score": "4.85"
+    },
+    {
+      "market": "soltwd",
+      "last": 2716.9,
+      "turnover": 4534193.6565000005,
+      "volatility": "2.68",
+      "change": "0.23",
+      "score": "2.93"
+    },
+    {
+      "market": "avaxtwd",
+      "last": 290.02,
+      "turnover": 2833.4954,
+      "volatility": "4.52",
+      "change": "0.00",
+      "score": "1.81"
+    },
+    {
+      "market": "dogetwd",
+      "last": 2.9922,
+      "turnover": 1486465.116,
+      "volatility": "2.59",
+      "change": "-0.09",
+      "score": "1.65"
+    },
+    {
+      "market": "xrptwd",
+      "last": 43.259,
+      "turnover": 1701998.96701,
+      "volatility": "2.35",
+      "change": "0.07",
+      "score": "1.63"
+    }
+  ],
+  "nextScan": "2026-04-12T04:00:01.562Z"
+}

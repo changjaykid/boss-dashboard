@@ -1,0 +1,429 @@
+{
+  "version": 1,
+  "strategies": {
+    "trend_ema_cross": {
+      "state": "ACTIVE",
+      "type": "trend",
+      "description": "EMA 8/21/50 交叉 + 回踩確認",
+      "params": {
+        "fast": 8,
+        "slow": 21,
+        "trend": 50
+      },
+      "wins": 3,
+      "losses": 2,
+      "pnl": 39.79,
+      "totalTrades": 5,
+      "createdAt": "2026-03-29T22:20:00+08:00",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null
+    },
+    "trend_mtf_alignment": {
+      "state": "TESTING",
+      "type": "trend",
+      "description": "多時間框架趨勢對齊（4H/1H/15m/5m）",
+      "params": {
+        "minAlignment": 3
+      },
+      "wins": 11,
+      "losses": 12,
+      "pnl": -1598.11,
+      "totalTrades": 23,
+      "createdAt": "2026-03-29T22:20:00+08:00",
+      "lastTradeAt": "2026-04-01T09:42:00.597Z",
+      "promotedAt": null,
+      "demotedAt": "2026-04-01T12:21:00.126Z"
+    },
+    "trend_momentum_chase": {
+      "state": "ACTIVE",
+      "type": "trend",
+      "description": "放量突破 + MACD/RSI 動量確認",
+      "params": {
+        "minVolRatio": 1.5
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-03-29T22:20:00+08:00",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null
+    },
+    "trend_elliott_wave3": {
+      "state": "ACTIVE",
+      "type": "trend",
+      "description": "簡化 Elliott Wave 3 偵測（38.2-61.8% 回撤後推升）",
+      "params": {
+        "retraceMin": 0.382,
+        "retraceMax": 0.618
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-03-29T22:20:00+08:00",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null
+    },
+    "trend_flag_breakout": {
+      "state": "ACTIVE",
+      "type": "trend",
+      "description": "旗形突破（強勢 pole + 整理 flag + 突破）",
+      "params": {
+        "minPoleMovePct": 1,
+        "maxFlagRatio": 0.5
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-03-29T22:20:00+08:00",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null
+    },
+    "reversion_sr": {
+      "state": "ACTIVE",
+      "type": "reversion",
+      "description": "支撐/阻力位反轉 + RSI/BB 超買超賣確認",
+      "params": {
+        "distPct": 0.5
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-03-29T22:20:00+08:00",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null
+    },
+    "reversion_rsi_divergence": {
+      "state": "ACTIVE",
+      "type": "reversion",
+      "description": "RSI 背離（價格新低/RSI 不新低 = 看多）",
+      "params": {
+        "period": 14
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-03-29T22:20:00+08:00",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null
+    },
+    "reversion_bollinger": {
+      "state": "ACTIVE",
+      "type": "reversion",
+      "description": "布林帶均值回歸（%B < 0.05 買 / > 0.95 賣）",
+      "params": {
+        "period": 20,
+        "std": 2,
+        "minWidth": 2
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-03-29T22:20:00+08:00",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null
+    },
+    "reversion_pin_bar": {
+      "state": "ACTIVE",
+      "type": "reversion",
+      "description": "Pin Bar 在關鍵支撐/阻力位的反轉",
+      "params": {
+        "distPct": 1
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-03-29T22:20:00+08:00",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null
+    },
+    "reversion_liquidation_bounce": {
+      "state": "ACTIVE",
+      "type": "reversion",
+      "description": "清算瀑布反彈（極端放量 + RSI 超賣 + 反彈 K 線）",
+      "params": {
+        "minVolRatio": 3,
+        "rsiThreshold": 20
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-03-29T22:20:00+08:00",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null
+    },
+    "breakout_pattern": {
+      "state": "ACTIVE",
+      "type": "breakout",
+      "description": "K 線組合形態突破 + 量確認",
+      "params": {
+        "minWeight": 1.5,
+        "minVolRatio": 1.2
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-03-29T22:20:00+08:00",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null
+    },
+    "breakout_bollinger_squeeze": {
+      "state": "ACTIVE",
+      "type": "breakout",
+      "description": "布林帶擠壓突破（width < 1.5 後放量突破）",
+      "params": {
+        "maxWidth": 1.5,
+        "minVolRatio": 1.3
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-03-29T22:20:00+08:00",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null
+    },
+    "breakout_range": {
+      "state": "ACTIVE",
+      "type": "breakout",
+      "description": "箱型突破（24H 高低點 + 放量）",
+      "params": {
+        "lookback": 24,
+        "maxRangeWidth": 3,
+        "minVolRatio": 1.3
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-03-29T22:20:00+08:00",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null
+    },
+    "breakout_outside_bar": {
+      "state": "ACTIVE",
+      "type": "breakout",
+      "description": "Outside Bar 突破（吞噬前一根 K 線）",
+      "params": {},
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-03-29T22:20:00+08:00",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null
+    },
+    "breakout_news_driven": {
+      "state": "ACTIVE",
+      "type": "breakout",
+      "description": "新聞驅動突破（極端放量 + 大幅價格變動）",
+      "params": {
+        "minVolRatio": 2.5,
+        "minPriceChangePct": 0.5
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-03-29T22:20:00+08:00",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null
+    },
+    "trend_ema_cross_fast": {
+      "state": "RETIRED",
+      "type": "trend",
+      "description": "EMA 5/13/34 交叉（fast 變體）",
+      "params": {
+        "fast": 5,
+        "slow": 13,
+        "trend": 34
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-04-01T12:21:00.128Z",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null,
+      "basedOn": "trend_ema_cross",
+      "mutationType": "param_variant"
+    },
+    "trend_ema_cross_slow": {
+      "state": "RETIRED",
+      "type": "trend",
+      "description": "EMA 10/30/60 交叉（slow 變體）",
+      "params": {
+        "fast": 10,
+        "slow": 30,
+        "trend": 60
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-04-01T12:21:00.128Z",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null,
+      "basedOn": "trend_ema_cross",
+      "mutationType": "param_variant"
+    },
+    "trend_ema_cross_long_trend": {
+      "state": "RETIRED",
+      "type": "trend",
+      "description": "EMA 8/21/100 交叉（long_trend 變體）",
+      "params": {
+        "fast": 8,
+        "slow": 21,
+        "trend": 100
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-04-01T12:21:00.129Z",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null,
+      "basedOn": "trend_ema_cross",
+      "mutationType": "param_variant"
+    },
+    "reversion_rsi_divergence_tight": {
+      "state": "RETIRED",
+      "type": "reversion",
+      "description": "RSI 背離（tight：25/75）",
+      "params": {
+        "oversold": 25,
+        "overbought": 75
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-04-01T14:00:00.836Z",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null,
+      "basedOn": "reversion_rsi_divergence",
+      "mutationType": "param_variant"
+    },
+    "reversion_rsi_divergence_loose": {
+      "state": "RETIRED",
+      "type": "reversion",
+      "description": "RSI 背離（loose：35/65）",
+      "params": {
+        "oversold": 35,
+        "overbought": 65
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-04-01T14:00:00.838Z",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null,
+      "basedOn": "reversion_rsi_divergence",
+      "mutationType": "param_variant"
+    },
+    "breakout_bollinger_squeeze_tight_squeeze": {
+      "state": "RETIRED",
+      "type": "breakout",
+      "description": "BB 擠壓突破（width < 1）",
+      "params": {
+        "maxWidth": 1
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-04-01T14:00:00.839Z",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null,
+      "basedOn": "breakout_bollinger_squeeze",
+      "mutationType": "param_variant"
+    },
+    "combo_ema_cross_mtf_alignment": {
+      "state": "RETIRED",
+      "type": "combo",
+      "description": "組合 trend_ema_cross + trend_mtf_alignment（雙重確認）",
+      "params": {
+        "strategy1": "trend_ema_cross",
+        "strategy2": "trend_mtf_alignment"
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-04-01T16:00:00.489Z",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null,
+      "basedOn": "trend_ema_cross+trend_mtf_alignment",
+      "mutationType": "combination"
+    },
+    "breakout_bollinger_squeeze_loose_squeeze": {
+      "state": "RETIRED",
+      "type": "breakout",
+      "description": "BB 擠壓突破（width < 2）",
+      "params": {
+        "maxWidth": 2
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-04-01T16:00:00.491Z",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null,
+      "basedOn": "breakout_bollinger_squeeze",
+      "mutationType": "param_variant"
+    },
+    "trend_ema_cross_vol_filter": {
+      "state": "RETIRED",
+      "type": "trend",
+      "description": "trend_ema_cross + 量能過濾（量比>1.5 才進場）",
+      "params": {
+        "base": "trend_ema_cross",
+        "minVolRatio": 1.5
+      },
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "totalTrades": 0,
+      "createdAt": "2026-04-01T16:00:00.491Z",
+      "lastTradeAt": null,
+      "promotedAt": null,
+      "demotedAt": null,
+      "basedOn": "trend_ema_cross",
+      "mutationType": "volume_filter"
+    }
+  },
+  "lastEvolution": "2026-04-03T10:00:05.132Z",
+  "evolutionCount": 24
+}

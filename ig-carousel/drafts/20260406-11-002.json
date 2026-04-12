@@ -1,0 +1,43 @@
+{
+  "id": "20260406-11-002",
+  "title": "Canva vs Figma：非設計師到底該選哪個？",
+  "pillar": "tool_recommendation",
+  "bg_mode": "photo",
+  "bg_per_slide": true,
+  "bg_darken": 0.28,
+  "slides": [
+    {
+      "type": "cover",
+      "headline": "Canva vs Figma\n非設計師該選哪個？",
+      "subtitle": "實測兩個月的真心話"
+    },
+    {
+      "type": "problem",
+      "headline": "先搞清楚你要解決什麼問題",
+      "body": "做社群圖、簡報、名片 → 你要的是「快」\n做品牌視覺、UI、跟設計師協作 → 你要的是「專業」\n\n搞錯需求選錯工具，怎麼用都卡。"
+    },
+    {
+      "type": "keypoint",
+      "number": "🟡",
+      "headline": "Canva 的強項",
+      "body": "✅ 模板超多，10 分鐘出一張社群圖\n✅ 不用學，拖拉就能用\n✅ 內建去背、動畫、Brand Kit\n✅ 免費版就很夠用\n\n❌ 客製化天花板低\n❌ 做出來的東西容易「撞臉」\n❌ 協作功能陽春"
+    },
+    {
+      "type": "keypoint",
+      "number": "🟣",
+      "headline": "Figma 的強項",
+      "body": "✅ 設計自由度無上限\n✅ 多人即時協作超強\n✅ Component 系統，改一處全部更新\n✅ 免費版 3 個專案夠小團隊用\n\n❌ 學習曲線陡\n❌ 沒有模板庫（要自己建或找社群資源）\n❌ 做簡單圖反而更慢"
+    },
+    {
+      "type": "summary",
+      "headline": "一句話結論",
+      "body": "一人品牌、做社群為主 → Canva\n有設計需求、要跟團隊協作 → Figma\n\n其實很多人兩個都用：\nCanva 日常出圖、Figma 做品牌規範\n\n工具不是信仰，解決問題就好。"
+    },
+    {
+      "type": "cta",
+      "headline": "你現在用哪個？",
+      "body": "存起來下次選工具不用再糾結",
+      "button_text": "💬 留言告訴我你的愛用工具"
+    }
+  ]
+}

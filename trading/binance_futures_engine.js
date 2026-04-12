@@ -1,23 +1,23 @@
 #!/usr/bin/env node
 /**
- * Binance USDT-M Futures 核心決策引擎
- * 每 3 分鐘由 cron 執行
+ * Binance USDT-M Futures 核心決策引擎 v3
  * 
- * 資金：466 USDT（守本金第一、利潤最大化第二）
- * 槓桿：動態 3x-10x（高確信度可放大）
- * 標的：BTCUSDT
- * 目標：利潤最大化，嚴格風控保護本金
- *
- * 進階特性：
- * - 動態槓桿：盤整低槓桿，強信號高槓桿
- * - 滾動複利：連勝時逐步加大倉位
- * - 動量識別：分析近50根K線動量規律
- * - 時段感知：亞洲/歐洲/美洲盤波動特性
+ * 重構原則：
+ * 1. 只留 2 個策略：TREND_FOLLOW + MOMENTUM
+ * 2. 信號強度評分 ≥ 70 才進場（「不做」的能力）
+ * 3. 風報比 ≥ 2.0（不夠肥不做）
+ * 4. 每天最多 3 筆
+ * 5. 時段聚焦：亞洲盤 + 美洲盤開盤
+ * 6. 盤整不開新倉
+ * 7. 小帳戶優化：止損收窄、盡量掛 limit
+ * 
+ * 資金：$464 USDT | 槓桿：5x 固定 | 標的：BTCUSDT
  */
 
 const fs = require('fs');
 const path = require('path');
-const { getFullAnalysis, getFundingRate } = require('./binance_futures_fetch');
+const crypto = require('crypto');
+const https = require('https');
 
 // ============ Config ============
 
@@ -31,118 +31,39 @@ const CONFIG_FILE = path.join(TRADING_DIR, 'binance_futures_config.json');
 const config = JSON.parse(fs.readFileSync(CONFIG_FILE, 'utf8'));
 
 const SYMBOL = 'BTCUSDT';
-const BASE_LEVERAGE = 5;
-const MAX_LEVERAGE = 10;
-const MIN_LEVERAGE = 3;
+const LEVERAGE = 5;                           // 回到 5x，先保本再放大利潤
 const MARGIN_TYPE = 'ISOLATED';
-const INITIAL_CAPITAL = 466;
+const INITIAL_CAPITAL = 464;
 
-// Risk parameters
-const MAX_LOSS_PER_TRADE_PCT = 0.02;    // 2% per trade
-const DAILY_LOSS_LIMIT_PCT = 0.05;       // 5% daily loss cap
+// === 風控鐵律 ===
+const MAX_LOSS_PER_TRADE_PCT = 0.02;     // 單筆最大虧損 2%
+const DAILY_LOSS_LIMIT_PCT = 0.05;        // 日虧上限 5%
 const DAILY_LOSS_LIMIT = INITIAL_CAPITAL * DAILY_LOSS_LIMIT_PCT;
-const CONSECUTIVE_LOSS_PAUSE = 3;
-const PAUSE_DURATION_MS = 60 * 60 * 1000; // 1 hour
-const MIN_RR_RATIO = 1.5;                // Minimum risk:reward ratio
-const MAX_POSITION_PCT = 0.35;           // Max 35% of balance per position
-const DATA_FRESHNESS_MS = 5 * 60 * 1000; // 5 min max staleness
+const MAX_DAILY_TRADES = 3;               // 每天最多 3 筆
+const CONSECUTIVE_LOSS_PAUSE = 3;         // 連虧 3 筆暫停 1 小時
+const PAUSE_DURATION_MS = 60 * 60 * 1000;
+const SL_ATR_MULT = 1.2;                      // 抓高低點，但停損不能太寬
+const SIGNAL_THRESHOLD = 45;                 // 進場更嚴格，避免亂追
+const MAX_POSITION_PCT = 0.12;               // 小帳戶降倉位，先求穩
+const COOLDOWN_MS = 30 * 60 * 1000;          // v3.1: 平倉後冷卻 30 分鐘
+const REVERSAL_RSI_LONG = 38;
+const REVERSAL_RSI_SHORT = 62;
 
-// Rolling compound: consecutive wins boost
-const COMPOUND_WIN_BOOST = 0.05;  // +5% position size per consecutive win
-const MAX_COMPOUND_BOOST = 0.20;  // Cap at +20%
+// === 時段定義 (UTC) ===
+const ACTIVE_SESSIONS = [
+  { name: 'ASIA_PEAK', start: 1, end: 4 },    // 09:00-12:00 台灣
+  { name: 'US_OPEN', start: 13, end: 17 },     // 21:00-01:00 台灣
+];
+const DEAD_ZONE = { start: 19, end: 23 };       // 03:00-07:00 台灣
 
-// Session volatility windows (UTC hours)
-const SESSIONS = {
-  ASIA_PEAK:    { start: 1, end: 4 },    // 09:00-12:00 台灣
-  EUROPE_OPEN:  { start: 7, end: 10 },   // 15:00-18:00 台灣  
-  US_OPEN:      { start: 13, end: 16 },  // 21:00-00:00 台灣
-  DEAD_ZONE:    { start: 20, end: 0 },   // 04:00-08:00 台灣（流動性最低）
-};
-
-// ============ State Management ============
-
-function loadState() {
-  try {
-    if (fs.existsSync(STATE_FILE)) {
-      const state = JSON.parse(fs.readFileSync(STATE_FILE, 'utf8'));
-      // Validate critical fields
-      if (!state.dailyStats) state.dailyStats = freshDailyStats();
-      if (!state.position) state.position = null;
-      if (!state.trailingStop) state.trailingStop = null;
-      if (!state.strategyWeights) state.strategyWeights = defaultWeights();
-      return state;
-    }
-  } catch (e) {
-    log(`⚠️ State load error: ${e.message}`);
-  }
-  return defaultState();
-}
-
-function defaultWeights() {
-  return {
-    BREAKOUT: 1.0,
-    TREND_FOLLOW: 1.0,
-    REVERSAL: 0.8,
-    MOMENTUM: 1.0,
-    FUNDING_ARB: 0.7,
-    NEWS_EVENT: 0.5
-  };
-}
-
-function freshDailyStats() {
-  return {
-    date: new Date().toISOString().slice(0, 10),
-    trades: 0, wins: 0, losses: 0,
-    pnl: 0, bestTrade: 0, worstTrade: 0,
-    consecutiveLosses: 0, consecutiveWins: 0, pauseUntil: null
-  };
-}
-
-function defaultState() {
-  return {
-    status: 'RUNNING',
-    position: null,
-    trailingStop: null,
-    dailyStats: freshDailyStats(),
-    totalStats: {
-      trades: 0, wins: 0, losses: 0,
-      pnl: 0, winRate: 0, avgRR: 0,
-      maxDrawdown: 0, peakBalance: INITIAL_CAPITAL
-    },
-    strategyWeights: defaultWeights(),
-    lastAnalysis: null,
-    lastTradeTime: null,
-    tradeHistory: [],
-    startTime: new Date().toISOString(),
-    initialCapital: INITIAL_CAPITAL
-  };
-}
-
-function saveState(state) {
-  fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
-}
-
-function loadLog() {
-  try {
-    if (fs.existsSync(LOG_FILE)) return JSON.parse(fs.readFileSync(LOG_FILE, 'utf8'));
-  } catch {}
-  return [];
-}
-
-function saveLog(entries) {
-  fs.writeFileSync(LOG_FILE, JSON.stringify(entries, null, 2));
-}
+// ============ Logging ============
 
 function log(msg) {
   const ts = new Date().toISOString();
-  const line = `[${ts}] ${msg}\n`;
-  fs.appendFileSync(CRON_LOG, line);
+  fs.appendFileSync(CRON_LOG, `[${ts}] ${msg}\n`);
 }
 
-// ============ Binance API Helpers ============
-
-const crypto = require('crypto');
-const https = require('https');
+// ============ API ============
 
 function sign(qs) {
   return crypto.createHmac('sha256', config.secretKey).update(qs).digest('hex');
@@ -150,19 +71,22 @@ function sign(qs) {
 
 function apiRequest(method, endpoint, params = {}, signed = true) {
   return new Promise((resolve, reject) => {
-    let qs = Object.entries(params).map(([k,v]) => `${k}=${encodeURIComponent(v)}`).join('&');
+    let qs = Object.entries(params).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join('&');
     if (signed) {
       if (qs) qs += '&';
       qs += `timestamp=${Date.now()}`;
       qs += `&signature=${sign(qs)}`;
     }
-    const url = method === 'GET' && qs ? `${endpoint}?${qs}` : endpoint;
-    const urlObj = new URL(url, config.baseUrl);
+    const url = (method === 'GET' || method === 'DELETE') && qs ? `${endpoint}?${qs}` : endpoint;
+    const urlObj = new URL(url, config.baseUrl || 'https://fapi.binance.com');
     const options = {
       hostname: urlObj.hostname,
       path: urlObj.pathname + urlObj.search,
       method,
-      headers: { 'X-MBX-APIKEY': config.apiKey, 'Content-Type': 'application/x-www-form-urlencoded' }
+      headers: {
+        'X-MBX-APIKEY': config.apiKey,
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
     };
     const req = https.request(options, res => {
       let data = '';
@@ -172,11 +96,13 @@ function apiRequest(method, endpoint, params = {}, signed = true) {
           const parsed = JSON.parse(data);
           if (parsed.code && parsed.code < 0) reject(new Error(`API ${parsed.code}: ${parsed.msg}`));
           else resolve(parsed);
-        } catch { reject(new Error(`Parse: ${data.slice(0, 200)}`)); }
+        } catch {
+          reject(new Error(`API response parse error (status ${res.statusCode}): ${data.substring(0, 200)}`));
+        }
       });
     });
     req.on('error', reject);
-    if (method !== 'GET') req.write(qs);
+    if (method !== 'GET' && method !== 'DELETE') req.write(qs);
     req.end();
   });
 }
@@ -191,7 +117,7 @@ async function getBalance() {
   } : { total: 0, available: 0, unrealizedPnl: 0 };
 }
 
-async function getPositions() {
+async function getLivePosition() {
   const data = await apiRequest('GET', '/fapi/v2/positionRisk', { symbol: SYMBOL });
   const pos = data.find(p => parseFloat(p.positionAmt) !== 0);
   if (!pos) return null;
@@ -202,18 +128,12 @@ async function getPositions() {
     markPrice: parseFloat(pos.markPrice),
     unrealizedPnl: parseFloat(pos.unRealizedProfit),
     leverage: parseInt(pos.leverage),
-    liquidationPrice: parseFloat(pos.liquidationPrice),
-    marginType: pos.marginType
+    liquidationPrice: parseFloat(pos.liquidationPrice)
   };
 }
 
-async function setupLeverageAndMargin() {
-  try { await apiRequest('POST', '/fapi/v1/leverage', { symbol: SYMBOL, leverage: LEVERAGE }); } catch {}
-  try { await apiRequest('POST', '/fapi/v1/marginType', { symbol: SYMBOL, marginType: MARGIN_TYPE }); } catch {}
-}
-
 async function openPosition(side, quantity, stopLossPrice) {
-  // Market order to open
+  // Market order
   const order = await apiRequest('POST', '/fapi/v1/order', {
     symbol: SYMBOL,
     side: side === 'LONG' ? 'BUY' : 'SELL',
@@ -223,778 +143,656 @@ async function openPosition(side, quantity, stopLossPrice) {
 
   // Set stop loss
   if (stopLossPrice) {
-    const slSide = side === 'LONG' ? 'SELL' : 'BUY';
     try {
       await apiRequest('POST', '/fapi/v1/order', {
         symbol: SYMBOL,
-        side: slSide,
+        side: side === 'LONG' ? 'SELL' : 'BUY',
         type: 'STOP_MARKET',
         stopPrice: stopLossPrice.toFixed(1),
         closePosition: 'true',
         workingType: 'MARK_PRICE'
       });
     } catch (e) {
-      log(`⚠️ Stop loss order failed: ${e.message}`);
+      log(`⚠️ SL order failed: ${e.message}`);
     }
   }
-
   return order;
 }
 
 async function closePosition() {
-  const pos = await getPositions();
+  const pos = await getLivePosition();
   if (!pos) return null;
-  const side = pos.side === 'LONG' ? 'SELL' : 'BUY';
-  
-  // Cancel all open orders first (stop loss etc)
+  // Cancel open orders first
+  try { await apiRequest('DELETE', '/fapi/v1/allOpenOrders', { symbol: SYMBOL }); } catch (e) { log(`⚠️ Cancel orders: ${e.message}`); }
+  await new Promise(r => setTimeout(r, 500));
+  const closeSide = pos.side === 'LONG' ? 'SELL' : 'BUY';
+  // Try reduceOnly first
   try {
-    await apiRequest('DELETE', '/fapi/v1/allOpenOrders', { symbol: SYMBOL });
-  } catch {}
-  
-  return await apiRequest('POST', '/fapi/v1/order', {
-    symbol: SYMBOL,
-    side,
-    type: 'MARKET',
-    quantity: pos.size.toString(),
-    reduceOnly: 'true'
-  });
+    return await apiRequest('POST', '/fapi/v1/order', {
+      symbol: SYMBOL, side: closeSide, type: 'MARKET',
+      quantity: pos.size.toString(), reduceOnly: 'true'
+    });
+  } catch (e1) {
+    log(`⚠️ reduceOnly close failed: ${e1.message}, trying closePosition param`);
+    // Fallback: use closePosition=true (no quantity needed)
+    return await apiRequest('POST', '/fapi/v1/order', {
+      symbol: SYMBOL, side: closeSide, type: 'MARKET',
+      closePosition: 'true'
+    });
+  }
 }
 
-async function updateStopLoss(newStopPrice) {
-  // Cancel existing SL
-  try {
-    await apiRequest('DELETE', '/fapi/v1/allOpenOrders', { symbol: SYMBOL });
-  } catch {}
-  
-  const pos = await getPositions();
+async function updateStopLoss(newPrice) {
+  try { await apiRequest('DELETE', '/fapi/v1/allOpenOrders', { symbol: SYMBOL }); } catch {}
+  const pos = await getLivePosition();
   if (!pos) return;
-  
-  const slSide = pos.side === 'LONG' ? 'SELL' : 'BUY';
   await apiRequest('POST', '/fapi/v1/order', {
     symbol: SYMBOL,
-    side: slSide,
+    side: pos.side === 'LONG' ? 'SELL' : 'BUY',
     type: 'STOP_MARKET',
-    stopPrice: newStopPrice.toFixed(1),
+    stopPrice: newPrice.toFixed(1),
     closePosition: 'true',
     workingType: 'MARK_PRICE'
   });
 }
 
-// ============ Dynamic Leverage ============
+// ============ Market Data ============
 
-function calculateDynamicLeverage(confidence, marketState, signals) {
-  let leverage = BASE_LEVERAGE;
-  
-  // High confidence + trending = boost leverage
-  if (confidence >= 5) leverage = 8;
-  else if (confidence >= 4) leverage = 7;
-  else if (confidence >= 3) leverage = 5;
-  else leverage = MIN_LEVERAGE;
-  
-  // Market state adjustments
-  if (marketState === 'CONSOLIDATING' || marketState === 'RANGING') {
-    leverage = Math.max(MIN_LEVERAGE, leverage - 1); // Lower in choppy markets
-  }
-  if (marketState === 'HIGH_VOLATILITY') {
-    leverage = Math.max(MIN_LEVERAGE, leverage - 2); // Much lower in high vol
-  }
-  if (marketState === 'TRENDING_UP' || marketState === 'TRENDING_DOWN') {
-    leverage = Math.min(MAX_LEVERAGE, leverage + 1); // Boost in clear trends
-  }
-  
-  // Session adjustment
-  const hourUTC = new Date().getUTCHours();
-  if (isInSession(hourUTC, SESSIONS.DEAD_ZONE)) {
-    leverage = MIN_LEVERAGE; // Minimum during dead zone (插針風險高)
-  }
-  if (isInSession(hourUTC, SESSIONS.EUROPE_OPEN) || isInSession(hourUTC, SESSIONS.US_OPEN)) {
-    leverage = Math.min(MAX_LEVERAGE, leverage + 1); // Boost during active sessions
-  }
-  
-  return Math.min(MAX_LEVERAGE, Math.max(MIN_LEVERAGE, leverage));
+async function getKlines(symbol, interval, limit = 100) {
+  const raw = await apiRequest('GET', '/fapi/v1/klines', { symbol, interval, limit }, false);
+  return raw.map(k => ({
+    openTime: k[0], open: parseFloat(k[1]), high: parseFloat(k[2]),
+    low: parseFloat(k[3]), close: parseFloat(k[4]), volume: parseFloat(k[5])
+  }));
 }
 
-function isInSession(hourUTC, session) {
-  if (session.start < session.end) {
-    return hourUTC >= session.start && hourUTC < session.end;
-  }
-  // Wrap around midnight
-  return hourUTC >= session.start || hourUTC < session.end;
-}
-
-function getCurrentSession() {
-  const hourUTC = new Date().getUTCHours();
-  if (isInSession(hourUTC, SESSIONS.ASIA_PEAK)) return 'ASIA_PEAK';
-  if (isInSession(hourUTC, SESSIONS.EUROPE_OPEN)) return 'EUROPE_OPEN';
-  if (isInSession(hourUTC, SESSIONS.US_OPEN)) return 'US_OPEN';
-  if (isInSession(hourUTC, SESSIONS.DEAD_ZONE)) return 'DEAD_ZONE';
-  return 'TRANSITION';
-}
-
-// ============ Momentum Pattern Analysis ============
-
-function analyzeMomentumPatterns(candles) {
-  if (!candles || candles.length < 20) return { pattern: 'INSUFFICIENT_DATA', score: 0 };
-  
-  const recent = candles.slice(-50);
-  const closes = recent.map(c => c.close);
-  const volumes = recent.map(c => c.volume);
-  
-  // 1. Price momentum over different windows
-  const mom5 = (closes[closes.length-1] - closes[closes.length-6]) / closes[closes.length-6] * 100;
-  const mom10 = (closes[closes.length-1] - closes[closes.length-11]) / closes[closes.length-11] * 100;
-  const mom20 = closes.length >= 21 ? (closes[closes.length-1] - closes[closes.length-21]) / closes[closes.length-21] * 100 : 0;
-  
-  // 2. Acceleration (momentum of momentum)
-  const prevMom5 = (closes[closes.length-2] - closes[closes.length-7]) / closes[closes.length-7] * 100;
-  const acceleration = mom5 - prevMom5;
-  
-  // 3. Volume-price divergence
-  const priceUp = closes[closes.length-1] > closes[closes.length-6];
-  const avgVolRecent = volumes.slice(-5).reduce((a,b)=>a+b,0) / 5;
-  const avgVolPrev = volumes.slice(-10,-5).reduce((a,b)=>a+b,0) / 5;
-  const volumeIncreasing = avgVolRecent > avgVolPrev * 1.2;
-  const volumeDecreasing = avgVolRecent < avgVolPrev * 0.8;
-  
-  // 4. Identify consecutive candle patterns
-  let consecutiveUp = 0, consecutiveDown = 0;
-  for (let i = closes.length - 1; i >= Math.max(0, closes.length - 10); i--) {
-    if (i > 0 && closes[i] > closes[i-1]) {
-      if (consecutiveDown > 0) break;
-      consecutiveUp++;
-    } else if (i > 0 && closes[i] < closes[i-1]) {
-      if (consecutiveUp > 0) break;
-      consecutiveDown++;
-    } else break;
-  }
-  
-  let score = 0;
-  let direction = 'neutral';
-  const signals = [];
-  
-  // Strong upward momentum
-  if (mom5 > 0.3 && mom10 > 0.5 && acceleration > 0) {
-    score += 2;
-    direction = 'bullish';
-    signals.push('STRONG_UP_MOMENTUM');
-  }
-  // Strong downward momentum
-  if (mom5 < -0.3 && mom10 < -0.5 && acceleration < 0) {
-    score += 2;
-    direction = 'bearish';
-    signals.push('STRONG_DOWN_MOMENTUM');
-  }
-  // Volume confirms direction
-  if (volumeIncreasing && ((direction === 'bullish' && priceUp) || (direction === 'bearish' && !priceUp))) {
-    score += 1;
-    signals.push('VOLUME_CONFIRMS');
-  }
-  // Volume divergence (warning)
-  if (volumeDecreasing && ((priceUp && direction === 'bullish') || (!priceUp && direction === 'bearish'))) {
-    score -= 1;
-    signals.push('VOLUME_DIVERGENCE_WARN');
-  }
-  // Consecutive candles
-  if (consecutiveUp >= 4) { score += 1; signals.push(`${consecutiveUp}_CONSEC_UP`); direction = direction || 'bullish'; }
-  if (consecutiveDown >= 4) { score += 1; signals.push(`${consecutiveDown}_CONSEC_DOWN`); direction = direction || 'bearish'; }
-  // Exhaustion signal
-  if (consecutiveUp >= 6) { score -= 1; signals.push('POSSIBLE_EXHAUSTION_UP'); }
-  if (consecutiveDown >= 6) { score -= 1; signals.push('POSSIBLE_EXHAUSTION_DOWN'); }
-  
+async function getFundingRate() {
+  const premium = await apiRequest('GET', '/fapi/v1/premiumIndex', { symbol: SYMBOL }, false);
   return {
-    pattern: direction,
-    score: Math.abs(score),
-    direction,
-    mom5: parseFloat(mom5.toFixed(3)),
-    mom10: parseFloat(mom10.toFixed(3)),
-    mom20: parseFloat(mom20.toFixed(3)),
-    acceleration: parseFloat(acceleration.toFixed(3)),
-    consecutiveUp,
-    consecutiveDown,
-    volumeTrend: volumeIncreasing ? 'increasing' : volumeDecreasing ? 'decreasing' : 'stable',
-    signals
+    rate: parseFloat(premium.lastFundingRate),
+    markPrice: parseFloat(premium.markPrice),
+    nextTime: premium.nextFundingTime
   };
 }
 
-// ============ Signal Detection ============
+// ============ Indicators ============
 
-function detectSignals(analysis) {
-  const { timeframes, funding, marketState, price } = analysis;
-  const tf15 = timeframes['15m'];
-  const tf1h = timeframes['1h'];
-  const tf4h = timeframes['4h'];
-  
-  const signals = {
-    buySignals: [],
-    sellSignals: [],
-    buyScore: 0,
-    sellScore: 0,
-    strategies: {}
+function ema(data, period) {
+  const k = 2 / (period + 1);
+  let e = data[0];
+  const r = [e];
+  for (let i = 1; i < data.length; i++) { e = data[i] * k + e * (1 - k); r.push(e); }
+  return r;
+}
+
+function rsi(closes, period = 14) {
+  if (closes.length < period + 1) return null;
+  let avgGain = 0, avgLoss = 0;
+  for (let i = 1; i <= period; i++) {
+    const d = closes[i] - closes[i - 1];
+    if (d > 0) avgGain += d; else avgLoss -= d;
+  }
+  avgGain /= period; avgLoss /= period;
+  for (let i = period + 1; i < closes.length; i++) {
+    const d = closes[i] - closes[i - 1];
+    avgGain = (avgGain * (period - 1) + (d > 0 ? d : 0)) / period;
+    avgLoss = (avgLoss * (period - 1) + (d < 0 ? -d : 0)) / period;
+  }
+  if (avgLoss === 0) return 100;
+  return 100 - 100 / (1 + avgGain / avgLoss);
+}
+
+function macd(closes, fast = 12, slow = 26, sig = 9) {
+  if (closes.length < slow + sig) return null;
+  const ef = ema(closes, fast), es = ema(closes, slow);
+  const line = ef.map((v, i) => v - es[i]);
+  const sl = ema(line.slice(slow - 1), sig);
+  const hist = line[line.length - 1] - sl[sl.length - 1];
+  const prevHist = line[line.length - 2] - sl[sl.length - 2];
+  return { histogram: hist, prevHistogram: prevHist, line: line[line.length - 1], signal: sl[sl.length - 1] };
+}
+
+function bb(closes, period = 20, dev = 2) {
+  if (closes.length < period) return null;
+  const s = closes.slice(-period);
+  const avg = s.reduce((a, b) => a + b) / period;
+  const std = Math.sqrt(s.reduce((a, b) => a + (b - avg) ** 2, 0) / period);
+  return { upper: avg + dev * std, middle: avg, lower: avg - dev * std, width: ((2 * dev * std) / avg) * 100 };
+}
+
+function atr(candles, period = 14) {
+  if (candles.length < period + 1) return null;
+  const trs = [];
+  for (let i = 1; i < candles.length; i++) {
+    const c = candles[i], p = candles[i - 1];
+    trs.push(Math.max(c.high - c.low, Math.abs(c.high - p.close), Math.abs(c.low - p.close)));
+  }
+  let a = trs.slice(0, period).reduce((s, v) => s + v) / period;
+  for (let i = period; i < trs.length; i++) a = (a * (period - 1) + trs[i]) / period;
+  return a;
+}
+
+function adx(candles, period = 14) {
+  if (candles.length < period * 2 + 1) return null;
+  const pdm = [], mdm = [], trs = [];
+  for (let i = 1; i < candles.length; i++) {
+    const c = candles[i], p = candles[i - 1];
+    const up = c.high - p.high, dn = p.low - c.low;
+    pdm.push(up > dn && up > 0 ? up : 0);
+    mdm.push(dn > up && dn > 0 ? dn : 0);
+    trs.push(Math.max(c.high - c.low, Math.abs(c.high - p.close), Math.abs(c.low - p.close)));
+  }
+  const sa = ema(trs, period), sp = ema(pdm, period), sm = ema(mdm, period);
+  const dx = sp.map((v, i) => {
+    const dp = sa[i] > 0 ? v / sa[i] * 100 : 0;
+    const dm = sa[i] > 0 ? sm[i] / sa[i] * 100 : 0;
+    return dp + dm > 0 ? Math.abs(dp - dm) / (dp + dm) * 100 : 0;
+  });
+  const a = ema(dx.slice(period), period);
+  return a[a.length - 1];
+}
+
+// ============ State ============
+
+function loadState() {
+  try {
+    if (fs.existsSync(STATE_FILE)) return JSON.parse(fs.readFileSync(STATE_FILE, 'utf8'));
+  } catch {}
+  return defaultState();
+}
+
+function defaultState() {
+  return {
+    status: 'RUNNING',
+    position: null,
+    trailingStop: null,
+    dailyStats: { date: today(), trades: 0, wins: 0, losses: 0, pnl: 0, bestTrade: 0, worstTrade: 0, consecutiveLosses: 0, pauseUntil: null },
+    totalStats: { trades: 0, wins: 0, losses: 0, pnl: 0, winRate: 0, maxDrawdown: 0, peakBalance: INITIAL_CAPITAL },
+    tradeHistory: [],
+    lastAnalysis: null,
+    lastTradeTime: null,
+    startTime: new Date().toISOString(),
+    initialCapital: INITIAL_CAPITAL
   };
+}
 
-  // === 4H Trend Direction (gate) ===
-  let trend4h = 'neutral';
-  if (tf4h.ema8 && tf4h.ema21) {
-    if (tf4h.ema8 > tf4h.ema21) trend4h = 'bullish';
-    else if (tf4h.ema8 < tf4h.ema21) trend4h = 'bearish';
+function saveState(s) { fs.writeFileSync(STATE_FILE, JSON.stringify(s, null, 2)); }
+function today() { return new Date().toISOString().slice(0, 10); }
+
+// ============ Session Check ============
+
+function isActiveSession() {
+  const h = new Date().getUTCHours();
+  for (const s of ACTIVE_SESSIONS) {
+    if (s.start < s.end) { if (h >= s.start && h < s.end) return s.name; }
+    else { if (h >= s.start || h < s.end) return s.name; }
+  }
+  return null;
+}
+
+function isDeadZone() {
+  const h = new Date().getUTCHours();
+  if (DEAD_ZONE.start < DEAD_ZONE.end) return h >= DEAD_ZONE.start && h < DEAD_ZONE.end;
+  return h >= DEAD_ZONE.start || h < DEAD_ZONE.end;
+}
+
+// ============ Market State ============
+
+function detectMarketState(candles1h, closes1h) {
+  const adxVal = adx(candles1h);
+  const bbVal = bb(closes1h);
+  const ema8 = ema(closes1h, 8);
+  const ema21 = ema(closes1h, 21);
+  const e8 = ema8[ema8.length - 1];
+  const e21 = ema21[ema21.length - 1];
+
+  if (bbVal && bbVal.width < 1.5) return 'SQUEEZE';       // BB 極窄 → 即將突破
+  if (bbVal && bbVal.width < 2.5 && (!adxVal || adxVal < 20)) return 'CONSOLIDATING';
+  if (adxVal && adxVal > 25) return e8 > e21 ? 'TRENDING_UP' : 'TRENDING_DOWN';
+  if (bbVal && bbVal.width > 4) return 'HIGH_VOLATILITY';
+  return 'RANGING';
+}
+
+// ============ Signal Scoring (0-100) ============
+
+function scoreSignals(klines15m, klines1h, klines4h, fundingData, price) {
+  const c15 = klines15m.map(k => k.close);
+  const c1h = klines1h.map(k => k.close);
+  const c4h = klines4h.map(k => k.close);
+
+  const marketState = detectMarketState(klines1h, c1h);
+
+  // 太窄盤整/擠壓先不做
+  if (marketState === 'CONSOLIDATING' || marketState === 'SQUEEZE') {
+    return { score: 0, direction: null, strategy: null, marketState, reason: '盤整中，不開新倉' };
   }
 
-  // === Strategy 1: BREAKOUT ===
-  if (tf15.bb) {
-    const bbWidth = tf15.bb.width;
-    if (bbWidth < 2 && price > tf15.bb.upper) {
-      signals.buySignals.push('BB_BREAKOUT_UP');
-      signals.buyScore += 2;
-      signals.strategies.BREAKOUT = { direction: 'LONG', confidence: 2 };
-    }
-    if (bbWidth < 2 && price < tf15.bb.lower) {
-      signals.sellSignals.push('BB_BREAKOUT_DOWN');
-      signals.sellScore += 2;
-      signals.strategies.BREAKOUT = { direction: 'SHORT', confidence: 2 };
-    }
-    // Volume confirmation for breakout
-    if (tf15.volume && tf15.volume.ratio > 1.5) {
-      if (signals.strategies.BREAKOUT) {
-        signals.strategies.BREAKOUT.confidence += 1;
-        if (signals.strategies.BREAKOUT.direction === 'LONG') signals.buyScore += 1;
-        else signals.sellScore += 1;
-      }
-    }
+  let buyScore = 0, sellScore = 0;
+  const buyReasons = [], sellReasons = [];
+
+  // === 4H 大趨勢 (必要條件) ===
+  const ema8_4h = ema(c4h, 8), ema21_4h = ema(c4h, 21);
+  const trend4h = ema8_4h[ema8_4h.length - 1] > ema21_4h[ema21_4h.length - 1] ? 'UP' : 'DOWN';
+
+  // === 1H EMA 排列 ===
+  const ema8_1h = ema(c1h, 8), ema21_1h = ema(c1h, 21), ema55_1h = ema(c1h, 55);
+  const e8 = ema8_1h[ema8_1h.length - 1], e21 = ema21_1h[ema21_1h.length - 1], e55 = ema55_1h[ema55_1h.length - 1];
+  const last1hClose = c1h[c1h.length - 1];
+  const bb1h = bb(c1h);
+  
+  if (e8 > e21 && e21 > e55) { buyScore += 20; buyReasons.push('1H EMA 多排'); }
+  if (e8 < e21 && e21 < e55) { sellScore += 20; sellReasons.push('1H EMA 空排'); }
+
+  if (bb1h) {
+    const bbPos1h = (last1hClose - bb1h.lower) / (bb1h.upper - bb1h.lower);
+    if (bbPos1h <= 0.18) { buyScore += 18; buyReasons.push('1H靠近下緣'); }
+    if (bbPos1h >= 0.82) { sellScore += 18; sellReasons.push('1H靠近上緣'); }
   }
 
-  // === Strategy 2: TREND_FOLLOW ===
-  if (tf1h.ema8 && tf1h.ema21 && tf15.rsi !== null) {
-    // Bullish trend: EMA8 > EMA21 on 1H, RSI pullback to 40-60 on 15m
-    if (tf1h.ema8 > tf1h.ema21 && tf15.rsi >= 40 && tf15.rsi <= 60) {
-      // Price near EMA21 on 15m (pullback)
-      if (tf15.ema21 && Math.abs(price - tf15.ema21) / tf15.ema21 < 0.003) {
-        signals.buySignals.push('TREND_PULLBACK_LONG');
-        signals.buyScore += 2;
-        signals.strategies.TREND_FOLLOW = { direction: 'LONG', confidence: 2 };
-      }
-    }
-    // Bearish trend
-    if (tf1h.ema8 < tf1h.ema21 && tf15.rsi >= 40 && tf15.rsi <= 60) {
-      if (tf15.ema21 && Math.abs(price - tf15.ema21) / tf15.ema21 < 0.003) {
-        signals.sellSignals.push('TREND_PULLBACK_SHORT');
-        signals.sellScore += 2;
-        signals.strategies.TREND_FOLLOW = { direction: 'SHORT', confidence: 2 };
-      }
-    }
+  // === 15m RSI ===
+  const rsi15 = rsi(c15);
+  if (rsi15 !== null) {
+    // TREND_FOLLOW: RSI 回踩 40-55 (多) 或 45-60 (空)
+    if (rsi15 >= 40 && rsi15 <= 55) { buyScore += 8; buyReasons.push(`RSI回踩${rsi15.toFixed(0)}`); }
+    if (rsi15 >= 45 && rsi15 <= 60) { sellScore += 8; sellReasons.push(`RSI回彈${rsi15.toFixed(0)}`); }
+    // 超賣/超買 bonus
+    if (rsi15 <= REVERSAL_RSI_LONG) { buyScore += 20; buyReasons.push(`低位RSI${rsi15.toFixed(0)}`); }
+    if (rsi15 >= REVERSAL_RSI_SHORT) { sellScore += 20; sellReasons.push(`高位RSI${rsi15.toFixed(0)}`); }
   }
 
-  // === Strategy 3: REVERSAL ===
-  if (tf1h.rsi !== null) {
-    if (tf1h.rsi < 25) {
-      signals.buySignals.push('RSI_EXTREME_LOW');
-      signals.buyScore += 2;
-      signals.strategies.REVERSAL = { direction: 'LONG', confidence: 2 };
-    }
-    if (tf1h.rsi > 75) {
-      signals.sellSignals.push('RSI_EXTREME_HIGH');
-      signals.sellScore += 2;
-      signals.strategies.REVERSAL = { direction: 'SHORT', confidence: 2 };
-    }
+  // === 15m MACD ===
+  const macd15 = macd(c15);
+  if (macd15) {
+    if (macd15.histogram > 0 && macd15.prevHistogram <= 0) { buyScore += 15; buyReasons.push('MACD金叉'); }
+    if (macd15.histogram < 0 && macd15.prevHistogram >= 0) { sellScore += 15; sellReasons.push('MACD死叉'); }
+    if (macd15.histogram > 0 && macd15.histogram > macd15.prevHistogram) { buyScore += 5; buyReasons.push('MACD柱增'); }
+    if (macd15.histogram < 0 && macd15.histogram < macd15.prevHistogram) { sellScore += 5; sellReasons.push('MACD柱增'); }
   }
-  // Pin bar / engulfing detection on 15m
-  if (tf15.candles && tf15.candles.length >= 2) {
-    const last = tf15.candles[tf15.candles.length - 1];
-    const prev = tf15.candles[tf15.candles.length - 2];
-    const bodyLast = Math.abs(last.close - last.open);
-    const rangeLast = last.high - last.low;
+
+  // === 15m 相對位置，強化低多高空 ===
+  const bb15 = bb(c15);
+  if (bb15) {
+    const bbPos15 = (price - bb15.lower) / (bb15.upper - bb15.lower);
+    if (bbPos15 <= 0.12) { buyScore += 18; buyReasons.push('15m近下軌'); }
+    else if (bbPos15 <= 0.25) { buyScore += 10; buyReasons.push('15m偏低'); }
+    if (bbPos15 >= 0.88) { sellScore += 18; sellReasons.push('15m近上軌'); }
+    else if (bbPos15 >= 0.75) { sellScore += 10; sellReasons.push('15m偏高'); }
+  }
+
+  // === 15m K 線型態 ===
+  if (klines15m.length >= 3) {
+    const last = klines15m[klines15m.length - 1];
+    const prev = klines15m[klines15m.length - 2];
+    const body = Math.abs(last.close - last.open);
+    const range = last.high - last.low;
     
-    // Bullish pin bar (long lower wick)
-    if (rangeLast > 0 && (Math.min(last.open, last.close) - last.low) / rangeLast > 0.65 && bodyLast / rangeLast < 0.25) {
-      signals.buySignals.push('BULLISH_PIN_BAR');
-      signals.buyScore += 1;
-      if (signals.strategies.REVERSAL && signals.strategies.REVERSAL.direction === 'LONG') {
-        signals.strategies.REVERSAL.confidence += 1;
-      }
+    // Pin bar
+    if (range > 0) {
+      const lowerWick = (Math.min(last.open, last.close) - last.low) / range;
+      const upperWick = (last.high - Math.max(last.open, last.close)) / range;
+      if (lowerWick > 0.6 && body / range < 0.25) { buyScore += 10; buyReasons.push('看多Pin Bar'); }
+      if (upperWick > 0.6 && body / range < 0.25) { sellScore += 10; sellReasons.push('看空Pin Bar'); }
     }
-    // Bearish pin bar (long upper wick)
-    if (rangeLast > 0 && (last.high - Math.max(last.open, last.close)) / rangeLast > 0.65 && bodyLast / rangeLast < 0.25) {
-      signals.sellSignals.push('BEARISH_PIN_BAR');
-      signals.sellScore += 1;
-      if (signals.strategies.REVERSAL && signals.strategies.REVERSAL.direction === 'SHORT') {
-        signals.strategies.REVERSAL.confidence += 1;
-      }
-    }
-    // Bullish engulfing
+
+    // Engulfing
     if (prev.close < prev.open && last.close > last.open && last.close > prev.open && last.open < prev.close) {
-      signals.buySignals.push('BULLISH_ENGULFING');
-      signals.buyScore += 1.5;
+      buyScore += 12; buyReasons.push('多頭吞噬');
     }
-    // Bearish engulfing
     if (prev.close > prev.open && last.close < last.open && last.close < prev.open && last.open > prev.close) {
-      signals.sellSignals.push('BEARISH_ENGULFING');
-      signals.sellScore += 1.5;
+      sellScore += 12; sellReasons.push('空頭吞噬');
     }
   }
 
-  // === Strategy 4: MOMENTUM ===
-  if (analysis.raw15m && analysis.raw15m.length >= 3) {
-    const recent = analysis.raw15m.slice(-3);
-    const momentum = (recent[2].close - recent[0].open) / recent[0].open * 100;
-    if (Math.abs(momentum) > 0.5) {
-      if (momentum > 0) {
-        signals.buySignals.push(`MOMENTUM_UP_${momentum.toFixed(2)}%`);
-        signals.buyScore += 1.5;
-        signals.strategies.MOMENTUM = { direction: 'LONG', confidence: 1.5, momentum };
-      } else {
-        signals.sellSignals.push(`MOMENTUM_DOWN_${momentum.toFixed(2)}%`);
-        signals.sellScore += 1.5;
-        signals.strategies.MOMENTUM = { direction: 'SHORT', confidence: 1.5, momentum };
-      }
-      // MACD confirmation
-      if (tf15.macd) {
-        if (momentum > 0 && tf15.macd.histogram > 0 && tf15.macd.histogram > tf15.macd.prevHistogram) {
-          signals.buyScore += 0.5;
-          signals.buySignals.push('MACD_CONFIRM_UP');
-        }
-        if (momentum < 0 && tf15.macd.histogram < 0 && tf15.macd.histogram < tf15.macd.prevHistogram) {
-          signals.sellScore += 0.5;
-          signals.sellSignals.push('MACD_CONFIRM_DOWN');
-        }
-      }
+  // === 量能確認 ===
+  if (klines15m.length >= 20) {
+    const recentVol = klines15m.slice(-5).reduce((s, k) => s + k.volume, 0) / 5;
+    const avgVol = klines15m.slice(-20, -5).reduce((s, k) => s + k.volume, 0) / 15;
+    if (recentVol > avgVol * 1.5) {
+      buyScore += 8; sellScore += 8;
+      buyReasons.push('量能放大'); sellReasons.push('量能放大');
+    }
+    if (recentVol < avgVol * 0.3) {
+      buyScore -= 3; sellScore -= 3;  // v4: 只有極度量縮才扣分，且降低懲罰
     }
   }
 
-  // === Strategy 5: FUNDING_ARB ===
-  if (funding) {
-    const rate = funding.nextFundingRate;
-    if (rate > 0.0005) { // > 0.05%
-      signals.sellSignals.push(`HIGH_FUNDING_${(rate*100).toFixed(3)}%`);
-      signals.sellScore += 1;
-      signals.strategies.FUNDING_ARB = { direction: 'SHORT', confidence: 1, rate };
-    }
-    if (rate < -0.0005) {
-      signals.buySignals.push(`NEG_FUNDING_${(rate*100).toFixed(3)}%`);
-      signals.buyScore += 1;
-      signals.strategies.FUNDING_ARB = { direction: 'LONG', confidence: 1, rate };
-    }
+  // === 動量（3 根 15m 累積漲跌 > 0.5%）===
+  if (klines15m.length >= 3) {
+    const last3 = klines15m.slice(-3);
+    const mom = (last3[2].close - last3[0].open) / last3[0].open * 100;
+    if (mom > 0.5) { buyScore += 10; buyReasons.push(`動量+${mom.toFixed(2)}%`); }
+    if (mom < -0.5) { sellScore += 10; sellReasons.push(`動量${mom.toFixed(2)}%`); }
   }
 
-  // === EMA alignment bonus ===
-  if (tf15.ema8 && tf15.ema21 && tf15.ema55) {
-    if (tf15.ema8 > tf15.ema21 && tf15.ema21 > tf15.ema55) {
-      signals.buySignals.push('EMA_BULL_ALIGN');
-      signals.buyScore += 1;
-    }
-    if (tf15.ema8 < tf15.ema21 && tf15.ema21 < tf15.ema55) {
-      signals.sellSignals.push('EMA_BEAR_ALIGN');
-      signals.sellScore += 1;
-    }
+  // === 4H Gate: 反趨勢信號砍半 ===
+  if (trend4h === 'UP') {
+    buyScore += 6;
+    sellScore *= 0.55;
+  }
+  if (trend4h === 'DOWN') {
+    sellScore += 6;
+    buyScore *= 0.55;
   }
 
-  // === MACD crossover ===
-  if (tf15.macd) {
-    if (tf15.macd.histogram > 0 && tf15.macd.prevHistogram <= 0) {
-      signals.buySignals.push('MACD_BULL_CROSS');
-      signals.buyScore += 1;
-    }
-    if (tf15.macd.histogram < 0 && tf15.macd.prevHistogram >= 0) {
-      signals.sellSignals.push('MACD_BEAR_CROSS');
-      signals.sellScore += 1;
-    }
+  // 資金費率做輕量過濾
+  if (fundingData?.rate > 0.0008) {
+    sellScore += 5;
+    sellReasons.push('資金費率偏熱');
+  }
+  if (fundingData?.rate < -0.0008) {
+    buyScore += 5;
+    buyReasons.push('資金費率偏冷');
   }
 
-  // === 4H trend gate: penalize counter-trend ===
-  if (trend4h === 'bullish') {
-    signals.sellScore *= 0.5; // Halve short signals against 4H uptrend
-  } else if (trend4h === 'bearish') {
-    signals.buyScore *= 0.5; // Halve long signals against 4H downtrend
+  // === Active session boost ===
+  const session = isActiveSession();
+  if (session) { buyScore *= 1.15; sellScore *= 1.15; }
+  if (isDeadZone()) { buyScore *= 0.5; sellScore *= 0.5; }
+
+  // Determine direction
+  const maxScore = Math.max(buyScore, sellScore);
+  const direction = buyScore > sellScore ? 'LONG' : 'SHORT';
+  const reasons = direction === 'LONG' ? buyReasons : sellReasons;
+  
+  // Must have clear directional edge (>30% stronger)
+  const minScore = Math.min(buyScore, sellScore);
+  const edge = maxScore > 0 ? (maxScore - minScore) / maxScore : 0;
+  if (edge < 0.25) {
+    return { score: Math.round(maxScore * 0.5), direction: null, strategy: null, marketState, reason: `方向不明確 (edge=${(edge*100).toFixed(0)}%)`, buyScore, sellScore, trend4h };
   }
 
-  // Apply strategy weights
-  const state = loadState();
-  for (const [strat, info] of Object.entries(signals.strategies)) {
-    const weight = state.strategyWeights[strat] || 1.0;
-    if (info.direction === 'LONG') signals.buyScore *= (1 + (weight - 1) * 0.5);
-    if (info.direction === 'SHORT') signals.sellScore *= (1 + (weight - 1) * 0.5);
+  // Determine strategy
+  let strategy = 'TREND_FOLLOW';
+  if (klines15m.length >= 3) {
+    const mom = Math.abs((klines15m[klines15m.length - 1].close - klines15m[klines15m.length - 3].open) / klines15m[klines15m.length - 3].open * 100);
+    if (mom > 0.5) strategy = 'MOMENTUM';
   }
 
-  // === Momentum Pattern Analysis (50-bar) ===
-  const momentumAnalysis = analyzeMomentumPatterns(analysis.raw15m);
-  if (momentumAnalysis.score >= 2) {
-    if (momentumAnalysis.direction === 'bullish') {
-      signals.buySignals.push(...momentumAnalysis.signals);
-      signals.buyScore += momentumAnalysis.score;
-    } else if (momentumAnalysis.direction === 'bearish') {
-      signals.sellSignals.push(...momentumAnalysis.signals);
-      signals.sellScore += momentumAnalysis.score;
-    }
-  }
-
-  // === Session awareness ===
-  const session = getCurrentSession();
-  if (session === 'DEAD_ZONE') {
-    // Reduce all scores during dead zone (high 插針 risk)
-    signals.buyScore *= 0.6;
-    signals.sellScore *= 0.6;
-    signals.buySignals.push('DEAD_ZONE_PENALTY');
-    signals.sellSignals.push('DEAD_ZONE_PENALTY');
-  }
-  if (session === 'EUROPE_OPEN' || session === 'US_OPEN') {
-    // Slight boost during active sessions
-    signals.buyScore *= 1.1;
-    signals.sellScore *= 1.1;
-  }
-
-  signals.trend4h = trend4h;
-  signals.marketState = marketState;
-  signals.session = session;
-  signals.momentum = momentumAnalysis;
-  return signals;
+  return {
+    score: Math.round(maxScore),
+    direction,
+    strategy,
+    marketState,
+    trend4h,
+    reasons,
+    buyScore: Math.round(buyScore),
+    sellScore: Math.round(sellScore),
+    rsi15: rsi15 ? Math.round(rsi15) : null,
+    session: session || (isDeadZone() ? 'DEAD_ZONE' : 'TRANSITION')
+  };
 }
 
 // ============ Position Sizing ============
 
-function calculatePositionSize(balance, price, atr, confidence, leverage, state) {
-  // Confidence-based sizing
-  let pct;
-  if (confidence >= 5) pct = MAX_POSITION_PCT;  // 35%
-  else if (confidence >= 4) pct = 0.30;          // 30%
-  else if (confidence >= 3) pct = 0.20;          // 20%
-  else if (confidence >= 2) pct = 0.12;          // 12%
-  else return 0; // Not enough confidence
-
-  // Rolling compound: boost after consecutive wins
-  const consecutiveWins = state.dailyStats ? countConsecutiveWins(state) : 0;
-  if (consecutiveWins > 0) {
-    const boost = Math.min(MAX_COMPOUND_BOOST, consecutiveWins * COMPOUND_WIN_BOOST);
-    pct = Math.min(MAX_POSITION_PCT + MAX_COMPOUND_BOOST, pct + boost);
-    log(`📈 Rolling compound: +${(boost*100).toFixed(0)}% size boost (${consecutiveWins} consecutive wins)`);
-  }
-
-  const effectiveLeverage = leverage || BASE_LEVERAGE;
-  const margin = balance * pct;
-  const notionalValue = margin * effectiveLeverage;
-  let quantity = notionalValue / price;
+function calcPositionSize(balance, price, atrVal) {
+  const margin = balance * MAX_POSITION_PCT;
+  const notional = margin * LEVERAGE;
+  let qty = notional / price;
   
-  // Round to 3 decimal places (Binance BTC minimum)
-  quantity = Math.floor(quantity * 1000) / 1000;
+  // v3.1: 止損距離 = 1.5 ATR
+  const slDist = atrVal * SL_ATR_MULT;
+  const maxLoss = balance * MAX_LOSS_PER_TRADE_PCT;
+  const maxQty = maxLoss / slDist;
   
-  // Ensure minimum order size (0.001 BTC for BTCUSDT)
-  if (quantity < 0.001) return 0;
+  qty = Math.min(qty, maxQty);
+  qty = Math.floor(qty * 1000) / 1000;
   
-  // Verify max loss per trade (based on actual balance, not leveraged)
-  const stopDistance = atr * 1.5; // Typical stop distance
-  const maxLoss = quantity * stopDistance;
-  const maxAllowed = balance * MAX_LOSS_PER_TRADE_PCT;
-  
-  if (maxLoss > maxAllowed) {
-    quantity = Math.floor((maxAllowed / stopDistance) * 1000) / 1000;
-  }
-  
-  return quantity;
+  return qty >= 0.001 ? qty : 0;
 }
 
-function countConsecutiveWins(state) {
-  const history = state.tradeHistory || [];
-  let count = 0;
-  for (let i = history.length - 1; i >= 0; i--) {
-    if (history[i].pnl > 0) count++;
-    else break;
+// ============ Trailing Stop ============
+
+function checkTrailingStop(state, markPrice) {
+  if (!state.position || !state.trailingStop) return { shouldUpdate: false };
+  
+  const entry = state.position.entryPrice;
+  const isLong = state.position.side === 'LONG';
+  const pnlPct = isLong
+    ? (markPrice - entry) / entry * 100
+    : (entry - markPrice) / entry * 100;
+  
+  let newStop = state.trailingStop.currentStop;
+  
+  // v3.1: 漸進式追蹤，不設天花板，讓利潤跑
+  // 階段 1: +0.3% → 保本
+  if (pnlPct >= 0.3) {
+    newStop = entry;
   }
-  return count;
+  // 階段 2: +0.8% → 追蹤 0.5%（寬鬆跟隨）
+  if (pnlPct >= 0.8) {
+    const trail = isLong ? markPrice * 0.995 : markPrice * 1.005;
+    const betterThanBreakeven = isLong ? trail > entry : trail < entry;
+    if (betterThanBreakeven) newStop = trail;
+  }
+  // 階段 3: +1.5% → 追蹤 0.35%
+  if (pnlPct >= 1.5) {
+    const trail = isLong ? markPrice * 0.9965 : markPrice * 1.0035;
+    if (isLong ? trail > newStop : trail < newStop) newStop = trail;
+  }
+  // 階段 4: +2.5% → 追蹤 0.25%（大賺時鎖利）
+  if (pnlPct >= 2.5) {
+    const trail = isLong ? markPrice * 0.9975 : markPrice * 1.0025;
+    if (isLong ? trail > newStop : trail < newStop) newStop = trail;
+  }
+  // 階段 5: +4.0% → 追蹤 0.2%（超大波段更緊）
+  if (pnlPct >= 4.0) {
+    const trail = isLong ? markPrice * 0.998 : markPrice * 1.002;
+    if (isLong ? trail > newStop : trail < newStop) newStop = trail;
+  }
+  
+  const improved = isLong ? newStop > state.trailingStop.currentStop : newStop < state.trailingStop.currentStop;
+  return { shouldUpdate: improved, newStop, pnlPct };
 }
 
-// ============ Trailing Stop Management ============
+// ============ Position Management ============
 
-function manageTrailingStop(state, currentPrice) {
-  if (!state.position || !state.trailingStop) return state;
+function shouldClosePosition(state, livePos, signal) {
+  if (!livePos || !state.position) return { close: false };
   
-  const pos = state.position;
-  const ts = state.trailingStop;
-  const entryPrice = pos.entryPrice;
-  
-  let pnlPct;
-  if (pos.side === 'LONG') {
-    pnlPct = ((currentPrice - entryPrice) / entryPrice) * 100;
-  } else {
-    pnlPct = ((entryPrice - currentPrice) / entryPrice) * 100;
+  const entry = state.position.entryPrice;
+  const isLong = livePos.side === 'LONG';
+  const pnlPct = isLong
+    ? (livePos.markPrice - entry) / entry * 100
+    : (entry - livePos.markPrice) / entry * 100;
+  const holdMs = Date.now() - new Date(state.position.openTime).getTime();
+  const holdHours = holdMs / 3600000;
+
+  // 1. 強反轉信號
+  const oppositeScore = isLong ? signal.sellScore : signal.buyScore;
+  const sameScore = isLong ? signal.buyScore : signal.sellScore;
+  if (oppositeScore >= 55 && oppositeScore > sameScore * 1.8) {
+    return { close: true, reason: `強反轉信號(${oppositeScore})` };
   }
 
-  // Trailing stop ladder
-  let newStopLevel = ts.currentStop;
-  
-  if (pnlPct >= 3.0) {
-    // Lock 50% of profits
-    const lockPct = pnlPct * 0.5;
-    if (pos.side === 'LONG') newStopLevel = entryPrice * (1 + lockPct / 100);
-    else newStopLevel = entryPrice * (1 - lockPct / 100);
-  } else if (pnlPct >= 2.0) {
-    if (pos.side === 'LONG') newStopLevel = entryPrice * 1.015;
-    else newStopLevel = entryPrice * 0.985;
-  } else if (pnlPct >= 1.5) {
-    if (pos.side === 'LONG') newStopLevel = entryPrice * 1.01;
-    else newStopLevel = entryPrice * 0.99;
-  } else if (pnlPct >= 1.0) {
-    if (pos.side === 'LONG') newStopLevel = entryPrice * 1.006;
-    else newStopLevel = entryPrice * 0.994;
-  } else if (pnlPct >= 0.6) {
-    if (pos.side === 'LONG') newStopLevel = entryPrice * 1.003;
-    else newStopLevel = entryPrice * 0.997;
-  } else if (pnlPct >= 0.3) {
-    // Move to breakeven
-    newStopLevel = entryPrice;
+  // 2. v3.1: 持倉 > 6h + 浮虧 + 盤整 → 出場（虧損的不要耗著）
+  if (holdHours > 6 && pnlPct < -0.3 && (signal.marketState === 'CONSOLIDATING' || signal.marketState === 'RANGING')) {
+    return { close: true, reason: `盤整中浮虧${pnlPct.toFixed(2)}%` };
   }
-  
-  // Only tighten, never loosen
-  if (pos.side === 'LONG' && newStopLevel > ts.currentStop) {
-    ts.currentStop = newStopLevel;
-    ts.lastUpdate = new Date().toISOString();
-    ts.pnlPctAtUpdate = pnlPct;
-    return { ...state, trailingStop: ts, needStopUpdate: true };
+
+  // 3. 持倉 > 3h + 無方向 → 釋放資金
+  if (holdHours > 2.5 && pnlPct > -0.15 && pnlPct < 0.15) {
+    return { close: true, reason: `持倉${holdHours.toFixed(0)}h無方向` };
   }
-  if (pos.side === 'SHORT' && newStopLevel < ts.currentStop) {
-    ts.currentStop = newStopLevel;
-    ts.lastUpdate = new Date().toISOString();
-    ts.pnlPctAtUpdate = pnlPct;
-    return { ...state, trailingStop: ts, needStopUpdate: true };
-  }
-  
-  return state;
+
+  // 4. v3.1: 有利潤的不限時間，讓追蹤停損自己處理出場
+  //    不再因為「趨勢減弱」主動平倉 — 趨勢減弱會反映在價格回落觸發追蹤停損
+
+  return { close: false, pnlPct, holdHours };
 }
 
-// ============ Dashboard Update ============
+// ============ Dashboard ============
 
-function updateDashboard(state, balance, livePosition, signals) {
+function updateDashboard(state, balance, pos, signal) {
   const now = new Date();
-  const tzOffset = 8 * 60 * 60 * 1000;
-  const localTime = new Date(now.getTime() + tzOffset).toISOString().replace('T', ' ').slice(0, 16);
-  
+  const local = new Date(now.getTime() + 8 * 3600000).toISOString().replace('T', ' ').slice(0, 16);
   const ds = state.dailyStats;
   const ts = state.totalStats;
-  
+
   const dashboard = {
-    lastUpdate: localTime,
+    lastUpdate: local,
     status: state.status,
-    mode: '背水一戰模式',
+    mode: 'v3 精簡雙策略',
     exchange: 'Binance Futures',
     account: {
-      initialCapital: INITIAL_CAPITAL,
-      balance: balance ? balance.total : INITIAL_CAPITAL,
-      available: balance ? balance.available : INITIAL_CAPITAL,
-      unrealizedPnl: livePosition ? livePosition.unrealizedPnl : 0,
-      netEquity: balance ? (balance.total + (livePosition ? livePosition.unrealizedPnl : 0)) : INITIAL_CAPITAL,
-      todayPnl: ds.pnl,
-      totalPnl: ts.pnl,
-      leverage: livePosition ? livePosition.leverage : BASE_LEVERAGE,
-      marginType: MARGIN_TYPE,
-      totalTrades: ts.trades,
-      winRate: ts.trades > 0 ? ((ts.wins / ts.trades) * 100).toFixed(1) + '%' : '--',
-      wins: ts.wins,
-      losses: ts.losses,
-      maxDrawdown: ts.maxDrawdown
+      initialCapital: INITIAL_CAPITAL, balance: balance?.total || 0,
+      available: balance?.available || 0, unrealizedPnl: pos?.unrealizedPnl || 0,
+      netEquity: (balance?.total || 0) + (pos?.unrealizedPnl || 0),
+      todayPnl: ds.pnl, totalPnl: ts.pnl, leverage: LEVERAGE,
+      totalTrades: ts.trades, winRate: ts.trades > 0 ? ((ts.wins / ts.trades) * 100).toFixed(1) + '%' : '--',
+      wins: ts.wins, losses: ts.losses, maxDrawdown: ts.maxDrawdown
     },
-    position: livePosition ? {
-      symbol: SYMBOL,
-      side: livePosition.side,
-      size: livePosition.size,
-      entryPrice: livePosition.entryPrice,
-      markPrice: livePosition.markPrice,
-      pnl: livePosition.unrealizedPnl,
-      leverage: livePosition.leverage,
-      liquidationPrice: livePosition.liquidationPrice,
-      trailingStop: state.trailingStop ? state.trailingStop.currentStop : null
+    position: pos ? {
+      symbol: SYMBOL, side: pos.side, size: pos.size,
+      entryPrice: pos.entryPrice, markPrice: pos.markPrice,
+      pnl: pos.unrealizedPnl, leverage: pos.leverage,
+      trailingStop: state.trailingStop?.currentStop || null
     } : null,
-    todayStats: {
-      trades: ds.trades,
-      wins: ds.wins,
-      losses: ds.losses,
-      pnl: ds.pnl,
-      bestTrade: ds.bestTrade,
-      worstTrade: ds.worstTrade,
-      consecutiveLosses: ds.consecutiveLosses
-    },
+    todayStats: { trades: ds.trades, wins: ds.wins, losses: ds.losses, pnl: ds.pnl, remaining: MAX_DAILY_TRADES - ds.trades },
     totalStats: ts,
-    signals: signals ? {
-      marketState: signals.marketState || 'N/A',
-      trend4h: signals.trend4h || 'N/A',
-      buyScore: signals.buyScore ? signals.buyScore.toFixed(1) : '0',
-      sellScore: signals.sellScore ? signals.sellScore.toFixed(1) : '0',
-      session: signals.session || getCurrentSession(),
-      momentum: signals.momentum ? {
-        direction: signals.momentum.direction,
-        score: signals.momentum.score,
-        mom5: signals.momentum.mom5,
-        acceleration: signals.momentum.acceleration
-      } : null,
-      activeSignals: [...(signals.buySignals || []), ...(signals.sellSignals || [])].slice(0, 8)
+    signals: signal ? {
+      score: signal.score, direction: signal.direction, strategy: signal.strategy,
+      marketState: signal.marketState, trend4h: signal.trend4h,
+      session: signal.session, reasons: signal.reasons || [],
+      buyScore: signal.buyScore, sellScore: signal.sellScore
     } : null,
-    strategyWeights: state.strategyWeights,
     recentTrades: (state.tradeHistory || []).slice(-10).reverse(),
     riskStatus: {
-      dailyLossUsed: `$${Math.abs(ds.pnl < 0 ? ds.pnl : 0).toFixed(2)} / $${DAILY_LOSS_LIMIT.toFixed(2)}`,
+      dailyLossUsed: `$${Math.abs(Math.min(ds.pnl, 0)).toFixed(2)} / $${DAILY_LOSS_LIMIT.toFixed(2)}`,
+      dailyTradesUsed: `${ds.trades} / ${MAX_DAILY_TRADES}`,
       consecutiveLosses: `${ds.consecutiveLosses} / ${CONSECUTIVE_LOSS_PAUSE}`,
-      paused: ds.pauseUntil ? new Date(ds.pauseUntil) > new Date() : false
-    },
-    alerts: []
+      paused: ds.pauseUntil ? new Date(ds.pauseUntil) > now : false
+    }
   };
 
-  // Add alerts
-  if (ds.pnl < -DAILY_LOSS_LIMIT * 0.7) dashboard.alerts.push('⚠️ 接近日虧上限');
-  if (ds.consecutiveLosses >= 2) dashboard.alerts.push(`⚠️ 已連虧 ${ds.consecutiveLosses} 筆`);
-  if (livePosition && Math.abs(livePosition.unrealizedPnl) > INITIAL_CAPITAL * 0.03) {
-    dashboard.alerts.push(`📊 持倉 P/L ${livePosition.unrealizedPnl > 0 ? '+' : ''}$${livePosition.unrealizedPnl.toFixed(2)}`);
-  }
-
-  try {
-    fs.writeFileSync(DASHBOARD_FILE, JSON.stringify(dashboard, null, 2));
-  } catch (e) {
-    log(`⚠️ Dashboard write error: ${e.message}`);
-  }
+  try { fs.writeFileSync(DASHBOARD_FILE, JSON.stringify(dashboard, null, 2)); } catch (e) { log(`⚠️ Dashboard: ${e.message}`); }
 }
 
-// ============ Main Decision Engine ============
+// ============ Trade Recording ============
+
+function recordTrade(state, pnl, strategy) {
+  const ds = state.dailyStats;
+  ds.trades++;
+  ds.pnl += pnl;
+  if (pnl > 0) {
+    ds.wins++; ds.consecutiveLosses = 0;
+    if (pnl > ds.bestTrade) ds.bestTrade = pnl;
+  } else {
+    ds.losses++; ds.consecutiveLosses++;
+    if (pnl < ds.worstTrade) ds.worstTrade = pnl;
+    if (ds.consecutiveLosses >= CONSECUTIVE_LOSS_PAUSE) {
+      ds.pauseUntil = new Date(Date.now() + PAUSE_DURATION_MS).toISOString();
+      log(`⏸️ 連虧${ds.consecutiveLosses}筆，暫停1小時`);
+    }
+  }
+
+  const ts = state.totalStats;
+  ts.trades++; if (pnl > 0) ts.wins++; else ts.losses++;
+  ts.pnl += pnl;
+  ts.winRate = ts.trades > 0 ? ts.wins / ts.trades : 0;
+  const bal = INITIAL_CAPITAL + ts.pnl;
+  if (bal > ts.peakBalance) ts.peakBalance = bal;
+  const dd = ((ts.peakBalance - bal) / ts.peakBalance) * 100;
+  if (dd > ts.maxDrawdown) ts.maxDrawdown = dd;
+
+  state.tradeHistory = state.tradeHistory || [];
+  state.tradeHistory.push({
+    time: new Date().toISOString(), symbol: SYMBOL,
+    side: state.position?.side || 'UNKNOWN',
+    entryPrice: state.position?.entryPrice || 0,
+    pnl: parseFloat(pnl.toFixed(2)), strategy,
+    reasons: state.position?.reasons || []
+  });
+  if (state.tradeHistory.length > 100) state.tradeHistory = state.tradeHistory.slice(-100);
+
+  // Save to log file
+  try {
+    const logEntries = fs.existsSync(LOG_FILE) ? JSON.parse(fs.readFileSync(LOG_FILE, 'utf8')) : [];
+    logEntries.push(state.tradeHistory[state.tradeHistory.length - 1]);
+    fs.writeFileSync(LOG_FILE, JSON.stringify(logEntries, null, 2));
+  } catch {}
+}
+
+// ============ Main Engine ============
 
 async function run() {
   const startTime = Date.now();
   let state = loadState();
-  
-  // Daily stats reset
-  const today = new Date().toISOString().slice(0, 10);
-  if (state.dailyStats.date !== today) {
-    log(`📅 New day: ${today} — resetting daily stats`);
-    state.dailyStats = freshDailyStats();
+
+  // Reset daily stats if new day
+  if (state.dailyStats.date !== today()) {
+    log(`📅 新的一天: ${today()}`);
+    state.dailyStats = { date: today(), trades: 0, wins: 0, losses: 0, pnl: 0, bestTrade: 0, worstTrade: 0, consecutiveLosses: 0, pauseUntil: null };
   }
 
   // Check pause
   if (state.dailyStats.pauseUntil && new Date(state.dailyStats.pauseUntil) > new Date()) {
-    log(`⏸️ Paused until ${state.dailyStats.pauseUntil}`);
+    log(`⏸️ 暫停中至 ${state.dailyStats.pauseUntil}`);
     saveState(state);
     return;
   }
 
   // Check daily loss limit
   if (state.dailyStats.pnl <= -DAILY_LOSS_LIMIT) {
-    log(`🛑 Daily loss limit reached: $${state.dailyStats.pnl.toFixed(2)} — stopping for today`);
+    log(`🛑 日虧上限 $${DAILY_LOSS_LIMIT.toFixed(0)} 已達，今日停機`);
     state.status = 'DAILY_LIMIT';
     saveState(state);
-    updateDashboard(state, null, null, null);
     return;
   }
 
   try {
-    // Setup margin type (leverage set dynamically per trade)
+    // Set leverage & margin type
+    try { await apiRequest('POST', '/fapi/v1/leverage', { symbol: SYMBOL, leverage: LEVERAGE }); } catch {}
     try { await apiRequest('POST', '/fapi/v1/marginType', { symbol: SYMBOL, marginType: MARGIN_TYPE }); } catch {}
 
     // Fetch data
-    const [analysis, balance, livePosition] = await Promise.all([
-      getFullAnalysis(SYMBOL),
+    const [klines15m, klines1h, klines4h, funding, balance, livePos] = await Promise.all([
+      getKlines(SYMBOL, '15m', 100),
+      getKlines(SYMBOL, '1h', 100),
+      getKlines(SYMBOL, '4h', 50),
+      getFundingRate(),
       getBalance(),
-      getPositions()
+      getLivePosition()
     ]);
 
-    if (!analysis || !analysis.price) {
-      log('❌ Failed to get market data');
-      return;
-    }
+    const price = klines15m[klines15m.length - 1].close;
+    const atrVal = atr(klines15m) || price * 0.005;
+    const signal = scoreSignals(klines15m, klines1h, klines4h, funding, price);
 
-    state.lastAnalysis = {
-      time: analysis.timestamp,
-      price: analysis.price,
-      marketState: analysis.marketState
-    };
+    state.lastAnalysis = { time: new Date().toISOString(), price, marketState: signal.marketState, score: signal.score, direction: signal.direction };
 
-    const signals = detectSignals(analysis);
-    const atr15 = analysis.timeframes['15m'].atr;
-
-    // ====== POSITION MANAGEMENT (v2: 智能持倉) ======
-    if (livePosition) {
-      const holdMs = state.position ? Date.now() - new Date(state.position.openTime).getTime() : 0;
-      const holdHours = holdMs / (1000 * 60 * 60);
-      log(`📊 Position: ${livePosition.side} ${livePosition.size} @ ${livePosition.entryPrice} | P/L: $${livePosition.unrealizedPnl.toFixed(2)} | Mark: ${livePosition.markPrice} | Hold: ${holdHours.toFixed(1)}h`);
-      
+    // ====== HAS POSITION ======
+    if (livePos) {
       if (!state.position) {
-        state.position = {
-          side: livePosition.side,
-          entryPrice: livePosition.entryPrice,
-          size: livePosition.size,
-          openTime: new Date().toISOString(),
-          strategy: 'UNKNOWN'
-        };
+        state.position = { side: livePos.side, entryPrice: livePos.entryPrice, size: livePos.size, openTime: new Date().toISOString(), strategy: 'UNKNOWN', reasons: [] };
       }
 
-      state = manageTrailingStop(state, livePosition.markPrice);
-      if (state.needStopUpdate && state.trailingStop) {
+      const pnlPct = livePos.side === 'LONG'
+        ? (livePos.markPrice - livePos.entryPrice) / livePos.entryPrice * 100
+        : (livePos.entryPrice - livePos.markPrice) / livePos.entryPrice * 100;
+      
+      log(`📊 ${livePos.side} ${livePos.size} @ ${livePos.entryPrice} | PnL: $${livePos.unrealizedPnl.toFixed(2)} (${pnlPct.toFixed(2)}%) | Market: ${signal.marketState} | Score: ${signal.score}`);
+
+      // Trailing stop
+      const ts = checkTrailingStop(state, livePos.markPrice);
+      if (ts.shouldUpdate) {
         try {
-          await updateStopLoss(state.trailingStop.currentStop);
-          log(`🔄 Trailing stop updated to ${state.trailingStop.currentStop.toFixed(1)}`);
-        } catch (e) { log(`⚠️ Failed to update trailing stop: ${e.message}`); }
-        delete state.needStopUpdate;
+          await updateStopLoss(ts.newStop);
+          state.trailingStop.currentStop = ts.newStop;
+          log(`🔄 Trailing stop → ${ts.newStop.toFixed(1)} (PnL ${ts.pnlPct.toFixed(2)}%)`);
+        } catch (e) { log(`⚠️ SL update failed: ${e.message}`); }
       }
 
-      const isLong = livePosition.side === 'LONG';
-      const oppositeScore = isLong ? signals.sellScore : signals.buyScore;
-      const sameScore = isLong ? signals.buyScore : signals.sellScore;
-      const pnlPct = isLong
-        ? (livePosition.markPrice - livePosition.entryPrice) / livePosition.entryPrice * 100
-        : (livePosition.entryPrice - livePosition.markPrice) / livePosition.entryPrice * 100;
-
-      let shouldClose = false;
-      let closeReason = '';
-
-      // 1. 強反轉信號 → 平倉
-      if (oppositeScore >= 4 && oppositeScore > sameScore * 2) {
-        shouldClose = true;
-        closeReason = `強反轉信號 (opposite=${oppositeScore.toFixed(1)})`;
-      }
-
-      // 2. 盤整市場 + 持倉虧損 + 超過 2 小時 → 止損出場
-      if (!shouldClose && signals.marketState === 'CONSOLIDATING' && pnlPct < -0.3 && holdHours > 2) {
-        shouldClose = true;
-        closeReason = `盤整市場浮虧${pnlPct.toFixed(2)}%超2h，止損出場`;
-      }
-
-      // 3. 盤整市場 + 微利/打平 + 超過 4 小時 → 出場釋放資金
-      if (!shouldClose && signals.marketState === 'CONSOLIDATING' && Math.abs(pnlPct) < 0.5 && holdHours > 4) {
-        shouldClose = true;
-        closeReason = `盤整4h+微利，釋放資金找更好機會`;
-      }
-
-      // 4. 趨勢市場 + 有利潤 → 不急著走，讓利潤奔跑
-      if (!shouldClose && (signals.marketState === 'TRENDING_UP' || signals.marketState === 'TRENDING_DOWN')) {
-        if (pnlPct > 0 && sameScore < 1 && holdHours > 1) {
-          shouldClose = true;
-          closeReason = `趨勢減弱(score=${sameScore.toFixed(1)})，鎖利出場`;
-        }
-        if (pnlPct > 0.5) {
-          log(`📈 趨勢市場中持倉獲利 ${pnlPct.toFixed(2)}%，繼續持有`);
-        }
-      }
-
-      // 5. 有回調潛力就不硬性平倉（老闆要求）
-      if (!shouldClose && holdHours > 6) {
-        const tf15 = analysis.timeframes['15m'];
-        const hasRoomToMove = isLong
-          ? (tf15.rsi !== null && tf15.rsi < 65)
-          : (tf15.rsi !== null && tf15.rsi > 35);
-        
-        if (pnlPct > 0 && hasRoomToMove && sameScore >= 2) {
-          log(`⏳ 持倉 ${holdHours.toFixed(1)}h 但有回調潛力(RSI=${tf15.rsi?.toFixed(1)}), 繼續持有`);
-        } else if (pnlPct < -0.5) {
-          shouldClose = true;
-          closeReason = `持倉 ${holdHours.toFixed(1)}h 浮虧${pnlPct.toFixed(2)}%，無回調跡象`;
-        } else if (Math.abs(pnlPct) < 0.2 && holdHours > 12) {
-          shouldClose = true;
-          closeReason = `持倉超12h且打平，釋放資金`;
-        }
-      }
-
-      if (shouldClose) {
-        log(`🔄 ${closeReason}`);
+      // Check close conditions
+      const closeCheck = shouldClosePosition(state, livePos, signal);
+      if (closeCheck.close) {
+        log(`🔄 平倉: ${closeCheck.reason}`);
         try {
-          const closeResult = await closePosition();
-          if (closeResult) {
-            const pnl = livePosition.unrealizedPnl;
-            recordTrade(state, pnl, state.position.strategy);
-            state.position = null;
-            state.trailingStop = null;
-            log(`✅ Position closed, P/L: $${pnl.toFixed(2)}`);
-          }
-        } catch (e) { log(`❌ Close position failed: ${e.message}`); }
+          await closePosition();
+          recordTrade(state, livePos.unrealizedPnl, state.position.strategy);
+          log(`✅ 平倉完成 PnL: $${livePos.unrealizedPnl.toFixed(2)}`);
+          state.position = null;
+          state.trailingStop = null;
+        } catch (e) { log(`❌ 平倉失敗: ${e.message}`); }
       }
     }
     // ====== NO POSITION — LOOK FOR ENTRY ======
@@ -1002,222 +800,82 @@ async function run() {
       state.position = null;
       state.trailingStop = null;
 
-      const maxScore = Math.max(signals.buyScore, signals.sellScore);
-      const direction = signals.buyScore > signals.sellScore ? 'LONG' : 'SHORT';
-      const confidence = maxScore;
-      
-      const session = getCurrentSession();
-      const mktState = signals.marketState || 'UNKNOWN';
-      log(`📈 Signals — Buy: ${signals.buyScore.toFixed(1)} | Sell: ${signals.sellScore.toFixed(1)} | Market: ${mktState} | 4H: ${signals.trend4h} | Session: ${session}`);
-      if (signals.momentum && signals.momentum.score > 0) {
-        log(`📊 Momentum — ${signals.momentum.direction} | Score: ${signals.momentum.score} | 5m: ${signals.momentum.mom5}% | Accel: ${signals.momentum.acceleration} | Vol: ${signals.momentum.volumeTrend}`);
+      // Check daily trade limit
+      if (state.dailyStats.trades >= MAX_DAILY_TRADES) {
+        log(`⏭️ 今日已達 ${MAX_DAILY_TRADES} 筆上限`);
       }
-
-      // === v2 市場狀態自動策略切換 ===
-      let entryThreshold = 3;
-      let tpMultiplier = 1.5;
-      let slMultiplier = 1.5;
-
-      if (mktState === 'CONSOLIDATING' || mktState === 'RANGING') {
-        entryThreshold = 2.5;
-        tpMultiplier = 1.0;
-        slMultiplier = 1.0;
-        log(`🔄 盤整模式：區間交易，TP/SL 縮小`);
-      } else if (mktState === 'TRENDING_UP' || mktState === 'TRENDING_DOWN') {
-        entryThreshold = 3;
-        tpMultiplier = 2.5;
-        slMultiplier = 1.5;
-        log(`📈 趨勢模式：放大止盈空間`);
-      } else if (mktState === 'HIGH_VOLATILITY') {
-        entryThreshold = 4;
-        tpMultiplier = 2.0;
-        slMultiplier = 2.0;
-        log(`⚡ 高波動模式：提高進場門檻`);
+      // Signal threshold check
+      else if (signal.score < SIGNAL_THRESHOLD) {
+        log(`⏭️ 信號不足 ${signal.score}/${SIGNAL_THRESHOLD} | Market: ${signal.marketState} | ${signal.reason || ''}`);
       }
-      
-      if (maxScore >= entryThreshold && maxScore > Math.min(signals.buyScore, signals.sellScore) * 1.3) {
-        // Dynamic leverage
-        const dynamicLev = calculateDynamicLeverage(confidence, signals.marketState, signals);
-        try { await apiRequest('POST', '/fapi/v1/leverage', { symbol: SYMBOL, leverage: dynamicLev }); } catch {}
-        
-        // Calculate position size with rolling compound
-        const quantity = calculatePositionSize(balance.available, analysis.price, atr15 || analysis.price * 0.005, confidence, dynamicLev, state);
-        
-        if (quantity > 0) {
-          // Calculate stop loss
-          const slDistance = atr15 ? atr15 * slMultiplier : analysis.price * 0.008;
-          const stopLoss = direction === 'LONG' 
-            ? analysis.price - slDistance 
-            : analysis.price + slDistance;
-          
-          // Verify RR ratio — 根據市場狀態動態調整
-          const tpDistance = slDistance * tpMultiplier;
-          const potentialProfit = quantity * tpDistance;
-          const potentialLoss = quantity * slDistance;
-          const rr = potentialProfit / potentialLoss;
-          
-          if (rr >= MIN_RR_RATIO) {
-            // Determine primary strategy
-            let primaryStrategy = 'MIXED';
-            let maxConf = 0;
-            for (const [strat, info] of Object.entries(signals.strategies)) {
-              if (info.direction === direction && info.confidence > maxConf) {
-                maxConf = info.confidence;
-                primaryStrategy = strat;
-              }
-            }
-
-            log(`🎯 ENTRY: ${direction} ${quantity} BTC @ ~${analysis.price} | SL: ${stopLoss.toFixed(1)} | Lev: ${dynamicLev}x | Strategy: ${primaryStrategy} | Confidence: ${confidence.toFixed(1)}`);
-            
-            try {
-              const order = await openPosition(direction, quantity, stopLoss);
-              
-              state.position = {
-                side: direction,
-                entryPrice: analysis.price,
-                size: quantity,
-                openTime: new Date().toISOString(),
-                strategy: primaryStrategy,
-                stopLoss,
-                signals: direction === 'LONG' ? signals.buySignals : signals.sellSignals
-              };
-              
-              state.trailingStop = {
-                initialStop: stopLoss,
-                currentStop: stopLoss,
-                lastUpdate: new Date().toISOString(),
-                pnlPctAtUpdate: 0
-              };
-
-              state.lastTradeTime = new Date().toISOString();
-              log(`✅ Order filled: ${JSON.stringify({ orderId: order.orderId, avgPrice: order.avgPrice, status: order.status })}`);
-            } catch (e) {
-              log(`❌ Order failed: ${e.message}`);
-            }
-          } else {
-            log(`⏭️ RR ratio too low: ${rr.toFixed(2)} < ${MIN_RR_RATIO}`);
-          }
+      // No direction
+      else if (!signal.direction) {
+        log(`⏭️ 無明確方向 | Buy: ${signal.buyScore} | Sell: ${signal.sellScore}`);
+      }
+      // Cooldown check
+      else if (state.lastTradeTime && (Date.now() - new Date(state.lastTradeTime).getTime()) < COOLDOWN_MS) {
+        const coolLeft = Math.round((COOLDOWN_MS - (Date.now() - new Date(state.lastTradeTime).getTime())) / 60000);
+        log(`🧊 冷卻中，${coolLeft}分鐘後可進場`);
+      }
+      // GO!
+      else {
+        const qty = calcPositionSize(balance.available, price, atrVal);
+        if (qty <= 0) {
+          log(`⏭️ 倉位太小或餘額不足`);
         } else {
-          log(`⏭️ Position size too small or balance insufficient`);
+          // v3.1: 停損 = 1.5 ATR
+          const slDist = atrVal * SL_ATR_MULT;
+          const sl = signal.direction === 'LONG' ? price - slDist : price + slDist;
+          
+          // v3.1: 不設固定停利，用追蹤停損讓利潤跑
+          log(`🎯 進場! ${signal.direction} ${qty} BTC @ ~${price.toFixed(0)} | SL: ${sl.toFixed(0)} (-${(slDist/price*100).toFixed(2)}%) | TP: 追蹤(不設上限) | Score: ${signal.score} | ${signal.strategy} | ${(signal.reasons || []).join(', ')}`);
+
+          try {
+            const order = await openPosition(signal.direction, qty, sl);
+            state.position = {
+              side: signal.direction, entryPrice: price, size: qty,
+              openTime: new Date().toISOString(), strategy: signal.strategy,
+              stopLoss: sl, takeProfit: null, reasons: signal.reasons || []
+            };
+            state.trailingStop = { initialStop: sl, currentStop: sl, lastUpdate: new Date().toISOString() };
+            state.lastTradeTime = new Date().toISOString();
+            log(`✅ 下單成功 orderId: ${order.orderId}`);
+          } catch (e) {
+            log(`❌ 下單失敗: ${e.message}`);
+          }
         }
-      } else {
-        log(`⏭️ No strong signal (max score: ${maxScore.toFixed(1)})`);
       }
     }
 
-    // Check if position was closed by SL (compare state vs live)
-    if (state.position && !livePosition) {
-      // Position was closed (probably by stop loss)
-      log(`📉 Position appears closed by SL/TP`);
-      // We need to check recent trades to get actual PnL
+    // Check if position was closed externally (by SL)
+    if (state.position && !livePos) {
       try {
-        const recentTrades = await apiRequest('GET', '/fapi/v1/userTrades', { 
-          symbol: SYMBOL, limit: 5 
-        });
-        if (recentTrades.length > 0) {
-          // Sum recent trade PnL
-          const totalPnl = recentTrades
-            .filter(t => new Date(t.time) > new Date(state.position.openTime))
-            .reduce((sum, t) => sum + parseFloat(t.realizedPnl), 0);
-          
-          if (totalPnl !== 0) {
-            recordTrade(state, totalPnl, state.position.strategy);
-            log(`📊 SL/TP closed — P/L: $${totalPnl.toFixed(2)}`);
-          }
+        const trades = await apiRequest('GET', '/fapi/v1/userTrades', { symbol: SYMBOL, limit: 5 });
+        const recentPnl = trades
+          .filter(t => new Date(t.time) > new Date(state.position.openTime))
+          .reduce((s, t) => s + parseFloat(t.realizedPnl), 0);
+        if (recentPnl !== 0) {
+          recordTrade(state, recentPnl, state.position.strategy);
+          log(`📊 SL/TP 觸發 PnL: $${recentPnl.toFixed(2)}`);
         }
-      } catch (e) {
-        log(`⚠️ Could not fetch trade history: ${e.message}`);
-      }
+      } catch {}
       state.position = null;
       state.trailingStop = null;
     }
 
-    // Save & update
     state.status = 'RUNNING';
     saveState(state);
-    updateDashboard(state, balance, livePosition, signals);
+    updateDashboard(state, balance, livePos, signal);
 
     const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
-    log(`✅ Cycle complete in ${elapsed}s | Balance: $${balance.total.toFixed(2)} | Price: $${analysis.price}`);
+    log(`✅ Cycle ${elapsed}s | $${balance.total.toFixed(2)} | BTC $${price.toFixed(0)} | Score: ${signal.score} ${signal.direction || '-'}`);
 
   } catch (e) {
-    log(`❌ Engine error: ${e.message}\n${e.stack}`);
+    log(`❌ Engine error: ${e.message}`);
     state.status = 'ERROR';
     saveState(state);
     updateDashboard(state, null, null, null);
   }
 }
 
-function recordTrade(state, pnl, strategy) {
-  const ds = state.dailyStats;
-  ds.trades++;
-  ds.pnl += pnl;
-  
-  if (pnl > 0) {
-    ds.wins++;
-    ds.consecutiveLosses = 0;
-    ds.consecutiveWins = (ds.consecutiveWins || 0) + 1;
-    if (pnl > ds.bestTrade) ds.bestTrade = pnl;
-  } else {
-    ds.losses++;
-    ds.consecutiveLosses++;
-    ds.consecutiveWins = 0;
-    if (pnl < ds.worstTrade) ds.worstTrade = pnl;
-    
-    // Consecutive loss pause
-    if (ds.consecutiveLosses >= CONSECUTIVE_LOSS_PAUSE) {
-      ds.pauseUntil = new Date(Date.now() + PAUSE_DURATION_MS).toISOString();
-      log(`⏸️ ${ds.consecutiveLosses} consecutive losses — pausing for 1 hour`);
-    }
-  }
-
-  // Total stats
-  const ts = state.totalStats;
-  ts.trades++;
-  if (pnl > 0) ts.wins++;
-  else ts.losses++;
-  ts.pnl += pnl;
-  ts.winRate = ts.trades > 0 ? (ts.wins / ts.trades) : 0;
-  
-  const currentBalance = INITIAL_CAPITAL + ts.pnl;
-  if (currentBalance > ts.peakBalance) ts.peakBalance = currentBalance;
-  const drawdown = ((ts.peakBalance - currentBalance) / ts.peakBalance) * 100;
-  if (drawdown > ts.maxDrawdown) ts.maxDrawdown = drawdown;
-
-  // Trade history
-  state.tradeHistory.push({
-    time: new Date().toISOString(),
-    symbol: SYMBOL,
-    side: state.position ? state.position.side : 'UNKNOWN',
-    entryPrice: state.position ? state.position.entryPrice : 0,
-    pnl: parseFloat(pnl.toFixed(2)),
-    strategy,
-    signals: state.position ? state.position.signals : []
-  });
-
-  // Keep last 100 trades
-  if (state.tradeHistory.length > 100) {
-    state.tradeHistory = state.tradeHistory.slice(-100);
-  }
-
-  // Update strategy weights
-  if (strategy && state.strategyWeights[strategy] !== undefined) {
-    if (pnl > 0) {
-      state.strategyWeights[strategy] = Math.min(2.0, state.strategyWeights[strategy] + 0.05);
-    } else {
-      state.strategyWeights[strategy] = Math.max(0.3, state.strategyWeights[strategy] - 0.08);
-    }
-  }
-
-  // Save log
-  const logEntries = loadLog();
-  logEntries.push(state.tradeHistory[state.tradeHistory.length - 1]);
-  saveLog(logEntries);
-}
-
-// ============ Entry ============
-
-run().catch(e => {
-  log(`💥 Fatal: ${e.message}\n${e.stack}`);
-  process.exit(1);
-});
+run().catch(e => { log(`💥 Fatal: ${e.message}`); process.exit(1); });

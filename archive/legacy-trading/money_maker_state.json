@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "status": "RUNNING",
+  "mode": "grid_dca",
+  "positions": [
+    {
+      "entryPrice": 2204736.3,
+      "amount": 0.0004535689823767133,
+      "twd": 1000,
+      "time": 1775516762474,
+      "batch": 1,
+      "reason": "RSI超賣28, 跌破BB下軌"
+    },
+    {
+      "entryPrice": 2198087.7,
+      "amount": 0.000454940901584591,
+      "twd": 1000,
+      "time": 1775517662246,
+      "batch": 2,
+      "reason": "RSI超賣26, 跌破BB下軌"
+    },
+    {
+      "entryPrice": 2207111.1,
+      "amount": 0.0004530809527440644,
+      "twd": 1000,
+      "time": 1775518922632,
+      "batch": 3,
+      "reason": "RSI偏低33, 接近BB下軌"
+    }
+  ],
+  "totalInvested": 3000,
+  "avgEntryPrice": 2203305.0745693017,
+  "totalBtc": 0.0013615908367053686,
+  "gridBuyZone": null,
+  "gridSellZone": null,
+  "stopLoss": 2186170,
+  "dailyPnl": 0,
+  "dailyDate": "2026-04-07",
+  "totalPnl": 1405.2396151712949,
+  "totalTrades": 20,
+  "wins": 10,
+  "losses": 10,
+  "maxDrawdown": 97.28463332300089,
+  "peakEquity": 11427.381643723294,
+  "pauseUntil": null,
+  "lastDecision": {
+    "time": "2026-04-07T00:03:01.568Z",
+    "action": "WAIT",
+    "reasons": "RSI偏低36, MACD柱縮短(底部收斂)",
+    "price": 2208905.2
+  },
+  "tradeLog": [],
+  "lastSellTime": 1775516581740
+}

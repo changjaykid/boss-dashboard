@@ -1,914 +1,782 @@
 {
-  "lastUpdate": "2026-03-27 23:45:25",
-  "currentPrice": {
-    "GOLD": {
-      "bid": 4532.94,
-      "ask": 4533.44
-    },
-    "SILVER": {
-      "bid": 70.914,
-      "ask": 70.994
-    },
-    "COPPER": {
-      "bid": 5.53979,
-      "ask": 5.54251
-    },
-    "EURUSDM2026": {
-      "bid": 1.1578,
-      "ask": 1.15786
-    },
-    "US500": {
-      "bid": 6431.6,
-      "ask": 6432.0
-    },
-    "OIL_CRUDE": {
-      "bid": 96.521,
-      "ask": 96.553
-    },
-    "NATURALGAS": {
-      "bid": 3.0321,
-      "ask": 3.0371
-    }
-  },
-  "indicators": {
-    "GOLD": {
-      "name": "XAUUSD",
-      "regime": "TRENDING_UP",
-      "pa": "",
-      "pattern": "None",
-      "mtf_dir": "BUY",
-      "ew_pos": "Unknown"
-    },
-    "SILVER": {
-      "name": "XAGUSD",
-      "regime": "TRENDING_UP",
-      "pa": "",
-      "pattern": "Double Bottom",
-      "mtf_dir": "BUY",
-      "ew_pos": "Unknown"
-    },
-    "COPPER": {
-      "name": "\u9285",
-      "regime": "RANGING",
-      "pa": "",
-      "pattern": "Double Bottom",
-      "mtf_dir": "BUY",
-      "ew_pos": "Unknown"
-    },
-    "EURUSDM2026": {
-      "name": "EUR/USD",
-      "regime": "TRENDING_DOWN",
-      "pa": "",
-      "pattern": "Double Top",
-      "mtf_dir": "NONE",
-      "ew_pos": "Unknown"
-    },
-    "US500": {
-      "name": "S&P 500",
-      "regime": "TRENDING_DOWN",
-      "pa": "",
-      "pattern": "Double Top",
-      "mtf_dir": "SELL",
-      "ew_pos": "Unknown"
-    },
-    "OIL_CRUDE": {
-      "name": "\u539f\u6cb9",
-      "regime": "TRENDING_UP",
-      "pa": "",
-      "pattern": "Double Bottom",
-      "mtf_dir": "BUY",
-      "ew_pos": "Unknown"
-    },
-    "NATURALGAS": {
-      "name": "\u5929\u7136\u6c23",
-      "regime": "TRENDING_UP",
-      "pa": "",
-      "pattern": "Double Top",
-      "mtf_dir": "NONE",
-      "ew_pos": "Unknown"
-    }
-  },
+  "lastUpdate": "2026-04-07 17:10:22",
   "account": {
-    "balance": 30819.7,
-    "realizedPnl": -96.25,
-    "unrealizedPnl": 8.4,
-    "totalTrades": 56,
-    "closedTrades": 53,
-    "wins": 14,
-    "losses": 39,
-    "winRate": "26.4%"
+    "balance": 31022.3,
+    "realizedPnl": -439.36,
+    "unrealizedPnl": 45.21,
+    "netEquity": 31067.51,
+    "todayPnl": -11.51,
+    "weekPnl": -98.27,
+    "totalTrades": 210,
+    "closedTrades": 209,
+    "openCount": 1,
+    "wins": 38,
+    "losses": 171,
+    "winRate": "18.2%",
+    "avgWin": 10.62,
+    "avgLoss": -4.93,
+    "riskRewardRatio": 2.15,
+    "maxConsecutiveWins": 11,
+    "maxConsecutiveLosses": 109,
+    "maxSingleWin": 49.23,
+    "maxSingleLoss": -55.65,
+    "marginUsagePercent": "100.0%"
   },
+  "instruments": [
+    "GOLD",
+    "EURUSDM2026",
+    "GBPUSD",
+    "USDJPYM2026",
+    "US30",
+    "US500",
+    "US100"
+  ],
   "openPositions": [
     {
-      "dealId": "00000000-4bdb-165f-0460-7d740055311e",
+      "dealId": "00000000-4c97-32be-0460-7d740055311e",
       "direction": "BUY",
-      "size": 0.03,
-      "entryPrice": 4528.69,
-      "stopLevel": 4499.39,
-      "profitLevel": 4616.49,
-      "currentBid": 4531.49,
-      "currentAsk": 4531.99,
-      "pnl": 8.4,
+      "size": 0.01,
+      "entryPrice": 4640.4,
+      "stopLevel": 4604.8,
+      "profitLevel": 4711.6,
+      "currentBid": 4685.61,
+      "currentAsk": 4686.11,
+      "pnl": 45.21,
       "instrument": "Gold",
-      "epic": "GOLD"
+      "epic": "GOLD",
+      "createdDate": "2026-04-06T09:10:21.563"
     }
   ],
   "closedTrades": [
     {
-      "time": "2026-03-27T00:15:14.870084+00:00",
-      "instrument": "BTCUSD",
-      "instrumentName": "BTC/USD",
-      "strategy": "15M_\u52d5\u91cf\u7a81\u7834",
-      "direction": "BUY",
-      "confidence": 0.5,
-      "size": 0.02,
-      "entry_bid": 68854.1,
-      "entry_ask": 68904.1,
-      "stop_distance": 179.4,
-      "tp_distance": 645.9,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BULL",
-      "rsi_15m": 41.0,
-      "rsi_1h": 38.5,
-      "result": {
-        "dealReference": "o_3e817f9f-c513-4b05-95ee-12c12b28c172"
-      },
-      "outcome": "LOSS",
-      "pnl": -1.79,
-      "close_time": "2026-03-27T00:30:13.685808+00:00",
-      "close_reason": "AUTO_DETECTED"
-    },
-    {
-      "time": "2026-03-27T00:30:14.932590+00:00",
-      "instrument": "BTCUSD",
-      "instrumentName": "BTC/USD",
-      "strategy": "15M_\u52d5\u91cf\u7a81\u7834",
-      "direction": "SELL",
-      "confidence": 0.6,
-      "size": 0.05,
-      "entry_bid": 68657.35,
-      "entry_ask": 68707.35,
-      "stop_distance": 176.7,
-      "tp_distance": 636.3,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BULL",
-      "rsi_15m": 42.8,
-      "rsi_1h": 34.6,
-      "result": {
-        "dealReference": "o_aaf7a7fc-2717-43b4-ac39-3f9479e25ba8"
-      },
-      "outcome": "LOSS",
-      "pnl": -1.77,
-      "close_time": "2026-03-27T00:45:12.475084+00:00",
-      "close_reason": "AUTO_DETECTED"
-    },
-    {
-      "time": "2026-03-27T00:30:15.342615+00:00",
-      "instrument": "US500",
-      "instrumentName": "S&P 500",
-      "strategy": "15M_\u52d5\u91cf\u7a81\u7834",
-      "direction": "SELL",
-      "confidence": 0.6,
-      "size": 0.49,
-      "entry_bid": 6495.8,
-      "entry_ask": 6496.4,
-      "stop_distance": 7.5,
-      "tp_distance": 26.9,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BULL",
-      "rsi_15m": 58.2,
-      "rsi_1h": 38.1,
-      "result": {
-        "dealReference": "o_eb6e42f6-d2df-4cfc-b9b8-f27a06211987"
-      },
-      "outcome": "LOSS",
-      "pnl": -0.07,
-      "close_time": "2026-03-27T02:15:14.617844+00:00",
-      "close_reason": "AUTO_DETECTED"
-    },
-    {
-      "time": "2026-03-27T01:15:15.988714+00:00",
-      "instrument": "GOLD",
-      "instrumentName": "XAUUSD",
-      "strategy": "15M_\u52d5\u91cf\u7a81\u7834",
-      "direction": "BUY",
-      "confidence": 0.5,
-      "size": 0.02,
-      "entry_bid": 4395.63,
-      "entry_ask": 4396.13,
-      "stop_distance": 18.2,
-      "tp_distance": 65.5,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BULL",
-      "rsi_15m": 45.8,
-      "rsi_1h": 41.3,
-      "result": {
-        "dealReference": "o_dabfa0b8-f396-4055-803d-50b7fc5cc949"
-      },
-      "outcome": "WIN",
-      "pnl": 0.48,
-      "close_time": "2026-03-27T01:45:11.776581+00:00",
-      "close_reason": "PROFIT_TAKE"
-    },
-    {
-      "time": "2026-03-27T01:30:15.841939+00:00",
-      "instrument": "GOLD",
-      "instrumentName": "XAUUSD",
-      "strategy": "15M_\u52d5\u91cf\u7a81\u7834",
-      "direction": "BUY",
-      "confidence": 0.5,
-      "size": 0.02,
-      "entry_bid": 4406.26,
-      "entry_ask": 4406.76,
-      "stop_distance": 16.6,
-      "tp_distance": 59.8,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BULL",
-      "rsi_15m": 61.1,
-      "rsi_1h": 43.8,
-      "result": {
-        "dealReference": "o_213519bb-0de6-45a6-b4ca-88b5b18c7b3f"
-      },
-      "outcome": "WIN",
-      "pnl": 0.55,
-      "close_time": "2026-03-27T02:15:14.617805+00:00",
-      "close_reason": "PROFIT_TAKE"
-    },
-    {
-      "time": "2026-03-27T01:45:12.157457+00:00",
-      "instrument": "GOLD",
-      "instrumentName": "XAUUSD",
-      "strategy": "1H_EMA\u56de\u5f48",
-      "direction": "SELL",
-      "confidence": 0.55,
-      "size": 0.04,
-      "entry_bid": 4418.93,
-      "entry_ask": 4419.43,
-      "stop_distance": 28.7,
-      "tp_distance": 143.6,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BULL",
-      "rsi_15m": 58.0,
-      "rsi_1h": 45.7,
-      "result": {
-        "dealReference": "o_dc181ab3-e28d-464a-b9ec-131705e18c37"
-      },
-      "outcome": "LOSS",
-      "pnl": -0.29,
-      "close_time": "2026-03-27T05:00:13.095449+00:00",
-      "close_reason": "AUTO_DETECTED"
-    },
-    {
-      "time": "2026-03-27T02:00:14.826248+00:00",
-      "instrument": "GOLD",
-      "instrumentName": "XAUUSD",
-      "strategy": "1H_EMA\u56de\u5f48",
-      "direction": "SELL",
-      "confidence": 0.55,
-      "size": 0.04,
-      "entry_bid": 4417.72,
-      "entry_ask": 4418.22,
-      "stop_distance": 28.9,
-      "tp_distance": 144.4,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BULL",
-      "rsi_15m": 55.1,
-      "rsi_1h": 45.8,
-      "result": {
-        "dealReference": "o_6ada80b1-a80a-4f2b-a821-1141234acdf3"
-      },
-      "outcome": "LOSS",
-      "pnl": -0.29,
-      "close_time": "2026-03-27T05:00:13.095464+00:00",
-      "close_reason": "AUTO_DETECTED"
-    },
-    {
-      "time": "2026-03-27T02:45:14.414949+00:00",
-      "instrument": "GOLD",
-      "instrumentName": "XAUUSD",
-      "strategy": "1H_EMA\u56de\u5f48",
-      "direction": "SELL",
-      "confidence": 0.55,
-      "size": 0.04,
-      "entry_bid": 4429.98,
-      "entry_ask": 4430.48,
-      "stop_distance": 28.1,
-      "tp_distance": 140.7,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BULL",
-      "rsi_15m": 65.4,
-      "rsi_1h": 51.3,
-      "result": {
-        "dealReference": "o_511ed168-3c00-4f10-860d-8b53fdbaab60"
-      },
-      "outcome": "LOSS",
-      "pnl": -0.28,
-      "close_time": "2026-03-27T05:45:13.349347+00:00",
-      "close_reason": "AUTO_DETECTED"
-    },
-    {
-      "time": "2026-03-27T03:15:14.628895+00:00",
-      "instrument": "BTCUSD",
-      "instrumentName": "BTC/USD",
-      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
-      "direction": "SELL",
-      "confidence": 0.6,
-      "size": 0.05,
-      "entry_bid": 68688.55,
-      "entry_ask": 68738.55,
-      "stop_distance": 131.7,
-      "tp_distance": 526.6,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "BEAR",
-      "rsi_15m": 48.6,
-      "rsi_1h": 32.0,
-      "result": {
-        "dealReference": "o_d547d874-5377-45b2-9b36-01b0b9bbc392"
-      },
-      "outcome": "LOSS",
-      "pnl": -1.32,
-      "close_time": "2026-03-27T03:30:13.366358+00:00",
-      "close_reason": "AUTO_DETECTED"
-    },
-    {
-      "time": "2026-03-27T03:30:13.804454+00:00",
-      "instrument": "BTCUSD",
-      "instrumentName": "BTC/USD",
-      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
-      "direction": "SELL",
-      "confidence": 0.6,
-      "size": 0.05,
-      "entry_bid": 68766.5,
-      "entry_ask": 68816.5,
-      "stop_distance": 135.4,
-      "tp_distance": 541.4,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 50.7,
-      "rsi_1h": 33.0,
-      "result": {
-        "dealReference": "o_80b39581-f12b-4c3f-8887-7128b9b114ad"
-      },
-      "outcome": "WIN",
-      "pnl": 19.21,
-      "close_time": "2026-03-27T04:15:14.921097+00:00",
-      "close_reason": "PROFIT_TAKE"
-    },
-    {
-      "time": "2026-03-27T04:15:15.364450+00:00",
-      "instrument": "BTCUSD",
-      "instrumentName": "BTC/USD",
-      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
-      "direction": "SELL",
-      "confidence": 0.6,
-      "size": 0.05,
-      "entry_bid": 68336.9,
-      "entry_ask": 68386.9,
-      "stop_distance": 133.8,
-      "tp_distance": 535.4,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 37.8,
-      "rsi_1h": 29.8,
-      "result": {
-        "dealReference": "o_23211d4c-0237-438d-95ac-19a24d78884f"
-      },
-      "outcome": "LOSS",
-      "pnl": -1.34,
-      "close_time": "2026-03-27T04:30:12.780898+00:00",
-      "close_reason": "AUTO_DETECTED"
-    },
-    {
-      "time": "2026-03-27T04:30:13.212169+00:00",
-      "instrument": "BTCUSD",
-      "instrumentName": "BTC/USD",
-      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
-      "direction": "SELL",
-      "confidence": 0.6,
-      "size": 0.05,
-      "entry_bid": 68441.9,
-      "entry_ask": 68491.9,
-      "stop_distance": 127.7,
-      "tp_distance": 510.9,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 35.6,
-      "rsi_1h": 30.8,
-      "result": {
-        "dealReference": "o_1ce6f9e7-340b-4185-9885-c5594d9a71dc"
-      },
-      "outcome": "LOSS",
-      "pnl": -1.28,
-      "close_time": "2026-03-27T04:45:14.125561+00:00",
-      "close_reason": "AUTO_DETECTED"
-    },
-    {
-      "time": "2026-03-27T04:30:14.745076+00:00",
-      "instrument": "GOLD",
-      "instrumentName": "XAUUSD",
-      "strategy": "15M_RSI\u53cd\u8f49",
-      "direction": "SELL",
-      "confidence": 0.5,
-      "size": 0.02,
-      "entry_bid": 4433.97,
-      "entry_ask": 4434.47,
-      "stop_distance": 14.9,
-      "tp_distance": 49.8,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BULL",
-      "rsi_15m": 83.7,
-      "rsi_1h": 46.9,
-      "result": {
-        "dealReference": "o_44833077-cd18-4fc7-8741-3af5a33706b6"
-      },
-      "outcome": "LOSS",
-      "pnl": -0.15,
-      "close_time": "2026-03-27T05:45:13.349371+00:00",
-      "close_reason": "AUTO_DETECTED"
-    },
-    {
-      "time": "2026-03-27T04:45:14.553600+00:00",
-      "instrument": "BTCUSD",
-      "instrumentName": "BTC/USD",
-      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
-      "direction": "SELL",
-      "confidence": 0.6,
-      "size": 0.05,
-      "entry_bid": 68510.4,
-      "entry_ask": 68560.4,
-      "stop_distance": 125.7,
-      "tp_distance": 503.0,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 34.4,
-      "rsi_1h": 32.1,
-      "result": {
-        "dealReference": "o_3fe57a74-8b57-4916-adb2-4e9a9cac0a56"
-      },
-      "outcome": "LOSS",
-      "pnl": -1.26,
-      "close_time": "2026-03-27T05:15:12.811937+00:00",
-      "close_reason": "AUTO_DETECTED"
-    },
-    {
-      "time": "2026-03-27T05:00:13.521522+00:00",
-      "instrument": "BTCUSD",
-      "instrumentName": "BTC/USD",
-      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
-      "direction": "SELL",
-      "confidence": 0.6,
-      "size": 0.05,
-      "entry_bid": 68507.75,
-      "entry_ask": 68557.75,
-      "stop_distance": 126.2,
-      "tp_distance": 504.7,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 36.5,
-      "rsi_1h": 32.0,
-      "result": {
-        "dealReference": "o_ba33b36f-4cb4-4fdf-a29a-376b17a9ecdb"
-      },
-      "outcome": "LOSS",
-      "pnl": -1.26,
-      "close_time": "2026-03-27T05:15:12.811955+00:00",
-      "close_reason": "AUTO_DETECTED"
-    },
-    {
-      "time": "2026-03-27T05:00:14.544998+00:00",
-      "instrument": "GOLD",
-      "instrumentName": "XAUUSD",
-      "strategy": "15M_RSI\u53cd\u8f49",
-      "direction": "SELL",
-      "confidence": 0.5,
-      "size": 0.02,
-      "entry_bid": 4445.65,
-      "entry_ask": 4446.15,
-      "stop_distance": 13.2,
-      "tp_distance": 43.9,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BULL",
-      "rsi_15m": 80.6,
-      "rsi_1h": 46.5,
-      "result": {
-        "dealReference": "o_fcc57f7b-356e-42ef-855f-5e87cf9336b7"
-      },
-      "outcome": "LOSS",
-      "pnl": -0.13,
-      "close_time": "2026-03-27T05:45:13.349381+00:00",
-      "close_reason": "AUTO_DETECTED"
-    },
-    {
-      "time": "2026-03-27T05:15:13.238217+00:00",
-      "instrument": "BTCUSD",
-      "instrumentName": "BTC/USD",
-      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
-      "direction": "SELL",
-      "confidence": 0.6,
-      "size": 0.05,
-      "entry_bid": 68740.45,
-      "entry_ask": 68790.45,
-      "stop_distance": 135.4,
-      "tp_distance": 541.7,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 46.9,
-      "rsi_1h": 44.0,
-      "result": {
-        "dealReference": "o_78c02168-af77-4c8c-92ab-dafba81a70f5"
-      },
-      "outcome": "LOSS",
-      "pnl": -1.35,
-      "close_time": "2026-03-27T05:30:13.077668+00:00",
-      "close_reason": "AUTO_DETECTED"
-    },
-    {
-      "time": "2026-03-27T05:15:13.647252+00:00",
-      "instrument": "US500",
-      "instrumentName": "S&P 500",
-      "strategy": "15M_RSI\u53cd\u8f49",
-      "direction": "SELL",
-      "confidence": 0.6,
-      "size": 0.49,
-      "entry_bid": 6522.6,
-      "entry_ask": 6523.2,
-      "stop_distance": 6.7,
-      "tp_distance": 22.4,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BULL",
-      "rsi_15m": 75.6,
-      "rsi_1h": 42.1,
-      "result": {
-        "dealReference": "o_9662aad3-97d9-4ad4-978e-95a8e1de03a7"
-      },
-      "outcome": "WIN",
-      "pnl": 6.57,
-      "close_time": "2026-03-27T07:00:12.737743+00:00",
-      "close_reason": "PROFIT_TAKE"
-    },
-    {
-      "time": "2026-03-27T05:30:14.150536+00:00",
-      "instrument": "BTCUSD",
-      "instrumentName": "BTC/USD",
-      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
-      "direction": "SELL",
-      "confidence": 0.6,
-      "size": 0.05,
-      "entry_bid": 68539.5,
-      "entry_ask": 68589.5,
-      "stop_distance": 132.8,
-      "tp_distance": 531.1,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 34.7,
-      "rsi_1h": 38.7,
-      "result": {
-        "dealReference": "o_3b2da2fd-ca6a-4885-a0df-eec888772d61"
-      },
-      "outcome": "LOSS",
-      "pnl": -1.33,
-      "close_time": "2026-03-27T05:45:13.349391+00:00",
-      "close_reason": "AUTO_DETECTED"
-    },
-    {
-      "time": "2026-03-27T05:45:13.758288+00:00",
-      "instrument": "GOLD",
-      "instrumentName": "XAUUSD",
-      "strategy": "15M_RSI\u53cd\u8f49",
-      "direction": "SELL",
-      "confidence": 0.6,
-      "size": 0.05,
-      "entry_bid": 4464.84,
-      "entry_ask": 4465.34,
-      "stop_distance": 13.0,
-      "tp_distance": 43.2,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BULL",
-      "rsi_15m": 76.5,
-      "rsi_1h": 51.6,
-      "result": {
-        "dealReference": "o_afb6dd59-4580-4202-be22-44200162136b"
-      },
-      "outcome": "WIN",
-      "pnl": 1.47,
-      "close_time": "2026-03-27T08:30:18.340574+00:00",
-      "close_reason": "PROFIT_TAKE"
-    },
-    {
-      "time": "2026-03-27T05:45:14.577034+00:00",
-      "instrument": "BTCUSD",
-      "instrumentName": "BTC/USD",
-      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
-      "direction": "SELL",
-      "confidence": 0.6,
-      "size": 0.05,
-      "entry_bid": 68530.25,
-      "entry_ask": 68580.25,
-      "stop_distance": 140.6,
-      "tp_distance": 562.2,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 28.7,
-      "rsi_1h": 38.7,
-      "result": {
-        "dealReference": "o_d583bf57-a236-4c80-9e37-c725e54446ac"
-      },
-      "outcome": "LOSS",
-      "pnl": -1.41,
-      "close_time": "2026-03-27T06:15:15.475600+00:00",
-      "close_reason": "AUTO_DETECTED"
-    },
-    {
-      "time": "2026-03-27T05:45:15.724760+00:00",
-      "instrument": "US500",
-      "instrumentName": "S&P 500",
-      "strategy": "1H_EMA\u56de\u5f48",
-      "direction": "SELL",
-      "confidence": 0.55,
-      "size": 0.36,
-      "entry_bid": 6515.3,
-      "entry_ask": 6515.9,
-      "stop_distance": 15.0,
-      "tp_distance": 75.0,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BULL",
-      "rsi_15m": 67.0,
-      "rsi_1h": 42.9,
-      "result": {
-        "dealReference": "o_51b30c2f-65f4-48fd-9482-8369e94fe338"
-      },
-      "outcome": "WIN",
-      "pnl": 5.72,
-      "close_time": "2026-03-27T07:30:19.385678+00:00",
-      "close_reason": "PROFIT_TAKE"
-    },
-    {
-      "time": "2026-03-27T06:15:15.822312+00:00",
-      "instrument": "BTCUSD",
-      "instrumentName": "BTC/USD",
-      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
-      "direction": "SELL",
-      "confidence": 0.6,
-      "size": 0.05,
-      "entry_bid": 68682.9,
-      "entry_ask": 68732.9,
-      "stop_distance": 140.0,
-      "tp_distance": 559.8,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 44.2,
-      "rsi_1h": 45.8,
-      "result": {
-        "dealReference": "o_88872aea-1c27-4598-a8c6-b09509d94067"
-      },
-      "outcome": "LOSS",
-      "pnl": -1.4,
-      "close_time": "2026-03-27T06:30:15.268605+00:00",
-      "close_reason": "AUTO_DETECTED"
-    },
-    {
-      "time": "2026-03-27T06:30:16.107757+00:00",
-      "instrument": "BTCUSD",
-      "instrumentName": "BTC/USD",
-      "strategy": "15M_\u8da8\u52e2\u8ddf\u96a8",
-      "direction": "SELL",
-      "confidence": 0.6,
-      "size": 0.05,
-      "entry_bid": 68743.45,
-      "entry_ask": 68793.45,
-      "stop_distance": 135.0,
-      "tp_distance": 539.8,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 47.9,
-      "rsi_1h": 46.9,
-      "result": {
-        "dealReference": "o_0d187aec-7dc8-48a7-8a9a-79ef2b1be47c"
-      },
-      "outcome": "LOSS",
-      "pnl": -6.75,
-      "close_time": "2026-03-27T07:00:13.138153+00:00",
-      "close_reason": "ESTIMATED"
-    },
-    {
-      "time": "2026-03-27T13:00:25.023860+00:00",
-      "instrument": "US500",
-      "instrumentName": "S&P 500",
-      "strategy": "\u8da8\u52e2\u5c0d\u9f4a",
-      "direction": "SELL",
-      "confidence": 0.71,
-      "size": 0.15,
-      "entry_bid": 6444.6,
-      "entry_ask": 6445.2,
-      "stop_distance": 17.2,
-      "tp_distance": 51.5,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 20.0,
-      "rsi_1h": 28.5,
-      "confirmation_score": "",
-      "result": {
-        "dealReference": "o_ed2c64c4-6f52-49ba-a896-bcea498387c2"
-      },
-      "outcome": "WIN",
-      "pnl": 4.84,
-      "close_time": "2026-03-27T14:00:21.354825+00:00",
-      "close_reason": "PROFIT_TAKE"
-    },
-    {
-      "time": "2026-03-27T13:00:25.449783+00:00",
-      "instrument": "US30",
-      "instrumentName": "US30",
-      "strategy": "\u8da8\u52e2\u5c0d\u9f4a",
-      "direction": "SELL",
-      "confidence": 0.71,
-      "size": 0.15,
-      "entry_bid": 45754.0,
-      "entry_ask": 45756.0,
-      "stop_distance": 108.9,
-      "tp_distance": 326.7,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 18.8,
-      "rsi_1h": 14.2,
-      "confirmation_score": "",
-      "result": {
-        "dealReference": "o_2fc873b1-dff6-44e3-8198-955c5fc1839c"
-      },
-      "outcome": "WIN",
-      "pnl": 26.58,
-      "close_time": "2026-03-27T13:45:21.965950+00:00",
-      "close_reason": "PROFIT_TAKE"
-    },
-    {
-      "time": "2026-03-27T14:00:22.584245+00:00",
-      "instrument": "US30",
-      "instrumentName": "US30",
-      "strategy": "\u8da8\u52e2\u5c0d\u9f4a",
-      "direction": "SELL",
-      "confidence": 0.74,
-      "size": 0.28,
-      "entry_bid": 45488.1,
-      "entry_ask": 45490.1,
-      "stop_distance": 130.4,
-      "tp_distance": 391.1,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 22.3,
-      "rsi_1h": 18.8,
-      "confirmation_score": "",
-      "result": {
-        "dealReference": "o_722d80d2-29a0-45ea-a239-3c856083c717"
-      },
-      "outcome": "LOSS",
-      "pnl": -36.51,
-      "close_time": "2026-03-27T14:15:23.204203+00:00",
-      "close_reason": "ESTIMATED"
-    },
-    {
-      "time": "2026-03-27T14:15:25.029829+00:00",
-      "instrument": "GOLD",
-      "instrumentName": "XAUUSD",
-      "strategy": "\u8da8\u52e2\u5c0d\u9f4a",
-      "direction": "BUY",
-      "confidence": 0.74,
-      "size": 0.03,
-      "entry_bid": 4459.23,
-      "entry_ask": 4459.73,
-      "stop_distance": 26.4,
-      "tp_distance": 79.3,
-      "trend_1h": "STRONG_BULL",
-      "trend_15m": "STRONG_BULL",
-      "rsi_15m": 77.0,
-      "rsi_1h": 71.2,
-      "confirmation_score": "",
-      "result": {
-        "dealReference": "o_c014b50f-a753-4fff-b6e4-2e171ac9bd7f"
-      },
-      "outcome": "WIN",
-      "pnl": 1.54,
-      "close_time": "2026-03-27T15:00:21.064158+00:00",
-      "close_reason": "PROFIT_TAKE"
-    },
-    {
-      "time": "2026-03-27T14:30:18.392431+00:00",
-      "instrument": "US30",
-      "instrumentName": "US30",
-      "strategy": "\u8da8\u52e2\u5c0d\u9f4a",
-      "direction": "SELL",
-      "confidence": 0.74,
-      "size": 0.28,
-      "entry_bid": 45517.1,
-      "entry_ask": 45519.1,
-      "stop_distance": 131.4,
-      "tp_distance": 394.3,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 27.2,
-      "rsi_1h": 27.2,
-      "confirmation_score": "",
-      "result": {
-        "dealReference": "o_4ba6c72a-df82-45a6-8e57-8a6de96b08be"
-      },
-      "outcome": "LOSS",
-      "pnl": -36.79,
-      "close_time": "2026-03-27T15:15:20.014285+00:00",
-      "close_reason": "ESTIMATED"
-    },
-    {
-      "time": "2026-03-27T15:15:21.959289+00:00",
-      "instrument": "US30",
-      "instrumentName": "US30",
-      "strategy": "\u8da8\u52e2\u5c0d\u9f4a",
+      "time": "2026-04-06T13:00:23.417474+00:00",
+      "instrument": "US100",
+      "instrumentName": "NAS100",
+      "strategy": "reversion_pin_bar",
       "direction": "SELL",
       "confidence": 0.77,
-      "size": 0.42,
-      "entry_bid": 45589.1,
-      "entry_ask": 45591.1,
-      "stop_distance": 132.5,
-      "tp_distance": 397.5,
-      "trend_1h": "STRONG_BEAR",
-      "trend_15m": "STRONG_BEAR",
-      "rsi_15m": 32.0,
-      "rsi_1h": 23.9,
-      "confirmation_score": "",
-      "result": {
-        "dealReference": "o_a0e5d441-3bc5-486b-a764-7a5aecc538bc"
-      },
+      "size": 0.1,
+      "entryPrice": 24133.2,
+      "sl_distance": 37.1,
+      "tp_distance": 61.9,
       "outcome": "LOSS",
-      "pnl": -55.65,
-      "close_time": "2026-03-27T15:30:20.066383+00:00",
-      "close_reason": "ESTIMATED"
+      "pnl": -3.71,
+      "result": {
+        "dealReference": "o_b9040c9e-acc3-4407-91e9-5f9f8d056b33"
+      },
+      "dealId": "00000000-4d22-0cc4-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-06T13:40:21.701109+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-04-06T13:00:25.138423+00:00",
+      "instrument": "US30",
+      "instrumentName": "US30",
+      "strategy": "trend_mtf_alignment",
+      "direction": "BUY",
+      "confidence": 0.75,
+      "size": 0.1,
+      "entryPrice": 46483.7,
+      "sl_distance": 53.6,
+      "tp_distance": 133.9,
+      "outcome": "LOSS",
+      "pnl": -3.06,
+      "result": {
+        "dealReference": "o_4d1ab065-18ec-4cae-a3dc-a3cf70dd3fb9"
+      },
+      "dealId": "00000000-4d22-0cd2-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-06T13:10:19.905546+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-04-06T13:20:22.285487+00:00",
+      "instrument": "US500",
+      "instrumentName": "S&P 500",
+      "strategy": "reversion_rsi_divergence",
+      "direction": "BUY",
+      "confidence": 0.75,
+      "size": 0.1,
+      "entryPrice": 6585.8,
+      "sl_distance": 8.7,
+      "tp_distance": 14.5,
+      "outcome": "LOSS",
+      "pnl": -0.87,
+      "result": {
+        "dealReference": "o_d0309250-8ddb-4f0a-ae45-f80dbb9437ab"
+      },
+      "dealId": "00000000-4d22-1568-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-06T13:40:21.701118+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-04-06T13:40:23.582393+00:00",
+      "instrument": "US500",
+      "instrumentName": "S&P 500",
+      "strategy": "reversion_pin_bar",
+      "direction": "SELL",
+      "confidence": 0.77,
+      "size": 0.1,
+      "entryPrice": 6585.5,
+      "sl_distance": 10.6,
+      "tp_distance": 17.7,
+      "outcome": "LOSS",
+      "pnl": -0.97,
+      "result": {
+        "dealReference": "o_ae4a345b-9482-480a-93dc-7d839c8cafc1"
+      },
+      "dealId": "00000000-4d22-24b2-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-06T13:50:20.854935+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-04-06T13:40:24.345016+00:00",
+      "instrument": "US100",
+      "instrumentName": "NAS100",
+      "strategy": "reversion_pin_bar",
+      "direction": "SELL",
+      "confidence": 0.77,
+      "size": 0.1,
+      "entryPrice": 24106.1,
+      "sl_distance": 48.5,
+      "tp_distance": 80.8,
+      "outcome": "LOSS",
+      "pnl": -4.85,
+      "result": {
+        "dealReference": "o_9ce2b45d-0fdf-47bd-bf86-8bde291ca461"
+      },
+      "dealId": "00000000-4d22-24c7-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-06T13:50:20.854953+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-04-06T13:40:27.368236+00:00",
+      "instrument": "US30",
+      "instrumentName": "US30",
+      "strategy": "trend_mtf_alignment",
+      "direction": "BUY",
+      "confidence": 0.75,
+      "size": 0.1,
+      "entryPrice": 46475.9,
+      "sl_distance": 75.7,
+      "tp_distance": 189.2,
+      "outcome": "LOSS",
+      "pnl": -7.57,
+      "result": {
+        "dealReference": "o_d2527f97-4e2f-4195-bf6e-770beea4ec89"
+      },
+      "dealId": "00000000-4d22-24d5-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-06T14:10:19.889025+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-04-06T13:40:28.497367+00:00",
+      "instrument": "US500",
+      "instrumentName": "S&P 500",
+      "strategy": "reversion_rsi_divergence",
+      "direction": "BUY",
+      "confidence": 0.75,
+      "size": 0.1,
+      "entryPrice": 6587.1,
+      "sl_distance": 10.6,
+      "tp_distance": 17.7,
+      "outcome": "LOSS",
+      "pnl": -1.06,
+      "result": {
+        "dealReference": "o_30b1e790-b740-4917-a7e8-40e37c04dbfd"
+      },
+      "dealId": "00000000-4d22-24e3-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-06T14:00:20.161781+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-04-06T13:40:29.259333+00:00",
+      "instrument": "US500",
+      "instrumentName": "S&P 500",
+      "strategy": "breakout_pattern",
+      "direction": "SELL",
+      "confidence": 0.75,
+      "size": 0.1,
+      "entryPrice": 6586.9,
+      "sl_distance": 13.3,
+      "tp_distance": 20.7,
+      "outcome": "LOSS",
+      "pnl": -0.83,
+      "result": {
+        "dealReference": "o_f800915d-3782-4862-9907-50dbd1fd1dde"
+      },
+      "dealId": "00000000-4d22-24f0-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-06T13:50:20.854964+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-04-06T13:40:30.440874+00:00",
+      "instrument": "US100",
+      "instrumentName": "NAS100",
+      "strategy": "breakout_pattern",
+      "direction": "SELL",
+      "confidence": 0.75,
+      "size": 0.1,
+      "entryPrice": 24112.5,
+      "sl_distance": 60.6,
+      "tp_distance": 92.7,
+      "outcome": "LOSS",
+      "pnl": -6.06,
+      "result": {
+        "dealReference": "o_73808a4c-19ad-4d71-87f4-24b16936511e"
+      },
+      "dealId": "00000000-4d22-2505-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-06T13:50:20.854972+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-04-06T13:40:32.695467+00:00",
+      "instrument": "US30",
+      "instrumentName": "US30",
+      "strategy": "breakout_outside_bar",
+      "direction": "BUY",
+      "confidence": 0.65,
+      "size": 0.1,
+      "entryPrice": 46482.5,
+      "sl_distance": 75.7,
+      "tp_distance": 126.1,
+      "outcome": "LOSS",
+      "pnl": -7.57,
+      "result": {
+        "dealReference": "o_88e64d65-b9f7-4a8e-8e13-f618074d3965"
+      },
+      "dealId": "00000000-4d22-251e-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-06T14:10:19.889041+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-04-06T13:40:33.512581+00:00",
+      "instrument": "US500",
+      "instrumentName": "S&P 500",
+      "strategy": "breakout_outside_bar",
+      "direction": "BUY",
+      "confidence": 0.65,
+      "size": 0.1,
+      "entryPrice": 6588.3,
+      "sl_distance": 10.6,
+      "tp_distance": 17.7,
+      "outcome": "LOSS",
+      "pnl": -1.06,
+      "result": {
+        "dealReference": "o_42085172-2c77-4f9a-9d7c-24ccf4c83618"
+      },
+      "dealId": "00000000-4d22-252b-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-06T14:00:20.161797+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-04-06T13:40:34.741530+00:00",
+      "instrument": "US100",
+      "instrumentName": "NAS100",
+      "strategy": "breakout_outside_bar",
+      "direction": "BUY",
+      "confidence": 0.65,
+      "size": 0.1,
+      "entryPrice": 24120.3,
+      "sl_distance": 48.5,
+      "tp_distance": 80.8,
+      "outcome": "LOSS",
+      "pnl": -4.85,
+      "result": {
+        "dealReference": "o_af80e0d0-abd3-4dbd-806d-92ed74aca893"
+      },
+      "dealId": "00000000-4d22-2539-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-06T13:50:20.854979+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-04-06T14:10:21.717541+00:00",
+      "instrument": "US30",
+      "instrumentName": "US30",
+      "strategy": "trend_mtf_alignment",
+      "direction": "BUY",
+      "confidence": 0.75,
+      "size": 0.1,
+      "entryPrice": 46507.0,
+      "sl_distance": 101.8,
+      "tp_distance": 254.6,
+      "outcome": "LOSS",
+      "pnl": -10.18,
+      "result": {
+        "dealReference": "o_e2f2ad27-acc8-4187-abfd-6beed696aefb"
+      },
+      "dealId": "00000000-4d22-3958-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-06T20:30:22.610908+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-04-06T14:10:22.574689+00:00",
+      "instrument": "US30",
+      "instrumentName": "US30",
+      "strategy": "breakout_pattern",
+      "direction": "BUY",
+      "confidence": 0.75,
+      "size": 0.1,
+      "entryPrice": 46507.0,
+      "sl_distance": 127.3,
+      "tp_distance": 254.6,
+      "outcome": "LOSS",
+      "pnl": -12.73,
+      "result": {
+        "dealReference": "o_712b5365-00d1-4a59-a8f0-302deabf92e7"
+      },
+      "dealId": "00000000-4d22-3966-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-06T20:30:22.610926+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-04-06T14:10:23.665174+00:00",
+      "instrument": "US500",
+      "instrumentName": "S&P 500",
+      "strategy": "trend_mtf_alignment",
+      "direction": "BUY",
+      "confidence": 0.75,
+      "size": 0.1,
+      "entryPrice": 6589.6,
+      "sl_distance": 14.3,
+      "tp_distance": 35.7,
+      "outcome": "LOSS",
+      "pnl": -1.5,
+      "result": {
+        "dealReference": "o_c85e66af-04e6-4f19-943a-a7e7cd98d6ee"
+      },
+      "dealId": "00000000-4d22-397a-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-07T02:00:18.602314+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-04-06T14:10:24.463827+00:00",
+      "instrument": "US500",
+      "instrumentName": "S&P 500",
+      "strategy": "breakout_pattern",
+      "direction": "BUY",
+      "confidence": 0.75,
+      "size": 0.1,
+      "entryPrice": 6589.4,
+      "sl_distance": 17.9,
+      "tp_distance": 35.7,
+      "outcome": "LOSS",
+      "pnl": -1.79,
+      "result": {
+        "dealReference": "o_73f31b54-bd78-4248-b9a4-62dd307bb859"
+      },
+      "dealId": "00000000-4d22-3996-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-07T02:10:23.027036+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-04-06T14:10:26.430879+00:00",
+      "instrument": "US500",
+      "instrumentName": "S&P 500",
+      "strategy": "breakout_outside_bar",
+      "direction": "SELL",
+      "confidence": 0.65,
+      "size": 0.1,
+      "entryPrice": 6589.0,
+      "sl_distance": 14.3,
+      "tp_distance": 23.8,
+      "outcome": "LOSS",
+      "pnl": -1.95,
+      "result": {
+        "dealReference": "o_8dbbab6f-1a2b-4a57-b0da-2d47b0f734fd"
+      },
+      "dealId": "00000000-4d22-39a4-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-06T14:20:21.496724+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-04-06T14:10:27.247691+00:00",
+      "instrument": "US100",
+      "instrumentName": "NAS100",
+      "strategy": "breakout_outside_bar",
+      "direction": "SELL",
+      "confidence": 0.65,
+      "size": 0.1,
+      "entryPrice": 24118.1,
+      "sl_distance": 67.0,
+      "tp_distance": 111.7,
+      "outcome": "LOSS",
+      "pnl": -6.7,
+      "result": {
+        "dealReference": "o_6416c75e-82fa-458f-92ff-ddb1775b0998"
+      },
+      "dealId": "00000000-4d22-39b1-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-06T14:20:21.496741+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-04-06T15:00:19.805136+00:00",
+      "instrument": "US100",
+      "instrumentName": "NAS100",
+      "strategy": "reversion_pin_bar",
+      "direction": "SELL",
+      "confidence": 0.77,
+      "size": 0.1,
+      "entryPrice": 24139.4,
+      "sl_distance": 71.5,
+      "tp_distance": 119.2,
+      "outcome": "LOSS",
+      "pnl": -7.15,
+      "result": {
+        "dealReference": "o_0f4517e8-51b2-48e7-9f90-1c004c91ecae"
+      },
+      "dealId": "00000000-4d22-5874-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-06T22:10:23.889193+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-04-06T20:40:25.980306+00:00",
+      "instrument": "US30",
+      "instrumentName": "US30",
+      "strategy": "reversion_bollinger",
+      "direction": "SELL",
+      "confidence": 0.73,
+      "size": 0.1,
+      "entryPrice": 46784.3,
+      "sl_distance": 82.2,
+      "tp_distance": 132.2,
+      "outcome": "LOSS",
+      "pnl": -8.22,
+      "result": {
+        "dealReference": "o_b3a33906-c25e-4465-924d-44ef91485b40"
+      },
+      "dealId": "00000000-4d22-de0c-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-07T01:20:21.357471+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
     }
   ],
   "strategyStats": {
     "TREND_FOLLOW": {
       "wins": 0,
       "losses": 1,
-      "pnl": -0.15
+      "pnl": -0.15,
+      "winRate": "0.0%",
+      "riskReward": 0.0,
+      "rank": 8
     },
     "15M_MOMENTUM": {
       "wins": 1,
       "losses": 1,
-      "pnl": 0.31
+      "pnl": 0.31,
+      "winRate": "50.0%",
+      "riskReward": 2.63,
+      "rank": 5
     },
     "1H_EMA_BOUNCE": {
       "wins": 1,
       "losses": 0,
-      "pnl": 0
+      "pnl": 0,
+      "winRate": "100.0%",
+      "riskReward": 0,
+      "rank": 7
     },
     "1H_RSI_EXTREME": {
       "wins": 0,
       "losses": 2,
-      "pnl": -0.78
+      "pnl": -0.78,
+      "winRate": "0.0%",
+      "riskReward": 0.0,
+      "rank": 10
     },
     "15M_TREND_FOLLOW": {
       "wins": 1,
       "losses": 0,
-      "pnl": 0.19
+      "pnl": 0.19,
+      "winRate": "100.0%",
+      "riskReward": 0,
+      "rank": 6
     },
     "15M_\u8da8\u52e2\u8ddf\u96a8": {
       "wins": 3,
       "losses": 22,
-      "pnl": -4.799999999999999
+      "pnl": -4.8,
+      "winRate": "12.0%",
+      "riskReward": 6.02,
+      "rank": 14
     },
     "1H_RSI\u6975\u7aef": {
       "wins": 0,
       "losses": 1,
-      "pnl": -4.95
+      "pnl": -4.95,
+      "winRate": "0.0%",
+      "riskReward": 0.0,
+      "rank": 15
     },
     "15M_\u52d5\u91cf\u7a81\u7834": {
       "wins": 2,
       "losses": 4,
-      "pnl": -2.7
+      "pnl": -2.7,
+      "winRate": "33.3%",
+      "riskReward": 0.55,
+      "rank": 12
     },
     "1H_EMA\u56de\u5f48": {
       "wins": 1,
       "losses": 3,
-      "pnl": 4.859999999999999
+      "pnl": 4.86,
+      "winRate": "25.0%",
+      "riskReward": 19.95,
+      "rank": 4
     },
     "15M_RSI\u53cd\u8f49": {
       "wins": 2,
       "losses": 2,
-      "pnl": 7.76
+      "pnl": 7.76,
+      "winRate": "50.0%",
+      "riskReward": 28.71,
+      "rank": 3
     },
     "\u8da8\u52e2\u5c0d\u9f4a": {
-      "wins": 3,
+      "wins": 4,
+      "losses": 4,
+      "pnl": -92.22,
+      "winRate": "50.0%",
+      "riskReward": 0.29,
+      "rank": 20
+    },
+    "V5_TRENDING_DOWN": {
+      "wins": 2,
+      "losses": 2,
+      "pnl": 18.53,
+      "winRate": "50.0%",
+      "riskReward": 2.28,
+      "rank": 2
+    },
+    "V5_TRENDING_UP": {
+      "wins": 1,
+      "losses": 8,
+      "pnl": -0.53,
+      "winRate": "11.1%",
+      "riskReward": 7.84,
+      "rank": 9
+    },
+    "V5_RANGING": {
+      "wins": 1,
+      "losses": 4,
+      "pnl": -93.2,
+      "winRate": "20.0%",
+      "riskReward": 0.16,
+      "rank": 21
+    },
+    "breakout_pattern": {
+      "wins": 6,
+      "losses": 32,
+      "pnl": -58.88,
+      "winRate": "15.8%",
+      "riskReward": 3.35,
+      "rank": 18
+    },
+    "breakout_range": {
+      "wins": 6,
+      "losses": 14,
+      "pnl": 55.43,
+      "winRate": "30.0%",
+      "riskReward": 5.06,
+      "rank": 1
+    },
+    "trend_mtf_alignment": {
+      "wins": 5,
+      "losses": 35,
+      "pnl": -104.51,
+      "winRate": "12.5%",
+      "riskReward": 1.96,
+      "rank": 22
+    },
+    "reversion_pin_bar": {
+      "wins": 0,
+      "losses": 14,
+      "pnl": -83.73,
+      "winRate": "0.0%",
+      "riskReward": 0.0,
+      "rank": 19
+    },
+    "breakout_bollinger_squeeze": {
+      "wins": 1,
+      "losses": 8,
+      "pnl": -22.12,
+      "winRate": "11.1%",
+      "riskReward": 3.75,
+      "rank": 16
+    },
+    "breakout_outside_bar": {
+      "wins": 0,
+      "losses": 10,
+      "pnl": -51.66,
+      "winRate": "0.0%",
+      "riskReward": 0.0,
+      "rank": 17
+    },
+    "reversion_bollinger": {
+      "wins": 1,
+      "losses": 1,
+      "pnl": -4.01,
+      "winRate": "50.0%",
+      "riskReward": 0.51,
+      "rank": 13
+    },
+    "reversion_rsi_divergence": {
+      "wins": 0,
       "losses": 3,
-      "pnl": -95.99
+      "pnl": -2.2,
+      "winRate": "0.0%",
+      "riskReward": 0.0,
+      "rank": 11
     }
   },
-  "instruments": [
-    "GOLD",
-    "SILVER",
-    "COPPER",
-    "EURUSDM2026",
-    "US500",
-    "US30",
-    "OIL_CRUDE",
-    "NATURALGAS"
-  ],
+  "review": {
+    "summary": "38\u52dd/171\u6557\uff0c\u52dd\u7387 18.2%\uff0c\u7d2f\u8a08\u76c8\u8667 $-439.36",
+    "bestStrategy": {
+      "name": "breakout_range",
+      "wins": 6,
+      "losses": 14,
+      "pnl": 55.43,
+      "winRate": "30.0%",
+      "riskReward": 5.06,
+      "rank": 1
+    },
+    "worstStrategy": {
+      "name": "trend_mtf_alignment",
+      "wins": 5,
+      "losses": 35,
+      "pnl": -104.51,
+      "winRate": "12.5%",
+      "riskReward": 1.96,
+      "rank": 22
+    },
+    "lessons": [
+      "\u6700\u4f73\u4ea4\u6613\u6642\u6bb5 UTC 6:00\uff08PnL $95.28\uff09",
+      "\u6700\u5dee\u4ea4\u6613\u6642\u6bb5 UTC 14:00\uff08PnL $-132.31\uff09"
+    ],
+    "optimization": [
+      "\u8003\u616e\u505c\u7528 15M_\u8da8\u52e2\u8ddf\u96a8\uff08\u52dd\u7387 12%\uff0cPnL $-4.8\uff09",
+      "\u8003\u616e\u505c\u7528 V5_TRENDING_UP\uff08\u52dd\u7387 11%\uff0cPnL $-0.53\uff09",
+      "\u8003\u616e\u505c\u7528 V5_RANGING\uff08\u52dd\u7387 20%\uff0cPnL $-93.2\uff09",
+      "\u8003\u616e\u505c\u7528 breakout_pattern\uff08\u52dd\u7387 16%\uff0cPnL $-58.88\uff09",
+      "\u8003\u616e\u505c\u7528 trend_mtf_alignment\uff08\u52dd\u7387 12%\uff0cPnL $-104.51\uff09",
+      "\u8003\u616e\u505c\u7528 reversion_pin_bar\uff08\u52dd\u7387 0%\uff0cPnL $-83.73\uff09",
+      "\u8003\u616e\u505c\u7528 breakout_bollinger_squeeze\uff08\u52dd\u7387 11%\uff0cPnL $-22.12\uff09",
+      "\u8003\u616e\u505c\u7528 breakout_outside_bar\uff08\u52dd\u7387 0%\uff0cPnL $-51.66\uff09"
+    ],
+    "strategiesUnderTest": [
+      "trend_ema_cross",
+      "trend_mtf_alignment",
+      "trend_elliott_wave3",
+      "trend_flag_breakout",
+      "reversion_sr",
+      "reversion_rsi_divergence",
+      "reversion_bollinger",
+      "reversion_pin_bar",
+      "breakout_pattern",
+      "breakout_bollinger_squeeze",
+      "breakout_range",
+      "breakout_outside_bar"
+    ],
+    "recentChanges": [
+      "v6: 12 modular strategies",
+      "v6: P/L recovery for broker-closed trades",
+      "v6: Enhanced risk controls (consecutive loss pause)",
+      "v6: Correlated instrument limits"
+    ],
+    "nextSteps": [
+      "\u7d2f\u7a4d 20+ \u7b46\u4ea4\u6613\u6578\u64da\u5f8c\u9032\u884c\u56de\u6e2c",
+      "\u6839\u64da\u7b56\u7565\u6392\u540d\u505c\u7528\u4f4e\u6548\u7b56\u7565",
+      "\u8abf\u6574 ATR \u500d\u6578\u8207 RR \u9580\u6abb"
+    ]
+  },
+  "riskParams": {
+    "maxSingleLoss": "2% of balance",
+    "maxPositions": 4,
+    "consecutiveLossPause": 5,
+    "slMethod": "ATR x 1.2",
+    "minRiskReward": "1.5:1",
+    "sessionRestrictions": "No trades UTC 22-00",
+    "mode": "simulation",
+    "consecutiveLosses": 109,
+    "sizeReduction": "50% after 3 consecutive losses"
+  },
+  "alerts": [],
+  "currentPrice": {
+    "GOLD": {
+      "bid": 4686.03,
+      "ask": 4686.53
+    },
+    "EURUSDM2026": {
+      "bid": 1.16062,
+      "ask": 1.16068
+    },
+    "GBPUSD": {
+      "bid": 1.3279,
+      "ask": 1.32804
+    }
+  },
+  "indicators": {
+    "GOLD": {
+      "name": "XAUUSD",
+      "regime": "RANGING",
+      "trend_1h": "RANGING",
+      "trend_15m": "RANGING",
+      "bid": 4686.03,
+      "rsi": 78.6,
+      "macd_hist": 5.7051,
+      "atr": 13.0618,
+      "bb_width": 0.0139,
+      "ema9": 4669.4606,
+      "ema21": 4658.3002
+    },
+    "EURUSDM2026": {
+      "name": "EUR/USD",
+      "regime": "RANGING",
+      "trend_1h": "RANGING",
+      "trend_15m": "RANGING",
+      "bid": 1.16062,
+      "rsi": 78.1,
+      "macd_hist": 0.0004,
+      "atr": 0.0008,
+      "bb_width": 0.0046,
+      "ema9": 1.1595,
+      "ema21": 1.1584
+    },
+    "GBPUSD": {
+      "name": "GBP/USD",
+      "regime": "RANGING",
+      "trend_1h": "RANGING",
+      "trend_15m": "RANGING",
+      "bid": 1.3279,
+      "rsi": 80.1,
+      "macd_hist": 0.0006,
+      "atr": 0.0013,
+      "bb_width": 0.0054,
+      "ema9": 1.3261,
+      "ema21": 1.3245
+    }
+  },
   "actions": [
-    "OPENED SELL US500 Conf:0.75"
+    "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD",
+    "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD",
+    "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD"
   ]
 }

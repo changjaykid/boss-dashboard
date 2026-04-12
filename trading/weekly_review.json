@@ -1,0 +1,192 @@
+{
+  "reviewDate": "2026-04-05",
+  "reviewPeriod": "2026-03-30 to 2026-04-04",
+  "reviewType": "WEEKEND_STRATEGY_STUDY",
+
+  "summary": {
+    "weekPnl": -206.93,
+    "allTimePnl": -301.07,
+    "totalWeekTrades": 131,
+    "weekWinRate": "17.6%",
+    "weekWins": 23,
+    "weekLosses": 99,
+    "openOrUnresolved": 9,
+    "verdict": "CRITICAL — 系統嚴重虧損，多項策略需要立即停用或大幅修改。僅 Tuesday 盈利，其餘交易日全面虧損。"
+  },
+
+  "strategyPerformance": {
+    "rankings": [
+      {"strategy": "breakout_range", "trades": 20, "winRate": "30%", "pnl": 73.06, "status": "BEST_PERFORMER", "note": "唯一大幅正收益策略，但勝率仍偏低"},
+      {"strategy": "V5_TRENDING_DOWN", "trades": 3, "winRate": "67%", "pnl": 20.19, "status": "PROMISING", "note": "樣本太少，但方向正確"},
+      {"strategy": "reversion_bollinger", "trades": 1, "winRate": "100%", "pnl": 4.21, "status": "INSUFFICIENT_DATA"},
+      {"strategy": "V5_TRENDING_UP", "trades": 9, "winRate": "11%", "pnl": -0.53, "status": "DEMOTE", "note": "幾乎全輸，多頭判斷嚴重失準"},
+      {"strategy": "reversion_rsi_divergence", "trades": 1, "winRate": "0%", "pnl": -0.27, "status": "INSUFFICIENT_DATA"},
+      {"strategy": "breakout_bollinger_squeeze", "trades": 9, "winRate": "11%", "pnl": -8.43, "status": "DEMOTE", "note": "假突破太多"},
+      {"strategy": "breakout_pattern", "trades": 34, "winRate": "18%", "pnl": -28.77, "status": "DEMOTE", "note": "交易量高但虧損嚴重，訊號品質差"},
+      {"strategy": "breakout_outside_bar", "trades": 5, "winRate": "0%", "pnl": -29.53, "status": "RETIRE", "note": "0%勝率，完全無效"},
+      {"strategy": "reversion_pin_bar", "trades": 9, "winRate": "0%", "pnl": -61.69, "status": "RETIRE", "note": "0%勝率，9連敗，嚴重錯誤"},
+      {"strategy": "trend_mtf_alignment", "trades": 35, "winRate": "14%", "pnl": -81.97, "status": "RETIRE", "note": "最大交易量策略之一，但虧損慘重"},
+      {"strategy": "V5_RANGING", "trades": 5, "winRate": "20%", "pnl": -93.20, "status": "RETIRE", "note": "區間策略在趨勢市場完全失效"}
+    ]
+  },
+
+  "criticalFindings": [
+    {
+      "id": "F1",
+      "severity": "CRITICAL",
+      "finding": "趨勢對齊數據缺失 — 本週131筆交易全部被判定為 counter-trend",
+      "detail": "trend_1h 欄位在本週交易中不存在或格式改變，導致分析腳本無法判斷對齊。需要檢查 analyzer_v5.py 是否正確記錄 trend_1h。",
+      "action": "修復 trade_log 中的 trend 欄位記錄，確保含有 BULL/BEAR 關鍵字"
+    },
+    {
+      "id": "F2",
+      "severity": "CRITICAL",
+      "finding": "Wed+Thu 完全零勝 — 37+46筆全敗，虧損 -331.70",
+      "detail": "週二大賺197.82後，週三四完全崩盤。可能市場結構劇變（從趨勢轉為震盪或反轉），系統未偵測到regime change。",
+      "action": "加入 regime change detector：若連續3筆以上虧損，暫停交易30分鐘並重新評估市場regime"
+    },
+    {
+      "id": "F3",
+      "severity": "CRITICAL",
+      "finding": "13:00-15:00 UTC 時段是虧損黑洞 — 62筆交易虧損 -362.53",
+      "detail": "美股開盤時段（13:00-15:00 UTC = 21:00-23:00 台北）波動劇烈，系統大量進場但幾乎全敗。",
+      "action": "13:00-15:30 UTC 時段提高 confidence 門檻至 0.80 或直接暫停交易"
+    },
+    {
+      "id": "F4",
+      "severity": "HIGH",
+      "finding": "高信心交易反而虧最多 — confidence ≥0.7 的 97筆虧損 -241.02",
+      "detail": "信心評分系統嚴重失準。0.6-0.69 的 34 筆反而賺 +34.09。confidence scoring 可能過度重視某些無效指標。",
+      "action": "重新校正 confidence scoring 權重，降低 MTF alignment 和 pattern confirmation 的權重"
+    },
+    {
+      "id": "F5",
+      "severity": "HIGH",
+      "finding": "US30 是最大虧損商品 — 27筆虧損 -136.65",
+      "detail": "US30 勝率僅15%，每筆平均虧損 -5.06。波動大、spread 高。",
+      "action": "暫停 US30 交易，或大幅縮小部位"
+    },
+    {
+      "id": "F6",
+      "severity": "HIGH",
+      "finding": "16:00-17:00 UTC 是唯一穩定盈利時段 — +202.23",
+      "detail": "美股盤中穩定期（16-17 UTC = 00:00-01:00 台北），趨勢明確後系統表現最佳。",
+      "action": "集中火力在 16:00-18:00 UTC 交易，其他時段降低部位或提高門檻"
+    },
+    {
+      "id": "F7",
+      "severity": "MEDIUM",
+      "finding": "虧損交易平均持有112分鐘，贏的持有388分鐘",
+      "detail": "贏的抱得住但虧的砍得不夠快。SL 被觸發而非主動砍倉。可考慮更快的時間止損。",
+      "action": "加入 60 分鐘未盈利強制平倉規則（目前是8小時太長）"
+    }
+  ],
+
+  "strategiesToRetire": [
+    "breakout_outside_bar",
+    "reversion_pin_bar",
+    "trend_mtf_alignment",
+    "V5_RANGING"
+  ],
+
+  "strategiesToDemote": [
+    "breakout_pattern",
+    "breakout_bollinger_squeeze",
+    "V5_TRENDING_UP"
+  ],
+
+  "strategiesToPromote": [
+    "breakout_range",
+    "V5_TRENDING_DOWN"
+  ],
+
+  "newHypotheses": [
+    {
+      "id": "H1",
+      "name": "TIME_FILTERED_TREND",
+      "description": "僅在 16:00-18:00 UTC 時段交易趨勢策略。利用本週發現的時段優勢。",
+      "rationale": "16-17 UTC 時段 PnL +202.23，其他時段幾乎全虧。時間過濾是最明確的 edge。",
+      "entryRules": "現有 breakout_range 規則 + 限定 16:00-18:00 UTC",
+      "status": "HYPOTHESIS",
+      "priority": "HIGH"
+    },
+    {
+      "id": "H2",
+      "name": "ADAPTIVE_CONFIDENCE",
+      "description": "根據近期勝率動態調整 confidence 門檻。連敗時提高門檻，連勝時維持。",
+      "rationale": "固定 0.6 門檻在 Wed/Thu 大崩盤時完全無保護作用。需要適應性機制。",
+      "entryRules": "base_threshold=0.6, 每連敗1次 +0.05, 最高0.85, 連勝2次 reset",
+      "status": "HYPOTHESIS",
+      "priority": "HIGH"
+    },
+    {
+      "id": "H3",
+      "name": "REGIME_CIRCUIT_BREAKER",
+      "description": "連續3筆虧損觸發 circuit breaker，暫停30分鐘並重新評估 market regime。",
+      "rationale": "Wed 37連敗、Thu 41連敗，系統完全沒有保護機制。需要 circuit breaker。",
+      "entryRules": "3 consecutive losses → pause 30min → re-evaluate regime → if regime changed, switch strategy set",
+      "status": "HYPOTHESIS",
+      "priority": "CRITICAL"
+    },
+    {
+      "id": "H4",
+      "name": "GOLD_ONLY_SPECIALIST",
+      "description": "專注 GOLD(XAUUSD) 交易，放棄或大幅減少指數交易。",
+      "rationale": "GOLD 46筆虧損僅 -7.63（幾乎打平），是唯一接近盈利的商品。US30/US500 虧損慘重。",
+      "entryRules": "僅交易 GOLD，搭配 breakout_range 和 V5_TRENDING_DOWN 策略",
+      "status": "HYPOTHESIS",
+      "priority": "MEDIUM"
+    },
+    {
+      "id": "H5",
+      "name": "QUICK_EXIT_60MIN",
+      "description": "60分鐘未盈利強制平倉，不等8小時。",
+      "rationale": "虧損交易平均持有112分鐘但都是被 SL 打掉。提早砍倉可減少虧損幅度。",
+      "entryRules": "持倉60分鐘後若 unrealized PnL ≤ 0，強制平倉",
+      "status": "HYPOTHESIS",
+      "priority": "HIGH"
+    },
+    {
+      "id": "H6",
+      "name": "REVERSE_CONFIDENCE",
+      "description": "反轉高信心訊號 — 當 confidence ≥ 0.75 時反向操作。",
+      "rationale": "本週高信心(≥0.7) 97筆虧損 -241.02，中信心(0.6-0.69) 34筆盈利 +34.09。信心評分可能系統性反向。",
+      "entryRules": "當 confidence ≥ 0.75 時，反轉 BUY↔SELL 方向",
+      "status": "HYPOTHESIS",
+      "priority": "MEDIUM",
+      "note": "需要先回測驗證，可能只是本週特殊現象"
+    }
+  ],
+
+  "backtestQueue": [
+    {"hypothesis": "H3_REGIME_CIRCUIT_BREAKER", "priority": "CRITICAL", "method": "replay trade_log with circuit breaker, calculate hypothetical PnL savings"},
+    {"hypothesis": "H1_TIME_FILTERED_TREND", "priority": "HIGH", "method": "filter trade_log to 16-18 UTC only, recalculate PnL"},
+    {"hypothesis": "H5_QUICK_EXIT_60MIN", "priority": "HIGH", "method": "check trades closed after >60min with loss, estimate savings"},
+    {"hypothesis": "H2_ADAPTIVE_CONFIDENCE", "priority": "HIGH", "method": "simulate dynamic threshold on trade_log sequence"},
+    {"hypothesis": "H6_REVERSE_CONFIDENCE", "priority": "MEDIUM", "method": "flip direction on high-confidence trades, recalculate"}
+  ],
+
+  "immediateActions": [
+    "1. RETIRE: breakout_outside_bar, reversion_pin_bar, trend_mtf_alignment, V5_RANGING — 立即停用",
+    "2. IMPLEMENT: Regime circuit breaker (3連敗暫停30分鐘) — 最優先",
+    "3. IMPLEMENT: 時段限制 13:00-15:30 UTC 提高門檻至 0.80",
+    "4. IMPLEMENT: 60分鐘未盈利平倉規則",
+    "5. REDUCE: US30 部位大幅縮小或暫停",
+    "6. FIX: trade_log 的 trend_1h 欄位記錄格式",
+    "7. RECALIBRATE: confidence scoring 權重",
+    "8. FOCUS: 集中資源在 breakout_range + V5_TRENDING_DOWN + GOLD"
+  ],
+
+  "nextWeekPlan": {
+    "primaryStrategies": ["breakout_range", "V5_TRENDING_DOWN"],
+    "primaryInstruments": ["GOLD", "US100"],
+    "avoidInstruments": ["US30"],
+    "tradingHours": "優先 16:00-18:00 UTC，其他時段提高門檻",
+    "riskChanges": [
+      "Circuit breaker: 3連敗暫停30分鐘",
+      "Time-based exit: 60分鐘未盈利平倉",
+      "US open (13-15:30 UTC): confidence ≥ 0.80",
+      "每日最大虧損 2% (從 3% 降低)"
+    ]
+  }
+}

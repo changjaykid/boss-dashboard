@@ -1,0 +1,204 @@
+{
+  "lastUpdate": "2026-04-12 10:31",
+  "status": "RUNNING",
+  "mode": "v8 賺大虧小",
+  "exchange": "Binance Futures",
+  "account": {
+    "initialCapital": 464,
+    "balance": 452.0859802,
+    "available": 309.2974362,
+    "unrealizedPnl": 2.561,
+    "netEquity": 454.6469802,
+    "todayPnl": 2.022,
+    "totalPnl": 16.326321099999998,
+    "leverage": 5,
+    "totalTrades": 14,
+    "winRate": "50.0%",
+    "wins": 7,
+    "losses": 7,
+    "maxDrawdown": 0.599746184212585
+  },
+  "position": {
+    "symbol": "BTCUSDT",
+    "side": "LONG",
+    "size": 0.01,
+    "entryPrice": 71571.2,
+    "markPrice": 71827.3,
+    "pnl": 2.561,
+    "leverage": 5,
+    "trailingStop": 70895.95915447759
+  },
+  "todayStats": {
+    "trades": 1,
+    "wins": 1,
+    "losses": 0,
+    "pnl": 2.022,
+    "remaining": 9
+  },
+  "totalStats": {
+    "trades": 14,
+    "wins": 7,
+    "losses": 7,
+    "pnl": 16.326321099999998,
+    "winRate": 0.5,
+    "avgRR": 0,
+    "maxDrawdown": 0.599746184212585,
+    "peakBalance": 480.3263211
+  },
+  "signals": {
+    "score": 60,
+    "direction": "LONG",
+    "strategy": "PULLBACK",
+    "marketState": "TRENDING_DOWN",
+    "trend4h": "UP",
+    "session": "ASIA_PEAK",
+    "reasons": [
+      "4H多頭(0.82%)",
+      "1H量能爆發",
+      "支撐區回踩做多"
+    ],
+    "buyScore": 60,
+    "sellScore": 3
+  },
+  "recentTrades": [
+    {
+      "time": "2026-04-12T00:01:19.135Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 72814.6,
+      "pnl": 2.02,
+      "strategy": "PULLBACK",
+      "reasons": [
+        "4H多頭(1.17%)",
+        "1H EMA多排",
+        "支撐區回踩做多"
+      ]
+    },
+    {
+      "time": "2026-04-11T06:30:13.600Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 70897.1,
+      "pnl": 16.81,
+      "strategy": "PULLBACK",
+      "reasons": [
+        "4H多頭(1.05%)",
+        "1H EMA多排",
+        "1H RSI回踩47",
+        "支撐區回踩做多"
+      ]
+    },
+    {
+      "time": "2026-04-09T11:15:12.334Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 71132.8,
+      "pnl": 0.1,
+      "strategy": "STOCH_RSI_CROSS",
+      "reasons": [
+        "1H EMA 多排",
+        "RSI回踩43",
+        "StochRSI金叉(K=15)",
+        "近多頭清算牆71458",
+        "支撐區回踩做多"
+      ]
+    },
+    {
+      "time": "2026-04-08T23:15:09.756Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 70942,
+      "pnl": -0.08,
+      "strategy": "STOCH_RSI_CROSS",
+      "reasons": [
+        "1H EMA 多排",
+        "StochRSI金叉(K=1)"
+      ]
+    },
+    {
+      "time": "2026-04-08T13:47:48.305Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 72179.8,
+      "pnl": -2.01,
+      "strategy": "SESSION_BREAKOUT",
+      "reasons": [
+        "1H EMA 多排",
+        "量能放大",
+        "亞盤突破↑(900)",
+        "MACD看多背離"
+      ]
+    },
+    {
+      "time": "2026-04-07T19:00:07.179Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 68358,
+      "pnl": -0.02,
+      "strategy": "RSI_BB_ADAPTIVE",
+      "reasons": [
+        "RSI回踩52",
+        "MACD柱增",
+        "多頭吞噬",
+        "RSI突破BB上軌",
+        "MACD看多背離"
+      ]
+    },
+    {
+      "time": "2026-04-07T10:10:05.915Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 69183.9,
+      "pnl": -0.68,
+      "strategy": "SESSION_BREAKOUT",
+      "reasons": [
+        "MACD柱增",
+        "量能放大",
+        "動量+0.67%",
+        "RSI突破BB上軌",
+        "亞盤突破↑(870)"
+      ]
+    },
+    {
+      "time": "2026-04-07T05:50:13.932Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 68603.1,
+      "pnl": 0.16,
+      "strategy": "UNKNOWN",
+      "reasons": []
+    },
+    {
+      "time": "2026-04-07T01:00:13.824Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 68452,
+      "pnl": 2.7,
+      "strategy": "TREND_FOLLOW",
+      "reasons": [
+        "1H EMA 多排",
+        "RSI超賣24",
+        "量能放大"
+      ]
+    },
+    {
+      "time": "2026-04-06T23:10:09.277Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 68763.9,
+      "pnl": -4.72,
+      "strategy": "MOMENTUM",
+      "reasons": [
+        "1H EMA 多排",
+        "RSI超賣29",
+        "量能放大"
+      ]
+    }
+  ],
+  "riskStatus": {
+    "dailyLossUsed": "$0.00 / $18.56",
+    "dailyTradesUsed": "1 / 10",
+    "consecutiveLosses": "0 / 2",
+    "paused": false
+  }
+}

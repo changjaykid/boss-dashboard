@@ -1,0 +1,157 @@
+{
+  "lastUpdate": "2026-04-12 11:00",
+  "status": "RUNNING",
+  "mode": "v7_concentrated_swing",
+  "capital": 10000,
+  "totalEquity": 7481,
+  "netEquity": 7481,
+  "totalPnl": -2519,
+  "btcPrice": 2285197,
+  "btcChange24h": -1.6,
+  "holdings": {
+    "btc": 0.00086059,
+    "avgCost": 2277506,
+    "unrealizedPnl": -986,
+    "positions": [
+      {
+        "coin": "BTC",
+        "held": 0.00086059,
+        "value": 1967,
+        "pnl": 7
+      },
+      {
+        "coin": "SOL",
+        "held": 0.3672624,
+        "value": 967,
+        "pnl": -993
+      }
+    ]
+  },
+  "buyOrders": 14,
+  "sellOrders": 14,
+  "consecutiveLosses": 0,
+  "fearGreedIndex": "--",
+  "nextAction": "持倉監控中",
+  "signals": {
+    "technical": "--",
+    "news": "--",
+    "sentiment": "--",
+    "overall": "運行中"
+  },
+  "dailyLimit": {
+    "remaining": 800
+  },
+  "positions": [
+    {
+      "market": "btctwd",
+      "held": 0.00086059,
+      "value": 1967,
+      "avgEntry": 2277506,
+      "pnl": 7
+    },
+    {
+      "market": "soltwd",
+      "held": 0.3672624,
+      "value": 967,
+      "avgEntry": 2649,
+      "pnl": -993
+    }
+  ],
+  "marketStats": {
+    "btctwd": {
+      "trades": 5,
+      "wins": 5,
+      "pnl": 28
+    },
+    "soltwd": {
+      "trades": 9,
+      "wins": 8,
+      "pnl": 35
+    }
+  },
+  "riskStatus": {
+    "dailyLossLimit": 800,
+    "consecLossPause": 3,
+    "currentConsecLosses": 0,
+    "totalWinRate": "92.9%",
+    "avgPnlPerTrade": 5
+  },
+  "marketSignals": {
+    "BTC": {
+      "price": 2285197,
+      "rsi": "33.3",
+      "bbPos": "--"
+    },
+    "SOL": {
+      "price": 2634,
+      "rsi": "35.3",
+      "bbPos": "--"
+    }
+  },
+  "recentTrades": [
+    {
+      "exitTime": 1775753105065,
+      "coin": "SOL",
+      "side": "BUY",
+      "amount": 0.136052691346809,
+      "entryPrice": 2642,
+      "twd": 360,
+      "pnl": 0,
+      "reason": "強買入(9.5)"
+    },
+    {
+      "exitTime": 1775752744987,
+      "coin": "SOL",
+      "side": "BUY",
+      "amount": 0.22618085708891825,
+      "entryPrice": 2649,
+      "twd": 600,
+      "pnl": 0,
+      "reason": "強買入(9.5)"
+    },
+    {
+      "exitTime": 1775749325008,
+      "coin": "SOL",
+      "side": "BUY",
+      "amount": 0.3775525639086371,
+      "entryPrice": 2644,
+      "twd": 1000,
+      "pnl": 0,
+      "reason": "強買入(3.0)"
+    },
+    {
+      "exitTime": 1775659142282,
+      "coin": "BTC",
+      "side": "BUY",
+      "amount": 0.0001584683648779249,
+      "entryPrice": 2268112,
+      "twd": 360,
+      "pnl": 0,
+      "reason": "強買入(7.5)"
+    },
+    {
+      "exitTime": 1775658782192,
+      "coin": "BTC",
+      "side": "BUY",
+      "amount": 0.00026422684975997105,
+      "entryPrice": 2267143,
+      "twd": 600,
+      "pnl": 0,
+      "reason": "強買入(7.5)"
+    },
+    {
+      "exitTime": 1775658354788,
+      "coin": "BTC",
+      "side": "BUY",
+      "amount": 0.0004378953130201487,
+      "entryPrice": 2279997,
+      "twd": 1000,
+      "pnl": 0,
+      "reason": "強買入(4.3)"
+    }
+  ],
+  "twdCash": 4547,
+  "legacyPositions": [],
+  "strategyEquity": 7481,
+  "legacyEquity": 0
+}

@@ -1,0 +1,49 @@
+{
+  "id": "20260405-11-001",
+  "title": "Email 行銷 ROI 是社群的 36 倍，但 90% 的小品牌做錯了",
+  "pillar": "data_insight",
+  "bg_mode": "photo",
+  "bg_per_slide": true,
+  "bg_darken": 0.28,
+  "slides": [
+    {
+      "type": "cover",
+      "headline": "Email 行銷 ROI\n是社群的 **36 倍**\n但 90% 的人做錯了",
+      "subtitle": "最老的渠道，最被低估的武器"
+    },
+    {
+      "type": "problem",
+      "headline": "你正在忽略最賺錢的渠道",
+      "body": "DMA 統計：Email 每花 1 美元，回報 36 美元。\n社群廣告？大約 1:5 到 1:8。\n\n但只有 26% 的小品牌在認真經營 Email，其他人把它當「電子傳單」：全名單同一封信、只發打折、從不看數據。\n\n結果？退訂率飆高，開信率跌破 10%。"
+    },
+    {
+      "type": "keypoint",
+      "number": "01",
+      "headline": "分眾寄信，不要群發",
+      "body": "Mailchimp 數據：分眾 Email 開信率高 14.31%，點擊率高 100.95%。\n\n最簡單的分法：新客戶、回購客、沉睡客，三群人給三種內容。同一封信寄全名單的時代過了。"
+    },
+    {
+      "type": "keypoint",
+      "number": "02",
+      "headline": "第一封信不要賣東西",
+      "body": "歡迎信開信率高達 82%（Campaign Monitor），是平均的 4 倍。\n\n這封信用來建立信任：品牌故事、創辦理念、一個小禮物。先給價值，再談生意。"
+    },
+    {
+      "type": "keypoint",
+      "number": "03",
+      "headline": "設自動化流程，讓系統幫你賣",
+      "body": "棄單提醒信轉換率 2.73%（Omnisend），是一般促銷信的 3 倍。\n\n設好一次，每天自動追回棄單，零人力成本。你睡覺的時候，Email 在幫你賺錢。"
+    },
+    {
+      "type": "summary",
+      "headline": "真實案例：小品牌靠 Email 翻盤",
+      "body": "美國 DTC 品牌 Beardbrand 把 40% 預算從社群廣告轉到 Email，六個月後營收成長 23%，獲客成本降 38%。\n\nEmail 不性感，但它是你唯一「擁有」的渠道。演算法會變，名單永遠是你的。"
+    },
+    {
+      "type": "cta",
+      "headline": "別再把最賺錢的渠道\n當傳單在用",
+      "body": "今天就去看你的 Email 名單，先把歡迎信設好。一封好的歡迎信，抵得上一個月的社群貼文。",
+      "button_text": "💬 你有在經營 Email 名單嗎？"
+    }
+  ]
+}

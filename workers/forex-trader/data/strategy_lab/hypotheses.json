@@ -1,0 +1,114 @@
+{
+  "generatedDate": "2026-04-11",
+  "source": "weekly_review_2026-W15",
+  "hypotheses": [
+    {
+      "id": "H3_REGIME_CIRCUIT_BREAKER",
+      "name": "REGIME_CIRCUIT_BREAKER",
+      "status": "BACKTEST_PASSED_2_WEEKS",
+      "priority": "CRITICAL",
+      "backtestResult": {
+        "w14": {"baseline": -206.93, "withCB": 41.47, "improvement": 248.40},
+        "w15": {"baseline": -44.14, "withCB": -26.99, "improvement": 17.15},
+        "combined": {"totalImprovement": 265.55, "verdict": "PROVEN OVER 2 WEEKS"}
+      },
+      "recommendation": "🚨 IMPLEMENT BEFORE MONDAY OPEN — 2週驗證完成，效果穩定"
+    },
+    {
+      "id": "H1_TIME_FILTERED_TREND",
+      "name": "TIME_FILTERED_TREND (14-18 UTC)",
+      "status": "BACKTEST_PASSED_2_WEEKS",
+      "priority": "CRITICAL",
+      "backtestResult": {
+        "w14": {"trades": 14, "winRate": "78.6%", "pnl": 202.23},
+        "w15": {"trades": 1, "winRate": "100%", "pnl": 4.80, "note": "樣本太少但與W14一致"},
+        "combined": {"totalPnl": 207.03, "verdict": "CONSISTENT — 14-18 UTC 是唯一穩定盈利時段"}
+      },
+      "recommendation": "IMPLEMENT — 集中火力在 14:00-18:00 UTC"
+    },
+    {
+      "id": "REMOVE_US30",
+      "name": "US30 完全移除",
+      "status": "BACKTEST_PASSED_2_WEEKS",
+      "priority": "CRITICAL",
+      "backtestResult": {
+        "w14": {"us30Pnl": -136.65, "savingPercent": "66%"},
+        "w15": {"us30Pnl": -40.44, "savingPercent": "92%"},
+        "combined": {"totalSaving": 177.09, "verdict": "US30 兩週虧 $177, 0% WR 本週。必須移除。"}
+      },
+      "recommendation": "🚨 IMPLEMENT BEFORE MONDAY OPEN"
+    },
+    {
+      "id": "COMBINED_OPTIMAL",
+      "name": "三合一優化 (no US30 + no retired + circuit breaker)",
+      "status": "BACKTEST_PASSED",
+      "priority": "CRITICAL",
+      "backtestResult": {
+        "w15": {"baseline": -44.14, "result": 0.41, "improvement": 44.55},
+        "verdict": "將虧損週轉為打平。三項改進缺一不可。"
+      },
+      "recommendation": "全部實施"
+    },
+    {
+      "id": "H7_US100_SPECIALIST",
+      "name": "NAS100 專精策略",
+      "status": "HYPOTHESIS",
+      "priority": "HIGH",
+      "rationale": "US100 是本週唯一有勝單商品 (40% WR, -$0.81)。開發專用策略。",
+      "recommendation": "BACKTEST_NEXT — 篩選 US100 歷史交易分析最佳進出場條件"
+    },
+    {
+      "id": "H8_VOLATILITY_GATE",
+      "name": "波動率門檻過濾",
+      "status": "HYPOTHESIS",
+      "priority": "HIGH",
+      "rationale": "13:00 UTC 波動率異常高導致 SL 秒殺。ATR 門檻可過濾。",
+      "recommendation": "BACKTEST_NEXT — 計算各時段 ATR 分布，設定合理門檻"
+    },
+    {
+      "id": "H2_ADAPTIVE_CONFIDENCE",
+      "name": "ADAPTIVE_CONFIDENCE",
+      "status": "HYPOTHESIS",
+      "priority": "HIGH",
+      "recommendation": "BACKTEST — 連續兩週高信心全敗，需要動態門檻"
+    },
+    {
+      "id": "H5_QUICK_EXIT_60MIN",
+      "name": "QUICK_EXIT_120MIN",
+      "status": "HYPOTHESIS",
+      "priority": "HIGH",
+      "note": "從60分鐘調整為120分鐘（本週贏的平均37min, 虧的776min。120min是合理折衷）",
+      "recommendation": "IMPLEMENT_AS_RULE — 120min未盈利減倉50%, 240min全平"
+    },
+    {
+      "id": "H9_POSITION_SCALING",
+      "name": "信心級別倉位縮放",
+      "status": "HYPOTHESIS",
+      "priority": "MEDIUM",
+      "rationale": "高信心連續兩週全敗。用倉位控制限制損害。",
+      "recommendation": "BACKTEST"
+    },
+    {
+      "id": "H10_ADAPTIVE_SL_WIDTH",
+      "name": "動態SL寬度",
+      "status": "HYPOTHESIS",
+      "priority": "MEDIUM",
+      "rationale": "本週很多SL在幾分鐘被觸發。SL太緊或市場波動太大。",
+      "recommendation": "BACKTEST"
+    },
+    {
+      "id": "H6_REVERSE_CONFIDENCE",
+      "name": "REVERSE_CONFIDENCE",
+      "status": "DEPRIORITIZED",
+      "priority": "LOW",
+      "note": "可能是過擬合。先修正 confidence scoring 再考慮。"
+    },
+    {
+      "id": "H4_GOLD_ONLY",
+      "name": "GOLD_ONLY_SPECIALIST",
+      "status": "PARTIALLY_ADOPTED",
+      "priority": "LOW",
+      "note": "GOLD 本週 -$0.90 接近打平但0勝率。不適合 GOLD_ONLY。改為 GOLD + US100 雙核心。"
+    }
+  ]
+}

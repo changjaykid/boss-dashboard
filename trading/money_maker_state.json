@@ -1,37 +1,37 @@
 {
-  "version": 2,
+  "version": 5,
   "status": "RUNNING",
-  "mode": "grid_dca",
-  "positions": [
+  "mode": "batch_swing_v5",
+  "buyBatches": [
     {
-      "entryPrice": 2150126.5,
-      "amount": 0.00027905334872157524,
-      "twd": 600,
-      "time": 1775375856697,
-      "batch": 1,
-      "reason": "RSI偏低40, 接近BB下軌"
+      "price": 2322489.6,
+      "twd": 2476,
+      "btc": 0.0010643915908170266,
+      "time": 1775952603474,
+      "reason": "強買入(7.0)"
+    },
+    {
+      "price": 2281772.1,
+      "twd": 2075,
+      "btc": 0.0009079259054837246,
+      "time": 1775959818160,
+      "reason": "強買入(7.5) +加碼(跌1.8%)"
     }
   ],
-  "totalInvested": 600,
-  "avgEntryPrice": 2150126.5,
-  "totalBtc": 0.00027905334872157524,
-  "gridBuyZone": null,
-  "gridSellZone": null,
-  "stopLoss": 2143487,
+  "sellBatches": [],
+  "avgBuyPrice": 2307437.8281061677,
+  "totalBtcHeld": 0.0019723174963007513,
+  "totalTwdInvested": 4551,
   "dailyPnl": 0,
-  "dailyDate": "2026-04-05",
-  "totalPnl": -82,
-  "totalTrades": 11,
+  "dailyDate": "2026-04-12",
+  "totalPnl": 23,
+  "totalTrades": 3,
   "wins": 3,
-  "losses": 8,
-  "maxDrawdown": 82,
-  "peakEquity": 10000,
+  "losses": 0,
+  "consecutiveLosses": 0,
+  "maxDrawdown": 0,
+  "peakEquity": 10023,
   "pauseUntil": null,
-  "lastDecision": {
-    "time": "2026-04-05T07:57:36.697Z",
-    "action": "BUY_ZONE",
-    "reasons": "RSI偏低40, 接近BB下軌, MACD柱縮短(底部收斂)",
-    "price": 2150126.5
-  },
-  "tradeLog": []
+  "lastBuyTime": 1775959818160,
+  "lastSellTime": 1775934060889
 }

@@ -1,0 +1,37 @@
+{
+  "id": "20260402-002",
+  "title": "Landing Page 轉換率從 2% 拉到 8%",
+  "pillar": "dry_goods",
+  "slides": [
+    {
+      "type": "cover",
+      "headline": "Landing Page\n轉換率從 2% 拉到 8%",
+      "subtitle": "不換產品、不加預算，改 3 個地方就夠"
+    },
+    {
+      "type": "problem",
+      "headline": "流量進來了，但沒人買",
+      "body": "廣告 CTR 2.5%，流量穩穩進來。\n\n但到了 Landing Page，跳出率 78%，轉換率只有 1.8%。\n\n你以為問題出在廣告？其實問題在「接住流量」的那一頁。Unbounce 調查：平均 Landing Page 轉換率只有 4.02%，而排名前 25% 的頁面超過 8.1%。差距就在細節。"
+    },
+    {
+      "type": "steps",
+      "headline": "這 3 個改法最有效",
+      "items": [
+        "首屏只講一件事：標題、副標、一個按鈕。把「關於我們」和落落長的介紹砍掉。HubSpot 測試：首屏 CTA 從 2 個減到 1 個，轉換率提升 37%",
+        "社會證據放在折疊線上方：不是放在頁尾，是放在你要人按下按鈕的旁邊。Spiegel Research 數據：有評價的產品轉換率比沒有的高 270%",
+        "CTA 文案別寫「提交」：改成具體利益。「免費領取行銷模板」比「立即提交」轉換率高 68%（ContentVerve A/B 測試）。按鈕上寫的是使用者「得到什麼」，不是「要做什麼」"
+      ]
+    },
+    {
+      "type": "detail",
+      "headline": "額外加分：速度和信任",
+      "body": "頁面載入每慢 1 秒，轉換率掉 7%（Portent 研究）。先去 Google PageSpeed Insights 跑一下分數。\n\n再檢查一件事：你的頁面有沒有「退出機制」？保證退款、免費試用、不綁約，這些不是損失，是降低決策門檻。Baymard Institute 調查：17% 的人放棄結帳是因為「不信任這個網站」。"
+    },
+    {
+      "type": "cta",
+      "headline": "今天就打開你的\nLanding Page 檢查一次",
+      "body": "不用大改版，先從首屏和 CTA 開始。\n花 30 分鐘調整，可能比你多花 3 萬廣告預算更有效。",
+      "button_text": "💬 你的 Landing Page 轉換率多少？"
+    }
+  ]
+}

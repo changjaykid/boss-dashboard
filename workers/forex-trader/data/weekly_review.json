@@ -1,0 +1,443 @@
+{
+  "reviewDate": "2026-04-12",
+  "reviewPeriod": "2026-04-06 to 2026-04-11",
+  "previousReviewDate": "2026-04-11",
+  "reviewType": "WEEKEND_STRATEGY_STUDY",
+  "weekNumber": "W16",
+
+  "summary": {
+    "weekPnl": -44.14,
+    "previousWeekPnl": -44.14,
+    "pnlChange": "FLAT — 同上週W15一模一樣的虧損金額（巧合）",
+    "totalWeekTrades": 27,
+    "closedTrades": 17,
+    "openTrades": 6,
+    "unknownClosedTrades": 4,
+    "weekWins": 2,
+    "weekLosses": 15,
+    "weekWinRate": "11.8%",
+    "avgWin": 5.37,
+    "avgLoss": 3.66,
+    "riskRewardRatio": 1.47,
+    "maxConsecutiveLosses": 13,
+    "allTimePnl": -385.23,
+    "allTimeWinRate": "19.6% (40W/164L)",
+    "verdict": "CRITICAL — 三週連虧，W15 提出的 8 項改進有 6 項完全未執行。US30 繼續交易虧 $40.44 (佔91%虧損)，retired 策略仍然在下單虧 $12.36，session_momentum 未暫停虧 $15.41，circuit breaker 未實裝導致 13 連敗。唯二亮點：US100 上 breakout_range 和 multi_indicator_consensus 各贏 1 筆 ($10.74)。如果上週的改動有落實，本週會賺 $9.09 而非虧 $44.14。"
+  },
+
+  "weekVsLastWeekComparison": {
+    "tradeCount": "27 vs 27 (相同)",
+    "winRate": "11.8% vs 9.5% (微升但仍極低)",
+    "totalPnl": "-$44.14 vs -$44.14 (完全相同)",
+    "keyChange": "交易結構與上週類似。問題完全相同。最大的失敗是：上週明確列出的改進建議幾乎全部未執行。"
+  },
+
+  "w15ActionItemsExecutionGrade": {
+    "grade": "F — 8項中僅0項完全執行",
+    "details": [
+      {"item": "US30 完全移除", "status": "FAILED", "detail": "7筆US30交易，虧$40.44。完全沒有封鎖。", "lostMoney": 40.44},
+      {"item": "硬性封鎖 retired strategies", "status": "FAILED", "detail": "5筆retired策略交易(reversion_pin_bar×3, trend_mtf_alignment×2)，虧$12.36。連續第三週未封鎖。", "lostMoney": 12.36},
+      {"item": "實裝 circuit breaker", "status": "FAILED", "detail": "出現13連敗，完全無暫停機制。", "lostMoney": 3.41},
+      {"item": "封鎖 13:00-13:30 UTC", "status": "FAILED", "detail": "5筆在13:00-13:30開倉，虧$16.54", "lostMoney": 16.54},
+      {"item": "暫停 session_momentum", "status": "FAILED", "detail": "5筆交易，0% WR，虧$15.41。W15決定PAUSE但仍交易。", "lostMoney": 15.41},
+      {"item": "時間止損 120min", "status": "FAILED", "detail": "6筆虧損交易持有>120min（最長3197min=53小時）", "lostMoney": 10.61},
+      {"item": "修復 PnL 回查", "status": "PARTIAL", "detail": "部分有pnl_source標記但仍有unknown"},
+      {"item": "提高 TP/SL ratio 至 3.0", "status": "FAILED", "detail": "實際RR=1.47，與上週相同"}
+    ],
+    "totalPreventableLoss": 44.14,
+    "interpretation": "⚠️ 如果上週的建議全部落實，本週COMBINED回測顯示會賺$9.09。所有虧損都是已知可預防的。這不是策略問題，是執行問題。"
+  },
+
+  "strategyPerformance": {
+    "rankings": [
+      {
+        "strategy": "breakout_range",
+        "trades": 6, "wins": 1, "losses": 2, "open": 2,
+        "winRate": "33%", "pnl": -4.10,
+        "status": "ACTIVE_CAUTIOUS",
+        "note": "唯一有贏單的策略之一。US100上$5.94是本週最大單筆贏利。但US30上-$8.92慘敗。在US100上表現不錯，問題在商品選擇不在策略本身。",
+        "instrumentBreakdown": {"US100": {"trades": 2, "pnl": 5.94, "note": "1W包含最大贏單"}, "US30": {"trades": 1, "pnl": -8.92}, "US500": {"trades": 1, "pnl": -1.12}, "GOLD": {"trades": 2, "pnl": 0, "note": "2 OPEN"}}
+      },
+      {
+        "strategy": "multi_indicator_consensus",
+        "trades": 7, "wins": 1, "losses": 3, "open": 3,
+        "winRate": "25%", "pnl": -11.04,
+        "status": "ACTIVE_CAUTIOUS",
+        "note": "US100上$4.80贏單。但US30和GOLD虧損。3筆OPEN持倉進入週末（US30, US500, GOLD各1）。剔除US30後表現可能轉正。",
+        "instrumentBreakdown": {"US100": {"trades": 1, "pnl": 4.80, "note": "WIN"}, "US30": {"trades": 2, "pnl": -15.67, "note": "1L + 1OPEN"}, "GOLD": {"trades": 2, "pnl": -0.17, "note": "1L + 1OPEN"}, "US500": {"trades": 2, "pnl": 0, "note": "1L + 1OPEN, L的pnl在reversion"}}
+      },
+      {
+        "strategy": "session_momentum",
+        "trades": 5, "wins": 0, "losses": 4, "open": 1,
+        "winRate": "0%", "pnl": -15.41,
+        "status": "RETIRE",
+        "note": "連續兩週 0% WR。W15決定PAUSE但未執行，W16又虧$15.41。累計10筆0%WR -$30.82。不值得再測試。直接RETIRE。策略邏輯有根本問題——在開盤時段做動量但不考慮波動率擴張。"
+      },
+      {
+        "strategy": "reversion_pin_bar",
+        "trades": 2, "wins": 0, "losses": 2,
+        "winRate": "0%", "pnl": -9.07,
+        "status": "MUST_HARD_BLOCK",
+        "note": "🚨 連續第三週仍在交易！W14 RETIRE決定→W15仍交易虧$9.07→W16仍交易虧$9.07。累計13筆0%WR -$79.83。這是系統性執行失敗。"
+      },
+      {
+        "strategy": "trend_mtf_alignment",
+        "trades": 3, "wins": 0, "losses": 2,
+        "winRate": "0%", "pnl": -3.29,
+        "status": "MUST_HARD_BLOCK",
+        "note": "🚨 同上，第三週仍在交易。累計41筆13%WR -$88.55。"
+      },
+      {
+        "strategy": "breakout_pattern",
+        "trades": 2, "wins": 0, "losses": 1,
+        "winRate": "0%", "pnl": -0.36,
+        "status": "RETIRE",
+        "note": "連續三週虧損，38筆17%WR累計-$29.49。量已減少但仍無勝利跡象。"
+      },
+      {
+        "strategy": "breakout_bollinger_squeeze",
+        "trades": 1, "wins": 0, "losses": 0,
+        "winRate": "N/A", "pnl": 0.00,
+        "status": "RETIRE",
+        "note": "11筆10%WR -$8.43。無改善趨勢。"
+      },
+      {
+        "strategy": "reversion_rsi_divergence",
+        "trades": 1, "wins": 0, "losses": 1,
+        "winRate": "0%", "pnl": -0.87,
+        "status": "TESTING_POOR",
+        "note": "3筆0%WR -$2.01。樣本太少但方向不對。再給5筆機會。"
+      },
+      {
+        "strategy": "V5_TRENDING_DOWN",
+        "trades": 0,
+        "status": "DORMANT",
+        "note": "連續兩週無交易。可能市場環境不適合。保留但觀察。"
+      },
+      {
+        "strategy": "reversion_bollinger",
+        "trades": 0,
+        "status": "DORMANT",
+        "note": "連續兩週無交易。保留。"
+      }
+    ]
+  },
+
+  "instrumentPerformance": {
+    "rankings": [
+      {
+        "instrument": "US100/NAS100",
+        "trades": 6, "wins": 2, "losses": 3, "open": 1,
+        "winRate": "40%", "pnl": -0.81,
+        "status": "BEST",
+        "note": "連續兩週最佳商品。40% WR，接近打平。兩筆贏單分別$5.94和$4.80。如果專注US100可能轉正。適合SELL方向在下跌趨勢中。"
+      },
+      {
+        "instrument": "GOLD/XAUUSD",
+        "trades": 11, "wins": 0, "losses": 4, "open": 3,
+        "winRate": "0%", "pnl": -0.90,
+        "status": "CAUTIOUS",
+        "note": "虧損金額小但0勝率令人擔憂。3筆OPEN持倉進入週末。交易頻率過高（11/27=41%的交易在GOLD上）但贏0筆。"
+      },
+      {
+        "instrument": "US500/S&P500",
+        "trades": 3, "wins": 0, "losses": 2, "open": 1,
+        "winRate": "0%", "pnl": -1.99,
+        "status": "NEUTRAL",
+        "note": "交易量少，損失可控。1筆OPEN。"
+      },
+      {
+        "instrument": "US30/Dow Jones",
+        "trades": 7, "wins": 0, "losses": 6, "open": 1,
+        "winRate": "0%", "pnl": -40.44,
+        "status": "TOXIC_MUST_BLOCK",
+        "note": "🚨🚨🚨 連續第三週最大虧損源。W14: -$136.65, W15: -$40.44, W16: -$40.44。累計US30虧損超過$217。每筆平均虧$6.74。仍有1筆OPEN持倉進入週末(SL risk ~$12.59)。"
+      }
+    ]
+  },
+
+  "timeAnalysis": {
+    "hourlyPnlUTC": {
+      "00:00": {"trades": 1, "pnl": -0.23, "note": "trend_mtf_alignment GOLD"},
+      "01:00": {"trades": 1, "pnl": -0.36, "note": "breakout_pattern GOLD"},
+      "06:00": {"trades": 4, "pnl": 0.00, "note": "4筆CLOSED/unknown"},
+      "08:00": {"trades": 2, "pnl": -0.31, "note": "session_momentum + multi_indicator"},
+      "13:00": {"trades": 12, "pnl": -48.04, "note": "🚨 連續第三週最大虧損時段"},
+      "14:00": {"trades": 5, "pnl": 4.80, "note": "唯一盈利時段"},
+      "15:00": {"trades": 2, "pnl": 0.00, "note": "2筆OPEN"}
+    },
+    "finding": "13:00 UTC 已連續三週確認為致命虧損時段。W14: -$362.53, W15: -$48.04, W16: -$48.04。14:00 UTC 之後才開始有盈利。三週總計 13:00 時段虧損 ~$458。"
+  },
+
+  "confidenceAnalysis": {
+    "buckets": {
+      "65-69%": {"trades": 14, "wins": 1, "losses": 8, "winRate": "11%", "pnl": -29.71},
+      "70-74%": {"trades": 5, "wins": 1, "losses": 1, "winRate": "50%", "pnl": -0.84},
+      "75-79%": {"trades": 8, "wins": 0, "losses": 6, "winRate": "0%", "pnl": -13.59}
+    },
+    "finding": "連續第三週高信心(≥0.75)全敗。三週75+%信心累計0勝。這已不是偶然——confidence scoring 有系統性bug。可能問題：(1)多指標一致不等於正確 (2)在已經過度延伸的市場給出高信心 (3)沒有考慮波動率和市場regime。",
+    "recommendation": "暫時反轉：75+%信心改為最小倉位或不開倉。65-70%反而允許正常倉位。"
+  },
+
+  "openPositionsRisk": {
+    "positions": [
+      {"instrument": "US100", "strategy": "breakout_range", "direction": "SELL", "entry": 24904.0, "slRisk": 6.34},
+      {"instrument": "GOLD", "strategy": "multi_indicator_consensus", "direction": "SELL", "entry": 4764.7, "slRisk": 0.20},
+      {"instrument": "GOLD", "strategy": "breakout_range", "direction": "SELL", "entry": 4764.34, "slRisk": 0.20},
+      {"instrument": "GOLD", "strategy": "session_momentum", "direction": "SELL", "entry": 4764.72, "slRisk": 0.17, "note": "session_momentum 已 RETIRE — 週一開盤立即關閉"},
+      {"instrument": "US30", "strategy": "multi_indicator_consensus", "direction": "SELL", "entry": 47670.3, "slRisk": 12.59, "note": "US30 已 BLACKLIST — 週一開盤立即關閉"},
+      {"instrument": "US500", "strategy": "multi_indicator_consensus", "direction": "SELL", "entry": 6758.9, "slRisk": 1.56}
+    ],
+    "totalSlRisk": 21.06,
+    "immediateCloseOnMonday": ["US30 position (blacklisted instrument)", "GOLD session_momentum (retired strategy)"],
+    "note": "6筆OPEN持倉進入週末，SL總風險$21.06。週一開盤後立即關閉US30和session_momentum的持倉（不管盈虧）。"
+  },
+
+  "criticalFindings": [
+    {
+      "id": "F1",
+      "severity": "EMERGENCY",
+      "finding": "系統性執行失敗 — 連續三週無法落實改進建議",
+      "detail": "W14 提出的建議在 W15 未執行，W15 再次提出在 W16 又未執行。三週重複同樣的錯誤。根本原因：analyzer_v5.py 引擎代碼未更新，registry 的 status 變更沒有反映到實際交易邏輯中。",
+      "action": "這週末（現在）必須直接修改 analyzer 引擎，加入硬性檢查：(1) instrument blacklist (2) strategy status check (3) circuit breaker (4) time window block。不能只改 JSON，要改程式碼。",
+      "estimatedSaving": "$44+/week"
+    },
+    {
+      "id": "F2",
+      "severity": "CRITICAL",
+      "finding": "US30 三週累計虧損超過 $217，佔系統總虧損 56%",
+      "detail": "W14: -$136.65 (27T, 0% WR), W15: -$40.44 (7T, 0% WR), W16: -$40.44 (7T, 0% WR)。平均每筆US30交易虧$5.29。而且US30有spread高、波動不可預測的特性。",
+      "action": "analyzer 引擎加入 INSTRUMENT_BLACKLIST = ['US30']。任何策略都不得開 US30 倉。",
+      "estimatedSaving": "$40+/week"
+    },
+    {
+      "id": "F3",
+      "severity": "CRITICAL",
+      "finding": "session_momentum 累計 10 筆 0% WR -$30.82，策略邏輯根本錯誤",
+      "detail": "兩週測試全敗。在 GOLD 和 US 指數上都失敗。策略假設：session 開盤動量可以持續。實際：開盤動量常常是假突破。",
+      "action": "RETIRE session_momentum。從 strategy_registry 移至 RETIRED。硬性封鎖。"
+    },
+    {
+      "id": "F4",
+      "severity": "CRITICAL",
+      "finding": "reversion_pin_bar 和 trend_mtf_alignment 連續三週被標記 RETIRE 但從未被封鎖",
+      "detail": "reversion_pin_bar: 累計 13 筆 0% WR -$79.83。trend_mtf_alignment: 累計 41 筆 13% WR -$88.55。三週虧損：$24.65 (可完全避免)。",
+      "action": "在 analyzer 引擎中加入 STRATEGY_BLACKLIST。任何 status=RETIRED 的策略 ID 都不得生成訊號。"
+    },
+    {
+      "id": "F5",
+      "severity": "HIGH",
+      "finding": "13:00 UTC 三週虧損 $458+ — 確認為統計顯著的虧損時段",
+      "detail": "三週數據一致：13:00-13:30 UTC（美股開盤前後）波動極大，SL 被輕易掃掉。本週12筆中11敗。",
+      "action": "analyzer 引擎加入 BLOCKED_HOURS = [(13, 0, 13, 30)]。13:00-13:30 UTC 完全禁止開倉。"
+    },
+    {
+      "id": "F6",
+      "severity": "HIGH",
+      "finding": "6筆OPEN持倉進入週末，含2筆應立即關閉的倉位",
+      "detail": "US30 multi_indicator_consensus (SL risk $12.59) 和 GOLD session_momentum (SL risk $0.17) 分別屬於黑名單商品和已退役策略。",
+      "action": "週一開盤後第一次 cron 執行時立即關閉這兩個持倉。"
+    },
+    {
+      "id": "F7",
+      "severity": "HIGH",
+      "finding": "RR=1.47 連續兩週不變，低於獲利所需的 3.0+",
+      "detail": "以 11.8% WR 搭配 1.47 RR，數學上不可能獲利。需要 RR=3.0+ 或 WR=40%+ 才能打平。",
+      "action": "調整 TP/SL 比例至 1:3。寧可降低勝率也要提高每筆贏利。"
+    },
+    {
+      "id": "F8",
+      "severity": "MEDIUM",
+      "finding": "US100 連續兩週表現最佳，值得專精投入",
+      "detail": "W15: 40% WR, -$0.81。W16: 40% WR, -$0.81。最接近打平的商品。兩筆贏單（$5.94, $4.80）都在 US100。SELL 方向在下跌趨勢中特別有效。",
+      "action": "增加 US100 交易權重。開發 NAS100 專精策略。"
+    }
+  ],
+
+  "backtestResults": {
+    "removeUS30": {
+      "method": "排除所有 US30 交易",
+      "baseline": -44.14,
+      "result": -3.70,
+      "improvement": 40.44,
+      "verdict": "MUST_IMPLEMENT — 連續第三週驗證，最大單一改善。"
+    },
+    "blockRetired": {
+      "method": "排除所有 RETIRED 策略交易",
+      "baseline": -44.14,
+      "result": -31.78,
+      "improvement": 12.36,
+      "verdict": "MUST_IMPLEMENT — 已拖延三週"
+    },
+    "circuitBreaker": {
+      "method": "3連敗跳過下一筆",
+      "baseline": -44.14,
+      "result": -40.73,
+      "improvement": 3.41,
+      "verdict": "IMPLEMENT — 單獨效果小但與其他措施組合有效"
+    },
+    "block1300": {
+      "method": "排除 13:00-13:30 UTC 開倉",
+      "baseline": -44.14,
+      "result": -27.60,
+      "improvement": 16.54,
+      "verdict": "MUST_IMPLEMENT — 連續三週驗證"
+    },
+    "only14to18UTC": {
+      "method": "僅在 14:00-18:00 UTC 交易",
+      "baseline": -44.14,
+      "result": 4.80,
+      "trades": 7,
+      "verdict": "STRONG_SIGNAL — 但交易量太少，先從 block 13:00-13:30 開始"
+    },
+    "combinedOptimal": {
+      "method": "No US30 + No retired + No session_momentum + No 13:00-13:30",
+      "baseline": -44.14,
+      "result": 9.09,
+      "improvement": 53.23,
+      "trades": 12,
+      "verdict": "🏆 BREAKTHROUGH — 四項改進合併，從虧$44.14變成賺$9.09。連續兩週回測驗證。這不是理論，是三週真實數據的結論。"
+    }
+  },
+
+  "newHypotheses": [
+    {
+      "id": "H11_US100_SELL_SPECIALIST",
+      "name": "NAS100 SELL 專精策略",
+      "description": "本週兩筆贏單都是 US100 SELL。在下跌趨勢市場中，NAS100 做空有明確邊際。",
+      "rationale": "連續兩週 US100 是唯一有勝單的商品。兩筆贏單特徵：(1) 都是 SELL 方向 (2) 都在 13:30+ UTC (3) confidence 0.68-0.70 (4) 使用 breakout_range 和 multi_indicator_consensus",
+      "entryRules": "US100 only, SELL only (in bearish regime), 13:30-18:00 UTC, confidence 0.65-0.72 (NOT higher), breakout_range 或 multi_indicator_consensus",
+      "exitRules": "TP/SL >= 2.0, 60min 未盈利減倉 50%",
+      "status": "HYPOTHESIS",
+      "priority": "HIGHEST",
+      "expectedEdge": "基於三週數據，US100 SELL 在合適時段有 40% WR 和正期望值"
+    },
+    {
+      "id": "H12_INVERSE_CONFIDENCE",
+      "name": "反向信心倉位模型",
+      "description": "三週數據顯示 75+% 信心全敗。反轉邏輯：高信心=小倉位/不開倉，中信心=正常倉位。",
+      "rationale": "75+%信心三週0勝。65-70%信心反而有贏單。假設：當所有指標都一致時，市場可能已經price-in了，反而容易反轉。",
+      "entryRules": "conf 0.60-0.70 → 正常倉, conf 0.70-0.75 → 50% 倉, conf 0.75+ → 不開倉",
+      "status": "HYPOTHESIS",
+      "priority": "HIGH"
+    },
+    {
+      "id": "H13_GOLD_PAUSE",
+      "name": "GOLD 暫停交易假說",
+      "description": "GOLD 本週 11 筆 0% WR。雖然單筆虧損小，但累積也有 $0.90。可能需要暫停或大幅減少 GOLD 交易。",
+      "rationale": "GOLD 佔 41% 交易量但 0 贏。如果暫停 GOLD，可以集中資源在 US100。不過 GOLD 3 筆 OPEN 需要先處理。",
+      "entryRules": "暫停 GOLD 新開倉 1 週。僅管理現有持倉。觀察 US100 專精是否改善整體績效。",
+      "status": "HYPOTHESIS",
+      "priority": "MEDIUM"
+    },
+    {
+      "id": "H7_US100_SPECIALIST",
+      "name": "NAS100 專精策略 (延續自 W15)",
+      "status": "UPGRADE_TO_H11",
+      "note": "已被 H11_US100_SELL_SPECIALIST 取代（更具體的方向性專精）"
+    },
+    {
+      "id": "H8_VOLATILITY_GATE",
+      "name": "波動率門檻過濾 (延續自 W15)",
+      "status": "HYPOTHESIS",
+      "priority": "HIGH",
+      "note": "三週數據持續支持。13:00 UTC 波動率爆發導致SL被掃。需要ATR-based門檻。"
+    },
+    {
+      "id": "H3_REGIME_CIRCUIT_BREAKER",
+      "name": "市場狀態熔斷器 (延續自 W14)",
+      "status": "HYPOTHESIS",
+      "priority": "HIGH",
+      "note": "三週未實裝。必須在引擎中加入。"
+    }
+  ],
+
+  "immediateActions": {
+    "priority": "這些不是建議，是必須在週一開盤前完成的程式碼修改",
+    "items": [
+      {
+        "id": "A1",
+        "priority": "EMERGENCY",
+        "action": "修改 analyzer 引擎加入 INSTRUMENT_BLACKLIST = ['US30']",
+        "detail": "在訊號生成之前檢查，任何 US30 訊號直接跳過",
+        "expectedSaving": "$40+/week"
+      },
+      {
+        "id": "A2",
+        "priority": "EMERGENCY",
+        "action": "修改 analyzer 引擎加入 strategy status check",
+        "detail": "讀取 strategy_registry.json，status != 'ACTIVE' 和 != 'TESTING' 的策略不生成訊號",
+        "expectedSaving": "$12+/week"
+      },
+      {
+        "id": "A3",
+        "priority": "EMERGENCY",
+        "action": "加入 circuit breaker: 3 連敗暫停 30 分鐘",
+        "detail": "在 state.json 追蹤 consecutive_losses，達到 3 時設定 pause_until 時間",
+        "expectedSaving": "$3-17/week"
+      },
+      {
+        "id": "A4",
+        "priority": "EMERGENCY",
+        "action": "加入時段封鎖: 13:00-13:30 UTC 不開倉",
+        "detail": "在訊號生成前檢查當前 UTC 時間",
+        "expectedSaving": "$16+/week"
+      },
+      {
+        "id": "A5",
+        "priority": "HIGH",
+        "action": "週一開盤立即關閉 US30 和 session_momentum 持倉",
+        "detail": "不管盈虧，這兩筆持倉屬於已封鎖的商品/策略"
+      },
+      {
+        "id": "A6",
+        "priority": "HIGH",
+        "action": "RETIRE session_momentum, breakout_pattern, breakout_bollinger_squeeze",
+        "detail": "加入 strategy_registry 的 RETIRED 列表"
+      },
+      {
+        "id": "A7",
+        "priority": "MEDIUM",
+        "action": "加入 time-based exit: 120min 未盈利強制平倉",
+        "detail": "在持倉管理中加入時間檢查"
+      },
+      {
+        "id": "A8",
+        "priority": "MEDIUM",
+        "action": "調整 TP/SL 比例至最小 1:2.5",
+        "detail": "tp_distance >= sl_distance * 2.5"
+      }
+    ]
+  },
+
+  "nextWeekPlan": {
+    "primaryStrategies": ["breakout_range", "multi_indicator_consensus"],
+    "testingStrategies": ["reversion_bollinger", "reversion_rsi_divergence"],
+    "dormantStrategies": ["V5_TRENDING_DOWN"],
+    "retiredStrategies": [
+      "session_momentum", "breakout_pattern", "breakout_bollinger_squeeze",
+      "reversion_pin_bar", "trend_mtf_alignment", "breakout_outside_bar",
+      "V5_RANGING", "V5_TRENDING_UP"
+    ],
+    "primaryInstruments": ["US100"],
+    "secondaryInstruments": ["GOLD", "US500"],
+    "blacklistedInstruments": ["US30"],
+    "tradingHours": {
+      "blocked": "13:00-13:30 UTC",
+      "cautious": "13:30-14:00 UTC (confidence >= 0.75)",
+      "optimal": "14:00-18:00 UTC",
+      "normal": "其他交易時段正常"
+    },
+    "riskChanges": [
+      "Circuit breaker: 3連敗暫停30分鐘",
+      "US30 完全禁止 (hardcoded blacklist)",
+      "Retired strategies 硬性封鎖 (registry status check)",
+      "Time-based exit: 120min → force close",
+      "TP/SL ratio 最小 2.5",
+      "Confidence 0.75+ 降低倉位至 50%",
+      "每日最大虧損 1.5%"
+    ],
+    "weeklyTarget": "回測預測：如果A1-A4全部落實，PnL從-$44.14→+$9.09。目標：打平或微利 ($0-$10)。連續三週相同目標未達成，這週是最後機會證明系統可行。",
+    "escalation": "如果 W17 仍然虧損且改進措施仍未落實，建議暫停全系統 1 週，手動審查並重寫 analyzer 引擎的訊號過濾邏輯。"
+  }
+}

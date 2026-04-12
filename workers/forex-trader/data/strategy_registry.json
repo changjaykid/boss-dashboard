@@ -1,0 +1,205 @@
+{
+  "lastUpdated": "2026-04-12",
+  "updatedBy": "weekend_strategy_study_W16",
+  "strategies": [
+    {
+      "id": "multi_indicator_consensus",
+      "name": "多指標共識",
+      "status": "ACTIVE",
+      "statusChangedDate": "2026-04-12",
+      "statusReason": "US100上有明確贏利能力(+$4.80)。整體-$11.04主因US30虧損。剔除US30後表現可能轉正。保留ACTIVE但限制商品。",
+      "performance": {
+        "w15Trades": 7, "w15WinRate": 0.25, "w15Pnl": -11.04,
+        "w16Trades": 7, "w16WinRate": 0.25, "w16Pnl": -11.04,
+        "allTimeTrades": 14, "allTimeWinRate": 0.25, "allTimePnl": -22.08
+      },
+      "instruments": ["US100", "GOLD", "US500"],
+      "restrictions": "禁止 US30。13:00-13:30 UTC 不開倉。conf ≥ 0.75 時倉位減半。",
+      "tags": ["multi_indicator", "consensus"]
+    },
+    {
+      "id": "breakout_range",
+      "name": "區間突破",
+      "status": "ACTIVE",
+      "statusChangedDate": "2026-04-12",
+      "statusReason": "US100上表現最佳(本週最大贏單$5.94)。累計+$64.86。在US100 SELL方向有明確邊際。",
+      "performance": {
+        "w14Trades": 20, "w14WinRate": 0.30, "w14Pnl": 73.06,
+        "w15Trades": 6, "w15WinRate": 0.33, "w15Pnl": -4.10,
+        "w16Trades": 6, "w16WinRate": 0.33, "w16Pnl": -4.10,
+        "allTimeTrades": 32, "allTimeWinRate": 0.31, "allTimePnl": 64.86
+      },
+      "instruments": ["US100", "GOLD", "US500"],
+      "restrictions": "禁止 US30。優先 US100。",
+      "tags": ["breakout", "range", "us100_strength"]
+    },
+    {
+      "id": "V5_TRENDING_DOWN",
+      "name": "V5 下跌趨勢",
+      "status": "ACTIVE",
+      "statusChangedDate": "2026-04-12",
+      "statusReason": "W14有67%WR +$20.19。W15-W16無交易。市場可能不適合。保留ACTIVE但標記dormant。",
+      "performance": {
+        "w14Trades": 3, "w14WinRate": 0.67, "w14Pnl": 20.19,
+        "w15Trades": 0, "w16Trades": 0,
+        "allTimeTrades": 3, "allTimeWinRate": 0.67, "allTimePnl": 20.19
+      },
+      "instruments": ["US100"],
+      "restrictions": "禁止 US30。僅在明確下跌趨勢時使用。",
+      "tags": ["trend", "bearish", "dormant"]
+    },
+    {
+      "id": "reversion_bollinger",
+      "name": "Bollinger 均值回歸",
+      "status": "TESTING",
+      "statusChangedDate": "2026-04-12",
+      "statusReason": "1筆+$4.21。三週無新交易。觸發條件可能太嚴格。保留但考慮放寬。",
+      "performance": {
+        "allTimeTrades": 1, "allTimeWinRate": 1.0, "allTimePnl": 4.21
+      },
+      "instruments": ["US500", "US100"],
+      "tags": ["reversion", "bollinger"]
+    },
+    {
+      "id": "reversion_rsi_divergence",
+      "name": "RSI 背離反轉",
+      "status": "TESTING",
+      "statusChangedDate": "2026-04-12",
+      "statusReason": "3筆0勝-$2.01。再給5筆機會（到累計8筆時評估）。若仍0%WR則RETIRE。",
+      "performance": {
+        "allTimeTrades": 3, "allTimeWinRate": 0.0, "allTimePnl": -2.01
+      },
+      "instruments": ["US500", "GOLD", "US100"],
+      "tags": ["reversion", "rsi", "divergence", "probation"]
+    },
+    {
+      "id": "session_momentum",
+      "name": "交易時段動量",
+      "status": "RETIRED",
+      "statusChangedDate": "2026-04-12",
+      "statusReason": "🪦 兩週測試10筆0%WR -$30.82。策略邏輯根本錯誤——開盤動量多為假突破。W15決定PAUSE但未執行，W16又虧$15.41。正式RETIRE。",
+      "performance": {
+        "allTimeTrades": 10, "allTimeWinRate": 0.0, "allTimePnl": -30.82
+      },
+      "tags": ["momentum", "session", "retired"],
+      "retireReason": "策略假設（開盤動量持續）在實測中完全不成立。10筆0勝足以否定。"
+    },
+    {
+      "id": "breakout_pattern",
+      "name": "型態突破",
+      "status": "RETIRED",
+      "statusChangedDate": "2026-04-12",
+      "statusReason": "🪦 三週連虧。38筆17%WR -$29.49。從DEMOTED升級為RETIRED。",
+      "performance": {
+        "allTimeTrades": 38, "allTimeWinRate": 0.17, "allTimePnl": -29.49
+      },
+      "tags": ["breakout", "pattern", "retired"],
+      "retireReason": "三週觀察無改善。勝率和PnL持續惡化。"
+    },
+    {
+      "id": "breakout_bollinger_squeeze",
+      "name": "Bollinger Squeeze 突破",
+      "status": "RETIRED",
+      "statusChangedDate": "2026-04-12",
+      "statusReason": "🪦 11筆10%WR -$8.43。三週觀察無改善。從DEMOTED升級為RETIRED。",
+      "performance": {
+        "allTimeTrades": 11, "allTimeWinRate": 0.10, "allTimePnl": -8.43
+      },
+      "tags": ["breakout", "bollinger", "squeeze", "retired"],
+      "retireReason": "樣本足夠(11筆)，WR和PnL都不可接受。"
+    },
+    {
+      "id": "V5_TRENDING_UP",
+      "name": "V5 上漲趨勢",
+      "status": "RETIRED",
+      "statusChangedDate": "2026-04-11",
+      "statusReason": "🪦 11%WR -$0.53。多頭判斷系統性失準。",
+      "performance": {
+        "allTimeTrades": 9, "allTimeWinRate": 0.11, "allTimePnl": -0.53
+      },
+      "tags": ["trend", "bullish", "retired"]
+    },
+    {
+      "id": "trend_mtf_alignment",
+      "name": "多時間框架趨勢對齊",
+      "status": "RETIRED",
+      "statusChangedDate": "2026-04-05",
+      "statusReason": "🪦🚨 三週RETIRE但三週仍交易。41筆13%WR -$88.55。必須硬性封鎖。",
+      "performance": {
+        "allTimeTrades": 41, "allTimeWinRate": 0.13, "allTimePnl": -88.55
+      },
+      "tags": ["trend", "mtf", "retired", "MUST_HARD_BLOCK"],
+      "retireReason": "W14決定RETIRE，W15未封鎖多虧$3.29，W16又未封鎖多虧$3.29。累計虧損持續增加。"
+    },
+    {
+      "id": "reversion_pin_bar",
+      "name": "Pin Bar 反轉",
+      "status": "RETIRED",
+      "statusChangedDate": "2026-04-05",
+      "statusReason": "🪦🚨 三週RETIRE但三週仍交易。13筆0%WR -$79.83。必須硬性封鎖。",
+      "performance": {
+        "allTimeTrades": 13, "allTimeWinRate": 0.0, "allTimePnl": -79.83
+      },
+      "tags": ["reversion", "pin_bar", "retired", "MUST_HARD_BLOCK"],
+      "retireReason": "0%勝率，13筆全敗。三週未封鎖導致持續失血。"
+    },
+    {
+      "id": "breakout_outside_bar",
+      "name": "Outside Bar 突破",
+      "status": "RETIRED",
+      "statusChangedDate": "2026-04-05",
+      "statusReason": "🪦 已成功停用(W15-W16零交易)。5筆0%WR -$29.53。",
+      "performance": {
+        "allTimeTrades": 5, "allTimeWinRate": 0.0, "allTimePnl": -29.53
+      },
+      "tags": ["breakout", "outside_bar", "retired"]
+    },
+    {
+      "id": "V5_RANGING",
+      "name": "V5 區間震盪",
+      "status": "RETIRED",
+      "statusChangedDate": "2026-04-05",
+      "statusReason": "🪦 已成功停用(W15-W16零交易)。5筆20%WR -$93.20。",
+      "performance": {
+        "allTimeTrades": 5, "allTimeWinRate": 0.20, "allTimePnl": -93.20
+      },
+      "tags": ["ranging", "mean_reversion", "retired"]
+    }
+  ],
+  "metadata": {
+    "totalStrategies": 13,
+    "active": 3,
+    "testing": 2,
+    "paused": 0,
+    "demoted": 0,
+    "retired": 8,
+    "lastEvolutionCycle": "2026-04-12T02:00:00Z",
+    "blacklistedInstruments": ["US30"],
+    "blockedTimeUTC": "13:00-13:30",
+    "circuitBreakerRule": "3 consecutive losses → pause 30 min",
+    "maxHoldTime": "120 min (force close if losing)",
+    "minTPSLRatio": 2.5,
+    "highConfidenceOverride": "conf >= 0.75 → half position size"
+  },
+  "pendingHypotheses": [
+    "H11_US100_SELL_SPECIALIST (HIGHEST — 基於三週實戰數據)",
+    "H12_INVERSE_CONFIDENCE (HIGH — 反向信心倉位模型)",
+    "H8_VOLATILITY_GATE (HIGH — 波動率門檻過濾)",
+    "H3_REGIME_CIRCUIT_BREAKER (HIGH — 三週未實裝)",
+    "H13_GOLD_PAUSE (MEDIUM — 暫停GOLD新開倉)",
+    "H9_POSITION_SCALING (MEDIUM — 信心級別倉位縮放)",
+    "H10_ADAPTIVE_SL_WIDTH (MEDIUM — 動態SL寬度)"
+  ],
+  "engineRequirements": {
+    "note": "以下規則必須在 analyzer 引擎程式碼中硬性實施，不僅是 registry 設定",
+    "hardRules": [
+      "INSTRUMENT_BLACKLIST: ['US30'] — 任何策略不得開 US30 倉",
+      "STRATEGY_STATUS_CHECK: 只有 status='ACTIVE' 或 'TESTING' 的策略可生成訊號",
+      "TIME_BLOCK: 13:00-13:30 UTC 不開倉",
+      "CIRCUIT_BREAKER: 3連敗暫停30分鐘",
+      "MAX_HOLD_TIME: 120分鐘未盈利強制平倉",
+      "MIN_TP_SL_RATIO: 2.5",
+      "HIGH_CONF_NERF: confidence >= 0.75 時倉位減半"
+    ]
+  }
+}

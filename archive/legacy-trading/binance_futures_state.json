@@ -1,0 +1,83 @@
+{
+  "status": "RUNNING",
+  "position": null,
+  "trailingStop": null,
+  "dailyStats": {
+    "date": "2026-04-07",
+    "trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0,
+    "bestTrade": 0,
+    "worstTrade": 0,
+    "consecutiveLosses": 0,
+    "pauseUntil": null
+  },
+  "totalStats": {
+    "trades": 4,
+    "wins": 1,
+    "losses": 3,
+    "pnl": -0.87248342,
+    "winRate": 0.25,
+    "avgRR": 0,
+    "maxDrawdown": 0.48,
+    "peakBalance": 464
+  },
+  "strategyWeights": {
+    "BREAKOUT": 1,
+    "TREND_FOLLOW": 1,
+    "REVERSAL": 0.8,
+    "MOMENTUM": 1,
+    "FUNDING_ARB": 0.7,
+    "NEWS_EVENT": 0.5
+  },
+  "lastAnalysis": {
+    "time": "2026-04-07T08:57:01.469Z",
+    "price": 68899.9,
+    "marketState": "TRENDING_DOWN",
+    "score": 5,
+    "direction": "LONG"
+  },
+  "lastTradeTime": "2026-04-07T02:48:00.769Z",
+  "tradeHistory": [
+    {
+      "time": "2026-04-05T11:15:14.644Z",
+      "strategy": "RECOVERED",
+      "pnl": -1.107,
+      "side": "SHORT",
+      "entry": 66796.7,
+      "exit": 67018.1,
+      "size": 0.005
+    },
+    {
+      "time": "2026-04-06T07:30:58.000Z",
+      "strategy": "MANUAL_CLOSE",
+      "pnl": -1.1,
+      "side": "LONG",
+      "entry": 69106.8,
+      "exit": 69022.5,
+      "size": 0.013,
+      "reason": "Engine closePosition 400 bug - manually closed"
+    },
+    {
+      "time": "2026-04-06T12:57:01.858Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 69181.7,
+      "pnl": 1.7,
+      "strategy": "UNKNOWN",
+      "reasons": []
+    },
+    {
+      "time": "2026-04-06T17:15:01.611Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 69337.4,
+      "pnl": -0.36,
+      "strategy": "UNKNOWN",
+      "reasons": []
+    }
+  ],
+  "startTime": "2026-04-03T15:54:36.754Z",
+  "initialCapital": 464
+}

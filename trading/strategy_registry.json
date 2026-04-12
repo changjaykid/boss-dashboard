@@ -1,0 +1,119 @@
+{
+  "lastUpdated": "2026-04-05",
+  "updatedBy": "weekend_strategy_study",
+  "strategies": [
+    {
+      "id": "breakout_range",
+      "name": "區間突破",
+      "status": "PROMOTED",
+      "statusChangedDate": "2026-04-05",
+      "statusReason": "本週唯一大幅盈利策略 +73.06, 30% WR, 20筆",
+      "performance": {"weekTrades": 20, "weekWinRate": 0.30, "weekPnl": 73.06},
+      "instruments": ["US500", "US100", "US30", "GOLD"],
+      "tags": ["breakout", "range", "best_performer"]
+    },
+    {
+      "id": "V5_TRENDING_DOWN",
+      "name": "V5 下跌趨勢",
+      "status": "PROMOTED",
+      "statusChangedDate": "2026-04-05",
+      "statusReason": "67% WR, +20.19, 方向正確但樣本少",
+      "performance": {"weekTrades": 3, "weekWinRate": 0.67, "weekPnl": 20.19},
+      "instruments": ["US100", "US30"],
+      "tags": ["trend", "bearish"]
+    },
+    {
+      "id": "reversion_bollinger",
+      "name": "Bollinger 均值回歸",
+      "status": "TESTING",
+      "statusChangedDate": "2026-04-05",
+      "statusReason": "1筆100%勝率+4.21, 數據不足但有潛力",
+      "performance": {"weekTrades": 1, "weekWinRate": 1.0, "weekPnl": 4.21},
+      "instruments": ["US500"],
+      "tags": ["reversion", "bollinger"]
+    },
+    {
+      "id": "breakout_pattern",
+      "name": "型態突破",
+      "status": "DEMOTED",
+      "statusChangedDate": "2026-04-05",
+      "statusReason": "34筆僅18% WR, -28.77, 假訊號太多",
+      "performance": {"weekTrades": 34, "weekWinRate": 0.18, "weekPnl": -28.77},
+      "instruments": ["US500", "US100", "US30", "GOLD"],
+      "tags": ["breakout", "pattern"],
+      "restrictions": "降低權重，僅在 16-18 UTC 時段允許"
+    },
+    {
+      "id": "breakout_bollinger_squeeze",
+      "name": "Bollinger Squeeze 突破",
+      "status": "DEMOTED",
+      "statusChangedDate": "2026-04-05",
+      "statusReason": "11% WR, -8.43, 假突破頻繁",
+      "performance": {"weekTrades": 9, "weekWinRate": 0.11, "weekPnl": -8.43},
+      "instruments": ["US500", "US100", "US30", "GOLD"],
+      "tags": ["breakout", "bollinger", "squeeze"]
+    },
+    {
+      "id": "V5_TRENDING_UP",
+      "name": "V5 上漲趨勢",
+      "status": "DEMOTED",
+      "statusChangedDate": "2026-04-05",
+      "statusReason": "11% WR, -0.53, 多頭判斷完全失準",
+      "performance": {"weekTrades": 9, "weekWinRate": 0.11, "weekPnl": -0.53},
+      "instruments": ["US30", "GOLD"],
+      "tags": ["trend", "bullish"],
+      "restrictions": "暫停使用直到 confidence scoring 修正"
+    },
+    {
+      "id": "trend_mtf_alignment",
+      "name": "多時間框架趨勢對齊",
+      "status": "RETIRED",
+      "statusChangedDate": "2026-04-05",
+      "statusReason": "35筆僅14% WR, -81.97, 系統性失敗",
+      "performance": {"weekTrades": 35, "weekWinRate": 0.14, "weekPnl": -81.97},
+      "tags": ["trend", "mtf"]
+    },
+    {
+      "id": "reversion_pin_bar",
+      "name": "Pin Bar 反轉",
+      "status": "RETIRED",
+      "statusChangedDate": "2026-04-05",
+      "statusReason": "9筆 0% WR, -61.69, 完全無效",
+      "performance": {"weekTrades": 9, "weekWinRate": 0.0, "weekPnl": -61.69},
+      "tags": ["reversion", "pin_bar"]
+    },
+    {
+      "id": "breakout_outside_bar",
+      "name": "Outside Bar 突破",
+      "status": "RETIRED",
+      "statusChangedDate": "2026-04-05",
+      "statusReason": "5筆 0% WR, -29.53, 完全無效",
+      "performance": {"weekTrades": 5, "weekWinRate": 0.0, "weekPnl": -29.53},
+      "tags": ["breakout", "outside_bar"]
+    },
+    {
+      "id": "V5_RANGING",
+      "name": "V5 區間震盪",
+      "status": "RETIRED",
+      "statusChangedDate": "2026-04-05",
+      "statusReason": "5筆 20% WR, -93.20, 區間策略在趨勢市場慘敗",
+      "performance": {"weekTrades": 5, "weekWinRate": 0.20, "weekPnl": -93.20},
+      "tags": ["ranging", "mean_reversion"]
+    },
+    {
+      "id": "reversion_rsi_divergence",
+      "name": "RSI 背離反轉",
+      "status": "TESTING",
+      "statusChangedDate": "2026-04-05",
+      "statusReason": "僅1筆數據不足，保留觀察",
+      "performance": {"weekTrades": 1, "weekWinRate": 0.0, "weekPnl": -0.27},
+      "tags": ["reversion", "rsi", "divergence"]
+    }
+  ],
+  "pendingHypotheses": [
+    "H1_TIME_FILTERED_TREND (BACKTEST_PASSED — 下週優先測試)",
+    "H3_REGIME_CIRCUIT_BREAKER (BACKTEST_PASSED — 立即實施)",
+    "H2_ADAPTIVE_CONFIDENCE (待回測)",
+    "H5_QUICK_EXIT_60MIN (待回測)"
+  ]
+}

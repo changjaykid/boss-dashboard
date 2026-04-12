@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "binance": "^3.5.4",
     "max-exchange-api-node": "^3.0.2"
   }
 }

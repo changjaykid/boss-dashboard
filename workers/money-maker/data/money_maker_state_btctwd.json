@@ -1,0 +1,43 @@
+{
+  "version": 7,
+  "status": "RUNNING",
+  "buyBatches": [
+    {
+      "price": 2279997,
+      "twd": 1000,
+      "coin": 0.0004378953130201487,
+      "time": 1775658354788,
+      "reason": "強買入(4.3)"
+    },
+    {
+      "price": 2267142.8,
+      "twd": 600,
+      "coin": 0.00026422684975997105,
+      "time": 1775658782192,
+      "reason": "強買入(7.5)"
+    },
+    {
+      "price": 2268112,
+      "twd": 360,
+      "coin": 0.0001584683648779249,
+      "time": 1775659142282,
+      "reason": "強買入(7.5)"
+    }
+  ],
+  "sellBatches": [],
+  "avgBuyPrice": 2277505.89509022,
+  "totalCoinHeld": 0.0008605905276580447,
+  "totalTwdInvested": 1960,
+  "dailyPnl": 0,
+  "dailyDate": "2026-04-12",
+  "totalPnl": 28,
+  "totalTrades": 5,
+  "wins": 5,
+  "losses": 0,
+  "consecutiveLosses": 0,
+  "maxDrawdown": 0,
+  "peakEquity": 2500,
+  "pauseUntil": null,
+  "lastBuyTime": null,
+  "lastSellTime": null
+}

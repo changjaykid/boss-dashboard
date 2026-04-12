@@ -1,0 +1,37 @@
+{
+  "lastUpdate": "2026-04-12 06:15",
+  "summary": {
+    "totalSkills": 28,
+    "cronJobs": {
+      "total": 12,
+      "healthy": 11,
+      "error": 1,
+      "disabled": 0
+    }
+  },
+  "cronHealth": [
+    { "name": "skill-health", "status": "running", "consecutiveErrors": 0, "lastRun": "3m ago" },
+    { "name": "binance-futures", "status": "running", "consecutiveErrors": 0, "lastRun": "32m ago" },
+    { "name": "daily-backup", "status": "running", "consecutiveErrors": 0, "lastRun": "1d ago" },
+    { "name": "money-maker", "status": "running", "consecutiveErrors": 0, "lastRun": "8m ago" },
+    { "name": "forex-news", "status": "ok", "consecutiveErrors": 0, "lastRun": "10h ago" },
+    { "name": "crypto-news", "status": "ok", "consecutiveErrors": 0, "lastRun": "10h ago" },
+    { "name": "nightly-report", "status": "error", "consecutiveErrors": 1, "lastError": "rate_limit" }
+  ],
+  "dashboardStatus": [
+    { "worker": "futures-trader", "lastUpdate": "2026-04-12 05:31", "status": "🟢" },
+    { "worker": "money-maker", "lastUpdate": "2026-04-12 06:01", "status": "🟢" },
+    { "worker": "social-threads", "lastUpdate": "2026-04-12 00:59", "status": "🟢" },
+    { "worker": "stock-analyst", "lastUpdate": "2026-04-10 14:30", "status": "🟢 (週末)" },
+    { "worker": "forex-news", "lastUpdate": "2026-04-11 11:52", "status": "🟡 (停滯)" },
+    { "worker": "crypto-news", "lastUpdate": "2026-04-11 11:50", "status": "🟡 (停滯)" },
+    { "worker": "ig-carousel", "lastUpdate": "2026-04-06 13:09", "status": "🔴 (過期)" },
+    { "worker": "forex-trader", "lastUpdate": "2026-04-08 23:07", "status": "🔴 (異常停滯)" }
+  ],
+  "alerts": [
+    "nightly-report 發生 rate_limit 錯誤 (1次)",
+    "forex-news / crypto-news 昨晚未正常更新 Dashboard",
+    "ig-carousel 已 6 天未更新，且查無 Cron Job",
+    "forex-trader 資料停留在 4/8，需檢查自動交易系統狀態"
+  ]
+}

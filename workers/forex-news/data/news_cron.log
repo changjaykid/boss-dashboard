@@ -1,0 +1,358 @@
+[2026/3/29 下午12:00:00] 開始抓取新聞...
+外匯新聞: 5 則 | 虛擬貨幣新聞: 5 則
+外匯社群: 5 則 | 虛擬貨幣社群: 5 則
+[2026/3/29 下午12:00:00] 新聞更新完成
+[2026/3/30 上午11:22:23] 開始抓取新聞...
+zsh:1: command not found: timeout
+外匯新聞: 5 則 | 虛擬貨幣新聞: 5 則
+外匯社群: 5 則 | 虛擬貨幣社群: 5 則
+[2026/3/30 上午11:23:04] 開始抓取新聞...
+[2026/3/30 上午11:22:23] 新聞更新完成
+外匯新聞: 5 則 | 虛擬貨幣新聞: 5 則
+外匯社群: 5 則 | 虛擬貨幣社群: 5 則
+timeout or error: spawnSync /bin/sh ETIMEDOUT
+[2026/3/30 下午8:00:00] 開始抓取新聞...
+外匯新聞: 5 則 | 虛擬貨幣新聞: 5 則
+外匯社群: 5 則 | 虛擬貨幣社群: 5 則
+[2026/3/30 下午8:00:00] 新聞更新完成
+[2026/3/31 下午8:00:00] 開始抓取新聞...
+外匯新聞: 5 則 | 虛擬貨幣新聞: 5 則
+外匯社群: 5 則 | 虛擬貨幣社群: 5 則
+[2026/3/31 下午8:00:00] 新聞更新完成
+[2026-04-01 08:00:00] 開始抓取新聞...
+抓取完成 — 外匯原始: 49 | 虛擬貨幣原始: 63 | 外匯社群: 60 | 虛擬貨幣社群: 61
+分析完成 — 外匯新聞: 5 | 虛擬貨幣新聞: 5 | 外匯社群: 4 | 虛擬貨幣社群: 4
+外匯新聞: 5 則 | 虛擬貨幣新聞: 5 則
+外匯社群: 4 則 | 虛擬貨幣社群: 4 則
+Git push 完成
+[2026-04-01 08:00:49] 新聞更新完成
+[2026-04-01 20:00:01] 開始抓取新聞...
+🔄 執行價格抓取腳本 (update_forex_prices.py)...
+/Users/kid/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+📊 Forex Price Updater
+   JSON path: /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Time: 2026-04-01 20:00:02 (Asia/Taipei)
+
+   Loaded existing JSON (5 news items preserved)
+
+🔄 Fetching prices for 9 instruments...
+   XAUUSD (GC=F)... ✅ 4786.6 (+1.69%)
+   EURUSD (EURUSD=X)... ✅ 1.161 (+0.42%)
+   GBPUSD (GBPUSD=X)... ✅ 1.3322 (+0.68%)
+   USDJPY (JPY=X)... ✅ 158.33 (-0.24%)
+   US30 (^DJI)... ✅ 46341.51 (+2.49%)
+   SPX500 (^GSPC)... ✅ 6528.52 (+2.91%)
+   NAS100 (NQ=F)... ✅ 24182.0 (+0.84%)
+   DXY (DX-Y.NYB)... ✅ 99.42 (-0.42%)
+   US10Y (^TNX)... ✅ 4.311 (-0.71%)
+
+✅ Done! Prices written to /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Success: 9/9, Failed: 0
+
+抓取完成 — 外匯原始: 50 | 虛擬貨幣原始: 64 | 外匯社群: 59 | 虛擬貨幣社群: 63
+分析完成 — 外匯新聞: 5 | 虛擬貨幣新聞: 5 | 外匯社群: 4 | 虛擬貨幣社群: 4
+外匯新聞: 5 則 | 虛擬貨幣新聞: 5 則
+外匯社群: 4 則 | 虛擬貨幣社群: 4 則
+Git push 完成
+[2026-04-01 20:00:59] 新聞更新完成
+[2026-04-02 08:00:01] 開始抓取新聞...
+🔄 執行價格抓取腳本 (update_forex_prices.py)...
+/Users/kid/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+📊 Forex Price Updater
+   JSON path: /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Time: 2026-04-02 08:00:02 (Asia/Taipei)
+
+   Loaded existing JSON (5 news items preserved)
+
+🔄 Fetching prices for 9 instruments...
+   XAUUSD (GC=F)... ✅ 4809.4 (+2.18%)
+   EURUSD (EURUSD=X)... ✅ 1.1593 (-0.01%)
+   GBPUSD (GBPUSD=X)... ✅ 1.3302 (-0.02%)
+   USDJPY (JPY=X)... ✅ 158.71 (+0.07%)
+   US30 (^DJI)... ✅ 46565.74 (+0.48%)
+   SPX500 (^GSPC)... ✅ 6575.32 (+0.72%)
+   NAS100 (NQ=F)... ✅ 24194.25 (+0.89%)
+   DXY (DX-Y.NYB)... ✅ 99.55 (-0.29%)
+   US10Y (^TNX)... ✅ 4.319 (+0.19%)
+
+✅ Done! Prices written to /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Success: 9/9, Failed: 0
+
+抓取完成 — 外匯原始: 50 | 虛擬貨幣原始: 69 | 外匯社群: 58 | 虛擬貨幣社群: 62
+分析完成 — 外匯新聞: 5 | 虛擬貨幣新聞: 5 | 外匯社群: 4 | 虛擬貨幣社群: 4
+外匯新聞: 5 則 | 虛擬貨幣新聞: 5 則
+外匯社群: 4 則 | 虛擬貨幣社群: 4 則
+Git push 完成
+[2026-04-02 08:01:04] 新聞更新完成
+[2026-04-02 20:00:00] 開始抓取新聞...
+🔄 執行價格抓取腳本 (update_forex_prices.py)...
+/Users/kid/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+📊 Forex Price Updater
+   JSON path: /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Time: 2026-04-02 20:00:01 (Asia/Taipei)
+
+   Loaded existing JSON (5 news items preserved)
+
+🔄 Fetching prices for 9 instruments...
+   XAUUSD (GC=F)... ✅ 4631.9 (-1.60%)
+   EURUSD (EURUSD=X)... ✅ 1.1522 (-0.62%)
+   GBPUSD (GBPUSD=X)... ✅ 1.3203 (-0.76%)
+   USDJPY (JPY=X)... ✅ 159.69 (+0.68%)
+   US30 (^DJI)... ✅ 46565.74 (+0.48%)
+   SPX500 (^GSPC)... ✅ 6575.32 (+0.72%)
+   NAS100 (NQ=F)... ✅ 23716.0 (-0.44%)
+   DXY (DX-Y.NYB)... ✅ 100.22 (+0.21%)
+   US10Y (^TNX)... ✅ 4.319 (+0.19%)
+
+✅ Done! Prices written to /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Success: 9/9, Failed: 0
+
+抓取完成 — 外匯原始: 51 | 虛擬貨幣原始: 69 | 外匯社群: 57 | 虛擬貨幣社群: 58
+分析完成 — 外匯新聞: 5 | 虛擬貨幣新聞: 5 | 外匯社群: 4 | 虛擬貨幣社群: 3
+外匯新聞: 5 則 | 虛擬貨幣新聞: 5 則
+外匯社群: 4 則 | 虛擬貨幣社群: 3 則
+Git push 完成
+[2026-04-02 20:01:12] 新聞更新完成
+[2026-04-03 08:00:00] 開始抓取新聞...
+🔄 執行價格抓取腳本 (update_forex_prices.py)...
+/Users/kid/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+📊 Forex Price Updater
+   JSON path: /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Time: 2026-04-03 08:00:02 (Asia/Taipei)
+
+   Loaded existing JSON (5 news items preserved)
+
+🔄 Fetching prices for 9 instruments...
+   XAUUSD (GC=F)... ✅ 4702.7 (-0.09%)
+   EURUSD (EURUSD=X)... ✅ 1.1545 (+0.03%)
+   GBPUSD (GBPUSD=X)... ✅ 1.323 (+0.02%)
+   USDJPY (JPY=X)... ✅ 159.49 (-0.05%)
+   US30 (^DJI)... ✅ 46504.67 (-0.13%)
+   SPX500 (^GSPC)... ✅ 6582.69 (+0.11%)
+   NAS100 (NQ=F)... ✅ 24210.75 (+1.63%)
+   DXY (DX-Y.NYB)... ✅ 99.99 (-0.02%)
+   US10Y (^TNX)... ✅ 4.313 (-0.14%)
+
+✅ Done! Prices written to /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Success: 9/9, Failed: 0
+
+抓取完成 — 外匯原始: 51 | 虛擬貨幣原始: 68 | 外匯社群: 56 | 虛擬貨幣社群: 58
+分析完成 — 外匯新聞: 5 | 虛擬貨幣新聞: 5 | 外匯社群: 3 | 虛擬貨幣社群: 4
+外匯新聞: 5 則 | 虛擬貨幣新聞: 5 則
+外匯社群: 3 則 | 虛擬貨幣社群: 4 則
+Git push 完成
+[2026-04-03 08:00:54] 新聞更新完成
+[2026-04-03 20:00:01] 開始抓取新聞...
+🔄 執行價格抓取腳本 (update_forex_prices.py)...
+/Users/kid/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+📊 Forex Price Updater
+   JSON path: /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Time: 2026-04-03 20:00:02 (Asia/Taipei)
+
+   Loaded existing JSON (5 news items preserved)
+
+🔄 Fetching prices for 9 instruments...
+   XAUUSD (GC=F)... ✅ 4651.5 (-1.18%)
+   EURUSD (EURUSD=X)... ✅ 1.1547 (+0.03%)
+   GBPUSD (GBPUSD=X)... ✅ 1.3236 (+0.08%)
+   USDJPY (JPY=X)... ✅ 159.55 (+0.01%)
+   US30 (^DJI)... ✅ 46504.67 (-0.13%)
+   SPX500 (^GSPC)... ✅ 6582.69 (+0.11%)
+   NAS100 (NQ=F)... ✅ 24150.75 (+1.38%)
+   DXY (DX-Y.NYB)... ✅ 99.98 (-0.02%)
+   US10Y (^TNX)... ✅ 4.313 (-0.14%)
+
+✅ Done! Prices written to /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Success: 9/9, Failed: 0
+
+抓取完成 — 外匯原始: 51 | 虛擬貨幣原始: 67 | 外匯社群: 56 | 虛擬貨幣社群: 59
+分析完成 — 外匯新聞: 5 | 虛擬貨幣新聞: 5 | 外匯社群: 4 | 虛擬貨幣社群: 4
+外匯新聞: 5 則 | 虛擬貨幣新聞: 5 則
+外匯社群: 4 則 | 虛擬貨幣社群: 4 則
+Git push 完成
+[2026-04-03 20:01:24] 新聞更新完成
+[2026-04-04 08:00:00] 開始抓取新聞...
+🔄 執行價格抓取腳本 (update_forex_prices.py)...
+/Users/kid/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+📊 Forex Price Updater
+   JSON path: /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Time: 2026-04-04 08:00:02 (Asia/Taipei)
+
+   Loaded existing JSON (5 news items preserved)
+
+🔄 Fetching prices for 9 instruments...
+   XAUUSD (GC=F)... ✅ 4651.5 (-1.18%)
+   EURUSD (EURUSD=X)... ✅ 1.1522 (-0.18%)
+   GBPUSD (GBPUSD=X)... ✅ 1.3194 (-0.24%)
+   USDJPY (JPY=X)... ✅ 159.63 (+0.06%)
+   US30 (^DJI)... ✅ 46504.67 (-0.13%)
+   SPX500 (^GSPC)... ✅ 6582.69 (+0.11%)
+   NAS100 (NQ=F)... ✅ 24129.75 (+1.29%)
+   DXY (DX-Y.NYB)... ✅ 100.19 (+0.18%)
+   US10Y (^TNX)... ✅ 4.313 (-0.14%)
+
+✅ Done! Prices written to /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Success: 9/9, Failed: 0
+
+抓取完成 — 外匯原始: 51 | 虛擬貨幣原始: 66 | 外匯社群: 58 | 虛擬貨幣社群: 61
+分析完成 — 外匯新聞: 5 | 虛擬貨幣新聞: 5 | 外匯社群: 4 | 虛擬貨幣社群: 3
+外匯新聞: 5 則 | 虛擬貨幣新聞: 5 則
+外匯社群: 4 則 | 虛擬貨幣社群: 3 則
+Git push 完成
+[2026-04-04 08:00:57] 新聞更新完成
+[2026-04-04 20:00:00] 開始抓取新聞...
+🔄 執行價格抓取腳本 (update_forex_prices.py)...
+/Users/kid/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+📊 Forex Price Updater
+   JSON path: /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Time: 2026-04-04 20:00:02 (Asia/Taipei)
+
+   Loaded existing JSON (5 news items preserved)
+
+🔄 Fetching prices for 9 instruments...
+   XAUUSD (GC=F)... ✅ 4651.5 (-1.18%)
+   EURUSD (EURUSD=X)... ✅ 1.1522 (-0.18%)
+   GBPUSD (GBPUSD=X)... ✅ 1.3194 (-0.24%)
+   USDJPY (JPY=X)... ✅ 159.63 (+0.06%)
+   US30 (^DJI)... ✅ 46504.67 (-0.13%)
+   SPX500 (^GSPC)... ✅ 6582.69 (+0.11%)
+   NAS100 (NQ=F)... ✅ 24129.75 (+1.29%)
+   DXY (DX-Y.NYB)... ✅ 100.19 (+0.18%)
+   US10Y (^TNX)... ✅ 4.313 (-0.14%)
+
+✅ Done! Prices written to /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Success: 9/9, Failed: 0
+
+抓取完成 — 外匯原始: 51 | 虛擬貨幣原始: 66 | 外匯社群: 58 | 虛擬貨幣社群: 64
+分析完成 — 外匯新聞: 5 | 虛擬貨幣新聞: 0 | 外匯社群: 4 | 虛擬貨幣社群: 4
+外匯新聞: 5 則 | 虛擬貨幣新聞: 0 則
+外匯社群: 4 則 | 虛擬貨幣社群: 4 則
+Git push 完成
+[2026-04-04 20:01:00] 新聞更新完成
+[2026-04-05 08:00:01] 開始抓取新聞...
+🔄 執行價格抓取腳本 (update_forex_prices.py)...
+/Users/kid/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+📊 Forex Price Updater
+   JSON path: /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Time: 2026-04-05 08:00:02 (Asia/Taipei)
+
+   Loaded existing JSON (5 news items preserved)
+
+🔄 Fetching prices for 9 instruments...
+   XAUUSD (GC=F)... ✅ 4651.5 (-1.18%)
+   EURUSD (EURUSD=X)... ✅ 1.1522 (-0.18%)
+   GBPUSD (GBPUSD=X)... ✅ 1.3194 (-0.24%)
+   USDJPY (JPY=X)... ✅ 159.63 (+0.06%)
+   US30 (^DJI)... ✅ 46504.67 (-0.13%)
+   SPX500 (^GSPC)... ✅ 6582.69 (+0.11%)
+   NAS100 (NQ=F)... ✅ 24129.75 (+1.29%)
+   DXY (DX-Y.NYB)... ✅ 100.19 (+0.18%)
+   US10Y (^TNX)... ✅ 4.313 (-0.14%)
+
+✅ Done! Prices written to /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Success: 9/9, Failed: 0
+
+抓取完成 — 外匯原始: 51 | 虛擬貨幣原始: 64 | 外匯社群: 57 | 虛擬貨幣社群: 62
+分析完成 — 外匯新聞: 5 | 虛擬貨幣新聞: 5 | 外匯社群: 4 | 虛擬貨幣社群: 3
+外匯新聞: 5 則 | 虛擬貨幣新聞: 5 則
+外匯社群: 4 則 | 虛擬貨幣社群: 3 則
+Git push 完成
+[2026-04-05 08:01:00] 新聞更新完成
+[2026-04-05 20:00:00] 開始抓取新聞...
+🔄 執行價格抓取腳本 (update_forex_prices.py)...
+/Users/kid/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+📊 Forex Price Updater
+   JSON path: /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Time: 2026-04-05 20:00:02 (Asia/Taipei)
+
+   Loaded existing JSON (5 news items preserved)
+
+🔄 Fetching prices for 9 instruments...
+   XAUUSD (GC=F)... ✅ 4702.7 (-0.09%)
+   EURUSD (EURUSD=X)... ✅ 1.1522 (-0.18%)
+   GBPUSD (GBPUSD=X)... ✅ 1.3194 (-0.24%)
+   USDJPY (JPY=X)... ✅ 159.63 (+0.06%)
+   US30 (^DJI)... ✅ 46504.67 (-0.13%)
+   SPX500 (^GSPC)... ✅ 6582.69 (+0.11%)
+   NAS100 (NQ=F)... ✅ 24129.75 (+1.29%)
+   DXY (DX-Y.NYB)... ✅ 100.19 (+0.18%)
+   US10Y (^TNX)... ✅ 4.313 (-0.14%)
+
+✅ Done! Prices written to /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Success: 9/9, Failed: 0
+
+抓取完成 — 外匯原始: 51 | 虛擬貨幣原始: 65 | 外匯社群: 56 | 虛擬貨幣社群: 62
+分析完成 — 外匯新聞: 5 | 虛擬貨幣新聞: 5 | 外匯社群: 4 | 虛擬貨幣社群: 4
+外匯新聞: 5 則 | 虛擬貨幣新聞: 5 則
+外匯社群: 4 則 | 虛擬貨幣社群: 4 則
+Git push 完成
+[2026-04-05 20:01:28] 新聞更新完成
+[2026-04-06 08:00:01] 開始抓取新聞...
+🔄 執行價格抓取腳本 (update_forex_prices.py)...
+/Users/kid/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+📊 Forex Price Updater
+   JSON path: /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Time: 2026-04-06 08:00:02 (Asia/Taipei)
+
+   Loaded existing JSON (5 news items preserved)
+
+🔄 Fetching prices for 9 instruments...
+   XAUUSD (GC=F)... ✅ 4638.9 (-1.36%)
+   EURUSD (EURUSD=X)... ✅ 1.1513 (-0.08%)
+   GBPUSD (GBPUSD=X)... ✅ 1.3186 (-0.06%)
+   USDJPY (JPY=X)... ✅ 159.77 (+0.09%)
+   US30 (^DJI)... ✅ 46504.67 (-0.13%)
+   SPX500 (^GSPC)... ✅ 6582.69 (+0.11%)
+   NAS100 (NQ=F)... ✅ 24070.75 (-0.40%)
+   DXY (DX-Y.NYB)... ✅ 100.25 (+0.22%)
+   US10Y (^TNX)... ✅ 4.313 (-0.14%)
+
+✅ Done! Prices written to /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Success: 9/9, Failed: 0
+
+抓取完成 — 外匯原始: 51 | 虛擬貨幣原始: 64 | 外匯社群: 56 | 虛擬貨幣社群: 58
+分析完成 — 外匯新聞: 5 | 虛擬貨幣新聞: 5 | 外匯社群: 4 | 虛擬貨幣社群: 3
+外匯新聞: 5 則 | 虛擬貨幣新聞: 5 則
+外匯社群: 4 則 | 虛擬貨幣社群: 3 則
+Git push 完成
+[2026-04-06 08:01:02] 新聞更新完成
+[2026-04-06 20:00:00] 開始抓取新聞...
+🔄 執行價格抓取腳本 (update_forex_prices.py)...
+/Users/kid/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+📊 Forex Price Updater
+   JSON path: /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Time: 2026-04-06 20:00:02 (Asia/Taipei)
+
+   Loaded existing JSON (5 news items preserved)
+
+🔄 Fetching prices for 9 instruments...
+   XAUUSD (GC=F)... ✅ 4709.0 (+0.92%)
+   EURUSD (EURUSD=X)... ✅ 1.1549 (+0.23%)
+   GBPUSD (GBPUSD=X)... ✅ 1.3237 (+0.33%)
+   USDJPY (JPY=X)... ✅ 159.55 (-0.05%)
+   US30 (^DJI)... ✅ 46504.67 (-0.13%)
+   SPX500 (^GSPC)... ✅ 6582.69 (+0.11%)
+   NAS100 (NQ=F)... ✅ 24304.0 (+0.38%)
+   DXY (DX-Y.NYB)... ✅ 99.94 (-0.09%)
+   US10Y (^TNX)... ✅ 4.313 (-0.14%)
+
+✅ Done! Prices written to /Users/kid/.openclaw/workspace/boss-dashboard/forex-news.json
+   Success: 9/9, Failed: 0
+
+抓取完成 — 外匯原始: 51 | 虛擬貨幣原始: 64 | 外匯社群: 56 | 虛擬貨幣社群: 60
+分析完成 — 外匯新聞: 5 | 虛擬貨幣新聞: 5 | 外匯社群: 3 | 虛擬貨幣社群: 3
+外匯新聞: 5 則 | 虛擬貨幣新聞: 5 則
+外匯社群: 3 則 | 虛擬貨幣社群: 3 則
+Git push 完成
+[2026-04-06 20:00:55] 新聞更新完成

@@ -1,23 +1,8 @@
-# HEARTBEAT.md
+### 本次檢查
+- 已完成賺錢機第一輪優化：修復持倉狀態、保留現金、低買高賣邏輯更嚴謹。
+- 已完成合約交易第一輪優化：改成更偏向低位做多、高位做空，並收緊風控。
+- 確認主控板與社群系統目前正常。
 
-## Trading Monitor
-- Check trading/last_report.json for latest auto-trader status
-- Check trading/crypto_sim_state.json for crypto sim status
-- If any position was closed (check trade_log.json + crypto_sim_log.json for outcomes), record result and notify boss
-- If P/L on open positions exceeds +$20 or -$10, alert boss
-- Review trading/cron.log + crypto_sim_cron.log tail for any errors
-
-## 每日回報（22:00 LINE）
-- 交易狀況（外匯 + 虛擬貨幣）
-- 社群專案進度
-- 技能專案更新
-- 其他任務進度
-- 遇到的問題或需要老闆決定的事
-
-## 管家主控版
-- 有任何新進展就自動更新主控版
-- 不要等老闆交代
-
-## 社群專案
-- 11:00 準備第一篇草稿 → 放主控版 → LINE 通知老闆審核
-- 18:00 準備第二篇草稿 → 放主控版 → LINE 通知老闆審核
+### 待處理事項：
+- 持續觀察合約新規則下的訊號品質與出場表現。
+- 發現更好的交易機會或更穩的策略時，可直接迭代優化。 

@@ -1,0 +1,45 @@
+{
+  "lastScan": "2026-04-11T22:00:00.757Z",
+  "allMarkets": [
+    "BTCUSDT",
+    "ARBUSDT",
+    "DOTUSDT"
+  ],
+  "scores": [
+    {
+      "symbol": "ARBUSDT",
+      "vol": "0.10B",
+      "volatility": "8.50",
+      "change": "3.36",
+      "score": "4.11"
+    },
+    {
+      "symbol": "DOTUSDT",
+      "vol": "0.06B",
+      "volatility": "4.12",
+      "change": "1.52",
+      "score": "1.98"
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "vol": "0.10B",
+      "volatility": "4.64",
+      "change": "0.09",
+      "score": "1.91"
+    },
+    {
+      "symbol": "LINKUSDT",
+      "vol": "0.07B",
+      "volatility": "3.82",
+      "change": "0.34",
+      "score": "1.63"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "vol": "1.03B",
+      "volatility": "2.96",
+      "change": "0.09",
+      "score": "1.61"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "lastAnalysis": "2026-04-03T10:00:00.696Z",
+  "markets": {
+    "btctwd": {
+      "hourlyAvgVolume": {
+        "0": 1,
+        "8": 1,
+        "16": 1
+      },
+      "overallAvgVolume": 1,
+      "highVolumeHours": [],
+      "lowVolumeHours": []
+    },
+    "ethtwd": {
+      "hourlyAvgVolume": {
+        "0": 38,
+        "8": 28,
+        "16": 39
+      },
+      "overallAvgVolume": 35,
+      "highVolumeHours": [],
+      "lowVolumeHours": []
+    },
+    "btcusdt": {
+      "hourlyAvgVolume": {
+        "0": 1,
+        "8": 0,
+        "16": 0
+      },
+      "overallAvgVolume": 0,
+      "highVolumeHours": [
+        0
+      ],
+      "lowVolumeHours": [
+        8,
+        16
+      ]
+    },
+    "ethusdt": {
+      "hourlyAvgVolume": {
+        "0": 25,
+        "8": 16,
+        "16": 25
+      },
+      "overallAvgVolume": 22,
+      "highVolumeHours": [],
+      "lowVolumeHours": []
+    },
+    "soltwd": {
+      "hourlyAvgVolume": {
+        "0": 138,
+        "8": 77,
+        "16": 107
+      },
+      "overallAvgVolume": 107,
+      "highVolumeHours": [],
+      "lowVolumeHours": []
+    },
+    "dogetwd": {
+      "hourlyAvgVolume": {
+        "0": 77306,
+        "8": 65028,
+        "16": 86475
+      },
+      "overallAvgVolume": 76270,
+      "highVolumeHours": [],
+      "lowVolumeHours": []
+    }
+  },
+  "highVolumeHours": {
+    "0": 1
+  },
+  "lowVolumeHours": {
+    "8": 1,
+    "16": 1
+  },
+  "divergences": [
+    {
+      "market": "btcusdt",
+      "type": "volume_down_price_up",
+      "description": "量縮價漲 — 上漲動力不足",
+      "time": "+058223-09-01T04:00:00.000Z",
+      "volRatio": 0.04,
+      "priceChange": 0.288
+    },
+    {
+      "market": "ethusdt",
+      "type": "volume_up_price_flat",
+      "description": "量增價平 — 可能即將突破",
+      "time": "+058223-12-14T08:00:00.000Z",
+      "volRatio": 4.24,
+      "priceChange": 0.009
+    },
+    {
+      "market": "soltwd",
+      "type": "volume_up_price_flat",
+      "description": "量增價平 — 可能即將突破",
+      "time": "+058223-09-01T04:00:00.000Z",
+      "volRatio": 10.11,
+      "priceChange": 0.074
+    },
+    {
+      "market": "soltwd",
+      "type": "volume_up_price_flat",
+      "description": "量增價平 — 可能即將突破",
+      "time": "+058223-11-02T16:00:00.000Z",
+      "volRatio": 5.82,
+      "priceChange": 0.023
+    },
+    {
+      "market": "dogetwd",
+      "type": "volume_up_price_flat",
+      "description": "量增價平 — 可能即將突破",
+      "time": "+058224-01-04T04:00:00.000Z",
+      "volRatio": 4.07,
+      "priceChange": 0.034
+    }
+  ],
+  "globalHighVolumeHours": [],
+  "globalLowVolumeHours": []
+}

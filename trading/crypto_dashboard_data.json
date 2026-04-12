@@ -1,12 +1,18 @@
 {
-  "lastUpdate": "2026/3/29 上午2:45:00",
+  "lastUpdate": "2026/4/3 下午7:00:00",
   "exchange": "MAX (MaiCoin)",
   "status": "connected",
   "account": {
     "balances": [
       {
+        "currency": "TWD",
+        "available": "9784.7",
+        "locked": "0",
+        "staked": "0"
+      },
+      {
         "currency": "BTC",
-        "available": "5.5e-7",
+        "available": "0.00010039",
         "locked": "0",
         "staked": "0"
       },
@@ -17,96 +23,114 @@
         "staked": "0"
       }
     ],
-    "totalValueTWD": "1.18",
-    "totalBalances": 2
+    "totalValueTWD": "10000.80",
+    "totalBalances": 3
   },
   "tickers": [
     {
       "market": "btctwd",
       "name": "BTC/TWD",
-      "last": "2150126.5",
-      "open": "2114835.5",
-      "high": "2159501",
-      "low": "2110616.2",
-      "vol": "11.8967",
-      "change": "1.67"
+      "last": "2152622.2",
+      "open": "2137427.4",
+      "high": "2168095.2",
+      "low": "2114477.4",
+      "vol": "23.4957",
+      "change": "0.71"
     },
     {
       "market": "ethtwd",
       "name": "ETH/TWD",
-      "last": "65014.4",
-      "open": "63600",
-      "high": "65483.4",
-      "low": "63600",
-      "vol": "320.8792",
-      "change": "2.22"
+      "last": "66300.2",
+      "open": "65517",
+      "high": "66757.5",
+      "low": "64941.8",
+      "vol": "609.29",
+      "change": "1.20"
     },
     {
       "market": "soltwd",
       "name": "SOL/TWD",
-      "last": "2677.1",
-      "open": "2645",
-      "high": "2702.9",
-      "low": "2633.3",
-      "vol": "1391.561",
-      "change": "1.21"
+      "last": "2579.5",
+      "open": "2536.7",
+      "high": "2580",
+      "low": "2471.6",
+      "vol": "2089.231",
+      "change": "1.69"
     },
     {
       "market": "dogetwd",
       "name": "DOGE/TWD",
-      "last": "2.9709",
-      "open": "2.8903",
-      "high": "3.0551",
-      "low": "2.8774",
-      "vol": "1310652.2",
-      "change": "2.79"
+      "last": "2.945",
+      "open": "2.8894",
+      "high": "2.9493",
+      "low": "2.87",
+      "vol": "950649",
+      "change": "1.92"
     },
     {
       "market": "xrptwd",
       "name": "XRP/TWD",
-      "last": "43.335",
-      "open": "42.431",
-      "high": "43.576",
-      "low": "42.431",
-      "vol": "14822.92",
-      "change": "2.13"
+      "last": "42.396",
+      "open": "42.198",
+      "high": "42.666",
+      "low": "41.256",
+      "vol": "67350.09",
+      "change": "0.47"
     },
     {
       "market": "btcusdt",
       "name": "BTC/USDT",
-      "last": "66950.58",
-      "open": "65872.76",
-      "high": "67266.9",
-      "low": "65755.39",
-      "vol": "5.6407",
-      "change": "1.64"
+      "last": "66721.83",
+      "open": "66452.41",
+      "high": "67413.89",
+      "low": "65755.1",
+      "vol": "7.1545",
+      "change": "0.41"
     },
     {
       "market": "ethusdt",
       "name": "ETH/USDT",
-      "last": "2022.16",
-      "open": "1983.6",
-      "high": "2043.61",
-      "low": "1980.5",
-      "vol": "185.9366",
-      "change": "1.94"
+      "last": "2059.84",
+      "open": "2037.71",
+      "high": "2075.63",
+      "low": "2019",
+      "vol": "460.652",
+      "change": "1.09"
     },
     {
       "market": "solusdt",
       "name": "SOL/USDT",
-      "last": "83.38",
-      "open": "81.98",
-      "high": "84.23",
-      "low": "81.98",
-      "vol": "852.603",
-      "change": "1.71"
+      "last": "80.1",
+      "open": "78.94",
+      "high": "80.16",
+      "low": "76.83",
+      "vol": "712.813",
+      "change": "1.47"
     }
   ],
   "openOrders": [],
-  "recentTrades": [],
+  "recentTrades": [
+    {
+      "id": 148484635,
+      "orderId": 19321230600,
+      "walletType": "spot",
+      "price": "2152686.7",
+      "volume": "0.0001",
+      "funds": "215.3",
+      "market": "btctwd",
+      "marketName": "BTC/TWD",
+      "side": "bid",
+      "fee": "1.6e-7",
+      "feeCurrency": "btc",
+      "feeDiscounted": false,
+      "liquidity": "taker",
+      "createdAt": "2026-04-03T10:53:40.292Z",
+      "selfTradeBidFee": null
+    }
+  ],
   "marketSentiment": {
     "fearGreed": {
-      "value": "12",
+      "value": "9",
       "label": "Extreme Fear"
     }
   }

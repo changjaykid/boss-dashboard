@@ -1,0 +1,2 @@
+{"type":"memory.recall.recorded","timestamp":"2026-04-08T13:36:15.303Z","query":"LINE 訊息收不到 429 限流 回覆太長","resultCount":1,"results":[{"path":"memory/2026-04-07.md","startLine":196,"endLine":206,"score":0.39030157327651976}]}
+{"type":"memory.recall.recorded","timestamp":"2026-04-10T00:02:51.467Z","query":"heartbeat-state","resultCount":2,"results":[{"path":"memory/2026-04-04.md","startLine":25,"endLine":40,"score":0.4487108091591341},{"path":"memory/2026-04-03.md","startLine":75,"endLine":98,"score":0.4348876298254738}]}

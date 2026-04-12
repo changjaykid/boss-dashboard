@@ -1,37 +1,24 @@
 {
-  "time": "2026-03-27T15:45:24.264363+00:00",
-  "balance": 30819.7,
+  "time": "2026-04-07T09:10:20.224023+00:00",
+  "balance": 31022.3,
   "prices": {
     "GOLD": {
-      "bid": 4532.94,
-      "ask": 4533.44
-    },
-    "SILVER": {
-      "bid": 70.914,
-      "ask": 70.994
-    },
-    "COPPER": {
-      "bid": 5.53979,
-      "ask": 5.54251
+      "bid": 4686.03,
+      "ask": 4686.53
     },
     "EURUSDM2026": {
-      "bid": 1.1578,
-      "ask": 1.15786
+      "bid": 1.16062,
+      "ask": 1.16068
     },
-    "US500": {
-      "bid": 6431.6,
-      "ask": 6432.0
-    },
-    "OIL_CRUDE": {
-      "bid": 96.521,
-      "ask": 96.553
-    },
-    "NATURALGAS": {
-      "bid": 3.0321,
-      "ask": 3.0371
+    "GBPUSD": {
+      "bid": 1.3279,
+      "ask": 1.32804
     }
   },
   "actions": [
-    "OPENED SELL US500 Conf:0.75"
-  ]
+    "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD",
+    "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD",
+    "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD"
+  ],
+  "alerts": []
 }

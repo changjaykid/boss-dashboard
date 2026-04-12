@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-10T00:02:51.467Z",
+  "entries": {
+    "memory:memory/2026-04-07.md:196:206": {
+      "key": "memory:memory/2026-04-07.md:196:206",
+      "path": "memory/2026-04-07.md",
+      "startLine": 196,
+      "endLine": 206,
+      "source": "memory",
+      "snippet": "- 根因：回覆太長分段 + cron 同時發 LINE = API 限流 = 訊息送不到 - 修復：回覆控制 300 字內、非必要 cron 關 LINE 通知 **台股 cron 恢復：** - stock-daily：週一到五 08:00 - stock-review：週一到五 14:30 **老闆的期望很簡單：幫他賺錢、省時間、不出錯。三個都沒做到。** **明天重點：交易系統要開始正成長，不能再只是空轉。**",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.39030157327651976,
+      "maxScore": 0.39030157327651976,
+      "firstRecalledAt": "2026-04-08T13:36:15.303Z",
+      "lastRecalledAt": "2026-04-08T13:36:15.303Z",
+      "queryHashes": [
+        "2579829774a6"
+      ],
+      "recallDays": [
+        "2026-04-08"
+      ],
+      "conceptTags": [
+        "stock-daily",
+        "stock-review",
+        "根因",
+        "回覆",
+        "分段",
+        "cron",
+        "同時",
+        "api"
+      ]
+    },
+    "memory:memory/2026-04-04.md:25:40": {
+      "key": "memory:memory/2026-04-04.md:25:40",
+      "path": "memory/2026-04-04.md",
+      "startLine": 25,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "1. `skills/stock-analysis/scripts/update_stock_prices.py` — 加 get_fundamentals() 自動抓 PE/PB/殖利率/配息 2. `skills/stock-analysis/SKILL.md` — 全面重寫，新增所有欄位定義+寫入規則 3. `boss-dashboard/index.html` — 股票渲染區塊全面升級，顯示所有新欄位 4. 已 git push 到 GitHub Pages ### 老闆關於 Fugle API 的討論 - 結論：現階段不需要串，Yahoo Finance 夠用 - 等要做台股自動交易時再串 Fugle（即時報價、籌碼面） ## 20:00 Heartbeat - 賺錢機 Bug 修復 - **問題**：money_maker_order.js 輸出多行 pretty JSON，但 engine 的 placeOrder() 逐行解析，導致永遠解析失敗 - **影響**：20:00 那筆 BUY 實際成交（order 19332553418, 0.00045965 BTC @ ~2161189），但 state 未更新，被記為失敗 - **修復**：改 placeOrder() 的 JSON 解析邏輯，從完整 stdout 用括號匹配提取最後一個 JSON object - **State 同步**：手動修正 state 對齊實際 MAX 餘額（TWD 8962.43, BTC 0.00045965） - **注意**：舊 state 顯示持有 0.00461255",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.4487108091591341,
+      "maxScore": 0.4487108091591341,
+      "firstRecalledAt": "2026-04-10T00:02:51.467Z",
+      "lastRecalledAt": "2026-04-10T00:02:51.467Z",
+      "queryHashes": [
+        "3bebb185bea0"
+      ],
+      "recallDays": [
+        "2026-04-10"
+      ],
+      "conceptTags": [
+        "get-fundamentals",
+        "pe/pb/殖利率/配息",
+        "skills/stock-analysis/skill.md",
+        "boss-dashboard/index.html",
+        "money-maker-order.js",
+        "0.00045965",
+        "8962.43",
+        "0.00461255"
+      ]
+    },
+    "memory:memory/2026-04-03.md:75:98": {
+      "key": "memory:memory/2026-04-03.md:75:98",
+      "path": "memory/2026-04-03.md",
+      "startLine": 75,
+      "endLine": 98,
+      "source": "memory",
+      "snippet": "- bg_darken = 0.65（明亮照片用） - bg_per_slide = true（每張不同背景） - 背景圖庫：10 張（街景、咖啡廳、城市、辦公室、海灘、日本櫻花、山景、義大利巷弄、秋天公園、霓虹夜街） - 原圖要亮！不要用 moody/dark 關鍵字生成 - 字體再大 2 號（已調整） ### 老闆微調指示（記住，用在之後的貼文） - 背景要有風景或街景 - 每張圖盡量用不一樣的背景 - 字體再大 2 號 ✅ 已調 ## 22:54 Heartbeat — 賺錢機下單 bug 修復 - 發現賺錢機 14:30 和 14:54 嘗試買入但失敗 - 原因：state.standardPositionSize 為 null → positionSize 變 undefined → `buy_market undefined` → MAX API 500 error - 修復：(1) money_maker_engine.js openPosition 加 fallback `|| 2000` (2) loadState 加 null check (3) state file 手動修正為 2000 - 外匯未實現 P/L -$13.70（超過 -$10 門檻但 22:00 報告已送出，深夜不另外通知） ## 22:00 Binance 合約交易系統建置 - 老闆決定串 Binance USDT-M 永續合約 - API Key + Secret 已取得並存入 binance_futures_config.json - IP 白名單：123.195.76.23",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.4348876298254738,
+      "maxScore": 0.4348876298254738,
+      "firstRecalledAt": "2026-04-10T00:02:51.467Z",
+      "lastRecalledAt": "2026-04-10T00:02:51.467Z",
+      "queryHashes": [
+        "3bebb185bea0"
+      ],
+      "recallDays": [
+        "2026-04-10"
+      ],
+      "conceptTags": [
+        "bg-darken",
+        "0.65",
+        "bg-per-slide",
+        "moody/dark",
+        "state.standardpositionsize",
+        "buy-market",
+        "money-maker-engine.js",
+        "p/l"
+      ]
+    }
+  }
+}

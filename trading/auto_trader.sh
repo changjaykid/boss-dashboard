@@ -33,7 +33,7 @@ POSITIONS=$(curl -s "$API_URL/api/v1/positions" -H "X-SECURITY-TOKEN: $XSEC" -H 
 ACCOUNT=$(curl -s "$API_URL/api/v1/accounts" -H "X-SECURITY-TOKEN: $XSEC" -H "CST: $CST" 2>/dev/null)
 
 # Fetch data for each instrument
-INSTRUMENTS="GOLD SILVER COPPER EURUSDM2026 US500 US30 OIL_CRUDE NATURALGAS"
+INSTRUMENTS="GOLD EURUSDM2026 GBPUSD USDJPYM2026 US30 US500 US100"
 
 python3 << PYEOF > /tmp/market_data.json 2>/dev/null
 import json, requests
@@ -65,7 +65,7 @@ print(json.dumps(market_data))
 PYEOF
 
 # Run analyzer
-python3 /Users/kid/.openclaw/workspace/trading/analyzer_v5.py \
+python3 /Users/kid/.openclaw/workspace/trading/analyzer_v6.py \
   --positions "$POSITIONS" \
   --account "$ACCOUNT" \
   --market-data "$(cat /tmp/market_data.json)" \
