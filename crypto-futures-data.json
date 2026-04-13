@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-14 03:02",
+  "lastUpdate": "2026-04-14 04:02",
   "status": "RUNNING",
   "mode": "v8 賺大虧小",
   "exchange": "Binance Futures",
@@ -93,6 +93,72 @@
       "winRate": 0,
       "lastTradeAt": null,
       "disabledReason": null
+    },
+    "BB_SQUEEZE": {
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "recentPnls": [],
+      "avgPnl": 0,
+      "winRate": 0,
+      "lastTradeAt": null,
+      "disabledReason": null
+    },
+    "EMA_RSI_CROSS": {
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "recentPnls": [],
+      "avgPnl": 0,
+      "winRate": 0,
+      "lastTradeAt": null,
+      "disabledReason": null
+    },
+    "SESSION_BREAKOUT": {
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "recentPnls": [],
+      "avgPnl": 0,
+      "winRate": 0,
+      "lastTradeAt": null,
+      "disabledReason": null
+    },
+    "STOCH_RSI_CROSS": {
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "recentPnls": [],
+      "avgPnl": 0,
+      "winRate": 0,
+      "lastTradeAt": null,
+      "disabledReason": null
+    },
+    "RSI_BB_ADAPTIVE": {
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "recentPnls": [],
+      "avgPnl": 0,
+      "winRate": 0,
+      "lastTradeAt": null,
+      "disabledReason": null
+    },
+    "MOMENTUM": {
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "recentPnls": [],
+      "avgPnl": 0,
+      "winRate": 0,
+      "lastTradeAt": null,
+      "disabledReason": null
     }
   },
   "strategyWeights": {
@@ -117,21 +183,44 @@
     "UNKNOWN": {
       "weight": 0.8,
       "enabled": true
+    },
+    "BB_SQUEEZE": {
+      "weight": 1,
+      "enabled": true
+    },
+    "EMA_RSI_CROSS": {
+      "weight": 1,
+      "enabled": true
+    },
+    "SESSION_BREAKOUT": {
+      "weight": 0,
+      "enabled": false
+    },
+    "STOCH_RSI_CROSS": {
+      "weight": 0,
+      "enabled": false
+    },
+    "RSI_BB_ADAPTIVE": {
+      "weight": 0,
+      "enabled": false
     }
   },
   "signals": {
     "score": 4,
-    "direction": null,
-    "strategy": null,
+    "direction": "LONG",
+    "strategy": "TREND_PULLBACK",
     "marketState": "TRENDING_UP",
-    "trend4h": "DOWN",
+    "trend4h": "UP",
     "session": "DEAD_ZONE",
     "reasons": [
-      "⚠️4H趨勢過弱(0.07%)",
-      "壓力回踩確認做空"
+      "⚠️4H趨勢過弱(0.37%)",
+      "4H MACD加速↑",
+      "4H MACD金叉",
+      "1H EMA多排",
+      "⚠️壓力區不追多"
     ],
-    "buyScore": 0,
-    "sellScore": 8
+    "buyScore": 6,
+    "sellScore": 2
   },
   "recentTrades": [
     {
