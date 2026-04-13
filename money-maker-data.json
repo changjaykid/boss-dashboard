@@ -1,29 +1,29 @@
 {
-  "lastUpdate": "2026/4/13 下午9:06:07",
+  "lastUpdate": "2026-04-13 21:51",
   "status": "RUNNING",
   "mode": "v7_concentrated_swing",
   "capital": 10000,
-  "totalEquity": 9978,
-  "netEquity": 9978,
-  "totalPnl": -25,
-  "btcPrice": 2266248,
-  "btcChange24h": 0.23,
+  "totalEquity": 10002,
+  "netEquity": 10002,
+  "totalPnl": 2,
+  "btcPrice": 2279714,
+  "btcChange24h": 0.91,
   "holdings": {
     "btc": 0.00132723,
     "avgCost": 2272889,
-    "unrealizedPnl": -1018,
+    "unrealizedPnl": -992,
     "positions": [
       {
         "coin": "BTC",
         "held": 0.00132723,
-        "value": 3008,
-        "pnl": -24
+        "value": 3026,
+        "pnl": -6
       },
       {
         "coin": "SOL",
         "held": 0.3672624,
-        "value": 966,
-        "pnl": -994
+        "value": 975,
+        "pnl": -985
       }
     ]
   },
@@ -45,16 +45,16 @@
     {
       "market": "btctwd",
       "held": 0.00132723,
-      "value": 3008,
+      "value": 3026,
       "avgEntry": 2272889,
-      "pnl": -24
+      "pnl": -6
     },
     {
       "market": "soltwd",
       "held": 0.3672624,
-      "value": 966,
+      "value": 975,
       "avgEntry": 2649,
-      "pnl": -994
+      "pnl": -985
     }
   ],
   "marketStats": {
@@ -78,13 +78,13 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2266248,
-      "rsi": "49.4",
+      "price": 2279714,
+      "rsi": "58.7",
       "bbPos": "--"
     },
     "SOL": {
-      "price": 2631,
-      "rsi": "53.6",
+      "price": 2654,
+      "rsi": "60.2",
       "bbPos": "--"
     }
   },
@@ -143,12 +143,13 @@
   "checklists": {
     "BTC": {
       "buy": [
-        "MACD動能轉強"
+        "MACD動能轉強",
+        "K線看多確認"
       ],
       "sell": [
         "靠近BB上緣"
       ],
-      "buyCount": 1,
+      "buyCount": 2,
       "sellCount": 1,
       "zone": "NEUTRAL"
     },
@@ -166,6 +167,6 @@
   },
   "twdCash": 6001,
   "legacyPositions": [],
-  "strategyEquity": 9975,
+  "strategyEquity": 10002,
   "legacyEquity": 0
 }
