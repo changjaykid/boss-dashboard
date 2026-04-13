@@ -1,25 +1,25 @@
 {
-  "lastUpdate": "2026-04-13 19:04:08",
+  "lastUpdate": "2026-04-13 20:04:16",
   "account": {
-    "balance": 30998.7,
-    "realizedPnl": 0,
-    "unrealizedPnl": -12.69,
-    "netEquity": 30986.01,
-    "todayPnl": 0,
-    "weekPnl": 0,
-    "totalTrades": 2,
-    "closedTrades": 0,
-    "openCount": 2,
+    "balance": 30998.73,
+    "realizedPnl": -0.2,
+    "unrealizedPnl": 10.13,
+    "netEquity": 31008.86,
+    "todayPnl": -0.2,
+    "weekPnl": -0.2,
+    "totalTrades": 3,
+    "closedTrades": 2,
+    "openCount": 1,
     "wins": 0,
-    "losses": 0,
-    "winRate": "--",
+    "losses": 2,
+    "winRate": "0.0%",
     "avgWin": 0,
-    "avgLoss": 0,
-    "riskRewardRatio": 0,
+    "avgLoss": -0.1,
+    "riskRewardRatio": 0.0,
     "maxConsecutiveWins": 0,
-    "maxConsecutiveLosses": 0,
+    "maxConsecutiveLosses": 2,
     "maxSingleWin": 0,
-    "maxSingleLoss": 0,
+    "maxSingleLoss": -0.1,
     "marginUsagePercent": "100.0%"
   },
   "instruments": [
@@ -33,41 +33,106 @@
   ],
   "openPositions": [
     {
-      "dealId": "00000000-4d7c-8a3a-0460-7d740055311e",
+      "dealId": "00000000-4d7c-bc0b-0460-7d740055311e",
       "direction": "SELL",
       "size": 0.01,
-      "entryPrice": 4718.3,
-      "stopLevel": 4728.3,
-      "profitLevel": 4703.4,
-      "currentBid": 4724.05,
-      "currentAsk": 4724.55,
-      "pnl": -6.25,
+      "entryPrice": 4720.93,
+      "stopLevel": 4730.23,
+      "profitLevel": 4701.43,
+      "currentBid": 4710.3,
+      "currentAsk": 4710.8,
+      "pnl": 10.13,
       "instrument": "Gold",
       "epic": "GOLD",
-      "createdDate": "2026-04-13T17:16:43.383"
-    },
-    {
-      "dealId": "00000000-4d7c-8a48-0460-7d740055311e",
-      "direction": "SELL",
-      "size": 0.01,
-      "entryPrice": 4718.11,
-      "stopLevel": 4728.11,
-      "profitLevel": 4697.41,
-      "currentBid": 4724.05,
-      "currentAsk": 4724.55,
-      "pnl": -6.44,
-      "instrument": "Gold",
-      "epic": "GOLD",
-      "createdDate": "2026-04-13T17:16:45.214"
+      "createdDate": "2026-04-13T19:16:42.932"
     }
   ],
-  "closedTrades": [],
-  "strategyStats": {},
+  "closedTrades": [
+    {
+      "time": "2026-04-13T09:16:42.153155+00:00",
+      "instrument": "GOLD",
+      "instrumentName": "XAUUSD",
+      "strategy": "breakout_range",
+      "direction": "SELL",
+      "confidence": 0.68,
+      "size": 0.01,
+      "entryPrice": 4718.3,
+      "sl_distance": 10.0,
+      "tp_distance": 14.9,
+      "outcome": "LOSS",
+      "pnl": -0.1,
+      "result": {
+        "dealReference": "o_5ea2680a-3696-4132-94fb-4d10f79540a2"
+      },
+      "dealId": "00000000-4d7c-8a37-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-13T11:16:38.115008+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    },
+    {
+      "time": "2026-04-13T09:16:43.996973+00:00",
+      "instrument": "GOLD",
+      "instrumentName": "XAUUSD",
+      "strategy": "multi_indicator_consensus",
+      "direction": "SELL",
+      "confidence": 0.65,
+      "size": 0.01,
+      "entryPrice": 4718.11,
+      "sl_distance": 10.0,
+      "tp_distance": 20.7,
+      "outcome": "LOSS",
+      "pnl": -0.1,
+      "result": {
+        "dealReference": "o_999ea316-e2b3-4ff7-ae84-6524e503c038"
+      },
+      "dealId": "00000000-4d7c-8a45-0460-7d740055311e",
+      "pnl_source": "calculated_from_market",
+      "close_time": "2026-04-13T11:16:38.115024+00:00",
+      "close_reason": "SL/TP_BY_BROKER"
+    }
+  ],
+  "strategyStats": {
+    "breakout_range": {
+      "wins": 0,
+      "losses": 1,
+      "pnl": -0.1,
+      "winRate": "0.0%",
+      "riskReward": 0.0,
+      "rank": 1
+    },
+    "multi_indicator_consensus": {
+      "wins": 0,
+      "losses": 1,
+      "pnl": -0.1,
+      "winRate": "0.0%",
+      "riskReward": 0.0,
+      "rank": 2
+    }
+  },
   "review": {
-    "summary": "",
-    "bestStrategy": null,
-    "worstStrategy": null,
-    "lessons": [],
+    "summary": "0\u52dd/2\u6557\uff0c\u52dd\u7387 0.0%\uff0c\u7d2f\u8a08\u76c8\u8667 $-0.2",
+    "bestStrategy": {
+      "name": "breakout_range",
+      "wins": 0,
+      "losses": 1,
+      "pnl": -0.1,
+      "winRate": "0.0%",
+      "riskReward": 0.0,
+      "rank": 1
+    },
+    "worstStrategy": {
+      "name": "multi_indicator_consensus",
+      "wins": 0,
+      "losses": 1,
+      "pnl": -0.1,
+      "winRate": "0.0%",
+      "riskReward": 0.0,
+      "rank": 2
+    },
+    "lessons": [
+      "\u6700\u4f73\u4ea4\u6613\u6642\u6bb5 UTC 11:00\uff08PnL $-0.2\uff09",
+      "\u6700\u5dee\u4ea4\u6613\u6642\u6bb5 UTC 11:00\uff08PnL $-0.2\uff09"
+    ],
     "optimization": [],
     "strategiesUnderTest": [
       "breakout_range",
@@ -111,22 +176,22 @@
     "minRiskReward": "1.5:1",
     "sessionRestrictions": "No trades UTC 22-00",
     "mode": "simulation",
-    "consecutiveLosses": 0,
+    "consecutiveLosses": 2,
     "sizeReduction": "50% after 3 consecutive losses"
   },
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4724.02,
-      "ask": 4724.52
+      "bid": 4709.8,
+      "ask": 4710.3
     },
     "EURUSD": {
-      "bid": 1.16963,
-      "ask": 1.1697
+      "bid": 1.16846,
+      "ask": 1.16853
     },
     "GBPUSD": {
-      "bid": 1.34381,
-      "ask": 1.34395
+      "bid": 1.34187,
+      "ask": 1.34201
     }
   },
   "indicators": {
@@ -135,25 +200,25 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 4724.02,
-      "rsi": 40.6,
-      "macd_hist": -0.1993,
-      "atr": 8.3193,
-      "bb_width": 0.0058,
-      "ema9": 4720.1267,
-      "ema21": 4721.0553
+      "bid": 4709.8,
+      "rsi": 38.3,
+      "macd_hist": -0.7024,
+      "atr": 8.7632,
+      "bb_width": 0.007,
+      "ema9": 4714.3928,
+      "ema21": 4718.9937
     },
     "EURUSD": {
       "name": "EUR/USD",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 1.16963,
-      "rsi": 51.3,
-      "macd_hist": 0.0001,
-      "atr": 0.0005,
-      "bb_width": 0.0016,
-      "ema9": 1.169,
+      "bid": 1.16846,
+      "rsi": 47.3,
+      "macd_hist": -0.0,
+      "atr": 0.0006,
+      "bb_width": 0.0017,
+      "ema9": 1.1689,
       "ema21": 1.1689
     },
     "GBPUSD": {
@@ -161,13 +226,13 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 1.34381,
-      "rsi": 63.0,
-      "macd_hist": 0.0,
-      "atr": 0.0006,
-      "bb_width": 0.0023,
-      "ema9": 1.3431,
-      "ema21": 1.3424
+      "bid": 1.34187,
+      "rsi": 44.3,
+      "macd_hist": -0.0002,
+      "atr": 0.0007,
+      "bb_width": 0.0015,
+      "ema9": 1.3428,
+      "ema21": 1.3425
     }
   },
   "actions": [

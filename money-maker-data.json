@@ -1,29 +1,29 @@
 {
-  "lastUpdate": "2026/4/13 下午7:06:00",
+  "lastUpdate": "2026-04-13 20:01",
   "status": "RUNNING",
   "mode": "v7_concentrated_swing",
   "capital": 10000,
-  "totalEquity": 9957,
-  "netEquity": 9957,
-  "totalPnl": -46,
-  "btcPrice": 2257468,
-  "btcChange24h": -0.8,
+  "totalEquity": 9960,
+  "netEquity": 9960,
+  "totalPnl": -40,
+  "btcPrice": 2258715,
+  "btcChange24h": -0.66,
   "holdings": {
     "btc": 0.00132723,
     "avgCost": 2272889,
-    "unrealizedPnl": -1039,
+    "unrealizedPnl": -1033,
     "positions": [
       {
         "coin": "BTC",
         "held": 0.00132723,
-        "value": 2996,
-        "pnl": -36
+        "value": 2998,
+        "pnl": -34
       },
       {
         "coin": "SOL",
         "held": 0.3672624,
-        "value": 957,
-        "pnl": -1003
+        "value": 961,
+        "pnl": -999
       }
     ]
   },
@@ -45,16 +45,16 @@
     {
       "market": "btctwd",
       "held": 0.00132723,
-      "value": 2996,
+      "value": 2998,
       "avgEntry": 2272889,
-      "pnl": -36
+      "pnl": -34
     },
     {
       "market": "soltwd",
       "held": 0.3672624,
-      "value": 957,
+      "value": 961,
       "avgEntry": 2649,
-      "pnl": -1003
+      "pnl": -999
     }
   ],
   "marketStats": {
@@ -78,13 +78,13 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2257468,
-      "rsi": "42.4",
+      "price": 2258715,
+      "rsi": "43.7",
       "bbPos": "--"
     },
     "SOL": {
-      "price": 2606,
-      "rsi": "45.1",
+      "price": 2618,
+      "rsi": "49.7",
       "bbPos": "--"
     }
   },
@@ -143,35 +143,26 @@
   "checklists": {
     "BTC": {
       "buy": [
-        "RSI健康回調42",
+        "RSI健康回調44",
         "MACD動能轉強"
       ],
-      "sell": [
-        "三框趨勢一致空",
-        "跌回VWAP下方",
-        "接近壓力"
-      ],
+      "sell": [],
       "buyCount": 2,
-      "sellCount": 3,
+      "sellCount": 0,
       "zone": "NEUTRAL"
     },
     "SOL": {
       "buy": [
-        "RSI健康回調45",
-        "靠近BB下緣"
+        "MACD動能轉強"
       ],
-      "sell": [
-        "三框趨勢一致空",
-        "跌回VWAP下方",
-        "接近壓力"
-      ],
-      "buyCount": 2,
-      "sellCount": 3,
+      "sell": [],
+      "buyCount": 1,
+      "sellCount": 0,
       "zone": "NEUTRAL"
     }
   },
   "twdCash": 6001,
   "legacyPositions": [],
-  "strategyEquity": 9954,
+  "strategyEquity": 9960,
   "legacyEquity": 0
 }
