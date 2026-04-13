@@ -1,23 +1,23 @@
 {
-  "lastUpdate": "2026-04-13 20:01",
+  "lastUpdate": "2026/4/13 下午8:17:49",
   "status": "RUNNING",
   "mode": "v7_concentrated_swing",
   "capital": 10000,
-  "totalEquity": 9960,
-  "netEquity": 9960,
-  "totalPnl": -40,
-  "btcPrice": 2258715,
-  "btcChange24h": -0.66,
+  "totalEquity": 9966,
+  "netEquity": 9966,
+  "totalPnl": -37,
+  "btcPrice": 2260977,
+  "btcChange24h": -0.51,
   "holdings": {
     "btc": 0.00132723,
     "avgCost": 2272889,
-    "unrealizedPnl": -1033,
+    "unrealizedPnl": -1030,
     "positions": [
       {
         "coin": "BTC",
         "held": 0.00132723,
-        "value": 2998,
-        "pnl": -34
+        "value": 3001,
+        "pnl": -31
       },
       {
         "coin": "SOL",
@@ -45,9 +45,9 @@
     {
       "market": "btctwd",
       "held": 0.00132723,
-      "value": 2998,
+      "value": 3001,
       "avgEntry": 2272889,
-      "pnl": -34
+      "pnl": -31
     },
     {
       "market": "soltwd",
@@ -78,8 +78,8 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2258715,
-      "rsi": "43.7",
+      "price": 2260977,
+      "rsi": "46.1",
       "bbPos": "--"
     },
     "SOL": {
@@ -143,12 +143,15 @@
   "checklists": {
     "BTC": {
       "buy": [
-        "RSI健康回調44",
-        "MACD動能轉強"
+        "RSI健康回調46",
+        "MACD動能轉強",
+        "K線看多確認"
       ],
-      "sell": [],
-      "buyCount": 2,
-      "sellCount": 0,
+      "sell": [
+        "靠近BB上緣"
+      ],
+      "buyCount": 3,
+      "sellCount": 1,
       "zone": "NEUTRAL"
     },
     "SOL": {
@@ -163,6 +166,6 @@
   },
   "twdCash": 6001,
   "legacyPositions": [],
-  "strategyEquity": 9960,
+  "strategyEquity": 9963,
   "legacyEquity": 0
 }
