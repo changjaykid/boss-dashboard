@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-13 13:00",
+  "lastUpdate": "2026-04-13 13:51",
   "status": "RUNNING",
   "mode": "v8 賺大虧小",
   "exchange": "Binance Futures",
@@ -36,20 +36,101 @@
     "maxDrawdown": 2.512359396353967,
     "peakBalance": 480.7433211
   },
+  "strategyStats": {
+    "TREND_PULLBACK": {
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "recentPnls": [],
+      "avgPnl": 0,
+      "winRate": 0,
+      "lastTradeAt": null,
+      "disabledReason": null
+    },
+    "MOMENTUM_BREAKOUT": {
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "recentPnls": [],
+      "avgPnl": 0,
+      "winRate": 0,
+      "lastTradeAt": null,
+      "disabledReason": null
+    },
+    "REVERSAL_CONFIRM": {
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "recentPnls": [],
+      "avgPnl": 0,
+      "winRate": 0,
+      "lastTradeAt": null,
+      "disabledReason": null
+    },
+    "TREND_FOLLOW": {
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "recentPnls": [],
+      "avgPnl": 0,
+      "winRate": 0,
+      "lastTradeAt": null,
+      "disabledReason": null
+    },
+    "UNKNOWN": {
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "recentPnls": [],
+      "avgPnl": 0,
+      "winRate": 0,
+      "lastTradeAt": null,
+      "disabledReason": null
+    }
+  },
+  "strategyWeights": {
+    "BREAKOUT": 1,
+    "TREND_FOLLOW": 1,
+    "REVERSAL": 0.8,
+    "MOMENTUM": 1,
+    "FUNDING_ARB": 0.7,
+    "NEWS_EVENT": 0.5,
+    "TREND_PULLBACK": {
+      "weight": 1,
+      "enabled": true
+    },
+    "MOMENTUM_BREAKOUT": {
+      "weight": 1,
+      "enabled": true
+    },
+    "REVERSAL_CONFIRM": {
+      "weight": 1,
+      "enabled": true
+    },
+    "UNKNOWN": {
+      "weight": 0.8,
+      "enabled": true
+    }
+  },
   "signals": {
-    "score": 15,
+    "score": 2,
     "direction": null,
     "strategy": null,
     "marketState": "SQUEEZE",
     "trend4h": "DOWN",
     "session": "TRANSITION",
     "reasons": [
-      "⚠️4H趨勢過弱(0.42%)",
+      "⚠️4H趨勢過弱(0.43%)",
       "1H EMA空排",
-      "1H看空Pin Bar"
+      "⚠️支撐區不追空"
     ],
     "buyScore": 0,
-    "sellScore": 25
+    "sellScore": 5
   },
   "recentTrades": [
     {
