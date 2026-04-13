@@ -1,12 +1,12 @@
 {
-  "lastUpdate": "2026-04-12 20:13:40",
+  "lastUpdate": "2026-04-13 20:09:41",
   "updateCycle": "08:00/20:00",
   "news": [
     {
-      "title": "【即時新聞】比特幣(BTC)自歷史高點慘跌45%！滿手多元加密貨幣ETF為何跟著血洗 - CMoney投資網誌",
+      "title": "【即時新聞】比特幣(BTC)四年週期終結？微策略(MSTR)揭華爾街狂掃內幕！ - CMoney投資網誌",
       "source": "CMoney投資網誌",
-      "time": "Sat, 11 Apr 2026 22:38:08 GMT",
-      "summary": "【即時新聞】比特幣(BTC)自歷史高點慘跌45%！滿手多元加密貨幣ETF為何跟著血洗 - CMoney投資網誌",
+      "time": "Mon, 13 Apr 2026 05:15:09 GMT",
+      "summary": "【即時新聞】比特幣(BTC)四年週期終結？微策略(MSTR)揭華爾街狂掃內幕！ - CMoney投資網誌",
       "analysis": "（自動分析暫時不可用，請查看原文）",
       "impact": {
         "coins": [
@@ -31,38 +31,38 @@
       }
     },
     {
+      "title": "不丹在18個月內出售70%的Bitcoin (BTC)持倉 - MEXC",
+      "source": "MEXC",
+      "time": "Sun, 12 Apr 2026 02:14:58 GMT",
+      "summary": "不丹在18個月內出售70%的Bitcoin (BTC)持倉 - MEXC",
+      "analysis": "（自動分析暫時不可用，請查看原文）",
+      "impact": {
+        "coins": [
+          "BTC"
+        ],
+        "direction": "待分析",
+        "severity": "medium"
+      }
+    },
+    {
+      "title": "【即時新聞】中東衝突推升通膨危機！比特幣(BTC)抗通膨優勢顯現，成為避險新寵 - CMoney投資網誌",
+      "source": "CMoney投資網誌",
+      "time": "Mon, 13 Apr 2026 12:00:40 GMT",
+      "summary": "【即時新聞】中東衝突推升通膨危機！比特幣(BTC)抗通膨優勢顯現，成為避險新寵 - CMoney投資網誌",
+      "analysis": "（自動分析暫時不可用，請查看原文）",
+      "impact": {
+        "coins": [
+          "BTC"
+        ],
+        "direction": "待分析",
+        "severity": "medium"
+      }
+    },
+    {
       "title": "價值 22 億美元的加密貨幣選擇權到期,BTC 走勢改善且ETH 訊號增強| MEXC 新聞 - MEXC",
       "source": "MEXC",
       "time": "Fri, 10 Apr 2026 21:19:37 GMT",
       "summary": "價值 22 億美元的加密貨幣選擇權到期,BTC 走勢改善且ETH 訊號增強| MEXC 新聞 - MEXC",
-      "analysis": "（自動分析暫時不可用，請查看原文）",
-      "impact": {
-        "coins": [
-          "BTC"
-        ],
-        "direction": "待分析",
-        "severity": "medium"
-      }
-    },
-    {
-      "title": "Bitcoin Golden Cross Trend Enters Flow State: Why The Next 2-3 Weeks Are Important - TradingView – 追踪所有市場",
-      "source": "TradingView – 追踪所有市場",
-      "time": "Thu, 09 Apr 2026 04:08:25 GMT",
-      "summary": "Bitcoin Golden Cross Trend Enters Flow State: Why The Next 2-3 Weeks Are Important - TradingView – 追踪所有市場",
-      "analysis": "（自動分析暫時不可用，請查看原文）",
-      "impact": {
-        "coins": [
-          "BTC"
-        ],
-        "direction": "待分析",
-        "severity": "medium"
-      }
-    },
-    {
-      "title": "Bitcoin Price Forecast: BTC eyes breakout as US-Iran ceasefire boosts risk sentiment - TMGM",
-      "source": "TMGM",
-      "time": "Wed, 08 Apr 2026 11:56:41 GMT",
-      "summary": "Bitcoin Price Forecast: BTC eyes breakout as US-Iran ceasefire boosts risk sentiment - TMGM",
       "analysis": "（自動分析暫時不可用，請查看原文）",
       "impact": {
         "coins": [
