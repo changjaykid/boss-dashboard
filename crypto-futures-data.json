@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-14 05:02",
+  "lastUpdate": "2026-04-14 06:03",
   "status": "RUNNING",
   "mode": "v10 動態槓桿+動態風報比",
   "exchange": "Binance Futures",
@@ -206,21 +206,19 @@
     }
   },
   "signals": {
-    "score": 4,
-    "direction": "LONG",
-    "strategy": "TREND_PULLBACK",
+    "score": 8,
+    "direction": null,
+    "strategy": null,
     "marketState": "TRENDING_UP",
     "trend4h": "UP",
     "session": "DEAD_ZONE",
     "reasons": [
-      "⚠️4H趨勢過弱(0.33%)",
-      "4H MACD加速↑",
-      "4H MACD金叉",
-      "1H EMA多排",
-      "⚠️壓力區不追多"
+      "⚠️4H趨勢過弱(0.37%)",
+      "1H RSI超買71",
+      "合理摸頂確認"
     ],
     "buyScore": 6,
-    "sellScore": 0
+    "sellScore": 16
   },
   "recentTrades": [
     {
