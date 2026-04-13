@@ -1,29 +1,29 @@
 {
-  "lastUpdate": "2026/4/14 上午12:05:51",
+  "lastUpdate": "2026-04-14 00:20",
   "status": "RUNNING",
   "mode": "v7_concentrated_swing",
   "capital": 10000,
-  "totalEquity": 9996,
-  "netEquity": 9996,
-  "totalPnl": 3,
-  "btcPrice": 2290322,
-  "btcChange24h": 1.47,
+  "totalEquity": 10020,
+  "netEquity": 10020,
+  "totalPnl": 20,
+  "btcPrice": 2294915,
+  "btcChange24h": 1.62,
   "holdings": {
     "btc": 0.00132723,
     "avgCost": 2272889,
-    "unrealizedPnl": -990,
+    "unrealizedPnl": -973,
     "positions": [
       {
         "coin": "BTC",
         "held": 0.00132723,
-        "value": 3040,
-        "pnl": 8
+        "value": 3046,
+        "pnl": 14
       },
       {
         "coin": "SOL",
         "held": 0.3672624,
-        "value": 962,
-        "pnl": -998
+        "value": 973,
+        "pnl": -987
       }
     ]
   },
@@ -45,16 +45,16 @@
     {
       "market": "btctwd",
       "held": 0.00132723,
-      "value": 3040,
+      "value": 3046,
       "avgEntry": 2272889,
-      "pnl": 8
+      "pnl": 14
     },
     {
       "market": "soltwd",
       "held": 0.3672624,
-      "value": 962,
+      "value": 973,
       "avgEntry": 2649,
-      "pnl": -998
+      "pnl": -987
     }
   ],
   "marketStats": {
@@ -78,13 +78,13 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2290322,
-      "rsi": "58.8",
+      "price": 2294915,
+      "rsi": "60.9",
       "bbPos": "--"
     },
     "SOL": {
-      "price": 2620,
-      "rsi": "47.9",
+      "price": 2650,
+      "rsi": "55.2",
       "bbPos": "--"
     }
   },
@@ -142,15 +142,17 @@
   ],
   "checklists": {
     "BTC": {
-      "buy": [],
+      "buy": [
+        "MACD動能轉強"
+      ],
       "sell": [],
-      "buyCount": 0,
+      "buyCount": 1,
       "sellCount": 0,
       "zone": "NEUTRAL"
     },
     "SOL": {
       "buy": [
-        "RSI健康回調48"
+        "MACD動能轉強"
       ],
       "sell": [],
       "buyCount": 1,
@@ -160,6 +162,6 @@
   },
   "twdCash": 6001,
   "legacyPositions": [],
-  "strategyEquity": 10003,
+  "strategyEquity": 10020,
   "legacyEquity": 0
 }
