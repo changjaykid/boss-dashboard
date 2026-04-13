@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-13 07:00",
+  "lastUpdate": "2026-04-13 08:01",
   "status": "RUNNING",
   "mode": "v8 賺大虧小",
   "exchange": "Binance Futures",
@@ -44,7 +44,7 @@
     "trend4h": "DOWN",
     "session": "TRANSITION",
     "reasons": [
-      "⚠️4H趨勢過弱(0.27%)",
+      "⚠️4H趨勢過弱(0.42%)",
       "4H MACD加速↓",
       "1H EMA空排",
       "⚠️支撐區不追空"

@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-13 07:01:39",
+  "lastUpdate": "2026-04-13 07:45:33",
   "account": {
     "balance": 0.0,
     "realizedPnl": -406.29,
@@ -729,8 +729,8 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4659.07,
-      "ask": 4659.57
+      "bid": 4658.29,
+      "ask": 4658.79
     }
   },
   "indicators": {
@@ -739,13 +739,13 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 4659.07,
-      "rsi": 13.1,
-      "macd_hist": -15.1453,
-      "atr": 15.1246,
-      "bb_width": 0.037,
-      "ema9": 4690.9147,
-      "ema21": 4722.2338
+      "bid": 4658.29,
+      "rsi": 14.9,
+      "macd_hist": -9.4663,
+      "atr": 16.1839,
+      "bb_width": 0.0425,
+      "ema9": 4673.9389,
+      "ema21": 4705.6884
     }
   },
   "actions": []

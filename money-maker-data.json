@@ -1,29 +1,29 @@
 {
-  "lastUpdate": "2026/4/13 上午7:05:13",
+  "lastUpdate": "2026-04-13 08:00",
   "status": "RUNNING",
   "mode": "v7_concentrated_swing",
   "capital": 10000,
-  "totalEquity": 9954,
-  "netEquity": 9954,
-  "totalPnl": -46,
-  "btcPrice": 2255727,
-  "btcChange24h": -3.28,
+  "totalEquity": 9941,
+  "netEquity": 9941,
+  "totalPnl": -59,
+  "btcPrice": 2250379,
+  "btcChange24h": -3.13,
   "holdings": {
     "btc": 0.00132723,
     "avgCost": 2272889,
-    "unrealizedPnl": -1039,
+    "unrealizedPnl": -1052,
     "positions": [
       {
         "coin": "BTC",
         "held": 0.00132723,
-        "value": 2994,
-        "pnl": -38
+        "value": 2987,
+        "pnl": -45
       },
       {
         "coin": "SOL",
         "held": 0.3672624,
-        "value": 959,
-        "pnl": -1001
+        "value": 953,
+        "pnl": -1007
       }
     ]
   },
@@ -45,16 +45,16 @@
     {
       "market": "btctwd",
       "held": 0.00132723,
-      "value": 2994,
+      "value": 2987,
       "avgEntry": 2272889,
-      "pnl": -38
+      "pnl": -45
     },
     {
       "market": "soltwd",
       "held": 0.3672624,
-      "value": 959,
+      "value": 953,
       "avgEntry": 2649,
-      "pnl": -1001
+      "pnl": -1007
     }
   ],
   "marketStats": {
@@ -78,13 +78,13 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2255727,
-      "rsi": "33.3",
+      "price": 2250379,
+      "rsi": "31.3",
       "bbPos": "--"
     },
     "SOL": {
-      "price": 2611,
-      "rsi": "40.1",
+      "price": 2595,
+      "rsi": "36.9",
       "bbPos": "--"
     }
   },
@@ -143,8 +143,8 @@
   "checklists": {
     "BTC": {
       "buy": [
-        "RSI健康回調33",
-        "靠近BB下緣"
+        "靠近BB下緣",
+        "K線看多確認"
       ],
       "sell": [
         "三框趨勢一致空",
@@ -157,20 +157,21 @@
     },
     "SOL": {
       "buy": [
-        "RSI健康回調40"
+        "RSI健康回調37",
+        "靠近BB下緣"
       ],
       "sell": [
         "三框趨勢一致空",
-        "跌回VWAP下方",
-        "接近壓力"
+        "量能確認2.1x",
+        "跌回VWAP下方"
       ],
-      "buyCount": 1,
+      "buyCount": 2,
       "sellCount": 3,
       "zone": "NEUTRAL"
     }
   },
   "twdCash": 6001,
   "legacyPositions": [],
-  "strategyEquity": 9954,
+  "strategyEquity": 9941,
   "legacyEquity": 0
 }
