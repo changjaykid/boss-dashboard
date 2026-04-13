@@ -1,17 +1,17 @@
 {
-  "lastUpdate": "2026-04-13 21:51",
+  "lastUpdate": "2026-04-13 22:02",
   "status": "RUNNING",
   "mode": "v7_concentrated_swing",
   "capital": 10000,
   "totalEquity": 10002,
   "netEquity": 10002,
   "totalPnl": 2,
-  "btcPrice": 2279714,
-  "btcChange24h": 0.91,
+  "btcPrice": 2279747,
+  "btcChange24h": 0.9,
   "holdings": {
     "btc": 0.00132723,
     "avgCost": 2272889,
-    "unrealizedPnl": -992,
+    "unrealizedPnl": -991,
     "positions": [
       {
         "coin": "BTC",
@@ -78,13 +78,13 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2279714,
-      "rsi": "58.7",
+      "price": 2279747,
+      "rsi": "57.7",
       "bbPos": "--"
     },
     "SOL": {
-      "price": 2654,
-      "rsi": "60.2",
+      "price": 2655,
+      "rsi": "59.1",
       "bbPos": "--"
     }
   },
@@ -143,13 +143,12 @@
   "checklists": {
     "BTC": {
       "buy": [
-        "MACD動能轉強",
-        "K線看多確認"
+        "MACD動能轉強"
       ],
       "sell": [
         "靠近BB上緣"
       ],
-      "buyCount": 2,
+      "buyCount": 1,
       "sellCount": 1,
       "zone": "NEUTRAL"
     },
