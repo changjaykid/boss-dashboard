@@ -1,7 +1,7 @@
 {
-  "lastUpdate": "2026-04-14 04:02",
+  "lastUpdate": "2026-04-14 05:02",
   "status": "RUNNING",
-  "mode": "v8 賺大虧小",
+  "mode": "v10 動態槓桿+動態風報比",
   "exchange": "Binance Futures",
   "account": {
     "initialCapital": 464,
@@ -11,7 +11,7 @@
     "netEquity": 432.19006201,
     "todayPnl": 0,
     "totalPnl": -0.6061788999999997,
-    "leverage": 12,
+    "leverage": "5-20x(動態)",
     "totalTrades": 18,
     "winRate": "44.4%",
     "wins": 8,
@@ -24,7 +24,7 @@
     "wins": 0,
     "losses": 0,
     "pnl": 0,
-    "remaining": 3
+    "remaining": 5
   },
   "totalStats": {
     "trades": 18,
@@ -213,14 +213,14 @@
     "trend4h": "UP",
     "session": "DEAD_ZONE",
     "reasons": [
-      "⚠️4H趨勢過弱(0.37%)",
+      "⚠️4H趨勢過弱(0.33%)",
       "4H MACD加速↑",
       "4H MACD金叉",
       "1H EMA多排",
       "⚠️壓力區不追多"
     ],
     "buyScore": 6,
-    "sellScore": 2
+    "sellScore": 0
   },
   "recentTrades": [
     {
@@ -360,9 +360,9 @@
     }
   ],
   "riskStatus": {
-    "dailyLossUsed": "$0.00 / $13.92",
-    "dailyTradesUsed": "0 / 3",
-    "consecutiveLosses": "0 / 2",
+    "dailyLossUsed": "$0.00 / $23.20",
+    "dailyTradesUsed": "0 / 5",
+    "consecutiveLosses": "0 / 3",
     "paused": false
   }
 }
