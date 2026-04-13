@@ -1,14 +1,14 @@
 {
-  "lastUpdate": "2026-04-13 20:16",
+  "lastUpdate": "2026-04-13 20:42",
   "status": "RUNNING",
   "mode": "v8 賺大虧小",
   "exchange": "Binance Futures",
   "account": {
     "initialCapital": 464,
-    "balance": 438.38585746,
-    "available": 438.38585746,
-    "unrealizedPnl": 0,
-    "netEquity": 438.38585746,
+    "balance": 437.92502761,
+    "available": 361.57827227,
+    "unrealizedPnl": 1.7121,
+    "netEquity": 439.63712761,
     "todayPnl": -5.91,
     "totalPnl": 4.6653211,
     "leverage": 12,
@@ -18,7 +18,16 @@
     "losses": 9,
     "maxDrawdown": 2.512359396353967
   },
-  "position": null,
+  "position": {
+    "symbol": "BTCUSDT",
+    "side": "SHORT",
+    "size": 0.013,
+    "entryPrice": 70896.9,
+    "markPrice": 70765.2,
+    "pnl": 1.7121,
+    "leverage": 12,
+    "trailingStop": 71273.93261082422
+  },
   "todayStats": {
     "trades": 1,
     "wins": 0,
@@ -118,18 +127,19 @@
     }
   },
   "signals": {
-    "score": 22,
+    "score": 6,
     "direction": null,
     "strategy": null,
     "marketState": "SQUEEZE",
     "trend4h": "DOWN",
     "session": "TRANSITION",
     "reasons": [
-      "4H空頭(0.45%)",
-      "1H EMA空排"
+      "4H空頭(0.48%)",
+      "1H EMA空排",
+      "⚠️支撐區不追空"
     ],
     "buyScore": 0,
-    "sellScore": 45
+    "sellScore": 14
   },
   "recentTrades": [
     {
