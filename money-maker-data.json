@@ -1,29 +1,29 @@
 {
-  "lastUpdate": "2026/4/13 下午4:06:04",
+  "lastUpdate": "2026-04-13 16:31",
   "status": "RUNNING",
   "mode": "v7_concentrated_swing",
   "capital": 10000,
-  "totalEquity": 9963,
-  "netEquity": 9963,
-  "totalPnl": -41,
-  "btcPrice": 2259562,
-  "btcChange24h": -1.03,
+  "totalEquity": 9961,
+  "netEquity": 9961,
+  "totalPnl": -39,
+  "btcPrice": 2257882,
+  "btcChange24h": -1.12,
   "holdings": {
     "btc": 0.00132723,
     "avgCost": 2272889,
-    "unrealizedPnl": -1034,
+    "unrealizedPnl": -1032,
     "positions": [
       {
         "coin": "BTC",
         "held": 0.00132723,
-        "value": 2999,
-        "pnl": -33
+        "value": 2997,
+        "pnl": -35
       },
       {
         "coin": "SOL",
         "held": 0.3672624,
-        "value": 959,
-        "pnl": -1001
+        "value": 963,
+        "pnl": -997
       }
     ]
   },
@@ -45,16 +45,16 @@
     {
       "market": "btctwd",
       "held": 0.00132723,
-      "value": 2999,
+      "value": 2997,
       "avgEntry": 2272889,
-      "pnl": -33
+      "pnl": -35
     },
     {
       "market": "soltwd",
       "held": 0.3672624,
-      "value": 959,
+      "value": 963,
       "avgEntry": 2649,
-      "pnl": -1001
+      "pnl": -997
     }
   ],
   "marketStats": {
@@ -78,13 +78,13 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2259562,
-      "rsi": "42.3",
+      "price": 2257882,
+      "rsi": "41.2",
       "bbPos": "--"
     },
     "SOL": {
-      "price": 2613,
-      "rsi": "46.7",
+      "price": 2622,
+      "rsi": "50.1",
       "bbPos": "--"
     }
   },
@@ -143,7 +143,7 @@
   "checklists": {
     "BTC": {
       "buy": [
-        "RSI健康回調42"
+        "RSI健康回調41"
       ],
       "sell": [
         "三框趨勢一致空",
@@ -156,7 +156,7 @@
     },
     "SOL": {
       "buy": [
-        "RSI健康回調47"
+        "MACD動能轉強"
       ],
       "sell": [],
       "buyCount": 1,
@@ -166,6 +166,6 @@
   },
   "twdCash": 6001,
   "legacyPositions": [],
-  "strategyEquity": 9959,
+  "strategyEquity": 9961,
   "legacyEquity": 0
 }
