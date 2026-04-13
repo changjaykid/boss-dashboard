@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-13 12:00",
+  "lastUpdate": "2026-04-13 13:00",
   "status": "RUNNING",
   "mode": "v8 賺大虧小",
   "exchange": "Binance Futures",
@@ -38,17 +38,18 @@
   },
   "signals": {
     "score": 15,
-    "direction": "SHORT",
-    "strategy": "TREND_PULLBACK",
+    "direction": null,
+    "strategy": null,
     "marketState": "SQUEEZE",
     "trend4h": "DOWN",
     "session": "TRANSITION",
     "reasons": [
-      "⚠️4H趨勢過弱(0.40%)",
-      "1H EMA空排"
+      "⚠️4H趨勢過弱(0.42%)",
+      "1H EMA空排",
+      "1H看空Pin Bar"
     ],
     "buyScore": 0,
-    "sellScore": 15
+    "sellScore": 25
   },
   "recentTrades": [
     {
