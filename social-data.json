@@ -1,5 +1,6 @@
 {
-  "drafts": [
+  "drafts": [],
+  "published": [
     {
       "id": "2026-04-13-001",
       "platform": "threads",
@@ -7,12 +8,13 @@
       "pillar_name": "數據解讀",
       "created": "2026-04-13 11:00",
       "suggestedTime": "11:00",
-      "status": "pending",
+      "status": "published",
       "content": "很多老闆看報表，最先盯的是點擊率。\n\n但做過案子的人都知道，CTR 漂亮，不代表生意會變好。\n\n舉個之前的例子，之前一個電商品牌看投放，三組素材裡，點擊率最高的那組衝到 3.8%，看起來很好。結果一拉後台，轉換率只有 0.6%，而且跳出率是另外兩組的兩倍。\n\n原因很簡單，那張圖文案很聳動，畫面很吸引人眼球，但到了landing pang，產品頁根本不是同一個語氣。\n\n反而另一組素材，CTR 只有 1.9%，卻帶出 2.4% 的轉換率，最後每筆訂單成本直接少了快一半。\n\n很多數字看起來很美好，但其實只是在把不對的人送進來。",
-      "image_url": ""
-    }
-  ],
-  "published": [
+      "image_url": "",
+      "published_at": "2026/4/13 下午2:03:48",
+      "thread_id": "17922753312295023",
+      "thread_url": "https://www.threads.net/@freeeadman/post/17922753312295023"
+    },
     {
       "id": "2026-04-12-002",
       "platform": "threads",
@@ -199,5 +201,5 @@
       "description": "品牌怎麼玩梗不尷尬、翻車 vs 爆紅案例"
     }
   ],
-  "lastUpdate": "2026/4/13 下午2:03:16"
+  "lastUpdate": "2026/4/13 下午2:03:53"
 }
