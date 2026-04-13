@@ -1,29 +1,29 @@
 {
-  "lastUpdate": "2026/4/14 上午1:05:55",
+  "lastUpdate": "2026-04-14 02:00",
   "status": "RUNNING",
   "mode": "v7_concentrated_swing",
   "capital": 10000,
-  "totalEquity": 10030,
-  "netEquity": 10030,
-  "totalPnl": 29,
-  "btcPrice": 2300000,
-  "btcChange24h": 1.79,
+  "totalEquity": 10019,
+  "netEquity": 10019,
+  "totalPnl": 19,
+  "btcPrice": 2296136,
+  "btcChange24h": 1.36,
   "holdings": {
     "btc": 0.00132723,
     "avgCost": 2272889,
-    "unrealizedPnl": -964,
+    "unrealizedPnl": -973,
     "positions": [
       {
         "coin": "BTC",
         "held": 0.00132723,
-        "value": 3053,
-        "pnl": 21
+        "value": 3047,
+        "pnl": 15
       },
       {
         "coin": "SOL",
         "held": 0.3672624,
-        "value": 975,
-        "pnl": -985
+        "value": 971,
+        "pnl": -989
       }
     ]
   },
@@ -45,16 +45,16 @@
     {
       "market": "btctwd",
       "held": 0.00132723,
-      "value": 3053,
+      "value": 3047,
       "avgEntry": 2272889,
-      "pnl": 21
+      "pnl": 15
     },
     {
       "market": "soltwd",
       "held": 0.3672624,
-      "value": 975,
+      "value": 971,
       "avgEntry": 2649,
-      "pnl": -985
+      "pnl": -989
     }
   ],
   "marketStats": {
@@ -78,13 +78,13 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2300000,
-      "rsi": "62.1",
+      "price": 2296136,
+      "rsi": "59.7",
       "bbPos": "--"
     },
     "SOL": {
-      "price": 2656,
-      "rsi": "56.1",
+      "price": 2645,
+      "rsi": "53.3",
       "bbPos": "--"
     }
   },
@@ -142,26 +142,22 @@
   ],
   "checklists": {
     "BTC": {
-      "buy": [
-        "MACD動能轉強"
-      ],
+      "buy": [],
       "sell": [],
-      "buyCount": 1,
+      "buyCount": 0,
       "sellCount": 0,
       "zone": "NEUTRAL"
     },
     "SOL": {
-      "buy": [
-        "MACD動能轉強"
-      ],
+      "buy": [],
       "sell": [],
-      "buyCount": 1,
+      "buyCount": 0,
       "sellCount": 0,
       "zone": "NEUTRAL"
     }
   },
   "twdCash": 6001,
   "legacyPositions": [],
-  "strategyEquity": 10029,
+  "strategyEquity": 10019,
   "legacyEquity": 0
 }
