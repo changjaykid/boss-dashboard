@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>老闆專屬主控板</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{screens:{xs:'480px'}}}}</script>
+    <style>
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body { background: #111827; color: #f3f4f6; overflow: hidden; }
+        .nav-item.active { background: rgba(79,70,229,0.2); color: #a5b4fc; border: 1px solid rgba(99,102,241,0.3); }
+        .section-view { display: none; }
+        .section-view.active { display: block; }
+        #auth-overlay { display: flex; }
+        #app-content { display: none; }
+        .trade-card { transition: all 0.2s; }
+        .badge-buy { background: rgba(16,185,129,0.15); color: #34d399; border: 1px solid rgba(16,185,129,0.3); }
+        .badge-sell { background: rgba(239,68,68,0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.3); }
+        .badge-open { background: rgba(59,130,246,0.15); color: #60a5fa; border: 1px solid rgba(59,130,246,0.3); }
+        .badge-win { background: rgba(239,68,68,0.15); color: #f87171; }
+        .badge-loss { background: rgba(16,185,129,0.15); color: #34d399; }
+        .stat-card { background: linear-gradient(135deg, rgba(31,41,55,0.8), rgba(17,24,39,0.9)); }
+
+        /* Desktop sidebar */
+        @media (min-width: 769px) {
+            #mobile-bar { display: none !important; }
+            #sidebar-overlay { display: none !important; }
+            #sidebar { display: flex !important; }
+        }
+        /* Mobile */
+        @media (max-width: 768px) {
+            #sidebar {
+                display: none; position: fixed; top: 0; left: 0; z-index: 50;
+                height: 100%; width: 280px;
+                transition: transform 0.25s ease;
+            }
+            #sidebar.open { display: flex; }
+            #sidebar-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 40; }
+            #sidebar-overlay.open { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 密碼鎖 -->
+<div id="auth-overlay" class="fixed inset-0 z-[100] flex items-center justify-center bg-gray-900/90 backdrop-blur-md px-4">
+    <div class="bg-gray-800 border border-gray-700 p-6 sm:p-8 rounded-2xl shadow-2xl w-full max-w-sm">
+        <div class="text-center mb-5">
+            <span class="text-3xl block mb-2">🖤</span>
+            <h2 class="text-lg font-bold text-gray-100">管家主控板</h2>
+        </div>
+        <div class="space-y-3">
+            <input type="password" id="pass-input" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-indigo-500" placeholder="請輸入密碼" onkeypress="if(event.key==='Enter')checkPass()">
+            <button onclick="checkPass()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 rounded-lg">解鎖</button>
+            <p id="auth-error" class="text-red-400 text-sm text-center hidden">密碼錯誤</p>
+        </div>
+    </div>
+</div>
+
+<!-- 主內容 -->
+<div id="app-content" class="flex h-screen w-screen overflow-hidden">
+
+    <!-- Mobile top bar -->
+    <div id="mobile-bar" class="fixed top-0 left-0 right-0 z-30 bg-gray-900 border-b border-gray-800 px-4 py-2.5 flex items-center justify-between md:hidden">
+        <button onclick="toggleSidebar()" class="text-xl text-gray-300 p-1">☰</button>
+        <span class="text-sm font-bold text-indigo-400">🖤 管家主控板</span>
+        <div class="w-8"></div>
+    </div>
+
+    <div id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="w-72 bg-gray-900 border-r border-gray-800 flex flex-col flex-shrink-0">
+        <div class="p-5 border-b border-gray-800 flex items-center space-x-3">
+            <span class="text-2xl">🖤</span>
+            <div>
+                <h1 class="text-lg font-bold text-indigo-400">管家主控板</h1>
+                <p class="text-[10px] text-gray-500">AI Assistant Dashboard</p>
+            </div>
+        </div>
+        <nav class="flex-1 px-3 py-4 space-y-1 overflow-y-auto" id="sidebar-nav">
+            <a href="#" onclick="switchTab('overview',this)" class="nav-item active flex items-center space-x-3 px-3 py-2.5 rounded-lg text-sm">
+                <span>📊</span><span>總覽</span>
+            </a>
+            <div class="pt-3 pb-1"><p class="text-[10px] font-semibold text-gray-500 uppercase px-3">金融交易</p></div>
+            <a href="#" onclick="switchTab('stocks',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>📈</span><span>股票專家</span></a>
+            <a href="#" onclick="switchTab('forex',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>💱</span><span>外匯新聞</span></a>
+            <a href="#" onclick="switchTab('forex-auto',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🤖</span><span>外匯自動交易</span></a>
+            <a href="#" onclick="switchTab('crypto',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🪙</span><span>虛擬貨幣新聞</span></a>
+            <a href="#" onclick="switchTab('crypto-auto',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🤖</span><span>虛擬貨幣模擬倉</span></a>
+            <a href="#" onclick="switchTab('money-maker',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>💰</span><span>虛擬貨幣MAX</span></a>
+            <a href="#" onclick="switchTab('crypto-futures',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>📈</span><span>虛擬貨幣幣安</span></a>
+            <div class="pt-3 pb-1"><p class="text-[10px] font-semibold text-gray-500 uppercase px-3">營運管理</p></div>
+            <a href="#" onclick="switchTab('ad-business',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🎯</span><span>廣告業務</span></a>
+            <a href="#" onclick="switchTab('community',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🌐</span><span>threads</span></a>
+            <a href="#" onclick="switchTab('community-ig',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>📸</span><span>threadsIG</span></a>
+            <a href="#" onclick="switchTab('shorts',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🎬</span><span>短影音專案</span></a>
+            <a href="#" onclick="switchTab('skills',this)" class="nav-item flex items-center space-x-3 px-3 py-2 hover:bg-gray-800 text-gray-300 rounded-lg text-sm"><span>🛠️</span><span>技能專案</span></a>
+        </nav>
+        <div class="p-3 border-t border-gray-800">
+            <div class="flex items-center space-x-2 text-xs text-green-400">
+                <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-green-500"></span></span>
+                <span>系統正常</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 flex flex-col bg-[#0b0f19] overflow-y-auto pt-11 md:pt-0">
+        <header class="px-4 py-3 md:px-8 md:py-6 border-b border-gray-800 bg-gray-900/50 backdrop-blur-sm sticky top-0 z-10">
+            <h2 id="header-title" class="text-base md:text-2xl font-semibold text-gray-100 truncate">今日管家回報</h2>
+            <p id="header-subtitle" class="text-[10px] md:text-sm text-gray-400 mt-0.5">隨時待命</p>
+        </header>
+
+        <div class="p-3 md:p-8 space-y-4 md:space-y-8 max-w-7xl w-full">
+
+            <!-- 總覽 (dynamic) -->
+            <div id="view-overview" class="section-view active space-y-4">
+                <div id="overview-content"><p class="text-xs text-gray-400 text-center py-8">載入中...</p></div>
+            </div>
+
+            <!-- 股票 -->
+            <div id="view-stocks" class="section-view space-y-4 md:space-y-6">
+                <div id="stock-dynamic-content">
+                    <p class="text-xs text-gray-400 text-center py-8">載入中...</p>
+                </div>
+                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mt-4">
+    <h3 class="text-lg font-bold text-indigo-400 mb-3 flex items-center gap-2">👤 負責人員</h3>
+    <div class="space-y-2 text-sm text-gray-300">
+        <p><span class="text-gray-400">身份：</span><span class="text-white font-medium">股票分析師</span></p>
+        <p><span class="text-gray-400">負責項目：</span>台股大盤分析、個股推薦、盤後復盤</p>
+        <p><span class="text-gray-400">日常任務：</span>盤前蒐集消息分析大盤走勢 → 推薦 2-3 檔個股 → 盤後檢視漲跌復盤</p>
+        <p><span class="text-gray-400">更新時間：</span><span class="text-indigo-400">每日 08:00（盤前）、14:30（盤後）</span></p>
+        <p><span class="text-gray-400">主控板更新內容：</span>大盤分析、推薦個股清單、盤後漲跌復盤</p>
+        <p><span class="text-gray-400">目標：</span><span class="text-emerald-400">提供可操作的選股建議，週命中 ≥1 檔漲 3%+</span></p>
+    </div>
+</section>
+            </div>
+
+            <!-- 外匯保證金 -->
+            <div id="view-forex" class="section-view space-y-4">
+                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">💱 交易影響分析</h3>
+                    <div id="fx-trading-impact" class="space-y-2">
+                        <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
+                    </div>
+                </section>
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-sm md:text-xl font-medium text-yellow-300">📰 外匯重大新聞（24H）</h3>
+                        <span class="text-[10px] text-gray-400" id="fx-news-update">--</span>
+                    </div>
+                    <div id="fx-news-list" class="space-y-3">
+                        <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
+                    </div>
+                </section>
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-sm md:text-xl font-medium text-cyan-300">🔥 X / Reddit 熱門討論（AI 自動交易 · 外匯）</h3>
+                        <span class="text-[10px] text-gray-400" id="fx-social-update">--</span>
+                    </div>
+                    <div id="fx-social-list" class="space-y-3">
+                        <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
+                    </div>
+                    <div id="fx-social-summary"></div>
+                </section>
+                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">📋 綜合分析</h3>
+                    <div id="fx-conclusion"><p class="text-xs text-gray-400 text-center py-3">載入中...</p></div>
+                </section>
+                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mt-4">
+    <h3 class="text-lg font-bold text-indigo-400 mb-3 flex items-center gap-2">👤 負責人員</h3>
+    <div class="space-y-2 text-sm text-gray-300">
+        <p><span class="text-gray-400">身份：</span><span class="text-white font-medium">外匯新聞記者</span></p>
+        <p><span class="text-gray-400">負責項目：</span>外匯市場重大新聞蒐集、翻譯、影響分析</p>
+        <p><span class="text-gray-400">日常任務：</span>蒐集 XAUUSD/EUR/GBP/JPY/US指數 重大新聞 → 翻譯整理 → 分析對持倉影響</p>
+        <p><span class="text-gray-400">更新時間：</span><span class="text-indigo-400">每日 08:00 / 20:00（暫停中）</span></p>
+        <p><span class="text-gray-400">主控板更新內容：</span>新聞摘要、市場情緒、對交易策略的影響判斷</p>
+        <p><span class="text-gray-400">目標：</span><span class="text-emerald-400">重大新聞 30 分鐘內更新，提供交易員可用的即時情報</span></p>
+    </div>
+</section>
+            </div>
+
+            <!-- ===== 外匯自動交易 ===== -->
+            <div id="view-forex-auto" class="section-view space-y-4 md:space-y-6">
+
+                <!-- 更新時間 -->
+                <div class="flex items-center space-x-2 text-xs">
+                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-green-500"></span></span>
+                    <span class="text-gray-400">更新：<span id="fx-last-update" class="text-gray-200">載入中</span><span class="text-gray-600 ml-2">每 15 分鐘自動刷新</span></span>
+                </div>
+
+                <!-- 帳戶卡片 Row 1 -->
+                <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">帳戶餘額</p>
+                        <p class="text-lg md:text-2xl font-bold text-white mt-0.5" id="fx-balance">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">淨值</p>
+                        <p class="text-lg md:text-2xl font-bold text-white mt-0.5" id="fx-net-equity">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">已實現盈虧</p>
+                        <p class="text-lg md:text-2xl font-bold mt-0.5" id="fx-pnl">$0.00</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">勝率</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="fx-winrate">--</p>
+                    </div>
+                </div>
+
+                <!-- Row 2: 今日/本週/浮動/保證金 -->
+                <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">今日盈虧</p>
+                        <p class="text-lg md:text-2xl font-bold mt-0.5" id="fx-today-pnl">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">本週盈虧</p>
+                        <p class="text-lg md:text-2xl font-bold mt-0.5" id="fx-week-pnl">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">浮動盈虧</p>
+                        <p class="text-lg md:text-2xl font-bold mt-0.5" id="fx-unrealized">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">保證金使用</p>
+                        <p class="text-lg md:text-2xl font-bold text-yellow-400 mt-0.5" id="fx-margin-pct">--</p>
+                    </div>
+                </div>
+
+                <!-- Row 3: 交易統計 -->
+                <div class="grid grid-cols-3 gap-2 md:grid-cols-6 md:gap-3">
+                    <div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl text-center">
+                        <p class="text-[9px] md:text-[10px] text-gray-500">總交易</p>
+                        <p class="text-sm md:text-lg font-bold text-white" id="fx-total-trades">0</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl text-center">
+                        <p class="text-[9px] md:text-[10px] text-gray-500">持倉</p>
+                        <p class="text-sm md:text-lg font-bold text-blue-400" id="fx-open-count">0</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl text-center">
+                        <p class="text-[9px] md:text-[10px] text-gray-500">已平倉</p>
+                        <p class="text-sm md:text-lg font-bold text-gray-300" id="fx-closed-count">0</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl text-center">
+                        <p class="text-[9px] md:text-[10px] text-gray-500">風報比</p>
+                        <p class="text-sm md:text-lg font-bold text-yellow-400" id="fx-rr-ratio">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl text-center">
+                        <p class="text-[9px] md:text-[10px] text-gray-500">最大連勝</p>
+                        <p class="text-sm md:text-lg font-bold text-green-400" id="fx-max-consec-w">0</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl text-center">
+                        <p class="text-[9px] md:text-[10px] text-gray-500">最大連虧</p>
+                        <p class="text-sm md:text-lg font-bold text-red-400" id="fx-max-consec-l">0</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-3">
+                    <div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl text-center">
+                        <p class="text-[9px] md:text-[10px] text-gray-500">平均獲利</p>
+                        <p class="text-sm md:text-lg font-bold text-green-400" id="fx-avg-win">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl text-center">
+                        <p class="text-[9px] md:text-[10px] text-gray-500">平均虧損</p>
+                        <p class="text-sm md:text-lg font-bold text-red-400" id="fx-avg-loss">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl text-center">
+                        <p class="text-[9px] md:text-[10px] text-gray-500">最大單筆獲利</p>
+                        <p class="text-sm md:text-lg font-bold text-green-400" id="fx-max-win">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl text-center">
+                        <p class="text-[9px] md:text-[10px] text-gray-500">最大單筆虧損</p>
+                        <p class="text-sm md:text-lg font-bold text-red-400" id="fx-max-loss">--</p>
+                    </div>
+                </div>
+
+                <!-- 監控商品數 -->
+                <div class="flex items-center space-x-2 text-xs text-gray-400">
+                    <span>📡 監控商品：</span><span class="text-yellow-400" id="fx-instruments">--</span>
+                </div>
+
+                <!-- Row 3: 各商品趨勢 -->
+                <div id="fx-instrument-cards" class="grid grid-cols-2 gap-2 md:grid-cols-5 md:gap-3"></div>
+
+                <!-- 持倉 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-blue-300 mb-3">📍 當前持倉</h3>
+                    <div id="fx-open-positions" class="space-y-2"></div>
+                </section>
+
+                <!-- 已完成交易 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">📋 已完成交易</h3>
+                    <div id="fx-closed-trades" class="space-y-2"></div>
+                </section>
+
+                <!-- 策略績效 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-purple-300 mb-3">🧠 策略績效</h3>
+                    <div id="fx-strategy-stats" class="space-y-2"></div>
+                </section>
+
+                <!-- 復盤與優化 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">📊 復盤與自我優化</h3>
+                    <div id="fx-review" class="space-y-3"></div>
+                </section>
+
+                <!-- 風控參數 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">⚙️ 風控參數</h3>
+                    <div id="fx-risk-params" class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4"></div>
+                </section>
+
+                <!-- 異常警報 -->
+                <section id="fx-alerts-section" class="bg-gray-800/50 border border-red-700/30 p-3 md:p-6 rounded-xl" style="display:none">
+                    <h3 class="text-sm md:text-xl font-medium text-red-300 mb-3">🚨 異常警報</h3>
+                    <div id="fx-alerts" class="space-y-2"></div>
+                </section>
+                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mt-4">
+    <h3 class="text-lg font-bold text-indigo-400 mb-3 flex items-center gap-2">👤 負責人員</h3>
+    <div class="space-y-2 text-sm text-gray-300">
+        <p><span class="text-gray-400">身份：</span><span class="text-white font-medium">外匯交易員</span></p>
+        <p><span class="text-gray-400">負責項目：</span>Capital.com 外匯 & 指數 CFD 自動交易</p>
+        <p><span class="text-gray-400">日常任務：</span>分析市場 → 篩選信號 → 開單 → 管理持倉(SL/TP) → 每日復盤損益</p>
+        <p><span class="text-gray-400">更新時間：</span><span class="text-indigo-400">交易時段每 15 分鐘分析，每日 22:00 復盤</span></p>
+        <p><span class="text-gray-400">主控板更新內容：</span>持倉狀態、今日/累計損益、策略勝率、交易紀錄</p>
+        <p><span class="text-gray-400">目標：</span><span class="text-emerald-400">月報酬正成長，勝率 > 40%，嚴守風報比 > 2:1</span></p>
+    </div>
+</section>
+            </div>
+
+            <!-- 廣告業務 -->
+            <div id="view-ad-business" class="section-view space-y-4 md:space-y-6">
+                <div class="flex items-center space-x-2 text-xs">
+                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-pink-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-pink-500"></span></span>
+                    <span class="text-gray-400">狀態：<span class="text-pink-300" id="adbiz-status">啟動中</span></span>
+                </div>
+
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-sm md:text-xl font-medium text-pink-300">🎯 廣告業務</h3>
+                        <span class="text-[10px] text-gray-400" id="adbiz-update">--</span>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-4">
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500 uppercase">今日名單</p>
+                            <p class="text-lg font-bold text-white" id="adbiz-total">0</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500 uppercase">Facebook</p>
+                            <p class="text-lg font-bold text-blue-400" id="adbiz-facebook">0</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500 uppercase">Threads</p>
+                            <p class="text-lg font-bold text-indigo-300" id="adbiz-threads">0</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500 uppercase">下一步</p>
+                            <p class="text-xs font-bold text-yellow-300 mt-1" id="adbiz-next">--</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+                        <div class="p-3 bg-gray-800 rounded-lg border border-blue-700/30">
+                            <p class="text-xs font-bold text-blue-300 mb-2">📘 Facebook 蒐集目標</p>
+                            <ul class="text-[10px] text-gray-300 space-y-1 list-disc list-inside">
+                                <li>搜尋指定 hashtag 與發案需求貼文</li>
+                                <li>自行判斷是否和廣告投放、行銷合作有關</li>
+                                <li>整理內容重點與原文網址給老闆看</li>
+                            </ul>
+                        </div>
+                        <div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30">
+                            <p class="text-xs font-bold text-indigo-300 mb-2">🧵 Threads 蒐集目標</p>
+                            <ul class="text-[10px] text-gray-300 space-y-1 list-disc list-inside">
+                                <li>找尋徵廣告投手、行銷協助、代操需求</li>
+                                <li>也收錄高機率需要投放或行銷的人</li>
+                                <li>整理判斷理由與連結，做成潛在客戶名單</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 mb-4">
+                        <p class="text-[10px] text-gray-500 mb-1">📝 任務說明</p>
+                        <p class="text-xs text-gray-200" id="adbiz-goal">每天幫老闆找出有機會變成客戶的人，整理在主控版。</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xs md:text-sm font-medium text-yellow-300 mb-3">📋 潛在客戶名單</h4>
+                        <div id="adbiz-leads" class="space-y-3"></div>
+                    </div>
+                </section>
+                <!-- 負責人員 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mt-4">
+                    <h3 class="text-lg font-bold text-indigo-400 mb-3 flex items-center gap-2">👤 負責人員</h3>
+                    <div class="space-y-2 text-sm text-gray-300">
+                        <p><span class="text-gray-400">身份：</span><span class="text-white font-medium">業務開發專員</span></p>
+                        <p><span class="text-gray-400">負責項目：</span>廣告業務開發、潛在客戶掃描與追蹤</p>
+                        <p><span class="text-gray-400">日常任務：</span>掃描目標客戶 → 整理名單 → 追蹤聯繫進度 → 回報成果</p>
+                        <p><span class="text-gray-400">更新時間：</span><span class="text-indigo-400">每週一 09:00（暫停中）</span></p>
+                        <p><span class="text-gray-400">主控板更新內容：</span>潛客名單、聯繫進度、成交狀態</p>
+                        <p><span class="text-gray-400">目標：</span><span class="text-emerald-400">建立可追蹤的業務管線，每月新增潛客 ≥ 5 家</span></p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 技能 -->
+            <div id="view-skills" class="section-view space-y-4">
+                <div id="skills-dynamic-content"><p class="text-xs text-gray-400 text-center py-8">載入中...</p></div>
+                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mt-4">
+    <h3 class="text-lg font-bold text-indigo-400 mb-3 flex items-center gap-2">👤 負責人員</h3>
+    <div class="space-y-2 text-sm text-gray-300">
+        <p><span class="text-gray-400">身份：</span><span class="text-white font-medium">系統管理員</span></p>
+        <p><span class="text-gray-400">負責項目：</span>所有 Skill 與 Cron 健康監控、優化</p>
+        <p><span class="text-gray-400">日常任務：</span>檢查所有 cron 執行紀錄 → 診斷異常 → 修復問題 → 建議優化</p>
+        <p><span class="text-gray-400">更新時間：</span><span class="text-indigo-400">每日 06:00 健檢</span></p>
+        <p><span class="text-gray-400">主控板更新內容：</span>各 Skill 狀態、Cron 成功率、異常紀錄、優化建議</p>
+        <p><span class="text-gray-400">目標：</span><span class="text-emerald-400">系統零故障運行，異常 1 小時內修復，持續降低 token 消耗</span></p>
+    </div>
+</section>
+            </div>
+            
+
+            <!-- threads -->
+            <div id="view-community" class="section-view space-y-4 md:space-y-6">
+
+                <!-- Threads -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-sm md:text-xl font-medium text-indigo-300">🧵 Threads · @freeeadman</h3>
+                        <button id="btn-social-refresh" onclick="refreshSocial()" class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs rounded-lg">🔄</button>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-4">
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500 uppercase">已發佈</p>
+                            <p class="text-lg font-bold text-white" id="social-published">0</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500 uppercase">待審核</p>
+                            <p class="text-lg font-bold text-yellow-400" id="social-pending">0</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500 uppercase">API 狀態</p>
+                            <p class="text-lg font-bold" id="social-api-status">未設定</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500 uppercase">更新時間</p>
+                            <p class="text-xs font-bold text-gray-300 mt-1" id="social-update">--</p>
+                        </div>
+                    </div>
+
+                    <!-- Pending Drafts -->
+                    <div class="mb-4">
+                        <h4 class="text-xs md:text-sm font-medium text-yellow-300 mb-3">📝 待審核草稿</h4>
+                        <div id="social-drafts" class="space-y-3"></div>
+                    </div>
+
+                    <!-- Recently Published -->
+                    <div>
+                        <h4 class="text-xs md:text-sm font-medium text-green-300 mb-3">✅ 最近已發佈</h4>
+                        <div id="social-recent" class="space-y-2"></div>
+                    </div>
+                </section>
+
+                <!-- Content Pillars -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-xs md:text-sm font-medium text-gray-300 mb-3">📐 內容主軸</h3>
+                    <div id="social-pillars" class="grid grid-cols-2 md:grid-cols-3 gap-2"></div>
+                </section>
+                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mt-4">
+    <h3 class="text-lg font-bold text-indigo-400 mb-3 flex items-center gap-2">👤 負責人員</h3>
+    <div class="space-y-2 text-sm text-gray-300">
+        <p><span class="text-gray-400">身份：</span><span class="text-white font-medium">社群經理</span></p>
+        <p><span class="text-gray-400">負責項目：</span>Threads @freeeadman 內容經營</p>
+        <p><span class="text-gray-400">日常任務：</span>產出貼文草稿 → 送審老闆 → 審核通過後發佈 → 追蹤互動數據</p>
+        <p><span class="text-gray-400">更新時間：</span><span class="text-indigo-400">每日 11:00（早場草稿）、18:00（晚場草稿）</span></p>
+        <p><span class="text-gray-400">主控板更新內容：</span>草稿狀態、已發佈篇數、最新貼文、互動數據</p>
+        <p><span class="text-gray-400">目標：</span><span class="text-emerald-400">每日 1-2 篇高品質貼文，帳號互動率穩定成長</span></p>
+    </div>
+</section>
+            </div>
+
+            <!-- threadsIG（獨立頁面） -->
+            <div id="view-community-ig" class="section-view space-y-4 md:space-y-6">
+
+                <!-- IG 主區塊 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-sm md:text-xl font-medium text-pink-300">📸 Instagram · @freeeadman</h3>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-4">
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500 uppercase">已發佈</p>
+                            <p class="text-lg font-bold text-white" id="ig-published">0</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500 uppercase">待審核</p>
+                            <p class="text-lg font-bold text-yellow-400" id="ig-pending">0</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500 uppercase">API 狀態</p>
+                            <p class="text-lg font-bold" id="ig-api-status">未設定</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500 uppercase">更新時間</p>
+                            <p class="text-xs font-bold text-gray-300 mt-1" id="ig-update">--</p>
+                        </div>
+                    </div>
+
+                    <!-- Pending Drafts -->
+                    <div class="mb-4">
+                        <h4 class="text-xs md:text-sm font-medium text-yellow-300 mb-3">📝 待審核草稿</h4>
+                        <div id="ig-drafts" class="space-y-3">
+                            <div class="py-4 text-center border border-dashed border-gray-700 rounded-lg">
+                                <p class="text-xs text-gray-400">尚無待審核草稿</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recently Published -->
+                    <div>
+                        <h4 class="text-xs md:text-sm font-medium text-green-300 mb-3">✅ 最近已發佈</h4>
+                        <div id="ig-recent" class="space-y-2">
+                            <p class="text-xs text-gray-500">尚無發佈紀錄</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- IG 產出紀錄 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-xs md:text-sm font-medium text-pink-300 mb-3">📁 最近產出</h3>
+                    <div id="ig-output-list" class="space-y-2">
+                        <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
+                    </div>
+                    <div class="mt-3 p-3 bg-gray-800 rounded-lg border border-indigo-700/30">
+                        <p class="text-[10px] text-gray-500 mb-1">📎 Google Drive 素材庫</p>
+                        <a href="https://drive.google.com/drive/folders/1RCam8Dgpk5x-oMlfLHXQmMhKKv5z4KB2" target="_blank" class="text-xs text-indigo-400 hover:underline">打開 IG 素材資料夾 ↗</a>
+                    </div>
+                </section>
+
+                <!-- IG 系統狀態 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-xs md:text-sm font-medium text-gray-300 mb-3">📐 系統狀態</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                        <div class="stat-card border border-green-700/30 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500">圖片生成</p>
+                            <p class="text-xs font-bold text-green-400">✅ Pillow</p>
+                        </div>
+                        <div class="stat-card border border-green-700/30 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500">雲端上傳</p>
+                            <p class="text-xs font-bold text-green-400">✅ Google Drive</p>
+                        </div>
+                        <div class="stat-card border border-green-700/30 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500">Cron 排程</p>
+                            <p class="text-xs font-bold text-green-400">✅ 11:00 / 18:00</p>
+                        </div>
+                        <div class="stat-card border border-yellow-700/30 p-3 rounded-xl">
+                            <p class="text-[10px] text-gray-500">自動發佈</p>
+                            <p class="text-xs font-bold text-yellow-400">⏳ 待串 API</p>
+                        </div>
+                    </div>
+                    <div class="mt-3 grid grid-cols-3 gap-2">
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl text-center">
+                            <p class="text-[10px] text-gray-500">配色主題</p>
+                            <p class="text-lg font-bold text-white">8 套</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl text-center">
+                            <p class="text-[10px] text-gray-500">視覺風格</p>
+                            <p class="text-lg font-bold text-white">3 種</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl text-center">
+                            <p class="text-[10px] text-gray-500">背景圖庫</p>
+                            <p class="text-lg font-bold text-white">10 張</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 短影音專案（獨立頁面） -->
+            <div id="view-shorts" class="section-view space-y-4 md:space-y-6">
+
+                <!-- 狀態 -->
+                <div class="flex items-center space-x-2 text-xs">
+                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-purple-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-purple-500"></span></span>
+                    <span class="text-gray-400">狀態：<span class="text-purple-300">規劃中（暫緩）</span></span>
+                </div>
+
+                <!-- IP 概念 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-sm md:text-xl font-medium text-purple-300">🐾 IP：寵物上班去</h3>
+                        <span class="px-2 py-0.5 text-[10px] rounded-full bg-purple-900/30 text-purple-300 border border-purple-700/50">暫緩中</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
+                            <p class="text-xs font-bold text-gray-200 mb-2">📋 概念</p>
+                            <div class="space-y-1.5 text-[10px] text-gray-300">
+                                <p>• 寵物體驗各行業（廚師、外送、DJ、醫生...）</p>
+                                <p>• 每集 15-30 秒，無語言、面向全球</p>
+                                <p>• 天然反差感自帶笑點，題材無限</p>
+                                <p>• 每個行業可深耕出系列</p>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
+                            <p class="text-xs font-bold text-gray-200 mb-2">🎨 風格設定</p>
+                            <div class="space-y-1.5 text-[10px] text-gray-300">
+                                <p>• 美術：半寫實擬人</p>
+                                <p>• 主角：狗/貓交替（A/B test）</p>
+                                <p>• 偶爾有「同事」客串</p>
+                                <p>• 參考：MrTabbyTales</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 影片結構 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">🎬 影片結構（每集 15-30 秒）</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl text-center">
+                            <p class="text-lg">👔</p>
+                            <p class="text-[10px] text-gray-400 mt-1">第 1 秒</p>
+                            <p class="text-xs font-bold text-white">到職</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl text-center">
+                            <p class="text-lg">💼</p>
+                            <p class="text-[10px] text-gray-400 mt-1">第 2-8 秒</p>
+                            <p class="text-xs font-bold text-white">認真工作</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl text-center">
+                            <p class="text-lg">💥</p>
+                            <p class="text-[10px] text-gray-400 mt-1">第 9-12 秒</p>
+                            <p class="text-xs font-bold text-white">出包搞笑</p>
+                        </div>
+                        <div class="stat-card border border-gray-700/50 p-3 rounded-xl text-center">
+                            <p class="text-lg">🔄</p>
+                            <p class="text-[10px] text-gray-400 mt-1">第 13-15 秒</p>
+                            <p class="text-xs font-bold text-white">反轉收尾</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 發布平台 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">📱 發布平台</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 text-xs rounded-lg bg-gray-800 text-gray-300 border border-gray-700">🧵 Threads</span>
+                        <span class="px-3 py-1.5 text-xs rounded-lg bg-gray-800 text-gray-300 border border-gray-700">📸 IG Reels</span>
+                        <span class="px-3 py-1.5 text-xs rounded-lg bg-gray-800 text-gray-300 border border-gray-700">📘 FB Reels</span>
+                        <span class="px-3 py-1.5 text-xs rounded-lg bg-gray-800 text-gray-300 border border-gray-700">▶️ YouTube Shorts</span>
+                        <span class="px-3 py-1.5 text-xs rounded-lg bg-gray-800 text-gray-300 border border-gray-700">📕 小紅書</span>
+                    </div>
+                </section>
+
+                <!-- 待確認事項 -->
+                <section class="bg-gray-800/50 border border-yellow-700/30 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">⏳ 待老闆確認後開工</h3>
+                    <div class="space-y-2 text-xs text-gray-300">
+                        <div class="flex items-center space-x-2"><span class="text-yellow-400">1.</span><span>狗/貓主角的角色設定（名字、個性、造型）</span></div>
+                        <div class="flex items-center space-x-2"><span class="text-yellow-400">2.</span><span>美術風格細節確認（半寫實擬人 ✓）</span></div>
+                        <div class="flex items-center space-x-2"><span class="text-yellow-400">3.</span><span>各平台帳號 API 串接</span></div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 虛擬貨幣 -->
+            <div id="view-crypto" class="section-view space-y-4 md:space-y-6">
+                <!-- 即時幣價 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">₿ 即時幣價</h3>
+                    <div id="crypto-prices-grid" class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                        <p class="text-xs text-gray-400 text-center py-3 col-span-full">載入中...</p>
+                    </div>
+                </section>
+                <!-- 虛擬貨幣新聞 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-sm md:text-xl font-medium text-yellow-300">📰 虛擬貨幣重大新聞（24H）</h3>
+                        <span class="text-[10px] text-gray-400" id="crypto-news-update">--</span>
+                    </div>
+                    <div id="crypto-news-list" class="space-y-3">
+                        <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
+                    </div>
+                </section>
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-sm md:text-xl font-medium text-cyan-300">🔥 X / Reddit 熱門討論（AI 自動交易 · 虛擬貨幣）</h3>
+                        <span class="text-[10px] text-gray-400" id="crypto-social-update">--</span>
+                    </div>
+                    <div id="crypto-social-list" class="space-y-3">
+                        <p class="text-xs text-gray-400 text-center py-3">載入中...</p>
+                    </div>
+                    <div id="crypto-social-summary"></div>
+                </section>
+                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">📋 綜合分析</h3>
+                    <div id="crypto-conclusion"><p class="text-xs text-gray-400 text-center py-3">載入中...</p></div>
+                </section>
+                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mt-4">
+    <h3 class="text-lg font-bold text-indigo-400 mb-3 flex items-center gap-2">👤 負責人員</h3>
+    <div class="space-y-2 text-sm text-gray-300">
+        <p><span class="text-gray-400">身份：</span><span class="text-white font-medium">幣圈新聞記者</span></p>
+        <p><span class="text-gray-400">負責項目：</span>BTC/ETH/主流幣新聞 + X/Reddit 社群情緒監控</p>
+        <p><span class="text-gray-400">日常任務：</span>蒐集幣圈重大新聞 → 翻譯 → 分析價格影響 → 監控社群情緒</p>
+        <p><span class="text-gray-400">更新時間：</span><span class="text-indigo-400">每日 08:00 / 20:00（暫停中）</span></p>
+        <p><span class="text-gray-400">主控板更新內容：</span>新聞摘要、情緒指標、對交易系統的建議</p>
+        <p><span class="text-gray-400">目標：</span><span class="text-emerald-400">重大事件即時更新，提供交易引擎可參考的情報</span></p>
+    </div>
+</section>
+            </div>
+
+            <!-- 虛擬貨幣模擬倉 v4 -->
+            <div id="view-crypto-auto" class="section-view space-y-4 md:space-y-6">
+                <div class="flex items-center space-x-2 text-xs">
+                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-green-500"></span></span>
+                    <span class="text-gray-400">狀態：<span class="text-green-300" id="ca-status">v4 運行中</span></span>
+                    <span class="text-[10px] text-gray-500 ml-2">更新：<span id="ca-last-update">--</span></span>
+                </div>
+
+                <!-- 帳戶總覽 (v4) -->
+                <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">淨值</p>
+                        <p class="text-lg md:text-2xl font-bold text-white mt-0.5" id="ca-net-equity">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">今日盈虧</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="ca-today-pnl">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">本週盈虧</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="ca-week-pnl">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">最大回撤</p>
+                        <p class="text-lg md:text-2xl font-bold text-red-400 mt-0.5" id="ca-max-dd">--</p>
+                    </div>
+                </div>
+
+                <!-- 完整交易統計 (v4) -->
+                <div class="grid grid-cols-3 gap-2 md:grid-cols-6 md:gap-3">
+                    <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">總交易</p><p class="text-xs font-bold text-white" id="ca-total-trades">0</p></div>
+                    <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">勝率</p><p class="text-xs font-bold text-yellow-400" id="ca-winrate">--</p></div>
+                    <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">風報比</p><p class="text-xs font-bold text-indigo-400" id="ca-rr-ratio">--</p></div>
+                    <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">平均賺</p><p class="text-xs font-bold text-green-400" id="ca-avg-win">--</p></div>
+                    <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">平均虧</p><p class="text-xs font-bold text-red-400" id="ca-avg-loss">--</p></div>
+                    <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">持倉數</p><p class="text-xs font-bold text-blue-400" id="ca-open-count">0</p></div>
+                </div>
+                <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-3">
+                    <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">最大連勝</p><p class="text-xs font-bold text-green-400" id="ca-max-consec-w">0</p></div>
+                    <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">最大連敗</p><p class="text-xs font-bold text-red-400" id="ca-max-consec-l">0</p></div>
+                    <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">單筆最大賺</p><p class="text-xs font-bold text-green-400" id="ca-max-win">--</p></div>
+                    <div class="p-2 bg-gray-800 rounded-lg border border-gray-700 text-center"><p class="text-[9px] text-gray-500">單筆最大虧</p><p class="text-xs font-bold text-red-400" id="ca-max-loss">--</p></div>
+                </div>
+
+                <!-- 幣種趨勢卡片 -->
+                <div id="ca-coin-cards" class="grid grid-cols-2 gap-2 md:grid-cols-5 md:gap-3"></div>
+
+                <!-- 當前持倉 (v4) -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-blue-300 mb-3">📍 當前持倉</h3>
+                    <div id="ca-positions" class="space-y-2">
+                        <p class="text-xs text-gray-400 text-center py-3">🔍 無持倉，掃描中...</p>
+                    </div>
+                </section>
+
+                <!-- 已完成交易 (v4) -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">📋 已完成交易（最近20筆）</h3>
+                    <div id="ca-closed" class="space-y-2">
+                        <p class="text-xs text-gray-400 text-center py-3">📭 無紀錄</p>
+                    </div>
+                </section>
+
+                <!-- 策略績效 (v4 排名) -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-purple-300 mb-3">🧠 策略績效（排名）</h3>
+                    <div id="ca-strategy" class="space-y-2">
+                        <p class="text-xs text-gray-400 text-center py-3">累積交易數據後自動產生</p>
+                    </div>
+                </section>
+
+                <!-- 風控參數 (v4 動態) -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">⚙️ 風控參數</h3>
+                    <div id="ca-risk-params" class="grid grid-cols-2 md:grid-cols-3 gap-2"></div>
+                </section>
+
+                <!-- 異常警報 (v4 新增) -->
+                <section id="ca-alerts-section" class="bg-gray-800/50 border border-red-700/30 p-3 md:p-6 rounded-xl" style="display:none">
+                    <h3 class="text-sm md:text-xl font-medium text-red-300 mb-3">🚨 異常警報</h3>
+                    <div id="ca-alerts" class="space-y-2"></div>
+                </section>
+
+                <!-- 資金費率 & 市場情緒 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-orange-300 mb-3">📡 市場情緒</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">恐懼貪婪指數</p><p class="text-xs font-bold text-gray-300" id="ca-fear-greed">--</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">BTC 資金費率</p><p class="text-xs font-bold text-gray-300" id="ca-funding">--</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">BTC 主導地位</p><p class="text-xs font-bold text-gray-300" id="ca-dominance">--</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">24H 爆倉</p><p class="text-xs font-bold text-gray-300" id="ca-liquidation">--</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">多空比</p><p class="text-xs font-bold text-gray-300" id="ca-longshort">--</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">總市值</p><p class="text-xs font-bold text-gray-300" id="ca-mcap">--</p></div>
+                    </div>
+                </section>
+
+                <!-- 復盤與自我優化 (v4 完整) -->
+                <section class="bg-gray-800/50 border border-yellow-700/30 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">📊 復盤與自我優化</h3>
+                    <div id="ca-review" class="space-y-3">
+                        <p class="text-xs text-gray-500">需要更多交易數據才能產生復盤</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 虛擬貨幣MAX -->
+            <div id="view-money-maker" class="section-view space-y-4 md:space-y-6">
+                <div class="flex items-center space-x-2 text-xs">
+                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-yellow-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-yellow-500"></span></span>
+                    <span class="text-gray-400">狀態：<span id="mm-status" class="text-yellow-300">待命</span></span>
+                    <span class="text-[10px] text-gray-500 ml-2">更新：<span id="mm-last-update">--</span></span>
+                </div>
+
+                <!-- 帳戶總覽 -->
+                <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">總資產</p>
+                        <p class="text-lg md:text-2xl font-bold text-white mt-0.5" id="mm-net-equity">NT$10,000</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">未實現損益</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="mm-unrealized-pnl">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">累計損益</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="mm-total-pnl">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">模式</p>
+                        <p class="text-lg md:text-2xl font-bold text-yellow-400 mt-0.5" id="mm-mode">囤幣</p>
+                    </div>
+                </div>
+
+                <!-- BTC 即時 + 持倉統計 -->
+                <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-3">
+                    <div class="stat-card border border-yellow-700/30 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">₿ BTC/TWD</p>
+                        <p class="text-lg md:text-2xl font-bold text-yellow-400 mt-0.5" id="mm-btc-price">--</p>
+                        <p id="mm-btc-change" class="text-xs text-gray-400">--</p>
+                    </div>
+                    <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700 text-center">
+                        <p class="text-[9px] text-gray-500">持有 BTC</p>
+                        <p class="text-sm md:text-lg font-bold text-yellow-400" id="mm-btc-held">0</p>
+                    </div>
+                    <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700 text-center">
+                        <p class="text-[9px] text-gray-500">均價成本</p>
+                        <p class="text-sm md:text-lg font-bold text-white" id="mm-avg-cost">--</p>
+                    </div>
+                    <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700 text-center">
+                        <p class="text-[9px] text-gray-500">買入 / 賣出</p>
+                        <p class="text-sm md:text-lg font-bold"><span class="text-green-400" id="mm-buys">0</span> / <span class="text-red-400" id="mm-sells">0</span></p>
+                    </div>
+                </div>
+
+                <!-- 三維信號燈 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">🚦 三維信號</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+                            <p class="text-[10px] text-gray-500">技術面</p>
+                            <p class="text-xs font-bold text-gray-300" id="mm-sig-tech">⚪ 等待</p>
+                        </div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+                            <p class="text-[10px] text-gray-500">新聞面</p>
+                            <p class="text-xs font-bold text-gray-300" id="mm-sig-news">⚪ 無重大</p>
+                        </div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+                            <p class="text-[10px] text-gray-500">情緒面</p>
+                            <p class="text-xs font-bold text-gray-300" id="mm-sig-sentiment">⚪ 中性</p>
+                        </div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-indigo-700/50">
+                            <p class="text-[10px] text-gray-500">綜合判斷</p>
+                            <p class="text-xs font-bold text-indigo-300" id="mm-sig-overall">⚪ 等待信號</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 風控儀表板 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-orange-300 mb-3">🛡️ 風控儀表板</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+                            <p class="text-[10px] text-gray-500">日虧額度剩餘</p>
+                            <p class="text-xs font-bold text-white" id="mm-daily-remaining">NT$300</p>
+                        </div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+                            <p class="text-[10px] text-gray-500">連虧次數</p>
+                            <p class="text-xs font-bold text-white" id="mm-consec-losses">0</p>
+                        </div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+                            <p class="text-[10px] text-gray-500">恐懼貪婪指數</p>
+                            <p class="text-xs font-bold text-gray-300" id="mm-fear-greed">--</p>
+                        </div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-indigo-700/50">
+                            <p class="text-[10px] text-gray-500">下一步</p>
+                            <p class="text-xs font-bold text-indigo-300" id="mm-next-action">等待信號</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 持有部位 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-blue-300 mb-3">₿ 持有部位</h3>
+                    <div id="mm-holdings">
+                        <div class="py-4 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">無持有</p></div>
+                    </div>
+                </section>
+
+                <!-- 最近交易 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">📋 最近交易</h3>
+                    <div id="mm-trades">
+                        <p class="text-xs text-gray-400 text-center py-3">尚無交易紀錄</p>
+                    </div>
+                </section>
+
+                <!-- 異常警報 -->
+                <section id="mm-alerts-section" class="bg-gray-800/50 border border-red-700/30 p-3 md:p-6 rounded-xl" style="display:none">
+                    <h3 class="text-sm md:text-xl font-medium text-red-300 mb-3">🚨 警報</h3>
+                    <div id="mm-alerts" class="space-y-2"></div>
+                </section>
+
+                <!-- 系統說明 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">📐 系統規格</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">資金</p><p class="text-xs font-bold text-white">NT$10,000</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">標的</p><p class="text-xs font-bold text-yellow-400">BTC/TWD</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">時間框架</p><p class="text-xs font-bold text-white">15 分鐘</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">單筆最大虧損</p><p class="text-xs font-bold text-red-400">NT$100 (1%)</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">日虧上限</p><p class="text-xs font-bold text-red-400">NT$300</p></div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">決策系統</p><p class="text-xs font-bold text-indigo-300">技術+新聞+情緒</p></div>
+                    </div>
+                </section>
+                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mt-4">
+    <h3 class="text-lg font-bold text-indigo-400 mb-3 flex items-center gap-2">👤 負責人員</h3>
+    <div class="space-y-2 text-sm text-gray-300">
+        <p><span class="text-gray-400">身份：</span><span class="text-white font-medium">MAX 交易員</span></p>
+        <p><span class="text-gray-400">負責項目：</span>MAX 交易所 BTC/ETH/SOL/DOGE TWD 自動交易</p>
+        <p><span class="text-gray-400">日常任務：</span>分析各幣走勢 → 進出場 → 管理持倉 → 更新損益</p>
+        <p><span class="text-gray-400">更新時間：</span><span class="text-indigo-400">每 3 分鐘執行（暫停中）</span></p>
+        <p><span class="text-gray-400">主控板更新內容：</span>各幣持倉、買入均價、當前價、損益、帳戶淨值</p>
+        <p><span class="text-gray-400">目標：</span><span class="text-emerald-400">保護本金第一，正期望值操作，帳戶淨值穩定成長</span></p>
+    </div>
+</section>
+            </div>
+
+            <!-- 虛擬貨幣幣安 -->
+            <div id="view-crypto-futures" class="section-view space-y-4 md:space-y-6">
+                <div class="flex items-center space-x-2 text-xs">
+                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-blue-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-blue-500"></span></span>
+                    <span class="text-gray-400">狀態：<span id="cf-status" class="text-blue-300">載入中</span></span>
+                    <span class="text-[10px] text-gray-500 ml-2">模式：<span id="cf-mode" class="text-orange-300">--</span></span>
+                    <span class="text-[10px] text-gray-500 ml-2">更新：<span id="cf-last-update">--</span></span>
+                </div>
+
+                <!-- 警示 -->
+                <div id="cf-alerts" class="space-y-1"></div>
+
+                <!-- 帳戶總覽 -->
+                <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">淨值</p>
+                        <p class="text-lg md:text-2xl font-bold text-white mt-0.5" id="cf-net-equity">--</p>
+                        <p class="text-[9px] text-gray-500 mt-0.5">初始: $<span id="cf-initial">265</span></p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">未實現盈虧</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="cf-unrealized">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">今日盈虧</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="cf-today-pnl">--</p>
+                    </div>
+                    <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase">累計盈虧</p>
+                        <p class="text-lg md:text-2xl font-bold text-gray-300 mt-0.5" id="cf-total-pnl">--</p>
+                    </div>
+                </div>
+
+                <!-- 交易統計 -->
+                <div class="grid grid-cols-2 gap-2 md:grid-cols-5 md:gap-3">
+                    <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700 text-center">
+                        <p class="text-[9px] text-gray-500">總交易</p>
+                        <p class="text-sm md:text-lg font-bold text-white" id="cf-total-trades">0</p>
+                    </div>
+                    <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700 text-center">
+                        <p class="text-[9px] text-gray-500">勝率</p>
+                        <p class="text-sm md:text-lg font-bold text-yellow-400" id="cf-winrate">--</p>
+                    </div>
+                    <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700 text-center">
+                        <p class="text-[9px] text-gray-500">勝 / 敗</p>
+                        <p class="text-sm md:text-lg font-bold"><span class="text-green-400" id="cf-wins">0</span> / <span class="text-red-400" id="cf-losses">0</span></p>
+                    </div>
+                    <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700 text-center">
+                        <p class="text-[9px] text-gray-500">最大回撤</p>
+                        <p class="text-sm md:text-lg font-bold text-red-400" id="cf-max-dd">0%</p>
+                    </div>
+                    <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700 text-center">
+                        <p class="text-[9px] text-gray-500">槓桿 / 模式</p>
+                        <p class="text-sm md:text-lg font-bold text-orange-400" id="cf-leverage">--</p>
+                    </div>
+                </div>
+
+                <!-- 即時信號 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-blue-300 mb-3">🚦 即時市場信號</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+                            <p class="text-[10px] text-gray-500">市場狀態</p>
+                            <p class="text-xs font-bold text-gray-300" id="cf-sig-state">--</p>
+                        </div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+                            <p class="text-[10px] text-gray-500">4H 趨勢</p>
+                            <p class="text-xs font-bold text-gray-300" id="cf-sig-trend">--</p>
+                        </div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-green-700/30">
+                            <p class="text-[10px] text-gray-500">做多分數</p>
+                            <p class="text-sm font-bold text-green-400" id="cf-sig-buy">0</p>
+                        </div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-red-700/30">
+                            <p class="text-[10px] text-gray-500">做空分數</p>
+                            <p class="text-sm font-bold text-red-400" id="cf-sig-sell">0</p>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-[10px] text-gray-500 mb-1">活躍信號</p>
+                        <div id="cf-sig-active" class="flex flex-wrap gap-1"></div>
+                    </div>
+                </section>
+
+                <!-- 風控狀態 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-orange-300 mb-3">🛡️ 風控狀態</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+                            <p class="text-[10px] text-gray-500">日虧額度</p>
+                            <p class="text-xs font-bold text-white" id="cf-risk-daily">--</p>
+                        </div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+                            <p class="text-[10px] text-gray-500">連虧次數</p>
+                            <p class="text-xs font-bold text-white" id="cf-risk-consec">--</p>
+                        </div>
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+                            <p class="text-[10px] text-gray-500">暫停中</p>
+                            <p class="text-xs font-bold" id="cf-risk-paused">否</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 策略權重 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">📐 策略權重（自動調整）</h3>
+                    <div id="cf-strategy-weights" class="grid grid-cols-2 md:grid-cols-3 gap-2"></div>
+                </section>
+
+                <!-- 當前持倉 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-blue-300 mb-3">📍 當前持倉</h3>
+                    <div id="cf-position">
+                        <div class="py-4 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">🔍 無持倉</p></div>
+                    </div>
+                </section>
+
+                <!-- 最近交易 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">📋 最近交易</h3>
+                    <div id="cf-trades">
+                        <p class="text-xs text-gray-400 text-center py-3">尚無交易紀錄</p>
+                    </div>
+                </section>
+
+                <!-- 交易標的 -->
+                <section class="bg-gray-800/50 border border-gray-700/50 p-3 md:p-6 rounded-xl">
+                    <h3 class="text-sm md:text-xl font-medium text-gray-300 mb-3">🎯 交易標的</h3>
+                    <div class="grid grid-cols-1 gap-2">
+                        <div class="p-2.5 bg-gray-800 rounded-lg border border-yellow-700/30 text-center">
+                            <p class="text-xs font-bold text-yellow-400">BTCUSDT</p>
+                            <p class="text-[10px] text-gray-400">唯一標的 · 5x 逐倉</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mt-4">
+    <h3 class="text-lg font-bold text-indigo-400 mb-3 flex items-center gap-2">👤 負責人員</h3>
+    <div class="space-y-2 text-sm text-gray-300">
+        <p><span class="text-gray-400">身份：</span><span class="text-white font-medium">合約交易員</span></p>
+        <p><span class="text-gray-400">負責項目：</span>Binance USDT-M 永續合約交易（BTC+ETH）</p>
+        <p><span class="text-gray-400">日常任務：</span>每 10 分鐘 analysis 市場 → 篩選信號（門檻 65）→ 開單 → 追蹤止損 → 復盤</p>
+        <p><span class="text-gray-400">更新時間：</span><span class="text-indigo-400">每 10 分鐘自動執行，每日 22:00 統一復盤</span></p>
+        <p><span class="text-gray-400">主控板更新內容：</span>持倉狀態、餘額、今日/累計損益、策略績效、交易紀錄</p>
+        <p><span class="text-gray-400">目標：</span><span class="text-emerald-400">風報比 ≥ 3:1，減少無效交易，月正成長</span></p>
+    </div>
+</section>
+            </div>
+
+            <!-- Placeholder -->
+            <div id="view-placeholder" class="section-view">
+                <section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl">
+                    <div class="py-8 text-center"><span class="text-3xl block mb-2 text-gray-600">🚧</span><p class="text-xs text-gray-400">建置中</p></div>
+                </section>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<script>
+function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('open')}
+function checkPass(){if(document.getElementById('pass-input').value==='8888'){document.getElementById('auth-overlay').style.display='none';document.getElementById('app-content').style.display='flex';setTimeout(loadOverview,200)}else{document.getElementById('auth-error').classList.remove('hidden')}}
+
+const titles={overview:{t:'📊 總覽',s:'所有專案一覽無遺'},stocks:{t:'股票專家',s:'台股分析'},forex:{t:'外匯新聞',s:'市場新聞 · 交易影響分析'},'forex-auto':{t:'🤖 外匯自動交易',s:'多商品 · v4 嚴格確認模式'},crypto:{t:'虛擬貨幣新聞',s:'市場新聞 · 交易影響分析'},'crypto-auto':{t:'🤖 虛擬貨幣模擬倉',s:'MAX 交易所 · v4 策略模組化'},'money-maker':{t:'💰 虛擬貨幣MAX',s:'BTC/TWD · 真金白銀 · 背水一戰'},'crypto-futures':{t:'📈 虛擬貨幣幣安',s:'Binance · 多空雙向 · 槓桿交易'},'ad-business':{t:'🎯 廣告業務',s:'每日潛在客戶蒐集'},community:{t:'threads',s:'互動管理'},'community-ig':{t:'threadsIG',s:'Instagram · @freeeadman'},shorts:{t:'短影音專案',s:'寵物上班去 · 規劃中'},skills:{t:'技能專案',s:'4 模型 · 23 技能'}};
+const trendMap={'STRONG_BULL':'強勢看多 🟢','BULL':'看多 🟢','STRONG_BEAR':'強勢看空 🔴','BEAR':'看空 🔴','NEUTRAL':'盤整 ⚪'};
+function trendCN(t){return trendMap[t]||t||'--'}
+function trendColor(t){if(!t)return'text-gray-300';if(t.includes('BULL'))return'text-green-400';if(t.includes('BEAR'))return'text-red-400';return'text-gray-300'}
+
+async function loadTradingData(){
+try{
+const r=await fetch('trading-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
+document.getElementById('fx-last-update').textContent=d.lastUpdate||'--';
+const a=d.account||{};
+const pe=document.getElementById('fx-pnl');const pn=a.realizedPnl||0;
+pe.textContent='$'+pn.toFixed(2);pe.className='text-lg md:text-2xl font-bold mt-0.5 '+(pn>=0?'text-green-400':'text-red-400');
+document.getElementById('fx-balance').textContent='$'+((a.balance||0).toLocaleString());
+document.getElementById('fx-winrate').textContent=a.winRate||'--';
+document.getElementById('fx-total-trades').textContent=a.totalTrades||0;
+document.getElementById('fx-open-count').textContent=a.openCount||(d.openPositions||[]).length;
+document.getElementById('fx-closed-count').textContent=a.closedTrades||0;
+const ur=a.unrealizedPnl||0;const ure=document.getElementById('fx-unrealized');
+ure.textContent=(ur>=0?'+':'')+('$'+ur.toFixed(2));ure.className='text-lg md:text-2xl font-bold mt-0.5 '+(ur>=0?'text-green-400':'text-red-400');
+document.getElementById('fx-instruments').textContent=(d.instruments||[]).length+'個';
+// New v6 fields
+const neEl=document.getElementById('fx-net-equity');if(neEl){neEl.textContent='$'+((a.netEquity||a.balance||0).toLocaleString())}
+const tdp=a.todayPnl||0;const tdEl=document.getElementById('fx-today-pnl');if(tdEl){tdEl.textContent=(tdp>=0?'+':'')+'$'+tdp.toFixed(2);tdEl.className='text-lg md:text-2xl font-bold mt-0.5 '+(tdp>=0?'text-green-400':'text-red-400')}
+const wkp=a.weekPnl||0;const wkEl=document.getElementById('fx-week-pnl');if(wkEl){wkEl.textContent=(wkp>=0?'+':'')+'$'+wkp.toFixed(2);wkEl.className='text-lg md:text-2xl font-bold mt-0.5 '+(wkp>=0?'text-green-400':'text-red-400')}
+const mpEl=document.getElementById('fx-margin-pct');if(mpEl)mpEl.textContent=a.marginUsagePercent||'--';
+const rrEl=document.getElementById('fx-rr-ratio');if(rrEl)rrEl.textContent=a.riskRewardRatio||'--';
+const mcwEl=document.getElementById('fx-max-consec-w');if(mcwEl)mcwEl.textContent=a.maxConsecutiveWins||0;
+const mclEl=document.getElementById('fx-max-consec-l');if(mclEl)mclEl.textContent=a.maxConsecutiveLosses||0;
+const awEl=document.getElementById('fx-avg-win');if(awEl)awEl.textContent='$'+(a.avgWin||0).toFixed(2);
+const alEl=document.getElementById('fx-avg-loss');if(alEl)alEl.textContent='$'+(a.avgLoss||0).toFixed(2);
+const mwEl=document.getElementById('fx-max-win');if(mwEl)mwEl.textContent='$'+(a.maxSingleWin||0).toFixed(2);
+const mlEl=document.getElementById('fx-max-loss');if(mlEl)mlEl.textContent='$'+(a.maxSingleLoss||0).toFixed(2);
+
+// Instrument cards
+const ic=document.getElementById('fx-instrument-cards');const inds=d.indicators||{};
+const iks=Object.keys(inds);
+if(iks.length){ic.innerHTML=iks.map(k=>{const v=inds[k];const t1=v.trend_1h||'';const t15=v.trend_15m||'';
+return`<div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl"><p class="text-[10px] md:text-xs font-bold text-white">${v.name||k}</p><div class="mt-1 space-y-0.5"><p class="text-[9px] text-gray-500">1H: <span class="${trendColor(t1)}">${trendCN(t1)}</span></p><p class="text-[9px] text-gray-500">15M: <span class="${trendColor(t15)}">${trendCN(t15)}</span></p><p class="text-[10px] text-yellow-400 mt-1">$${(v.bid||0).toLocaleString()}</p></div></div>`}).join('')}else{ic.innerHTML=''}
+
+// Positions
+const pb=document.getElementById('fx-open-positions');const ps=d.openPositions||[];
+if(!ps.length){pb.innerHTML='<div class="py-6 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">🔍 無持倉，監控中...</p></div>'}
+else{pb.innerHTML=ps.map(p=>{const pc=p.pnl>=0?'text-green-400':'text-red-400';const db=p.direction==='BUY'?'badge-buy':'badge-sell';
+return`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1.5"><div class="flex items-center space-x-2"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${db}">${p.direction}</span><span class="text-xs font-bold text-white">${p.instrument||'Gold'} @ ${p.entryPrice}</span></div><span class="text-sm font-bold ${pc}">${p.pnl>=0?'+':''}$${p.pnl.toFixed(2)}</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>手數:${p.size}</span><span>SL:${p.stopLevel||'--'}</span><span>TP:${p.profitLevel||'--'}</span><span>現價:${p.currentBid}</span></div></div>`}).join('')}
+
+// Closed Trades (only completed ones)
+const tb=document.getElementById('fx-closed-trades');const ts=(d.closedTrades||[]).slice().reverse().slice(0,15);
+if(!ts.length){tb.innerHTML='<div class="py-6 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">📭 無紀錄</p></div>'}
+else{tb.innerHTML=ts.map(t=>{const db=t.direction==='BUY'?'badge-buy':'badge-sell';
+let ob='badge-open';let outcomeLabel=t.outcome||'--';
+if(t.outcome==='WIN'){ob='badge-win'}else if(t.outcome==='LOSS'){ob='badge-loss'}else if(t.outcome==='CLOSED_BY_BROKER'){ob='badge-loss';outcomeLabel='券商平倉'}
+const tm=t.time?new Date(t.time).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',hour:'2-digit',minute:'2-digit',month:'2-digit',day:'2-digit'}):'--';
+const pnlVal=typeof t.pnl==='number'?t.pnl:0;
+const ps='$'+pnlVal.toFixed(2);
+const pc=pnlVal>=0?'text-green-400':'text-red-400';
+const instName=t.instrumentName||t.instrument||'--';
+const conf=t.confidence!=null?((t.confidence*100).toFixed(0)+'%'):'--';
+return`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${db}">${t.direction}</span><span class="px-1.5 py-0.5 text-[10px] rounded-full ${ob}">${outcomeLabel}</span><span class="text-[10px] font-bold text-white">${instName}</span><span class="text-[10px] text-gray-300">${t.strategy||''}</span></div><span class="text-xs font-bold ${pc}">${ps}</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>手數:${t.size||'--'}</span><span>${conf}</span><span>${tm}</span></div></div>`}).join('')}
+
+// Strategy stats
+const sb=document.getElementById('fx-strategy-stats');const ss=d.strategyStats||{};const sk=Object.keys(ss);
+if(!sk.length){sb.innerHTML='<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">累積數據後自動產生策略比較</p><ul class="text-[10px] text-gray-400 mt-1.5 space-y-0.5 list-disc list-inside"><li>15M: 趨勢跟隨、RSI、布林、動量、EMA</li><li>1H: 趨勢延續、RSI、布林突破、EMA、MACD</li></ul></div>'}
+else{const sorted=sk.slice().sort((a,b)=>(ss[b].pnl||0)-(ss[a].pnl||0));sb.innerHTML='<div class="grid grid-cols-1 xs:grid-cols-2 gap-2">'+sorted.map(k=>{const s=ss[k];const tt=s.wins+s.losses;const wr=s.winRate||(tt>0?((s.wins/tt)*100).toFixed(1)+'%':'--');const pc=s.pnl>=0?'text-green-400':'text-red-400';const rr=s.riskReward||'--';const rank=s.rank||'--';
+return`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 text-[9px] rounded-full bg-indigo-900/50 text-indigo-300 border border-indigo-700/50">#${rank}</span><span class="text-xs font-bold text-white">${k}</span></div><span class="text-[10px] ${pc}">$${(s.pnl||0).toFixed(2)}</span></div><div class="flex gap-3 text-[10px] text-gray-400"><span>勝:${s.wins}</span><span>敗:${s.losses}</span><span>勝率:${wr}</span><span>RR:${rr}</span></div></div>`}).join('')+'</div>'}
+
+// Review & Insights
+const rb=document.getElementById('fx-review');const rv=d.review||{};
+let rhtml='';
+if(rv.summary){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500 mb-1">📝 總結</p><p class="text-xs text-gray-200">${rv.summary}</p></div>`}
+if(rv.bestStrategy){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-green-700/30"><p class="text-[10px] text-gray-500 mb-1">🏆 最佳策略</p><p class="text-xs text-green-400">${rv.bestStrategy.name} — 盈虧 $${rv.bestStrategy.pnl.toFixed(2)}（勝${rv.bestStrategy.wins} 敗${rv.bestStrategy.losses}）</p></div>`}
+if(rv.worstStrategy&&rv.worstStrategy.name!==rv.bestStrategy?.name){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-red-700/30"><p class="text-[10px] text-gray-500 mb-1">⚠️ 最差策略</p><p class="text-xs text-red-400">${rv.worstStrategy.name} — 盈虧 $${rv.worstStrategy.pnl.toFixed(2)}（勝${rv.worstStrategy.wins} 敗${rv.worstStrategy.losses}）</p></div>`}
+if(rv.lessons&&rv.lessons.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30"><p class="text-[10px] text-gray-500 mb-1">🎓 系統學到了什麼</p><ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">${rv.lessons.map(l=>'<li>'+l+'</li>').join('')}</ul></div>`}
+if(rv.optimization&&rv.optimization.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30"><p class="text-[10px] text-gray-500 mb-1">🔧 優化方向</p><ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">${rv.optimization.map(o=>'<li>'+o+'</li>').join('')}</ul></div>`}
+if(rv.strategiesUnderTest&&rv.strategiesUnderTest.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-blue-700/30"><p class="text-[10px] text-gray-500 mb-1">🧪 測試中策略</p><div class="flex flex-wrap gap-1.5 mt-1">${rv.strategiesUnderTest.map(s=>'<span class="px-1.5 py-0.5 text-[9px] rounded-full bg-blue-900/50 text-blue-300 border border-blue-700/50">'+s+'</span>').join('')}</div></div>`}
+if(rv.recentChanges&&rv.recentChanges.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-cyan-700/30"><p class="text-[10px] text-gray-500 mb-1">📝 最近變更</p><ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">${rv.recentChanges.map(c=>'<li>'+c+'</li>').join('')}</ul></div>`}
+if(rv.nextSteps&&rv.nextSteps.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-green-700/30"><p class="text-[10px] text-gray-500 mb-1">🎯 下一步</p><ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">${rv.nextSteps.map(s=>'<li>'+s+'</li>').join('')}</ul></div>`}
+if(!rhtml)rhtml='<p class="text-xs text-gray-500">需要更多交易數據才能產生復盤</p>';
+rb.innerHTML=rhtml;
+
+// Risk params (dynamic from JSON)
+const rpb=document.getElementById('fx-risk-params');const rp=d.riskParams||{};
+if(rpb){const rpItems=[
+{label:'最大單筆虧損',value:rp.maxSingleLoss||'2% of balance'},
+{label:'最大持倉',value:rp.maxPositions||4},
+{label:'連虧暫停',value:rp.consecutiveLossPause?rp.consecutiveLossPause+'次後暫停':'5次後暫停'},
+{label:'止損方式',value:rp.slMethod||'ATR x 1.2'},
+{label:'最低風報比',value:rp.minRiskReward||'1.5:1'},
+{label:'禁止交易時段',value:rp.sessionRestrictions||'UTC 22-00'},
+{label:'模式',value:rp.mode||'simulation',highlight:true},
+{label:'當前連虧',value:rp.consecutiveLosses||0,warn:rp.consecutiveLosses>=3},
+{label:'倉位縮減',value:rp.sizeReduction||'連虧3次後減半'},
+];rpb.innerHTML=rpItems.map(i=>`<div class="p-2.5 bg-gray-800 rounded-lg border ${i.warn?'border-red-700/50':'border-gray-700'}"><p class="text-[10px] text-gray-500">${i.label}</p><p class="text-xs md:text-sm font-bold ${i.highlight?'text-orange-400':i.warn?'text-red-400':'text-white'}">${i.value}</p></div>`).join('')}
+
+// Alerts
+const alertSec=document.getElementById('fx-alerts-section');const alertBox=document.getElementById('fx-alerts');const alerts=d.alerts||[];
+if(alertSec&&alertBox){if(alerts.length){alertSec.style.display='';alertBox.innerHTML=alerts.map(a=>`<div class="p-2.5 bg-gray-800 rounded-lg border border-red-700/30"><p class="text-xs text-red-300">${a}</p></div>`).join('')}else{alertSec.style.display='none'}}
+
+}catch(e){console.log('err',e)}
+}
+
+// ========== SOCIAL DATA ==========
+async function refreshSocial(){
+const b=document.getElementById('btn-social-refresh');b.textContent='⏳';b.disabled=true;
+await loadSocialData();b.textContent='✅';b.disabled=false;setTimeout(()=>{b.textContent='🔄'},1500)}
+
+async function loadSocialData(){
+try{
+const r=await fetch('social-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
+const pubCount=(d.published||[]).length;
+const pendCount=(d.drafts||[]).length;
+const connected=d.apiStatus==='connected';
+document.getElementById('social-published').textContent=pubCount;
+document.getElementById('social-pending').textContent=pendCount;
+document.getElementById('social-api-status').textContent=connected?'✅ 已連接':'⚠️ 未設定';
+document.getElementById('social-api-status').className='text-lg font-bold '+(connected?'text-green-400':'text-yellow-400');
+document.getElementById('social-update').textContent=d.lastUpdate||'--';
+
+// Drafts
+const db=document.getElementById('social-drafts');const drafts=d.drafts||[];
+if(!drafts.length){db.innerHTML='<div class="py-4 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">目前沒有待審核的草稿</p></div>'}
+else{db.innerHTML=drafts.map(dr=>{
+const pill=dr.pillar_name||dr.pillar||'';
+const statusBadge=dr.status==='failed'?'<span class="px-1.5 py-0.5 text-[10px] rounded-full bg-red-900/50 text-red-300 border border-red-700/50">發佈失敗</span>':'';
+return`<div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2"><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-indigo-900/50 text-indigo-300 border border-indigo-700/50">${pill}</span>${statusBadge}<span class="text-[10px] text-gray-400">${dr.created||''}</span></div>
+<div class="flex gap-2">
+<span class="px-2 py-1 text-[10px] text-gray-400 bg-gray-700/50 rounded-lg">💬 在 LINE 跟管家說「發」或「不要」</span>
+</div>
+</div>
+<p class="text-xs text-gray-200 whitespace-pre-wrap leading-relaxed">${dr.content||''}</p>
+${dr.hashtags?'<p class="text-[10px] text-indigo-400 mt-2">'+dr.hashtags+'</p>':''}
+</div>`}).join('')}
+
+// Published
+const rb=document.getElementById('social-recent');const pub=d.published||[];
+if(!pub.length){rb.innerHTML='<div class="py-4 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">尚無已發佈文章</p></div>'}
+else{rb.innerHTML=pub.map(p=>`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-green-900/50 text-green-300">${p.pillar_name||''}</span><span class="text-[10px] text-gray-400">${p.published_at||''}</span></div><p class="text-[10px] text-gray-300 line-clamp-2">${(p.content||'').substring(0,100)}...</p>${p.thread_url?'<a href="'+p.thread_url+'" target="_blank" class="text-[10px] text-indigo-400 hover:underline mt-1 inline-block">查看貼文 ↗</a>':''}</div>`).join('')}
+
+// Pillars
+const pb=document.getElementById('social-pillars');const pls=d.pillars||[];
+pb.innerHTML=pls.map(p=>`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-xs font-bold text-white">${p.name}</p><p class="text-[10px] text-gray-400 mt-0.5">${p.description}</p></div>`).join('');
+
+}catch(e){console.log('social err',e)}
+}
+
+// (審核操作已移至 LINE 對話)
+
+// 審核操作已移至 LINE 對話，主控板僅供預覽草稿
+
+let tri=null;
+function switchTab(v,el){
+document.getElementById('sidebar').classList.remove('open');document.getElementById('sidebar-overlay').classList.remove('open');
+document.querySelectorAll('.nav-item').forEach(e=>e.classList.remove('active'));el.classList.add('active');
+document.getElementById('header-title').textContent=titles[v]?.t||'專案';document.getElementById('header-subtitle').textContent=titles[v]?.s||'';
+document.querySelectorAll('.section-view').forEach(e=>e.classList.remove('active'));
+const tv=document.getElementById('view-'+v);if(tv)tv.classList.add('active');else document.getElementById('view-placeholder').classList.add('active');
+if(tri){clearInterval(tri);tri=null}
+if(v==='overview'){loadOverview()}
+if(v==='stocks'){loadStockData()}
+if(v==='forex'){loadForexNews()}
+if(v==='forex-auto'){loadTradingData();tri=setInterval(loadTradingData,900000)}
+if(v==='community'){loadSocialData()}
+if(v==='community-ig'){loadIGData()}
+if(v==='crypto'){loadCryptoNews()}
+if(v==='crypto-auto'){loadCryptoData();if(!window._cri)window._cri=setInterval(loadCryptoData,900000)}
+if(v==='money-maker'){loadMoneyMakerData();if(!window._mmi)window._mmi=setInterval(loadMoneyMakerData,180000)}
+if(v==='crypto-futures'){loadCryptoFuturesData()}
+if(v==='ad-business'){loadAdBusinessData()}
+if(v==='skills'){loadSkillsData()}
+}
+
+// ========== STOCK DATA ==========
+async function loadStockData() {
+  try {
+    const r = await fetch('stock-data.json?t='+Date.now()); if (!r.ok) return;
+    const d = await r.json();
+    const box = document.getElementById('stock-dynamic-content');
+    if (!box) return;
+    let html = '';
+
+    // 更新時間
+    html += `<div class="flex items-center space-x-2 text-xs mb-4">
+      <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-green-500"></span></span>
+      <span class="text-gray-400">更新：<span class="text-gray-200">${d.lastUpdate||'--'}</span></span>
+    </div>`;
+
+    // 警示 (alerts)
+    if (d.alerts?.length) {
+      html += `<section class="bg-red-900/20 border border-red-700/50 p-4 md:p-6 rounded-xl mb-4">
+        <h3 class="text-sm md:text-xl font-medium text-red-300 mb-3">🚨 重要警示</h3>
+        ${d.alerts.map(a => `<p class="text-xs text-red-300 mb-1">• ${typeof a === 'string' ? a : a.message || JSON.stringify(a)}</p>`).join('')}
+      </section>`;
+    }
+
+    // 大盤概況
+    const m = d.market || {};
+    const t = m.taiex || {};
+    const f = m.futures || {};
+    const us = m.usMarket || {};
+    const chgColor = v => v >= 0 ? 'text-green-400' : 'text-red-400';
+    const chgArrow = v => v >= 0 ? '▲' : '▼';
+    html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
+      <h3 class="text-sm md:text-xl font-medium text-indigo-300 mb-3">📊 大盤概況</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 mb-4">
+        <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+          <p class="text-[10px] md:text-xs text-gray-500 uppercase">加權指數</p>
+          <p class="text-lg md:text-2xl font-bold ${chgColor(t.change||0)} mt-0.5">${t.close?.toLocaleString()||'--'}</p>
+          <p class="text-[10px] ${chgColor(t.change||0)}">${chgArrow(t.change||0)} ${Math.abs(t.change||0)}（${t.changePct||0}%）</p>
+          ${t.note?'<p class="text-[10px] text-gray-400 mt-0.5">'+t.note+'</p>':''}
+        </div>
+        <div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+          <p class="text-[10px] md:text-xs text-gray-500 uppercase">期貨</p>
+          <p class="text-lg md:text-2xl font-bold ${chgColor(f.change||0)} mt-0.5">${f.close?.toLocaleString()||'--'}</p>
+          <p class="text-[10px] ${chgColor(f.change||0)}">${chgArrow(f.change||0)} ${Math.abs(f.change||0)}</p>
+          ${f.note?'<p class="text-[10px] text-gray-400 mt-0.5">'+f.note+'</p>':''}
+        </div>`;
+    if (us.djia) {
+      html += `<div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+          <p class="text-[10px] md:text-xs text-gray-500 uppercase">道瓊工業</p>
+          <p class="text-lg md:text-2xl font-bold ${chgColor(us.djia.change||0)} mt-0.5">${us.djia.close?.toLocaleString()||'--'}</p>
+          <p class="text-[10px] ${chgColor(us.djia.change||0)}">${chgArrow(us.djia.change||0)} ${Math.abs(us.djia.change||0)}（${us.djia.changePct||0}%）</p>
+        </div>`;
+    }
+    if (us.nasdaq) {
+      html += `<div class="stat-card border border-gray-700/50 p-3 md:p-5 rounded-xl">
+          <p class="text-[10px] md:text-xs text-gray-500 uppercase">那斯達克</p>
+          <p class="text-lg md:text-2xl font-bold ${chgColor(us.nasdaq.change||0)} mt-0.5">${us.nasdaq.close?.toLocaleString()||'--'}</p>
+          <p class="text-[10px] ${chgColor(us.nasdaq.change||0)}">${chgArrow(us.nasdaq.change||0)} ${Math.abs(us.nasdaq.change||0)}（${us.nasdaq.changePct||0}%）</p>
+        </div>`;
+    }
+    html += `</div>`;
+
+    // 類股強弱
+    if (d.sectorStrength?.length) {
+      html += `<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500 mb-1.5">📊 類股強弱</p><div class="flex flex-wrap gap-1.5">`;
+      d.sectorStrength.forEach(s => {
+        const c = (s.change||0) >= 0 ? 'bg-green-900/50 text-green-300 border-green-700/50' : 'bg-red-900/50 text-red-300 border-red-700/50';
+        html += `<span class="px-2 py-0.5 text-[10px] rounded-full ${c} border">${s.sector} ${s.change>0?'+':''}${s.change||0}%</span>`;
+      });
+      html += `</div></div>`;
+    }
+    html += `</section>`;
+
+    // 分析 & 重要事件
+    const analysis = d.analysis || {};
+    if (analysis.preMarket || analysis.keyEvents?.length || analysis.outlook) {
+      html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
+        <h3 class="text-sm md:text-xl font-medium text-yellow-300 mb-3">📋 盤前分析</h3>`;
+      if (analysis.preMarket) html += `<p class="text-xs text-gray-300 mb-2">${analysis.preMarket}</p>`;
+      if (analysis.keyEvents) {
+        const evts = Array.isArray(analysis.keyEvents) ? analysis.keyEvents : typeof analysis.keyEvents === 'string' ? analysis.keyEvents.split(/\d+\)\s*/).filter(Boolean) : [];
+        if (evts.length) {
+          html += `<div class="mb-2"><p class="text-[10px] text-gray-500 mb-1">⚡ 重要事件</p>`;
+          evts.forEach(e => { html += `<p class="text-xs text-gray-300">• ${(typeof e === 'string' ? e : e.event || JSON.stringify(e)).trim()}</p>`; });
+          html += `</div>`;
+        }
+      }
+      if (analysis.outlook) html += `<div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30"><p class="text-xs text-indigo-300">${analysis.outlook}</p></div>`;
+      html += `</section>`;
+    }
+
+    // 精選 16 檔
+    if (d.watchlist?.length) {
+      html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-sm md:text-xl font-medium text-green-300">📈 今日精選 ${d.watchlist.length} 檔</h3>
+          ${d.selfReview?'<span class="px-2 py-0.5 text-[10px] rounded-full bg-yellow-900/50 text-yellow-300 border border-yellow-700/50">命中率 '+(d.selfReview.correctRate||'--')+'</span>':''}
+        </div>
+        <div class="grid grid-cols-1 xs:grid-cols-2 gap-2 md:gap-3">`;
+      d.watchlist.forEach(s => {
+        const priceNum = parseFloat(s.price) || 0;
+        const under50 = priceNum > 0 && priceNum <= 50;
+        const fcDays = s.foreignConsecutiveDays;
+        const fcBadge = fcDays ? (fcDays > 0
+          ? `<span class="px-1 py-0.5 text-[9px] rounded bg-green-900/50 text-green-300">外資連買${fcDays}天</span>`
+          : `<span class="px-1 py-0.5 text-[9px] rounded bg-red-900/50 text-red-300">外資連賣${Math.abs(fcDays)}天</span>`) : '';
+        html += `<div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
+          <div class="flex items-center justify-between mb-1.5">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="text-xs font-bold text-white">${s.name||''}</span>
+              <span class="text-[10px] text-gray-400">${s.code||''}</span>
+              ${under50?'<span class="px-1 py-0.5 text-[9px] rounded bg-yellow-900/50 text-yellow-300">💰 &lt;50</span>':''}
+              ${s.category?'<span class="px-1 py-0.5 text-[9px] rounded bg-blue-900/50 text-blue-300">'+s.category+'</span>':''}
+              ${fcBadge}
+            </div>
+            <span class="text-sm font-bold text-gray-200">${s.price||'--'}</span>
+          </div>
+          <div class="flex flex-wrap gap-2 mb-1.5 text-[10px]">
+            ${s.pe?'<span class="text-amber-400" title="'+(s.peExplain||'')+'">本益比 '+s.pe+'</span>':''}
+            ${s.pb?'<span class="text-cyan-400" title="'+(s.pbExplain||'')+'">本淨比 '+s.pb+'</span>':''}
+            ${s.dividendYield?'<span class="text-pink-400">殖利率 '+s.dividendYield+'%</span>':''}
+            ${s.lastDividendPerShare?'<span class="text-gray-400">配 $'+s.lastDividendPerShare+'</span>':''}
+          </div>
+          ${s.peExplain||s.pbExplain?'<p class="text-[10px] text-amber-300/70 mb-1">'+(s.peExplain?'💡 '+s.peExplain:'')+(s.pbExplain?' · '+s.pbExplain:'')+'</p>':''}
+          ${s.technical?'<p class="text-[10px] text-gray-500 mb-1">'+s.technical+'</p>':''}
+          <p class="text-[10px] text-gray-300">${s.reason||''}</p>
+          ${s.buyReason?'<p class="text-[10px] text-green-300 mt-0.5">💡 為什麼值得買：'+s.buyReason+'</p>':''}
+          ${s.target?'<p class="text-[10px] text-green-400 mt-0.5">目標 '+s.target+(s.stopLoss?' · 停損 '+s.stopLoss:'')+'</p>':''}
+          ${s.upcomingExDividend?'<p class="text-[10px] text-pink-300 mt-0.5">📅 除息：'+s.upcomingExDividend+'</p>':''}
+        </div>`;
+      });
+      html += `</div></section>`;
+    }
+
+    // 推薦清單 (AI/高股息/ETF) - 各 8 檔
+    const rec = d.recommendations || {};
+    ['ai','dividend','etf'].forEach(cat => {
+      const items = rec[cat];
+      if (!items?.length) return;
+      const catName = {ai:'🤖 AI 概念股', dividend:'💰 高股息', etf:'📦 ETF'}[cat] || cat;
+      html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
+        <h3 class="text-sm md:text-xl font-medium text-cyan-300 mb-3">${catName}（${items.length} 檔）</h3>
+        <div class="grid grid-cols-1 xs:grid-cols-2 gap-2">`;
+      items.forEach(s => {
+        const isEtf = cat === 'etf';
+        html += `<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-xs font-bold text-white">${s.name||''} <span class="text-[10px] text-gray-400">${s.code||''}</span></span>
+            <span class="text-sm font-bold text-gray-200">${s.price||'--'}</span>
+          </div>
+          <div class="flex flex-wrap gap-2 mb-1 text-[10px]">
+            ${s.pe?'<span class="text-amber-400">PE '+s.pe+'</span>':''}
+            ${s.pb?'<span class="text-cyan-400">PB '+s.pb+'</span>':''}
+            ${s.dividendYield?'<span class="text-pink-400">殖利率 '+s.dividendYield+'%</span>':''}
+            ${s.lastDividendPerShare?'<span class="text-gray-400">配 $'+s.lastDividendPerShare+(s.exDividendDate?' ('+s.exDividendDate+')':'')+'</span>':''}
+            ${isEtf && s.premiumDiscount !== undefined ? '<span class="'+(s.premiumDiscount>1?'text-red-400':'text-green-400')+'">'+(s.premiumDiscount>=0?'溢價':'折價')+' '+Math.abs(s.premiumDiscount)+'%</span>':''}
+          </div>
+          ${isEtf && s.topHoldings?'<p class="text-[10px] text-indigo-300 mb-1">📊 '+s.topHoldings+'</p>':''}
+          ${isEtf && s.premiumExplain?'<p class="text-[10px] text-amber-300/70 mb-1">💡 '+s.premiumExplain+'</p>':''}
+          <p class="text-[10px] text-gray-300">${s.reason||''}</p>
+          ${s.buyReason?'<p class="text-[10px] text-green-300 mt-0.5">💡 '+s.buyReason+'</p>':''}
+        </div>`;
+      });
+      html += `</div></section>`;
+    });
+
+    // 法人動態 + 融資融券
+    const inst = d.institutional || {};
+    if (inst.foreign || inst.investment_trust || inst.dealer) {
+      html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
+        <h3 class="text-sm md:text-xl font-medium text-pink-300 mb-3">🏦 法人動態</h3>
+        <div class="grid grid-cols-3 gap-2">`;
+      [{key:'foreign',name:'外資'},{key:'investment_trust',name:'投信'},{key:'dealer',name:'自營'}].forEach(({key,name}) => {
+        const v = inst[key] || {};
+        const amt = v.amount || v.net || 0;
+        html += `<div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+          <p class="text-[10px] text-gray-500">${name}</p>
+          <p class="text-lg font-bold ${amt>=0?'text-green-400':'text-red-400'}">${amt>=0?'+':''}${typeof amt==='number'?amt.toLocaleString():amt}</p>
+          ${v.note?'<p class="text-[10px] text-gray-400">'+v.note+'</p>':''}
+        </div>`;
+      });
+      html += `</div>`;
+      // 融資融券
+      const mg = d.margin || {};
+      if (mg.marginBalance || mg.shortBalance || mg.marginRatio) {
+        html += `<div class="grid grid-cols-3 gap-2 mt-3">
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+            <p class="text-[10px] text-gray-500">融資餘額(億)</p>
+            <p class="text-lg font-bold text-yellow-400">${mg.marginBalance||'--'}</p>
+          </div>
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+            <p class="text-[10px] text-gray-500">融券餘額(張)</p>
+            <p class="text-lg font-bold text-orange-400">${mg.shortBalance?.toLocaleString()||'--'}</p>
+          </div>
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+            <p class="text-[10px] text-gray-500">券資比</p>
+            <p class="text-lg font-bold text-cyan-400">${mg.marginRatio||'--'}%</p>
+          </div>
+        </div>`;
+        if (mg.marginExplain) html += `<p class="text-[10px] text-amber-300/70 mt-2 px-1">💡 ${mg.marginExplain}</p>`;
+      }
+      html += `</section>`;
+    }
+
+    // 自我復盤
+    if (d.selfReview) {
+      const sr = d.selfReview;
+      html += `<section class="bg-gray-800/50 border border-gray-700/50 p-4 md:p-6 rounded-xl mb-4">
+        <h3 class="text-sm md:text-xl font-medium text-purple-300 mb-3">🔄 自我復盤</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-3">
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl"><p class="text-[10px] text-gray-500">總推薦</p><p class="text-lg font-bold text-white">${sr.totalPicks||'--'}</p></div>
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl"><p class="text-[10px] text-gray-500">命中率</p><p class="text-lg font-bold text-green-400">${sr.correctRate||'--'}</p></div>
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl"><p class="text-[10px] text-gray-500">最佳策略</p><p class="text-xs font-bold text-yellow-300">${sr.bestStrategy||'--'}</p></div>
+          <div class="stat-card border border-gray-700/50 p-3 rounded-xl"><p class="text-[10px] text-gray-500">近期準度</p><p class="text-xs font-bold text-cyan-300">${sr.recentAccuracy||'--'}</p></div>
+        </div>
+      </section>`;
+    }
+
+    box.innerHTML = html;
+  } catch(e) { console.log('stock err', e); }
+}
+
+// ========== NEWS ==========
+function renderNews(containerId, updateId, items, lastUpdate, mode) {
+  const box = document.getElementById(containerId);
+  const upd = document.getElementById(updateId);
+  if (upd) upd.textContent = lastUpdate || '--';
+  if (!box) return;
+  if (!items || !items.length) { box.innerHTML = '<p class="text-xs text-gray-400 text-center py-3">尚無資料</p>'; return; }
+  if (mode === 'social') {
+    // Social discussions format: platform, title, author, summary, whatTheyDid, whatWeCanLearn, url
+    box.innerHTML = items.map(n => `<div class="p-3 bg-gray-800 rounded-lg border border-cyan-700/30">
+      <div class="flex items-center justify-between mb-1.5">
+        <span class="text-sm font-bold text-white">${n.title||''}</span>
+        <span class="px-1.5 py-0.5 text-[10px] rounded-full bg-cyan-900/50 text-cyan-300 border border-cyan-700/50">${n.platform||''}</span>
+      </div>
+      <p class="text-[10px] text-gray-400 mb-1">${n.author||''}</p>
+      <p class="text-xs text-gray-300 mb-1">${n.summary||''}</p>
+      ${n.whatTheyDid?'<p class="text-xs text-yellow-300 mb-1">💡 做法：'+n.whatTheyDid+'</p>':''}
+      ${n.whatWeCanLearn?'<p class="text-xs text-green-300 mb-1">🔧 可學習：'+n.whatWeCanLearn+'</p>':''}
+      <div class="flex items-center justify-end">${n.url?'<a href="'+n.url+'" target="_blank" class="text-[10px] text-gray-500 hover:underline">原文 ↗</a>':''}</div>
+    </div>`).join('');
+  } else {
+    // News format: title, source, summary, impact, sentiment, etc.
+    const sentimentColor = s => s === '利多' ? 'text-green-400' : s === '利空' ? 'text-red-400' : 'text-gray-300';
+    const sentimentBg = s => s === '利多' ? 'bg-green-900/50 border-green-700/50' : s === '利空' ? 'bg-red-900/50 border-red-700/50' : 'bg-gray-700/50 border-gray-600/50';
+    box.innerHTML = items.map(n => {
+      const sentiment = n.sentiment || (n.impact?.direction?.includes('漲') ? '利多' : n.impact?.direction?.includes('跌') ? '利空' : '--');
+      const impactText = typeof n.impact === 'string' ? n.impact : (n.analysis || n.impact?.direction || '--');
+      const affected = typeof n.impact === 'object' ? (n.impact.instruments||[]).join(', ') : (n.affected||'');
+      return `<div class="p-3 bg-gray-800 rounded-lg border border-gray-700">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="text-sm font-bold text-white">${n.title||''}</span>
+          <span class="px-1.5 py-0.5 text-xs rounded-full border ${sentimentBg(sentiment)} ${sentimentColor(sentiment)}">${sentiment}</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-1">${n.summary||''}</p>
+        <p class="text-xs text-yellow-300 mb-1">影響：${impactText}</p>
+        <div class="flex items-center justify-between">
+          <span class="text-[10px] text-indigo-400">${n.source?'['+n.source+'] ':''}${affected}</span>
+          ${n.url?'<a href="'+n.url+'" target="_blank" class="text-[10px] text-gray-500 hover:underline">原文 ↗</a>':''}
+        </div>
+      </div>`;
+    }).join('');
+  }
+}
+
+function renderActionSummary(containerId, raw) {
+  const box = document.getElementById(containerId);
+  if (!box) return;
+  if (!raw) { box.innerHTML = ''; return; }
+  let text = typeof raw === 'string' ? raw : JSON.stringify(raw, null, 2);
+  // 如果是 JSON 物件，嘗試展開成可讀文字
+  if (typeof raw === 'object') {
+    const flat = [];
+    const walk = (obj, prefix) => { if (Array.isArray(obj)) obj.forEach(v => flat.push(prefix + v)); else if (typeof obj === 'object') Object.entries(obj).forEach(([k,v]) => walk(v, '')); else flat.push(prefix + obj); };
+    walk(raw, '');
+    text = flat.join('\n');
+  }
+  const lines = text.split('\n').filter(l => l.trim());
+  box.innerHTML = `<div class="mt-4 p-4 bg-indigo-900/30 border border-indigo-700/50 rounded-lg"><div class="flex items-center space-x-2 mb-3"><span class="text-base">🧠</span><span class="text-sm font-bold text-indigo-300">管家總結：我們可以怎麼優化</span></div><div class="text-xs text-gray-200 space-y-2">${lines.map(l => '<p>' + l + '</p>').join('')}</div></div>`;
+}
+
+async function loadForexNews() {
+  try {
+    const r = await fetch('forex-news.json?t='+Date.now()); if (!r.ok) return;
+    const d = await r.json();
+    document.getElementById('fx-news-update').textContent = d.lastUpdate || '--';
+
+    // Render trading impact from conclusion
+    const tiBox = document.getElementById('fx-trading-impact');
+    const conc = d.conclusion || {};
+    if(tiBox){
+      let tiHtml = '';
+      if(conc.tradingImplications?.length){
+        tiHtml += conc.tradingImplications.map(t=>`<div class="p-2.5 bg-gray-800 rounded-lg border border-yellow-700/30"><p class="text-xs text-yellow-300">⚡ ${t}</p></div>`).join('');
+      }
+      if(conc.systemOptimization?.length){
+        tiHtml += conc.systemOptimization.map(t=>`<div class="p-2.5 bg-gray-800 rounded-lg border border-green-700/30"><p class="text-xs text-green-300">🔧 ${t}</p></div>`).join('');
+      }
+      if(conc.marketOutlook){
+        tiHtml += `<div class="p-2.5 bg-gray-800 rounded-lg border border-indigo-700/30"><p class="text-xs text-indigo-300">📊 ${conc.marketOutlook}</p></div>`;
+      }
+      if(!tiHtml) tiHtml = '<p class="text-xs text-gray-400 text-center py-3">等待下一次新聞分析更新</p>';
+      tiBox.innerHTML = tiHtml;
+    }
+
+    if (Array.isArray(d.news)) renderNews('fx-news-list', 'fx-news-update', d.news, d.lastUpdate);
+    else if (d.news?.items) renderNews('fx-news-list', 'fx-news-update', d.news.items, d.news.lastUpdate || d.lastUpdate);
+    if (Array.isArray(d.socialDiscussions)) renderNews('fx-social-list', 'fx-social-update', d.socialDiscussions, d.lastUpdate, 'social');
+    else if (d.socialNews?.items) renderNews('fx-social-list', 'fx-social-update', d.socialNews.items, d.socialNews.lastUpdate, 'social');
+    if (d.conclusion) renderConclusion('fx-conclusion', d.conclusion);
+  } catch(e) { console.log('forex news err', e); }
+}
+
+async function loadCryptoNews() {
+  try {
+    const r = await fetch('crypto-news.json?t='+Date.now()); if (!r.ok) return;
+    const d = await r.json();
+    document.getElementById('crypto-news-update').textContent = d.lastUpdate || '--';
+
+    // Render crypto prices if available
+    const cpBox = document.getElementById('crypto-prices-grid');
+    const prices = d.prices || d.marketPrices || {};
+    const pKeys = Object.keys(prices).filter(k=>typeof prices[k]==='object'&&prices[k]!==null&&(prices[k].price||prices[k].last));
+    if(cpBox && pKeys.length){
+      const pC=n=>n>=0?'text-green-400':'text-red-400';
+      cpBox.innerHTML = pKeys.map(k=>{
+        const p=prices[k]; const price=p.price||p.last||0; const chg=p.changePct||p.change||0;
+        return `<div class="stat-card border border-gray-700/50 p-3 rounded-xl">
+          <p class="text-[10px] text-gray-500">${p.name||k}</p>
+          <p class="text-lg font-bold text-white">$${typeof price==='number'?price.toLocaleString(undefined,{maximumFractionDigits:2}):price}</p>
+          <p class="text-[10px] ${pC(chg)}">${chg>=0?'▲':'▼'} ${Math.abs(chg).toFixed(2)}%</p>
+        </div>`;
+      }).join('');
+    }
+
+    if (Array.isArray(d.news)) renderNews('crypto-news-list', 'crypto-news-update', d.news, d.lastUpdate);
+    else if (d.news?.items) renderNews('crypto-news-list', 'crypto-news-update', d.news.items, d.news.lastUpdate || d.lastUpdate);
+    if (Array.isArray(d.socialDiscussions)) renderNews('crypto-social-list', 'crypto-social-update', d.socialDiscussions, d.lastUpdate, 'social');
+    else if (d.socialNews?.items) renderNews('crypto-social-list', 'crypto-social-update', d.socialNews.items, d.socialNews.lastUpdate, 'social');
+    if (d.conclusion) renderConclusion('crypto-conclusion', d.conclusion);
+  } catch(e) { console.log('crypto news err', e); }
+}
+
+function renderConclusion(containerId, conclusion) {
+  const box = document.getElementById(containerId);
+  if (!box) return;
+  let html = '';
+  if (conclusion.marketOutlook) html += '<div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30 mb-2"><p class="text-xs font-bold text-indigo-300 mb-1">📊 市場展望</p><p class="text-xs text-gray-300">'+conclusion.marketOutlook+'</p></div>';
+  if (conclusion.tradingImplications?.length) html += '<div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30 mb-2"><p class="text-xs font-bold text-yellow-300 mb-1">⚡ 對我們交易系統的影響</p>'+conclusion.tradingImplications.map(t=>'<p class="text-xs text-gray-300">• '+t+'</p>').join('')+'</div>';
+  if (conclusion.suggestedActions?.length) html += '<div class="p-3 bg-gray-800 rounded-lg border border-orange-700/30 mb-2"><p class="text-xs font-bold text-orange-300 mb-1">🎯 建議操作方向</p>'+conclusion.suggestedActions.map(t=>'<p class="text-xs text-gray-300">• '+t+'</p>').join('')+'</div>';
+  if (conclusion.keyTimeline?.length) html += '<div class="p-3 bg-gray-800 rounded-lg border border-cyan-700/30 mb-2"><p class="text-xs font-bold text-cyan-300 mb-1">📅 關鍵事件時間軸</p>'+conclusion.keyTimeline.map(t=>'<p class="text-xs text-gray-300">• '+t+'</p>').join('')+'</div>';
+  if (conclusion.systemOptimization?.length) html += '<div class="p-3 bg-gray-800 rounded-lg border border-green-700/30"><p class="text-xs font-bold text-green-300 mb-1">🔧 系統優化建議</p>'+conclusion.systemOptimization.map(t=>'<p class="text-xs text-gray-300">• '+t+'</p>').join('')+'</div>';
+  box.innerHTML = html || '<p class="text-xs text-gray-400">暫無分析</p>';
+}
+
+// ========== AD BUSINESS ==========
+async function loadAdBusinessData(){
+try{
+const r=await fetch('ad-business-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
+document.getElementById('adbiz-status').textContent=d.project?.status||'--';
+document.getElementById('adbiz-update').textContent=d.summary?.lastUpdate||'--';
+document.getElementById('adbiz-total').textContent=d.summary?.todayLeads||0;
+const fb=d.summary?.facebookLeads||0;const th=d.summary?.threadsLeads||0;
+document.getElementById('adbiz-facebook').textContent=fb;
+document.getElementById('adbiz-threads').textContent=th;
+document.getElementById('adbiz-next').textContent=d.summary?.nextAction||'--';
+document.getElementById('adbiz-goal').textContent=d.project?.goal||'--';
+const box=document.getElementById('adbiz-leads');const leads=d.leads||[];
+if(!leads.length){box.innerHTML='<div class="py-4 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">目前還沒有整理好的潛在客戶名單</p></div>';return}
+box.innerHTML=leads.map(x=>`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-2"><div class="flex items-center gap-2"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${x.platform==='Facebook'?'bg-blue-900/50 text-blue-300 border border-blue-700/50':'bg-indigo-900/50 text-indigo-300 border border-indigo-700/50'}">${x.platform||'--'}</span><span class="text-[10px] text-gray-400">${x.time||''}</span></div><span class="px-1.5 py-0.5 text-[10px] rounded-full bg-yellow-900/50 text-yellow-300 border border-yellow-700/50">${x.score||'待判斷'}</span></div><p class="text-xs font-bold text-white mb-1">${x.title||'未命名名單'}</p><p class="text-[10px] text-gray-300 whitespace-pre-wrap">${x.summary||''}</p><p class="text-[10px] text-pink-300 mt-2">判斷原因：${x.reason||'--'}</p>${x.url?'<a href="'+x.url+'" target="_blank" class="text-[10px] text-indigo-400 hover:underline mt-2 inline-block">查看原文 ↗</a>':''}</div>`).join('')
+}catch(e){console.log('ad biz err',e)}
+}
+
+// ========== CRYPTO AUTO TRADING v4 ==========
+async function loadCryptoData(){
+try{
+const r=await fetch('crypto-trading-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
+const sim=d.simulation||{};const acct=d.account||{};
+
+// 狀態 & 更新時間
+const stEl=document.getElementById('ca-status');
+if(stEl){stEl.textContent=sim.version?'v'+sim.version+' 運行中':'離線';stEl.className=sim.status==='RUNNING'?'text-green-300':'text-red-300'}
+const luEl=document.getElementById('ca-last-update');if(luEl)luEl.textContent=d.lastUpdate||sim.lastUpdate||'--';
+
+// 帳戶總覽 (v4)
+const ne=acct.netEquity||sim.currentCapital||0;const neEl=document.getElementById('ca-net-equity');if(neEl)neEl.textContent='NT$'+ne.toLocaleString();
+const tdp=acct.todayPnl||0;const tdEl=document.getElementById('ca-today-pnl');if(tdEl){tdEl.textContent=(tdp>=0?'+':'')+'NT$'+tdp.toFixed(0);tdEl.className='text-lg md:text-2xl font-bold mt-0.5 '+(tdp>=0?'text-green-400':'text-red-400')}
+const wkp=acct.weekPnl||0;const wkEl=document.getElementById('ca-week-pnl');if(wkEl){wkEl.textContent=(wkp>=0?'+':'')+'NT$'+wkp.toFixed(0);wkEl.className='text-lg md:text-2xl font-bold mt-0.5 '+(wkp>=0?'text-green-400':'text-red-400')}
+const ddEl=document.getElementById('ca-max-dd');if(ddEl)ddEl.textContent=(acct.maxDrawdown||sim.maxDrawdown||0).toFixed(1)+'%';
+
+// 完整交易統計
+const ttEl=document.getElementById('ca-total-trades');if(ttEl)ttEl.textContent=acct.totalTrades||sim.totalTrades||0;
+const wrEl=document.getElementById('ca-winrate');if(wrEl)wrEl.textContent=acct.winRate||sim.winRate||'--';
+const rrEl=document.getElementById('ca-rr-ratio');if(rrEl)rrEl.textContent=acct.riskRewardRatio||'--';
+const awEl=document.getElementById('ca-avg-win');if(awEl)awEl.textContent='NT$'+(acct.avgWin||0).toFixed(0);
+const alEl=document.getElementById('ca-avg-loss');if(alEl)alEl.textContent='NT$'+(acct.avgLoss||0).toFixed(0);
+const ocEl=document.getElementById('ca-open-count');if(ocEl)ocEl.textContent=acct.openCount||(sim.positions||[]).length||0;
+const mcwEl=document.getElementById('ca-max-consec-w');if(mcwEl)mcwEl.textContent=acct.maxConsecutiveWins||0;
+const mclEl=document.getElementById('ca-max-consec-l');if(mclEl)mclEl.textContent=acct.maxConsecutiveLosses||0;
+const mwEl=document.getElementById('ca-max-win');if(mwEl)mwEl.textContent='NT$'+(acct.maxSingleWin||0).toFixed(0);
+const mlEl=document.getElementById('ca-max-loss');if(mlEl)mlEl.textContent='NT$'+(acct.maxSingleLoss||0).toFixed(0);
+
+// 幣種卡片
+const cc=document.getElementById('ca-coin-cards');const tks=d.tickers||[];
+if(tks.length){cc.innerHTML=tks.map(t=>{
+const chg=parseFloat(t.change||0);const cc2=chg>=0?'text-green-400':'text-red-400';const arrow=chg>=0?'▲':'▼';
+return`<div class="stat-card border border-gray-700/50 p-2.5 md:p-4 rounded-xl">
+<p class="text-[10px] md:text-xs font-bold text-white">${t.name||t.market}</p>
+<p class="text-sm md:text-lg text-yellow-400 font-bold mt-1">${parseFloat(t.last).toLocaleString()}</p>
+<div class="flex items-center justify-between mt-1">
+<span class="text-[9px] ${cc2}">${arrow} ${Math.abs(chg)}%</span>
+<span class="text-[9px] text-gray-500">Vol:${parseFloat(t.vol||0).toFixed(2)}</span>
+</div></div>`}).join('')}
+
+// 當前持倉 (v4: 讀 simulation.positions)
+const pb=document.getElementById('ca-positions');const spos=sim.positions||d.openPositions||[];
+if(!spos.length){pb.innerHTML='<p class="text-xs text-gray-400 text-center py-3">🔍 無持倉，掃描中...</p>'}
+else{pb.innerHTML=spos.map(p=>{const pc=(p.pnlTWD||0)>=0?'text-green-400':'text-red-400';const dc=p.direction==='BUY'?'badge-buy':'badge-sell';
+const tm=p.openTime?new Date(p.openTime).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}):'';
+return`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-2"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${dc}">${p.direction}</span><span class="text-xs font-bold text-white">${(p.market||'').toUpperCase()} @ ${(p.entryPrice||0).toLocaleString()}</span></div><span class="text-sm font-bold ${pc}">${(p.pnlTWD||0)>=0?'+':''}NT$${(p.pnlTWD||0).toFixed(0)} (${(p.pnlPct||0).toFixed(2)}%)</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>倉位:NT$${p.sizeTWD||0}</span><span>信心:${((p.confidence||0)*100).toFixed(0)}%</span><span>RR:${p.riskRewardRatio||'-'}:1</span><span>現價:${(p.currentPrice||0).toLocaleString()}</span><span>${tm}</span></div><p class="text-[9px] text-indigo-400 mt-1">${p.strategy||''}</p></div>`}).join('')}
+
+// 已完成交易 (v4: 最近20筆)
+const tb=document.getElementById('ca-closed');const sts=(sim.closedTrades||d.closedTrades||[]).slice(-20);
+if(!sts.length){tb.innerHTML='<p class="text-xs text-gray-400 text-center py-3">📭 尚無已完成交易</p>'}
+else{tb.innerHTML=sts.slice().reverse().map(t=>{const dc=t.direction==='BUY'?'badge-buy':'badge-sell';const oc=t.outcome==='WIN'?'badge-win':'badge-loss';const pc=(t.pnlTWD||0)>=0?'text-green-400':'text-red-400';
+const tm=t.closeTime?new Date(t.closeTime).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}):'';
+return`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 text-[10px] rounded-full ${dc}">${t.direction}</span><span class="px-1.5 py-0.5 text-[10px] rounded-full ${oc}">${t.outcome}</span><span class="text-[10px] text-white">${(t.market||'').toUpperCase()}</span></div><span class="text-xs font-bold ${pc}">${(t.pnlTWD||0)>=0?'+':''}NT$${t.pnlTWD||0}</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>${t.entryPrice||''}→${t.exitPrice||''}</span><span>${t.reason||''}</span><span>${t.pnlPct||0}%</span><span>${tm}</span></div><p class="text-[9px] text-indigo-400 mt-0.5">${t.strategy||''}</p></div>`}).join('')}
+
+// 策略績效 (v4: 排名、勝率、風報比)
+const sb=document.getElementById('ca-strategy');const sst=d.strategyStats||sim.strategyStats||{};const ssk=Object.keys(sst);
+if(ssk.length){const sorted=ssk.slice().sort((a,b)=>(sst[a].rank||99)-(sst[b].rank||99));sb.innerHTML='<div class="grid grid-cols-1 xs:grid-cols-2 gap-2">'+sorted.map(k=>{const s=sst[k];const tt=(s.wins||0)+(s.losses||0);const wr=s.winRate||(tt>0?((s.wins/tt)*100).toFixed(1)+'%':'--');const pc=(s.pnl||0)>=0?'text-green-400':'text-red-400';const rr=s.riskReward||'--';const rank=s.rank||'--';
+return`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 text-[9px] rounded-full bg-indigo-900/50 text-indigo-300 border border-indigo-700/50">#${rank}</span><span class="text-xs font-bold text-white">${k}</span></div><span class="text-[10px] ${pc}">NT$${(s.pnl||0).toFixed(0)}</span></div><div class="flex gap-3 text-[10px] text-gray-400"><span>勝:${s.wins||0}</span><span>敗:${s.losses||0}</span><span>勝率:${wr}</span><span>RR:${rr}</span></div></div>`}).join('')+'</div>'}else{sb.innerHTML='<p class="text-xs text-gray-400 text-center py-3">累積交易數據後自動產生策略比較</p>'}
+
+// 風控參數 (v4 動態)
+const rpb=document.getElementById('ca-risk-params');const rp=d.riskParams||{};
+if(rpb){const rpItems=[
+{label:'最大持倉',value:rp.maxPositions||5},
+{label:'最大曝險',value:rp.maxExposure||'80%'},
+{label:'基礎風險',value:rp.baseRisk||'1.5%'},
+{label:'止損方式',value:rp.slMethod||'ATR x 1.2'},
+{label:'最低風報比',value:rp.minRiskReward||'2.0:1'},
+{label:'移動止盈',value:rp.trailingStop||'0.5% activate'},
+{label:'模式',value:rp.mode||'simulation',highlight:true},
+{label:'測試階段',value:rp.testingPhase?'是（不暫停）':'否',highlight:rp.testingPhase},
+];rpb.innerHTML=rpItems.map(i=>`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">${i.label}</p><p class="text-xs font-bold ${i.highlight?'text-orange-400':'text-white'}">${i.value}</p></div>`).join('')}
+
+// 異常警報 (v4 新增)
+const alertSec=document.getElementById('ca-alerts-section');const alertBox=document.getElementById('ca-alerts');const alerts=d.alerts||[];
+if(alertSec&&alertBox){if(alerts.length){alertSec.style.display='';alertBox.innerHTML=alerts.map(a=>`<div class="p-2.5 bg-gray-800 rounded-lg border border-red-700/30"><p class="text-xs text-red-300">${a}</p></div>`).join('')}else{alertSec.style.display='none'}}
+
+// 市場情緒
+const fg=d.marketSentiment?.fearGreed;
+if(fg){
+document.getElementById('ca-fear-greed').textContent=fg.value+' ('+fg.label+')';
+const fge=document.getElementById('ca-fear-greed');
+const fv=parseInt(fg.value);
+fge.className='text-xs font-bold '+(fv<=25?'text-red-400':fv<=50?'text-orange-400':fv<=75?'text-yellow-400':'text-green-400');
+}
+
+// 復盤與自我優化 (v4 完整)
+const rb=document.getElementById('ca-review');const rv=d.review||{};
+let rhtml='';
+if(rv.summary){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500 mb-1">📝 總結</p><p class="text-xs text-gray-200">${rv.summary}</p></div>`}
+if(rv.bestStrategy){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-green-700/30"><p class="text-[10px] text-gray-500 mb-1">🏆 最佳策略</p><p class="text-xs text-green-400">${rv.bestStrategy.name} — 盈虧 NT$${rv.bestStrategy.pnl}（勝${rv.bestStrategy.wins} 敗${rv.bestStrategy.losses}）</p></div>`}
+if(rv.worstStrategy){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-red-700/30"><p class="text-[10px] text-gray-500 mb-1">⚠️ 最差策略</p><p class="text-xs text-red-400">${rv.worstStrategy.name} — 盈虧 NT$${rv.worstStrategy.pnl}（勝${rv.worstStrategy.wins} 敗${rv.worstStrategy.losses}）</p></div>`}
+if(rv.lessons&&rv.lessons.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-yellow-700/30"><p class="text-[10px] text-gray-500 mb-1">🎓 系統學到了什麼</p><ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">${rv.lessons.map(l=>'<li>'+l+'</li>').join('')}</ul></div>`}
+if(rv.optimization&&rv.optimization.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-indigo-700/30"><p class="text-[10px] text-gray-500 mb-1">🔧 優化方向</p><ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">${rv.optimization.map(o=>'<li>'+o+'</li>').join('')}</ul></div>`}
+if(rv.strategiesUnderTest&&rv.strategiesUnderTest.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-blue-700/30"><p class="text-[10px] text-gray-500 mb-1">🧪 測試中策略</p><div class="flex flex-wrap gap-1.5 mt-1">${rv.strategiesUnderTest.map(s=>'<span class="px-1.5 py-0.5 text-[9px] rounded-full bg-blue-900/50 text-blue-300 border border-blue-700/50">'+s+'</span>').join('')}</div></div>`}
+if(rv.recentChanges&&rv.recentChanges.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-cyan-700/30"><p class="text-[10px] text-gray-500 mb-1">📝 最近變更</p><ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">${rv.recentChanges.map(c=>'<li>'+c+'</li>').join('')}</ul></div>`}
+if(rv.nextSteps&&rv.nextSteps.length){rhtml+=`<div class="p-3 bg-gray-800 rounded-lg border border-green-700/30"><p class="text-[10px] text-gray-500 mb-1">🎯 下一步</p><ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">${rv.nextSteps.map(s=>'<li>'+s+'</li>').join('')}</ul></div>`}
+if(!rhtml)rhtml='<p class="text-xs text-gray-500">需要更多交易數據才能產生復盤</p>';
+rb.innerHTML=rhtml;
+
+}catch(e){console.log('crypto err',e)}
+}
+
+// ========== MONEY MAKER ==========
+async function loadMoneyMakerData(){
+try{
+const r=await fetch('money-maker-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
+const stEl=document.getElementById('mm-status');if(stEl){stEl.textContent=d.status==='RUNNING'?'運行中':'待命';stEl.className=d.status==='RUNNING'?'text-green-300':'text-yellow-300'}
+const luEl=document.getElementById('mm-last-update');if(luEl)luEl.textContent=d.lastUpdate||'--';
+const neEl=document.getElementById('mm-net-equity');if(neEl)neEl.textContent='NT$'+(d.totalEquity||d.netEquity||d.capital||10000).toLocaleString();
+const h=d.holdings||{};
+const upEl=document.getElementById('mm-unrealized-pnl');if(upEl){const v=h.unrealizedPnl||0;upEl.textContent=(v>=0?'+':'')+'NT$'+v.toFixed(0);upEl.className='text-lg md:text-2xl font-bold mt-0.5 '+(v>=0?'text-green-400':'text-red-400')}
+const tpEl=document.getElementById('mm-total-pnl');if(tpEl){const v=d.totalPnl||0;tpEl.textContent=(v>=0?'+':'')+'NT$'+v.toFixed(0);tpEl.className='text-lg md:text-2xl font-bold mt-0.5 '+(v>=0?'text-green-400':'text-red-400')}
+const mdEl=document.getElementById('mm-mode');if(mdEl)mdEl.textContent=d.mode||'囤幣';
+const bpEl=document.getElementById('mm-btc-price');if(bpEl)bpEl.textContent='NT$'+(d.btcPrice||0).toLocaleString();
+const bcEl=document.getElementById('mm-btc-change');if(bcEl){const v=d.btcChange24h||0;bcEl.textContent=(v>=0?'▲':'▼')+Math.abs(v).toFixed(2)+'%';bcEl.className='text-xs '+(v>=0?'text-green-400':'text-red-400')}
+const bhEl=document.getElementById('mm-btc-held');if(bhEl)bhEl.textContent=(h.btc||0).toFixed(8);
+const acEl=document.getElementById('mm-avg-cost');if(acEl)acEl.textContent='NT$'+(h.avgCost||0).toLocaleString();
+document.getElementById('mm-buys').textContent=d.buyOrders||0;
+document.getElementById('mm-sells').textContent=d.sellOrders||0;
+const sig=d.signals||{};
+const sigMap=v=>{if(!v||v==='--')return'⚪';if(v.includes('多')||v.includes('BUY')||v==='bullish')return'🟢';if(v.includes('空')||v.includes('SELL')||v==='bearish')return'🔴';return'🟡'};
+const s1=document.getElementById('mm-sig-tech');if(s1)s1.textContent=sigMap(sig.technical)+' '+(sig.technical||'等待');
+const s2=document.getElementById('mm-sig-news');if(s2)s2.textContent=sigMap(sig.news)+' '+(sig.news||'無重大');
+const s3=document.getElementById('mm-sig-sentiment');if(s3)s3.textContent=sigMap(sig.sentiment)+' '+(sig.sentiment||'中性');
+const s4=document.getElementById('mm-sig-overall');if(s4)s4.textContent=sigMap(sig.overall)+' '+(sig.overall||'等待信號');
+const dlEl=document.getElementById('mm-daily-remaining');if(dlEl){const dl=d.dailyLimit||{};dlEl.textContent='NT$'+(dl.remaining!=null?dl.remaining:300)}
+document.getElementById('mm-consec-losses').textContent=d.consecutiveLosses||0;
+document.getElementById('mm-fear-greed').textContent=d.fearGreedIndex||'--';
+document.getElementById('mm-next-action').textContent=d.nextAction||'等待信號';
+const hb=document.getElementById('mm-holdings');
+const positions=h.positions||[];
+if(!positions.length&&(!h.btc||h.btc<=0)){hb.innerHTML='<div class="py-4 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">無持有</p></div>'}
+else if(positions.length){hb.innerHTML=positions.map(p=>{const pc=(p.pnl||0)>=0?'text-green-400':'text-red-400';return'<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700 mb-1"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="px-2 py-0.5 text-[10px] rounded-full bg-yellow-900/50 text-yellow-300 border border-yellow-700/50">HODL</span><span class="text-sm font-bold text-white">'+p.coin+'</span><span class="text-xs text-gray-300">'+(p.held<0.01?p.held.toFixed(8):p.held<1?p.held.toFixed(4):p.held.toFixed(2))+'</span></div><span class="text-sm font-bold '+pc+'">'+(p.pnl>=0?'+':'')+'NT$'+p.pnl+'</span></div><div class="text-[10px] text-gray-400 mt-1">市值: NT$'+(p.value||0)+'</div></div>'}).join('')}
+else{const pc=(h.unrealizedPnl||0)>=0?'text-green-400':'text-red-400';
+hb.innerHTML='<div class="p-3 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-2"><div class="flex items-center gap-2"><span class="px-2 py-0.5 text-[10px] rounded-full bg-yellow-900/50 text-yellow-300 border border-yellow-700/50">HODL</span><span class="text-sm font-bold text-white">'+h.btc.toFixed(8)+' BTC</span></div><span class="text-sm font-bold '+pc+'">'+((h.unrealizedPnl||0)>=0?'+':'')+'NT$'+(h.unrealizedPnl||0).toFixed(0)+'</span></div></div>'}
+const tb=document.getElementById('mm-trades');const trades=d.recentTrades||[];
+if(!trades.length){tb.innerHTML='<p class="text-xs text-gray-400 text-center py-3">尚無完成的交易</p>'}
+else{tb.innerHTML=trades.slice().reverse().map(t=>{const pc=(t.pnl||0)>=0?'text-green-400':'text-red-400';
+const tm=t.exitTime?new Date(t.exitTime).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}):'';
+const sc=t.side==='BUY'?'bg-green-600':'bg-red-600';
+const coin=t.coin||'BTC';
+const amt=t.amount||0;
+const amtStr=amt<0.001?amt.toFixed(8):amt<1?amt.toFixed(4):amt.toFixed(2);
+return'<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 text-[10px] rounded-full text-white '+sc+'">'+t.side+'</span><span class="text-xs font-bold text-white">'+coin+'</span><span class="text-xs text-gray-300">'+amtStr+'</span></div><span class="text-xs font-bold '+pc+'">NT$'+(t.twd||0)+'</span></div><div class="flex flex-wrap gap-2 text-[10px] text-gray-400"><span>價格: NT$'+(t.entryPrice||0).toLocaleString()+'</span><span>'+(t.reason||'')+'</span><span>'+tm+'</span></div></div>'}).join('')}
+const alertSec=document.getElementById('mm-alerts-section');const alerts=d.alerts||[];
+if(alertSec){if(alerts.length){alertSec.style.display='';document.getElementById('mm-alerts').innerHTML=alerts.map(a=>'<div class="p-2.5 bg-gray-800 rounded-lg border border-red-700/30"><p class="text-xs text-red-300">'+a+'</p></div>').join('')}else{alertSec.style.display='none'}}
+}catch(e){console.log('money maker err',e)}
+}
+
+// ========== CRYPTO FUTURES ==========
+async function loadCryptoFuturesData(){
+try{
+const r=await fetch('crypto-futures-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
+
+// Status
+const stEl=document.getElementById('cf-status');
+if(stEl){const sm={'RUNNING':'🟢 運行中','STANDBY':'🟡 待命','PAUSED':'⏸️ 暫停','ERROR':'🔴 錯誤','DAILY_LIMIT':'🛑 日虧停機'};
+stEl.textContent=sm[d.status]||d.status;stEl.className=d.status==='RUNNING'?'text-green-300':d.status==='ERROR'?'text-red-300':'text-yellow-300'}
+document.getElementById('cf-mode').textContent=d.mode||'--';
+document.getElementById('cf-last-update').textContent=d.lastUpdate||'--';
+
+// Alerts
+const alertBox=document.getElementById('cf-alerts');
+if(alertBox&&d.alerts&&d.alerts.length){alertBox.innerHTML=d.alerts.map(a=>'<div class="p-2 bg-yellow-900/30 border border-yellow-700/50 rounded-lg text-xs text-yellow-300">'+a+'</div>').join('')}
+else if(alertBox){alertBox.innerHTML=''}
+
+// Account
+const a=d.account||{};
+const fmt=(v,prefix)=>{if(v==null)return'--';return(v>=0?'+':'')+prefix+v.toFixed(2)};
+const neEl=document.getElementById('cf-net-equity');if(neEl)neEl.textContent=a.netEquity?'$'+a.netEquity.toFixed(2):'--';
+document.getElementById('cf-initial').textContent=a.initialCapital||265;
+
+const urEl=document.getElementById('cf-unrealized');if(urEl){const v=a.unrealizedPnl||0;urEl.textContent=fmt(v,'$');urEl.className='text-lg md:text-2xl font-bold mt-0.5 '+(v>=0?'text-green-400':'text-red-400')}
+const tdEl=document.getElementById('cf-today-pnl');if(tdEl){const v=a.todayPnl||0;tdEl.textContent=fmt(v,'$');tdEl.className='text-lg md:text-2xl font-bold mt-0.5 '+(v>=0?'text-green-400':'text-red-400')}
+const tpEl=document.getElementById('cf-total-pnl');if(tpEl){const v=a.totalPnl||0;tpEl.textContent=fmt(v,'$');tpEl.className='text-lg md:text-2xl font-bold mt-0.5 '+(v>=0?'text-green-400':'text-red-400')}
+
+document.getElementById('cf-max-dd').textContent=(a.maxDrawdown||0).toFixed(1)+'%';
+document.getElementById('cf-total-trades').textContent=a.totalTrades||0;
+document.getElementById('cf-winrate').textContent=a.winRate||'--';
+document.getElementById('cf-wins').textContent=a.wins||0;
+document.getElementById('cf-losses').textContent=a.losses||0;
+document.getElementById('cf-leverage').textContent=(a.leverage||'--')+'x '+(a.marginType||'');
+
+// Signals
+const sig=d.signals||{};
+const stateMap={'CONSOLIDATING':'盤整','TRENDING_UP':'📈 上漲趨勢','TRENDING_DOWN':'📉 下跌趨勢','RANGING':'震盪','HIGH_VOLATILITY':'⚡ 高波動','EXTREME':'🔥 極端'};
+const trendMap={'bullish':'🟢 多頭','bearish':'🔴 空頭','neutral':'⚪ 中性'};
+document.getElementById('cf-sig-state').textContent=stateMap[sig.marketState]||sig.marketState||'--';
+document.getElementById('cf-sig-trend').textContent=trendMap[sig.trend4h]||sig.trend4h||'--';
+document.getElementById('cf-sig-buy').textContent=sig.buyScore||'0';
+document.getElementById('cf-sig-sell').textContent=sig.sellScore||'0';
+const saBox=document.getElementById('cf-sig-active');
+if(saBox){const sigs=sig.activeSignals||[];
+if(sigs.length){saBox.innerHTML=sigs.map(s=>'<span class="px-1.5 py-0.5 text-[10px] rounded bg-gray-700 text-gray-300">'+s+'</span>').join('')}
+else{saBox.innerHTML='<span class="text-[10px] text-gray-500">無活躍信號</span>'}}
+
+// Risk status
+const rs=d.riskStatus||{};
+document.getElementById('cf-risk-daily').textContent=rs.dailyLossUsed||'--';
+document.getElementById('cf-risk-consec').textContent=rs.consecutiveLosses||'--';
+const rpEl=document.getElementById('cf-risk-paused');if(rpEl){rpEl.textContent=rs.paused?'🔴 是':'🟢 否';rpEl.className='text-xs font-bold '+(rs.paused?'text-red-400':'text-green-400')}
+
+// Strategy weights
+const swBox=document.getElementById('cf-strategy-weights');const sw=d.strategyWeights||{};
+if(swBox){const nameMap={'BREAKOUT':'趨勢突破','TREND_FOLLOW':'均線順勢','REVERSAL':'極端反轉','MOMENTUM':'動量追擊','FUNDING_ARB':'費率套利','NEWS_EVENT':'新聞事件'};
+swBox.innerHTML=Object.entries(sw).map(([k,v])=>{const pct=(v*100).toFixed(0);const c=v>=1?'text-green-400':v>=0.7?'text-yellow-400':'text-red-400';
+return'<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700"><p class="text-[10px] text-gray-500">'+(nameMap[k]||k)+'</p><p class="text-sm font-bold '+c+'">'+pct+'%</p></div>'}).join('')}
+
+// Position
+const pb=document.getElementById('cf-position');const pos=d.position;
+if(!pos){pb.innerHTML='<div class="py-4 text-center border border-dashed border-gray-700 rounded-lg"><p class="text-xs text-gray-400">🔍 無持倉</p></div>'}
+else{const pc=pos.pnl>=0?'text-green-400':'text-red-400';const sc=pos.side==='LONG'?'bg-green-600':'bg-red-600';
+pb.innerHTML='<div class="p-3 bg-gray-800 rounded-lg border border-gray-700 space-y-2"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="px-2 py-0.5 text-[10px] rounded-full text-white '+sc+'">'+pos.side+'</span><span class="text-sm font-bold text-white">'+pos.symbol+' @ '+pos.entryPrice+'</span><span class="text-[10px] text-orange-400">'+pos.leverage+'x</span></div><span class="text-sm font-bold '+pc+'">'+(pos.pnl>=0?'+':'')+'$'+pos.pnl.toFixed(2)+'</span></div><div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-[10px] text-gray-400"><span>數量: '+pos.size+' BTC</span><span>現價: $'+pos.markPrice+'</span><span>清算: $'+(pos.liquidationPrice||'--')+'</span><span>追蹤止損: $'+(pos.trailingStop?pos.trailingStop.toFixed(1):'--')+'</span></div></div>'}
+
+// Trades
+const tb=document.getElementById('cf-trades');const trades=d.recentTrades||[];
+if(!trades.length){tb.innerHTML='<p class="text-xs text-gray-400 text-center py-3">尚無交易紀錄</p>'}
+else{tb.innerHTML=trades.map(t=>{const sc=t.side==='LONG'?'bg-green-600':'bg-red-600';const pc=t.pnl>=0?'text-green-400':'text-red-400';const wl=t.pnl>=0?'WIN':'LOSS';const wc=t.pnl>=0?'bg-green-700':'bg-red-700';
+return'<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700 mb-1"><div class="flex items-center justify-between"><div class="flex items-center gap-1.5"><span class="px-1.5 py-0.5 text-[10px] rounded-full text-white '+sc+'">'+(t.side||'')+'</span><span class="px-1.5 py-0.5 text-[10px] rounded-full text-white '+wc+'">'+wl+'</span><span class="text-[10px] text-gray-400">'+(t.strategy||'')+'</span><span class="text-[10px] text-gray-500">'+(t.time?t.time.slice(5,16):'')+'</span></div><span class="text-xs font-bold '+pc+'">'+(t.pnl>=0?'+':'')+'$'+t.pnl.toFixed(2)+'</span></div></div>'}).join('')}
+
+}catch(e){console.log('crypto futures err',e)}
+}
+
+// ========== IG DATA ==========
+async function loadIGData(){
+try{
+const r=await fetch('ig-data.json?t='+Date.now());if(!r.ok)return;const d=await r.json();
+document.getElementById('ig-published').textContent=d.totalPosts||0;
+document.getElementById('ig-update').textContent=d.lastUpdate||'--';
+const box=document.getElementById('ig-output-list');
+if(!box)return;
+const posts=d.posts||[];
+if(!posts.length){box.innerHTML='<p class="text-xs text-gray-400 text-center py-3">尚無產出</p>';return}
+box.innerHTML=posts.map(p=>{
+const bgLabel={'photo':'📸 照片背景','solid':'🎨 純色'}[p.bgMode]||'🎨 '+p.bgMode;
+return`<div class="p-2.5 bg-gray-800 rounded-lg border border-gray-700">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-white">${p.title||p.id}</span>
+<span class="px-1.5 py-0.5 text-[10px] rounded-full bg-pink-900/50 text-pink-300 border border-pink-700/50">${p.slides} 張</span>
+<span class="px-1.5 py-0.5 text-[10px] rounded-full bg-gray-700 text-gray-300">${bgLabel}</span>
+</div>
+<span class="text-[10px] text-gray-400">${p.created}</span>
+</div>
+${p.caption?'<p class="text-[10px] text-gray-300 line-clamp-2 mt-1">'+p.caption+'</p>':''}
+<div class="flex items-center gap-2 mt-1">
+${p.uploaded?'<span class="text-[10px] text-green-400">✅ 已上傳 Drive</span>':'<span class="text-[10px] text-yellow-400">⏳ 待上傳</span>'}
+</div>
+</div>`}).join('');
+}catch(e){console.log('ig data err',e)}
+}
+
+// Auto-load overview on page open
+
+</script>
+<script src="dashboard-dynamic.js"></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{setTimeout(()=>{if(typeof loadOverview==='function')loadOverview()},200)})</script>
+</body>
+</html>

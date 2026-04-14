@@ -1,0 +1,48 @@
+{
+  "lastUpdate": "2026-04-01 10:40",
+  "models": [
+    {"name": "claude-opus-4-6", "role": "預設（LINE）", "context": "977k", "note": "最強推理", "status": "active"},
+    {"name": "gpt-4o-mini", "role": "背景任務", "context": "128k", "note": "省 Token · 自動化用", "status": "active"},
+    {"name": "gemini-3.1-pro", "role": "降級備用①", "context": "1024k", "note": "均衡型", "status": "standby"},
+    {"name": "gemini-3-flash", "role": "降級備用②", "context": "1024k", "note": "快速省錢", "status": "standby"}
+  ],
+  "customSkills": [
+    {"name": "forex-auto-trading", "emoji": "🤖", "desc": "外匯自動交易：多策略模組化、自動下單、P/L 追蹤、復盤優化", "status": "running", "cron": "每15分鐘"},
+    {"name": "crypto-auto-trading", "emoji": "🤖", "desc": "虛擬貨幣自動交易：MAX 交易所、策略進化系統", "status": "running", "cron": "每15分鐘"},
+    {"name": "forex-news", "emoji": "💱", "desc": "外匯新聞：每 12H 蒐集重大新聞 + 社群討論 + 優化建議", "status": "running", "cron": "08:00 / 20:00"},
+    {"name": "crypto-news", "emoji": "🪙", "desc": "幣圈新聞：每 12H 蒐集新聞 + 社群討論 + 優化建議", "status": "running", "cron": "08:00 / 20:00"},
+    {"name": "social-posting", "emoji": "🌐", "desc": "Threads 社群發文：每日 2 篇、12 主題輪替、自動發文", "status": "running", "cron": "11:00 / 18:00"},
+    {"name": "stock-analysis", "emoji": "📈", "desc": "台股分析：盤前精選、AI/高股息/ETF 推薦、復盤", "status": "running", "cron": "08:00"},
+    {"name": "skill-management", "emoji": "🛠️", "desc": "技能管理：監控 skill/cron 健康度、搜尋新 skill", "status": "running", "cron": "每日"},
+    {"name": "ig-carousel", "emoji": "📸", "desc": "IG 輪播圖文：1080x1350 自動生成 + Google Drive 上傳", "status": "ready", "cron": "待設定"},
+    {"name": "cloud-backup", "emoji": "☁️", "desc": "每日自動備份到 Google Drive（7 天保留）", "status": "running", "cron": "06:00"}
+  ],
+  "installedSkills": [
+    {"name": "github", "emoji": "🐙", "desc": "GitHub 操作：PR、Issue、CI、Code Review"},
+    {"name": "gh-issues", "emoji": "📦", "desc": "自動抓 Issue → 修 Bug → 開 PR"},
+    {"name": "gog", "emoji": "📧", "desc": "Google Workspace：Gmail、日曆、Drive、Sheets、Docs"},
+    {"name": "healthcheck", "emoji": "🔒", "desc": "主機安全掃描：防火牆、SSH、系統更新"},
+    {"name": "node-connect", "emoji": "📱", "desc": "OpenClaw 節點連線診斷"},
+    {"name": "whisper-api", "emoji": "🎤", "desc": "OpenAI Whisper 語音轉文字"},
+    {"name": "sag (TTS)", "emoji": "🗣️", "desc": "ElevenLabs 文字轉語音"},
+    {"name": "summarize", "emoji": "📝", "desc": "網頁/PDF/音檔/YouTube 一鍵摘要"},
+    {"name": "weather", "emoji": "☔", "desc": "即時天氣與預報"},
+    {"name": "agent-browser", "emoji": "🌐", "desc": "無頭瀏覽器自動化"},
+    {"name": "auto-workflow", "emoji": "⚡", "desc": "從重複任務自動建立工作流"},
+    {"name": "automation-workflows", "emoji": "🔄", "desc": "Zapier/Make/n8n 工作流設計"},
+    {"name": "copywriting", "emoji": "✍️", "desc": "文案撰寫：廣告/社群/銷售頁面"},
+    {"name": "stock-market-pro", "emoji": "📊", "desc": "Yahoo Finance 股票分析"},
+    {"name": "remotion-video-toolkit", "emoji": "🎬", "desc": "Remotion 程式化影片生成"},
+    {"name": "nano-banana-pro", "emoji": "🍌", "desc": "Gemini 3 Pro 圖片生成/編輯"},
+    {"name": "self-evolving", "emoji": "🧬", "desc": "元認知自學系統：根據經驗自動優化"},
+    {"name": "self-improving", "emoji": "🧠", "desc": "自我改善：從錯誤中學習"},
+    {"name": "self-improving-agent", "emoji": "📈", "desc": "學習紀錄：能力缺口偵測、持續改善"},
+    {"name": "proactive-agent", "emoji": "🤖", "desc": "主動式代理：自動偵測任務"},
+    {"name": "skill-creator", "emoji": "🛠️", "desc": "建立/審核 AgentSkill 技能檔案"},
+    {"name": "skill-vetter", "emoji": "🛡️", "desc": "技能安全審查"},
+    {"name": "find-skills", "emoji": "🔍", "desc": "搜尋和發現 OpenClaw 技能"},
+    {"name": "cron-mastery", "emoji": "⏰", "desc": "排程管理：建立、管理、除錯"},
+    {"name": "desktop-control", "emoji": "🖥️", "desc": "桌面自動化：macOS 操作"},
+    {"name": "free-ride", "emoji": "🆓", "desc": "管理 OpenRouter 免費 AI 模型"}
+  ]
+}
