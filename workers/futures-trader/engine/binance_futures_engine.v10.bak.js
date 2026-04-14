@@ -1,15 +1,14 @@
 #!/usr/bin/env node
 /**
- * Binance USDT-M Futures 核心決策引擎 v11 「順勢回踩 + 極端轉折」
+ * Binance USDT-M Futures 核心決策引擎 v10 「動態槓桿 + 動態風報比」
  * 
  * 核心哲學：
  * 1. 用 1H/4H K 線做決策，抓 1-3% 波段，不做毛利
  * 2. 每天最多 5 筆，積極把握好機會
- * 3. 主策略：順勢回踩（趨勢中等回踩進場，順勢吃波段）
- * 4. 輔策略：極端轉折（只在 RSI 極端超買超賣才做反向）
- * 5. 趨勢過濾鐵律：上升趨勢不做空、下降趨勢不做多（除非極端轉折）
- * 6. 動態槓桿 + 動態風報比
- * 7. 目標：本金最大化
+ * 3. 動態槓桿：信號強+情緒一致=高槓桿(15-20x)，一般=中(10-12x)，弱=低(5-8x)
+ * 4. 動態風報比：強信號追 1:4~1:5+，一般 1:3，不被固定值綁死
+ * 5. 賺的時候吃大肉，不確定時控制曝險
+ * 6. 目標：本金最大化
  * 
  * 資金：~$464 USDT | 槓桿：動態 5-20x | 標的：BTC
  */
@@ -89,22 +88,21 @@ const AGGRESSIVE_MOMENTUM_SCORE = 60;        // 強動量突破可積極追擊
 const REVERSAL_SCORE_THRESHOLD = 58;         // 合理抄底/摸頂需要更高確認
 
 // === v10: 動態槓桿 & 風報比計算 ===
-function calcDynamicLeverage(signalScore, sentimentContrarian, confirmations, isActiveSession, strategy) {
-  // v11: 順勢單給高槓桿（勝率高），轉折單保守槓桿（勝率低但 RR 高）
+function calcDynamicLeverage(signalScore, sentimentContrarian, confirmations, isActiveSession) {
+  // v10 轉折點交易：
+  // 確認數越多 + 情緒逆向 = 越確定的轉折 = 越高槓桿
   let lev = LEVERAGE_MID;
-  const isTrendStrategy = ['PULLBACK', 'TREND_FOLLOW', 'TREND_PULLBACK'].includes(strategy);
   
-  if (isTrendStrategy) {
-    // 順勢策略：信號越強槓桿越高
-    if (confirmations >= 5 && signalScore >= 70) lev = LEVERAGE_MAX;
-    else if (confirmations >= 4 && signalScore >= 60) lev = 17;
-    else if (confirmations >= 3) lev = 15;
-    else lev = LEVERAGE_MID;
+  if (confirmations >= 5 && sentimentContrarian && signalScore >= 70) {
+    lev = LEVERAGE_MAX; // 5+ 確認 + 情緒逆向 → 20x
+  } else if (confirmations >= 4 && signalScore >= 65) {
+    lev = 17; // 4 確認 + 強分數 → 17x
+  } else if (confirmations >= 4 || (confirmations >= 3 && sentimentContrarian)) {
+    lev = 15; // 4 確認 或 3+情緒逆向 → 15x
+  } else if (confirmations >= 3 && signalScore >= 55) {
+    lev = LEVERAGE_MID; // 3 確認基礎 → 12x
   } else {
-    // 轉折策略：保守槓桿（極端反轉風險大）
-    if (confirmations >= 5 && sentimentContrarian && signalScore >= 75) lev = 15;
-    else if (confirmations >= 4 && signalScore >= 70) lev = LEVERAGE_MID;
-    else lev = 8;
+    lev = 8; // 最低門檻 → 8x
   }
   
   if (isActiveSession && lev < LEVERAGE_MAX) lev = Math.min(lev + 2, LEVERAGE_MAX);
@@ -113,24 +111,25 @@ function calcDynamicLeverage(signalScore, sentimentContrarian, confirmations, is
 }
 
 function calcDynamicRR(signalScore, sentimentContrarian, strategy) {
-  // v11: 順勢單 RR 適中（高勝率取量），轉折單追高 RR（低勝率取質）
-  const isTrendStrategy = ['PULLBACK', 'TREND_FOLLOW', 'TREND_PULLBACK'].includes(strategy);
+  // v10 轉折點 RR：
+  // 轉折交易 RR 效果好，因為在極端位置進場→空間大
+  // 背離策略追更高 RR（背離往往是大轉折）
   let rr = 3.0;
   
-  if (isTrendStrategy) {
-    // 順勢：RR 2.5-3.5，穩定出場
-    if (signalScore >= 70) rr = 3.5;
-    else if (signalScore >= 60) rr = 3.0;
-    else rr = 2.5;
+  if (signalScore >= 75 && sentimentContrarian) {
+    rr = 5.0; // 超強轉折 + 情緒逆向 → 讓利潤跑
+  } else if (signalScore >= 65 && sentimentContrarian) {
+    rr = 4.5;
+  } else if (signalScore >= 60) {
+    rr = 4.0;
+  } else if (signalScore >= 55) {
+    rr = 3.5;
   } else {
-    // 轉折：RR 4.0-6.0，抓大反轉
-    if (signalScore >= 80 && sentimentContrarian) rr = 6.0;
-    else if (signalScore >= 70 && sentimentContrarian) rr = 5.0;
-    else if (signalScore >= 65) rr = 4.5;
-    else rr = 4.0;
+    rr = 3.0;
   }
   
-  if (strategy === 'DIVERGENCE_REVERSAL') rr = Math.max(rr, 4.5);
+  // 背離轉折追更高 RR（背離是大轉折信號）
+  if (strategy === 'DIVERGENCE_REVERSAL') rr = Math.max(rr, 4.0);
   
   return rr;
 }
@@ -538,22 +537,21 @@ function defaultState() {
 
 function getStrategyDefaults() {
   return {
-    // v11 主策略：順勢回踩
-    PULLBACK: { weight: 1.2, enabled: true },
-    TREND_FOLLOW: { weight: 1.1, enabled: true },
-    TREND_PULLBACK: { weight: 1.1, enabled: true },
-    // v11 輔策略：極端轉折（只在極端情況觸發）
-    REVERSAL_CONFIRM: { weight: 0.9, enabled: true },
-    DIVERGENCE_REVERSAL: { weight: 1.0, enabled: true },
-    BB_EXTREME_REVERSAL: { weight: 0.9, enabled: true },
-    // 停用
+    // v10 轉折點策略
+    REVERSAL_CONFIRM: { weight: 1, enabled: true },
+    DIVERGENCE_REVERSAL: { weight: 1.1, enabled: true },
+    BB_EXTREME_REVERSAL: { weight: 1, enabled: true },
+    // 停用舊策略
+    TREND_PULLBACK: { weight: 0, enabled: false },
     MOMENTUM_BREAKOUT: { weight: 0, enabled: false },
     BB_SQUEEZE: { weight: 0, enabled: false },
     EMA_RSI_CROSS: { weight: 0, enabled: false },
+    TREND_FOLLOW: { weight: 0, enabled: false },
     SESSION_BREAKOUT: { weight: 0, enabled: false },
     STOCH_RSI_CROSS: { weight: 0, enabled: false },
     RSI_BB_ADAPTIVE: { weight: 0, enabled: false },
     MOMENTUM: { weight: 0, enabled: false },
+    PULLBACK: { weight: 0, enabled: false },
     UNKNOWN: { weight: 0.8, enabled: true }
   };
 }
@@ -742,11 +740,9 @@ function isBreakoutDown(price, sr, klines15m) {
   return last3.every(k => k.close < sr.recentLow);
 }
 
-// ============ Signal Scoring v11 — 順勢回踩 + 極端轉折 ============
-// 核心理念：
-// 1. 主策略：順著 4H 趨勢方向，等 1H 回踩後進場
-// 2. 輔策略：只有 RSI 極端超買超賣才做反向（門檻很高）
-// 3. 鐵律：上升趨勢不做空、下降趨勢不做多（除非極端轉折）
+// ============ Signal Scoring v10 — 轉折點交易 ============
+// 核心理念：底部轉折做多，頂部轉折做空
+// 不追趨勢，等轉折確認後進場
 
 function scoreSignals(klines15m, klines1h, klines4h, fundingData, price, oiChange, atrVal) {
   const c15 = klines15m.map(k => k.close);
@@ -760,6 +756,9 @@ function scoreSignals(klines15m, klines1h, klines4h, fundingData, price, oiChang
 
   let buyScore = 0, sellScore = 0;
   const buyReasons = [], sellReasons = [];
+
+  // ========== v10: 轉折點交易邏輯 ==========
+  // 關鍵：不看「趨勢方向」給分，而是看「是否在極端位置 + 出現反轉信號」
 
   // === 基礎指標計算 ===
   const ema8_4h = ema(c4h, 8), ema21_4h = ema(c4h, 21);
@@ -779,7 +778,6 @@ function scoreSignals(klines15m, klines1h, klines4h, fundingData, price, oiChang
 
   const ema8_1h = ema(c1h, 8), ema21_1h = ema(c1h, 21);
   const e8_1h = ema8_1h[ema8_1h.length - 1], e21_1h = ema21_1h[ema21_1h.length - 1];
-  const trend1h = e8_1h > e21_1h ? 'UP' : 'DOWN';
 
   // 量能
   let volumeSpike = false;
@@ -806,90 +804,28 @@ function scoreSignals(klines15m, klines1h, klines4h, fundingData, price, oiChang
     engulfBear = prev.close > prev.open && last.close < last.open && last.close < prev.open && last.open > prev.close;
   }
 
-  // MACD 動能
+  // 4H MACD 動能轉向
   let macd4hBullTurn = false, macd4hBearTurn = false;
   if (macd4h) {
+    // 柱狀圖由負轉正（或由加速下跌轉減速） = 多頭動能回歸
     macd4hBullTurn = (macd4h.histogram > macd4h.prevHistogram && macd4h.prevHistogram < 0);
     macd4hBearTurn = (macd4h.histogram < macd4h.prevHistogram && macd4h.prevHistogram > 0);
   }
+
   let macd1hBullCross = false, macd1hBearCross = false;
   if (macd1h) {
     macd1hBullCross = macd1h.histogram > 0 && macd1h.prevHistogram <= 0;
     macd1hBearCross = macd1h.histogram < 0 && macd1h.prevHistogram >= 0;
   }
 
-  // ======== 主策略：順勢回踩 ========
-  // 4H 多頭趨勢 → 等 1H 回踩到支撐/EMA/BB中軌 → 出現多頭信號進場做多
-  // 4H 空頭趨勢 → 等 1H 反彈到壓力/EMA/BB中軌 → 出現空頭信號進場做空
-  let trendBuyConfirm = 0, trendSellConfirm = 0;
-
-  if (trend4h === 'UP' && trend4hStrength >= MIN_4H_TREND_STRENGTH) {
-    // === 多頭趨勢回踩做多 ===
-    buyScore += 15; buyReasons.push(`4H多頭(${trend4hStrength.toFixed(2)}%)`); trendBuyConfirm++;
-
-    // 4H MACD 加速↑ 或金叉
-    if (macd4h && macd4h.histogram > macd4h.prevHistogram) { buyScore += 12; buyReasons.push('4H MACD加速↑'); trendBuyConfirm++; }
-    if (macd4hBullTurn) { buyScore += 10; buyReasons.push('4H MACD金叉'); trendBuyConfirm++; }
-
-    // 1H EMA 多排（回踩後趨勢繼續）
-    if (e8_1h > e21_1h) { buyScore += 10; buyReasons.push('1H EMA多排'); trendBuyConfirm++; }
-
-    // RSI 回踩到 40-55 區間（不是超賣，是正常回踩）
-    if (rsi1h !== null && rsi1h >= 38 && rsi1h <= 55) { buyScore += 12; buyReasons.push(`1H RSI回踩${rsi1h.toFixed(0)}`); trendBuyConfirm++; }
-
-    // 回踩到支撐/BB中軌附近
-    if (nearSupport) { buyScore += 15; buyReasons.push('支撐區回踩做多'); trendBuyConfirm++; }
-    if (bbVal && price <= bbVal.middle * 1.003 && price >= bbVal.lower) { buyScore += 10; buyReasons.push('BB中軌回踩'); trendBuyConfirm++; }
-
-    // K 線形態確認
-    if (pinBarBull) { buyScore += 12; buyReasons.push('1H看多Pin Bar'); trendBuyConfirm++; }
-    if (engulfBull) { buyScore += 15; buyReasons.push('1H多頭吞噬'); trendBuyConfirm++; }
-    if (macd1hBullCross) { buyScore += 10; buyReasons.push('1H MACD金叉'); trendBuyConfirm++; }
-
-    // 放量確認
-    if (volumeSpike && (pinBarBull || engulfBull || macd1hBullCross)) {
-      buyScore += 10; buyReasons.push('1H量能爆發'); trendBuyConfirm++;
-    }
-  }
-
-  if (trend4h === 'DOWN' && trend4hStrength >= MIN_4H_TREND_STRENGTH) {
-    // === 空頭趨勢反彈做空 ===
-    sellScore += 15; sellReasons.push(`4H空頭(${trend4hStrength.toFixed(2)}%)`); trendSellConfirm++;
-
-    if (macd4h && macd4h.histogram < macd4h.prevHistogram) { sellScore += 12; sellReasons.push('4H MACD加速↓'); trendSellConfirm++; }
-    if (macd4hBearTurn) { sellScore += 10; sellReasons.push('4H MACD死叉'); trendSellConfirm++; }
-
-    if (e8_1h < e21_1h) { sellScore += 10; sellReasons.push('1H EMA空排'); trendSellConfirm++; }
-
-    if (rsi1h !== null && rsi1h >= 45 && rsi1h <= 62) { sellScore += 12; sellReasons.push(`1H RSI反彈${rsi1h.toFixed(0)}`); trendSellConfirm++; }
-
-    if (nearResistance) { sellScore += 15; sellReasons.push('壓力區反彈做空'); trendSellConfirm++; }
-    if (bbVal && price >= bbVal.middle * 0.997 && price <= bbVal.upper) { sellScore += 10; sellReasons.push('BB中軌反彈'); trendSellConfirm++; }
-
-    if (pinBarBear) { sellScore += 12; sellReasons.push('1H看空Pin Bar'); trendSellConfirm++; }
-    if (engulfBear) { sellScore += 15; sellReasons.push('1H空頭吞噬'); trendSellConfirm++; }
-    if (macd1hBearCross) { sellScore += 10; sellReasons.push('1H MACD死叉'); trendSellConfirm++; }
-
-    if (volumeSpike && (pinBarBear || engulfBear || macd1hBearCross)) {
-      sellScore += 10; sellReasons.push('1H量能爆發'); trendSellConfirm++;
-    }
-  }
-
-  // ======== 輔策略：極端轉折（收緊門檻）========
-  // 只有在真正極端時才允許逆勢
-  let extremeBuyConfirm = 0, extremeSellConfirm = 0;
-  const EXTREME_RSI_LOW = 28;   // v11: 收緊（原 35）
-  const EXTREME_RSI_HIGH = 75;  // v11: 收緊（原 65）
-  const EXTREME_RSI_4H_LOW = 25;
-  const EXTREME_RSI_4H_HIGH = 78;
-
-  // 極端超賣反轉做多（即使 4H 趨勢向下也可以）
-  if (rsi1h !== null && rsi1h < EXTREME_RSI_LOW) { buyScore += 25; buyReasons.push(`🚨 1H RSI極端超賣${rsi1h.toFixed(0)}`); extremeBuyConfirm++; }
-  if (rsi4h !== null && rsi4h < EXTREME_RSI_4H_LOW) { buyScore += 30; buyReasons.push(`🚨 4H RSI極端超賣${rsi4h.toFixed(0)}`); extremeBuyConfirm++; }
-  if (bb4h && price < bb4h.lower) { buyScore += 20; buyReasons.push('🚨 跌破4H BB下軌'); extremeBuyConfirm++; }
-  if (pinBarBull && rsi1h !== null && rsi1h < 35) { buyScore += 15; buyReasons.push('超賣區Pin Bar'); extremeBuyConfirm++; }
-  if (engulfBull && rsi1h !== null && rsi1h < 35) { buyScore += 18; buyReasons.push('超賣區多頭吞噬'); extremeBuyConfirm++; }
-  // RSI 底背離
+  // ======== 底部轉折做多（核心邏輯）========
+  // 條件：價格在低位 + 出現反彈信號 + 多重確認
+  let bottomConfirmations = 0;
+  
+  // 1. RSI 極端超賣後回升（底部信號）
+  if (rsi1h !== null && rsi1h < 35) { buyScore += 20; buyReasons.push(`1H RSI超賣${rsi1h.toFixed(0)}`); bottomConfirmations++; }
+  if (rsi4h !== null && rsi4h < 35) { buyScore += 25; buyReasons.push(`4H RSI超賣${rsi4h.toFixed(0)}`); bottomConfirmations++; }
+  // RSI 背離（價格新低但 RSI 不新低）
   if (rsi1h !== null && klines1h.length >= 20) {
     const prices20 = klines1h.slice(-20).map(k => k.low);
     const rsiArr = [];
@@ -901,17 +837,36 @@ function scoreSignals(klines15m, klines1h, klines4h, fundingData, price, oiChang
     if (rsiArr.length >= 5) {
       const priceNewLow = price <= Math.min(...prices20.slice(-10));
       const rsiNotNewLow = rsiArr[rsiArr.length - 1] > Math.min(...rsiArr.slice(-10));
-      if (priceNewLow && rsiNotNewLow && rsi1h < 35) { buyScore += 22; buyReasons.push('RSI底背離'); extremeBuyConfirm++; }
+      if (priceNewLow && rsiNotNewLow && rsi1h < 40) { buyScore += 20; buyReasons.push('RSI底背離'); bottomConfirmations++; }
     }
   }
 
-  // 極端超買反轉做空
-  if (rsi1h !== null && rsi1h > EXTREME_RSI_HIGH) { sellScore += 25; sellReasons.push(`🚨 1H RSI極端超買${rsi1h.toFixed(0)}`); extremeSellConfirm++; }
-  if (rsi4h !== null && rsi4h > EXTREME_RSI_4H_HIGH) { sellScore += 30; sellReasons.push(`🚨 4H RSI極端超買${rsi4h.toFixed(0)}`); extremeSellConfirm++; }
-  if (bb4h && price > bb4h.upper) { sellScore += 20; sellReasons.push('🚨 突破4H BB上軌'); extremeSellConfirm++; }
-  if (pinBarBear && rsi1h !== null && rsi1h > 65) { sellScore += 15; sellReasons.push('超買區Pin Bar'); extremeSellConfirm++; }
-  if (engulfBear && rsi1h !== null && rsi1h > 65) { sellScore += 18; sellReasons.push('超買區空頭吞噬'); extremeSellConfirm++; }
-  // RSI 頂背離
+  // 2. 價格在支撐位（結構性底部）
+  if (nearSupport) { buyScore += 15; buyReasons.push('觸及支撐位'); bottomConfirmations++; }
+  // 價格在 BB 下軌（統計性底部）
+  if (bbVal && price < bbVal.lower) { buyScore += 15; buyReasons.push('跌破BB下軌'); bottomConfirmations++; }
+  if (bb4h && price < bb4h.lower) { buyScore += 18; buyReasons.push('跌破4H BB下軌'); bottomConfirmations++; }
+
+  // 3. 反轉 K 線形態確認
+  if (pinBarBull) { buyScore += 15; buyReasons.push('1H看多Pin Bar'); bottomConfirmations++; }
+  if (engulfBull) { buyScore += 18; buyReasons.push('1H多頭吞噬'); bottomConfirmations++; }
+
+  // 4. MACD 動能轉向（底部反彈信號）
+  if (macd1hBullCross) { buyScore += 15; buyReasons.push('1H MACD金叉'); bottomConfirmations++; }
+  if (macd4hBullTurn) { buyScore += 20; buyReasons.push('4H MACD動能轉多'); bottomConfirmations++; }
+
+  // 5. 量能確認（放量反彈 = 真底部）
+  if (volumeSpike && (pinBarBull || engulfBull || macd1hBullCross)) {
+    buyScore += 12; buyReasons.push('放量反轉確認'); bottomConfirmations++;
+  }
+
+  // ======== 頂部轉折做空（核心邏輯）========
+  let topConfirmations = 0;
+
+  // 1. RSI 極端超買後回落（頂部信號）
+  if (rsi1h !== null && rsi1h > 65) { sellScore += 20; sellReasons.push(`1H RSI超買${rsi1h.toFixed(0)}`); topConfirmations++; }
+  if (rsi4h !== null && rsi4h > 65) { sellScore += 25; sellReasons.push(`4H RSI超買${rsi4h.toFixed(0)}`); topConfirmations++; }
+  // RSI 背離（價格新高但 RSI 不新高）
   if (rsi1h !== null && klines1h.length >= 20) {
     const prices20h = klines1h.slice(-20).map(k => k.high);
     const rsiArr2 = [];
@@ -923,11 +878,31 @@ function scoreSignals(klines15m, klines1h, klines4h, fundingData, price, oiChang
     if (rsiArr2.length >= 5) {
       const priceNewHigh = price >= Math.max(...prices20h.slice(-10));
       const rsiNotNewHigh = rsiArr2[rsiArr2.length - 1] < Math.max(...rsiArr2.slice(-10));
-      if (priceNewHigh && rsiNotNewHigh && rsi1h > 65) { sellScore += 22; sellReasons.push('RSI頂背離'); extremeSellConfirm++; }
+      if (priceNewHigh && rsiNotNewHigh && rsi1h > 60) { sellScore += 20; sellReasons.push('RSI頂背離'); topConfirmations++; }
     }
   }
 
-  // ======== 資金費率（共用）========
+  // 2. 價格在壓力位（結構性頂部）
+  if (nearResistance) { sellScore += 15; sellReasons.push('觸及壓力位'); topConfirmations++; }
+  if (bbVal && price > bbVal.upper) { sellScore += 15; sellReasons.push('突破BB上軌'); topConfirmations++; }
+  if (bb4h && price > bb4h.upper) { sellScore += 18; sellReasons.push('突破4H BB上軌'); topConfirmations++; }
+
+  // 3. 反轉 K 線形態確認
+  if (pinBarBear) { sellScore += 15; sellReasons.push('1H看空Pin Bar'); topConfirmations++; }
+  if (engulfBear) { sellScore += 18; sellReasons.push('1H空頭吞噬'); topConfirmations++; }
+
+  // 4. MACD 動能轉向（頂部回落信號）
+  if (macd1hBearCross) { sellScore += 15; sellReasons.push('1H MACD死叉'); topConfirmations++; }
+  if (macd4hBearTurn) { sellScore += 20; sellReasons.push('4H MACD動能轉空'); topConfirmations++; }
+
+  // 5. 量能確認（放量滯漲 = 真頂部）
+  if (volumeSpike && (pinBarBear || engulfBear || macd1hBearCross)) {
+    sellScore += 12; sellReasons.push('放量滯漲確認'); topConfirmations++;
+  }
+
+  // ======== 共用過濾 ========
+
+  // 資金費率（極端費率 = 市場過熱/過冷）
   if (fundingData) {
     let fRate = null;
     if (typeof fundingData === 'number') fRate = fundingData;
@@ -937,98 +912,74 @@ function scoreSignals(klines15m, klines1h, klines4h, fundingData, price, oiChang
       fRate = typeof last === 'number' ? last : (typeof last.rate === 'number' ? last.rate : parseFloat(last.lastFundingRate || last.fundingRate || 0));
     }
     if (fRate !== null && !isNaN(fRate)) {
-      if (fRate > 0.0005) { sellScore += 10; sellReasons.push(`費率過高${(fRate*100).toFixed(3)}%`); }
-      if (fRate < -0.0003) { buyScore += 10; buyReasons.push(`負費率${(fRate*100).toFixed(3)}%`); }
+      // 高費率 = 多頭過熱 → 做空加分
+      if (fRate > 0.0005) { sellScore += 12; sellReasons.push(`費率過高${(fRate*100).toFixed(3)}%`); topConfirmations++; }
+      // 負費率 = 空頭過擠 → 做多加分
+      if (fRate < -0.0003) { buyScore += 12; buyReasons.push(`負費率${(fRate*100).toFixed(3)}%`); bottomConfirmations++; }
     }
   }
 
-  // OI 變化
+  // OI 變化 + 方向性（OI 增加但價格滯漲 = 頂部信號）
   if (typeof oiChange === 'number' && !isNaN(oiChange)) {
     if (oiChange > 5 && rsi1h !== null && rsi1h > 60) { sellScore += 8; sellReasons.push('OI增+超買'); }
     if (oiChange > 5 && rsi1h !== null && rsi1h < 40) { buyScore += 8; buyReasons.push('OI增+超賣'); }
   }
 
-  // ======== 🚨 趨勢過濾鐵律（v11 核心）========
-  // 上升趨勢不做空（除非極端轉折 >= 3 確認）
-  // 下降趨勢不做多（除非極端轉折 >= 3 確認）
-  if (trend4h === 'UP' && trend4hStrength >= MIN_4H_TREND_STRENGTH) {
-    if (extremeSellConfirm < 3) {
-      // 上升趨勢 + 沒有極端超買 → 殺掉做空分數
-      sellScore = Math.round(sellScore * 0.15);
-      if (sellScore > 0) sellReasons.push('⛔ 上升趨勢禁做空');
-    } else {
-      sellReasons.push('⚠️ 逆勢做空(極端轉折)');
-    }
+  // ======== 嚴格門檻：轉折必須有足夠確認 ========
+  // 做多：至少 3 個底部確認信號
+  // 做空：至少 3 個頂部確認信號
+  // 確認不足 = 不做
+
+  if (bottomConfirmations < 3) {
+    buyScore = Math.round(buyScore * 0.3);
+    if (bottomConfirmations > 0) buyReasons.push(`⚠️底部確認不足(${bottomConfirmations}/3)`);
   }
-  if (trend4h === 'DOWN' && trend4hStrength >= MIN_4H_TREND_STRENGTH) {
-    if (extremeBuyConfirm < 3) {
-      buyScore = Math.round(buyScore * 0.15);
-      if (buyScore > 0) buyReasons.push('⛔ 下降趨勢禁做多');
-    } else {
-      buyReasons.push('⚠️ 逆勢做多(極端轉折)');
-    }
+  if (topConfirmations < 3) {
+    sellScore = Math.round(sellScore * 0.3);
+    if (topConfirmations > 0) sellReasons.push(`⚠️頂部確認不足(${topConfirmations}/3)`);
   }
 
-  // ======== 確認數門檻 ========
-  const totalBuyConfirm = trendBuyConfirm + extremeBuyConfirm;
-  const totalSellConfirm = trendSellConfirm + extremeSellConfirm;
-  
-  // 順勢單至少 3 確認，轉折單至少 3 極端確認
-  if (totalBuyConfirm < 3) {
-    buyScore = Math.round(buyScore * 0.3);
-    if (totalBuyConfirm > 0) buyReasons.push(`⚠️確認不足(${totalBuyConfirm}/3)`);
-  }
-  if (totalSellConfirm < 3) {
-    sellScore = Math.round(sellScore * 0.3);
-    if (totalSellConfirm > 0) sellReasons.push(`⚠️確認不足(${totalSellConfirm}/3)`);
+  // 盤整區不做（非轉折區域）
+  const isConsolidating = (marketState === 'CONSOLIDATING' || marketState === 'RANGING');
+  if (isConsolidating && bottomConfirmations < 3 && topConfirmations < 3) {
+    buyScore = Math.round(buyScore * 0.3); sellScore = Math.round(sellScore * 0.3);
   }
 
   // 活躍時段 boost
   const session = isActiveSession();
-  if (session) { buyScore = Math.round(buyScore * 1.12); sellScore = Math.round(sellScore * 1.12); }
+  if (session) { buyScore = Math.round(buyScore * 1.15); sellScore = Math.round(sellScore * 1.15); }
   if (isDeadZone()) { buyScore = Math.round(buyScore * 0.4); sellScore = Math.round(sellScore * 0.4); }
 
   // ======== 決策輸出 ========
   const maxScore = Math.max(buyScore, sellScore);
   const direction = buyScore > sellScore ? 'LONG' : 'SHORT';
   const reasons = direction === 'LONG' ? buyReasons : sellReasons;
-  const confirmations = direction === 'LONG' ? totalBuyConfirm : totalSellConfirm;
+  const confirmations = direction === 'LONG' ? bottomConfirmations : topConfirmations;
 
+  // 方向優勢必須明確（至少 50% edge）
   const minScore = Math.min(buyScore, sellScore);
   const edge = maxScore > 0 ? (maxScore - minScore) / maxScore : 0;
 
-  if (edge < 0.45 || maxScore < SIGNAL_THRESHOLD || confirmations < 3) {
-    const reason = confirmations < 3 ? `確認不足(${confirmations}/3)` : edge < 0.45 ? `方向不明(edge=${(edge*100).toFixed(0)}%)` : `分數不足(${maxScore})`;
+  if (edge < 0.50 || maxScore < SIGNAL_THRESHOLD || confirmations < 3) {
+    const reason = confirmations < 3 ? `轉折確認不足(${confirmations}/3)` : edge < 0.50 ? `方向不明(edge=${(edge*100).toFixed(0)}%)` : `分數不足(${maxScore})`;
     return {
       score: Math.round(maxScore * 0.5), direction: null, strategy: null, marketState, reason,
       buyScore: Math.round(buyScore), sellScore: Math.round(sellScore),
       trend4h, trend4hStrength,
       reasons: [...buyReasons.map(r => `🟢${r}`), ...sellReasons.map(r => `🔴${r}`)],
       rsi15: rsi15 ? Math.round(rsi15) : null,
-      bottomConfirmations: totalBuyConfirm, topConfirmations: totalSellConfirm,
-      trendBuyConfirm, trendSellConfirm, extremeBuyConfirm, extremeSellConfirm,
+      bottomConfirmations, topConfirmations,
       session: session || (isDeadZone() ? 'DEAD_ZONE' : 'TRANSITION')
     };
   }
 
-  // 策略分類：根據哪種確認更多來分類
-  let strategy;
-  const isTrendDriven = direction === 'LONG' ? trendBuyConfirm >= extremeBuyConfirm : trendSellConfirm >= extremeSellConfirm;
-  if (isTrendDriven) {
-    // 順勢策略
-    const allReasonsStr = reasons.join(',');
-    if (allReasonsStr.includes('回踩') || allReasonsStr.includes('支撐') || allReasonsStr.includes('壓力')) strategy = 'PULLBACK';
-    else if (allReasonsStr.includes('EMA') || allReasonsStr.includes('MACD加速')) strategy = 'TREND_FOLLOW';
-    else strategy = 'TREND_PULLBACK';
-  } else {
-    // 極端轉折策略
-    const allReasonsStr = reasons.join(',');
-    if (allReasonsStr.includes('背離')) strategy = 'DIVERGENCE_REVERSAL';
-    else if (allReasonsStr.includes('BB')) strategy = 'BB_EXTREME_REVERSAL';
-    else strategy = 'REVERSAL_CONFIRM';
-  }
+  // 策略分類
+  let strategy = 'REVERSAL_CONFIRM'; // v10 主策略就是轉折
+  const allReasonsStr = reasons.join(',');
+  if (allReasonsStr.includes('背離')) strategy = 'DIVERGENCE_REVERSAL';
+  else if (allReasonsStr.includes('BB')) strategy = 'BB_EXTREME_REVERSAL';
 
-  const checklist = reasons.filter(r => !r.startsWith('⚠️') && !r.startsWith('⛔'));
+  const checklist = reasons.filter(r => !r.startsWith('⚠️'));
 
   return {
     score: Math.round(maxScore),
@@ -1042,10 +993,8 @@ function scoreSignals(klines15m, klines1h, klines4h, fundingData, price, oiChang
     sellScore: Math.round(sellScore),
     checklist,
     checklistCount: checklist.length,
-    bottomConfirmations: totalBuyConfirm,
-    topConfirmations: totalSellConfirm,
-    trendBuyConfirm, trendSellConfirm,
-    extremeBuyConfirm, extremeSellConfirm,
+    bottomConfirmations,
+    topConfirmations,
     rsi15: rsi15 ? Math.round(rsi15) : null,
     session: session || (isDeadZone() ? 'DEAD_ZONE' : 'TRANSITION')
   };
@@ -1219,29 +1168,31 @@ function checkTrailingStop(state, markPrice) {
   
   let newStop = state.trailingStop.currentStop;
   
-  // v11: 追蹤止損 — 更快保本 + 讓利潤跑
-  // 階段 1: +0.5% → 保本（不讓賺的單變虧）
-  if (pnlPct >= 0.5) {
+  // v6.2: 放寬追蹤止損，給利潤充足空間（之前太緊一直被掃）
+  // v8: 「賺大虧小」追蹤止損
+  // 原則：先保本，再鎖利，最後讓利潤跑
+  // 階段 1: +0.8% → 保本（確保不讓賺的單變虧）
+  if (pnlPct >= 0.8) {
     newStop = entry;
   }
-  // 階段 2: +1.2% → 鎖住 +0.4%（小賺入袋）
-  if (pnlPct >= 1.2) {
-    const lockPrice = isLong ? entry * 1.004 : entry * 0.996;
+  // 階段 2: +1.5% → 鎖住 +0.5%（小賺入袋）
+  if (pnlPct >= 1.5) {
+    const lockPrice = isLong ? entry * 1.005 : entry * 0.995;
     if (isLong ? lockPrice > newStop : lockPrice < newStop) newStop = lockPrice;
   }
-  // 階段 3: +2.0% → 追蹤 0.8%（給空間跑）
-  if (pnlPct >= 2.0) {
-    const trail = isLong ? markPrice * 0.992 : markPrice * 1.008;
+  // 階段 3: +2.5% → 追蹤 1.0%（給空間跑，抓大波段）
+  if (pnlPct >= 2.5) {
+    const trail = isLong ? markPrice * 0.990 : markPrice * 1.010;
     if (isLong ? trail > newStop : trail < newStop) newStop = trail;
   }
-  // 階段 4: +3.5% → 追蹤 0.5%（收緊保護）
-  if (pnlPct >= 3.5) {
-    const trail = isLong ? markPrice * 0.995 : markPrice * 1.005;
+  // 階段 4: +4.0% → 追蹤 0.6%（收緊保護）
+  if (pnlPct >= 4.0) {
+    const trail = isLong ? markPrice * 0.994 : markPrice * 1.006;
     if (isLong ? trail > newStop : trail < newStop) newStop = trail;
   }
-  // 階段 5: +5.0% → 追蹤 0.35%（大波段收緊）
-  if (pnlPct >= 5.0) {
-    const trail = isLong ? markPrice * 0.9965 : markPrice * 1.0035;
+  // 階段 5: +6.0% → 追蹤 0.4%（大波段收緊）
+  if (pnlPct >= 6.0) {
+    const trail = isLong ? markPrice * 0.996 : markPrice * 1.004;
     if (isLong ? trail > newStop : trail < newStop) newStop = trail;
   }
   
@@ -1295,7 +1246,7 @@ function updateDashboard(state, balance, pos, signal) {
   const dashboard = {
     lastUpdate: local,
     status: state.status,
-    mode: 'v11 順勢回踩+極端轉折',
+    mode: 'v10 動態槓桿+動態風報比',
     exchange: 'Binance Futures',
     account: {
       initialCapital: INITIAL_CAPITAL, balance: balance?.total || 0,
@@ -1446,12 +1397,21 @@ async function run() {
 
     let signal = scoreSignals(klines15m, klines1h, klines4h, funding, price, oiChange, atrVal);
 
-    // === v11: 情緒參考（不過濾，不加分，只記錄）===
+    // === v10: Sentiment Filter — 情緒確認而非過濾 ===
+    // 轉折點交易：情緒一致加分，不一致不擋死（因為轉折本身就是逆市場情緒） ===
     if (signal.direction && sentiment.sentimentBias !== 'NEUTRAL') {
-      // v11: 情緒純參考，不影響分數（避免過度揨演）
-      const sentimentAligned = sentiment.sentimentBias === signal.direction;
-      signal.reasons = [...(signal.reasons || []), `📊情緒:${sentiment.sentimentBias}(${sentimentAligned ? '同向' : '逆向'})`];
-      log(`📊 情緒參考: 大戶${sentiment.sentimentBias} 我做${signal.direction} (${sentimentAligned ? '同向' : '逆向'})`);
+      // v10: 轉折點交易 — 情緒相反 = 加分（逆向思維）
+      // 做多但大戶偏空 = 空頭過擠，反彈機率高
+      // 做空但大戶偏多 = 多頭過熱，回調機率高
+      if (sentiment.sentimentBias !== signal.direction) {
+        signal.score = Math.round(signal.score * 1.2);
+        signal.reasons = [...(signal.reasons || []), `✅逆向情緒(大戶${sentiment.sentimentBias}→我做${signal.direction})`];
+        log(`✅ 逆向情緒確認: 大戶${sentiment.sentimentBias} 我做${signal.direction} → 加分`);
+      } else {
+        // 情緒一致 = 中性（不是轉折的好信號，但也不扣分）
+        signal.reasons = [...(signal.reasons || []), `➖情緒同向(大戶${sentiment.sentimentBias})`];
+        log(`➖ 情緒同向: ${signal.direction} — 不加不扣`);
+      }
     }
 
     const stratCfg = state.strategyWeights[signal.strategy || 'UNKNOWN'] || { weight: 1, enabled: true };
@@ -1566,7 +1526,7 @@ async function run() {
         const sentimentContrarian = sentiment.sentimentBias !== 'NEUTRAL' && sentiment.sentimentBias !== signal.direction;
         const confirmations = signal.direction === 'LONG' ? (signal.bottomConfirmations || 0) : (signal.topConfirmations || 0);
         const activeSession = isActiveSession();
-        const dynLeverage = calcDynamicLeverage(signal.score, sentimentContrarian, confirmations, !!activeSession, signal.strategy);
+        const dynLeverage = calcDynamicLeverage(signal.score, sentimentContrarian, confirmations, !!activeSession);
         const dynRR = calcDynamicRR(signal.score, sentimentContrarian, signal.strategy);
         const dynMinProfit = calcDynamicMinProfit(dynLeverage, dynRR);
         
@@ -1702,7 +1662,7 @@ async function runAll() {
       const merged = {
         lastUpdate: local,
         status: 'RUNNING',
-        mode: 'v11 順勢回踩+極端轉折',
+        mode: 'v10 動態槓桿+動態風報比',
         exchange: 'Binance Futures',
         account: {
           initialCapital: INITIAL_CAPITAL,

@@ -71,7 +71,7 @@ MAX 交易所多幣種 TWD 現貨交易。
 trading/
 ├── money_maker_engine.js       # 核心引擎（Node.js）
 ├── money_maker_config.json     # 設定檔
-├── money_maker_state.json      # 運行狀態
+├── state.json                  # 統一運行狀態（含所有幣種）
 ├── money_maker_log.json        # 交易紀錄
 ├── money_maker_cron.log        # 執行日誌
 └── crypto_config.json          # MAX API 憑證（共用）
@@ -351,8 +351,8 @@ Step 10: 如果有異常或重大事件 → LINE 通知老闆
 
 **輸出檔：**
 - `trading/money_maker_market.json` — 技術指標（fetch 產出）
-- `trading/money_maker_state.json` — 交易狀態
-- `trading/money_maker_order_log.json` — 下單紀錄
+- `workers/money-maker/data/state.json` — 統一交易狀態（含所有幣種）
+- `workers/money-maker/data/money_maker_order_log.json` — 下單紀錄
 
 ---
 

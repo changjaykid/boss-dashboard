@@ -26,9 +26,9 @@ def parse_args():
 # ========== INSTRUMENTS ==========
 INSTRUMENTS = {
     "GOLD":        {"name": "XAUUSD",   "type": "黃金",  "min_size": 0.01, "max_size": 0.1},
-    "EURUSDM2026": {"name": "EUR/USD",  "type": "外匯",  "min_size": 0.1,  "max_size": 1.0},
+    "EURUSD": {"name": "EUR/USD",  "type": "外匯",  "min_size": 0.1,  "max_size": 1.0},
     "GBPUSD":      {"name": "GBP/USD",  "type": "外匯",  "min_size": 0.1,  "max_size": 1.0},
-    "USDJPYM2026": {"name": "USD/JPY",  "type": "外匯",  "min_size": 0.1,  "max_size": 1.0},
+    "USDJPY": {"name": "USD/JPY",  "type": "外匯",  "min_size": 0.1,  "max_size": 1.0},
     "US30":        {"name": "US30",     "type": "指數",  "min_size": 0.1,  "max_size": 1.0},
     "US500":       {"name": "S&P 500",  "type": "指數",  "min_size": 0.1,  "max_size": 1.0},
     "US100":       {"name": "NAS100",   "type": "指數",  "min_size": 0.1,  "max_size": 1.0},
@@ -44,9 +44,9 @@ CORRELATED_GROUPS = {
 # ========== SESSION AWARENESS ==========
 ACTIVE_SESSIONS = {
     "GOLD":        [(0, 24)],
-    "EURUSDM2026": [(7, 21)],
+    "EURUSD": [(7, 21)],
     "GBPUSD":      [(7, 21)],
-    "USDJPYM2026": [(0, 9), (13, 21)],
+    "USDJPY": [(0, 9), (13, 21)],
     "US30":        [(13, 21)],
     "US500":       [(13, 21)],
     "US100":       [(13, 21)],
@@ -63,21 +63,26 @@ def is_active_session(epic):
 # ========== ENABLED STRATEGIES ==========
 # Toggle individual strategies on/off
 STRATEGY_ENABLED = {
-    # === 賺錢策略（保留 + 優化）===
-    "breakout_range": True,           # +$55, 30% WR, RR 5.06 — 最佳策略
-    "reversion_bollinger": True,      # +$4.21, 100% WR — 小樣本但正期望值
-    "trend_ema_cross": True,          # 基礎趨勢跟蹤，保留觀察
-    "trend_elliott_wave3": True,      # 波浪理論，保留觀察
-    "trend_flag_breakout": True,      # 旗形突破，保留觀察
+    # === 已證實正期望值（持續跑）===
+    "breakout_range": True,              # +$44.79, 28% WR, RR 4.37 — 最強策略
+    "reversion_bollinger": True,         # +$4.21, 100% WR — 小樣本但正期望值
 
-    # === 虧損策略（停用）===
-    "trend_mtf_alignment": False,     # -$103, 12.8% WR — 最大虧損來源
-    "reversion_pin_bar": False,       # -$84, 0% WR — 14連敗，完全無效
-    "breakout_pattern": False,        # -$57, 16% WR — 虧損嚴重
-    "breakout_outside_bar": False,    # -$52, 0% WR — 10連敗
-    "breakout_bollinger_squeeze": False, # -$22, 11% WR — 虧損
-    "reversion_rsi_divergence": False,   # -$2.2, 0% WR — 無效
-    "reversion_sr": True,            # 支撐壓力，保留觀察
+    # === 積極測試中（新策略，小倉位驗證）===
+    "trend_ema_cross": True,             # EMA交叉趨勢，給 10 筆機會驗證
+    "trend_flag_breakout": True,         # 旗形突破，給 10 筆機會驗證
+    "reversion_sr": True,               # 支撐壓力反轉，給 10 筆機會驗證
+    "mean_reversion_rsi_bb": True,       # 新策略：RSI+BB 均值回歸
+    "momentum_volume_breakout": True,    # 新策略：量能突破動能
+    "session_open_range": True,          # 新策略：開盤區間突破（改良版）
+
+    # === 已證實虧損（停用）===
+    "trend_elliott_wave3": False,        # 波浪理論太主觀，不適合自動化
+    "trend_mtf_alignment": False,        # -$85, 13.5% WR
+    "reversion_pin_bar": False,          # -$70, 0% WR
+    "breakout_pattern": False,           # -$37, 17% WR
+    "breakout_outside_bar": False,       # -$29, 0% WR
+    "breakout_bollinger_squeeze": False,  # -$22, 11% WR
+    "reversion_rsi_divergence": False,    # -$1.14, 0% WR
 
     # === 新增策略（2026-04-07）===
     "asian_range_breakout": True,     # 亞洲區間突破（黃金專用）
@@ -748,8 +753,8 @@ def run_all_strategies(candles_4h, candles_1h, candles_15m, closes_4h, closes_1h
             strategy_breakout_bollinger_squeeze(candles_15m, closes_15m, atr_15m),
             strategy_reversion_pin_bar(candles_15m, closes_15m, atr_15m),
             strategy_asian_range_breakout(candles_15m, closes_15m, atr_15m),
-            strategy_session_momentum(candles_1h, candles_15m, closes_15m, atr_15m),
-            strategy_multi_indicator_consensus(candles_1h, candles_15m, closes_15m, closes_1h, atr_15m),
+            strategy_session_momentum(candles_15m, closes_15m, atr_15m),
+            strategy_multi_indicator_consensus(candles_15m, closes_15m, candles_1h, closes_1h, atr_15m),
             strategy_atr_breakout(candles_15m, closes_15m, atr_15m)
         ]
 
@@ -882,9 +887,9 @@ def recover_broker_closed_pnl(api_url, cst, xsec, trade_entry):
             'US30': ['Wall Street', 'US Wall Street 30', 'US30', 'Dow Jones'],
             'US500': ['US 500', 'US500', 'S&P 500', 'SPX500'],
             'US100': ['US Tech 100', 'US100', 'NAS100', 'Nasdaq'],
-            'EURUSDM2026': ['EUR/USD', 'EURUSD'],
+            'EURUSD': ['EUR/USD', 'EURUSD'],
             'GBPUSD': ['GBP/USD', 'GBPUSD'],
-            'USDJPYM2026': ['USD/JPY', 'USDJPY'],
+            'USDJPY': ['USD/JPY', 'USDJPY'],
         }
         
         possible_names = EPIC_TO_NAMES.get(epic, [epic, inst_name])
@@ -1445,8 +1450,10 @@ def main():
             consec_losses += 1
         else:
             break
+    prev_consec = state.get('consecutive_losses', 0)
     state['consecutive_losses'] = consec_losses
-    if consec_losses > 0 and recent_outcomes and recent_outcomes[-1] == 'LOSS':
+    # Only update last_loss_time when a NEW loss is detected (consec count increased)
+    if consec_losses > prev_consec and consec_losses > 0:
         state['last_loss_time'] = datetime.now(timezone.utc).isoformat()
 
     # ===== MARKET ANALYSIS =====
@@ -1480,6 +1487,10 @@ def main():
 
         # Market regime
         regime = classify_market_regime(closes_4h, closes_1h, c1h)
+
+        # Set current_epic for strategy routing (US30 special handling)
+        global current_epic
+        current_epic = epic
 
         # Run all strategies
         signals = run_all_strategies(c4h, c1h, c15m, closes_4h, closes_1h, closes_15m, atr_15m, regime)

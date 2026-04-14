@@ -1,0 +1,280 @@
+{
+  "version": 9,
+  "status": "RUNNING",
+  "markets": {
+    "btctwd": {
+      "version": 8,
+      "status": "RUNNING",
+      "buyBatches": [
+        {
+          "price": 2278278.4,
+          "twd": 1064,
+          "coin": 0.00046627207631867994,
+          "time": 1775990402188,
+          "reason": "買入(score=6.0, RSI=35)"
+        },
+        {
+          "price": 2264402.1,
+          "twd": 1968,
+          "coin": 0.0008677130267632236,
+          "time": 1775998469541,
+          "reason": "強買(score=9.5, RSI=30)"
+        }
+      ],
+      "sellBatches": [],
+      "avgBuyPrice": 2272888.949805493,
+      "totalCoinHeld": 0.00132723,
+      "totalTwdInvested": 3032,
+      "dailyPnl": 0,
+      "dailyDate": "2026-04-14",
+      "totalPnl": 28,
+      "totalTrades": 5,
+      "wins": 5,
+      "losses": 0,
+      "consecutiveLosses": 0,
+      "maxDrawdown": 0,
+      "peakEquity": 2500,
+      "pauseUntil": null,
+      "lastBuyTime": 1775998469541,
+      "lastSellTime": null,
+      "lastAnalysis": {
+        "zone": "NEUTRAL",
+        "buyScore": 0,
+        "sellScore": 1.5,
+        "checklist": {
+          "buy": [],
+          "sell": [
+            "靠近BB上緣"
+          ]
+        },
+        "buyChecklistCount": 0,
+        "sellChecklistCount": 1,
+        "reasons": [
+          "🔴靠近BB上緣"
+        ],
+        "rsi": 63.714502295134366,
+        "updatedAt": "2026-04-13T19:20:57.188Z"
+      },
+      "gridMode": "active",
+      "gridLevels": [
+        {
+          "price": 2146695,
+          "side": "buy",
+          "status": "empty",
+          "filledAt": null,
+          "filledPrice": null
+        },
+        {
+          "price": 2181507,
+          "side": "buy",
+          "status": "empty",
+          "filledAt": null,
+          "filledPrice": null
+        },
+        {
+          "price": 2216318,
+          "side": "buy",
+          "status": "empty",
+          "filledAt": null,
+          "filledPrice": null
+        },
+        {
+          "price": 2251129,
+          "side": "buy",
+          "status": "empty",
+          "filledAt": null,
+          "filledPrice": null
+        },
+        {
+          "price": 2285940,
+          "side": "buy",
+          "status": "empty",
+          "filledAt": null,
+          "filledPrice": null
+        },
+        {
+          "price": 2355563,
+          "side": "sell",
+          "status": "empty",
+          "filledAt": null,
+          "filledPrice": null
+        },
+        {
+          "price": 2390374,
+          "side": "sell",
+          "status": "empty",
+          "filledAt": null,
+          "filledPrice": null
+        },
+        {
+          "price": 2425186,
+          "side": "sell",
+          "status": "empty",
+          "filledAt": null,
+          "filledPrice": null
+        },
+        {
+          "price": 2459997,
+          "side": "sell",
+          "status": "empty",
+          "filledAt": null,
+          "filledPrice": null
+        },
+        {
+          "price": 2494808,
+          "side": "sell",
+          "status": "empty",
+          "filledAt": null,
+          "filledPrice": null
+        }
+      ],
+      "gridCenter": 2320752,
+      "gridSpacing": 0.015,
+      "gridLastReset": 1776108659935,
+      "gridPnl": 0,
+      "gridTrades": 0
+    },
+    "soltwd": {
+      "version": 8,
+      "status": "RUNNING",
+      "buyBatches": [
+        {
+          "price": 2644.4,
+          "twd": 1000,
+          "coin": 0.3775525639086371,
+          "time": 1775749325008,
+          "reason": "強買入(3.0)"
+        },
+        {
+          "price": 2648.5,
+          "twd": 600,
+          "coin": 0.22618085708891825,
+          "time": 1775752744987,
+          "reason": "強買入(9.5)"
+        },
+        {
+          "price": 2641.8,
+          "twd": 360,
+          "coin": 0.136052691346809,
+          "time": 1775753105065,
+          "reason": "強買入(9.5)"
+        }
+      ],
+      "sellBatches": [],
+      "avgBuyPrice": 2649.4144284336553,
+      "totalCoinHeld": 0.3672624,
+      "totalTwdInvested": 1960,
+      "dailyPnl": 0,
+      "dailyDate": "2026-04-14",
+      "totalPnl": 35,
+      "totalTrades": 9,
+      "wins": 8,
+      "losses": 1,
+      "consecutiveLosses": 0,
+      "maxDrawdown": 0,
+      "peakEquity": 5035,
+      "pauseUntil": null,
+      "lastBuyTime": null,
+      "lastSellTime": 1775936113716,
+      "lastAnalysis": {
+        "zone": "NEUTRAL",
+        "buyScore": 0,
+        "sellScore": 0,
+        "checklist": {
+          "buy": [],
+          "sell": []
+        },
+        "buyChecklistCount": 0,
+        "sellChecklistCount": 0,
+        "reasons": [],
+        "rsi": 54.928410841755074,
+        "updatedAt": "2026-04-13T19:20:58.399Z"
+      },
+      "gridMode": "active",
+      "gridLevels": [
+        {
+          "price": 2405,
+          "side": "buy",
+          "status": "empty",
+          "filledAt": null,
+          "filledPrice": null
+        },
+        {
+          "price": 2458,
+          "side": "buy",
+          "status": "empty",
+          "filledAt": null,
+          "filledPrice": null
+        },
+        {
+          "price": 2512,
+          "side": "buy",
+          "status": "empty",
+          "filledAt": null,
+          "filledPrice": null
+        },
+        {
+          "price": 2565,
+          "side": "buy",
+          "status": "empty",
+          "filledAt": null,
+          "filledPrice": null
+        },
+        {
+          "price": 2619,
+          "side": "buy",
+          "status": "empty",
+          "filledAt": null,
+          "filledPrice": null
+        },
+        {
+          "price": 2725,
+          "side": "sell",
+          "status": "empty",
+          "filledAt": null,
+          "filledPrice": null
+        },
+        {
+          "price": 2779,
+          "side": "sell",
+          "status": "empty",
+          "filledAt": null,
+          "filledPrice": null
+        },
+        {
+          "price": 2832,
+          "side": "sell",
+          "status": "empty",
+          "filledAt": null,
+          "filledPrice": null
+        },
+        {
+          "price": 2886,
+          "side": "sell",
+          "status": "empty",
+          "filledAt": null,
+          "filledPrice": null
+        },
+        {
+          "price": 2939,
+          "side": "sell",
+          "status": "empty",
+          "filledAt": null,
+          "filledPrice": null
+        }
+      ],
+      "gridCenter": 2672,
+      "gridSpacing": 0.02,
+      "gridLastReset": 1776109859094,
+      "gridPnl": 0,
+      "gridTrades": 0
+    }
+  },
+  "globalStats": {
+    "totalPnl": 63,
+    "totalTrades": 14,
+    "wins": 13,
+    "losses": 1,
+    "peakEquity": 10000
+  }
+}

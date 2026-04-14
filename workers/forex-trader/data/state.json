@@ -1,13 +1,13 @@
 {
-  "consecutive_losses": 0,
-  "consecutive_wins": 1,
-  "last_trade_time": "2026-03-27T15:15:22.339237+00:00",
-  "total_trades": 74,
-  "wins": 14,
-  "losses": 39,
-  "total_pnl": -96.25,
-  "last_balance": 31023.62,
-  "initial_balance": 31000,
-  "last_loss_time": "2026-04-08T14:52:28.982414+00:00",
-  "daily_stop_date": "2026-03-31"
+  "consecutive_losses": 8,
+  "consecutive_wins": 0,
+  "last_trade_time": "",
+  "total_trades": 0,
+  "wins": 0,
+  "losses": 0,
+  "total_pnl": 0,
+  "last_balance": 31024.73,
+  "initial_balance": 30998.83,
+  "last_loss_time": "2026-04-14T07:49:54.773580+00:00",
+  "daily_stop_date": ""
 }

@@ -1257,5 +1257,33 @@
     "orderId": 19425713207,
     "status": "success",
     "timestamp": "2026-04-11T19:35:13.313Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "btctwd",
+    "totalTwd": 1064,
+    "volume": 0.00046468,
+    "askPrice": 2278254.9,
+    "orderId": 19433021410,
+    "status": "success",
+    "timestamp": "2026-04-12T10:40:02.113Z"
+  },
+  {
+    "action": "market_buy",
+    "market": "btctwd",
+    "totalTwd": 1968,
+    "volume": 0.00086469,
+    "askPrice": 2264564.5,
+    "orderId": 19434071657,
+    "status": "success",
+    "timestamp": "2026-04-12T12:54:29.466Z"
+  },
+  {
+    "action": "market_sell",
+    "market": "soltwd",
+    "amount": 0.3672624,
+    "orderId": 19450521506,
+    "status": "success",
+    "timestamp": "2026-04-13T19:50:58.925Z"
   }
 ]

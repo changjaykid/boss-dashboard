@@ -1,102 +1,104 @@
 {
-  "timestamp": "2026-04-12T10:02:55.423Z",
+  "timestamp": "2026-04-14T09:21:19.036Z",
   "market": "btctwd",
   "ticker": {
-    "last": 2278344.7,
-    "buy": 2278000,
-    "buyVol": 0.05225847,
-    "sell": 2278077.4,
-    "sellVol": 0.13170555,
-    "high": 2346153.8,
-    "low": 2270743.6,
-    "open": 2322010,
-    "vol": 21.6597,
-    "change24h": -1.880495777365292
+    "last": 2372114.7,
+    "buy": 2369799.2,
+    "buyVol": 0.00041695,
+    "sell": 2370258.4,
+    "sellVol": 0.12657065,
+    "high": 2375183.4,
+    "low": 2254457.1,
+    "open": 2254957.1,
+    "vol": 34.4857,
+    "change24h": 5.195557822363897
   },
   "indicators": {
     "15m": {
-      "ema8": 2280053.483314811,
-      "ema21": 2282819.1077859895,
-      "emaRelation": "bearish",
+      "ema8": 2368724.6593646556,
+      "ema21": 2364420.210178286,
+      "emaRelation": "bullish",
       "emaCross": "none",
-      "rsi": 36.408896280533014,
+      "rsi": 67.39435314010888,
       "macd": {
-        "macd": -3732.190245703794,
-        "signal": -4389.826984972075,
-        "histogram": 657.6367392682805,
-        "prevHistogram": 767.39338367029
+        "macd": 4575.764184015337,
+        "signal": 4380.553891270257,
+        "histogram": 195.21029274508055,
+        "prevHistogram": 116.55455004898522
       },
       "bollinger": {
-        "upper": 2285778.1210836694,
-        "middle": 2281874.9000000004,
-        "lower": 2277971.6789163314,
-        "width": 0.3421064917861353,
+        "upper": 2374933.4479282233,
+        "middle": 2363462.3449999997,
+        "lower": 2351991.242071776,
+        "width": 0.9707032525812143,
         "squeeze": true
       },
-      "atr": 2942.484289276199,
-      "vwap": 2305494.286334732,
-      "priceVsVwap": "below",
-      "volume": 0.0011,
-      "volumeMA20": 0.12631,
-      "volumeRatio": 0.008708732483572163,
+      "atr": 4260.77710174615,
+      "vwap": 2332094.699507269,
+      "priceVsVwap": "above",
+      "volume": 0.0184,
+      "volumeMA20": 0.29940500000000003,
+      "volumeRatio": 0.061455219518712106,
       "volumeConfirm": false,
-      "trend": "down",
-      "candlePatterns": [],
+      "trend": "strong_up",
+      "candlePatterns": [
+        "consecutive_bull_3"
+      ],
       "supportResistance": {
         "resistance": [
-          2289462,
-          2288239.5,
-          2286064.5
+          2375183.4,
+          2374111.5,
+          2373260.9
         ],
         "support": [
-          2275391,
-          2276000,
-          2276470.5
+          2351543.3,
+          2353000,
+          2355080.5
         ]
       },
       "lastCandle": {
-        "time": 1775988000000,
-        "open": 2278000,
-        "high": 2278344.7,
-        "low": 2278000,
-        "close": 2278344.7,
-        "volume": 0.0011
+        "time": 1776158100000,
+        "open": 2370867,
+        "high": 2372169.6,
+        "low": 2370867,
+        "close": 2372114.7,
+        "volume": 0.0184
       },
       "prevCandle": {
-        "time": 1775987100000,
-        "open": 2278877.3,
-        "high": 2279582,
-        "low": 2278000,
-        "close": 2278000,
-        "volume": 0.1143
+        "time": 1776157200000,
+        "open": 2369808,
+        "high": 2371215.9,
+        "low": 2368999.7,
+        "close": 2370867,
+        "volume": 0.102
       }
     },
     "1h": {
-      "ema8": 2284114.727504633,
-      "ema21": 2297826.211113351,
-      "emaRelation": "bearish",
-      "rsi": 34.94312834655031,
+      "ema8": 2362163.5286841737,
+      "ema21": 2339285.4758808836,
+      "emaRelation": "bullish",
+      "rsi": 73.37068817194589,
       "macd": {
-        "macd": -11144.839160323143,
-        "signal": -7784.550858956942,
-        "histogram": -3360.2883013662013,
-        "prevHistogram": -3968.3748689014556
+        "macd": 23036.314858520404,
+        "signal": 22058.54451856958,
+        "histogram": 977.7703399508246,
+        "prevHistogram": 1334.9541442295304
       },
-      "trend": "strong_down"
+      "trend": "strong_up"
     },
     "4h": {
-      "ema8": 2299323.7233582693,
-      "ema21": 2292570.5974746607,
+      "ema8": 2336171.9380109403,
+      "ema21": 2312434.999624603,
       "emaRelation": "bullish",
-      "rsi": 52.65782340297697,
-      "trend": "up"
+      "rsi": 69.97394419822365,
+      "trend": "strong_up"
     }
   },
   "multiTimeframe": {
-    "trend15m": "down",
-    "trend1h": "strong_down",
-    "trend4h": "up",
-    "aligned": false,
-    "direction": "SELL"
+    "trend15m": "strong_up",
+    "trend1h": "strong_up",
+    "trend4h": "strong_up",
+    "aligned": true,
+    "direction": "BUY"
   }
 }

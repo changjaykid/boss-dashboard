@@ -1,100 +1,99 @@
 {
-  "timestamp": "2026-04-12T10:02:56.407Z",
+  "timestamp": "2026-04-14T09:21:20.291Z",
   "market": "soltwd",
   "ticker": {
-    "last": 2620,
-    "buy": 2619,
-    "buyVol": 0.382,
-    "sell": 2624.3,
-    "sellVol": 0.157,
-    "high": 2741.6,
-    "low": 2610.8,
-    "open": 2692,
-    "vol": 2538.663,
-    "change24h": -2.674591381872214
+    "last": 2733,
+    "buy": 2726,
+    "buyVol": 59.272,
+    "sell": 2734.9,
+    "sellVol": 11.111,
+    "high": 2742.3,
+    "low": 2605.5,
+    "open": 2620,
+    "vol": 3743.442,
+    "change24h": 4.312977099236641
   },
   "indicators": {
     "15m": {
-      "ema8": 2620.2377604955886,
-      "ema21": 2624.5632109845333,
-      "emaRelation": "bearish",
+      "ema8": 2732.7284462473845,
+      "ema21": 2728.4818957631564,
+      "emaRelation": "bullish",
       "emaCross": "none",
-      "rsi": 36.12788099985429,
+      "rsi": 57.36606802033763,
       "macd": {
-        "macd": -6.697833983636883,
-        "signal": -8.649618789387642,
-        "histogram": 1.9517848057507585,
-        "prevHistogram": 1.9962521354394536
+        "macd": 4.346167819233415,
+        "signal": 3.8731825258424686,
+        "histogram": 0.4729852933909462,
+        "prevHistogram": 0.7511172027143274
       },
       "bollinger": {
-        "upper": 2628.8550758720967,
-        "middle": 2622.2649999999994,
-        "lower": 2615.674924127902,
-        "width": 0.5026247059009902,
+        "upper": 2742.651430253926,
+        "middle": 2725.2150000000006,
+        "lower": 2707.7785697460754,
+        "width": 1.2796370380997684,
         "squeeze": true
       },
-      "atr": 3.2183307526676628,
-      "vwap": 2665.816693485872,
-      "priceVsVwap": "below",
-      "volume": 0,
-      "volumeMA20": 17.306350000000002,
-      "volumeRatio": 0,
+      "atr": 3.9697805415016734,
+      "vwap": 2700.9471652755556,
+      "priceVsVwap": "above",
+      "volume": 5.574,
+      "volumeMA20": 22.893,
+      "volumeRatio": 0.24348053990302712,
       "volumeConfirm": false,
-      "trend": "down",
+      "trend": "strong_up",
       "candlePatterns": [],
       "supportResistance": {
         "resistance": [
-          2633.7,
-          2630.7
+          2739.3
         ],
         "support": [
-          2616.7,
-          2617.1
+          2710,
+          2710.9
         ]
       },
       "lastCandle": {
-        "time": 1775988000000,
-        "open": 2620,
-        "high": 2620,
-        "low": 2620,
-        "close": 2620,
-        "volume": 0
+        "time": 1776158100000,
+        "open": 2735.9,
+        "high": 2735.9,
+        "low": 2733,
+        "close": 2733,
+        "volume": 5.574
       },
       "prevCandle": {
-        "time": 1775987100000,
-        "open": 2620,
-        "high": 2620.5,
-        "low": 2620,
-        "close": 2620,
-        "volume": 99.468
+        "time": 1776157200000,
+        "open": 2735.9,
+        "high": 2735.9,
+        "low": 2735.9,
+        "close": 2735.9,
+        "volume": 0
       }
     },
     "1h": {
-      "ema8": 2628.340551904092,
-      "ema21": 2652.638459715256,
-      "emaRelation": "bearish",
-      "rsi": 35.66106088071389,
+      "ema8": 2725.877709553377,
+      "ema21": 2700.3233504490904,
+      "emaRelation": "bullish",
+      "rsi": 62.72707396926721,
       "macd": {
-        "macd": -20.293516817822365,
-        "signal": -14.800332325241623,
-        "histogram": -5.493184492580742,
-        "prevHistogram": -6.70422614397982
+        "macd": 26.32106623874097,
+        "signal": 25.808431148493806,
+        "histogram": 0.5126350902471621,
+        "prevHistogram": 1.2453059314015675
       },
-      "trend": "strong_down"
+      "trend": "strong_up"
     },
     "4h": {
-      "ema8": 2657.6666269529096,
-      "ema21": 2657.518520470456,
+      "ema8": 2697.271420202922,
+      "ema21": 2672.662241783428,
       "emaRelation": "bullish",
-      "rsi": 49.103071405204126,
-      "trend": "up"
+      "rsi": 64.06468989377768,
+      "trend": "strong_up"
     }
   },
   "multiTimeframe": {
-    "trend15m": "down",
-    "trend1h": "strong_down",
-    "trend4h": "up",
-    "aligned": false,
-    "direction": "SELL"
+    "trend15m": "strong_up",
+    "trend1h": "strong_up",
+    "trend4h": "strong_up",
+    "aligned": true,
+    "direction": "BUY"
   }
 }

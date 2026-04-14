@@ -1,9 +1,7 @@
-### 本次檢查 (2026-04-12 17:24)
-- 賺錢機 v7：數據已同步，SOL 持倉監控中 (浮虧 -1.1%)，BTC 空倉（因先前平倉數據滯後已修正）。
-- 合約 v8：BTC 多單浮虧監控中，已執行優化機制 (optimize_traders.js)。
-- 主控板：已強制同步並推送，確保顯示為實時真實數據。
+# HEARTBEAT.md Template
 
-### 待處理事項：
-- 提醒老闆審核社群草稿。
-- 監控 SOL 持倉狀況（目前浮虧約 -1.1%）。
-- 週一 Capital.com 開盤預備 (XAUUSD/NAS100)。
+```markdown
+# Keep this file empty (or with only comments) to skip heartbeat API calls.
+
+# Add tasks below when you want the agent to check something periodically.
+```

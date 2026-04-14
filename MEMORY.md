@@ -12,9 +12,13 @@
 - 老闆審核後才能發社群文，不可自行發布。
 
 ## 模型規則
-- LINE 對話固定 claude-opus-4-6，降級順序：opus → gemini-3.1-pro → gemini-3-flash
-- 背景 cron 全用 gpt-4o-mini。Heartbeat 用 gpt-4o-mini。
-- 切換模型必須告知老闆。
+- **🚨 絕對禁止使用 claude-opus。Token 太貴，老闆明確禁止。**
+- **主 session 現在用 anthropic/claude-sonnet-4-6**（2026-04-15 因 gpt-5.4 rate-limit 爆掉改的）
+- **所有 cron 員工也改為 claude-sonnet-4-6**（binance-futures、money-maker、forex-auto-trader、social、nightly-report、backup、forex-weekend-study）
+- agents.defaults.model.primary = anthropic/claude-sonnet-4-6
+- gpt-5.4 額度爆掉過（2026-04-14 晚）— 未來考慮切回但需確認額度
+- **血的教訓（2026-04-14）**：gpt-5.4 + gemini 額度全掉 → 主 session 無法回應長達 10+ 小時。改用 claude-sonnet 作為主力避免單點失敗。
+- **血的教訓（2026-04-15）**：sync-max-balance cron 刪除。daily-backup 改 3 天一次。
 
 ## 回報規則
 - 固定回報：11:00 / 18:00 社群草稿、22:00 每日總回報
@@ -59,15 +63,13 @@
 - 如果必須多份，寫入時必須原子性全部更新
 - heartbeat 要主動掃描狀態一致性
 
-## 工作原則
-- 追根因不修表面、一次修到底、數字必須腳本抓取不可編造
-- 任何自動化上線前端到端測試
-- 每次 heartbeat 掃 cron + log，發現問題立即修復
-- **暫停 = disable，絕對不要刪除 cron**
+## 工作原則 (2026-04-12 更新)
+- **追根因不修表面、一次修到底、數據必須腳本抓取不可編造**
+- **嚴禁依賴緩存數據回報資產，每次涉及金額必須調用 API 實時抓取**
+- **積極交易定義**：合約槓桿 20x，單筆權重 50%，掃描頻率 10min/次。
+- **老闆最恨的事情**：交代事情要說兩次、回報數字與實況不符、避重就輕。
+- **改進方向**：主動發現異常（如持倉滯後）並在老闆發問前修正，不准等老闆來抓包。
 - **做完就驗證，不要假設成功**
-- **不要重複犯同樣的錯，犯過的記在 MEMORY.md**
-- **回覆 LINE 最多 300 字，簡短直接**
-- **老闆的期望：幫他賺錢、省時間、不出錯。這是唯一標準。**
 
 ## 已暫停項目（skill 保留不刪）
 - 虛擬貨幣模擬交易、廣告業務掃描、IG、台股、外匯新聞、幣圈新聞

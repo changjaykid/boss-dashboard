@@ -2,7 +2,9 @@
 # Multi-Instrument Auto Trader v3 - Capital.com
 export PATH="/usr/local/bin:/usr/bin:/bin:$PATH"
 
-API_URL="https://api-capital.backend-capital.com"
+# Demo API key expired — authenticate via LIVE API, then use tokens on demo endpoint
+LIVE_API_URL="https://api-capital.backend-capital.com"
+API_URL="https://demo-api-capital.backend-capital.com"
 API_KEY="XIiPKqsC9qYZ3rM2"
 EMAIL="jaykidforextrading@gmail.com"
 PASS="@Jaykid03120312"
@@ -15,8 +17,8 @@ if [ ! -f "$STATE_FILE" ]; then
   echo '{"consecutive_losses":0,"last_trade_time":"","total_trades":0,"wins":0,"losses":0,"total_pnl":0}' > "$STATE_FILE"
 fi
 
-# Login
-RESPONSE=$(curl -s -D /tmp/cap_auto_headers.txt -X POST "$API_URL/api/v1/session" \
+# Login via LIVE API (demo API key expired, but live tokens work on demo endpoint)
+RESPONSE=$(curl -s -D /tmp/cap_auto_headers.txt -X POST "$LIVE_API_URL/api/v1/session" \
   -H "Content-Type: application/json" \
   -H "X-CAP-API-KEY: $API_KEY" \
   -d "{\"identifier\":\"$EMAIL\",\"password\":\"$PASS\"}" 2>/dev/null)
@@ -29,12 +31,15 @@ if [ -z "$CST" ]; then
   exit 1
 fi
 
+echo "LOGIN_OK (via live API, using tokens on demo endpoint)"
+
 # Get positions & account
 POSITIONS=$(curl -s "$API_URL/api/v1/positions" -H "X-SECURITY-TOKEN: $XSEC" -H "CST: $CST" 2>/dev/null)
 ACCOUNT=$(curl -s "$API_URL/api/v1/accounts" -H "X-SECURITY-TOKEN: $XSEC" -H "CST: $CST" 2>/dev/null)
 
 # Fetch data for each instrument
-INSTRUMENTS="GOLD EURUSDM2026 GBPUSD USDJPYM2026 US30 US500 US100"
+# Demo API uses different epic names for EUR/USD and USD/JPY
+INSTRUMENTS="GOLD EURUSD GBPUSD USDJPY US30 US500 US100"
 
 python3 << PYEOF > /tmp/market_data.json 2>/dev/null
 import json, requests

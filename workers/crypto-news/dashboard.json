@@ -1,64 +1,64 @@
 {
-  "lastUpdate": "2026-04-12 06:15:00",
+  "lastUpdate": "2026-04-13 20:06:00",
   "updateCycle": "08:00/20:00",
   "news": [
     {
-      "title": "SEC 新主席 Paul Atkins 承諾 2026 年優先推動加密貨幣監管紅利",
-      "source": "BlockTempo",
-      "time": "2026-04-12 05:00",
-      "summary": "SEC 新主席 Paul Atkins 表示 2026 年將加密貨幣列為優先事項，市場預期監管環境將從打壓轉向扶持。",
-      "analysis": "監管放寬是長線利多，有助於吸引更多機構資金進入。BTC 歷史高位突破的可能性增加。",
+      "title": "比特幣四年週期終結？MicroStrategy (MSTR) 揭華爾街狂掃內幕",
+      "source": "CMoney投資網誌",
+      "time": "2026-04-13 05:15 UTC",
+      "summary": "分析指出 BTC 傳統四年減半週期可能因機構持續買入而改變。MicroStrategy 等機構級買家持續增持，華爾街資金流入改變了市場結構，使得週期頂部可能延後或弱化。",
+      "analysis": "若四年週期被打破，意味著 BTC 不再有大幅回調的「週期性熊市」。對長期持有者利多，但短線影響有限。MicroStrategy 持續增持穩定了底部支撐。",
       "impact": {
-        "coins": ["BTC", "ETH", "SOL"],
-        "direction": "強烈利多，監管環境透明化將推動整體市值成長",
-        "severity": "high"
+        "coins": ["BTC"],
+        "direction": "中長線利多，機構買盤改變市場結構",
+        "severity": "medium"
       }
     },
     {
-      "title": "Jack Dorsey 旗下 Block 宣布「比特幣水龍頭」重啟活動",
-      "source": "BlockTempo",
-      "time": "2026-04-11 23:00",
-      "summary": "Block 公司的比特幣團隊將發放總值約 100 萬美元的 BTC，向 2010 年的原始水龍頭致敬。",
-      "analysis": "此舉象徵意義大於實際賣壓，展現了比特幣核心支持者的回歸與推廣，有助於社群熱度提升。",
+      "title": "BTC 三週高點回落，對伊朗停火消息反應冷淡",
+      "source": "TradingView",
+      "time": "2026-04-08 14:44 UTC",
+      "summary": "BTC 曾因伊朗停火消息短暫衝高，但隨後回落。市場對地緣政治消息的敏感度正在下降，顯示投資者開始「消息疲勞」。",
+      "analysis": "地緣消息對 BTC 的影響正在邊際遞減。上週美伊談判破裂造成的 2% 跌幅尚未完全收復，但市場已趨穩定，顯示拋壓有限。",
       "impact": {
         "coins": ["BTC"],
-        "direction": "情緒利多，提升 BTC 品牌認知度與社群活躍度",
+        "direction": "中性，市場消化地緣風險中",
         "severity": "low"
       }
     },
     {
-      "title": "Bitfinex 報告：比特幣月線終結半年連跌，衍生品市場信心仍脆弱",
-      "source": "Bitfinex",
-      "time": "2026-04-11 12:00",
-      "summary": "雖然 3 月月線收正，且 ETF 資金恢復淨流入，但資金費率罕見走負，顯示散戶情緒依然保守。",
-      "analysis": "這呈現出「現貨強、期貨弱」的背離現象。通常這種情緒壓抑是上漲的養分（燃料），若空頭爆倉可能引發擠壓上漲。",
+      "title": "不丹在 18 個月內出售 70% 的 BTC 持倉",
+      "source": "MEXC",
+      "time": "2026-04-12 02:15 UTC",
+      "summary": "不丹政府透過其投資機構 Druk Holding 在 18 個月內拋售了約 70% 的國家級 BTC 儲備，顯示部分主權基金正在獲利了結。",
+      "analysis": "不丹持倉量相對全球市場偏小，實際拋壓有限。但代表部分國家級持有者在高位減倉，需關注是否有更多主權基金跟進。短線影響不大。",
       "impact": {
         "coins": ["BTC"],
-        "direction": "中性偏利多（空頭擠壓潛力大）",
-        "severity": "medium"
+        "direction": "短線微利空，但量體小影響有限",
+        "severity": "low"
       }
     },
     {
-      "title": "22 億美元加密選擇權到期，市場賣壓緩解",
-      "source": "MEXC News",
-      "time": "2026-04-11 05:00",
-      "summary": "大額選擇權結算完成，BTC 走勢改善且 ETH 訊號增強，技術面出現黃金交叉跡象。",
-      "analysis": "結算後的賣壓真空期通常是波段起點，配合目前 BTC 7.3 萬美元的強勢表現，看漲機率高。",
+      "title": "中東衝突推升通膨危機！BTC 抗通膨優勢顯現，成為避險新寵",
+      "source": "CMoney投資網誌",
+      "time": "2026-04-13 12:00 UTC",
+      "summary": "中東衝突持續推高油價與通膨預期，BTC 作為「數位黃金」的抗通膨敘事再度被強化。機構報告顯示部分避險資金正從黃金分流至 BTC。",
+      "analysis": "通膨敘事是 BTC 的長期利多因子。若中東局勢持續緊張推高油價，BTC 避險需求將增加。但短線仍受風險資產情緒拖累，需等待 risk-off 轉為 risk-on。",
       "impact": {
         "coins": ["BTC", "ETH"],
-        "direction": "短線看漲，賣壓已被市場吸收",
+        "direction": "長線利多，避險敘事增強",
         "severity": "medium"
       }
     },
     {
-      "title": "Solana 網路升級進展順利，DOGE 受名人效應再次活躍",
-      "source": "Web Search (綜合)",
-      "time": "2026-04-12 04:00",
-      "summary": "SOL 網路性能優化獲得開發者青睞；DOGE 在社群平台討論熱度回升，與特定名人推特互動有關。",
-      "analysis": "山寨幣在 BTC 站穩後有補漲動能，特別是 SOL 和 DOGE 這類具備高波動基因的幣種。",
+      "title": "$22 億加密貨幣選擇權到期，BTC 走勢改善且 ETH 訊號增強",
+      "source": "MEXC",
+      "time": "2026-04-10 21:20 UTC",
+      "summary": "上週五約 $22 億加密貨幣選擇權到期。到期後 BTC 波動率下降、ETH 看漲比例上升。選擇權市場數據顯示交易者對 ETH 的信心正在恢復。",
+      "analysis": "大量選擇權到期後通常帶來短期波動率壓縮，有利於價格企穩。ETH 看漲訊號增強值得關注，可能預示 ETH/BTC 比值止跌反彈。",
       "impact": {
-        "coins": ["SOL", "DOGE"],
-        "direction": "看漲，風險情緒升溫帶動山寨幣補漲",
+        "coins": ["BTC", "ETH"],
+        "direction": "短線中性偏多，波動率壓縮利於盤整",
         "severity": "medium"
       }
     }
@@ -66,37 +66,74 @@
   "socialDiscussions": [
     {
       "platform": "X",
-      "title": "利用資金費率 (Funding Rate) + RSI 做反向交易策略分享",
-      "author": "@CryptoTraderAI",
-      "summary": "分享在極端負費率時配合 RSI 超賣區間進行左側接多，勝率顯著。",
-      "whatTheyDid": "監測永續合約資金費率，當費率 < -0.01% 且 RSI < 30 時進場。",
-      "whatWeCanLearn": "資金費率是衡量市場過熱或過冷的好指標，可整合至合約交易腳本作為過濾器。",
-      "url": "https://x.com/search?q=crypto+trading+bot"
+      "title": "地緣事件型交易策略：戰爭消息發布後 BTC 反彈窗口統計",
+      "author": "@CryptoGeoPol",
+      "summary": "統計顯示美伊相關消息導致 BTC 急跌後，平均 6-12 小時內回彈 50-70% 跌幅，建議在急跌 2% 後分批接多。",
+      "whatTheyDid": "建立地緣事件數據庫，追蹤每次中東消息對 BTC 的衝擊與恢復時間，作為反向交易信號。",
+      "whatWeCanLearn": "美伊談判破裂導致的下跌屬事件型衝擊非趨勢反轉。賺錢機與合約員工可考慮在急跌後等待 6-12 小時回穩再進場。",
+      "url": "https://x.com/search?q=crypto+iran+war+trading"
     },
     {
       "platform": "Reddit",
-      "title": "2026 年 AI 交易機器人的新常態：情緒分析過濾器",
-      "author": "u/AlgoHedge",
-      "summary": "Reddit r/algotrading 討論如何將大型語言模型 (LLM) 的新聞情緒即時接入交易信號。",
-      "whatTheyDid": "使用 API 抓取新聞並分級 (High/Medium/Low Impact)，當 Impact 為 High 且方向一致時才執行趨勢策略。",
-      "whatWeCanLearn": "強化我們目前的 crypto-news 輸出，讓賺錢機更直接地根據 impact 權重調整倉位。",
+      "title": "r/algotrading：如何在高波動地緣環境下保護 AI 交易機器人",
+      "author": "u/QuantWarfare",
+      "summary": "討論在地緣政治高風險期間降低交易頻率、加寬止損、以及使用波動率過濾器（ATR > 閾值時暫停交易）的方法。",
+      "whatTheyDid": "設置 ATR 過濾器：當 1H ATR 超過 14 日均值 2 倍時自動暫停策略，避免在劇烈波動中被連續止損。",
+      "whatWeCanLearn": "在目前地緣風險期，合約員工應考慮增加波動率過濾機制，避免在消息面劇震時被雙向打臉。",
       "url": "https://reddit.com/r/algotrading"
     }
   ],
   "conclusion": {
-    "marketOutlook": "比特幣 (BTC) 已成功站上 7.3 萬美元，技術面出現黃金交叉且月線收正，基本面受 SEC 監管紅利與 ETF 資金流入支撐。市場呈現「現貨強於衍生品」的健康態勢，短線即便有震盪，整體趨勢仍偏多。",
+    "marketOutlook": "📊 盤整偏穩。BTC $70,899（-0.69%），ETH $2,184（-0.80%），SOL $81.90（-0.42%），DOGE $0.0909（-0.34%）。相比昨日美伊談判破裂後的 2-3% 急跌，今日跌幅大幅收窄至 1% 以內，市場正在消化地緣風險。MicroStrategy 持續增持改變市場結構、BTC 抗通膨敘事增強、選擇權到期後波動率壓縮，三重因素支撐底部。不丹拋售 70% BTC 持倉為小利空但量體有限。整體格局：短線盤整築底，中長線偏多。",
     "tradingImplications": [
-      "BTC/ETH：具備極強的突破動能，目前 73,488 USD 是關鍵支撐，若站穩有望挑戰 8 萬美元大關。合約交易應以回調接多為主。",
-      "SOL/DOGE：SOL 升級利多與 DOGE 社群熱度回升，顯示山寨幣季節可能由這兩者領漲，建議動能策略可適度加權。",
-      "具體操作：鑑於衍生品市場空頭情緒濃厚，需警惕「空頭擠壓 (Short Squeeze)」引發的爆拉行情，止損位不宜過窄。"
+      "BTC：$70,000 支撐依然關鍵。今日跌幅僅 -0.69%，顯示昨日恐慌拋壓已大幅消退。若能站穩 $70,500 以上，可能重新挑戰 $72,000-$73,000。",
+      "ETH：跌幅 -0.80% 與 BTC 同步，選擇權市場看漲訊號增強。$2,100 仍是底部防線，目前 $2,184 距離安全。ETH/BTC 比值可能止跌。",
+      "SOL：跌幅僅 -0.42%，相對抗跌。$80 為心理關卡，若 BTC 企穩，SOL 反彈空間較大。",
+      "DOGE：跌幅最小 -0.34%，持平盤整。短線無催化劑，隨大盤走。"
     ],
     "suggestedActions": [
-      "合約員工：將策略權重轉向看多，優先佈局 BTC 突破單，留意空頭擠壓行情。",
-      "賺錢機員工：保持持倉，BTC 動能強勁，可考慮增加 BTC/SOL 動能幣種配置。"
+      "合約員工：市場從急跌轉為盤整，波動率收窄。建議：(1) 可小量試多 BTC，入場 $70,500-$71,000，止損 $69,800，(2) 目標 $72,500，(3) 保持 ATR 波動率過濾器，若再有地緣消息引發急跌則暫停。",
+      "賺錢機員工：昨日恐慌已消退，可恢復正常交易頻率。建議：(1) BTC 在 $70,000-$71,000 區間可分批低吸，(2) ETH 看漲訊號增強，可小量配置，(3) SOL/DOGE 等 BTC 方向確認後再操作。"
     ],
     "systemOptimization": [
-      "合約員工建議：整合資金費率監控。當 BTC 費率顯著轉負而價格未跌時，優先執行多單。",
-      "賺錢機建議：建議強化 Impact 分級過濾器，High Impact 且方向一致時加大交易槓桿或位。"
+      "合約員工建議：地緣消息衝擊正在邊際遞減，可逐步恢復正常倉位比例（從 50% 回升至 70%），但保留 ATR 過濾器作為安全閥。",
+      "賺錢機建議：當前市場進入低波動盤整期，適合網格策略或區間操作。BTC $69,500-$73,000 可設定網格。"
     ]
+  },
+  "prices": {
+    "fetchedAt": "2026-04-13 20:07:00",
+    "source": "CoinGecko API",
+    "BTC_USD": {
+      "price": 70899,
+      "change_pct": -0.69
+    },
+    "ETH_USD": {
+      "price": 2184.69,
+      "change_pct": -0.80
+    },
+    "SOL_USD": {
+      "price": 81.90,
+      "change_pct": -0.42
+    },
+    "DOGE_USD": {
+      "price": 0.090907,
+      "change_pct": -0.34
+    },
+    "BTC_TWD": {
+      "price": 2254994,
+      "change_pct": -0.49
+    },
+    "ETH_TWD": {
+      "price": 69485,
+      "change_pct": -0.60
+    },
+    "USD_TWD": {
+      "price": 31.80,
+      "change_pct": 0.0
+    },
+    "fearGreedIndex": {
+      "value": "N/A",
+      "classification": "N/A"
+    }
   }
 }

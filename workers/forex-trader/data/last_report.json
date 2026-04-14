@@ -1,43 +1,20 @@
 {
-  "time": "2026-04-08T15:07:26.423936+00:00",
-  "balance": 31023.62,
+  "time": "2026-04-14T09:16:45.014168+00:00",
+  "balance": 31024.73,
   "prices": {
     "GOLD": {
-      "bid": 4746.98,
-      "ask": 4747.48
+      "bid": 4786.64,
+      "ask": 4787.14
     },
-    "EURUSDM2026": {
-      "bid": 1.17246,
-      "ask": 1.17252
+    "EURUSD": {
+      "bid": 1.17877,
+      "ask": 1.17884
     },
     "GBPUSD": {
-      "bid": 1.3436,
-      "ask": 1.34374
-    },
-    "USDJPYM2026": {
-      "bid": 157.504,
-      "ask": 157.517
-    },
-    "US30": {
-      "bid": 47659.4,
-      "ask": 47661.4
-    },
-    "US500": {
-      "bid": 6758.6,
-      "ask": 6759.0
-    },
-    "US100": {
-      "bid": 24843.0,
-      "ask": 24844.8
+      "bid": 1.35411,
+      "ask": 1.35425
     }
   },
-  "actions": [
-    "SYNC_CLOSE: US100 SELL PnL=$4.8 (calculated_from_market)",
-    "BLOCKED: GOLD BUY \u2014 \u5df2\u6301\u6709 GOLD",
-    "BLOCKED: GOLD SELL \u2014 \u5df2\u6301\u6709 GOLD",
-    "OPENED SELL US30 [multi_indicator_consensus] Conf:0.70 SL:125.9 TP:262.2",
-    "OPENED SELL US500 [multi_indicator_consensus] Conf:0.65 SL:15.6 TP:32.5",
-    "BLOCKED: US100 SELL \u2014 \u5df2\u6301\u6709 US100"
-  ],
+  "actions": [],
   "alerts": []
 }

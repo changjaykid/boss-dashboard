@@ -207,7 +207,7 @@ async function main() {
     
     // Split if needed
     const { main: mainText, reply: replyText } = splitText(fullText);
-    const imageUrl = draft.image_url || null;
+    const imageUrl = (draft.image_url && draft.image_url.startsWith('http')) ? draft.image_url : null;
     
     console.log(`📤 發佈: ${draft.id} (${mainText.length} 字${replyText ? ' + 留言' + replyText.length + '字' : ''})`);
     

@@ -1,42 +1,41 @@
 {
-  "lastUpdate": "2026-04-12 18:02",
+  "lastUpdate": "2026-04-14 17:21",
   "status": "RUNNING",
-  "mode": "v7_concentrated_swing",
+  "mode": "v9_grid_trading",
   "capital": 10000,
-  "totalEquity": 11943,
-  "netEquity": 11943,
-  "totalPnl": 1943,
-  "btcPrice": 2278345,
-  "btcChange24h": -1.88,
+  "totalEquity": 11129,
+  "netEquity": 11129,
+  "totalPnl": 1129,
+  "btcPrice": 2372115,
+  "btcChange24h": 5.2,
   "holdings": {
-    "btc": 0.00086059,
-    "avgCost": 2277506,
-    "unrealizedPnl": -997,
+    "btc": 0.00132723,
+    "avgCost": 2272889,
+    "unrealizedPnl": -840,
     "positions": [
       {
         "coin": "BTC",
-        "held": 0.00086059,
-        "value": 1961,
-        "pnl": 1
+        "held": 0.00132723,
+        "value": 3148,
+        "pnl": 116
       },
       {
         "coin": "SOL",
         "held": 0.3672624,
-        "value": 962,
-        "pnl": -998
+        "value": 1004,
+        "pnl": -956
       }
     ]
   },
   "buyOrders": 14,
   "sellOrders": 14,
   "consecutiveLosses": 0,
-  "fearGreedIndex": "--",
-  "nextAction": "持倉監控中",
+  "nextAction": "Grid Trading 運行中",
   "signals": {
     "technical": "--",
     "news": "--",
     "sentiment": "--",
-    "overall": "運行中"
+    "overall": "Grid Trading"
   },
   "dailyLimit": {
     "remaining": 800
@@ -44,29 +43,141 @@
   "positions": [
     {
       "market": "btctwd",
-      "held": 0.00086059,
-      "value": 1961,
-      "avgEntry": 2277506,
-      "pnl": 1
+      "held": 0.00132723,
+      "value": 3148,
+      "avgEntry": 2272889,
+      "pnl": 116
     },
     {
       "market": "soltwd",
       "held": 0.3672624,
-      "value": 962,
+      "value": 1004,
       "avgEntry": 2649,
-      "pnl": -998
+      "pnl": -956
     }
   ],
   "marketStats": {
     "btctwd": {
       "trades": 5,
       "wins": 5,
-      "pnl": 28
+      "pnl": 28,
+      "gridMode": "active",
+      "gridPnl": 0,
+      "gridTrades": 0,
+      "gridCenter": 2320752,
+      "gridLevels": [
+        {
+          "price": 2146695,
+          "side": "buy",
+          "status": "empty"
+        },
+        {
+          "price": 2181507,
+          "side": "buy",
+          "status": "empty"
+        },
+        {
+          "price": 2216318,
+          "side": "buy",
+          "status": "empty"
+        },
+        {
+          "price": 2251129,
+          "side": "buy",
+          "status": "empty"
+        },
+        {
+          "price": 2285940,
+          "side": "buy",
+          "status": "empty"
+        },
+        {
+          "price": 2355563,
+          "side": "sell",
+          "status": "empty"
+        },
+        {
+          "price": 2390374,
+          "side": "sell",
+          "status": "empty"
+        },
+        {
+          "price": 2425186,
+          "side": "sell",
+          "status": "empty"
+        },
+        {
+          "price": 2459997,
+          "side": "sell",
+          "status": "empty"
+        },
+        {
+          "price": 2494808,
+          "side": "sell",
+          "status": "empty"
+        }
+      ]
     },
     "soltwd": {
       "trades": 9,
       "wins": 8,
-      "pnl": 35
+      "pnl": 35,
+      "gridMode": "active",
+      "gridPnl": 0,
+      "gridTrades": 0,
+      "gridCenter": 2672,
+      "gridLevels": [
+        {
+          "price": 2405,
+          "side": "buy",
+          "status": "empty"
+        },
+        {
+          "price": 2458,
+          "side": "buy",
+          "status": "empty"
+        },
+        {
+          "price": 2512,
+          "side": "buy",
+          "status": "empty"
+        },
+        {
+          "price": 2565,
+          "side": "buy",
+          "status": "empty"
+        },
+        {
+          "price": 2619,
+          "side": "buy",
+          "status": "empty"
+        },
+        {
+          "price": 2725,
+          "side": "sell",
+          "status": "empty"
+        },
+        {
+          "price": 2779,
+          "side": "sell",
+          "status": "empty"
+        },
+        {
+          "price": 2832,
+          "side": "sell",
+          "status": "empty"
+        },
+        {
+          "price": 2886,
+          "side": "sell",
+          "status": "empty"
+        },
+        {
+          "price": 2939,
+          "side": "sell",
+          "status": "empty"
+        }
+      ]
     }
   },
   "riskStatus": {
@@ -78,17 +189,35 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2278345,
-      "rsi": "34.9",
-      "bbPos": "--"
+      "price": 2372115,
+      "rsi": "73.4"
     },
     "SOL": {
-      "price": 2620,
-      "rsi": "35.7",
-      "bbPos": "--"
+      "price": 2733,
+      "rsi": "62.7"
     }
   },
   "recentTrades": [
+    {
+      "exitTime": 1775998469541,
+      "coin": "BTC",
+      "side": "BUY",
+      "amount": 0.0008677130267632236,
+      "entryPrice": 2264402,
+      "twd": 1968,
+      "pnl": 0,
+      "reason": "強買(score=9.5, RSI=30)"
+    },
+    {
+      "exitTime": 1775990402188,
+      "coin": "BTC",
+      "side": "BUY",
+      "amount": 0.00046627207631867994,
+      "entryPrice": 2278278,
+      "twd": 1064,
+      "pnl": 0,
+      "reason": "買入(score=6.0, RSI=35)"
+    },
     {
       "exitTime": 1775753105065,
       "coin": "SOL",
@@ -118,59 +247,11 @@
       "twd": 1000,
       "pnl": 0,
       "reason": "強買入(3.0)"
-    },
-    {
-      "exitTime": 1775659142282,
-      "coin": "BTC",
-      "side": "BUY",
-      "amount": 0.0001584683648779249,
-      "entryPrice": 2268112,
-      "twd": 360,
-      "pnl": 0,
-      "reason": "強買入(7.5)"
-    },
-    {
-      "exitTime": 1775658782192,
-      "coin": "BTC",
-      "side": "BUY",
-      "amount": 0.00026422684975997105,
-      "entryPrice": 2267143,
-      "twd": 600,
-      "pnl": 0,
-      "reason": "強買入(7.5)"
-    },
-    {
-      "exitTime": 1775658354788,
-      "coin": "BTC",
-      "side": "BUY",
-      "amount": 0.0004378953130201487,
-      "entryPrice": 2279997,
-      "twd": 1000,
-      "pnl": 0,
-      "reason": "強買入(4.3)"
     }
   ],
-  "twdCash": 9018,
-  "legacyPositions": [
-    {
-      "market": "ethtwd",
-      "coin": "ETH",
-      "held": 8.6e-7,
-      "value": 0,
-      "avgEntry": 0,
-      "pnl": 0,
-      "note": "legacy"
-    },
-    {
-      "market": "dogetwd",
-      "coin": "DOGE",
-      "held": 0.9608,
-      "value": 3,
-      "avgEntry": 0,
-      "pnl": 0,
-      "note": "legacy"
-    }
-  ],
-  "strategyEquity": 11941,
-  "legacyEquity": 3
+  "checklists": {},
+  "twdCash": 6977,
+  "legacyPositions": [],
+  "strategyEquity": 11129,
+  "legacyEquity": 0
 }
