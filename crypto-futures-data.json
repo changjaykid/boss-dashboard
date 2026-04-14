@@ -1,14 +1,14 @@
 {
-  "lastUpdate": "2026-04-14 07:02",
+  "lastUpdate": "2026-04-14 08:02",
   "status": "RUNNING",
   "mode": "v10 動態槓桿+動態風報比",
   "exchange": "Binance Futures",
   "account": {
     "initialCapital": 464,
-    "balance": 432.19006201,
-    "available": 432.19006201,
-    "unrealizedPnl": 0,
-    "netEquity": 432.19006201,
+    "balance": 431.89342998,
+    "available": 376.16603208,
+    "unrealizedPnl": -1.77571193,
+    "netEquity": 430.11771805,
     "todayPnl": 0,
     "totalPnl": -0.6061788999999997,
     "leverage": "5-20x(動態)",
@@ -18,7 +18,16 @@
     "losses": 10,
     "maxDrawdown": 3.6088904907305173
   },
-  "position": null,
+  "position": {
+    "symbol": "BTCUSDT",
+    "side": "LONG",
+    "size": 0.009,
+    "entryPrice": 74627.4,
+    "markPrice": 74430.09867391,
+    "pnl": -1.77571193,
+    "leverage": 12,
+    "trailingStop": 73943.61638017821
+  },
   "todayStats": {
     "trades": 0,
     "wins": 0,
@@ -206,21 +215,20 @@
     }
   },
   "signals": {
-    "score": 18,
+    "score": 52,
     "direction": "LONG",
     "strategy": "TREND_PULLBACK",
     "marketState": "TRENDING_UP",
     "trend4h": "UP",
     "session": "TRANSITION",
     "reasons": [
-      "4H多頭(0.58%)",
+      "4H多頭(0.88%)",
       "4H MACD加速↑",
-      "4H MACD金叉",
       "1H EMA多排",
-      "⚠️壓力區不追多"
+      "1H量能爆發"
     ],
-    "buyScore": 24,
-    "sellScore": 5
+    "buyScore": 70,
+    "sellScore": 8
   },
   "recentTrades": [
     {
