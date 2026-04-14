@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-14 15:49:54",
+  "lastUpdate": "2026-04-14 16:04:55",
   "account": {
     "balance": 31024.73,
     "realizedPnl": -15.27,
@@ -430,16 +430,20 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4777.57,
-      "ask": 4778.52
+      "bid": 4774.82,
+      "ask": 4775.77
+    },
+    "EURUSD": {
+      "bid": 1.17792,
+      "ask": 1.17799
     },
     "GBPUSD": {
-      "bid": 1.35341,
-      "ask": 1.35355
+      "bid": 1.35318,
+      "ask": 1.35332
     },
     "USDJPY": {
-      "bid": 159.014,
-      "ask": 159.026
+      "bid": 159.047,
+      "ask": 159.059
     }
   },
   "indicators": {
@@ -448,25 +452,38 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 4777.57,
-      "rsi": 51.7,
-      "macd_hist": 2.2073,
-      "atr": 9.0757,
+      "bid": 4774.82,
+      "rsi": 51.1,
+      "macd_hist": 1.7641,
+      "atr": 9.1779,
       "bb_width": 0.0059,
-      "ema9": 4775.4849,
-      "ema21": 4773.0094
+      "ema9": 4775.2735,
+      "ema21": 4773.2962
+    },
+    "EURUSD": {
+      "name": "EUR/USD",
+      "regime": "RANGING",
+      "trend_1h": "RANGING",
+      "trend_15m": "RANGING",
+      "bid": 1.17792,
+      "rsi": 60.9,
+      "macd_hist": 0.0002,
+      "atr": 0.0008,
+      "bb_width": 0.0029,
+      "ema9": 1.1778,
+      "ema21": 1.1772
     },
     "GBPUSD": {
       "name": "GBP/USD",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 1.35341,
-      "rsi": 70.9,
+      "bid": 1.35318,
+      "rsi": 67.9,
       "macd_hist": 0.0002,
       "atr": 0.0007,
-      "bb_width": 0.0024,
-      "ema9": 1.3527,
+      "bb_width": 0.0023,
+      "ema9": 1.3528,
       "ema21": 1.3521
     },
     "USDJPY": {
@@ -474,21 +491,18 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 159.014,
-      "rsi": 44.7,
-      "macd_hist": -0.0137,
-      "atr": 0.0822,
-      "bb_width": 0.0016,
-      "ema9": 159.0807,
-      "ema21": 159.1159
+      "bid": 159.047,
+      "rsi": 48.8,
+      "macd_hist": -0.0146,
+      "atr": 0.0863,
+      "bb_width": 0.0015,
+      "ema9": 159.0841,
+      "ema21": 159.1129
     }
   },
   "actions": [
-    "SYNC_CLOSE: US500 BUY PnL=$-0.82 (calculated_from_market)",
-    "SYNC_CLOSE: US100 BUY PnL=$-3.36 (calculated_from_market)",
-    "SYNC_CLOSE: US500 BUY PnL=$-0.82 (calculated_from_market)",
-    "SYNC_CLOSE: US100 BUY PnL=$-3.36 (calculated_from_market)",
-    "BLOCKED: USDJPY SELL \u2014 3\u9023\u6557\u5f8c\u51b7\u537b30\u5206\u9418",
-    "BLOCKED: GBPUSD BUY \u2014 3\u9023\u6557\u5f8c\u51b7\u537b30\u5206\u9418"
+    "BLOCKED: EURUSD BUY \u2014 3\u9023\u6557\u5f8c\u51b7\u537b30\u5206\u9418",
+    "BLOCKED: GBPUSD BUY \u2014 3\u9023\u6557\u5f8c\u51b7\u537b30\u5206\u9418",
+    "BLOCKED: USDJPY SELL \u2014 3\u9023\u6557\u5f8c\u51b7\u537b30\u5206\u9418"
   ]
 }
