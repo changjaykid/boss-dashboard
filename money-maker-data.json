@@ -1,13 +1,13 @@
 {
-  "lastUpdate": "2026/4/14 上午11:07:35",
+  "lastUpdate": "2026/4/14 下午12:05:57",
   "status": "RUNNING",
   "mode": "v9_grid_trading",
   "capital": 10000,
   "totalEquity": 10113,
   "netEquity": 10113,
   "totalPnl": 1113,
-  "btcPrice": 2358000,
-  "btcChange24h": 4.29,
+  "btcPrice": 2359998,
+  "btcChange24h": 4.37,
   "holdings": {
     "btc": 0.00132723,
     "avgCost": 2272889,
@@ -16,14 +16,14 @@
       {
         "coin": "BTC",
         "held": 0.00132723,
-        "value": 3130,
-        "pnl": 98
+        "value": 3132,
+        "pnl": 100
       },
       {
         "coin": "SOL",
         "held": 0.3672624,
-        "value": 1006,
-        "pnl": -954
+        "value": 1004,
+        "pnl": -956
       }
     ]
   },
@@ -44,16 +44,16 @@
     {
       "market": "btctwd",
       "held": 0.00132723,
-      "value": 3130,
+      "value": 3132,
       "avgEntry": 2272889,
-      "pnl": 98
+      "pnl": 100
     },
     {
       "market": "soltwd",
       "held": 0.3672624,
-      "value": 1006,
+      "value": 1004,
       "avgEntry": 2649,
-      "pnl": -954
+      "pnl": -956
     }
   ],
   "marketStats": {
@@ -189,12 +189,12 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2358000,
-      "rsi": "72.3"
+      "price": 2359998,
+      "rsi": "73.1"
     },
     "SOL": {
-      "price": 2739,
-      "rsi": "67.1"
+      "price": 2733,
+      "rsi": "65.4"
     }
   },
   "recentTrades": [
