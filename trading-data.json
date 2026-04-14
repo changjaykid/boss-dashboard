@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-14 16:17:05",
+  "lastUpdate": "2026-04-14 17:04:39",
   "account": {
     "balance": 31024.73,
     "realizedPnl": -15.27,
@@ -430,16 +430,16 @@
   "alerts": [],
   "currentPrice": {
     "GOLD": {
-      "bid": 4778.53,
-      "ask": 4779.48
+      "bid": 4785.49,
+      "ask": 4785.99
     },
     "EURUSD": {
-      "bid": 1.17769,
-      "ask": 1.17776
+      "bid": 1.17863,
+      "ask": 1.1787
     },
-    "USDJPY": {
-      "bid": 159.113,
-      "ask": 159.125
+    "GBPUSD": {
+      "bid": 1.3542,
+      "ask": 1.35434
     }
   },
   "indicators": {
@@ -448,43 +448,40 @@
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 4778.53,
-      "rsi": 53.6,
-      "macd_hist": 1.671,
-      "atr": 9.4379,
-      "bb_width": 0.0062,
-      "ema9": 4776.9393,
-      "ema21": 4774.3358
+      "bid": 4785.49,
+      "rsi": 68.2,
+      "macd_hist": 1.3892,
+      "atr": 9.3321,
+      "bb_width": 0.0074,
+      "ema9": 4781.9901,
+      "ema21": 4777.1852
     },
     "EURUSD": {
       "name": "EUR/USD",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 1.17769,
-      "rsi": 59.4,
-      "macd_hist": 0.0002,
+      "bid": 1.17863,
+      "rsi": 67.3,
+      "macd_hist": 0.0001,
       "atr": 0.0008,
-      "bb_width": 0.0028,
-      "ema9": 1.1777,
-      "ema21": 1.1772
+      "bb_width": 0.0031,
+      "ema9": 1.1781,
+      "ema21": 1.1775
     },
-    "USDJPY": {
-      "name": "USD/JPY",
+    "GBPUSD": {
+      "name": "GBP/USD",
       "regime": "RANGING",
       "trend_1h": "RANGING",
       "trend_15m": "RANGING",
-      "bid": 159.113,
-      "rsi": 56.8,
-      "macd_hist": -0.0086,
-      "atr": 0.0881,
-      "bb_width": 0.0015,
-      "ema9": 159.1,
-      "ema21": 159.1158
+      "bid": 1.3542,
+      "rsi": 77.5,
+      "macd_hist": 0.0001,
+      "atr": 0.0008,
+      "bb_width": 0.0027,
+      "ema9": 1.3534,
+      "ema21": 1.3526
     }
   },
-  "actions": [
-    "BLOCKED: EURUSD BUY \u2014 3\u9023\u6557\u5f8c\u51b7\u537b30\u5206\u9418",
-    "BLOCKED: USDJPY SELL \u2014 3\u9023\u6557\u5f8c\u51b7\u537b30\u5206\u9418"
-  ]
+  "actions": []
 }
