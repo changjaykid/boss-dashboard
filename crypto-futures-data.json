@@ -1,63 +1,64 @@
 {
-  "lastUpdate": "2026-04-14 14:02",
+  "lastUpdate": "2026-04-14 15:02",
   "status": "RUNNING",
   "mode": "v10 動態槓桿+動態風報比",
   "exchange": "Binance Futures",
   "account": {
     "initialCapital": 464,
-    "balance": 428.74384493,
-    "available": 376.04625064,
-    "unrealizedPnl": -0.267,
-    "netEquity": 428.47684493,
-    "todayPnl": -2.40742069,
-    "totalPnl": -3.0135995899999997,
+    "balance": 428.59597308,
+    "available": 360.82529781,
+    "unrealizedPnl": -1.2683,
+    "netEquity": 427.32767308,
+    "todayPnl": -1.67449316,
+    "totalPnl": -2.2806720599999997,
     "leverage": "5-20x(動態)",
-    "totalTrades": 19,
-    "winRate": "42.1%",
-    "wins": 8,
+    "totalTrades": 20,
+    "winRate": "45.0%",
+    "wins": 9,
     "losses": 11,
     "maxDrawdown": 4.109660981829918
   },
   "position": {
     "symbol": "BTCUSDT",
-    "side": "LONG",
-    "size": 0.01,
-    "entryPrice": 74296.7,
-    "markPrice": 74270,
-    "pnl": -0.267,
-    "leverage": 14,
-    "trailingStop": 73687.09349065229
+    "side": "SHORT",
+    "size": 0.011,
+    "entryPrice": 74376.7,
+    "markPrice": 74492,
+    "pnl": -1.2683,
+    "leverage": 12,
+    "trailingStop": 74930.80976730544
   },
   "todayStats": {
-    "trades": 1,
-    "wins": 0,
+    "trades": 2,
+    "wins": 1,
     "losses": 1,
-    "pnl": -2.40742069,
-    "remaining": 4
+    "pnl": -1.67449316,
+    "remaining": 3
   },
   "totalStats": {
-    "trades": 19,
-    "wins": 8,
+    "trades": 20,
+    "wins": 9,
     "losses": 11,
-    "pnl": -3.0135995899999997,
-    "winRate": 0.42105263157894735,
+    "pnl": -2.2806720599999997,
+    "winRate": 0.45,
     "avgRR": 0,
     "maxDrawdown": 4.109660981829918,
     "peakBalance": 480.7433211
   },
   "strategyStats": {
     "TREND_PULLBACK": {
-      "trades": 2,
-      "wins": 0,
+      "trades": 3,
+      "wins": 1,
       "losses": 2,
-      "pnl": -7.67892069,
+      "pnl": -6.94599316,
       "recentPnls": [
         -5.27,
-        -2.41
+        -2.41,
+        0.73
       ],
-      "avgPnl": -3.84,
-      "winRate": 0,
-      "lastTradeAt": "2026-04-14T03:12:19.031Z",
+      "avgPnl": -2.3166666666666664,
+      "winRate": 0.3333333333333333,
+      "lastTradeAt": "2026-04-14T06:22:44.605Z",
       "disabledReason": null
     },
     "MOMENTUM_BREAKOUT": {
@@ -169,6 +170,39 @@
       "winRate": 0,
       "lastTradeAt": null,
       "disabledReason": null
+    },
+    "DIVERGENCE_REVERSAL": {
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "recentPnls": [],
+      "avgPnl": 0,
+      "winRate": 0,
+      "lastTradeAt": null,
+      "disabledReason": null
+    },
+    "BB_EXTREME_REVERSAL": {
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "recentPnls": [],
+      "avgPnl": 0,
+      "winRate": 0,
+      "lastTradeAt": null,
+      "disabledReason": null
+    },
+    "PULLBACK": {
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "pnl": 0,
+      "recentPnls": [],
+      "avgPnl": 0,
+      "winRate": 0,
+      "lastTradeAt": null,
+      "disabledReason": null
     }
   },
   "strategyWeights": {
@@ -179,7 +213,7 @@
     "FUNDING_ARB": 0.7,
     "NEWS_EVENT": 0.5,
     "TREND_PULLBACK": {
-      "weight": 0.808,
+      "weight": 0.8841666666666667,
       "enabled": true
     },
     "MOMENTUM_BREAKOUT": {
@@ -213,24 +247,49 @@
     "RSI_BB_ADAPTIVE": {
       "weight": 0,
       "enabled": false
+    },
+    "DIVERGENCE_REVERSAL": {
+      "weight": 1.1,
+      "enabled": true
+    },
+    "BB_EXTREME_REVERSAL": {
+      "weight": 1,
+      "enabled": true
+    },
+    "PULLBACK": {
+      "weight": 0,
+      "enabled": false
     }
   },
   "signals": {
-    "score": 19,
-    "direction": null,
-    "strategy": "TREND_PULLBACK",
+    "score": 60,
+    "direction": "SHORT",
+    "strategy": "REVERSAL_CONFIRM",
     "marketState": "TRENDING_UP",
     "trend4h": "UP",
     "session": "TRANSITION",
     "reasons": [
-      "4H多頭(1.06%)",
-      "4H MACD加速↑",
-      "1H EMA多排"
+      "1H RSI超買70",
+      "4H RSI超買70",
+      "觸及壓力位"
     ],
-    "buyScore": 60,
-    "sellScore": 0
+    "buyScore": 0,
+    "sellScore": 60
   },
   "recentTrades": [
+    {
+      "time": "2026-04-14T06:22:44.605Z",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entryPrice": 74300.9,
+      "pnl": 0.73,
+      "strategy": "TREND_PULLBACK",
+      "reasons": [
+        "4H多頭(0.85%)",
+        "4H MACD加速↑",
+        "1H EMA多排"
+      ]
+    },
     {
       "time": "2026-04-14T03:12:19.031Z",
       "symbol": "BTCUSDT",
@@ -350,26 +409,12 @@
         "1H EMA 多排",
         "StochRSI金叉(K=1)"
       ]
-    },
-    {
-      "time": "2026-04-08T13:47:48.305Z",
-      "symbol": "BTCUSDT",
-      "side": "LONG",
-      "entryPrice": 72179.8,
-      "pnl": -2.01,
-      "strategy": "SESSION_BREAKOUT",
-      "reasons": [
-        "1H EMA 多排",
-        "量能放大",
-        "亞盤突破↑(900)",
-        "MACD看多背離"
-      ]
     }
   ],
   "riskStatus": {
-    "dailyLossUsed": "$2.41 / $23.20",
-    "dailyTradesUsed": "1 / 5",
-    "consecutiveLosses": "1 / 3",
+    "dailyLossUsed": "$1.67 / $23.20",
+    "dailyTradesUsed": "2 / 5",
+    "consecutiveLosses": "0 / 3",
     "paused": false
   }
 }
