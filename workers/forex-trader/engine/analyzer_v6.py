@@ -761,15 +761,14 @@ def run_all_strategies(candles_4h, candles_1h, candles_15m, closes_4h, closes_1h
     preferred = regime_pref.get(regime, [])
 
     for direction, confidence, name, sl, tp in all_results:
-        if direction == "NONE" or confidence < 0.60:
+        if direction == "NONE" or confidence < 0.45:  # v_exp: 測試模式降低門檻
             continue
 
         # Boost confidence for regime-appropriate strategies
         is_preferred = any(name.startswith(p) for p in preferred)
         if is_preferred:
             confidence = min(1.0, confidence + 0.05)
-        elif regime == "VOLATILE" and confidence < 0.80:
-            continue  # Skip low-confidence in volatile markets
+        # v_exp: 移除 VOLATILE 過濾
 
         # Enforce minimum 1.5:1 risk-reward
         if tp < sl * 1.5:
@@ -804,22 +803,9 @@ def check_risk_controls(state, trade_log, epic, direction, open_positions):
     if now_utc.hour == 13 and now_utc.minute < 30:
         return False, "UTC 13:00-13:30 禁止開新倉", 1.0
 
-    # 5. Consecutive loss controls
+    # 5. v_exp: 移除連虧限制，測試模式全速出手
     consec_losses = state.get('consecutive_losses', 0)
-    size_mult = 1.0
-    last_loss_at = state.get('last_loss_time', '')
-    if consec_losses >= 3:
-        if last_loss_at:
-            try:
-                last_dt = datetime.fromisoformat(last_loss_at.replace('Z', '+00:00'))
-                if now_utc - last_dt < timedelta(minutes=30):
-                    return False, "3連敗後冷卻30分鐘", 1.0
-            except:
-                return False, "3連敗後冷卻30分鐘", 1.0
-        else:
-            return False, "3連敗後冷卻30分鐘", 1.0
-    elif consec_losses >= 2:
-        size_mult = 0.5
+    size_mult = 1.0  # 不縮手數
 
     # 6. Correlated instrument limit (US indices same direction max 2)
     for group_name, group_epics in CORRELATED_GROUPS.items():
