@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-14 16:02",
+  "lastUpdate": "2026-04-14 16:22",
   "status": "RUNNING",
   "mode": "v10 動態槓桿+動態風報比",
   "exchange": "Binance Futures",
@@ -7,8 +7,8 @@
     "initialCapital": 464,
     "balance": 428.61836584,
     "available": 360.82529781,
-    "unrealizedPnl": -0.586322,
-    "netEquity": 428.03204384000003,
+    "unrealizedPnl": -1.0285,
+    "netEquity": 427.58986584,
     "todayPnl": -1.67449316,
     "totalPnl": -2.2806720599999997,
     "leverage": "5-20x(動態)",
@@ -23,8 +23,8 @@
     "side": "SHORT",
     "size": 0.011,
     "entryPrice": 74376.7,
-    "markPrice": 74430.002,
-    "pnl": -0.586322,
+    "markPrice": 74470.2,
+    "pnl": -1.0285,
     "leverage": 12,
     "trailingStop": 74930.80976730544
   },
@@ -269,7 +269,7 @@
     "trend4h": "UP",
     "session": "TRANSITION",
     "reasons": [
-      "1H RSI超買69",
+      "1H RSI超買70",
       "4H RSI超買69",
       "觸及壓力位"
     ],

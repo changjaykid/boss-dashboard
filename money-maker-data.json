@@ -1,13 +1,13 @@
 {
-  "lastUpdate": "2026/4/14 下午4:06:30",
+  "lastUpdate": "2026-04-14 16:21",
   "status": "RUNNING",
   "mode": "v9_grid_trading",
   "capital": 10000,
-  "totalEquity": 10122,
-  "netEquity": 10122,
+  "totalEquity": 11121,
+  "netEquity": 11121,
   "totalPnl": 1121,
-  "btcPrice": 2366336,
-  "btcChange24h": 4.73,
+  "btcPrice": 2366650,
+  "btcChange24h": 4.99,
   "holdings": {
     "btc": 0.00132723,
     "avgCost": 2272889,
@@ -189,8 +189,8 @@
   },
   "marketSignals": {
     "BTC": {
-      "price": 2366336,
-      "rsi": "71.7"
+      "price": 2366650,
+      "rsi": "71.8"
     },
     "SOL": {
       "price": 2732,
