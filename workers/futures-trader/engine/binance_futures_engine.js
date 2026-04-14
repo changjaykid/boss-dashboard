@@ -52,7 +52,7 @@ const MARKET_PARAMS = {
   ARBUSDT:  { minQty: 0.1,   stepSize: 0.1,   pricePrecision: 6 },
   DOTUSDT:  { minQty: 0.1,   stepSize: 0.1,   pricePrecision: 3 },
 };
-const DEFAULT_MARKETS = ['BTCUSDT'];  // v8: 主做 BTC，停用 ETH
+const DEFAULT_MARKETS = ['BTCUSDT', 'SOLUSDT'];  // v12: BTC + 動能幣 SOL
 const ACTIVE_MARKETS_FILE = path.join(DATA_DIR, 'active_futures_markets.json');
 let ALL_MARKETS = DEFAULT_MARKETS;
 try {
@@ -65,20 +65,20 @@ const SYMBOLS_TO_RUN = inputSymbol ? [inputSymbol] : ALL_MARKETS;
 
 let SYMBOL = SYMBOLS_TO_RUN[0]; // Will be set per-iteration
 // v10: 動態槓桿，不再固定
-const LEVERAGE_MIN = 5;
-const LEVERAGE_MID = 12;
-const LEVERAGE_MAX = 20;
+const LEVERAGE_MIN = 8;
+const LEVERAGE_MID = 15;
+const LEVERAGE_MAX = 25;
 const MARGIN_TYPE = 'ISOLATED';
 const INITIAL_CAPITAL = 464;
 
 // === 風控鐵律 v10 ===
-const MAX_LOSS_PER_TRADE_PCT = 0.015;        // 單筆最大虧損 1.5%（配合動態槓桿）
-const DAILY_LOSS_LIMIT_PCT = 0.05;           // 日虧上限 5%（更積極但有底線）
+const MAX_LOSS_PER_TRADE_PCT = 0.012;        // 單筆最大虧損 1.2%（收緊止損）
+const DAILY_LOSS_LIMIT_PCT = 0.06;           // 日虧上限 6%（多幣種分散後可略放）
 const DAILY_LOSS_LIMIT = INITIAL_CAPITAL * DAILY_LOSS_LIMIT_PCT;
-const MAX_DAILY_TRADES = 5;                  // 提高到 5 筆，把握更多機會
-const CONSECUTIVE_LOSS_PAUSE = 3;            // 連虧 3 筆才停機（更有韌性）
-const PAUSE_DURATION_MS = 4 * 60 * 60 * 1000;  // 暫停 4 小時（縮短恢復時間）
-const SL_ATR_MULT = 1.2;                     // 停損 1.2x 1H ATR
+const MAX_DAILY_TRADES = 10;                 // 多幣種每天最多 10 筆
+const CONSECUTIVE_LOSS_PAUSE = 3;            // 連虧 3 筆才停機
+const PAUSE_DURATION_MS = 2 * 60 * 60 * 1000;  // 暫停縮短到 2 小時（更快恢復）
+const SL_ATR_MULT = 1.0;                     // 收緊止損 1.0x 1H ATR
 const SIGNAL_THRESHOLD = 52;                 // 保持積極，但不能用雜訊單進場
 const MAX_POSITION_PCT_BASE = 0.20;          // 基礎倉位 20%（動態調整）
 const COOLDOWN_MS = 30 * 60 * 1000;          // 縮短冷卻到 30 分鐘
@@ -1219,29 +1219,34 @@ function checkTrailingStop(state, markPrice) {
   
   let newStop = state.trailingStop.currentStop;
   
-  // v11: 追蹤止損 — 更快保本 + 讓利潤跑
-  // 階段 1: +0.5% → 保本（不讓賺的單變虧）
-  if (pnlPct >= 0.5) {
+  // v12: 止損收緊 + 止盈放大，讓利潤跑得更遠
+  // 階段 1: +0.4% → 保本
+  if (pnlPct >= 0.4) {
     newStop = entry;
   }
-  // 階段 2: +1.2% → 鎖住 +0.4%（小賺入袋）
-  if (pnlPct >= 1.2) {
-    const lockPrice = isLong ? entry * 1.004 : entry * 0.996;
+  // 階段 2: +1.0% → 鎖住 +0.3%
+  if (pnlPct >= 1.0) {
+    const lockPrice = isLong ? entry * 1.003 : entry * 0.997;
     if (isLong ? lockPrice > newStop : lockPrice < newStop) newStop = lockPrice;
   }
-  // 階段 3: +2.0% → 追蹤 0.8%（給空間跑）
+  // 階段 3: +2.0% → 追蹤 1.2%（放寬空間讓利潤跑）
   if (pnlPct >= 2.0) {
+    const trail = isLong ? markPrice * 0.988 : markPrice * 1.012;
+    if (isLong ? trail > newStop : trail < newStop) newStop = trail;
+  }
+  // 階段 4: +4.0% → 追蹤 0.8%
+  if (pnlPct >= 4.0) {
     const trail = isLong ? markPrice * 0.992 : markPrice * 1.008;
     if (isLong ? trail > newStop : trail < newStop) newStop = trail;
   }
-  // 階段 4: +3.5% → 追蹤 0.5%（收緊保護）
-  if (pnlPct >= 3.5) {
+  // 階段 5: +7.0% → 追蹤 0.5%（大波段保護）
+  if (pnlPct >= 7.0) {
     const trail = isLong ? markPrice * 0.995 : markPrice * 1.005;
     if (isLong ? trail > newStop : trail < newStop) newStop = trail;
   }
-  // 階段 5: +5.0% → 追蹤 0.35%（大波段收緊）
-  if (pnlPct >= 5.0) {
-    const trail = isLong ? markPrice * 0.9965 : markPrice * 1.0035;
+  // 階段 6: +12% → 追蹤 0.3%（極大波段收緊）
+  if (pnlPct >= 12.0) {
+    const trail = isLong ? markPrice * 0.997 : markPrice * 1.003;
     if (isLong ? trail > newStop : trail < newStop) newStop = trail;
   }
   
